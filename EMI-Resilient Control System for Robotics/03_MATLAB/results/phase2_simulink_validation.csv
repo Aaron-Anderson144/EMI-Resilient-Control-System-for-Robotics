@@ -1,6 +1,0 @@
-Scenario,MaxReferenceDifference,MaxTruePositionDifference,MaxMeasuredPositionDifference,MaxAdditiveFaultDifference,MaxDropoutMaskDifference
-none,0,1.89404048001052e-13,1.89404048001052e-13,0,0
-gaussian,0,1.64424029946986e-13,1.64424029946986e-13,0,0
-sinusoidal,0,1.89404048001052e-13,1.89404048001052e-13,0,0
-count_jump,0,1.89404048001052e-13,1.89404048001052e-13,0,0
-dropout,0,2.52353693497298e-13,2.52353693497298e-13,0,0
