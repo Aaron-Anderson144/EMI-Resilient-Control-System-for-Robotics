@@ -8,13 +8,16 @@ Portable starter workspace for a research project on electromagnetic-interferenc
 - Phase 1 baseline actuator model: executed and verified on 2026-09-08
 - Simulink model: generated and successfully simulated on 2026-09-08
 - Phase 2A encoder fault injection: implemented and cross-validated
-- Communication, supply, and physically derived coupling faults: remaining Phase 2 work
+- Phase 2B reduced-order coupling, ground-offset, and communication implementation: software-verified on 2026-09-08
+- Supply-interruption faults and switching-level electrical models: remaining Phase 2/Phase 4 work
 - Resilient-control implementation: planned for Phase 3
 - Hardware validation: future work
 
-All 12 automated Phase 1 and Phase 2A tests pass. The Phase 2 MATLAB and Simulink implementations agree within a `1e-9` rad validation tolerance for all scenarios. Models, metrics, datasets, and validation summaries are recorded under `03_MATLAB/models` and `03_MATLAB/results`.
+All 28 automated tests pass: 5 Phase 1, 7 Phase 2A, and 16 Phase 2B. The Phase 2A MATLAB and Simulink implementations agree within a `1e-9` rad validation tolerance for all scenarios. All ten Phase 2B Simulink scenarios completed with 1501 finite samples, exact discrete-profile agreement, and a largest continuous-signal MATLAB/Simulink difference of approximately `2.2751e-12`. The configured `p=0.20` packet-loss study observed 15,934 drops in 80,000 opportunities (`0.199175`) with a Wilson 95% interval of `[0.19642, 0.20196]`; the `p=0` and `p=1` edge cases were exact.
 
-The numerical parameters in this package are representative starting values, not measurements from a selected motor. Results must not be presented as experimental findings until the model is parameterized and validated.
+These results verify software behavior against the stated reduced-order equations and an independent Simulink realization. They do not physically validate the assumed coupling, receiver, cable, encoder, or communication parameters. Phase 2B must not be described as hardware-validated until sensitivity studies and measurement-based comparison are complete.
+
+The numerical parameters in this package are representative starting values, not measurements from a selected motor, cable, receiver, or installation. Results must not be presented as experimental findings until the model is parameterized and validated.
 
 ## Workspace Map
 
@@ -38,8 +41,10 @@ The numerical parameters in this package are representative starting values, not
 - BLDC or servo motor represented initially by a three-state DC-equivalent model
 - Position feedback from an incremental encoder
 - Discrete position controller with a 1 ms initial sample time
-- CAN-like communication behavior introduced in a later phase
+- Protocol-agnostic timestamped sensor channel; protocol-specific CAN behavior remains future work
 - PWM motor drive treated as the main anticipated EMI source
+
+The controller-rate model runs at 1 kHz and therefore cannot resolve the individual edges of the assumed 20 kHz PWM source. Phase 2B uses analytically derived edge peaks and a 120 Hz receiver-equivalent baseband envelope for system sensitivity studies. Its volts-to-radians mapping is phenomenological, not a physical encoder-decoder law.
 
 ## MATLAB Quick Start
 
@@ -50,6 +55,9 @@ The numerical parameters in this package are representative starting values, not
 5. Run `main` to execute the analytical baseline simulation.
 6. Run `build_baseline_model` to create `models/EMI_Resilient_Actuator_Baseline.slx`.
 7. Run the tests with `runtests("tests")`.
+8. Run `phase2b_main` to generate the Phase 2B analytical study, packet-loss statistical study, Simulink model, smoke-test table, and MATLAB/Simulink comparison after reviewing the assumed parameters.
+
+Phase 2B definitions, equations, scenario semantics, and limitations are recorded in `04_EMI_Models/Phase2B_Coupling_and_Communication_Faults.md`.
 
 ## Required MathWorks Products
 
