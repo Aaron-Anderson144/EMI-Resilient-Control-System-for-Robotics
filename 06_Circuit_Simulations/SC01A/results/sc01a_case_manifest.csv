@@ -1,0 +1,17 @@
+Case,CapacitiveExcitation,InductiveExcitation,SharedCurrentExcitation,Polarity,IntendedLogicSign,LogicTransitionOffset_s,Periods,StopTime_s,VoltageStep_V,CurrentStep_A,DriverRp_Ohm,DriverRn_Ohm,ReceiverCp_F,ReceiverCn_F,ReceiverRpBias_Ohm,ReceiverRnBias_Ohm,CouplingCp_F,CouplingCn_F,BehavioralMp_H,BehavioralMn_H,Provenance
+baseline,0,0,0,1,1,NaN,0,5e-06,24,3,47,53,5e-11,7e-11,10000,20000,1e-11,9e-12,2e-08,1.7e-08,Assumed circuit and prescribed test excitations; no selected hardware or measurements
+capacitive_rise,1,0,0,1,1,NaN,0,5e-06,24,3,47,53,5e-11,7e-11,10000,20000,1e-11,9e-12,2e-08,1.7e-08,Assumed circuit and prescribed test excitations; no selected hardware or measurements
+inductive_rise,0,1,0,1,1,NaN,0,5e-06,24,3,47,53,5e-11,7e-11,10000,20000,1e-11,9e-12,2e-08,1.7e-08,Assumed circuit and prescribed test excitations; no selected hardware or measurements
+shared_rise,0,0,1,1,1,NaN,0,5e-06,24,3,47,53,5e-11,7e-11,10000,20000,1e-11,9e-12,2e-08,1.7e-08,Assumed circuit and prescribed test excitations; no selected hardware or measurements
+combined_rise,1,1,1,1,1,NaN,0,5e-06,24,3,47,53,5e-11,7e-11,10000,20000,1e-11,9e-12,2e-08,1.7e-08,Assumed circuit and prescribed test excitations; no selected hardware or measurements
+combined_fall,1,1,1,-1,1,NaN,0,5e-06,24,3,47,53,5e-11,7e-11,10000,20000,1e-11,9e-12,2e-08,1.7e-08,Assumed circuit and prescribed test excitations; no selected hardware or measurements
+balanced_combined,1,1,1,1,1,NaN,0,5e-06,24,3,50,50,6e-11,6e-11,15000,15000,9.5e-12,9.5e-12,1.85e-08,1.85e-08,Assumed circuit and prescribed test excitations; no selected hardware or measurements
+zero_coupling,1,1,0,1,1,NaN,0,5e-06,24,3,47,53,5e-11,7e-11,10000,20000,0,0,0,0,Assumed circuit and prescribed test excitations; no selected hardware or measurements
+zero_source,1,1,1,1,1,NaN,0,5e-06,0,0,47,53,5e-11,7e-11,10000,20000,1e-11,9e-12,2e-08,1.7e-08,Assumed circuit and prescribed test excitations; no selected hardware or measurements
+logic_low,1,1,1,1,-1,NaN,0,5e-06,24,3,47,53,5e-11,7e-11,10000,20000,1e-11,9e-12,2e-08,1.7e-08,Assumed circuit and prescribed test excitations; no selected hardware or measurements
+transition_leads,1,1,1,1,1,-1e-07,0,5e-06,24,3,47,53,5e-11,7e-11,10000,20000,1e-11,9e-12,2e-08,1.7e-08,Assumed circuit and prescribed test excitations; no selected hardware or measurements
+transition_coincident,1,1,1,1,1,0,0,5e-06,24,3,47,53,5e-11,7e-11,10000,20000,1e-11,9e-12,2e-08,1.7e-08,Assumed circuit and prescribed test excitations; no selected hardware or measurements
+transition_lags,1,1,1,1,1,1e-07,0,5e-06,24,3,47,53,5e-11,7e-11,10000,20000,1e-11,9e-12,2e-08,1.7e-08,Assumed circuit and prescribed test excitations; no selected hardware or measurements
+stress_fall,1,1,1,-1,1,NaN,0,5e-06,24,3,47,53,5e-11,7e-11,10000,20000,3e-10,5e-12,2e-08,1.7e-08,Assumed circuit and prescribed test excitations; no selected hardware or measurements
+pwm_10,1,1,1,1,1,NaN,10,0.0005,24,3,47,53,5e-11,7e-11,10000,20000,1e-11,9e-12,2e-08,1.7e-08,Assumed circuit and prescribed test excitations; no selected hardware or measurements
+pwm_20,1,1,1,1,1,NaN,20,0.001,24,3,47,53,5e-11,7e-11,10000,20000,1e-11,9e-12,2e-08,1.7e-08,Assumed circuit and prescribed test excitations; no selected hardware or measurements

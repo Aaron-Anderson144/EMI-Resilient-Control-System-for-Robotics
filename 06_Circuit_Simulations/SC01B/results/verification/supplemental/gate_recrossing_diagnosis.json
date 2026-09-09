@@ -1,0 +1,727 @@
+{
+  "scope": "Independent audit of exported native/SPICE low-gate traces; no criteria or waveform edits.",
+  "levels": "10%,50%,90% of the declared driver supply; diagnostic voltage levels, not guaranteed channel-conduction thresholds.",
+  "records": [
+    {
+      "case": "nominal",
+      "counterpartLowOffCommand_s": 3.719e-06,
+      "windowStart_s": 3.619e-06,
+      "windowEnd_s": 4.219e-06,
+      "engines": [
+        {
+          "engine": "native",
+          "status": "audited",
+          "sourceFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partA\\nominal\\native_finest.csv",
+          "windowClipped": false,
+          "gateAtWindowStart_V": 11.999969734646,
+          "gateAtWindowEnd_V": 0.324359959224125,
+          "thresholds": [
+            {
+              "fraction": 0.1,
+              "level_V": 1.2000000000000002,
+              "fallingCount": 2,
+              "risingCount": 1,
+              "firstFallingTime_s": 3.943941375758324e-06,
+              "crossings": [
+                {
+                  "time_s": 3.943941375758324e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                },
+                {
+                  "time_s": 4.051839614461539e-06,
+                  "direction": 1,
+                  "equalityRun": false
+                },
+                {
+                  "time_s": 4.111247972877782e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "level_V": 6.0,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.7898454123773084e-06,
+              "crossings": [
+                {
+                  "time_s": 3.7898454123773084e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.9,
+              "level_V": 10.8,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.7326170781564232e-06,
+              "crossings": [
+                {
+                  "time_s": 3.7326170781564232e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            }
+          ],
+          "extraDirectedFallingCrossings": 1,
+          "gatePeakAfterFirst10PercentFall_V": 2.12804135099692,
+          "gatePeakAfterFirst10PercentFallTime_s": 4.061625e-06,
+          "switchVoltageAtGateBump_V": 16.9756826302546,
+          "firstCrossingsOrdered": true,
+          "endpointStatesValid": true,
+          "strictCounterpartGatePassWithoutGrazingCheck": false
+        },
+        {
+          "engine": "spice",
+          "status": "audited",
+          "sourceFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partA\\nominal\\spice_finest.csv",
+          "windowClipped": false,
+          "gateAtWindowStart_V": 11.999969733744441,
+          "gateAtWindowEnd_V": 0.32435989562347395,
+          "thresholds": [
+            {
+              "fraction": 0.1,
+              "level_V": 1.2000000000000002,
+              "fallingCount": 2,
+              "risingCount": 1,
+              "firstFallingTime_s": 3.943941357247584e-06,
+              "crossings": [
+                {
+                  "time_s": 3.943941357247584e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                },
+                {
+                  "time_s": 4.051839303478654e-06,
+                  "direction": 1,
+                  "equalityRun": false
+                },
+                {
+                  "time_s": 4.111247957119279e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "level_V": 6.0,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.789845410841634e-06,
+              "crossings": [
+                {
+                  "time_s": 3.789845410841634e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.9,
+              "level_V": 10.8,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.7326170308239265e-06,
+              "crossings": [
+                {
+                  "time_s": 3.7326170308239265e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            }
+          ],
+          "extraDirectedFallingCrossings": 1,
+          "gatePeakAfterFirst10PercentFall_V": 2.12803919879464,
+          "gatePeakAfterFirst10PercentFallTime_s": 4.06162428245233e-06,
+          "switchVoltageAtGateBump_V": 16.9750826681875,
+          "firstCrossingsOrdered": true,
+          "endpointStatesValid": true,
+          "strictCounterpartGatePassWithoutGrazingCheck": false
+        }
+      ],
+      "maxNativeSpiceFirstFallingTimeDifference_s": 4.7332496707068895e-14,
+      "firstFallingFractionsCompared": [
+        0.1,
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "case": "holdout_bus18",
+      "counterpartLowOffCommand_s": 3.719e-06,
+      "windowStart_s": 3.619e-06,
+      "windowEnd_s": 4.219e-06,
+      "engines": [
+        {
+          "engine": "native",
+          "status": "audited",
+          "sourceFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partA\\holdout_bus18\\native_finest.csv",
+          "windowClipped": false,
+          "gateAtWindowStart_V": 11.9999700115812,
+          "gateAtWindowEnd_V": 0.318712222558622,
+          "thresholds": [
+            {
+              "fraction": 0.1,
+              "level_V": 1.2000000000000002,
+              "fallingCount": 2,
+              "risingCount": 1,
+              "firstFallingTime_s": 3.94394509944882e-06,
+              "crossings": [
+                {
+                  "time_s": 3.94394509944882e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                },
+                {
+                  "time_s": 4.0534337961110115e-06,
+                  "direction": 1,
+                  "equalityRun": false
+                },
+                {
+                  "time_s": 4.1072355364911304e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "level_V": 6.0,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.7898456593766457e-06,
+              "crossings": [
+                {
+                  "time_s": 3.7898456593766457e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.9,
+              "level_V": 10.8,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.732617081651542e-06,
+              "crossings": [
+                {
+                  "time_s": 3.732617081651542e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            }
+          ],
+          "extraDirectedFallingCrossings": 1,
+          "gatePeakAfterFirst10PercentFall_V": 1.94146848245333,
+          "gatePeakAfterFirst10PercentFallTime_s": 4.065125e-06,
+          "switchVoltageAtGateBump_V": 14.781461914252,
+          "firstCrossingsOrdered": true,
+          "endpointStatesValid": true,
+          "strictCounterpartGatePassWithoutGrazingCheck": false
+        },
+        {
+          "engine": "spice",
+          "status": "audited",
+          "sourceFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partA\\holdout_bus18\\spice_finest.csv",
+          "windowClipped": false,
+          "gateAtWindowStart_V": 11.999970010673223,
+          "gateAtWindowEnd_V": 0.3187121275451885,
+          "thresholds": [
+            {
+              "fraction": 0.1,
+              "level_V": 1.2000000000000002,
+              "fallingCount": 2,
+              "risingCount": 1,
+              "firstFallingTime_s": 3.943945098812027e-06,
+              "crossings": [
+                {
+                  "time_s": 3.943945098812027e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                },
+                {
+                  "time_s": 4.053433476563277e-06,
+                  "direction": 1,
+                  "equalityRun": false
+                },
+                {
+                  "time_s": 4.107235511538465e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "level_V": 6.0,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.7898456624387202e-06,
+              "crossings": [
+                {
+                  "time_s": 3.7898456624387202e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.9,
+              "level_V": 10.8,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.7326170204835978e-06,
+              "crossings": [
+                {
+                  "time_s": 3.7326170204835978e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            }
+          ],
+          "extraDirectedFallingCrossings": 1,
+          "gatePeakAfterFirst10PercentFall_V": 1.94147361025929,
+          "gatePeakAfterFirst10PercentFallTime_s": 4.06507483322109e-06,
+          "switchVoltageAtGateBump_V": 14.7517936115002,
+          "firstCrossingsOrdered": true,
+          "endpointStatesValid": true,
+          "strictCounterpartGatePassWithoutGrazingCheck": false
+        }
+      ],
+      "maxNativeSpiceFirstFallingTimeDifference_s": 6.116794430246542e-14,
+      "firstFallingFractionsCompared": [
+        0.1,
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "case": "holdout_load4ohm",
+      "counterpartLowOffCommand_s": 3.719e-06,
+      "windowStart_s": 3.619e-06,
+      "windowEnd_s": 4.219e-06,
+      "engines": [
+        {
+          "engine": "native",
+          "status": "audited",
+          "sourceFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partB\\holdout_load4ohm\\native_finest.csv",
+          "windowClipped": false,
+          "gateAtWindowStart_V": 11.999969865504,
+          "gateAtWindowEnd_V": 0.326756557140298,
+          "thresholds": [
+            {
+              "fraction": 0.1,
+              "level_V": 1.2000000000000002,
+              "fallingCount": 2,
+              "risingCount": 1,
+              "firstFallingTime_s": 3.943921697383478e-06,
+              "crossings": [
+                {
+                  "time_s": 3.943921697383478e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                },
+                {
+                  "time_s": 4.052747092200669e-06,
+                  "direction": 1,
+                  "equalityRun": false
+                },
+                {
+                  "time_s": 4.111903312800224e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "level_V": 6.0,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.7898444326888423e-06,
+              "crossings": [
+                {
+                  "time_s": 3.7898444326888423e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.9,
+              "level_V": 10.8,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.7326170504353583e-06,
+              "crossings": [
+                {
+                  "time_s": 3.7326170504353583e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            }
+          ],
+          "extraDirectedFallingCrossings": 1,
+          "gatePeakAfterFirst10PercentFall_V": 2.14620006314001,
+          "gatePeakAfterFirst10PercentFallTime_s": 4.061125e-06,
+          "switchVoltageAtGateBump_V": 16.2452498622372,
+          "firstCrossingsOrdered": true,
+          "endpointStatesValid": true,
+          "strictCounterpartGatePassWithoutGrazingCheck": false
+        },
+        {
+          "engine": "spice",
+          "status": "audited",
+          "sourceFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partB\\holdout_load4ohm\\spice_finest.csv",
+          "windowClipped": false,
+          "gateAtWindowStart_V": 11.999969864591167,
+          "gateAtWindowEnd_V": 0.32675657785118745,
+          "thresholds": [
+            {
+              "fraction": 0.1,
+              "level_V": 1.2000000000000002,
+              "fallingCount": 2,
+              "risingCount": 1,
+              "firstFallingTime_s": 3.943921697048031e-06,
+              "crossings": [
+                {
+                  "time_s": 3.943921697048031e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                },
+                {
+                  "time_s": 4.05274660321983e-06,
+                  "direction": 1,
+                  "equalityRun": false
+                },
+                {
+                  "time_s": 4.111903302691577e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "level_V": 6.0,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.7898444191931057e-06,
+              "crossings": [
+                {
+                  "time_s": 3.7898444191931057e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.9,
+              "level_V": 10.8,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.7326169924589558e-06,
+              "crossings": [
+                {
+                  "time_s": 3.7326169924589558e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            }
+          ],
+          "extraDirectedFallingCrossings": 1,
+          "gatePeakAfterFirst10PercentFall_V": 2.14619819552201,
+          "gatePeakAfterFirst10PercentFallTime_s": 4.0611504451539e-06,
+          "switchVoltageAtGateBump_V": 16.2666733751373,
+          "firstCrossingsOrdered": true,
+          "endpointStatesValid": true,
+          "strictCounterpartGatePassWithoutGrazingCheck": false
+        }
+      ],
+      "maxNativeSpiceFirstFallingTimeDifference_s": 5.797640250775884e-14,
+      "firstFallingFractionsCompared": [
+        0.1,
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "case": "holdout_bus30_load16_gate10",
+      "counterpartLowOffCommand_s": 3.719e-06,
+      "windowStart_s": 3.619e-06,
+      "windowEnd_s": 4.219e-06,
+      "engines": [
+        {
+          "engine": "native",
+          "status": "audited",
+          "sourceFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partC\\holdout_bus30_load16_gate10\\native_finest.csv",
+          "windowClipped": false,
+          "gateAtWindowStart_V": 11.9999984193025,
+          "gateAtWindowEnd_V": 0.0405404545496181,
+          "thresholds": [
+            {
+              "fraction": 0.1,
+              "level_V": 1.2000000000000002,
+              "fallingCount": 2,
+              "risingCount": 1,
+              "firstFallingTime_s": 3.845306542898296e-06,
+              "crossings": [
+                {
+                  "time_s": 3.845306542898296e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                },
+                {
+                  "time_s": 4.04360221014864e-06,
+                  "direction": 1,
+                  "equalityRun": false
+                },
+                {
+                  "time_s": 4.064005456424469e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "level_V": 6.0,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.7594125624276957e-06,
+              "crossings": [
+                {
+                  "time_s": 3.7594125624276957e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.9,
+              "level_V": 10.8,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.727926232056164e-06,
+              "crossings": [
+                {
+                  "time_s": 3.727926232056164e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            }
+          ],
+          "extraDirectedFallingCrossings": 1,
+          "gatePeakAfterFirst10PercentFall_V": 2.01202393976576,
+          "gatePeakAfterFirst10PercentFallTime_s": 4.047e-06,
+          "switchVoltageAtGateBump_V": 19.3132619547321,
+          "firstCrossingsOrdered": true,
+          "endpointStatesValid": true,
+          "strictCounterpartGatePassWithoutGrazingCheck": false
+        },
+        {
+          "engine": "spice",
+          "status": "audited",
+          "sourceFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partC\\holdout_bus30_load16_gate10\\spice_finest.csv",
+          "windowClipped": false,
+          "gateAtWindowStart_V": 11.999998418832705,
+          "gateAtWindowEnd_V": 0.0405406517345951,
+          "thresholds": [
+            {
+              "fraction": 0.1,
+              "level_V": 1.2000000000000002,
+              "fallingCount": 2,
+              "risingCount": 1,
+              "firstFallingTime_s": 3.845306542371512e-06,
+              "crossings": [
+                {
+                  "time_s": 3.845306542371512e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                },
+                {
+                  "time_s": 4.043602009169638e-06,
+                  "direction": 1,
+                  "equalityRun": false
+                },
+                {
+                  "time_s": 4.0640058968076076e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "level_V": 6.0,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.759412564192985e-06,
+              "crossings": [
+                {
+                  "time_s": 3.759412564192985e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.9,
+              "level_V": 10.8,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.727926242079306e-06,
+              "crossings": [
+                {
+                  "time_s": 3.727926242079306e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            }
+          ],
+          "extraDirectedFallingCrossings": 1,
+          "gatePeakAfterFirst10PercentFall_V": 2.01203283286189,
+          "gatePeakAfterFirst10PercentFallTime_s": 4.04699827205199e-06,
+          "switchVoltageAtGateBump_V": 19.3100573555258,
+          "firstCrossingsOrdered": true,
+          "endpointStatesValid": true,
+          "strictCounterpartGatePassWithoutGrazingCheck": false
+        }
+      ],
+      "maxNativeSpiceFirstFallingTimeDifference_s": 1.0023142035185109e-14,
+      "firstFallingFractionsCompared": [
+        0.1,
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "case": "holdout_gate47",
+      "counterpartLowOffCommand_s": 3.719e-06,
+      "windowStart_s": 3.619e-06,
+      "windowEnd_s": 4.219e-06,
+      "engines": [
+        {
+          "engine": "native",
+          "status": "audited",
+          "sourceFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partB\\holdout_gate47\\native_finest.csv",
+          "windowClipped": false,
+          "gateAtWindowStart_V": 11.9838979112901,
+          "gateAtWindowEnd_V": 1.76553780336299,
+          "thresholds": [
+            {
+              "fraction": 0.1,
+              "level_V": 1.2000000000000002,
+              "fallingCount": 0,
+              "risingCount": 0,
+              "firstFallingTime_s": null,
+              "crossings": []
+            },
+            {
+              "fraction": 0.5,
+              "level_V": 6.0,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.853047711907199e-06,
+              "crossings": [
+                {
+                  "time_s": 3.853047711907199e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.9,
+              "level_V": 10.8,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.740924197204853e-06,
+              "crossings": [
+                {
+                  "time_s": 3.740924197204853e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            }
+          ],
+          "extraDirectedFallingCrossings": 0,
+          "firstCrossingsOrdered": false,
+          "endpointStatesValid": false,
+          "strictCounterpartGatePassWithoutGrazingCheck": false
+        },
+        {
+          "engine": "spice",
+          "status": "audited",
+          "sourceFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partB\\holdout_gate47\\spice_finest.csv",
+          "windowClipped": false,
+          "gateAtWindowStart_V": 11.983897908761538,
+          "gateAtWindowEnd_V": 1.7655378853507617,
+          "thresholds": [
+            {
+              "fraction": 0.1,
+              "level_V": 1.2000000000000002,
+              "fallingCount": 0,
+              "risingCount": 0,
+              "firstFallingTime_s": null,
+              "crossings": []
+            },
+            {
+              "fraction": 0.5,
+              "level_V": 6.0,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.853047712225359e-06,
+              "crossings": [
+                {
+                  "time_s": 3.853047712225359e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            },
+            {
+              "fraction": 0.9,
+              "level_V": 10.8,
+              "fallingCount": 1,
+              "risingCount": 0,
+              "firstFallingTime_s": 3.7409241224569354e-06,
+              "crossings": [
+                {
+                  "time_s": 3.7409241224569354e-06,
+                  "direction": -1,
+                  "equalityRun": false
+                }
+              ]
+            }
+          ],
+          "extraDirectedFallingCrossings": 0,
+          "firstCrossingsOrdered": false,
+          "endpointStatesValid": false,
+          "strictCounterpartGatePassWithoutGrazingCheck": false
+        }
+      ],
+      "maxNativeSpiceFirstFallingTimeDifference_s": 7.474791744360764e-14,
+      "firstFallingFractionsCompared": [
+        0.5,
+        0.9
+      ]
+    }
+  ]
+}

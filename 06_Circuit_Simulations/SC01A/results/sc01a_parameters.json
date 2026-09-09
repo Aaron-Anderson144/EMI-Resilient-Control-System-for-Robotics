@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "id": "SC01A-ASSUMED-V1",
+    "provenance": "Assumed circuit and prescribed test excitations; no selected hardware or measurements"
+  },
+  "source": {
+    "voltageStep_V": 24,
+    "currentStep_A": 3,
+    "voltageRise_s": 1E-7,
+    "currentRise_s": 2E-7,
+    "edgeTime_s": 1E-6,
+    "pwmFrequency_Hz": 20000,
+    "duty": 0.5
+  },
+  "driver": {
+    "commonMode_V": 2.5,
+    "differential_V": 2,
+    "transitionTime_s": 1E-7,
+    "Rp_Ohm": 47,
+    "Rn_Ohm": 53
+  },
+  "receiver": {
+    "Rdiff_Ohm": 120,
+    "Cdiff_F": 1E-10,
+    "Cp_F": 5E-11,
+    "Cn_F": 7E-11,
+    "RpBias_Ohm": 10000,
+    "RnBias_Ohm": 20000
+  },
+  "coupling": {
+    "Cp_F": 1E-11,
+    "Cn_F": 9E-12,
+    "Mp_H": 2E-8,
+    "Mn_H": 1.7E-8
+  },
+  "ground": {
+    "R_Ohm": 0.025,
+    "L_H": 2E-8
+  },
+  "diagnostics": {
+    "noiseThreshold_V": 0.2,
+    "receiverThreshold_V": 0.2,
+    "commonModeLimit_V": 7
+  },
+  "simulation": {
+    "singleStop_s": 5E-6
+  },
+  "verification": {
+    "relativeGate": 0.01,
+    "voltageFloor_V": 0.0001,
+    "timeGate_s": 1E-9
+  }
+}

@@ -1,0 +1,282 @@
+Note: Starting source stepping
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: One successful source step
+Note: Source stepping completed
+
+Note: Compatibility modes selected: ps lt a
+
+
+Circuit: sc01b independent engine control
+
+
+Note: Compatibility modes selected: ps
+
+
+Circuit: sc01b original vendor equations - nominal
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vin                                         24
+f1                                      23.851
+bus                                     23.851
+bc                                      23.851
+hd                                      23.851
+xhigh.x_1.d                            23.8487
+xhigh.x_1.ox                           23.8487
+xhigh.x_1.e_edg1_int1                        0
+xhigh.g                                35.8477
+xhigh.x_1.ox1                          23.8487
+xhigh.x_1.e_edg2_int1                        0
+xhigh.x_1.ox2                          23.8487
+xhigh.x_1.e_edg3_int1              1.11841e-20
+xhigh.x_1.edep                         23.8487
+xhigh.x_1.e_eds_int1               4.83782e-22
+xhigh.x_1.s                            23.8484
+xhigh.x_1.edep1                        23.8487
+xhigh.x_1.e_eds1_int1              4.83782e-22
+xhigh.sp                               23.8484
+xhigh.x_1.edep2                        23.8487
+xhigh.x_1.e_eds2_int1              8.67986e-10
+xhigh.x_1.edep3                        23.8487
+xhigh.x_1.e_eds3_int1              4.56432e-09
+xhigh.x_1.d5a                          23.8487
+xhigh.x_1.g_chan_int1                  2.98096
+temp                                        25
+xhigh.x_1.d5                           23.8487
+xhigh.x_1.d1                           23.8509
+xhigh.x_1.g_rmos_int1                  2.98096
+xhigh.d1                               23.8509
+xhigh.x_1.d3                           23.8509
+xhigh.x_1.g_diode_int1                       0
+xhigh.x_1.d2                           23.8509
+xhigh.x_1.g_rdio_int1             -5.45697e-12
+xhigh.s                                23.8482
+xhigh.x_1.g_th_int1                 0.00803607
+xhigh.g1                               35.8477
+hg                                     35.8477
+xhigh.s1                               23.8477
+xhigh.g_s_int1                        -2.98096
+sw                                     23.8477
+xhigh.d2                                23.851
+xhigh.t1                                    25
+xhigh.t2                                    25
+xhigh.t3                                    25
+xhigh.t4                                    25
+ld                                     23.8477
+xlow.x_1.d                             23.8477
+xlow.x_1.ox                           0.476872
+xlow.x_1.e_edg1_int1                   23.3708
+xlow.g                             6.34216e-18
+xlow.x_1.ox1                             6.088
+xlow.x_1.e_edg2_int1                   17.7597
+xlow.x_1.ox2                           17.1856
+xlow.x_1.e_edg3_int1                   6.66214
+xlow.x_1.edep                           17.016
+xlow.x_1.e_eds_int1                    6.83175
+xlow.x_1.s                         2.11971e-11
+xlow.x_1.edep1                          17.016
+xlow.x_1.e_eds1_int1                   6.83175
+xlow.sp                            2.11971e-11
+xlow.x_1.edep2                         19.6866
+xlow.x_1.e_eds2_int1                   4.16109
+xlow.x_1.edep3                         10.0143
+xlow.x_1.e_eds3_int1                   13.8334
+xlow.x_1.d5a                           23.8477
+xlow.x_1.g_chan_int1               9.14172e-11
+xlow.x_1.d5                            23.8477
+xlow.x_1.d1                            23.8477
+xlow.x_1.g_rmos_int1               4.77885e-08
+xlow.d1                                23.8477
+xlow.x_1.d3                            23.8477
+xlow.x_1.g_diode_int1                        0
+xlow.x_1.d2                            23.8477
+xlow.x_1.g_rdio_int1              -4.76939e-08
+xlow.s                             1.69004e-11
+xlow.x_1.g_th_int1                 2.25569e-09
+xlow.g1                            5.82919e-18
+lg                                 5.82919e-18
+xlow.s1                            3.08416e-23
+xlow.g_s_int1                     -9.54823e-08
+xlow.d2                                23.8477
+xlow.t1                                     25
+xlow.t2                                     25
+xlow.t3                                     25
+xlow.t4                                     25
+gh0                                    35.8477
+gl0                                          0
+gh1                                    35.8477
+gl1                                5.82919e-18
+lr                                     23.8477
+b.xlow.bg_s#branch                           0
+b.xlow.x_1.bg_th#branch                      0
+v.xlow.x_1.v_sense#branch          9.54824e-08
+v.xlow.x_1.v_sense2#branch                   0
+v.xlow.x_1.v_sm#branch             9.45874e-11
+b.xlow.x_1.bg_rdio#branch                    0
+b.xlow.x_1.bg_diode#branch                   0
+b.xlow.x_1.bg_rmos#branch                    0
+b.xlow.x_1.bg_chan#branch                    0
+b.xlow.x_1.be_eds3#branch                    0
+b.xlow.x_1.be_eds2#branch                    0
+b.xlow.x_1.be_eds1#branch                    0
+b.xlow.x_1.be_eds#branch                     0
+b.xlow.x_1.be_edg3#branch                    0
+b.xlow.x_1.be_edg2#branch                    0
+b.xlow.x_1.be_edg1#branch                    0
+b.xhigh.bg_s#branch                          0
+b.xhigh.x_1.bg_th#branch                     0
+v.xhigh.x_1.v_sense#branch             2.98096
+v.xhigh.x_1.v_sense2#branch                  0
+v.xhigh.x_1.v_sm#branch                2.98096
+b.xhigh.x_1.bg_rdio#branch                   0
+b.xhigh.x_1.bg_diode#branch                  0
+b.xhigh.x_1.bg_rmos#branch                   0
+b.xhigh.x_1.bg_chan#branch                   0
+b.xhigh.x_1.be_eds3#branch                   0
+b.xhigh.x_1.be_eds2#branch                   0
+b.xhigh.x_1.be_eds1#branch                   0
+b.xhigh.x_1.be_eds#branch                    0
+b.xhigh.x_1.be_edg3#branch                   0
+b.xhigh.x_1.be_edg2#branch                   0
+b.xhigh.x_1.be_edg1#branch                   0
+lload#branch                           2.98096
+l.xlow.l_d#branch                  9.56211e-08
+l.xlow.l_s#branch                 -9.54823e-08
+l.xlow.l_g#branch                 -2.33168e-19
+l.xhigh.l_d#branch                     2.98096
+l.xhigh.l_s#branch                    -2.98096
+l.xhigh.l_g#branch                 1.31993e-07
+lfeed#branch                           2.98096
+e.xlow.x_1.e_eds3#branch                     0
+e.xlow.x_1.e_eds2#branch                     0
+e.xlow.x_1.e_eds1#branch                     0
+e.xlow.x_1.e_eds#branch                      0
+e.xlow.x_1.e_edg3#branch                     0
+e.xlow.x_1.e_edg2#branch                     0
+e.xlow.x_1.e_edg1#branch                     0
+e.xhigh.x_1.e_eds3#branch                    0
+e.xhigh.x_1.e_eds2#branch                    0
+e.xhigh.x_1.e_eds1#branch                    0
+e.xhigh.x_1.e_eds#branch                     0
+e.xhigh.x_1.e_edg3#branch                    0
+e.xhigh.x_1.e_edg2#branch                    0
+e.xhigh.x_1.e_edg1#branch                    0
+vlg#branch                        -2.33168e-19
+vhg#branch                         1.31993e-07
+vlcmd#branch                       2.33168e-19
+vhcmd#branch                      -1.31993e-07
+vtemp#branch                        0.00803608
+vl#branch                          9.56286e-08
+vh#branch                              2.98096
+vdc#branch                            -2.98096
+
+doAnalyses: TRAN:  Timestep too small; time = 2.019e-06, timestep = 1.5625e-22: trouble with node "xhigh.x_1.d"
+
+
+tran simulation(s) aborted
+ngspice-41 done

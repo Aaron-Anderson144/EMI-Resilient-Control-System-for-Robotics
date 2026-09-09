@@ -1,0 +1,101 @@
+
+	Home License -- for personal use only.  Not for government,
+	academic, research, commercial, or other organizational use.
+
+EMI-resilient actuator workspace initialized.
+MATLAB root: C:\Users\adand\Documents\Codex\2026-09-09\le\work\sc01a\project\03_MATLAB
+Parameter set: REPRESENTATIVE-ACTUATOR-V0.2
+Running TestBaseline
+.....
+Done TestBaseline
+__________
+
+Running TestFaultInjection
+.......
+Done TestFaultInjection
+__________
+
+Running TestPhase2B
+.......... ......
+Done TestPhase2B
+__________
+
+Running TestSensitivityDesign
+....
+Done TestSensitivityDesign
+__________
+
+Running TestSensitivityPhysics
+.......... ...
+Done TestSensitivityPhysics
+__________
+
+SC-01A finite-edge circuit workspace: C:\Users\adand\Documents\Codex\2026-09-09\le\work\sc01a\project\06_Circuit_Simulations\SC01A
+Running TestSC01AReference
+........
+Done TestSC01AReference
+__________
+
+Running TestSC01AThresholds
+.......... ....
+Done TestSC01AThresholds
+__________
+
+baseline | step 1.00 ns | 10.6 s | 5008 samples | peak DM 0 V | oracle DM 0 V
+baseline | step 0.50 ns | 1.6 s | 10008 samples | peak DM 0 V | oracle DM 0 V
+baseline | step 0.25 ns | 1.7 s | 20009 samples | peak DM 0 V | oracle DM 0 V
+capacitive_rise | step 1.00 ns | 1.0 s | 5248 samples | peak DM 0.00719363 V | oracle DM 1.33e-06 V
+capacitive_rise | step 0.50 ns | 1.5 s | 10226 samples | peak DM 0.00719372 V | oracle DM 1.34e-06 V
+capacitive_rise | step 0.25 ns | 1.3 s | 20202 samples | peak DM 0.00719365 V | oracle DM 1.3e-06 V
+inductive_rise | step 1.00 ns | 1.0 s | 5792 samples | peak DM 0.0299807 V | oracle DM 3.07e-06 V
+inductive_rise | step 0.50 ns | 1.0 s | 10258 samples | peak DM 0.0299795 V | oracle DM 2.7e-06 V
+inductive_rise | step 0.25 ns | 1.4 s | 21807 samples | peak DM 0.0299802 V | oracle DM 2.69e-06 V
+shared_rise | step 1.00 ns | 1.0 s | 5592 samples | peak DM 0.0171188 V | oracle DM 3.58e-06 V
+shared_rise | step 0.50 ns | 1.0 s | 10325 samples | peak DM 0.0171131 V | oracle DM 3.25e-06 V
+shared_rise | step 0.25 ns | 1.3 s | 21517 samples | peak DM 0.0171229 V | oracle DM 2.69e-06 V
+combined_rise | step 1.00 ns | 1.0 s | 5897 samples | peak DM 0.0517318 V | oracle DM 6.73e-06 V
+combined_rise | step 0.50 ns | 1.1 s | 11055 samples | peak DM 0.0517358 V | oracle DM 6.65e-06 V
+combined_rise | step 0.25 ns | 1.2 s | 22222 samples | peak DM 0.0517339 V | oracle DM 5.87e-06 V
+combined_fall | step 1.00 ns | 0.7 s | 5809 samples | peak DM 0.0517344 V | oracle DM 6.71e-06 V
+combined_fall | step 0.50 ns | 0.8 s | 11106 samples | peak DM 0.0517365 V | oracle DM 6.45e-06 V
+combined_fall | step 0.25 ns | 0.9 s | 21891 samples | peak DM 0.0517358 V | oracle DM 6.07e-06 V
+balanced_combined | step 1.00 ns | 0.9 s | 5993 samples | peak DM 1.33227e-15 V | oracle DM 2.71e-14 V
+balanced_combined | step 0.50 ns | 0.7 s | 11222 samples | peak DM 6.03961e-14 V | oracle DM 7.55e-14 V
+balanced_combined | step 0.25 ns | 1.1 s | 21875 samples | peak DM 5.4623e-14 V | oracle DM 6.53e-14 V
+zero_coupling | step 1.00 ns | 7.6 s | 5008 samples | peak DM 6.66134e-16 V | oracle DM 6.66e-16 V
+zero_coupling | step 0.50 ns | 0.8 s | 10271 samples | peak DM 6.66134e-16 V | oracle DM 6.66e-16 V
+zero_coupling | step 0.25 ns | 0.8 s | 20009 samples | peak DM 6.66134e-16 V | oracle DM 6.66e-16 V
+zero_source | step 1.00 ns | 2.3 s | 5008 samples | peak DM 0 V | oracle DM 0 V
+zero_source | step 0.50 ns | 0.8 s | 10008 samples | peak DM 0 V | oracle DM 0 V
+zero_source | step 0.25 ns | 1.0 s | 20009 samples | peak DM 0 V | oracle DM 0 V
+logic_low | step 1.00 ns | 0.8 s | 5832 samples | peak DM 0.051731 V | oracle DM 6.69e-06 V
+logic_low | step 0.50 ns | 0.8 s | 11051 samples | peak DM 0.0517347 V | oracle DM 6.27e-06 V
+logic_low | step 0.25 ns | 1.0 s | 22577 samples | peak DM 0.0517371 V | oracle DM 6.1e-06 V
+transition_leads | step 1.00 ns | 0.7 s | 5959 samples | peak DM 0.0517381 V | oracle DM 8.13e-06 V
+transition_leads | step 0.50 ns | 0.7 s | 11236 samples | peak DM 0.0517329 V | oracle DM 8.62e-06 V
+transition_leads | step 0.25 ns | 0.8 s | 21160 samples | peak DM 0.0517389 V | oracle DM 7.71e-06 V
+transition_coincident | step 1.00 ns | 0.7 s | 5803 samples | peak DM 0.0517305 V | oracle DM 1.45e-05 V
+transition_coincident | step 0.50 ns | 0.7 s | 11067 samples | peak DM 0.051734 V | oracle DM 8.17e-06 V
+transition_coincident | step 0.25 ns | 0.8 s | 21959 samples | peak DM 0.0517361 V | oracle DM 5.94e-06 V
+transition_lags | step 1.00 ns | 0.7 s | 5573 samples | peak DM 0.051731 V | oracle DM 1.46e-05 V
+transition_lags | step 0.50 ns | 0.7 s | 10389 samples | peak DM 0.0517347 V | oracle DM 7.51e-06 V
+transition_lags | step 0.25 ns | 0.8 s | 21555 samples | peak DM 0.0517371 V | oracle DM 6.1e-06 V
+stress_fall | step 1.00 ns | 1.0 s | 5884 samples | peak DM 1.82346 V | oracle DM 7.43e-05 V
+stress_fall | step 0.50 ns | 0.8 s | 11513 samples | peak DM 1.82346 V | oracle DM 3.15e-05 V
+stress_fall | step 0.25 ns | 1.2 s | 20262 samples | peak DM 1.82346 V | oracle DM 1.77e-05 V
+pwm_10 | step 1.00 ns | 7.9 s | 567909 samples | peak DM 0.0518218 V | oracle DM 7.35e-06 V
+pwm_10 | step 0.50 ns | 17.0 s | 1117128 samples | peak DM 0.0518214 V | oracle DM 7e-06 V
+pwm_10 | step 0.25 ns | 29.4 s | 2217095 samples | peak DM 0.0518213 V | oracle DM 6.44e-06 V
+pwm_20 | step 1.00 ns | 17.4 s | 1136629 samples | peak DM 0.0518219 V | oracle DM 7.32e-06 V
+pwm_20 | step 0.50 ns | 33.0 s | 2227456 samples | peak DM 0.0518214 V | oracle DM 7e-06 V
+pwm_20 | step 0.25 ns | 67.3 s | 4426555 samples | peak DM 0.0518214 V | oracle DM 6.51e-06 V
+Tolerance refinement capacitive_rise: passed=1
+Tolerance refinement combined_rise: passed=1
+Tolerance refinement stress_fall: passed=1
+SC-01A complete: 51 native runs, all declared gates passed.
+SC-01A workflow completed. Results: C:\Users\adand\Documents\Codex\2026-09-09\le\work\sc01a\project\06_Circuit_Simulations\SC01A\results
+    File    Line    Message
+    ____    ____    _______
+
+
+CAMPAIGN_COMPLETE: 67 tests, 51 native simulations, all gates passed, 0 static findings.

@@ -1,0 +1,234 @@
+{
+  "method": "Compare every native-record sidecar; retain original keys without backstamping",
+  "recordedFingerprint": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+  "currentCompleteFingerprint": "e8baac864d66422b35e4e521fc96cc30b5235d8e2ace3683498c4d78cfde1d76",
+  "recordedMatchesCurrentComplete": false,
+  "recordedKeysUnchanged": true,
+  "records": [
+    {
+      "case": "nominal",
+      "run": "native_0.5_ns",
+      "recordedKey": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+      "sidecar": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partA\\nominal\\native_0.5_ns.mat.key"
+    },
+    {
+      "case": "nominal",
+      "run": "native_0.25_ns",
+      "recordedKey": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+      "sidecar": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partA\\nominal\\native_0.25_ns.mat.key"
+    },
+    {
+      "case": "nominal",
+      "run": "native_0.125_ns",
+      "recordedKey": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+      "sidecar": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partA\\nominal\\native_0.125_ns.mat.key"
+    },
+    {
+      "case": "nominal",
+      "run": "native_tight_consistency",
+      "recordedKey": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+      "sidecar": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partA\\nominal\\native_tight_consistency.mat.key"
+    },
+    {
+      "case": "holdout_bus18",
+      "run": "native_0.5_ns",
+      "recordedKey": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+      "sidecar": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partA\\holdout_bus18\\native_0.5_ns.mat.key"
+    },
+    {
+      "case": "holdout_bus18",
+      "run": "native_0.25_ns",
+      "recordedKey": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+      "sidecar": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partA\\holdout_bus18\\native_0.25_ns.mat.key"
+    },
+    {
+      "case": "holdout_bus18",
+      "run": "native_0.125_ns",
+      "recordedKey": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+      "sidecar": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partA\\holdout_bus18\\native_0.125_ns.mat.key"
+    },
+    {
+      "case": "holdout_load4ohm",
+      "run": "native_0.5_ns",
+      "recordedKey": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+      "sidecar": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partB\\holdout_load4ohm\\native_0.5_ns.mat.key"
+    },
+    {
+      "case": "holdout_load4ohm",
+      "run": "native_0.25_ns",
+      "recordedKey": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+      "sidecar": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partB\\holdout_load4ohm\\native_0.25_ns.mat.key"
+    },
+    {
+      "case": "holdout_load4ohm",
+      "run": "native_0.125_ns",
+      "recordedKey": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+      "sidecar": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partB\\holdout_load4ohm\\native_0.125_ns.mat.key"
+    },
+    {
+      "case": "holdout_gate47",
+      "run": "native_0.5_ns",
+      "recordedKey": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+      "sidecar": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partB\\holdout_gate47\\native_0.5_ns.mat.key"
+    },
+    {
+      "case": "holdout_gate47",
+      "run": "native_0.25_ns",
+      "recordedKey": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+      "sidecar": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partB\\holdout_gate47\\native_0.25_ns.mat.key"
+    },
+    {
+      "case": "holdout_gate47",
+      "run": "native_0.125_ns",
+      "recordedKey": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+      "sidecar": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partB\\holdout_gate47\\native_0.125_ns.mat.key"
+    },
+    {
+      "case": "holdout_bus30_load16_gate10",
+      "run": "native_0.5_ns",
+      "recordedKey": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+      "sidecar": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partC\\holdout_bus30_load16_gate10\\native_0.5_ns.mat.key"
+    },
+    {
+      "case": "holdout_bus30_load16_gate10",
+      "run": "native_0.25_ns",
+      "recordedKey": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+      "sidecar": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partC\\holdout_bus30_load16_gate10\\native_0.25_ns.mat.key"
+    },
+    {
+      "case": "holdout_bus30_load16_gate10",
+      "run": "native_0.125_ns",
+      "recordedKey": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+      "sidecar": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partC\\holdout_bus30_load16_gate10\\native_0.125_ns.mat.key"
+    },
+    {
+      "case": "holdout_bus30_load16_gate10",
+      "run": "native_tight_consistency",
+      "recordedKey": "628005492656cbe3803e870c14f0b8b047966fffb5758b1338d3fd3cf7194b5c",
+      "sidecar": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partC\\holdout_bus30_load16_gate10\\native_tight_consistency.mat.key"
+    }
+  ],
+  "currentManifest": {
+    "schema": "SC01B-native-source-fingerprint-v2",
+    "fingerprint": "e8baac864d66422b35e4e521fc96cc30b5235d8e2ace3683498c4d78cfde1d76",
+    "matlabVersion": "26.1.0.3276743 (R2026a) Update 3",
+    "capturedUTC": "09-Sep-2026 14:53:24",
+    "files": [
+      {
+        "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\models\\EMI_SC01B_Device_Halfbridge.slx",
+        "sha256": "fe221ef926c7392fb3479fe33adaa26312c768e74227cb5cab062560c84154ad",
+        "bytes": 240621,
+        "modifiedUTC": "2026-09-09T14:32:49.000Z",
+        "vendorDependency": false
+      },
+      {
+        "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\scripts\\build_sc01b_model.m",
+        "sha256": "e61943a6088b57a2b22a84b54cf0a20e2e8d9963f2bbeba739c3ff8c36fa106c",
+        "bytes": 10392,
+        "modifiedUTC": "2026-09-09T14:27:24.000Z",
+        "vendorDependency": false
+      },
+      {
+        "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\functions\\simulate_sc01b_simscape.m",
+        "sha256": "516ff446abd70aea537f5bd88399eb9859078a95ef355fc68ab785ff522821da",
+        "bytes": 5114,
+        "modifiedUTC": "2026-09-09T14:16:30.000Z",
+        "vendorDependency": false
+      },
+      {
+        "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\functions\\sc01b_gate_signals.m",
+        "sha256": "a723f0e975fb57cc01e34a69d55ba7a77e0764fca00c0afc82023614356dc453",
+        "bytes": 1498,
+        "modifiedUTC": "2026-09-09T14:05:32.000Z",
+        "vendorDependency": false
+      },
+      {
+        "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\functions\\sc01b_local_solver_settings.m",
+        "sha256": "84ab12a22420052e6d03c2f573ad670b1dc0dd1c3b2420da922ebff5c3beef5e",
+        "bytes": 1476,
+        "modifiedUTC": "2026-09-09T14:09:44.000Z",
+        "vendorDependency": false
+      },
+      {
+        "path": "C:\\Program Files\\MATLAB\\R2026a\\toolbox\\physmod\\elec\\spice\\mosfets\\m\\+ee_spice_mosfets\\+spiceinfineon\\+spiceOptiMOS_6_40V\\IAUC100N04S6L014.ssc",
+        "sha256": "8484cb421ff533c010ff75d2eb9e5401fe1b71b329a9321854aa4f6aee9ff356",
+        "bytes": 9115,
+        "modifiedUTC": "2024-10-15T12:09:37.000Z",
+        "vendorDependency": true
+      },
+      {
+        "path": "C:\\Program Files\\MATLAB\\R2026a\\toolbox\\physmod\\elec\\spice\\mosfets\\m\\+ee_spice_mosfets\\+spiceinfineon\\+spiceOptiMOS_6_40V\\a6_40_d_var.ssc",
+        "sha256": "b09818438989d1c11c5c9904f81abac80a9833050f81a49fb34fc3b99350b50e",
+        "bytes": 15677,
+        "modifiedUTC": "2024-10-15T12:09:38.000Z",
+        "vendorDependency": true
+      },
+      {
+        "path": "C:\\Program Files\\MATLAB\\R2026a\\toolbox\\physmod\\elec\\spice\\mosfets\\m\\+ee_spice_mosfets\\+spiceinfineon\\+spiceOptiMOS_6_40V\\+a6_40_d_var_simscape_functions\\i0.ssc",
+        "sha256": "e9dfe7ed7731589f7c84aec4d978ddcb7ac847ebeeeb9beb80e829c7e7a10946",
+        "bytes": 478,
+        "modifiedUTC": "2024-10-15T12:09:37.000Z",
+        "vendorDependency": true
+      },
+      {
+        "path": "C:\\Program Files\\MATLAB\\R2026a\\toolbox\\physmod\\elec\\spice\\mosfets\\m\\+ee_spice_mosfets\\+spiceinfineon\\+spiceOptiMOS_6_40V\\+a6_40_d_var_simscape_functions\\idiod.ssc",
+        "sha256": "57e44e989ef6303937458690f8d70fc0ab9d6d730aed883a5fb4b55cce3462af",
+        "bytes": 957,
+        "modifiedUTC": "2024-10-15T12:09:37.000Z",
+        "vendorDependency": true
+      },
+      {
+        "path": "C:\\Program Files\\MATLAB\\R2026a\\toolbox\\physmod\\elec\\spice\\mosfets\\m\\+ee_spice_mosfets\\+spiceinfineon\\+spiceOptiMOS_6_40V\\+a6_40_d_var_simscape_functions\\idiode.ssc",
+        "sha256": "927c18e78db63771232dd0d16d145d087b4ca1dcf7a603979cb90a1f2771c403",
+        "bytes": 662,
+        "modifiedUTC": "2024-10-15T12:09:37.000Z",
+        "vendorDependency": true
+      },
+      {
+        "path": "C:\\Program Files\\MATLAB\\R2026a\\toolbox\\physmod\\elec\\spice\\mosfets\\m\\+ee_spice_mosfets\\+spiceinfineon\\+spiceOptiMOS_6_40V\\+a6_40_d_var_simscape_functions\\ig.ssc",
+        "sha256": "718542af1e7fe5877eace2cde384a0e2af17cbe367a45fc105ccac936f1bee8a",
+        "bytes": 857,
+        "modifiedUTC": "2024-10-15T12:09:37.000Z",
+        "vendorDependency": true
+      },
+      {
+        "path": "C:\\Program Files\\MATLAB\\R2026a\\toolbox\\physmod\\elec\\spice\\mosfets\\m\\+ee_spice_mosfets\\+spiceinfineon\\+spiceOptiMOS_6_40V\\+a6_40_d_var_simscape_functions\\j.ssc",
+        "sha256": "54f9f297e3176d8ef76f14b7cd42c06dbf5797ca8f330b7afcd4bb9b93530fa7",
+        "bytes": 1258,
+        "modifiedUTC": "2024-10-15T12:09:37.000Z",
+        "vendorDependency": true
+      },
+      {
+        "path": "C:\\Program Files\\MATLAB\\R2026a\\toolbox\\physmod\\elec\\spice\\mosfets\\m\\+ee_spice_mosfets\\+spiceinfineon\\+spiceOptiMOS_6_40V\\+a6_40_d_var_simscape_functions\\pr.ssc",
+        "sha256": "11b65f6a498bd8fbe5ea000e765983486416e4b1114c79823e837376995cf49b",
+        "bytes": 455,
+        "modifiedUTC": "2024-10-15T12:09:37.000Z",
+        "vendorDependency": true
+      },
+      {
+        "path": "C:\\Program Files\\MATLAB\\R2026a\\toolbox\\physmod\\elec\\spice\\mosfets\\m\\+ee_spice_mosfets\\+spiceinfineon\\+spiceOptiMOS_6_40V\\+a6_40_d_var_simscape_functions\\qcdg.ssc",
+        "sha256": "898eae50843f0bceb0036477a7083d4f563d67c3f3d4a0761c90bb1ffe41377f",
+        "bytes": 880,
+        "modifiedUTC": "2024-10-15T12:09:37.000Z",
+        "vendorDependency": true
+      },
+      {
+        "path": "C:\\Program Files\\MATLAB\\R2026a\\toolbox\\physmod\\elec\\spice\\mosfets\\m\\+ee_spice_mosfets\\+spiceinfineon\\+spiceOptiMOS_6_40V\\+a6_40_d_var_simscape_functions\\qcds.ssc",
+        "sha256": "8856a36f4c55e6ce325735f72c167a2b5e0e823146b2649db2b0bd16c7112560",
+        "bytes": 875,
+        "modifiedUTC": "2024-10-15T12:09:37.000Z",
+        "vendorDependency": true
+      },
+      {
+        "path": "C:\\Program Files\\MATLAB\\R2026a\\toolbox\\physmod\\elec\\spice\\mosfets\\m\\+ee_spice_mosfets\\+spiceinfineon\\+spiceOptiMOS_6_40V\\+a6_40_d_var_simscape_functions\\vbr.ssc",
+        "sha256": "9d1a6d04eb91b6a440c0ca86310e2a4350626b6169b2b470af0ac2c9226324e1",
+        "bytes": 306,
+        "modifiedUTC": "2024-10-15T12:09:37.000Z",
+        "vendorDependency": true
+      }
+    ]
+  },
+  "traceabilityLimitation": "Run-time legacy keys cover the saved model, builder, adapter, gate/solver helpers, MATLAB version and outer device wrapper, but omit the vendor core/helper package. The current complete manifest is supplemental and is not retroactive proof of those omitted files. Session source files were not changed; filesystem timestamps below are supporting evidence only.",
+  "earliestWorkerStartedUTC": "2026-09-09T14:39:43.000Z",
+  "allVendorModificationTimesPrecedeWorkers": true
+}

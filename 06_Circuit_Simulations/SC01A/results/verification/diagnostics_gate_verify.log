@@ -1,0 +1,14 @@
+
+	Home License -- for personal use only.  Not for government,
+	academic, research, commercial, or other organizational use.
+
+NOMINAL_DIAGNOSTIC_GATE_PASS warnings0 stopReachedStopTime samples22277 DMerr1.33976556e-06
+[Warning: Intentional diagnostic gate verification warning] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In simulate_sc01a_simscape (line 43)
+In diagnostics_gate_verify (line 2)
+In run (line 100)] 
+PROBE caught SC01A:SimulationWarning: Simulation issued 1 warning(s) and cannot be accepted. First warning: SC01A:DiagnosticGateProbe: Intentional diagnostic gate verification warning. Full diagnostics retained in C:\Users\adand\Documents\Codex\2026-09-09\le\work\sc01a\project\06_Circuit_Simulations\SC01A\results\diagnostics\tpede35bd2_79fe_4613_9a74_bb9a081ada19.mat
+WARNING_REJECTION_GATE_PASS

@@ -1,0 +1,56 @@
+{
+  "startedUTC": "09-Sep-2026 14:32:38",
+  "absoluteComparisonTolerance": 1E-10,
+  "nominalReference": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\verification\\nominal\\native_0.5_ns.mat",
+  "defaultMetadata": {
+    "id": "SC01B-IAUC100N04S6L014-V1",
+    "case": "nominal",
+    "scope": "Isothermal device-model verification; no physical source validation"
+  },
+  "campaignMetadata": {
+    "id": "SC01B-IAUC100N04S6L014-V1",
+    "case": "nominal",
+    "scope": "Isothermal device-model verification; no physical source validation",
+    "role": "integration reference"
+  },
+  "isolatedModelFolder": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\standalone\\SC01B\\models",
+  "isolatedCacheFolder": "C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\standalone\\cache",
+  "overrideChecked": true,
+  "passed": true,
+  "standaloneRuntime_s": 23.1274637,
+  "standaloneWarningCount": 0,
+  "standaloneStopEvent": "ReachedStopTime",
+  "standaloneComparison": {
+    "samples": 10001,
+    "maximumDifference": 0,
+    "signals": {
+      "switch_V": 0,
+      "bus_V": 0,
+      "highVgs_V": 0,
+      "highVds_V": 0,
+      "lowVgs_V": 0,
+      "lowVds_V": 0,
+      "highCurrent_A": 0,
+      "highSourceCurrent_A": 0,
+      "lowCurrent_A": 0,
+      "lowSourceCurrent_A": 0,
+      "highGateCurrent_A": 0,
+      "lowGateCurrent_A": 0,
+      "loadCurrent_A": 0,
+      "feedCurrent_A": 0,
+      "highChannelCurrent_A": 0,
+      "lowChannelCurrent_A": 0,
+      "highDiodeCurrent_A": 0,
+      "lowDiodeCurrent_A": 0
+    }
+  },
+  "baseWorkspaceRemainedEmpty": true,
+  "overrideRuntime_s": 20.7138782,
+  "overrideWarningCount": 0,
+  "overrideBusDifference_V": 6.004408575033505,
+  "overrideDCLoadRatio": 0.75000000065041583,
+  "overrideExpectedDCLoadRatio": 0.75,
+  "overrideDCLoadRatioTolerance": 0.001,
+  "overrideVerificationMode": "DC ratio and response; 18 V campaign trace not yet available",
+  "completedUTC": "09-Sep-2026 14:33:34"
+}

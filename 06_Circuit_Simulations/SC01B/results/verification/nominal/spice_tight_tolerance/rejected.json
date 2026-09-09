@@ -1,0 +1,5 @@
+{
+  "Identifier": "SC01B:NgspiceDiagnostic",
+  "Message": "ngspice diagnostic prevents accepting this run. Inspect C:\\Users\\adand\\Documents\\Codex\\2026-09-09\\le\\work\\sc01b\\project\\06_Circuit_Simulations\\SC01B\\results\\parts\\partA\\nominal\\spice_tight_tolerance\\ngspice.log",
+  "AcceptedTrace": false
+}

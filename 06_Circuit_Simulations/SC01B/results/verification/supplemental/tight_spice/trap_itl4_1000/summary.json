@@ -1,0 +1,16 @@
+{
+  "name": "trap_itl4_1000",
+  "controls": ".options reltol=9.9999999999999995e-07 abstol=1e-10 vntol=1e-08 method=trap gminsteps=0 srcsteps=1 itl4=1000",
+  "returnCode": 0,
+  "runtime_s": 5.187999999994645,
+  "diagnostics": [
+    "doAnalyses: TRAN:  Timestep too small; time = 2.019e-06, timestep = 1.5625e-22: trouble with node \"xhigh.x_1.d\"",
+    "tran simulation(s) aborted"
+  ],
+  "complete": false,
+  "electricalDeckIdentical": true,
+  "baselineElectricalDeckIdentical": true,
+  "electricalDeckSHA256": "0fa25ef97378c8b46f200c13ad6c9e43a2f941d9fbd4c1092463dec37b214230",
+  "sampleCount": 16160,
+  "stopTime_s": 2.019e-06
+}

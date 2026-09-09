@@ -1,0 +1,12 @@
+SC01B independent engine control
+.control
+set ngbehavior=ps
+set numdgt=17
+set wr_singlescale
+set wr_vecnames
+source halfbridge.cir
+tran 1e-10 5e-6 0 1.2500000000000001e-10
+wrdata waveform.dat v(sw) v(bus) v(hg,sw) v(lg) v(hd,sw) v(ld) i(Vh) i(Vl) i(Vhg) i(Vlg) i(Lload) i(Lfeed)
+quit
+.endc
+.end

@@ -1,0 +1,7 @@
+Time_s,Level_V,Direction,Channel
+1.00412855617027e-06,-0.2,-1,noise_delta
+1.13821538606074e-06,-0.2,1,noise_delta
+1.0151901983096e-06,0.2,-1,total_receiver_input
+1.02409049610203e-06,-0.2,-1,total_receiver_input
+1.10758830350934e-06,-0.2,1,total_receiver_input
+1.11408199560747e-06,0.2,1,total_receiver_input

@@ -1,0 +1,11 @@
+{
+  "numericalCampaignPassed": false,
+  "operatingPointsPassed": false,
+  "physicalSourceValidated": false,
+  "tests": {
+    "Total": 84,
+    "Passed": 84,
+    "Failed": 0,
+    "Incomplete": 0
+  }
+}

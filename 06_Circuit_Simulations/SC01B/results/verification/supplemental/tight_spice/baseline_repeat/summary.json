@@ -1,0 +1,13 @@
+{
+  "name": "baseline_repeat",
+  "controls": ".options reltol=1.0000000000000001e-05 abstol=1.0000000000000001e-09 vntol=9.9999999999999995e-08 method=trap gminsteps=0 srcsteps=1",
+  "returnCode": 0,
+  "runtime_s": 11.375,
+  "diagnostics": [],
+  "complete": true,
+  "electricalDeckIdentical": true,
+  "baselineElectricalDeckIdentical": true,
+  "electricalDeckSHA256": "0fa25ef97378c8b46f200c13ad6c9e43a2f941d9fbd4c1092463dec37b214230",
+  "sampleCount": 40210,
+  "stopTime_s": 5e-06
+}

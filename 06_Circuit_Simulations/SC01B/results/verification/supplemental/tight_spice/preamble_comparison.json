@@ -1,0 +1,72 @@
+[
+  {
+    "name": "absolute_only",
+    "maxVoltageDifference_V": 0.0,
+    "maxCurrentDifference_A": 0.0
+  },
+  {
+    "name": "gear_itl4_100",
+    "maxVoltageDifference_V": 4.07272437996653e-10,
+    "maxCurrentDifference_A": 3.449884822259719e-10
+  },
+  {
+    "name": "gear_order1",
+    "maxVoltageDifference_V": 2.7486990461511596e-10,
+    "maxCurrentDifference_A": 3.037761153734664e-10
+  },
+  {
+    "name": "relative_only",
+    "maxVoltageDifference_V": 3.6969183270230133e-10,
+    "maxCurrentDifference_A": 1.0247092063764285e-10
+  },
+  {
+    "name": "strict_changed_output_step",
+    "maxVoltageDifference_V": 4.0950078527765554e-10,
+    "maxCurrentDifference_A": 1.0479705991883748e-10
+  },
+  {
+    "name": "strict_dc_iteration",
+    "maxVoltageDifference_V": 3.325233421946905e-10,
+    "maxCurrentDifference_A": 7.789235922928128e-11
+  },
+  {
+    "name": "trap_fixed_source_steps",
+    "maxVoltageDifference_V": 2.809912302836892e-09,
+    "maxCurrentDifference_A": 4.878337733771332e-10
+  },
+  {
+    "name": "trap_half_step",
+    "maxVoltageDifference_V": 4.940659431053318e-10,
+    "maxCurrentDifference_A": 7.053411188451264e-10
+  },
+  {
+    "name": "trap_hundredfold",
+    "maxVoltageDifference_V": 2.712398595658416e-10,
+    "maxCurrentDifference_A": 9.21938081432927e-11
+  },
+  {
+    "name": "trap_itl4_100",
+    "maxVoltageDifference_V": 3.325233421946905e-10,
+    "maxCurrentDifference_A": 7.789235922928128e-11
+  },
+  {
+    "name": "trap_itl4_1000",
+    "maxVoltageDifference_V": 3.325233421946905e-10,
+    "maxCurrentDifference_A": 7.789235922928128e-11
+  },
+  {
+    "name": "trap_pivot",
+    "maxVoltageDifference_V": 4.516351737038349e-10,
+    "maxCurrentDifference_A": 4.2316017356824887e-10
+  },
+  {
+    "name": "trap_tight_charge",
+    "maxVoltageDifference_V": 2.8801645226769756e-10,
+    "maxCurrentDifference_A": 2.0157830959988132e-10
+  },
+  {
+    "name": "voltage_only",
+    "maxVoltageDifference_V": 0.0,
+    "maxCurrentDifference_A": 0.0
+  }
+]

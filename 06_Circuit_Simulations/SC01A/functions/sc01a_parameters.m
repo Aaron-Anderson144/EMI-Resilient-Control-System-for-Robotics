@@ -1,0 +1,36 @@
+function p = sc01a_parameters()
+%SC01A_PARAMETERS Assumed finite-edge bench-excitation circuit parameters.
+p.meta.id = "SC01A-ASSUMED-V1";
+p.meta.provenance = "Assumed circuit and prescribed test excitations; no selected hardware or measurements";
+p.source.voltageStep_V = 24;
+p.source.currentStep_A = 3;
+p.source.voltageRise_s = 100e-9;
+p.source.currentRise_s = 200e-9;
+p.source.edgeTime_s = 1e-6;
+p.source.pwmFrequency_Hz = 20e3;
+p.source.duty = 0.5;
+p.driver.commonMode_V = 2.5;
+p.driver.differential_V = 2; % Open-circuit source level, loaded receiver is lower.
+p.driver.transitionTime_s = 100e-9;
+p.driver.Rp_Ohm = 47;
+p.driver.Rn_Ohm = 53;
+p.receiver.Rdiff_Ohm = 120;
+p.receiver.Cdiff_F = 100e-12;
+p.receiver.Cp_F = 50e-12;
+p.receiver.Cn_F = 70e-12;
+p.receiver.RpBias_Ohm = 1e4;
+p.receiver.RnBias_Ohm = 2e4;
+p.coupling.Cp_F = 10e-12;
+p.coupling.Cn_F = 9e-12;
+p.coupling.Mp_H = 20e-9;
+p.coupling.Mn_H = 17e-9;
+p.ground.R_Ohm = 25e-3;
+p.ground.L_H = 20e-9;
+p.diagnostics.noiseThreshold_V = 0.20;
+p.diagnostics.receiverThreshold_V = 0.20;
+p.diagnostics.commonModeLimit_V = 7;
+p.simulation.singleStop_s = 5e-6;
+p.verification.relativeGate = 0.01;
+p.verification.voltageFloor_V = 1e-4;
+p.verification.timeGate_s = 1e-9;
+end

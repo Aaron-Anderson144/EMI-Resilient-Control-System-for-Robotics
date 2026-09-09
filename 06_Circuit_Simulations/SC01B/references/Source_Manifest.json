@@ -1,0 +1,18 @@
+[
+  {
+    "file": "Infineon_IAUC100N04S6L014_datasheet.pdf",
+    "official_url": "https://www.infineon.com/assets/row/public/documents/10/49/infineon-iauc100n04s6l014-datasheet-en.pdf",
+    "revision": "Rev.1.0,2019-04-01",
+    "retrieved": "2026-09-09",
+    "bytes": 680291,
+    "sha256": "04E6964841A2E4592F49E316F4A5E4262433B93534F1A596E0AB737D7415F61C"
+  },
+  {
+    "file": "TI_UCC27211A_datasheet_RevD.pdf",
+    "official_url": "https://www.ti.com/lit/ds/symlink/ucc27211a.pdf",
+    "revision": "SLUSBL4D,July2024",
+    "retrieved": "2026-09-09",
+    "bytes": 1194783,
+    "sha256": "BD99060DC431A59BD94529889A7D4F1DBABB9EBA6D8E47B5C5A07976FBEC7BDE"
+  }
+]

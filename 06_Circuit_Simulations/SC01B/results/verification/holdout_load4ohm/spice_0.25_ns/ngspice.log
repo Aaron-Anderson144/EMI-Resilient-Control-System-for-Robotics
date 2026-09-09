@@ -1,0 +1,208 @@
+Note: Starting source stepping
+Supplies reduced to   0.0000% Note: One successful source step
+Supplies reduced to   0.1000% Note: One successful source step
+Supplies reduced to   0.2000% Note: One successful source step
+Supplies reduced to   0.3500% Note: One successful source step
+Supplies reduced to   0.5750% Note: One successful source step
+Supplies reduced to   0.9125% Note: One successful source step
+Supplies reduced to   1.4188% Note: One successful source step
+Supplies reduced to   2.1781% Note: One successful source step
+Supplies reduced to   3.3172% Note: One successful source step
+Supplies reduced to   5.0258% Note: One successful source step
+Supplies reduced to   7.5887% Note: One successful source step
+Supplies reduced to  11.4330% Note: One successful source step
+Supplies reduced to  17.1995% Note: One successful source step
+Supplies reduced to  25.8493% Supplies reduced to  17.1995% Note: One successful source step
+Supplies reduced to  18.1995% Note: One successful source step
+Supplies reduced to  19.6995% Note: One successful source step
+Supplies reduced to  21.9495% Note: One successful source step
+Supplies reduced to  25.3245% Supplies reduced to  21.9495% Note: One successful source step
+Supplies reduced to  22.4558% Note: One successful source step
+Supplies reduced to  23.2151% Note: One successful source step
+Supplies reduced to  24.3542% Note: One successful source step
+Supplies reduced to  26.0628% Note: One successful source step
+Supplies reduced to  28.6257% Note: One successful source step
+Supplies reduced to  32.4700% Note: One successful source step
+Supplies reduced to  38.2365% Note: One successful source step
+Supplies reduced to  46.8863% Note: One successful source step
+Supplies reduced to  59.8609% Note: One successful source step
+Supplies reduced to  79.3229% Note: One successful source step
+Supplies reduced to 100.0000% Note: One successful source step
+Note: Source stepping completed
+
+Note: Compatibility modes selected: ps lt a
+
+
+Circuit: sc01b independent engine control
+
+
+Note: Compatibility modes selected: ps
+
+
+Circuit: sc01b original vendor equations - holdout_load4ohm
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vin                                         24
+f1                                     23.7038
+bus                                    23.7038
+bc                                     23.7038
+hd                                     23.7038
+xhigh.x_1.d                            23.6993
+xhigh.x_1.ox                           23.6993
+xhigh.x_1.e_edg1_int1                        0
+xhigh.g                                35.6973
+xhigh.x_1.ox1                          23.6993
+xhigh.x_1.e_edg2_int1                        0
+xhigh.x_1.ox2                          23.6993
+xhigh.x_1.e_edg3_int1             -1.75932e-15
+xhigh.x_1.edep                         23.6993
+xhigh.x_1.e_eds_int1               7.36943e-19
+xhigh.x_1.s                            23.6987
+xhigh.x_1.edep1                        23.6993
+xhigh.x_1.e_eds1_int1              7.36943e-19
+xhigh.sp                               23.6987
+xhigh.x_1.edep2                        23.6993
+xhigh.x_1.e_eds2_int1              3.39068e-09
+xhigh.x_1.edep3                        23.6993
+xhigh.x_1.e_eds3_int1              1.78299e-08
+xhigh.x_1.d5a                          23.6993
+xhigh.x_1.g_chan_int1                  5.92434
+temp                                        25
+xhigh.x_1.d5                           23.6993
+xhigh.x_1.d1                           23.7038
+xhigh.x_1.g_rmos_int1                  5.92433
+xhigh.d1                               23.7038
+xhigh.x_1.d3                           23.7038
+xhigh.x_1.g_diode_int1                       0
+xhigh.x_1.d2                           23.7038
+xhigh.x_1.g_rdio_int1             -1.09139e-11
+xhigh.s                                23.6984
+xhigh.x_1.g_th_int1                  0.0317412
+xhigh.g1                               35.6973
+hg                                     35.6973
+xhigh.s1                               23.6973
+xhigh.g_s_int1                        -5.92434
+sw                                     23.6973
+xhigh.d2                               23.7038
+xhigh.t1                                    25
+xhigh.t2                                    25
+xhigh.t3                                    25
+xhigh.t4                                    25
+ld                                     23.6973
+xlow.x_1.d                             23.6973
+xlow.x_1.ox                           0.476872
+xlow.x_1.e_edg1_int1                   23.2205
+xlow.g                             6.30214e-18
+xlow.x_1.ox1                            6.0847
+xlow.x_1.e_edg2_int1                   17.6126
+xlow.x_1.ox2                           17.1555
+xlow.x_1.e_edg3_int1                   6.54189
+xlow.x_1.edep                          16.9634
+xlow.x_1.e_eds_int1                    6.73396
+xlow.x_1.s                         2.10633e-11
+xlow.x_1.edep1                         16.9634
+xlow.x_1.e_eds1_int1                   6.73396
+xlow.sp                            2.10633e-11
+xlow.x_1.edep2                         19.5854
+xlow.x_1.e_eds2_int1                   4.11199
+xlow.x_1.edep3                         9.99552
+xlow.x_1.e_eds3_int1                   13.7018
+xlow.x_1.d5a                           23.6973
+xlow.x_1.g_chan_int1               9.03684e-11
+xlow.x_1.d5                            23.6973
+xlow.x_1.d1                            23.6973
+xlow.x_1.g_rmos_int1               4.74902e-08
+xlow.d1                                23.6973
+xlow.x_1.d3                            23.6973
+xlow.x_1.g_diode_int1                        0
+xlow.x_1.d2                            23.6973
+xlow.x_1.g_rdio_int1              -4.73919e-08
+xlow.s                             1.67937e-11
+xlow.x_1.g_th_int1                 2.24147e-09
+xlow.g1                            5.79241e-18
+lg                                 5.79241e-18
+xlow.s1                           -1.00887e-22
+xlow.g_s_int1                     -9.48798e-08
+xlow.d2                                23.6973
+xlow.t1                                     25
+xlow.t2                                     25
+xlow.t3                                     25
+xlow.t4                                     25
+gh0                                    35.6973
+gl0                                          0
+gh1                                    35.6973
+gl1                                5.79241e-18
+lr                                     23.6973
+b.xlow.bg_s#branch                           0
+b.xlow.x_1.bg_th#branch                      0
+v.xlow.x_1.v_sense#branch          9.48858e-08
+v.xlow.x_1.v_sense2#branch                   0
+v.xlow.x_1.v_sm#branch             9.45874e-11
+b.xlow.x_1.bg_rdio#branch                    0
+b.xlow.x_1.bg_diode#branch                   0
+b.xlow.x_1.bg_rmos#branch                    0
+b.xlow.x_1.bg_chan#branch                    0
+b.xlow.x_1.be_eds3#branch                    0
+b.xlow.x_1.be_eds2#branch                    0
+b.xlow.x_1.be_eds1#branch                    0
+b.xlow.x_1.be_eds#branch                     0
+b.xlow.x_1.be_edg3#branch                    0
+b.xlow.x_1.be_edg2#branch                    0
+b.xlow.x_1.be_edg1#branch                    0
+b.xhigh.bg_s#branch                          0
+b.xhigh.x_1.bg_th#branch                     0
+v.xhigh.x_1.v_sense#branch             5.92434
+v.xhigh.x_1.v_sense2#branch                  0
+v.xhigh.x_1.v_sm#branch                5.92434
+b.xhigh.x_1.bg_rdio#branch                   0
+b.xhigh.x_1.bg_diode#branch                  0
+b.xhigh.x_1.bg_rmos#branch                   0
+b.xhigh.x_1.bg_chan#branch                   0
+b.xhigh.x_1.be_eds3#branch                   0
+b.xhigh.x_1.be_eds2#branch                   0
+b.xhigh.x_1.be_eds1#branch                   0
+b.xhigh.x_1.be_eds#branch                    0
+b.xhigh.x_1.be_edg3#branch                   0
+b.xhigh.x_1.be_edg2#branch                   0
+b.xhigh.x_1.be_edg1#branch                   0
+lload#branch                           5.92434
+l.xlow.l_d#branch                  9.50281e-08
+l.xlow.l_s#branch                 -9.48798e-08
+l.xlow.l_g#branch                 -2.31696e-19
+l.xhigh.l_d#branch                     5.92434
+l.xhigh.l_s#branch                    -5.92434
+l.xhigh.l_g#branch                 1.31985e-07
+lfeed#branch                           5.92434
+e.xlow.x_1.e_eds3#branch                     0
+e.xlow.x_1.e_eds2#branch                     0
+e.xlow.x_1.e_eds1#branch                     0
+e.xlow.x_1.e_eds#branch                      0
+e.xlow.x_1.e_edg3#branch                     0
+e.xlow.x_1.e_edg2#branch                     0
+e.xlow.x_1.e_edg1#branch                     0
+e.xhigh.x_1.e_eds3#branch                    0
+e.xhigh.x_1.e_eds2#branch                    0
+e.xhigh.x_1.e_eds1#branch                    0
+e.xhigh.x_1.e_eds#branch                     0
+e.xhigh.x_1.e_edg3#branch                    0
+e.xhigh.x_1.e_edg2#branch                    0
+e.xhigh.x_1.e_edg1#branch                    0
+vlg#branch                        -2.31696e-19
+vhg#branch                         1.31985e-07
+vlcmd#branch                       2.31696e-19
+vhcmd#branch                      -1.31985e-07
+vtemp#branch                         0.0317412
+vl#branch                           9.5023e-08
+vh#branch                              5.92434
+vdc#branch                            -5.92434
+
+
+No. of Data Rows : 20423
+ngspice-41 done

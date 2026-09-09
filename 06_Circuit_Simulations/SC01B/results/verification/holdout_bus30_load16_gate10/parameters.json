@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "id": "SC01B-IAUC100N04S6L014-V1",
+    "case": "holdout_bus30_load16_gate10",
+    "scope": "Isothermal device-model verification; no physical source validation",
+    "role": "withheld operating point; no model tuning"
+  },
+  "device": {
+    "series": "Infineon OptiMOS6 40V",
+    "name": "IAUC100N04S6L014",
+    "temperature_C": 25,
+    "voltageRating_V": 40,
+    "gateRating_V": 16,
+    "source": "MATLAB R2026a shipped Infineon SPICE model, typical parameters"
+  },
+  "bus": {
+    "voltage_V": 30,
+    "feedResistance_Ohm": 0.05,
+    "feedInductance_H": 2E-8,
+    "capacitance_F": 1E-5,
+    "capacitorESR_Ohm": 0.01,
+    "provenance": "Assumed bench supply and local decoupling, not selected layout or capacitor"
+  },
+  "load": {
+    "inductance_H": 0.0025,
+    "resistance_Ohm": 16,
+    "referenceCurrent_A": 1.875,
+    "provenance": "Assumed8ohm/2.5mH load; high-side initiallyON, consistentDC operating point near3A; current follows circuit equations"
+  },
+  "driver": {
+    "reference": "UCC27211A-informed behavioral driver; not the full IC macro-model",
+    "voltage_V": 12,
+    "outputResistance_Ohm": 3,
+    "externalResistance_Ohm": 10,
+    "riseDelay_s": 2E-8,
+    "fallDelay_s": 1.9E-8,
+    "commandRamp_s": 2E-8,
+    "provenance": "12V and20/19ns delays from TI typical data. Fixed3ohm is an assumed approximation between RC estimates from1nF rise/fall tests;20ns internal source ramp and external22ohm assumed. Floating supply regulated, bootstrap dynamics omitted."
+  },
+  "control": {
+    "highOn_s": 4E-6,
+    "highOff_s": 2E-6,
+    "initialHigh": true,
+    "deadTime_s": 3E-7,
+    "provenance": "Assumed high-side off/on commutation pair with complementary low-side operation; dead time commanded before driver delay"
+  },
+  "simulation": {
+    "stopTime_s": 5E-6,
+    "maxStep_s": 5E-10,
+    "relativeTolerance": 1E-5,
+    "absoluteTolerance": 1E-9
+  },
+  "validation": {
+    "startTime_s": 1E-6,
+    "provenance": "Exclude initialization preamble from edge comparison; separately report initial and pre-edge current"
+  }
+}

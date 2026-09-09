@@ -1,0 +1,100 @@
+{
+  "name": "voltage_only",
+  "controls": ".options reltol=1e-5 abstol=1e-9 vntol=1e-8 method=trap gminsteps=0 srcsteps=1",
+  "returnCode": 0,
+  "runtime_s": 12.062999999994645,
+  "diagnostics": [],
+  "complete": true,
+  "electricalDeckIdentical": true,
+  "baselineElectricalDeckIdentical": true,
+  "electricalDeckSHA256": "0fa25ef97378c8b46f200c13ad6c9e43a2f941d9fbd4c1092463dec37b214230",
+  "sampleCount": 40210,
+  "stopTime_s": 5e-06,
+  "comparisonToBaseline": [
+    {
+      "signal": "switch_V",
+      "maxAbsDifference": 2.627224003504125e-05,
+      "baselinePeak": 24.220683123984315,
+      "limit": 0.24220683123984316,
+      "passed": true
+    },
+    {
+      "signal": "bus_V",
+      "maxAbsDifference": 2.88333460218837e-07,
+      "baselinePeak": 24.017568608408748,
+      "limit": 0.2401756860840875,
+      "passed": true
+    },
+    {
+      "signal": "highVgs_V",
+      "maxAbsDifference": 2.9035964672630143e-06,
+      "baselinePeak": 11.999996697564892,
+      "limit": 0.11999996697564892,
+      "passed": true
+    },
+    {
+      "signal": "lowVgs_V",
+      "maxAbsDifference": 1.2426240441065772e-06,
+      "baselinePeak": 11.999986979309949,
+      "limit": 0.11999986979309948,
+      "passed": true
+    },
+    {
+      "signal": "highVds_V",
+      "maxAbsDifference": 2.621607557395933e-05,
+      "baselinePeak": 24.978335213834942,
+      "limit": 0.24978335213834943,
+      "passed": true
+    },
+    {
+      "signal": "lowVds_V",
+      "maxAbsDifference": 2.627224003504125e-05,
+      "baselinePeak": 24.220683124008538,
+      "limit": 0.24220683124008538,
+      "passed": true
+    },
+    {
+      "signal": "highCurrent_A",
+      "maxAbsDifference": 2.9205175039681563e-05,
+      "baselinePeak": 8.245853700346132,
+      "limit": 0.08245853700346131,
+      "passed": true
+    },
+    {
+      "signal": "lowCurrent_A",
+      "maxAbsDifference": 2.92051725218484e-05,
+      "baselinePeak": 5.28211037864085,
+      "limit": 0.052821103786408495,
+      "passed": true
+    },
+    {
+      "signal": "highGateCurrent_A",
+      "maxAbsDifference": 1.1614473621746058e-07,
+      "baselinePeak": 0.398134915908976,
+      "limit": 0.01,
+      "passed": true
+    },
+    {
+      "signal": "lowGateCurrent_A",
+      "maxAbsDifference": 4.970496175760175e-08,
+      "baselinePeak": 0.4283233674899799,
+      "limit": 0.01,
+      "passed": true
+    },
+    {
+      "signal": "loadCurrent_A",
+      "maxAbsDifference": 1.2243539515566226e-11,
+      "baselinePeak": 2.9809641901702264,
+      "limit": 0.029809641901702266,
+      "passed": true
+    },
+    {
+      "signal": "feedCurrent_A",
+      "maxAbsDifference": 3.550576357924662e-08,
+      "baselinePeak": 2.9809648462072516,
+      "limit": 0.029809648462072517,
+      "passed": true
+    }
+  ],
+  "allWaveformsPassExistingGate": true
+}

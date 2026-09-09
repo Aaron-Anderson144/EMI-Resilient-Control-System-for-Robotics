@@ -1,0 +1,4 @@
+Quantity,MaxLastPeriodDifference,AbsoluteGate,Passed
+differential_V,5.74142446030379e-06,0.0001,1
+commonMode_V,5.41372763445125e-05,0.0001,1
+returnCurrent_A,2.7271254121608e-06,0.0001,1

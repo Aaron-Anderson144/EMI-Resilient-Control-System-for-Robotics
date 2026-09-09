@@ -1,0 +1,4 @@
+WorstVoltageGateRatio,WorstAreaGateRatio,EventCountsMatch,MaxEventTimeDifference_s,MaxExposureDifference_s,Grazing,Passed,Case,Comparison,WarningCount,StopEvent
+0.00981879855199708,9.93863760941309e-05,1,0,0,0,1,capacitive_rise,tolerance_10x_tighter,0,ReachedStopTime
+0.00211779134239571,0.000168126975435935,1,0,0,0,1,combined_rise,tolerance_10x_tighter,0,ReachedStopTime
+6.12535936382155e-05,7.27761211078396e-07,1,1.90984748911724e-13,3.42105139416939e-13,0,1,stress_fall,tolerance_10x_tighter,0,ReachedStopTime

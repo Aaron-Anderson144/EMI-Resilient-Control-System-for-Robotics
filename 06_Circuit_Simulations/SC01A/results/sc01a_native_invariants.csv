@@ -1,0 +1,6 @@
+Check,MaxVoltageError_V,MaxCurrentError_A,Passed
+Fixed-network superposition,6.10260052065215e-05,2.81240116895975e-06,1
+Signed polarity reversal,4.94377364264054e-05,2.15858110884251e-06,1
+balanced_combined,5.46229728115577e-14,NaN,1
+zero_source,0,NaN,1
+zero_coupling,6.66133814775094e-16,NaN,1

@@ -1,0 +1,32 @@
+{
+  "version": "SC01B-numerical-gates-v1",
+  "caseNames": [
+    "nominal",
+    "holdout_bus18",
+    "holdout_load4ohm",
+    "holdout_gate47",
+    "holdout_bus30_load16_gate10"
+  ],
+  "nativeSteps_s": [
+    5E-10,
+    2.5E-10,
+    1.25E-10
+  ],
+  "spiceSteps_s": [
+    2.5E-10,
+    1.25E-10
+  ],
+  "relativeWaveformTolerance": 0.01,
+  "voltageAbsoluteTolerance_V": 0.01,
+  "currentAbsoluteTolerance_A": 0.01,
+  "relativeMetricTolerance": 0.01,
+  "energyAbsoluteTolerance_J": 1E-9,
+  "eventTimeTolerance_s": 1E-9,
+  "balanceRelativeTolerance": 0.001,
+  "balanceAbsoluteTolerance_J": 1E-10,
+  "consistencyCases": [
+    "nominal",
+    "holdout_bus30_load16_gate10"
+  ],
+  "provenance": "Frozen before the five-case refinement campaign. Exploratory nominal solver selection and first SPICE screen preceded freezing. Holdouts are unfitted operating points, not blinded physical validation."
+}
