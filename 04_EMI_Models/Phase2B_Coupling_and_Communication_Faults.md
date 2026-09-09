@@ -212,13 +212,13 @@ The 2026-09-08 evidence verifies the implementation against its specified reduce
 - all ten MATLAB/Simulink comparisons passed the `1e-9` numerical gate, with largest continuous-signal difference approximately `2.2751e-12` and exact discrete profiles;
 - the 200-trial configured packet-loss study observed 15,934 drops in 80,000 opportunities (`0.199175`) with Wilson 95% interval `[0.19642, 0.20196]`; the configured `0.20` lies inside the interval.
 
-The current suite verifies causal/monotonic packet acceptance and hold-last behavior. A separately constructed forced-collision and forced-out-of-order edge-case test remains advisable, as do independent nonzero scaling tests for the shared resistance, shared inductance, and ground-conversion terms.
+The original suite verifies causal/monotonic packet acceptance and hold-last behavior. A separately constructed forced-collision and forced-out-of-order edge-case test remains advisable. The 2026-09-09 sensitivity extension adds independent nonzero scaling tests for the shared resistance, shared inductance, and ground-conversion terms, plus inactive/diagnostic parameter checks. All 45 current project tests pass.
 
 This is **software verification**, not physical validation. It does not demonstrate that the assumed coupling parameters match a real installation, that a receiver will make a bit/count error at the calculated voltages, that the controller detects a fault, or that any mitigation satisfies a safety or electromagnetic-compliance requirement. Exact results and evidence filenames are recorded in `03_MATLAB/results/Phase2B_Validation_Summary.md`.
 
 ## Required Next Fidelity Steps
 
-- Sweep all assumed parasitics, transfer factors, edge rates, receiver bandwidth/margin, and phenomenological sensitivity.
+- Completed on 2026-09-09: sweep assumed parasitics, transfer factors, edge rates, receiver bandwidth/margin, and phenomenological sensitivity. See `Phase2B_Sensitivity_Method.md` and `03_MATLAB/results/sensitivity/Phase2B_Sensitivity_Summary.md` for ranges, results and interpretation.
 - Replace assumed imbalance with geometry-, circuit-, literature-, or measurement-derived values and record uncertainty.
 - Add a threshold/count-event encoder receiver when false-count behavior is the research question.
 - Move switching-edge, cable-network, common-mode, conducted-noise, or pulse-width questions to SPICE or Simscape Electrical with an appropriate solver step.
