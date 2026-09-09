@@ -1,0 +1,27 @@
+Key,Label,Unit,Low,Nominal,High,Scale,Role,ParameterPath,SIConversion,RangeProvenance
+cap_imbalance,Capacitive imbalance,pF,-5,1,5,linear,response,virtual.cap_imbalance,1e-12,Exploratory assumed design range; not measured bounds or a probability distribution
+ind_imbalance,Inductive imbalance,nH,-15,3,15,linear,response,virtual.ind_imbalance,1e-09,Exploratory assumed design range; not measured bounds or a probability distribution
+voltage_rise,Voltage rise time,ns,25,100,400,log,response,source.voltageRiseTime_s,1e-09,Exploratory assumed design range; not measured bounds or a probability distribution
+current_rise,Current rise time,ns,50,200,800,log,response,source.currentRiseTime_s,1e-09,Exploratory assumed design range; not measured bounds or a probability distribution
+voltage_step,Aggressor voltage step,V,6,24,48,log,response,source.switchingVoltageStep_V,1,Exploratory assumed design range; not measured bounds or a probability distribution
+current_step,Commutation current step,A,0.5,3,6,log,response,source.currentStep_A,1,Exploratory assumed design range; not measured bounds or a probability distribution
+cap_transfer,Capacitive transfer factor,1,0,0.2,1,linear,response,coupling.capacitive.pathTransferLinear,1,Exploratory assumed design range; not measured bounds or a probability distribution
+ind_transfer,Inductive transfer factor,1,0,0.5,1,linear,response,coupling.inductive.pathTransferLinear,1,Exploratory assumed design range; not measured bounds or a probability distribution
+return_resistance,Shared-return resistance,mOhm,5,25,100,log,response,coupling.shared.returnResistance_Ohm,0.001,Exploratory assumed design range; not measured bounds or a probability distribution
+return_inductance,Shared-return inductance,nH,2,20,100,log,response,coupling.shared.returnInductance_H,1e-09,Exploratory assumed design range; not measured bounds or a probability distribution
+shared_conversion,Shared-return CM-to-DM factor,1,0,0.1,0.5,linear,response,coupling.shared.commonModeToDifferential,1,Exploratory assumed design range; not measured bounds or a probability distribution
+ground_voltage,Ground common-mode offset,V,-0.5,0.1,0.5,linear,response,groundOffset.voltage_V,1,Exploratory assumed design range; not measured bounds or a probability distribution
+ground_conversion,Ground CM-to-DM factor,1,0,0.1,0.5,linear,response,groundOffset.commonModeToDifferential,1,Exploratory assumed design range; not measured bounds or a probability distribution
+termination,Differential termination,Ohm,60,120,240,log,response,receiver.differentialTermination_Ohm,1,Exploratory assumed design range; not measured bounds or a probability distribution
+bandwidth,Equivalent baseband bandwidth,Hz,30,5000000,10000000,log,response,receiver.bandwidth_Hz,1,Exploratory assumed design range; not measured bounds or a probability distribution
+angle_sensitivity,Equivalent voltage-to-angle gain,deg/V,1,10,50,log,response,receiver.systemLevelEquivalentSensitivity_rad_V,0.0174532925199433,Exploratory assumed design range; not measured bounds or a probability distribution
+envelope_frequency,Receiver-equivalent envelope frequency,Hz,5,120,400,log,response,source.observedBasebandFrequency_Hz,1,Exploratory assumed design range; not measured bounds or a probability distribution
+noise_margin,Differential diagnostic margin,V,0.025,0.2,0.4,log,diagnostic,receiver.differentialNoiseMargin_V,1,Exploratory assumed design range; not measured bounds or a probability distribution
+common_mode_limit,Common-mode diagnostic limit,V,0.025,7,15,log,diagnostic,receiver.commonModeLimit_V,1,Exploratory assumed design range; not measured bounds or a probability distribution
+receiver_capacitance,Receiver differential capacitance,pF,10,100,1000,log,derived_only,receiver.differentialCapacitance_F,1e-12,Exploratory assumed design range; not measured bounds or a probability distribution
+pwm_frequency,PWM frequency (context only),kHz,5,20,100,log,inactive,source.pwmFrequency_Hz,1000,Exploratory assumed design range; not measured bounds or a probability distribution
+voltage_fall,Voltage fall time (reserved),ns,25,100,400,log,inactive,source.voltageFallTime_s,1e-09,Exploratory assumed design range; not measured bounds or a probability distribution
+minimum_pulse,Minimum pulse width (reserved),ns,10,50,500,log,inactive,receiver.minimumPulseWidth_s,1e-09,Exploratory assumed design range; not measured bounds or a probability distribution
+count_cap,Spurious count cap (reserved),counts/sample,1,4,16,integer,inactive,receiver.maxSpuriousCountsPerSample,1,Exploratory assumed design range; not measured bounds or a probability distribution
+cap_mean,Mean paired capacitance,pF,5,9.5,30,log,inactive,virtual.cap_mean,1e-12,Exploratory assumed design range; not measured bounds or a probability distribution
+ind_mean,Mean paired mutual inductance,nH,10,18.5,100,log,inactive,virtual.ind_mean,1e-09,Exploratory assumed design range; not measured bounds or a probability distribution
