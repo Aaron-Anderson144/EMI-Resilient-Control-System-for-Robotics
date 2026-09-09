@@ -1,4 +1,0 @@
-caseName,configuredProbability,trialCount,firstRandomSeed,lastRandomSeed,packetOpportunityCount,observedDropCount,observedDropFraction,wilsonLower95,wilsonUpper95,configuredProbabilityWithinWilson95,exactEdgeCasePass
-zero_probability,0,200,270911,271110,80000,0,0,0,4.80159296184718e-05,1,1
-configured_probability,0.2,200,271111,271310,80000,15934,0.199175,0.196421962357142,0.201956926426913,1,1
-one_probability,1,200,271311,271510,80000,80000,1,0.999951984070381,1,1,1

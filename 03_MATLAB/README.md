@@ -151,6 +151,18 @@ The completed Phase 2B pipeline creates:
 
 The recorded run completed successfully: all ten Simulink cases produced 1501 finite samples, all MATLAB/Simulink continuous differences were below `1e-9`, the largest continuous-signal difference was approximately `2.2751e-12`, and all discrete profiles matched exactly. See `results/Phase2B_Validation_Summary.md` for the evidence and interpretation limits.
 
+## Running the Phase 2B Sensitivity Study
+
+```matlab
+phase2b_sensitivity_main
+```
+
+This runs all 45 project tests, screens 26 parameter controls, executes 512 stratified combinations in physical-only and fixed-communication contexts, evaluates two interaction grids, and cross-validates 11 selected cases against the saved Simulink model. The standard study uses 1,886 analytical study simulations, plus test and validation reference runs.
+
+All artifacts are written to `results/sensitivity`, including a generated Markdown summary, PNG overview, input catalog, one-at-a-time results and ranking, combined-design input/metric tables, interaction grids, selected time series, verification tables and the complete MAT archive. Existing baseline and original Phase 2 study data are preserved.
+
+See the [sensitivity summary](results/sensitivity/Phase2B_Sensitivity_Summary.md) for recorded results and reproduction details, and the [study implementation](scripts/run_phase2b_sensitivity_study.m) for the configurable study sizes. The combined design is exploratory; it is not a calibrated uncertainty distribution or a real-world fault probability model.
+
 ## Important Limitation
 
 This remains a reduced-order motor and encoder-interface model. Phase 2A faults are prescribed signals. Phase 2B coupling amplitudes are calculated from assumed parameters, but the result is still a receiver-equivalent system model rather than a measured cable/receiver model.
