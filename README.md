@@ -1,88 +1,170 @@
-# EMI-Resilient Control System for Robotics
+# MATLAB and Simulink Workspace
 
-Portable starter workspace for a research project on electromagnetic-interference characterization and fault-tolerant control of robotic actuators.
+## Purpose
 
-## Current Status
+This folder contains the verified Phase 1 clean actuator model, the cross-validated Phase 2A encoder-fault injection layer, and the software-verified Phase 2B implementation for reduced-order electromagnetic coupling, ground offset, and communication faults. The baseline remains separate so faulted and unfaulted behavior can be compared directly.
 
-- Phase 0 workspace and research documents: prepared
-- Phase 1 baseline actuator model: executed and verified on 2026-09-08
-- Simulink model: generated and successfully simulated on 2026-09-08
-- Phase 2A encoder fault injection: implemented and cross-validated
-- Phase 2B reduced-order coupling, ground-offset, and communication implementation: software-verified on 2026-09-08
-- Supply-interruption faults and switching-level electrical models: remaining Phase 2/Phase 4 work
-- Resilient-control implementation: planned for Phase 3
-- Hardware validation: future work
+## Initial Equations
 
-All 28 automated tests pass: 5 Phase 1, 7 Phase 2A, and 16 Phase 2B. The Phase 2A MATLAB and Simulink implementations agree within a `1e-9` rad validation tolerance for all scenarios. All ten Phase 2B Simulink scenarios completed with 1501 finite samples, exact discrete-profile agreement, and a largest continuous-signal MATLAB/Simulink difference of approximately `2.2751e-12`. The configured `p=0.20` packet-loss study observed 15,934 drops in 80,000 opportunities (`0.199175`) with a Wilson 95% interval of `[0.19642, 0.20196]`; the `p=0` and `p=1` edge cases were exact.
+The state vector is:
 
-These results verify software behavior against the stated reduced-order equations and an independent Simulink realization. They do not physically validate the assumed coupling, receiver, cable, encoder, or communication parameters. Phase 2B must not be described as hardware-validated until sensitivity studies and measurement-based comparison are complete.
+\[
+x=\begin{bmatrix}\theta & \omega & i\end{bmatrix}^{T}
+\]
 
-The numerical parameters in this package are representative starting values, not measurements from a selected motor, cable, receiver, or installation. Results must not be presented as experimental findings until the model is parameterized and validated.
+with:
 
-## Workspace Map
+\[
+\dot{\theta}=\omega
+\]
 
-| Folder | Purpose |
-|---|---|
-| `00_Project_Management` | Charter, roadmap, decisions, risks, and milestones |
-| `01_Research` | Literature-review plan and research log |
-| `02_Requirements` | System requirements, FMEA, and simulation test plan |
-| `03_MATLAB` | MATLAB and Simulink source files for the digital twin |
-| `04_EMI_Models` | Electromagnetic coupling models and assumptions |
-| `05_Control_Algorithms` | Baseline and resilient-control design notes |
-| `06_Circuit_Simulations` | Future LTspice or equivalent circuit models |
-| `07_Data` | Raw, synthetic, and processed datasets |
-| `08_Results` | Approved figures, tables, and result summaries |
-| `09_Report` | Research-report structure and drafts |
-| `10_Hardware_Design` | Future testbed architecture and hardware planning |
+\[
+J\dot{\omega}=K_t i-b\omega-\tau_L
+\]
 
-## Initial Virtual Platform
+\[
+L\dot{i}=v-Ri-K_e\omega
+\]
 
-- Nominal 24 V robotic actuator
-- BLDC or servo motor represented initially by a three-state DC-equivalent model
-- Position feedback from an incremental encoder
-- Discrete position controller with a 1 ms initial sample time
-- Protocol-agnostic timestamped sensor channel; protocol-specific CAN behavior remains future work
-- PWM motor drive treated as the main anticipated EMI source
+Inputs are drive voltage and load torque. Initial outputs are position, velocity, and winding current.
 
-The controller-rate model runs at 1 kHz and therefore cannot resolve the individual edges of the assumed 20 kHz PWM source. Phase 2B uses analytically derived edge peaks and a 120 Hz receiver-equivalent baseband envelope for system sensitivity studies. Its volts-to-radians mapping is phenomenological, not a physical encoder-decoder law.
+## Folder Map
 
-## MATLAB Quick Start
+- `parameters` — representative physical and simulation parameters
+- `functions` — model, validation, and controller functions
+- `scripts` — analysis and Simulink model-generation scripts
+- `tests` — automated baseline tests
+- `models` — generated Simulink models
+- `results` — generated data and plots
 
-1. Copy this entire folder to the desired project location.
-2. Open MATLAB using a license appropriate for the intended use.
-3. Set the MATLAB current folder to `03_MATLAB`.
-4. Run `startup_project`.
-5. Run `main` to execute the analytical baseline simulation.
-6. Run `build_baseline_model` to create `models/EMI_Resilient_Actuator_Baseline.slx`.
-7. Run the tests with `runtests("tests")`.
-8. Run `phase2b_main` to generate the Phase 2B analytical study, packet-loss statistical study, Simulink model, smoke-test table, and MATLAB/Simulink comparison after reviewing the assumed parameters.
+## Running the Baseline
 
-Phase 2B definitions, equations, scenario semantics, and limitations are recorded in `04_EMI_Models/Phase2B_Coupling_and_Communication_Faults.md`.
+From this folder in MATLAB:
 
-## Required MathWorks Products
+```matlab
+startup_project
+main
+```
 
-- MATLAB
-- Simulink
-- Control System Toolbox
+This runs the analytical discrete-time baseline and writes:
 
-Simscape and Simscape Electrical will be used when the baseline model advances to a switching inverter, motor-drive, and parasitic-network representation.
+- `results/baseline_timeseries.csv`
+- `results/baseline_metrics.mat`
+- `results/baseline_response.png`
 
-## Optional Products for Later Phases
+## Creating the Simulink Model
 
-- Stateflow
-- Motor Control Blockset
-- Simulink Test
-- Simulink Fault Analyzer
-- Embedded Coder
+```matlab
+startup_project
+build_baseline_model
+```
 
-## Model Fidelity Rules
+The script creates:
 
-1. Every parameter must have a source, measured value, or explicit assumption label.
-2. Every result must identify the model fidelity level used.
-3. Averaged models are for controller design; switching models are for conducted-noise studies.
-4. Circuit and system simulations do not replace radiated-emissions or immunity testing.
-5. Simulation conclusions must be checked against hardware before being treated as validated engineering guidance.
+```text
+models/EMI_Resilient_Actuator_Baseline.slx
+```
 
-## Licensing Note
+If the model already exists, the builder preserves it. To replace it intentionally:
 
-Use the package only with software licenses that permit the intended personal, academic, research, government, or commercial activity. License suitability is the user's responsibility.
+```matlab
+build_baseline_model(true)
+```
+
+## Running Tests
+
+```matlab
+startup_project
+results = runtests("tests");
+table(results)
+```
+
+## Running Phase 2A
+
+Run the analytical fault study:
+
+```matlab
+startup_project
+phase2_main
+```
+
+Generate and validate the Phase 2 Simulink model:
+
+```matlab
+build_phase2_model
+smoke_test_phase2_model
+validate_phase2_simulink
+```
+
+Available scenario names are `none`, `gaussian`, `sinusoidal`, `count_jump`, `dropout`, and `combined`. The `combined` scenario is available for exploration but is not part of the independent-fault comparison set.
+
+## Running a Phase 2B Source Scenario
+
+Run the complete Phase 2B artifact pipeline with:
+
+```matlab
+startup_project
+phase2b_main
+```
+
+`phase2b_main` runs the analytical scenario study, the 200-trial packet-loss study for `p=0`, the configured probability, and `p=1`, builds the Phase 2B Simulink model, smoke-tests all ten scenarios, and runs analytical/Simulink cross-validation. Run the automated test suite separately with `runtests("tests")` so test results are visible and reviewable. The recorded 2026-09-08 run passed all 28 project tests, including all 16 Phase 2B tests.
+
+The current Phase 2B source API can be exercised directly:
+
+```matlab
+startup_project
+params = actuator_parameters();
+
+baselineScenario = phase2b_scenario("none", params);
+baseline = simulate_phase2b_actuator(params, baselineScenario);
+
+faultScenario = phase2b_scenario("capacitive_coupling", params);
+faulted = simulate_phase2b_actuator(params, faultScenario);
+metrics = phase2b_metrics(faulted, baseline, params);
+```
+
+Available Phase 2B names are:
+
+- `none`
+- `capacitive_coupling`
+- `inductive_coupling`
+- `shared_impedance`
+- `combined_coupling`
+- `ground_offset`
+- `communication_delay`
+- `communication_jitter`
+- `packet_loss`
+- `combined_phase2b`
+
+The isolated scenarios are the primary verification cases. `combined_coupling` checks superposition, while `combined_phase2b` is an exploratory stress case and does not isolate causal attribution.
+
+`physical_coupling_profile` calculates differential receiver voltage from assumed line imbalance, edge rate, path-transfer, termination, shared-return, and ground-conversion parameters. `communication_channel_profile` schedules timestamped samples, rejects older arrivals, and exposes packet age, collisions, loss, and hold-last state. `phase2b_metrics` compares each faulted run with the matched Phase 2B `none` run and reports pre-window identity, active-window deltas, post-window response, and threshold/dwell recovery censoring.
+
+The completed Phase 2B pipeline creates:
+
+- `models/EMI_Resilient_Actuator_Phase2B.slx`;
+- `results/phase2b_<scenario>_timeseries.csv` for each named scenario;
+- `results/phase2b_metrics.csv` and `results/phase2b_scenario_manifest.csv`;
+- `results/phase2b_fault_study.mat` and `results/phase2b_receiver_faults_and_response.png`;
+- `results/phase2b_packet_loss_monte_carlo.csv`;
+- `results/phase2b_simulink_smoke_test.csv` and `results/phase2b_simulink_validation.csv`.
+
+The recorded run completed successfully: all ten Simulink cases produced 1501 finite samples, all MATLAB/Simulink continuous differences were below `1e-9`, the largest continuous-signal difference was approximately `2.2751e-12`, and all discrete profiles matched exactly. See `results/Phase2B_Validation_Summary.md` for the evidence and interpretation limits.
+
+## Running the Phase 2B Sensitivity Study
+
+```matlab
+phase2b_sensitivity_main
+```
+
+This runs all 45 project tests, screens 26 parameter controls, executes 512 stratified combinations in physical-only and fixed-communication contexts, evaluates two interaction grids, and cross-validates 11 selected cases against the saved Simulink model. The standard study uses 1,886 analytical study simulations, plus test and validation reference runs.
+
+All artifacts are written to `results/sensitivity`, including a generated Markdown summary, PNG overview, input catalog, one-at-a-time results and ranking, combined-design input/metric tables, interaction grids, selected time series, verification tables and the complete MAT archive. Existing baseline and original Phase 2 study data are preserved.
+
+See `04_EMI_Models/Phase2B_Sensitivity_Method.md` for exact units, assumptions, common metric windows, reproducibility, and custom study sizes. The combined design is exploratory; it is not a calibrated uncertainty distribution or a real-world fault probability model.
+
+## Important Limitation
+
+This remains a reduced-order motor and encoder-interface model. Phase 2A faults are prescribed signals. Phase 2B coupling amplitudes are calculated from assumed parameters, but the result is still a receiver-equivalent system model rather than a measured cable/receiver model.
+
+The controller sample rate is 1 kHz, so it cannot resolve the individual edges of the assumed 20 kHz PWM source. Phase 2B calculates finite-edge peak magnitudes and maps them into a 120 Hz controller-rate envelope. The `systemLevelEquivalentSensitivity_rad_V` parameter is a phenomenological volts-to-radians bridge for closed-loop sensitivity analysis; it is not a physical encoder-decoder transfer function and does not predict bit errors, false counts, or threshold crossings. Switching, commutation, detailed parasitic networks, receiver electronics, protocol behavior, and hardware validation remain future fidelity layers.
