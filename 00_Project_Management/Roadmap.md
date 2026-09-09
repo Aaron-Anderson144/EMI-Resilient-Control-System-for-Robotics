@@ -37,7 +37,7 @@ The baseline model is stable, reproducible, documented, and free of fault inject
 
 **Purpose:** Create controlled, repeatable disturbances.
 
-**Status as of 2026-09-08:** Phase 2A is complete for Gaussian encoder noise, sinusoidal encoder interference, a one-sample count jump, and bounded hold-last dropout. Phase 2B now has software-verified reduced-order capacitive, inductive, shared-impedance, ground-offset, fixed-delay, bounded-jitter, and packet-loss mechanisms. All 16 Phase 2B automated tests and all ten MATLAB/Simulink comparisons pass. Physical-parameter identification, sensitivity sweeps, and supply interruption remain open.
+**Status as of 2026-09-09:** Phase 2A/2B and the 1,886-run parameter-sensitivity study are software-verified. SC-01A resolves finite edges in a checked native Simscape network. SC-01B adds a selected Infineon device source and an independent original-SPICE comparison, with a retained 47 ohm gate-resistance stress failure. See its generated verification report for final run counts and individual gates. Physical source identification and supply interruption remain open.
 
 ### Tasks
 
@@ -46,16 +46,21 @@ The baseline model is stable, reproducible, documented, and free of fault inject
 - [x] Complete automated and MATLAB/Simulink verification of the implemented communication channel.
 - [x] Add a receiver-equivalent ground-offset disturbance channel.
 - [x] Derive reduced-order capacitive, inductive, and shared-impedance coupling inputs from assumed parameters.
-- [ ] Replace the controller-rate envelope with a switching-level model when PWM-edge behavior must be resolved.
+- [x] Add SC-01A as a separate finite-edge electrical harness for source/coupling/receiver-voltage behavior, with numerical convergence evidence.
+- [x] Implement the selected-device SC-01B half-bridge and its numerical verification campaign; retain failed operating points explicitly.
+- [ ] Resolve the SC-01B slow-gate simultaneous-conduction stress case and establish a supported operating envelope.
+- [ ] Resolve or independently bound the original-SPICE strict relative/current-tolerance failure before closing full SC-01B numerical acceptance.
+- [ ] Identify receiver/decoder behavior and connect circuit events to the controller model when supported by evidence.
 - [ ] Add supply-interruption scenarios.
 - [x] Complete fixed-seed Monte Carlo packet-loss execution and confidence-interval reporting.
-- [ ] Sweep assumed parasitics, edge rates, path-transfer factors, and receiver sensitivity.
+- [x] Sweep assumed parasitics, edge rates, path-transfer factors, and receiver sensitivity; record diagnostic-only and inactive controls separately.
+- [x] Define parameter-identification evidence and the next switching-level circuit specification, SC-01.
 
 ### Gate 2
 
 Each fault has documented units, provenance, severity parameters, half-open activation logic, and a test demonstrating that it affects only its intended channel. Stochastic scenarios are reproducible, communication timing is causal, and matched no-fault comparisons are stored.
 
-**Gate status:** Satisfied for the implemented Phase 2A and Phase 2B software mechanisms. The full Phase 2 gate remains open for supply interruption and the planned parameter-sensitivity work. Passing this gate does not establish physical fidelity.
+**Gate status:** Satisfied for the implemented Phase 2A/2B software mechanisms and the defined exploratory sensitivity study. The full Phase 2 gate remains open for supply interruption. Physical-parameter identification is still required before making hardware claims. Passing this gate does not establish physical fidelity.
 
 ## Phase 3 — Detection and Resilient Control
 
@@ -107,4 +112,4 @@ The validated model reproduces specified measured behaviors within documented er
 
 ## Immediate Next Milestone
 
-Run sensitivity sweeps over the assumed coupling and receiver parameters, replace high-influence assumptions with geometry-, circuit-, literature-, or measurement-derived values, and define the next switching-level Simscape Electrical case. Supply interruption remains a separate Phase 2 task.
+**SC-01B implementation and the frozen verification experiment are complete.** The source uses the shipped IAUC100N04S6L014 nonlinear charge/body-diode model, a UCC27211A-informed behavioral driver and declared supply/load assumptions. The 47 ohm gate-resistance case exposes simultaneous channel conduction and remains a failed stress point. The next circuit step is to characterize and address this gate-drive/dead-time limitation, then identify actual source and loop parameters before connecting the source to the checked SC-01A coupling network. Receiver/decoder identification and measured ground/coupling transfer remain priorities. Supply interruption remains separate; Phase 3 resilient control is not implemented yet.
