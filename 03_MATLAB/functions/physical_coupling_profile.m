@@ -5,12 +5,15 @@ function profile = physical_coupling_profile(time_s, params, scenario)
 % controller sample rate.
 
 arguments
-    time_s (:,1) double
+    time_s
     params (1,1) struct
     scenario (1,1) struct
 end
 
 validate_parameters(params);
+validate_phase2b_scenario(scenario, params);
+validate_profile_time(time_s, params);
+time_s = time_s(:);
 if isempty(time_s) || any(~isfinite(time_s)) || any(diff(time_s) <= 0)
     error('EMIProject:InvalidTimeVector', ...
         'The time vector must be finite and strictly increasing.');

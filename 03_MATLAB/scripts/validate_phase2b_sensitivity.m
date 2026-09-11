@@ -6,11 +6,18 @@ function validationTable = validate_phase2b_sensitivity(study, outputFolder)
 
 arguments
     study (1,1) struct
-    outputFolder (1,1) string
+    outputFolder (1,1) string = ""
 end
 
 matlabRoot = fileparts(fileparts(mfilename('fullpath')));
+addpath(fullfile(matlabRoot,'functions'));
+outputFolder=prepare_fresh_output_folder(outputFolder, ...
+    fullfile(matlabRoot,'results','development'),"phase2b_sensitivity_validation");
 run(fullfile(matlabRoot, 'startup_project.m'));
+oldConfig=Simulink.fileGenControl('getConfig');
+cacheCleanup=onCleanup(@()Simulink.fileGenControl('setConfig','config',oldConfig));
+Simulink.fileGenControl('set','CacheFolder',fullfile(outputFolder,'cache'), ...
+    'CodeGenFolder',fullfile(outputFolder,'codegen'),'createDir',true);
 baseline = actuator_parameters();
 assert(isfield(study, 'validationCases') && ...
     isstruct(study.validationCases) && ~isempty(study.validationCases), ...

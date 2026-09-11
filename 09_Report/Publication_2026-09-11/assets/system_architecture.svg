@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1540" height="1110" viewBox="0 0 1540 1110" role="img" aria-labelledby="title desc">
+<title id="title">How electrical interference reaches the controller</title><desc id="desc">Clockwise causal loop from controller through exact continuous motor trajectory, intended quadrature encoder transitions, loaded A circuit with ideal B bypass, Schmitt receiver and persistent decoder, then a strict three-field measurement packet. A separate saved switching replay injects one-way capacitive interference. A no-aggressor shadow and scoring run offline and never feed control.</desc>
+<rect width="1540" height="1110" fill="white"/>
+<defs><marker id="navyArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#123B55"/></marker><marker id="tealArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#168B85"/></marker><marker id="amberArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#BE781C"/></marker></defs>
+<text x="70" y="65" font-family="Arial, Helvetica, sans-serif" font-size="41" fill="#111827" font-weight="700" text-anchor="start" >How electrical interference reaches the controller</text>
+<text x="70" y="110" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#556573" font-weight="400" text-anchor="start" >Implemented simulation architecture at the 11 September 2026 checkpoint</text>
+<rect x="70" y="205" width="335" height="182" rx="12" fill="#FFFFFF" stroke="#123B55" stroke-width="2.5"/>
+<rect x="92" y="227" width="38" height="38" rx="19" fill="#123B55" stroke="#123B55" stroke-width="2"/>
+<text x="111" y="255" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#FFFFFF" font-weight="700" text-anchor="middle" >1</text>
+<text x="145" y="255" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#111827" font-weight="700" text-anchor="start" >Controller</text>
+<text x="95" y="300" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >Historical control policy</text>
+<text x="95" y="334" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >Holds motor voltage</text>
+<text x="95" y="368" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >for the next 1 ms interval</text>
+<rect x="535" y="205" width="335" height="182" rx="12" fill="#FFFFFF" stroke="#123B55" stroke-width="2.5"/>
+<rect x="557" y="227" width="38" height="38" rx="19" fill="#123B55" stroke="#123B55" stroke-width="2"/>
+<text x="576" y="255" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#FFFFFF" font-weight="700" text-anchor="middle" >2</text>
+<text x="610" y="255" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#111827" font-weight="700" text-anchor="start" >Motor trajectory</text>
+<text x="560" y="300" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >Exact continuous motion</text>
+<text x="560" y="334" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >to the current held voltage</text>
+<text x="560" y="368" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >Representative actuator</text>
+<rect x="1000" y="205" width="400" height="182" rx="12" fill="#FFFFFF" stroke="#123B55" stroke-width="2.5"/>
+<rect x="1022" y="227" width="38" height="38" rx="19" fill="#123B55" stroke="#123B55" stroke-width="2"/>
+<text x="1041" y="255" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#FFFFFF" font-weight="700" text-anchor="middle" >3</text>
+<text x="1075" y="255" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#111827" font-weight="700" text-anchor="start" >Intended encoder</text>
+<text x="1025" y="300" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >All quantization crossings</text>
+<text x="1025" y="334" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >including interval reversals</text>
+<text x="1025" y="368" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >4,096 decoded counts/rev</text>
+<path d="M 405 290 H 535" fill="none" stroke="#123B55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#navyArrow)"/>
+<text x="470" y="262" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="middle" >voltage</text>
+<path d="M 870 290 H 1000" fill="none" stroke="#123B55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#navyArrow)"/>
+<text x="935" y="262" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="middle" >angle</text>
+<rect x="1000" y="495" width="400" height="215" rx="12" fill="#FFFFFF" stroke="#123B55" stroke-width="2.5"/>
+<rect x="1022" y="517" width="38" height="38" rx="19" fill="#123B55" stroke="#123B55" stroke-width="2"/>
+<text x="1041" y="545" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#FFFFFF" font-weight="700" text-anchor="middle" >4</text>
+<text x="1075" y="545" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#111827" font-weight="700" text-anchor="start" >Electrical receiver</text>
+<text x="1025" y="590" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >A: loaded SC01A network</text>
+<text x="1025" y="624" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >Schmitt thresholds: +/-0.20 V</text>
+<text x="1025" y="658" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >B: ideal clean bypass</text>
+<text x="1025" y="692" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >Circuit state stays continuous</text>
+<rect x="535" y="495" width="335" height="215" rx="12" fill="#FFFFFF" stroke="#123B55" stroke-width="2.5"/>
+<rect x="557" y="517" width="38" height="38" rx="19" fill="#123B55" stroke="#123B55" stroke-width="2"/>
+<text x="576" y="545" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#FFFFFF" font-weight="700" text-anchor="middle" >5</text>
+<text x="610" y="545" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#111827" font-weight="700" text-anchor="start" >Quadrature decoder</text>
+<text x="560" y="590" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >Persistent integer count</text>
+<text x="560" y="624" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >Valid transitions: +1 / -1</text>
+<text x="560" y="658" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >Invalid transitions: hold</text>
+<text x="560" y="692" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >Events before sampling</text>
+<rect x="70" y="495" width="335" height="215" rx="12" fill="#FFFFFF" stroke="#123B55" stroke-width="2.5"/>
+<rect x="92" y="517" width="38" height="38" rx="19" fill="#123B55" stroke="#123B55" stroke-width="2"/>
+<text x="111" y="545" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#FFFFFF" font-weight="700" text-anchor="middle" >6</text>
+<text x="145" y="545" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#111827" font-weight="700" text-anchor="start" >Measurement packet</text>
+<text x="95" y="590" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >measurement_rad</text>
+<text x="95" y="624" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >sourceIndex</text>
+<text x="95" y="658" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >sampleReceived</text>
+<path d="M 1200 387 V 495" fill="none" stroke="#123B55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#navyArrow)"/>
+<text x="1230" y="449" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >intended A/B</text>
+<path d="M 1000 590 H 870" fill="none" stroke="#123B55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#navyArrow)"/>
+<text x="935" y="561" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="middle" >A/B states</text>
+<path d="M 535 590 H 405" fill="none" stroke="#123B55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#navyArrow)"/>
+<text x="470" y="561" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="middle" >count</text>
+<path d="M 235 495 V 387" fill="none" stroke="#123B55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#navyArrow)"/>
+<text x="260" y="449" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#556573" font-weight="400" text-anchor="start" >feedback</text>
+<text x="70" y="762" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#111827" font-weight="700" text-anchor="start" >Control receives the decoded measurement, causal sample index and receipt flag.</text>
+<text x="70" y="801" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#556573" font-weight="400" text-anchor="start" >Plant truth, source exposure, receiver-domain flags and audit labels stay outside control.</text>
+<rect x="1000" y="865" width="400" height="163" rx="12" fill="#FFFFFF" stroke="#BE781C" stroke-width="2.5"/>
+<text x="1025" y="905" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#111827" font-weight="700" text-anchor="start" >External switching source</text>
+<text x="1025" y="946" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#556573" font-weight="400" text-anchor="start" >Saved SC01B_R2 replay</text>
+<text x="1025" y="981" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#556573" font-weight="400" text-anchor="start" >Synthetic return and burst train</text>
+<text x="1025" y="1011" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#BE781C" font-weight="700" text-anchor="start" >One-way capacitive injection</text>
+<path d="M 1380 865 V 710" fill="none" stroke="#BE781C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#amberArrow)"/>
+<text x="1440" y="792" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#BE781C" font-weight="700" text-anchor="middle" >EMI</text>
+<rect x="70" y="865" width="800" height="163" rx="12" fill="#FFFFFF" stroke="#168B85" stroke-width="2.5" stroke-dasharray="10 7"/>
+<text x="95" y="905" font-family="Arial, Helvetica, sans-serif" font-size="29" fill="#111827" font-weight="700" text-anchor="start" >Offline attribution and scoring</text>
+<text x="95" y="946" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#556573" font-weight="400" text-anchor="start" >Clean shadow replays the exposed run&#x27;s own intended A/B.</text>
+<text x="95" y="981" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#556573" font-weight="400" text-anchor="start" >Compare counts and matched clean actuator performance.</text>
+<text x="95" y="1011" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#168B85" font-weight="700" text-anchor="start" >Audit only. No feedback into the controller.</text>
+<path d="M 1400 300 H 1490 V 1044 H 905 V 947 H 870" fill="none" stroke="#168B85" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#tealArrow)" stroke-dasharray="9 8"/>
+<text x="70" y="1090" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#556573" font-weight="400" text-anchor="start" >Scope: capacitive coupling into encoder A; ideal B; zero-load actuator; no physical validation.</text>
+</svg>

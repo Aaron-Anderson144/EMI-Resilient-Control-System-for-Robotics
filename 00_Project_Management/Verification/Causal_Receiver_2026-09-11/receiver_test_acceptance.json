@@ -1,0 +1,22 @@
+{
+  "design_id": "FOUR-WAY-EMI-PLAN-V1",
+  "tests": 11,
+  "passed": 11,
+  "failed": 0,
+  "incomplete": 0,
+  "independent_KCL_return_law_cases": 120,
+  "KCL_absolute_residual_gate_A_or_V": 1E-12,
+  "independent_augmented_exponential_cases": 30,
+  "expm_absolute_state_gate": 1E-12,
+  "engine_function": "fourway_exact_cc1fdc1322a41157",
+  "source": {
+    "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01B_R2\\results\\verification\\nominal\\native_finest.csv",
+    "sha256": "1ecdd83ee4f4846b70e2d40ba04f4b3188e737c94f08300a5bbbfcc36acb9cd5",
+    "original_points": 40001,
+    "native_duration_s": 5E-6,
+    "initial_V": 23.8477134541286,
+    "final_V": 23.8322841912334,
+    "native_source_fingerprint": "eba4730fdf73a0c5a146faa48615ea3aa559c72645de65e5fd5a27f7f5c8699d"
+  },
+  "accepted": true
+}

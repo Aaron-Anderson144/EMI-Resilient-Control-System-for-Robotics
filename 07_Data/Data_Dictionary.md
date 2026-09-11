@@ -150,3 +150,27 @@ Files live in `06_Circuit_Simulations/SC01B/results/verification`. All are simul
 | `study.mat`, `status.json`, `test_results.mat` | Complete study, explicit numerical/operating/physical status and regression evidence. Physical-source validation remains false. |
 
 `runs.csv` distinguishes `Completed`, `Reused` and `Diagnostic`. A rejected strict-tolerance attempt has zero accepted samples, NaN accepted stop time and its error/log reference; it is not a zero-error trace. `comparisons.csv.ExecutionComplete=false` marks an unavailable required reference, with false pass flags and infinite limit ratios. Waveform-only summaries exclude unavailable comparisons and state their count separately. Full numerical acceptance includes those rejected checks and remains false.
+
+## Phase 3 prototype artifacts
+
+Accepted evidence lives under `03_MATLAB/results/development/phase3`; reproduction creates a new timestamped directory. `phase3_study.mat` stores protected/baseline and both matched-clean records, exact profiles, configurations and metrics. Each effective run records the declared assumed load actually used. JSON null means an infinite disabled point/window time in these fixtures; MAT preserves exact values.
+
+| Field or file | Meaning / unit |
+|---|---|
+| `position_rad`, `velocity_rad_s`, `current_A` | True simulated plant state; offline scoring only. |
+| `sensorMeasurement_rad`, `receivedMeasurement_rad` | Corrupted source-side value and held/received channel value, rad. |
+| `estimatedPosition_rad`, `estimatedVelocity_rad_s`, `estimatedCurrent_A` | Current observer posterior. |
+| `innovation_rad` | Source-time measurement minus stored prior; NaN when no finite innovation is available. Only this numeric channel permits paired missing values in the campaign Simulink gate. |
+| `mode` | 0normal,1suspected,2degraded,3recovery,4latched stop. |
+| `alarm`, `measurementAccepted`, `credibleFresh`, `estimateUsable` | Detector alarm, gated correction, new clear-residual evidence and prediction confidence flags. Held data never count as credibleFresh. |
+| `predictionAge_s` | Age of last trusted source, or elapsed time since declared initial estimate before first trust. |
+| `command_V`, `commandLimit_V`, `unsaturatedCommand_V` | Actual applied, current hard bound and controller raw command, V. |
+| `sourceIndex`, `sampleReceived` | Accepted arrival's source sample index (zero if no new packet) and reception flag. Held measurement retains its previous value. |
+| `resetRequest`, `supplyHealthy` | Explicit fixed operator input and bus threshold result; not fault-truth inputs. |
+| `gateReason`, `transitionReason` | Text detector and supervisor diagnostics. |
+| `phase3_metrics.csv` | Detection status/delay, source/receiver onset, separate recovery/censoring, clean false alarms, tracking, matched-clean changes, current and effort. NaN timing means unavailable/not-applicable, interpreted with status. |
+| `phase3_transitions.csv` | Every mode transition with evidence flags and reason. |
+| `phase3_simulink_validation*.csv` | Complete finite23-channel integration checks; exact discrete fields and innovation missing masks. |
+| `phase3_ablation*.csv/.mat` | Three-case policy comparisons with recorded effective configurations; inactive limits do not imply measured improvement. |
+
+Stop/alarm duration sums held intervals and excludes the final zero-duration endpoint. Reported recovery starts a50ms confirmed normal interval and is distinct from supervisor qualification time. Censored/missed outcomes must not be replaced with zero delay or counted as recovered.

@@ -1,0 +1,303 @@
+{
+  "schema": "emi-local-dependencies-v1",
+  "pinned_utc": "2026-09-10T20:05:27.492349+00:00",
+  "files": [
+    {
+      "path": "03_MATLAB/results/phase2b_fault_study.mat",
+      "group": "regression_inputs",
+      "bytes": 3272789,
+      "sha256": "870a49feb6935b889f533c56dde68f11f2f735c48338b9dd8a7a5c96f5f374f1",
+      "purpose": "Seeded pre-change communication profile evidence for TestCommunicationEdges; compare schedule arrays separately from versioned summary metadata."
+    },
+    {
+      "path": "03_MATLAB/results/development/phase3_motion_20260910_144242/campaign/evaluation/GOVERNED/fault_loaded_supply_interruption/response.csv",
+      "group": "regression_inputs",
+      "bytes": 853298,
+      "sha256": "0140315a46839584a03c8ebebdc08c3b859f60374a794e9f2e70f9952792e4c0",
+      "purpose": "Recorded loaded-stop initial state used by stop/hold fixtures."
+    },
+    {
+      "path": "03_MATLAB/results/development/phase3_tuning_20260910_141100/campaign/evaluation/G050_F050/eval_benign_noise_reversal/paired_run.mat",
+      "group": "motion_history",
+      "bytes": 1234012,
+      "sha256": "52fba6636732e3109250f8ac7ddbb1448017d31e9cab9398b04ead9d93027794",
+      "purpose": "Original noisy reversal for the optional motion historical identity check; absence must not be described as a reproduced history."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/results/verification/nominal/native_finest.csv",
+      "group": "experiment_source",
+      "bytes": 11927554,
+      "sha256": "1ecdd83ee4f4846b70e2d40ba04f4b3188e737c94f08300a5bbbfcc36acb9cd5",
+      "purpose": "Frozen nominal native switching waveform for the design-only one-way susceptibility experiment."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/results/verification/nominal/parameters.json",
+      "group": "experiment_source",
+      "bytes": 2295,
+      "sha256": "8bcf382b988bc05f70d1de16a5c33297f15c1a6b06436e386e30514f528f112e",
+      "purpose": "Parameters accompanying the prescribed native source waveform."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/results/verification/source_identity.json",
+      "group": "experiment_source",
+      "bytes": 14061,
+      "sha256": "beb5b681bc730d5683d2e626b9961bf37aa6626fec90959f8f996134b26c97cd",
+      "purpose": "Original native source provenance; recorded paths remain historical, not rewritten for the new checkout."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tools/ngspice/alldone",
+      "group": "circuit_runtimes",
+      "bytes": 4,
+      "sha256": "a4c3ed04a95a3da14a9d235c83d868bed7c0f45cf7f3faa751ee8f50598d2211",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tools/ngspice/bin/libomp140.x86_64.dll",
+      "group": "circuit_runtimes",
+      "bytes": 698784,
+      "sha256": "644c49149f8a5d9275a83e9331a0adbd14620f930190e985d30b842107123597",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tools/ngspice/bin/ngspice.exe",
+      "group": "circuit_runtimes",
+      "bytes": 6990848,
+      "sha256": "ef5ce0ae623d43810b2b528b31ac3941418eaca0f9aba802e407aba7df8863ac",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tools/ngspice/lib/ngspice/analog.cm",
+      "group": "circuit_runtimes",
+      "bytes": 306688,
+      "sha256": "7b62ade32ce35827efd3356cdbb646ab2b9d82af83996899c995ea6a3d6be260",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tools/ngspice/lib/ngspice/digital.cm",
+      "group": "circuit_runtimes",
+      "bytes": 310272,
+      "sha256": "43a96c6142f2aaf6fc1bafd2bafd2c1ea0554833868d99d338d82b66ff4c2aae",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tools/ngspice/lib/ngspice/spice2poly.cm",
+      "group": "circuit_runtimes",
+      "bytes": 109568,
+      "sha256": "e38f05e61bf93e3fc8c0843f17f069e9fc815482325afc3e5af24c0d8a8b9d3a",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tools/ngspice/lib/ngspice/table.cm",
+      "group": "circuit_runtimes",
+      "bytes": 215552,
+      "sha256": "23e60807c840a173554275676a2a57b9bb28c6ea4758c2576f21bd74b6ce1c95",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tools/ngspice/lib/ngspice/xtradev.cm",
+      "group": "circuit_runtimes",
+      "bytes": 161792,
+      "sha256": "b9c3d77555361e77ac4f5c5ea5e4367de1995fefb02dc82a6adf66231fc48176",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tools/ngspice/lib/ngspice/xtraevt.cm",
+      "group": "circuit_runtimes",
+      "bytes": 140288,
+      "sha256": "3654dbbe992ad8bba6ea403435d30353e88e7e4f6a331f0e513d3b623007abe4",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tools/ngspice/ngspice-41-manual.pdf",
+      "group": "circuit_runtimes",
+      "bytes": 2493800,
+      "sha256": "4469062fffdafa2bf1c811f3649a091584a6fb0335c1c001a3d36cceef2a82ab",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tools/ngspice/ReleaseNotes.txt",
+      "group": "circuit_runtimes",
+      "bytes": 1508,
+      "sha256": "7ce4e87a3c5c710a9aebbf20bc34c52986f2f959a75de3085cb6c74b89899637",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tools/ngspice/share/ngspice/helpdir/ngspice.idx",
+      "group": "circuit_runtimes",
+      "bytes": 13464,
+      "sha256": "3422b33cec974fde0fb091d025f89bdb48e14442134fc725247c7e4dcc82a3db",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tools/ngspice/share/ngspice/helpdir/ngspice.txt",
+      "group": "circuit_runtimes",
+      "bytes": 403069,
+      "sha256": "8472dbcf1b8bf91c72bb30867ba61a1914e57fceacc37a9eaf6b374c57faf9d9",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tools/ngspice/share/ngspice/scripts/setplot",
+      "group": "circuit_runtimes",
+      "bytes": 1015,
+      "sha256": "b8765ee62d06c5b98dd56fea0673c66a85e18010ba693a5c1e76b6a8c3e11d4b",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tools/ngspice/share/ngspice/scripts/spectrum",
+      "group": "circuit_runtimes",
+      "bytes": 5271,
+      "sha256": "0da086eec298834c734125a4d1ed1b3a6da6bfdb724abf1161f4381a10c115e8",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tools/ngspice/share/ngspice/scripts/spinit",
+      "group": "circuit_runtimes",
+      "bytes": 1072,
+      "sha256": "6740e72efb1b42f22d1404dd8243e82dd14edd1eb2a18d3f0fdba70f678e232f",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tools/Ngspice_Download_Verification.md",
+      "group": "circuit_runtimes",
+      "bytes": 1734,
+      "sha256": "b09ac9c8e799ff2100ca704c55f00a6d6b227ae0039ae67f8d801f4e7e28ef02",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tools/ngspice/alldone",
+      "group": "circuit_runtimes",
+      "bytes": 4,
+      "sha256": "a4c3ed04a95a3da14a9d235c83d868bed7c0f45cf7f3faa751ee8f50598d2211",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tools/ngspice/bin/libomp140.x86_64.dll",
+      "group": "circuit_runtimes",
+      "bytes": 698784,
+      "sha256": "644c49149f8a5d9275a83e9331a0adbd14620f930190e985d30b842107123597",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tools/ngspice/bin/ngspice.exe",
+      "group": "circuit_runtimes",
+      "bytes": 6990848,
+      "sha256": "ef5ce0ae623d43810b2b528b31ac3941418eaca0f9aba802e407aba7df8863ac",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tools/ngspice/lib/ngspice/analog.cm",
+      "group": "circuit_runtimes",
+      "bytes": 306688,
+      "sha256": "7b62ade32ce35827efd3356cdbb646ab2b9d82af83996899c995ea6a3d6be260",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tools/ngspice/lib/ngspice/digital.cm",
+      "group": "circuit_runtimes",
+      "bytes": 310272,
+      "sha256": "43a96c6142f2aaf6fc1bafd2bafd2c1ea0554833868d99d338d82b66ff4c2aae",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tools/ngspice/lib/ngspice/spice2poly.cm",
+      "group": "circuit_runtimes",
+      "bytes": 109568,
+      "sha256": "e38f05e61bf93e3fc8c0843f17f069e9fc815482325afc3e5af24c0d8a8b9d3a",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tools/ngspice/lib/ngspice/table.cm",
+      "group": "circuit_runtimes",
+      "bytes": 215552,
+      "sha256": "23e60807c840a173554275676a2a57b9bb28c6ea4758c2576f21bd74b6ce1c95",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tools/ngspice/lib/ngspice/xtradev.cm",
+      "group": "circuit_runtimes",
+      "bytes": 161792,
+      "sha256": "b9c3d77555361e77ac4f5c5ea5e4367de1995fefb02dc82a6adf66231fc48176",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tools/ngspice/lib/ngspice/xtraevt.cm",
+      "group": "circuit_runtimes",
+      "bytes": 140288,
+      "sha256": "3654dbbe992ad8bba6ea403435d30353e88e7e4f6a331f0e513d3b623007abe4",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tools/ngspice/ngspice-41-manual.pdf",
+      "group": "circuit_runtimes",
+      "bytes": 2493800,
+      "sha256": "4469062fffdafa2bf1c811f3649a091584a6fb0335c1c001a3d36cceef2a82ab",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tools/ngspice/ReleaseNotes.txt",
+      "group": "circuit_runtimes",
+      "bytes": 1508,
+      "sha256": "7ce4e87a3c5c710a9aebbf20bc34c52986f2f959a75de3085cb6c74b89899637",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tools/ngspice/share/ngspice/helpdir/ngspice.idx",
+      "group": "circuit_runtimes",
+      "bytes": 13464,
+      "sha256": "3422b33cec974fde0fb091d025f89bdb48e14442134fc725247c7e4dcc82a3db",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tools/ngspice/share/ngspice/helpdir/ngspice.txt",
+      "group": "circuit_runtimes",
+      "bytes": 403069,
+      "sha256": "8472dbcf1b8bf91c72bb30867ba61a1914e57fceacc37a9eaf6b374c57faf9d9",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tools/ngspice/share/ngspice/scripts/setplot",
+      "group": "circuit_runtimes",
+      "bytes": 1015,
+      "sha256": "b8765ee62d06c5b98dd56fea0673c66a85e18010ba693a5c1e76b6a8c3e11d4b",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tools/ngspice/share/ngspice/scripts/spectrum",
+      "group": "circuit_runtimes",
+      "bytes": 5271,
+      "sha256": "0da086eec298834c734125a4d1ed1b3a6da6bfdb724abf1161f4381a10c115e8",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tools/ngspice/share/ngspice/scripts/spinit",
+      "group": "circuit_runtimes",
+      "bytes": 1072,
+      "sha256": "6740e72efb1b42f22d1404dd8243e82dd14edd1eb2a18d3f0fdba70f678e232f",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tools/Ngspice_Download_Verification.md",
+      "group": "circuit_runtimes",
+      "bytes": 1734,
+      "sha256": "b09ac9c8e799ff2100ca704c55f00a6d6b227ae0039ae67f8d801f4e7e28ef02",
+      "purpose": "Retained local ngspice distribution and its provenance documentation."
+    }
+  ],
+  "installed_runtime": {
+    "MATLAB": "26.1.0.3276743 (R2026a) Update 3",
+    "products": [
+      "MATLAB",
+      "Simulink",
+      "Control System Toolbox",
+      "Simscape",
+      "Simscape Electrical"
+    ],
+    "vendor_model": "IAUC100N04S6L014 supplied with the tested MATLAB installation; use the circuit source-identity checks, not a copied vendor model.",
+    "Python": "3.10 or later for the standard-library-only bootstrap tool"
+  },
+  "limits": [
+    "This manifest does not archive every historical study or report linked by the documentation.",
+    "Keep the complete original results and tools trees backed up separately; Git is source history, not the complete evidence backup.",
+    "Copied inputs preserve original bytes and are not regenerated or relabeled as new acceptance evidence."
+  ]
+}

@@ -5,7 +5,7 @@ function params = actuator_parameters()
 % are not measurements and must be replaced or identified before the model
 % is treated as a representation of physical hardware.
 
-params.meta.parameterSetId = "REPRESENTATIVE-ACTUATOR-V0.2";
+params.meta.parameterSetId = "REPRESENTATIVE-ACTUATOR-V0.3";
 params.meta.parentParameterSetId = "REPRESENTATIVE-ACTUATOR-V0.1";
 params.meta.provenance = "Assumed values for baseline software development";
 params.meta.createdDate = "2026-09-08";
@@ -53,6 +53,15 @@ params.faults.encoder.countJump.time_s = 0.45;
 params.faults.encoder.dropout.startTime_s = 0.50;
 params.faults.encoder.dropout.stopTime_s = 0.65;
 params.faults.encoder.dropout.behavior = "hold-last";
+
+% Phase 2C: averaged motor-bus faults; the control/sensor rail stays powered.
+% Zero bus voltage means zero applied motor terminal voltage (not an open
+% circuit or a hardware brake). Plant state and load torque remain continuous.
+params.supply.startTime_s = 0.85;
+params.supply.stopTime_s = 1.10;
+params.supply.sagVoltage_V = 0.50;
+params.supply.interruptionVoltage_V = 0.0;
+params.supply.controllerStatePolicy = "hold";
 
 % Phase 2B source and coupling assumptions. The 1 kHz controller model
 % cannot resolve individual PWM edges. These quantities therefore produce

@@ -1,0 +1,12 @@
+Name,Passed,Failed,Incomplete,Duration_s
+TestFourwayReceiver/testPinnedReplayAndClosures,1,0,0,4.7533524
+TestFourwayReceiver/testIndependentKCL,1,0,0,0.8281288
+TestFourwayReceiver/testIndependentAugmentedExponential,1,0,0,0.8246012
+TestFourwayReceiver/testCleanBothDirectionsAndZeroCoupling,1,0,0,0.4678852
+TestFourwayReceiver/testReversalAndPersistentState,1,0,0,0.3420335
+TestFourwayReceiver/testGlitchCancelsAndPersistentOffset,1,0,0,0.2733604
+TestFourwayReceiver/testJointIllegalAndCoincidentSampling,1,0,0,0.1401869
+TestFourwayReceiver/testShadowOwnTrajectory,1,0,0,0.2181715
+TestFourwayReceiver/testThresholdAtPacketBoundaryHasSingleRecord,1,0,0,0.1249982
+TestFourwayReceiver/testCrossPacketJointAmbiguityIsRejected,1,0,0,0.2303832
+TestFourwayReceiver/testDomainFailureHoldsReceiverAndRetainsEvents,1,0,0,0.1618925

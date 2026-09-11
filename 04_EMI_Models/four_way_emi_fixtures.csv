@@ -1,0 +1,15 @@
+id,partition,Ccp_pF,Ccn_pF,task_sign,phase_ns,description
+DEV01,development,10,9,1,0,Implementation and convergence development; no policy tuning
+DEV02,development,200,5,1,0,Implementation and convergence development; no policy tuning
+EVAL01,evaluation,30,5,1,-50,Frozen conditional capacitive exposure; ideal B channel
+EVAL02,evaluation,30,5,1,50,Frozen conditional capacitive exposure; ideal B channel
+EVAL03,evaluation,30,5,-1,-50,Frozen conditional capacitive exposure; ideal B channel
+EVAL04,evaluation,30,5,-1,50,Frozen conditional capacitive exposure; ideal B channel
+EVAL05,evaluation,100,5,1,-50,Frozen conditional capacitive exposure; ideal B channel
+EVAL06,evaluation,100,5,1,50,Frozen conditional capacitive exposure; ideal B channel
+EVAL07,evaluation,100,5,-1,-50,Frozen conditional capacitive exposure; ideal B channel
+EVAL08,evaluation,100,5,-1,50,Frozen conditional capacitive exposure; ideal B channel
+EVAL09,evaluation,300,5,1,-50,Frozen conditional capacitive exposure; ideal B channel
+EVAL10,evaluation,300,5,1,50,Frozen conditional capacitive exposure; ideal B channel
+EVAL11,evaluation,300,5,-1,-50,Frozen conditional capacitive exposure; ideal B channel
+EVAL12,evaluation,300,5,-1,50,Frozen conditional capacitive exposure; ideal B channel

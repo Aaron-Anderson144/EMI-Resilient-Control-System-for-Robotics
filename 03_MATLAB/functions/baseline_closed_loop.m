@@ -15,7 +15,13 @@ model.referenceToPosition = feedback(model.loopTransfer, 1);
 model.referenceToCommand = feedback( ...
     model.controller.discrete, model.positionPlantDiscrete);
 
+% Load is an independent physical input with the sign defined by the plant.
+discreteFullPlant = c2d(model.plantContinuous,params.control.sampleTime_s,'zoh');
+loadPlant = discreteFullPlant(1,2);
+model.loadToPosition = feedback(tf(1,1,params.control.sampleTime_s), ...
+    model.loopTransfer) * loadPlant;
+model.loadToCommand = -model.referenceToCommand * loadPlant;
+
 model.referenceToPosition.Name = 'Reference-to-position closed loop';
 model.referenceToCommand.Name = 'Reference-to-voltage-command response';
 end
-

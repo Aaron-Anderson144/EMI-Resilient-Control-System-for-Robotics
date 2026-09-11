@@ -1,0 +1,20 @@
+component split_resistor < foundation.electrical.branch
+% Split gate impedance
+% Continuous passive piecewise-linear approximation to unequal source/sink
+% gate-drive paths. Positive voltage charges the gate through Ron; negative
+% voltage discharges it through Roff. No diode forward drop, capacitance,
+% driver current limiting, or complete driver-IC behavior is represented.
+parameters
+    Ron = {25, 'Ohm'};
+    Roff = {3, 'Ohm'};
+end
+equations
+    assert(Ron > 0)
+    assert(Roff > 0)
+    if v >= 0
+        i == v/Ron;
+    else
+        i == v/Roff;
+    end
+end
+end

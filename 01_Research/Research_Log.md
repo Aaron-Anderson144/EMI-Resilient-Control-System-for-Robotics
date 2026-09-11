@@ -116,3 +116,58 @@ Maintain one entry for every meaningful research or engineering session.
 - **Next action:** Characterize a gate-drive/dead-time mitigation with held-out conditions, then identify actual commutation/loop behavior before connecting the source to the checked coupling network. Receiver identification and supply interruption remain separate work.
 
 - **Final verification record:** All 84 project tests pass. The frozen campaign contains 29 attempted records: 27 complete without warnings and 2 rejected strict-SPICE references. All five finest native/original-SPICE waveform comparisons and all ten exterior energy-balance checks pass. All five cases fail at least one conservative gate-event check; the coarsest 0.5 ns, 4 ohm load comparison also exceeds its low-current error allowance, while the 0.25 ns comparison passes. Full numerical and operating-point flags remain false. Independent CSV calculations confirm signs and closure, and the saved nominal SLX matches all 18 campaign traces exactly.
+
+---
+
+## 2026-09-10 — Reconcile completed numerical work with the research record
+
+- **Objective:** Restore the central log after the earlier SC01B entry; distinguish numerical verification, comparative outcomes and physical evidence.
+- **Method:** This is a retrospective synthesis of the preserved local reports below. Their test/campaign counts describe those historical checkpoints; they are not additional executions in this documentation session. No external publication was reread or revision-validated in this update.
+
+| Completed work and local record | Result and interpretation | Remaining proof |
+|---|---|---|
+| [SC01B R2 source revision](../06_Circuit_Simulations/SC01B_R2/results/verification/SC01B_Validation_Summary.md) | Revised bipolar behavioral drive resolves the declared modeled channel-overlap failures; native/vendor-equation comparison and strict-solver evidence pass. Original failed SC01B remains preserved. | Physical source/driver/negative-rail/temperature and parasitic identification; vendor-equation agreement is not measurement validation. |
+| [Supply/load integration](../03_MATLAB/results/development/v03/Development_Validation_Summary.md) and [Phase 2 completion](../03_MATLAB/results/development/phase2_completion/Phase2_Completion_Report.md) | Averaged motor-bus interruption and loaded continuity, constructed packet schedules, spectrum/recovery and censoring are recorded. | Physical MCU brownout, protocol-specific errors and instrument evidence are separate. |
+| [Phase 3 prototype](../03_MATLAB/results/development/phase3/Phase3_Implementation_Report.md) | Source-time observer, plausibility checks and supervised bounded-voltage behavior work in the declared cases. Missed/censored faults, primary-only non-recovery and loaded zero-voltage drift remain explicit results. | Single-sensor observability, identified limits and broad safe-stop/restart requirements. |
+| [Independent-reference recovery](../03_MATLAB/results/development/phase3_reacquisition_20260910_132934/Phase3_Reacquisition_Report.md) | Optional stopped-only reconstruction permits a separately requested reset after primary qualification in the exact-model synthetic fixture. | Selected independent sensor, uncertainty/independence evidence and load/model mismatch; no automatic truth-based reinitialization. |
+| [Controller tuning](../03_MATLAB/results/development/phase3_tuning_20260910_141100/Phase3_Controller_Tuning_Report.md) | Frozen nine-policy grid completed; diagnostic candidate G100_F020 fails comparative current/disturbance gates. Clean reversal exposes a motion/rate-check mismatch. Defaults are retained. | A faster response alone does not justify promotion; inactive caps are not evidence of protection. |
+| [Motion envelope](../03_MATLAB/results/development/phase3_motion_20260910_144242/Phase3_Motion_Envelope_Report.md) | Common causal reference shaping resolves the declared clean-motion/rate-check conflict without raising observer thresholds; original-request delay cost remains scored. | Reference derivative bounds are not guaranteed physical plant speed/current bounds. |
+| [Separate stop/hold](../03_MATLAB/results/development/phase3_stop_hold_20260910_150537/Phase3_Stop_Hold_Report.md) | Finite-capacity assumed mechanical holding, terminal short and external resistor are compared with continuous-reference checks. Expected overload, failed engagement and failed release remain visible. | No controller brake integration, hardware brake qualification, holding/restart safety or measured torque envelope. |
+
+- **Decision:** Treat these results as numerical evidence in their stated model domains. No hardware safety requirement or Draft research requirement is approved by this log update.
+- **Next action:** Align the evidence matrix with the charter and implement a causal electrical-receiver-decoder bridge before claiming a four-way actuator mitigation comparison.
+
+---
+
+## 2026-09-10 — Whole-project audit and reproducibility baseline
+
+- **Objective:** Check alignment with the original charter before adding another control feature.
+- **Inputs:** Charter, all requirement/traceability/FMEA records, current source, preserved reports and local evidence. The audit reproduced 371 project tests and 327 fresh campaign executions: 223 control, 60 stop/hold, 26 closed-loop Simulink and 18 circuit runs. This is selected fresh reproduction, not a rerun of every historical campaign.
+- **Findings:** The missing integrated four-way experiment and causal receiver/decoder bridge are the primary research-path gaps. Physical validation, current-sensor corruption, hardware brownout and full protocol behavior remain open. The source snapshot contains 293 selected files, including 157 MATLAB source files; it excludes results, tools and caches and is not a full project/data/runtime backup. A packet summary-count inconsistency was identified for separate correction; saved channel arrays and historical statistical windows must remain distinguishable.
+- **Baseline:** Local Git commit `7b55eb55ff04b6f3908115e26b092a84025a1d44`, tag `audit-baseline-2026-09-10`, preserves the audited source snapshot before consolidation edits. See [Local Reproduction](../00_Project_Management/Local_Reproduction.md) for the dependency and evidence boundary. No remote publication is implied.
+- **Licensing clarification:** The early 2026-09-08 log interpreted the runtime banner too broadly. The observed Home-license banner and the charter's licensing-completion check are distinct from a determination of this user's intended use or applicable authorization. Completion remains unconfirmed; this record makes no legal conclusion or claim that a license has been approved.
+- **Decision:** Consolidate source/evidence ownership and records first. Brake handoff is needed before a loaded integrated restart claim, but is not a prerequisite for a deliberately zero-load first EMI comparison.
+
+---
+
+## 2026-09-10 — Freeze the first integrated four-way experiment
+
+- **Objective:** Make charter objective 6 implementation-ready without changing historical defaults or treating a filter assumption as hardware identification.
+- **Files changed:** [Evidence status](../02_Requirements/Research_Evidence_Status.md), requirement/traceability clarification, this log, local literature synthesis, report assembly map, roadmap, and [FOUR-WAY-EMI-PLAN-V1](../04_EMI_Models/Four_Way_EMI_Experiment.md) with configuration/fixture records.
+- **Assumptions introduced:** External one-way R2 voltage replay with a disclosed synthetic return edge; one capacitively disturbed A pair and ideal clean B bit; assumed Schmitt receiver and explicit quadrature decoder; 900 pF added differential capacitance; common shaped zero-load task; unchanged historical software policy; two development and twelve evaluation fixtures with separate closure diagnostics.
+- **Work performed:** Declared causal event/sample order, persistent count semantics, matched clean companions, measurement/truth separation, numerical rejection gates, original-request and shaped-reference scoring, and a predeclared null-result path. Local source notes were synthesized; no new external full-text or standards review was performed.
+- **Results/status:** Design frozen before integrated development/evaluation. A01 / RES-005 remain open; A02 implementation and acceptance are the next milestone. A03 scope/status reconciliation is recorded without approving Draft requirements. A07 remains partial because the literature search, critical paper synthesis and current applicability checks remain incomplete.
+- **Next action:** Implement and independently validate the causal measurement/receiver/decoder interface. Freeze implementation hashes after development acceptance, then execute the declared four arms and retain negative or null outcomes. Do not automatically switch the critical path to brake handoff.
+
+---
+
+## 2026-09-10 — Consolidated baseline verified in a fresh checkout
+
+The [consolidation checkpoint](../00_Project_Management/Consolidation_Checkpoint.md) records 401/401 passing tests in a separate local checkout of code commit `d7413fe6a3c0cd7a091e8da756bce9e60b108489`. All 116 original controller time/state/loop/signal records and their metrics reproduce exactly; known misses and censoring remain. The 600-trial packet-loss table is byte-identical to its historical result. Covered output workflows pass preservation tests and scratch execution checks. Forty hash-pinned local dependencies restore without downloading. The first four-way design is frozen; zero integrated four-way records have been executed. A02 implementation remains next, and A07's external research remains partial.
+
+
+## 2026-09-11 — Causal receiver implementation and rejected development gate
+
+Implemented the strict measurement boundary, exact continuous plant transitions, state-preserving circuit replay, Schmitt receiver, persistent quadrature decoder and offline own-trajectory shadow. The [checkpoint](../00_Project_Management/Causal_Receiver_Checkpoint.md) records 468/468 tests, 116 exact legacy records, 24 native numerical comparisons and 16 refinements. All 16 development records and 8 clean companions completed; the independent CSV audit reconstructs counts and scoring.
+
+DEV01 produces no persistent EMI count error or paired task disturbance. All four exposed DEV02 arms exceed the frozen 7 V receiver domain (7.557 V with 100 pF differential capacitance;8.038 V with 1000 pF). Hold-A continuation is rejected diagnostic evidence, not mitigation benefit. Native domain usability also rejects 12/24 records despite numerical agreement. PLAN-V1 and its input hashes remain unchanged; no evaluation or closure-production cases ran. Next review receiver/topology assumptions and freeze a new plan before evaluating. No hardware or Draft approval claim is made.

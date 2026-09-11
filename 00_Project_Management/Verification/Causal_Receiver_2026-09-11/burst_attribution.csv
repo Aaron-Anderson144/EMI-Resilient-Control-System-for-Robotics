@@ -1,0 +1,17 @@
+Fixture,Arm,Burst,FirstSourceDerivative_s,LastSourceDerivative_s,PreexistingCorruption,NewCorruptionEpisodes,FirstNewCorruptPacket_s,FirstNewDetectionDelay_s,Status
+DEV01,BASELINE,1,0.25,0.254953081,0,0,NaN,NaN,no_detectable_opportunity
+DEV01,BASELINE,2,1.7,1.704953081,0,0,NaN,NaN,no_detectable_opportunity
+DEV01,EM_ONLY,1,0.25,0.254953081,0,0,NaN,NaN,no_detectable_opportunity
+DEV01,EM_ONLY,2,1.7,1.704953081,0,0,NaN,NaN,no_detectable_opportunity
+DEV01,SW_ONLY,1,0.25,0.254953081,0,0,NaN,NaN,no_detectable_opportunity
+DEV01,SW_ONLY,2,1.7,1.704953081,0,0,NaN,NaN,no_detectable_opportunity
+DEV01,COMBINED,1,0.25,0.254953081,0,0,NaN,NaN,no_detectable_opportunity
+DEV01,COMBINED,2,1.7,1.704953081,0,0,NaN,NaN,no_detectable_opportunity
+DEV02,BASELINE,1,0.25,0.254953081,0,1,0.252,NaN,unprotected_diagnostic
+DEV02,BASELINE,2,1.7,1.704953081,1,0,NaN,NaN,preexisting_corruption
+DEV02,EM_ONLY,1,0.25,0.254953081,0,1,0.251,NaN,unprotected_diagnostic
+DEV02,EM_ONLY,2,1.7,1.704953081,1,0,NaN,NaN,preexisting_corruption
+DEV02,SW_ONLY,1,0.25,0.254953081,0,1,0.252,0.003,detected
+DEV02,SW_ONLY,2,1.7,1.704953081,1,0,NaN,NaN,preexisting_corruption
+DEV02,COMBINED,1,0.25,0.254953081,0,1,0.251,0.003,detected
+DEV02,COMBINED,2,1.7,1.704953081,1,0,NaN,NaN,preexisting_corruption

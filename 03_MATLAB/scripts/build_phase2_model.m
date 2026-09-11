@@ -15,12 +15,13 @@ run(fullfile(matlabRoot, 'startup_project.m'));
 params = actuator_parameters();
 validate_parameters(params);
 analyticalModel = baseline_closed_loop(params);
-configure_phase2_simulink_fault(params.faults.defaultScenario);
 
 modelName = 'EMI_Resilient_Actuator_Phase2';
 modelPath = fullfile(matlabRoot, 'models', [modelName, '.slx']);
 
 if isfile(modelPath) && ~overwriteExisting
+    assert_actuator_model_schema(string(modelName),"phase2");
+    configure_phase2_simulink_fault(params.faults.defaultScenario,params);
     fprintf('Existing model preserved: %s\n', modelPath);
     open_system(modelPath);
     return
@@ -37,7 +38,7 @@ controllerDiscrete = tf(analyticalModel.controller.discrete);
 [controllerNum, controllerDen] = tfdata(controllerDiscrete, 'v');
 
 plantDiscrete = ss(c2d( ...
-    analyticalModel.positionPlantContinuous, ...
+    analyticalModel.plantContinuous(1,:), ...
     params.control.sampleTime_s, 'zoh'));
 [plantA, plantB, plantC, plantD] = ssdata(plantDiscrete);
 
@@ -62,8 +63,8 @@ add_block('simulink/Discrete/Discrete Transfer Fcn', ...
 add_block('simulink/Discontinuities/Saturation', ...
     [modelName, '/Drive Voltage Limit'], ...
     'Position', [355, 83, 415, 127], ...
-    'UpperLimit', num2str(params.control.voltageLimit_V, 17), ...
-    'LowerLimit', num2str(-params.control.voltageLimit_V, 17));
+    'UpperLimit', num2str(min(params.control.voltageLimit_V, params.electrical.nominalVoltage_V), 17), ...
+    'LowerLimit', num2str(-min(params.control.voltageLimit_V, params.electrical.nominalVoltage_V), 17));
 
 add_block('simulink/Discrete/Discrete State-Space', ...
     [modelName, '/Actuator Plant'], ...
@@ -74,6 +75,12 @@ add_block('simulink/Discrete/Discrete State-Space', ...
     'D', mat2str(plantD, 17), ...
     'InitialCondition', 'zeros(3,1)', ...
     'SampleTime', num2str(params.control.sampleTime_s, 17));
+
+add_block('simulink/Sources/Constant',[modelName,'/Nominal Load Torque'], ...
+    'Position',[340,170,400,200], ...
+    'Value',num2str(params.mechanical.nominalLoadTorque_Nm,17));
+add_block('simulink/Signal Routing/Mux',[modelName,'/Plant Input Mux'], ...
+    'Position',[425,85,430,155],'Inputs','2');
 
 add_block('simulink/Sources/From Workspace', ...
     [modelName, '/Encoder Additive Fault'], ...
@@ -121,7 +128,9 @@ add_block('simulink/Sinks/To Workspace', [modelName, '/Log Phase 2 Results'], ..
 add_line(modelName, 'Position Reference/1', 'Position Error/1', 'autorouting', 'on');
 add_line(modelName, 'Position Error/1', 'Discrete Position Controller/1', 'autorouting', 'on');
 add_line(modelName, 'Discrete Position Controller/1', 'Drive Voltage Limit/1', 'autorouting', 'on');
-add_line(modelName, 'Drive Voltage Limit/1', 'Actuator Plant/1', 'autorouting', 'on');
+add_line(modelName, 'Drive Voltage Limit/1', 'Plant Input Mux/1', 'autorouting', 'on');
+add_line(modelName, 'Nominal Load Torque/1', 'Plant Input Mux/2', 'autorouting', 'on');
+add_line(modelName, 'Plant Input Mux/1', 'Actuator Plant/1', 'autorouting', 'on');
 add_line(modelName, 'Actuator Plant/1', 'Raw Encoder Measurement/1', 'autorouting', 'on');
 add_line(modelName, 'Encoder Additive Fault/1', 'Raw Encoder Measurement/2', 'autorouting', 'on');
 add_line(modelName, 'Last Accepted Encoder/1', 'Dropout Hold Switch/1', 'autorouting', 'on');
@@ -150,8 +159,11 @@ annotationText = sprintf([ ...
 modelAnnotation = Simulink.Annotation(modelName, annotationText);
 modelAnnotation.Position = [35, 275];
 
+configuration = actuator_simulink_configuration(params,"phase2");
+modelWorkspace = get_param(modelName,'ModelWorkspace');
+modelWorkspace.assignin('EMIActuatorModelSchema',configuration.schema);
 save_system(modelName, modelPath);
+configure_phase2_simulink_fault(params.faults.defaultScenario,params);
 open_system(modelName);
 fprintf('Created Phase 2 Simulink model: %s\n', modelPath);
 end
-

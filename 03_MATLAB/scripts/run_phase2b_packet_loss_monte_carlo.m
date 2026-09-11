@@ -1,13 +1,20 @@
+function packetLossMonteCarlo = run_phase2b_packet_loss_monte_carlo(outputFolder)
 %RUN_PHASE2B_PACKET_LOSS_MONTE_CARLO Verify seeded loss statistics.
 % Three aggregate cases are recorded: the configured probability and the
 % exact deterministic edge cases p = 0 and p = 1.
+arguments
+    outputFolder (1,1) string = ""
+end
 
 scriptPath = mfilename('fullpath');
 matlabRoot = fileparts(fileparts(scriptPath));
+addpath(fullfile(matlabRoot,'functions'));
+outputFolder = prepare_fresh_output_folder(outputFolder, ...
+    fullfile(matlabRoot,'results','development'),"phase2b_packet_loss");
 run(fullfile(matlabRoot, 'startup_project.m'));
+resultsFolder=outputFolder;
 
 params = actuator_parameters();
-resultsFolder = fullfile(matlabRoot, 'results');
 trialCount = 200;
 probabilities = [ ...
     0.0; ...
@@ -35,8 +42,8 @@ for caseIndex = 1:numel(probabilities)
         profile = communication_channel_profile( ...
             time_s, trialParams, scenario);
         totalOpportunities = totalOpportunities + ...
-            profile.transmittedPacketCount;
-        totalDrops = totalDrops + profile.droppedPacketCount;
+            profile.packetSummary.faultWindow.transmittedPacketCount;
+        totalDrops = totalDrops + profile.packetSummary.faultWindow.droppedPacketCount;
     end
 
     observedFraction = totalDrops / totalOpportunities;
@@ -72,6 +79,8 @@ writetable(packetLossMonteCarlo, fullfile(resultsFolder, ...
 disp(packetLossMonteCarlo);
 fprintf('Phase 2B packet-loss Monte Carlo completed (%d trials per case).\n', ...
     trialCount);
+fprintf('Results folder: %s\n',resultsFolder);
+end
 
 function [lower, upper] = localWilsonInterval(successes, trials, z)
 if trials <= 0

@@ -1,0 +1,892 @@
+{
+  "schema_version": 1,
+  "design_id": "FOUR-WAY-EMI-PLAN-V1",
+  "passed": false,
+  "development_passed": false,
+  "native_passed": false,
+  "legacy_passed": true,
+  "files": [
+    {
+      "path": "00_Project_Management/Local_Dependencies.json",
+      "sha256": "76f82e57a6c0b43326f4cf66d841cb83369a7a9604354b0e02b61aab7471f169"
+    },
+    {
+      "path": "03_MATLAB/functions/actuator_simulink_configuration.m",
+      "sha256": "6c967bbc7d0191d3fa9d8168d52cf1871be976e20bbb4aefd8d641914848dab2"
+    },
+    {
+      "path": "03_MATLAB/functions/actuator_state_space.m",
+      "sha256": "62a51dc69fe6f8426c0f91d571b13a1689f5705343054a7ef37eb818a8edaeea"
+    },
+    {
+      "path": "03_MATLAB/functions/apply_actuator_simulation_input.m",
+      "sha256": "3f8d054174a4fa93664ca936873bfa9e6e45ddeccad25d3cadd41e34b1ef3821"
+    },
+    {
+      "path": "03_MATLAB/functions/apply_phase2b_sensitivity_value.m",
+      "sha256": "6344015d606510cafcef117e71e760a852db9e4551963b67cb578e274a9a099c"
+    },
+    {
+      "path": "03_MATLAB/functions/assert_actuator_model_schema.m",
+      "sha256": "a42a2112372c6e118b65a5990d8bc1aefdf66046487bbf34c67ac55e05217c0c"
+    },
+    {
+      "path": "03_MATLAB/functions/baseline_closed_loop.m",
+      "sha256": "1b9a699910e0b0eeb4a9bd6f7023b8779a42b8023b88e8c03a89eefc2eb52136"
+    },
+    {
+      "path": "03_MATLAB/functions/communication_channel_profile.m",
+      "sha256": "117a56d170309a1e0c7f8a515b03e4026d05756291468229b0c32963269df6d2"
+    },
+    {
+      "path": "03_MATLAB/functions/communication_edge_cases.m",
+      "sha256": "0f50d14373570ce5ddbf059759c4ae403a6916fc9c7c35b8975c3e8588242eb6"
+    },
+    {
+      "path": "03_MATLAB/functions/compare_logged_arrays.m",
+      "sha256": "84d594c16d5c5d70e4ac783ff8fd40520d2c25829c57a39afbf4b9130add064e"
+    },
+    {
+      "path": "03_MATLAB/functions/configure_actuator_simulink_parameters.m",
+      "sha256": "cee80831abc36d333b03c73f3ad60bf4dc91992f3b5f2b55c791902b2b139ed1"
+    },
+    {
+      "path": "03_MATLAB/functions/configure_phase2_simulink_fault.m",
+      "sha256": "aca8ed5eb336816d4509ceb5e842b7b31c92053f4cbf5f60242240ca61e51be4"
+    },
+    {
+      "path": "03_MATLAB/functions/configure_phase2b_simulink_scenario.m",
+      "sha256": "b5c6378c71ef6e9bb0d260b2516415a9f1cf708730c6091bac039f75c2eba8b6"
+    },
+    {
+      "path": "03_MATLAB/functions/create_baseline_simulation_input.m",
+      "sha256": "a57b1da04a8cc3314a83f88e36bbccea77c4d9b8936f96a456b7203abd73e92f"
+    },
+    {
+      "path": "03_MATLAB/functions/create_phase2_simulation_input.m",
+      "sha256": "0b147320035e417610c168825f451f9424e06fafc7453568480b5e6eed674e1e"
+    },
+    {
+      "path": "03_MATLAB/functions/create_phase2b_simulation_input.m",
+      "sha256": "3edf50e040d79de1397a2633dcfe4451d62653358d5c502a81fcf78e13f9bd20"
+    },
+    {
+      "path": "03_MATLAB/functions/design_baseline_controller.m",
+      "sha256": "76baafa171ee6f67754c8cadf6f723f46dd7396e94fbf94683be6eb4e19f2930"
+    },
+    {
+      "path": "03_MATLAB/functions/encoder_fault_profile.m",
+      "sha256": "b65c72d7ecb0b0f3c2db6daa2e552a428ed35650b1cf982faad29f05a6ee9427"
+    },
+    {
+      "path": "03_MATLAB/functions/encoder_fault_scenario.m",
+      "sha256": "18cb8340304bea5285de59e693c2c04a80efc82a4931b094941d41039afca0ec"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_assess.m",
+      "sha256": "b9c6276605c21735ca090031fab36242da0f3004f16350be98b4f47f60ad3cc8"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_build_engine.m",
+      "sha256": "78c3f6d51856c55d385dfcd6cc4b6f13e9b3601963d3a7e8fc4a8c876cf9afb7"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_decoder_audit.m",
+      "sha256": "f0bf9dfc98808eec70184b9a7a31e7926ae81cbf6c698fefe543c46855006d03"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_decoder_count_at.m",
+      "sha256": "38bc6c0e324f05c63afce89dfafafea07eaef0ba9b13d90b378bbdd2b461e3f0"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_exact.m",
+      "sha256": "b7a08fd1a87d85ccf6240a6ace1d337dd2ef4c07ad5cfda7420bbf38968ffb13"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_fixture.m",
+      "sha256": "8acc94e90259e4aa62a80920ee10130499dc362523e4a131dad3e167442baa17"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_implementation_inventory.m",
+      "sha256": "b73ddd5e36ca0e2f8b42e14b6be3b189a68f05ca3452a042cad21ab028db4b20"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_metrics.m",
+      "sha256": "dd7bb3554b07e606d89e3e10467fca9c0fd832d16f17cdc00fa0b7c38ff7a4c2"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_native_events.m",
+      "sha256": "a4dd8f5441616fa2d6da2d6a70357f20714ba124858b322f068d840920d608b7"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_plant_events.m",
+      "sha256": "fe184ba6e5c9f9e2c8b6f07490f9d9e932397cc670382241e3ba0792337af42a"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_plant_segment.m",
+      "sha256": "b2684a625330001d454e34867afe6c06df1c7b7d5ed284430aa331e3273ecbe9"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_plant_state.m",
+      "sha256": "7aff36b15c72ce8cce83994ee4da7a0fcdee50e18f7a85cfc048a0e2f141b448"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_receiver_advance.m",
+      "sha256": "5dcf12d8aa485ebbb61d9416eecfa43ff5aa6a9760288bf4bf0d5c3c51088591"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_receiver_export.m",
+      "sha256": "49de44ee6b8231148736c64458ab8f07845b51aae0133a811a2acac9c553e613"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_receiver_init.m",
+      "sha256": "973406e1a5cf8a905b3093b4b4a3e1e5a76f8de1c2aa4d7f7d0929b5696282bd"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_receiver_reconstruct.m",
+      "sha256": "a193267cfe77095a3bd070b25d9a4a2d07ec06abcf0f2fd6d5efe7d0e5f79eba"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_replay.m",
+      "sha256": "a9068413e48ead3e3417b606f014ace5c772cb868fb9ef688fa2cc9c047f42b0"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_require_acceptance.m",
+      "sha256": "2ad65f5ed1aff9e85e7f151103f262e6998345fa172d8fb67a1dcfc73c88eb85"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_source_metadata.m",
+      "sha256": "00d59d692a8a17fc7a96d1818f9400bf06d27c794ba546b4a5190b6b639ca3f6"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_verify_freeze.m",
+      "sha256": "a1b9e6d83de0921f3d0f710eb6dee58e8b1cc739301876f7fbaf970ae6217321"
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_write_record.m",
+      "sha256": "7ca91f5296f675eb624514a91d43893444a867906282610c4946a738fa41b97f"
+    },
+    {
+      "path": "03_MATLAB/functions/packet_profile_summary.m",
+      "sha256": "c731730922b262bd7dc4893345a2908df0e6f02a441178a79b06d89f2e6086b5"
+    },
+    {
+      "path": "03_MATLAB/functions/phase2a_recovery_metrics.m",
+      "sha256": "9265f2fa4cc0e8e4de877b4b5d51752c2087e37b92d5b0c31e2a112a635ffa5c"
+    },
+    {
+      "path": "03_MATLAB/functions/phase2a_windowed_spectrum.m",
+      "sha256": "82894b3588a2a1f9f2ca67bf9d039f6583ed0aa49f3272d89a954493ffec0dd9"
+    },
+    {
+      "path": "03_MATLAB/functions/phase2b_metrics.m",
+      "sha256": "94538e041b35670ed867102c4c487980ea43c50dd5c6a6f482c78cbe655175fa"
+    },
+    {
+      "path": "03_MATLAB/functions/phase2b_scenario.m",
+      "sha256": "608c6da4e909e1b9d9c209612110c819cc94a67f3436fbec936fb88365b91abc"
+    },
+    {
+      "path": "03_MATLAB/functions/phase2b_sensitivity_catalog.m",
+      "sha256": "7b9fdfbe7d8dc90200fe1d6eaf2d3c5c2bed31ae06b0f3feb7a491824c130c2c"
+    },
+    {
+      "path": "03_MATLAB/functions/phase2b_sensitivity_design.m",
+      "sha256": "bf0572f7774fc71c24a69b6f3f63291cb4dfc528da9527da591e777fcca46907"
+    },
+    {
+      "path": "03_MATLAB/functions/phase2b_simulink_signals.m",
+      "sha256": "1f8d569d8e67ef5b898cc4116048ca8a002e9f5ce8fccc7e0329dd3c08e62f0c"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_configuration.m",
+      "sha256": "3fae3440a31bf94be7d07802e509d45fb48fed3b13ef2f5b1ee8b646372e8c94"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_control_activity.m",
+      "sha256": "6a9c6d577e3a9f843d0862db7c7a31282eaaf962718fb874eb3179ed12721e13"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_control_configuration.m",
+      "sha256": "ebcc663c66cbbcb07fe43975557ab3de214b5e8e46c5819bb5fad3b93ebaf66c"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_control_initialize.m",
+      "sha256": "9c1270a4031ce30bcd2ba8479e2362bbb8a03340af64a13180aa6342b35e9df5"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_control_step.m",
+      "sha256": "5740607c79e8febb1ca2b231fe1089195e5c04f6c0140bf4af859fa2183d2d83"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_external_measurement.m",
+      "sha256": "5b2d2d8b39cb5f5a0b1215b8e7dbfd10de6c862a2d2c6503ea79b3e2edebc65e"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_fault_profiles.m",
+      "sha256": "149365130bd8b1d9c93397300edc1d33092cc67de7d7df569fb5826459450ecc"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_logged_values.m",
+      "sha256": "03003d22c8e0d72075c608f6479152fc6a39a6dda69cddfb3a9c264a913d4d46"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_loop_initialize.m",
+      "sha256": "ba478d5eba3a59af111b859a17452ea2573c4667a076462b905f577568c5cd51"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_loop_sfun.m",
+      "sha256": "31fb28d1633f4ba73d5f7d64057db6d4039d39e57a408faabfc29326985fc533"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_loop_step.m",
+      "sha256": "1bb91f3d4992f7e7739a7caca009b78816d33e4df26aa987ed527c64de909dc0"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_matched_clean_scenario.m",
+      "sha256": "f20d35a1fa6da76b8eecd5f24769d2303cf153d75d8a53ee545f5d0997137837"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_metrics.m",
+      "sha256": "46602fdcfedaa8aba696a6f927b8de9c993a86233605a3f7c03a30463b9810b9"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_motion_configuration.m",
+      "sha256": "78e6e9328a1cd4d8f0d405bbd12d32b617d7168a1fe790f9afedb5b1fe881d07"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_motion_fixtures.m",
+      "sha256": "ba801c836ae9f31f06e93d460277bab82dc35db09b0eda0a4250b24430a0db72"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_motion_metrics.m",
+      "sha256": "c0a8eab756290182c5db609d00bec161ac540ef1d43a32264b196f75392d6fc1"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_motion_profiles.m",
+      "sha256": "a0535d68077de4dafb09b3ef830157ef7af8e940b52fa4a3873e72e9ca9f693e"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_observer_configuration.m",
+      "sha256": "bb4e80d341354c81c4be54e7b5a32dd4347dcdabfe5eddf11afbe5ee6155a852"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_observer_initialize.m",
+      "sha256": "d3825203d692569b32d75ce815b5a8247a5693226dc81a07117d1d1f0bfd8a9a"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_observer_reanchor.m",
+      "sha256": "71018ef52fb4ecd878d8872d520e5c2f75ced5928a9ebb2ed7e98893f7d4ff31"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_observer_step.m",
+      "sha256": "03359feacbfa02bb3fd9ae302bb3b968a7471775730c556113a48f5abdbf5ac0"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_reacquisition_configuration.m",
+      "sha256": "1ba9e49b21eb65a08389501e94b6008d45435c55b2b3416d344dfb9926b4d5a4"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_reacquisition_initialize.m",
+      "sha256": "03a3cf3a62f09d526b29d8df4afc794b06a59ebe5b497ce071d9b6f0a372ba09"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_reacquisition_step.m",
+      "sha256": "2a83c5ef56e77c5afd3ecc3861810c9b0dfb44b274970f68cdd4c8eb5f077c47"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_reference_governor_initialize.m",
+      "sha256": "3d47ed89c2c6ff5d2ad529057fcf5d0c5248d00fa2a206829138d6d80223fdaf"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_reference_governor_step.m",
+      "sha256": "cf8c68624a427c01e498760c0c018226a63e4649b9d8055f25946a5d44d5da49"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_reference_profile.m",
+      "sha256": "d1b379fef92f5471da77359a68fff073efcdf86ccee9e33e7413ed0b898ff638"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_scenario.m",
+      "sha256": "49379a373dd413f1d9ba9cb0522be7a92206e8c51b57e64c88d4488caed8b0a2"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_stop_hold_capacity.m",
+      "sha256": "8d0b9c9d11b27d2d285a694c850ec4d0b41048c23605c4aa34c3115eaea4e4e6"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_stop_hold_configuration.m",
+      "sha256": "c56734e45a69992ec2e18cebc5ed75267342ac172e131b66b2c6959ca1d4b565"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_stop_hold_fixtures.m",
+      "sha256": "cb47630a97f4e373d1c35e32e2d6983992c7281c9b57afe3bad638c0060c785a"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_stop_hold_simulate.m",
+      "sha256": "56cc52993c856010c8e1a9a8429582bfecebb0c894c6f723ee81e105a16a399a"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_stop_hold_step.m",
+      "sha256": "4dfb3fac57fbc07ae5945cb8d69bc3ae2b3aff0e62a9544bbfbc733f88b2b71c"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_supervisor_configuration.m",
+      "sha256": "9ee958efd3c72e7d1d0b33afb3c2e4e68f4fec4cc27dcd2235c950d78c44f203"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_supervisor_initialize.m",
+      "sha256": "b0af938b20867f1590051d1810ab0b1330f6091487fd28bedd6a48440140e14a"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_supervisor_step.m",
+      "sha256": "65e70664eee73aa8aa91443e8f481b577babb29597b074fce416c47fcdbf2b13"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_test_scenarios.m",
+      "sha256": "ed1ad186064111e70ea9a64b110ebef7fa3a0c72de967a030f8b9e97be7431ce"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_tuning_assess.m",
+      "sha256": "93ccc779600603f928fb76fb99258061e9e742413d6b7c23b8a365657e7b8a16"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_tuning_configuration.m",
+      "sha256": "6fc8b3c1894b1a8847576fc0fd89be9f229e79be94c0050e075dd88e83074949"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_tuning_criteria.m",
+      "sha256": "d64367bcfeb47fc8f3392781b1e3286cdbfe734340f8cc8c73506b2a5af50868"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_tuning_fixtures.m",
+      "sha256": "a2afb4ee1a2cff2266774f3d127293e346134b22442dcd1fdb5295d85faabb8d"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_tuning_metrics.m",
+      "sha256": "ea8f009fa0166cdff95d9eff24b72050518b8081811b6cc3686a5a6677d24b3f"
+    },
+    {
+      "path": "03_MATLAB/functions/physical_coupling_profile.m",
+      "sha256": "074579bd1ba7218324ae5e95609a6efec20aafeb1ecbd3678bac73289c607b81"
+    },
+    {
+      "path": "03_MATLAB/functions/plot_phase3_motion_study.m",
+      "sha256": "a75c380b7fbd0e7a23afbe21d8edee4f0f6449507db23b93d7d12ab811683308"
+    },
+    {
+      "path": "03_MATLAB/functions/plot_phase3_tuning_study.m",
+      "sha256": "d293588d319bcc7946b8503f3ce57fb5662878e38796850753bf91add36b4a80"
+    },
+    {
+      "path": "03_MATLAB/functions/prepare_fresh_output_folder.m",
+      "sha256": "6dc8a1f84d6e10159e6716858b88a88526b006bcf5d70d09d8123e0df4c47d90"
+    },
+    {
+      "path": "03_MATLAB/functions/require_empty_phase3_output_folder.m",
+      "sha256": "bdbd69522d654cdc8b025b90742fcf853675cd32e1697bc5b6c97098f1d72452"
+    },
+    {
+      "path": "03_MATLAB/functions/schedule_timestamped_packets.m",
+      "sha256": "77586a43a31be24be51c624d6f4f2b9240675bec26aa95e0cab99ff65ca831a5"
+    },
+    {
+      "path": "03_MATLAB/functions/simulate_faulted_actuator.m",
+      "sha256": "13687c9c559db5b8389dd0627e061a90babcc64e14ffe903db42c83eb292b83d"
+    },
+    {
+      "path": "03_MATLAB/functions/simulate_fourway_actuator.m",
+      "sha256": "bdfa74b357565e57fde6d6afcea54de4f0844d78c849477307f3c3d9e0bdc695"
+    },
+    {
+      "path": "03_MATLAB/functions/simulate_phase2b_actuator.m",
+      "sha256": "b8a707f427470e918c0269b6073d7e3c0698e0c1c942fbaac6ea967c3f8ead27"
+    },
+    {
+      "path": "03_MATLAB/functions/simulate_phase3_actuator.m",
+      "sha256": "537a740585033bf93c60f224bf77cd3d7dec9bc2e160e95d9fe99e9abd1daa5e"
+    },
+    {
+      "path": "03_MATLAB/functions/supply_fault_profile.m",
+      "sha256": "c46a59754e421e7b856eaea80051c3850a98574711b4a51a4884cc6afa194c27"
+    },
+    {
+      "path": "03_MATLAB/functions/validate_encoder_scenario.m",
+      "sha256": "fe4730c3970ec9d26a1ac94fd59ca5ef373ddcc7f7f8fac7936ecf96f6abb4c6"
+    },
+    {
+      "path": "03_MATLAB/functions/validate_parameters.m",
+      "sha256": "9e059fe0227987a296454202fbe0db0e3c22a29b9de444478863e39c2e1a9756"
+    },
+    {
+      "path": "03_MATLAB/functions/validate_phase2b_scenario.m",
+      "sha256": "b583ce6ce689fe0a2da9263121a6450cd9e14884f55c4211590663d783bee182"
+    },
+    {
+      "path": "03_MATLAB/functions/validate_phase3_observer_configuration.m",
+      "sha256": "4ce9dfa2b95a7000aeceac1c4ae0223eddfcc386011fbd6eff6f5a6a81004843"
+    },
+    {
+      "path": "03_MATLAB/functions/validate_phase3_reference_profile.m",
+      "sha256": "1a77f0689559e41df485ff0c3483b900870a8e8d678fc1160a421d1faf526f8d"
+    },
+    {
+      "path": "03_MATLAB/functions/validate_phase3_scenario.m",
+      "sha256": "031826fa88d834a9f5ad9fc4a4f79d738deba4f02aad840151101065739e8805"
+    },
+    {
+      "path": "03_MATLAB/functions/validate_profile_time.m",
+      "sha256": "553203ce709845bc34c5da58b00e7c1f80335946826cc2a7f4b6e54bedfaa578"
+    },
+    {
+      "path": "03_MATLAB/functions/validate_supply_scenario.m",
+      "sha256": "13e217fa31dd4b782219592cf02a03789483a79143cad507b9189829fe785d85"
+    },
+    {
+      "path": "03_MATLAB/functions/write_run_manifest.m",
+      "sha256": "e7e7e788f0b05e945158a6c5a75748a75764ec270b876d8619b4319886763ae9"
+    },
+    {
+      "path": "03_MATLAB/main.m",
+      "sha256": "723919cc191a4e17f6178e95642d7de95dd08eddd549029a5b30f431a1cf1929"
+    },
+    {
+      "path": "03_MATLAB/parameters/actuator_parameters.m",
+      "sha256": "1aae0d6c2543d8d1bfe50af11a62b677cdc92c308338a72b2ae13f19d1ff32dc"
+    },
+    {
+      "path": "03_MATLAB/phase2_main.m",
+      "sha256": "784888bf83e458217e7ce5e2e2bb3144d61fe7a23228ddaccce6256eb742c1fb"
+    },
+    {
+      "path": "03_MATLAB/phase2b_main.m",
+      "sha256": "7e8cff7c22577cda176edbbd2a4f57d479878e4ad0313a885b5af1ec555f7c52"
+    },
+    {
+      "path": "03_MATLAB/phase2b_sensitivity_main.m",
+      "sha256": "ccc10c5b2f1cbd73bdc3e519a2747c5b8626f70d0fd8ec5174901970d8e91d5d"
+    },
+    {
+      "path": "03_MATLAB/phase3_main.m",
+      "sha256": "078fd1eed5253b3ee6956265caad8fb47c94a716871b0551f33f44c0ff495ff1"
+    },
+    {
+      "path": "03_MATLAB/phase3_motion_main.m",
+      "sha256": "eb0b9c5b8d79ba3fe089064e6ed0fb2ada14e1c7bd905dcd3e6b256a3383443f"
+    },
+    {
+      "path": "03_MATLAB/phase3_reacquisition_main.m",
+      "sha256": "3d4f9206973be4e063ad01711c8a5f6bf97fed52cf75a8594ddff51276a517b0"
+    },
+    {
+      "path": "03_MATLAB/phase3_stop_hold_main.m",
+      "sha256": "3d34d0dfec677ac7460fff73e96cece7767f3d190feb3db2126dc554db20ae6e"
+    },
+    {
+      "path": "03_MATLAB/phase3_tuning_main.m",
+      "sha256": "b819fa013c501ec07fc129c7e95b58b03c101f0e1f82ebc981ea3a2b2b391b51"
+    },
+    {
+      "path": "03_MATLAB/scripts/audit_fourway_native_acceptance.m",
+      "sha256": "c7d486b06ec439b4e065153963dbf31a663b505cf0534a9a6509b294eff6fded"
+    },
+    {
+      "path": "03_MATLAB/scripts/build_baseline_model.m",
+      "sha256": "23be95a1469470b6b262d0a0bf2ae150b2b9d7d3728ec270b5bd80f8d714788b"
+    },
+    {
+      "path": "03_MATLAB/scripts/build_phase2_model.m",
+      "sha256": "fc5e0749be0d6838e6f31ba694e1723191638ab0bd11b722c9b29881f049f8c3"
+    },
+    {
+      "path": "03_MATLAB/scripts/build_phase2b_model.m",
+      "sha256": "dbdceb45266b80235acf682cbb5508285ba2a9e50d48741ff5afb855d693b0d7"
+    },
+    {
+      "path": "03_MATLAB/scripts/build_phase3_simulink_model.m",
+      "sha256": "2d06593c7dc4eb78924d321b7c6adf8e5a9a3391a46accd9a680db92c3bf50f2"
+    },
+    {
+      "path": "03_MATLAB/scripts/plot_phase2b_sensitivity.m",
+      "sha256": "ea8e10d186dcdc9b2e0b6fea7635fb0a92b274fadbabfe28fd597b2e412ff378"
+    },
+    {
+      "path": "03_MATLAB/scripts/plot_phase3_reacquisition_study.m",
+      "sha256": "46773a83e5c293750d5de1bc35f93bc64f7fdfd3540d88048d32bf478e8133f4"
+    },
+    {
+      "path": "03_MATLAB/scripts/plot_phase3_study.m",
+      "sha256": "b8995416ea4ed0b0313de245c163c9d5d46f6105238fa43bf464056bb1e9fe2c"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_baseline.m",
+      "sha256": "9a085f8c3d48e101f6be917f3445fdde5d65e8c76fbb2423b5a96b5a1cc6a0d5"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_communication_edge_study.m",
+      "sha256": "9403774a9e616a0f445abcbde1235c2c42416d7b2f9664fc94c1fc0798d8fbe2"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_fourway_closure.m",
+      "sha256": "b442103154b617448b461f612da92daeeb28809bfe0635ef9135af82452d9ea9"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_fourway_native_acceptance.m",
+      "sha256": "f342349349be6f5f3a227c47492f8a9e1c49ac44948b3b4574e5ae8e1c5293d0"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_fourway_receiver_tests.m",
+      "sha256": "dd08db2ff2eaee44b2c9489b8e0ceac7a7de57024ea8089cad5526d5c41e9370"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_fourway_stage.m",
+      "sha256": "1e422c64fa465a3403b4f15b565b4e005ff6520f7c78c3290f0762a43e53175d"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase2_fault_study.m",
+      "sha256": "8d7d17da19727ef93c236981b2f0de2fde478f44dc207cfa372e046ba542015b"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase2a_evidence_study.m",
+      "sha256": "ff5e129d19d9522c6a98c3dae56da7d791607ffbd0395c74d499f15af134b686"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase2b_packet_loss_monte_carlo.m",
+      "sha256": "e7f3a9acced1f15660a7e794080a38b29dcf0b6fe0f98e698315b6a2f8038e81"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase2b_sensitivity_study.m",
+      "sha256": "b33f6dd7473febb1b5a9429ee862369eb2afc7485d3ba278d2d40b7a14934831"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase2b_study.m",
+      "sha256": "0c1825730020bb1bb836fc96418ba877d93426661a58bd6e7245430a6cfa5504"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase3_ablation.m",
+      "sha256": "36d31b66696a754ebf18f87651cda53b8aee03621515d459255273f45157f740"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase3_motion_study.m",
+      "sha256": "76121f7129fc176ec9e7f56ade56353f2f589978ad34e70935de8b645348492d"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase3_reacquisition_study.m",
+      "sha256": "574ec04cc95f0e78829ab955e701233dc68f6d72fbaa54013e0466851f6e7b3b"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase3_stop_hold_study.m",
+      "sha256": "55d0c23286f2bb8a09a63f96c5c4fdfd3234f256a30e68e4b288a1d60e96ea94"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase3_study.m",
+      "sha256": "1afcf0e54d64a2a303365df43378ccbde41ab1b2b8f08eceba4c12d313052c9c"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase3_tuning_study.m",
+      "sha256": "e3db8a506f6aef6933708c5078638bdbe4e3493831ecd2c31e57acd5baf848cb"
+    },
+    {
+      "path": "03_MATLAB/scripts/run_supply_integration_study.m",
+      "sha256": "916cc25c8ca01e0c41ab15b3012f2db262e984a1d0a401eea5b361cc45783568"
+    },
+    {
+      "path": "03_MATLAB/scripts/smoke_test_phase2_model.m",
+      "sha256": "91b396de7dd73ddd95a632ebb382c1a4137b9a8e55c4c07d87b636a8fa21bdcf"
+    },
+    {
+      "path": "03_MATLAB/scripts/smoke_test_phase2b_model.m",
+      "sha256": "421f458642c322a89824e890581c8d21803904f40c5bbb0bc22e5ecddb4ad252"
+    },
+    {
+      "path": "03_MATLAB/scripts/validate_phase2_simulink.m",
+      "sha256": "97840676edd5772559eeb061b55f4c1f6662b5e7814ba4e56f68aee3c4ce0009"
+    },
+    {
+      "path": "03_MATLAB/scripts/validate_phase2b_sensitivity.m",
+      "sha256": "a27a5afd33f2d8583f569afe8b4c0fcf39b306bb4c5d9155956a7f69acb898c8"
+    },
+    {
+      "path": "03_MATLAB/scripts/validate_phase2b_simulink.m",
+      "sha256": "a506c4d9c52c9073e72bdadfe64e7f013fc5b855e136132310b38fbf39f7c966"
+    },
+    {
+      "path": "03_MATLAB/scripts/validate_phase3_motion_study.m",
+      "sha256": "6e0504b667d44d0edcbc3c9d978f2c9f923ccbfd22ec16d9e662547e99b5f6e1"
+    },
+    {
+      "path": "03_MATLAB/scripts/validate_phase3_simulink.m",
+      "sha256": "b02e5e1ed4ba4ae64dc1cdddb8c0b84a7e3924828b621d8525410243951fdd88"
+    },
+    {
+      "path": "03_MATLAB/scripts/validate_phase3_tuning_study.m",
+      "sha256": "8339444ac8bac0d602ceb16705f929783fc54c0c1db9ab474550ef7bbfcf2025"
+    },
+    {
+      "path": "03_MATLAB/scripts/write_phase2b_sensitivity_summary.m",
+      "sha256": "6868e3a3c9f8e813e2e8f117ad0c9e1a87eba9c4f262e893a0f1670c5ae85566"
+    },
+    {
+      "path": "03_MATLAB/startup_project.m",
+      "sha256": "fd818d22397da607b474dc423fd3c0b5fa9e660bf98d2596352e258bcf80d21f"
+    },
+    {
+      "path": "03_MATLAB/tests/TestBaseline.m",
+      "sha256": "cff9f4efecdd872364813fc47e97a6d34583047fa9816971b6234b370e465aaa"
+    },
+    {
+      "path": "03_MATLAB/tests/TestCommunicationEdges.m",
+      "sha256": "0026f78a4f9da65b0484e5eb7fd85aef5220cad8eaf460a900bac862b1f10fde"
+    },
+    {
+      "path": "03_MATLAB/tests/TestFaultInjection.m",
+      "sha256": "5fa98783e7b7f0a622521363c3eb8ee32c2369828045f4f95be3498893cb348a"
+    },
+    {
+      "path": "03_MATLAB/tests/TestFourWayContracts.m",
+      "sha256": "878c57d14e4b1245a0f2158bc96a33ad208570b3fe9413294f391792f1172c9a"
+    },
+    {
+      "path": "03_MATLAB/tests/TestFourWayMetrics.m",
+      "sha256": "70addad11d4d431f8b7af56b7f4ba0fdfd57dd38defe6bab05a17ecf6ac88c3c"
+    },
+    {
+      "path": "03_MATLAB/tests/TestFourWayNativeEvents.m",
+      "sha256": "4e6b7f8436d94199aa4fbe149c3358313d4bfe88bcf9113a92d782367ac3b961"
+    },
+    {
+      "path": "03_MATLAB/tests/TestFourWayPlantEvents.m",
+      "sha256": "f87548f3fc77da0e6c51e01b6ed13bbfb6ec8add1707869fd1a04690d1600ad5"
+    },
+    {
+      "path": "03_MATLAB/tests/TestInputValidation.m",
+      "sha256": "f72c2324ad5f4c21f2c5cdb11093780368b8ca85f9bcd35c3c0efc36ade2fe45"
+    },
+    {
+      "path": "03_MATLAB/tests/TestOutputPreservation.m",
+      "sha256": "2cfb3b54e2eeb8429b3b8887574d7fe62f4cfc69c81a5c0c858006fd73e53ec2"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPacketProfileSummary.m",
+      "sha256": "3db311d106bbf9ac58a9dbb7f50c41594cfd1e6bc077da8a5b85c5de9c70e41b"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase2AEvidence.m",
+      "sha256": "53c3eb1d4a1a0cd94b282f7b8d788073b4dfad7a5e5f3ee9c61e74db92bf5a20"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase2B.m",
+      "sha256": "6d28c55357093aa0708db63a956a964b1537a43e059b371dba9292057b891804"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3Control.m",
+      "sha256": "9da248e5c1f7ccf67110bee91700acaf24f150a4a3ce88555b38a3fa088c8942"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3ExternalMeasurement.m",
+      "sha256": "8f3f631ba92381234917d8a920a6ff290cae9bce35b248cecf31ac874ca7c8f0"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3Integration.m",
+      "sha256": "bbe8ded308aa974fd83eaaef981df39889f905b6e8d8ae25492690d6f3c5442a"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3Metrics.m",
+      "sha256": "167f83d27bf68ef5b0a897336fb478237b4b8befef979e4d788db3bf31aa0ff3"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3MotionEnvelope.m",
+      "sha256": "dc9f5e25393f6e419d4353467419c75dc7620f774dbb208905269cb561928a41"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3MotionFixtures.m",
+      "sha256": "de083381afe86f30e1c33e2b97549404e2a702b20c2d023625a13e1235b63778"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3Observer.m",
+      "sha256": "c09f4744a30c1f7ecd568487c483a76b693176e0546ca00f6ea8337553d02eab"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3Reacquisition.m",
+      "sha256": "1e78505e6a7d97991bb1d230c084362d07cd013172e0e848e5d076ee496719bf"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3ReacquisitionIntegration.m",
+      "sha256": "9da33bc46b6fffe1ae7a7903ebdccf9a46f3af7e3b3682daf83b88667d7f3fe2"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3ReferenceGovernor.m",
+      "sha256": "5411e8a4c8f0f4eecc237c6a56108a5a0873702646ba48cba0aae34f62618a9d"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3Scenario.m",
+      "sha256": "202fb65d3d46a5478efd7c03f0a2d674908a81246f239cbcb421eab17ecd7c04"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3Simulink.m",
+      "sha256": "10742415050ff0e7a5dfc87c77d950028fb60f5a91272f6a5d310878b6dec0b6"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3StopHoldFixtures.m",
+      "sha256": "85bfa19d391a18b9366ffa532060af979b9ee99a7651e30680b257cd825d03cd"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3StopHoldStep.m",
+      "sha256": "7fd1f261be522b522e6a93070cddaaca513d36b7899db9e68bd6e2f4f0e844ef"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3Supervisor.m",
+      "sha256": "ae2d051d977866818226a26ade467d53e6d3c9b34c98c32837c0df81b518376c"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3TuningAssessment.m",
+      "sha256": "455b5ff2aea98865d131d7bfc61d81b4e972894dd485418055b42df262cd2dd0"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3TuningFixtures.m",
+      "sha256": "0ba35adae5a2427c179e87a8fa2e893c89cbbdc4dfc26b3ef9f5329e354b1a43"
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3TuningTools.m",
+      "sha256": "fbb1a2d1a0180b2d2c36cc33e0a5dba891c5b24bbd82627bceed632cb1e19012"
+    },
+    {
+      "path": "03_MATLAB/tests/TestSensitivityDesign.m",
+      "sha256": "59bdd752a69b3674b057ebe0d664f374bdc312a23acb773b60fae51a269bff70"
+    },
+    {
+      "path": "03_MATLAB/tests/TestSensitivityPhysics.m",
+      "sha256": "e8c06f7ac00de78411b94307699be0efa6f3b12aeb7bdd019a30c7d0f829deef"
+    },
+    {
+      "path": "03_MATLAB/tests/TestSimulinkParameters.m",
+      "sha256": "40ab5e9b7d3748e6c82eb274ac056913299940ff2092660d155dfff11beba550"
+    },
+    {
+      "path": "03_MATLAB/tests/TestSupplyAndLoad.m",
+      "sha256": "61a47f538bc781431a8f5f63680da6d1fd97f0500f26fda73774d7b78915e684"
+    },
+    {
+      "path": "03_MATLAB/tests/TestValidationGates.m",
+      "sha256": "c6d4e1256ca44cf8287e159cfb874c51ee99e574e15837cddeb8499f45a9e007"
+    },
+    {
+      "path": "04_EMI_Models/Four_Way_EMI_Experiment.md",
+      "sha256": "157daec046c3742b2f78a1071298606789759db04101c0d0a63bc43c3ce5f0be"
+    },
+    {
+      "path": "04_EMI_Models/four_way_emi_configuration.json",
+      "sha256": "b18e2107175105c77e520a05ffb3a976ee5a8e8b5a3539b01e17df4a29817782"
+    },
+    {
+      "path": "04_EMI_Models/four_way_emi_fixtures.csv",
+      "sha256": "7723eb272faf969c1763e96dabcb12049ba8d810c6d8fe5ce04e23d9c1aec549"
+    },
+    {
+      "path": "04_EMI_Models/four_way_emi_freeze_manifest.json",
+      "sha256": "78981aec8431fffb36e326f2d58730086338b64e0d2b8d1c2076b83f3ab38600"
+    },
+    {
+      "path": "06_Circuit_Simulations/FOUR_WAY/functions/fourway_exact_mex.cpp",
+      "sha256": "cc1fdc1322a4115776d8a59453f35d2980f37e19c58a3e797a0f95712432dbd6"
+    },
+    {
+      "path": "06_Circuit_Simulations/FOUR_WAY/tests/TestFourwayReceiver.m",
+      "sha256": "07b5fb6fcc529047bfeee506ba4bd3451122b8ee02502ef89fd722e16c01e651"
+    },
+    {
+      "path": "06_Circuit_Simulations/FOUR_WAY/work/fourway_exact_cc1fdc1322a41157.mexw64",
+      "sha256": "434f26ade195ff041aabd2783fc833cdddd90c5da760e64c80de07e22e5e1275"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_baseline.m",
+      "sha256": "c5e813cad366e79b7381a924c454cabe15400617efe023efa4126f94dbed683c"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_case.m",
+      "sha256": "9c5102307e1bb20afba5a382cda821e23d5dfc5b2f8a3d03e729cd98304b9c92"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_compare_refinement.m",
+      "sha256": "35073985fb685d96b280772927f35b724a20b51bb35c15dface8836eb36abeca"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_metrics.m",
+      "sha256": "097982bc5edacdf7c7458cb573a3e3fd7b47b9dcfcd10752c6563b7e53174c51"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_parameters.m",
+      "sha256": "2e31367987576c6e2df2ad8c1c1ebd5410539cebf00cd23b65bb67b26e35af6b"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_prepare_output_folder.m",
+      "sha256": "2cfe4997388a10eda5f9573f81c1fc2ea77c99820fc12e07212436c41fc3243a"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_reference.m",
+      "sha256": "954d4d07a680a4a9bc35ef55c12207922ad749718e757cc1f0ea43ba8262cf00"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_simscape_signals.m",
+      "sha256": "6453a2729a25800c73cad48487ffb6c34e4a33fa028299dd38eed96684d47934"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_state_space.m",
+      "sha256": "97c61a488c103478072c65ab2adba4404b1ff825bb874c7640678b80b3c5c8e2"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_stimulus.m",
+      "sha256": "717ce922f10e28131c4d5ea4ac32c9592134f8bc19fcca43191385227f90737b"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_threshold_events.m",
+      "sha256": "bc984703e9826cf666ac12f200ab4f09a3731455dfe1142751e3f7ac444def02"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_write_manifest.m",
+      "sha256": "335010d73f608f3edecf45e05e28c3a647980ecb37fbd49efe055682e81260cb"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/simulate_sc01a_simscape.m",
+      "sha256": "dae97b72f5ec3b53694cd770acdca51cb5c877704d5095c18a4314f5b63339fe"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/models/EMI_SC01A_Finite_Edge.slx",
+      "sha256": "223a0e2808cd45ba22fcd2e765adfeba3ee9b0b112d1693ff43356d47caa85e6"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/results/verification/nominal/native_finest.csv",
+      "sha256": "1ecdd83ee4f4846b70e2d40ba04f4b3188e737c94f08300a5bbbfcc36acb9cd5"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/results/verification/nominal/parameters.json",
+      "sha256": "8bcf382b988bc05f70d1de16a5c33297f15c1a6b06436e386e30514f528f112e"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/results/verification/source_identity.json",
+      "sha256": "beb5b681bc730d5683d2e626b9961bf37aa6626fec90959f8f996134b26c97cd"
+    }
+  ],
+  "evidence": {
+    "development": {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/development_summary.json",
+      "sha256": "4a1360d544238d11d051d972b2c3f4835f1641bd68251164d361ab8c95ca9b20"
+    },
+    "native": {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/native_usable_acceptance.json",
+      "sha256": "a30a3236f3245644174eb7c7b5bef91bbe087c90363bbc7c923549feef0f95c8"
+    },
+    "legacy": {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/regression_summary.json",
+      "sha256": "ce7172fbf05c970576f3534b47c82d8f32d763942afd632bc7fc56b0f07687cb"
+    },
+    "independent_audit": {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/independent_audit.json",
+      "sha256": "f59d9e8e49d6aad410091be134ef4399535172bce09d98bae87654f72adfea32"
+    }
+  },
+  "status": "REJECTED_DEVELOPMENT_EVALUATION_UNOPENED",
+  "reason": "All four exposed DEV02 arms exceed the frozen 7V receiver domain; 12 native event records also exceed the domain.",
+  "evaluation_records_executed": 0,
+  "closure_diagnostic_records_executed": 0
+}

@@ -1,0 +1,2475 @@
+{
+  "schema": "emi-publication-source-v1",
+  "publication_date": "2026-09-11",
+  "numerical_checkpoint": {
+    "commit": "a288d344deddd19b5f2fb5abb2b247a04168c972",
+    "tag": "causal-receiver-checkpoint-2026-09-11",
+    "history": "Original local project history; preserved separately from public Git ancestry"
+  },
+  "public_base_commit": "20bd5549166a9fd4fd3e6602d72a1a378296369d",
+  "repository": "https://github.com/Aaron-Anderson144/EMI-Resilient-Control-System-for-Robotics",
+  "source_preservation": {
+    "checkpoint_tracked_files": 378,
+    "byte_identical_files": 374,
+    "documentation_overlays": [
+      "00_Project_Management/Local_Reproduction.md",
+      "02_Requirements/Research_Evidence_Status.md",
+      "09_Report/Report_Outline.md",
+      "README.md"
+    ],
+    "implementation_and_frozen_design_unchanged": true
+  },
+  "checkpoint_files": [
+    {
+      "path": ".gitattributes",
+      "checkpoint_sha256": "7b88b9b44be452b7b5e51cd196626d5b86dfb6511c008e0132dc7d1ec4fce778",
+      "publication_sha256": "7b88b9b44be452b7b5e51cd196626d5b86dfb6511c008e0132dc7d1ec4fce778",
+      "byte_identical": true
+    },
+    {
+      "path": ".gitignore",
+      "checkpoint_sha256": "78a9f58f8ba362ad7b059917357e5e4291551f409a786673bc4f56790d63be93",
+      "publication_sha256": "78a9f58f8ba362ad7b059917357e5e4291551f409a786673bc4f56790d63be93",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Audit_Action_Status.csv",
+      "checkpoint_sha256": "2a248f4392f031ef117f2c5b3971b736e18dd5d6a6f58f95f005eccb4dc6b25e",
+      "publication_sha256": "2a248f4392f031ef117f2c5b3971b736e18dd5d6a6f58f95f005eccb4dc6b25e",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Causal_Receiver_Checkpoint.md",
+      "checkpoint_sha256": "99e52dd045aba120a9ee1ab7dfd058d43d4c4a491209bb9cad5b2fb433512f0d",
+      "publication_sha256": "99e52dd045aba120a9ee1ab7dfd058d43d4c4a491209bb9cad5b2fb433512f0d",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Consolidation_Checkpoint.md",
+      "checkpoint_sha256": "519ac98c160c4fae7066089c62156519d14f8c1ac335f1da108062fff4dde004",
+      "publication_sha256": "519ac98c160c4fae7066089c62156519d14f8c1ac335f1da108062fff4dde004",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Decision_Log.md",
+      "checkpoint_sha256": "a798dc6db65e6a1e2f6f9617070e54155827884dd61820df689b1ab28bd9ada1",
+      "publication_sha256": "a798dc6db65e6a1e2f6f9617070e54155827884dd61820df689b1ab28bd9ada1",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Local_Dependencies.json",
+      "checkpoint_sha256": "76f82e57a6c0b43326f4cf66d841cb83369a7a9604354b0e02b61aab7471f169",
+      "publication_sha256": "76f82e57a6c0b43326f4cf66d841cb83369a7a9604354b0e02b61aab7471f169",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Local_Reproduction.md",
+      "checkpoint_sha256": "87616d58c8748a829dc97ae80d010ed6e1eb9bd3d8419213cb9c94a71c4cdf6c",
+      "publication_sha256": "47f2cda713ff87f5cc5a2ccfe1e6686f4387207d7bc66e0de7cd45a3e743bbec",
+      "byte_identical": false
+    },
+    {
+      "path": "00_Project_Management/Research_Charter.md",
+      "checkpoint_sha256": "4426c1ad21a203ba8b8ce2633d793ece04347d6f17d6d431ed9c5e34637d7e58",
+      "publication_sha256": "4426c1ad21a203ba8b8ce2633d793ece04347d6f17d6d431ed9c5e34637d7e58",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Roadmap.md",
+      "checkpoint_sha256": "c0d3ee168d54b250888302fb95807f8429780a6415dfd68929c55667ea14aeb7",
+      "publication_sha256": "c0d3ee168d54b250888302fb95807f8429780a6415dfd68929c55667ea14aeb7",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/all_project_tests.csv",
+      "checkpoint_sha256": "8000d25d4a4bb1abacec5d9bf41e3104b7e3d933f85e7c5c475994db74e04c50",
+      "publication_sha256": "8000d25d4a4bb1abacec5d9bf41e3104b7e3d933f85e7c5c475994db74e04c50",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/burst_attribution.csv",
+      "checkpoint_sha256": "a6ab58ec7f078f85a4f955a002ccd89809421c2e8db3c847ae7ddf74890f2e94",
+      "publication_sha256": "a6ab58ec7f078f85a4f955a002ccd89809421c2e8db3c847ae7ddf74890f2e94",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/detection_episodes.csv",
+      "checkpoint_sha256": "7ae8a46e7db17c6bbdf0be4565497dae9d644a7100fdd650a0badad78fd17e41",
+      "publication_sha256": "7ae8a46e7db17c6bbdf0be4565497dae9d644a7100fdd650a0badad78fd17e41",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/development_summary.json",
+      "checkpoint_sha256": "4a1360d544238d11d051d972b2c3f4835f1641bd68251164d361ab8c95ca9b20",
+      "publication_sha256": "4a1360d544238d11d051d972b2c3f4835f1641bd68251164d361ab8c95ca9b20",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/domain_and_clean_decoder_summary.csv",
+      "checkpoint_sha256": "07f2ea6df4bebdfb7ac96062eb0869250925f707dafb30ac775d58b97b040d3a",
+      "publication_sha256": "07f2ea6df4bebdfb7ac96062eb0869250925f707dafb30ac775d58b97b040d3a",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/final_gate_verification.json",
+      "checkpoint_sha256": "5c43eb75a77c562a6ea174fd899db3900e419f86d01c6767b1b049fdf67790c7",
+      "publication_sha256": "5c43eb75a77c562a6ea174fd899db3900e419f86d01c6767b1b049fdf67790c7",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/independent_audit.json",
+      "checkpoint_sha256": "f59d9e8e49d6aad410091be134ef4399535172bce09d98bae87654f72adfea32",
+      "publication_sha256": "f59d9e8e49d6aad410091be134ef4399535172bce09d98bae87654f72adfea32",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/initial_checkpoint.json",
+      "checkpoint_sha256": "34c205b7497cf0aed6ed08c0fda3d59de66d84995cc8a88343a5b4755539dd7b",
+      "publication_sha256": "34c205b7497cf0aed6ed08c0fda3d59de66d84995cc8a88343a5b4755539dd7b",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/legacy_equivalence.json",
+      "checkpoint_sha256": "381ca1bf554290d44b5e8b6e2883a698057932514ab23c6a48eac5624c3f12d6",
+      "publication_sha256": "381ca1bf554290d44b5e8b6e2883a698057932514ab23c6a48eac5624c3f12d6",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/metrics.csv",
+      "checkpoint_sha256": "6d9f033f0ccb768175e7c92b725f67b2cacaa0a04374280012884394f4811a83",
+      "publication_sha256": "6d9f033f0ccb768175e7c92b725f67b2cacaa0a04374280012884394f4811a83",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/native_final_acceptance.csv",
+      "checkpoint_sha256": "7f59fc9716493140f3313967a5246e575878cb401f28142f5e99fa6a114f246d",
+      "publication_sha256": "7f59fc9716493140f3313967a5246e575878cb401f28142f5e99fa6a114f246d",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/native_final_refinements.csv",
+      "checkpoint_sha256": "fe66cc0edcf9a3e5595813a18b1f7500d8c68b12413d8fa86df9b3496f1df8a6",
+      "publication_sha256": "fe66cc0edcf9a3e5595813a18b1f7500d8c68b12413d8fa86df9b3496f1df8a6",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/native_numerical_summary.json",
+      "checkpoint_sha256": "811fb13a5e8123dd4b8106e7f3c62af55a0123abc0dae15e9fd22e0316686d2c",
+      "publication_sha256": "811fb13a5e8123dd4b8106e7f3c62af55a0123abc0dae15e9fd22e0316686d2c",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/native_usable_acceptance.json",
+      "checkpoint_sha256": "a30a3236f3245644174eb7c7b5bef91bbe087c90363bbc7c923549feef0f95c8",
+      "publication_sha256": "a30a3236f3245644174eb7c7b5bef91bbe087c90363bbc7c923549feef0f95c8",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/receiver_domain_checkpoint.png",
+      "checkpoint_sha256": "4256f15b7beb97a5f0ca19bcf8dd68e17293b7a8e719884dc9dd65427e1fc3fe",
+      "publication_sha256": "4256f15b7beb97a5f0ca19bcf8dd68e17293b7a8e719884dc9dd65427e1fc3fe",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/receiver_test_acceptance.json",
+      "checkpoint_sha256": "3117b75c132cc114807cafe4ac45382d493b22e3e9415d3dc55da89bf888a06d",
+      "publication_sha256": "3117b75c132cc114807cafe4ac45382d493b22e3e9415d3dc55da89bf888a06d",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/receiver_test_results.csv",
+      "checkpoint_sha256": "e0162e1294611de839fb8e5e81654f1f42b4fef25f8a6781226d66b96fbc61cc",
+      "publication_sha256": "e0162e1294611de839fb8e5e81654f1f42b4fef25f8a6781226d66b96fbc61cc",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/record_index.csv",
+      "checkpoint_sha256": "a20ba62dcfa7810f7c0beea7a1332c9f49f8c41eed0a8f880281cfaf0d106def",
+      "publication_sha256": "a20ba62dcfa7810f7c0beea7a1332c9f49f8c41eed0a8f880281cfaf0d106def",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/recovery.csv",
+      "checkpoint_sha256": "cac0a4d7a2dfb515601e535a9cfa7c72f8db769792e5dd1a24add5dbd617c8b0",
+      "publication_sha256": "cac0a4d7a2dfb515601e535a9cfa7c72f8db769792e5dd1a24add5dbd617c8b0",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/regression_summary.json",
+      "checkpoint_sha256": "ce7172fbf05c970576f3534b47c82d8f32d763942afd632bc7fc56b0f07687cb",
+      "publication_sha256": "ce7172fbf05c970576f3534b47c82d8f32d763942afd632bc7fc56b0f07687cb",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Causal_Receiver_2026-09-11/rejected_acceptance.json",
+      "checkpoint_sha256": "50ec1cc2e4c05225223cdfc0e9a47030e69e9a32a2ed552c810d94451b08fe23",
+      "publication_sha256": "50ec1cc2e4c05225223cdfc0e9a47030e69e9a32a2ed552c810d94451b08fe23",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Consolidation_2026-09-10/all_project_tests.csv",
+      "checkpoint_sha256": "01569e2038bd78f39a123edb214bce755ba7868708ccffcf7b262ef9155d78b2",
+      "publication_sha256": "01569e2038bd78f39a123edb214bce755ba7868708ccffcf7b262ef9155d78b2",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Consolidation_2026-09-10/bootstrap_checks.json",
+      "checkpoint_sha256": "fe782cb50e6fe8c5918dc853a8d6571330412a385897ac496a449812e2c7b947",
+      "publication_sha256": "fe782cb50e6fe8c5918dc853a8d6571330412a385897ac496a449812e2c7b947",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Consolidation_2026-09-10/code_checkpoint.json",
+      "checkpoint_sha256": "cea1be8e7873289b1a9ed3010773b42909a84683e46c3786b06d1a9396aa38b7",
+      "publication_sha256": "cea1be8e7873289b1a9ed3010773b42909a84683e46c3786b06d1a9396aa38b7",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Consolidation_2026-09-10/design_validation.json",
+      "checkpoint_sha256": "1e3b510a403786765c681a29c96c502a92f776875e6c84a2932fd112dd95f8e5",
+      "publication_sha256": "1e3b510a403786765c681a29c96c502a92f776875e6c84a2932fd112dd95f8e5",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Consolidation_2026-09-10/original_116_identity.csv",
+      "checkpoint_sha256": "967cb2d68cd2a0dcf41a90cdd52650447396afe86126347be25ab9edb7b8a7c8",
+      "publication_sha256": "967cb2d68cd2a0dcf41a90cdd52650447396afe86126347be25ab9edb7b8a7c8",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Consolidation_2026-09-10/output_guard_validation.json",
+      "checkpoint_sha256": "6d62619833bcce1835b754344215840edc3a171562681ea5ba883d03994461f6",
+      "publication_sha256": "6d62619833bcce1835b754344215840edc3a171562681ea5ba883d03994461f6",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Consolidation_2026-09-10/statistical_reproduction.json",
+      "checkpoint_sha256": "1950c51b296fc026f61f01b7731e876caeba897166ff7a36e87dddd32aa0116f",
+      "publication_sha256": "1950c51b296fc026f61f01b7731e876caeba897166ff7a36e87dddd32aa0116f",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/Verification/Consolidation_2026-09-10/validation_summary.json",
+      "checkpoint_sha256": "f4d662a9ef618aad06940b6dcebd6b161e6312dcbcaf137b5c03b65a5bfb69d4",
+      "publication_sha256": "f4d662a9ef618aad06940b6dcebd6b161e6312dcbcaf137b5c03b65a5bfb69d4",
+      "byte_identical": true
+    },
+    {
+      "path": "00_Project_Management/scripts/bootstrap_local_dependencies.py",
+      "checkpoint_sha256": "f3c3b8f927dc7e93efe78a475ab6481e2877e8ed181d8636943c0ef97ef73675",
+      "publication_sha256": "f3c3b8f927dc7e93efe78a475ab6481e2877e8ed181d8636943c0ef97ef73675",
+      "byte_identical": true
+    },
+    {
+      "path": "01_Research/Literature_Review_Plan.md",
+      "checkpoint_sha256": "879c6a25ee2bdbe79917607009332a8bcb229f0d7ad08815685da38d7624bb2e",
+      "publication_sha256": "879c6a25ee2bdbe79917607009332a8bcb229f0d7ad08815685da38d7624bb2e",
+      "byte_identical": true
+    },
+    {
+      "path": "01_Research/Research_Log.md",
+      "checkpoint_sha256": "77033957adf11db4b9240195fd61e8e11c3f8016a1348cf6121534143a42ec36",
+      "publication_sha256": "77033957adf11db4b9240195fd61e8e11c3f8016a1348cf6121534143a42ec36",
+      "byte_identical": true
+    },
+    {
+      "path": "02_Requirements/Failure_Modes_and_Effects_Analysis.md",
+      "checkpoint_sha256": "f5f72ad6765acc8bda02f2a916ebe4b7541c4a8c15b0425328bf035bd7209a8d",
+      "publication_sha256": "f5f72ad6765acc8bda02f2a916ebe4b7541c4a8c15b0425328bf035bd7209a8d",
+      "byte_identical": true
+    },
+    {
+      "path": "02_Requirements/Research_Evidence_Status.md",
+      "checkpoint_sha256": "fb54cb2462bf1408040c08e96f6a05324e37f909ae4000e1f3d10eb4a2782ac8",
+      "publication_sha256": "6b3a601451bb96d8d292ed4a8b23d7c3ca42cd5b138a47dd4348b20deda26676",
+      "byte_identical": false
+    },
+    {
+      "path": "02_Requirements/Simulation_Test_Plan.md",
+      "checkpoint_sha256": "db5f760ef87fd6c2ff2eb0afa34a0dca5381712e0e15bcd7a36b513bafabb11b",
+      "publication_sha256": "db5f760ef87fd6c2ff2eb0afa34a0dca5381712e0e15bcd7a36b513bafabb11b",
+      "byte_identical": true
+    },
+    {
+      "path": "02_Requirements/System_Requirements.md",
+      "checkpoint_sha256": "ad96d0f2c888518e78aa5b775bb8edf018e6971bb2ca90a075da3ea22b046f6a",
+      "publication_sha256": "ad96d0f2c888518e78aa5b775bb8edf018e6971bb2ca90a075da3ea22b046f6a",
+      "byte_identical": true
+    },
+    {
+      "path": "02_Requirements/Verification_Traceability.md",
+      "checkpoint_sha256": "098811d2303dabdcc8ac7587be1fdd2117126fdf25c6f6aaba447eb6f401bc5d",
+      "publication_sha256": "098811d2303dabdcc8ac7587be1fdd2117126fdf25c6f6aaba447eb6f401bc5d",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/README.md",
+      "checkpoint_sha256": "79b8b3c6b0bbb645b8036a03be8cf764dfc9a4fcbdb64b4d7d79f85065ce8cf0",
+      "publication_sha256": "79b8b3c6b0bbb645b8036a03be8cf764dfc9a4fcbdb64b4d7d79f85065ce8cf0",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/actuator_simulink_configuration.m",
+      "checkpoint_sha256": "6c967bbc7d0191d3fa9d8168d52cf1871be976e20bbb4aefd8d641914848dab2",
+      "publication_sha256": "6c967bbc7d0191d3fa9d8168d52cf1871be976e20bbb4aefd8d641914848dab2",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/actuator_state_space.m",
+      "checkpoint_sha256": "62a51dc69fe6f8426c0f91d571b13a1689f5705343054a7ef37eb818a8edaeea",
+      "publication_sha256": "62a51dc69fe6f8426c0f91d571b13a1689f5705343054a7ef37eb818a8edaeea",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/apply_actuator_simulation_input.m",
+      "checkpoint_sha256": "3f8d054174a4fa93664ca936873bfa9e6e45ddeccad25d3cadd41e34b1ef3821",
+      "publication_sha256": "3f8d054174a4fa93664ca936873bfa9e6e45ddeccad25d3cadd41e34b1ef3821",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/apply_phase2b_sensitivity_value.m",
+      "checkpoint_sha256": "6344015d606510cafcef117e71e760a852db9e4551963b67cb578e274a9a099c",
+      "publication_sha256": "6344015d606510cafcef117e71e760a852db9e4551963b67cb578e274a9a099c",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/assert_actuator_model_schema.m",
+      "checkpoint_sha256": "a42a2112372c6e118b65a5990d8bc1aefdf66046487bbf34c67ac55e05217c0c",
+      "publication_sha256": "a42a2112372c6e118b65a5990d8bc1aefdf66046487bbf34c67ac55e05217c0c",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/baseline_closed_loop.m",
+      "checkpoint_sha256": "1b9a699910e0b0eeb4a9bd6f7023b8779a42b8023b88e8c03a89eefc2eb52136",
+      "publication_sha256": "1b9a699910e0b0eeb4a9bd6f7023b8779a42b8023b88e8c03a89eefc2eb52136",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/communication_channel_profile.m",
+      "checkpoint_sha256": "117a56d170309a1e0c7f8a515b03e4026d05756291468229b0c32963269df6d2",
+      "publication_sha256": "117a56d170309a1e0c7f8a515b03e4026d05756291468229b0c32963269df6d2",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/communication_edge_cases.m",
+      "checkpoint_sha256": "0f50d14373570ce5ddbf059759c4ae403a6916fc9c7c35b8975c3e8588242eb6",
+      "publication_sha256": "0f50d14373570ce5ddbf059759c4ae403a6916fc9c7c35b8975c3e8588242eb6",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/compare_logged_arrays.m",
+      "checkpoint_sha256": "84d594c16d5c5d70e4ac783ff8fd40520d2c25829c57a39afbf4b9130add064e",
+      "publication_sha256": "84d594c16d5c5d70e4ac783ff8fd40520d2c25829c57a39afbf4b9130add064e",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/configure_actuator_simulink_parameters.m",
+      "checkpoint_sha256": "cee80831abc36d333b03c73f3ad60bf4dc91992f3b5f2b55c791902b2b139ed1",
+      "publication_sha256": "cee80831abc36d333b03c73f3ad60bf4dc91992f3b5f2b55c791902b2b139ed1",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/configure_phase2_simulink_fault.m",
+      "checkpoint_sha256": "aca8ed5eb336816d4509ceb5e842b7b31c92053f4cbf5f60242240ca61e51be4",
+      "publication_sha256": "aca8ed5eb336816d4509ceb5e842b7b31c92053f4cbf5f60242240ca61e51be4",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/configure_phase2b_simulink_scenario.m",
+      "checkpoint_sha256": "b5c6378c71ef6e9bb0d260b2516415a9f1cf708730c6091bac039f75c2eba8b6",
+      "publication_sha256": "b5c6378c71ef6e9bb0d260b2516415a9f1cf708730c6091bac039f75c2eba8b6",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/create_baseline_simulation_input.m",
+      "checkpoint_sha256": "a57b1da04a8cc3314a83f88e36bbccea77c4d9b8936f96a456b7203abd73e92f",
+      "publication_sha256": "a57b1da04a8cc3314a83f88e36bbccea77c4d9b8936f96a456b7203abd73e92f",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/create_phase2_simulation_input.m",
+      "checkpoint_sha256": "0b147320035e417610c168825f451f9424e06fafc7453568480b5e6eed674e1e",
+      "publication_sha256": "0b147320035e417610c168825f451f9424e06fafc7453568480b5e6eed674e1e",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/create_phase2b_simulation_input.m",
+      "checkpoint_sha256": "3edf50e040d79de1397a2633dcfe4451d62653358d5c502a81fcf78e13f9bd20",
+      "publication_sha256": "3edf50e040d79de1397a2633dcfe4451d62653358d5c502a81fcf78e13f9bd20",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/design_baseline_controller.m",
+      "checkpoint_sha256": "76baafa171ee6f67754c8cadf6f723f46dd7396e94fbf94683be6eb4e19f2930",
+      "publication_sha256": "76baafa171ee6f67754c8cadf6f723f46dd7396e94fbf94683be6eb4e19f2930",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/encoder_fault_profile.m",
+      "checkpoint_sha256": "b65c72d7ecb0b0f3c2db6daa2e552a428ed35650b1cf982faad29f05a6ee9427",
+      "publication_sha256": "b65c72d7ecb0b0f3c2db6daa2e552a428ed35650b1cf982faad29f05a6ee9427",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/encoder_fault_scenario.m",
+      "checkpoint_sha256": "18cb8340304bea5285de59e693c2c04a80efc82a4931b094941d41039afca0ec",
+      "publication_sha256": "18cb8340304bea5285de59e693c2c04a80efc82a4931b094941d41039afca0ec",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_assess.m",
+      "checkpoint_sha256": "b9c6276605c21735ca090031fab36242da0f3004f16350be98b4f47f60ad3cc8",
+      "publication_sha256": "b9c6276605c21735ca090031fab36242da0f3004f16350be98b4f47f60ad3cc8",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_build_engine.m",
+      "checkpoint_sha256": "78c3f6d51856c55d385dfcd6cc4b6f13e9b3601963d3a7e8fc4a8c876cf9afb7",
+      "publication_sha256": "78c3f6d51856c55d385dfcd6cc4b6f13e9b3601963d3a7e8fc4a8c876cf9afb7",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_decoder_audit.m",
+      "checkpoint_sha256": "f0bf9dfc98808eec70184b9a7a31e7926ae81cbf6c698fefe543c46855006d03",
+      "publication_sha256": "f0bf9dfc98808eec70184b9a7a31e7926ae81cbf6c698fefe543c46855006d03",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_decoder_count_at.m",
+      "checkpoint_sha256": "38bc6c0e324f05c63afce89dfafafea07eaef0ba9b13d90b378bbdd2b461e3f0",
+      "publication_sha256": "38bc6c0e324f05c63afce89dfafafea07eaef0ba9b13d90b378bbdd2b461e3f0",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_exact.m",
+      "checkpoint_sha256": "b7a08fd1a87d85ccf6240a6ace1d337dd2ef4c07ad5cfda7420bbf38968ffb13",
+      "publication_sha256": "b7a08fd1a87d85ccf6240a6ace1d337dd2ef4c07ad5cfda7420bbf38968ffb13",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_fixture.m",
+      "checkpoint_sha256": "8acc94e90259e4aa62a80920ee10130499dc362523e4a131dad3e167442baa17",
+      "publication_sha256": "8acc94e90259e4aa62a80920ee10130499dc362523e4a131dad3e167442baa17",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_implementation_inventory.m",
+      "checkpoint_sha256": "b73ddd5e36ca0e2f8b42e14b6be3b189a68f05ca3452a042cad21ab028db4b20",
+      "publication_sha256": "b73ddd5e36ca0e2f8b42e14b6be3b189a68f05ca3452a042cad21ab028db4b20",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_metrics.m",
+      "checkpoint_sha256": "dd7bb3554b07e606d89e3e10467fca9c0fd832d16f17cdc00fa0b7c38ff7a4c2",
+      "publication_sha256": "dd7bb3554b07e606d89e3e10467fca9c0fd832d16f17cdc00fa0b7c38ff7a4c2",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_native_events.m",
+      "checkpoint_sha256": "a4dd8f5441616fa2d6da2d6a70357f20714ba124858b322f068d840920d608b7",
+      "publication_sha256": "a4dd8f5441616fa2d6da2d6a70357f20714ba124858b322f068d840920d608b7",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_plant_events.m",
+      "checkpoint_sha256": "fe184ba6e5c9f9e2c8b6f07490f9d9e932397cc670382241e3ba0792337af42a",
+      "publication_sha256": "fe184ba6e5c9f9e2c8b6f07490f9d9e932397cc670382241e3ba0792337af42a",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_plant_segment.m",
+      "checkpoint_sha256": "b2684a625330001d454e34867afe6c06df1c7b7d5ed284430aa331e3273ecbe9",
+      "publication_sha256": "b2684a625330001d454e34867afe6c06df1c7b7d5ed284430aa331e3273ecbe9",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_plant_state.m",
+      "checkpoint_sha256": "7aff36b15c72ce8cce83994ee4da7a0fcdee50e18f7a85cfc048a0e2f141b448",
+      "publication_sha256": "7aff36b15c72ce8cce83994ee4da7a0fcdee50e18f7a85cfc048a0e2f141b448",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_receiver_advance.m",
+      "checkpoint_sha256": "5dcf12d8aa485ebbb61d9416eecfa43ff5aa6a9760288bf4bf0d5c3c51088591",
+      "publication_sha256": "5dcf12d8aa485ebbb61d9416eecfa43ff5aa6a9760288bf4bf0d5c3c51088591",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_receiver_export.m",
+      "checkpoint_sha256": "49de44ee6b8231148736c64458ab8f07845b51aae0133a811a2acac9c553e613",
+      "publication_sha256": "49de44ee6b8231148736c64458ab8f07845b51aae0133a811a2acac9c553e613",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_receiver_init.m",
+      "checkpoint_sha256": "973406e1a5cf8a905b3093b4b4a3e1e5a76f8de1c2aa4d7f7d0929b5696282bd",
+      "publication_sha256": "973406e1a5cf8a905b3093b4b4a3e1e5a76f8de1c2aa4d7f7d0929b5696282bd",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_receiver_reconstruct.m",
+      "checkpoint_sha256": "a193267cfe77095a3bd070b25d9a4a2d07ec06abcf0f2fd6d5efe7d0e5f79eba",
+      "publication_sha256": "a193267cfe77095a3bd070b25d9a4a2d07ec06abcf0f2fd6d5efe7d0e5f79eba",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_replay.m",
+      "checkpoint_sha256": "a9068413e48ead3e3417b606f014ace5c772cb868fb9ef688fa2cc9c047f42b0",
+      "publication_sha256": "a9068413e48ead3e3417b606f014ace5c772cb868fb9ef688fa2cc9c047f42b0",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_require_acceptance.m",
+      "checkpoint_sha256": "2ad65f5ed1aff9e85e7f151103f262e6998345fa172d8fb67a1dcfc73c88eb85",
+      "publication_sha256": "2ad65f5ed1aff9e85e7f151103f262e6998345fa172d8fb67a1dcfc73c88eb85",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_source_metadata.m",
+      "checkpoint_sha256": "00d59d692a8a17fc7a96d1818f9400bf06d27c794ba546b4a5190b6b639ca3f6",
+      "publication_sha256": "00d59d692a8a17fc7a96d1818f9400bf06d27c794ba546b4a5190b6b639ca3f6",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_verify_freeze.m",
+      "checkpoint_sha256": "a1b9e6d83de0921f3d0f710eb6dee58e8b1cc739301876f7fbaf970ae6217321",
+      "publication_sha256": "a1b9e6d83de0921f3d0f710eb6dee58e8b1cc739301876f7fbaf970ae6217321",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/fourway_write_record.m",
+      "checkpoint_sha256": "7ca91f5296f675eb624514a91d43893444a867906282610c4946a738fa41b97f",
+      "publication_sha256": "7ca91f5296f675eb624514a91d43893444a867906282610c4946a738fa41b97f",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/packet_profile_summary.m",
+      "checkpoint_sha256": "c731730922b262bd7dc4893345a2908df0e6f02a441178a79b06d89f2e6086b5",
+      "publication_sha256": "c731730922b262bd7dc4893345a2908df0e6f02a441178a79b06d89f2e6086b5",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase2a_recovery_metrics.m",
+      "checkpoint_sha256": "9265f2fa4cc0e8e4de877b4b5d51752c2087e37b92d5b0c31e2a112a635ffa5c",
+      "publication_sha256": "9265f2fa4cc0e8e4de877b4b5d51752c2087e37b92d5b0c31e2a112a635ffa5c",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase2a_windowed_spectrum.m",
+      "checkpoint_sha256": "82894b3588a2a1f9f2ca67bf9d039f6583ed0aa49f3272d89a954493ffec0dd9",
+      "publication_sha256": "82894b3588a2a1f9f2ca67bf9d039f6583ed0aa49f3272d89a954493ffec0dd9",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase2b_metrics.m",
+      "checkpoint_sha256": "94538e041b35670ed867102c4c487980ea43c50dd5c6a6f482c78cbe655175fa",
+      "publication_sha256": "94538e041b35670ed867102c4c487980ea43c50dd5c6a6f482c78cbe655175fa",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase2b_scenario.m",
+      "checkpoint_sha256": "608c6da4e909e1b9d9c209612110c819cc94a67f3436fbec936fb88365b91abc",
+      "publication_sha256": "608c6da4e909e1b9d9c209612110c819cc94a67f3436fbec936fb88365b91abc",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase2b_sensitivity_catalog.m",
+      "checkpoint_sha256": "7b9fdfbe7d8dc90200fe1d6eaf2d3c5c2bed31ae06b0f3feb7a491824c130c2c",
+      "publication_sha256": "7b9fdfbe7d8dc90200fe1d6eaf2d3c5c2bed31ae06b0f3feb7a491824c130c2c",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase2b_sensitivity_design.m",
+      "checkpoint_sha256": "bf0572f7774fc71c24a69b6f3f63291cb4dfc528da9527da591e777fcca46907",
+      "publication_sha256": "bf0572f7774fc71c24a69b6f3f63291cb4dfc528da9527da591e777fcca46907",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase2b_simulink_signals.m",
+      "checkpoint_sha256": "1f8d569d8e67ef5b898cc4116048ca8a002e9f5ce8fccc7e0329dd3c08e62f0c",
+      "publication_sha256": "1f8d569d8e67ef5b898cc4116048ca8a002e9f5ce8fccc7e0329dd3c08e62f0c",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_configuration.m",
+      "checkpoint_sha256": "3fae3440a31bf94be7d07802e509d45fb48fed3b13ef2f5b1ee8b646372e8c94",
+      "publication_sha256": "3fae3440a31bf94be7d07802e509d45fb48fed3b13ef2f5b1ee8b646372e8c94",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_control_activity.m",
+      "checkpoint_sha256": "6a9c6d577e3a9f843d0862db7c7a31282eaaf962718fb874eb3179ed12721e13",
+      "publication_sha256": "6a9c6d577e3a9f843d0862db7c7a31282eaaf962718fb874eb3179ed12721e13",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_control_configuration.m",
+      "checkpoint_sha256": "ebcc663c66cbbcb07fe43975557ab3de214b5e8e46c5819bb5fad3b93ebaf66c",
+      "publication_sha256": "ebcc663c66cbbcb07fe43975557ab3de214b5e8e46c5819bb5fad3b93ebaf66c",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_control_initialize.m",
+      "checkpoint_sha256": "9c1270a4031ce30bcd2ba8479e2362bbb8a03340af64a13180aa6342b35e9df5",
+      "publication_sha256": "9c1270a4031ce30bcd2ba8479e2362bbb8a03340af64a13180aa6342b35e9df5",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_control_step.m",
+      "checkpoint_sha256": "5740607c79e8febb1ca2b231fe1089195e5c04f6c0140bf4af859fa2183d2d83",
+      "publication_sha256": "5740607c79e8febb1ca2b231fe1089195e5c04f6c0140bf4af859fa2183d2d83",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_external_measurement.m",
+      "checkpoint_sha256": "5b2d2d8b39cb5f5a0b1215b8e7dbfd10de6c862a2d2c6503ea79b3e2edebc65e",
+      "publication_sha256": "5b2d2d8b39cb5f5a0b1215b8e7dbfd10de6c862a2d2c6503ea79b3e2edebc65e",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_fault_profiles.m",
+      "checkpoint_sha256": "149365130bd8b1d9c93397300edc1d33092cc67de7d7df569fb5826459450ecc",
+      "publication_sha256": "149365130bd8b1d9c93397300edc1d33092cc67de7d7df569fb5826459450ecc",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_logged_values.m",
+      "checkpoint_sha256": "03003d22c8e0d72075c608f6479152fc6a39a6dda69cddfb3a9c264a913d4d46",
+      "publication_sha256": "03003d22c8e0d72075c608f6479152fc6a39a6dda69cddfb3a9c264a913d4d46",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_loop_initialize.m",
+      "checkpoint_sha256": "ba478d5eba3a59af111b859a17452ea2573c4667a076462b905f577568c5cd51",
+      "publication_sha256": "ba478d5eba3a59af111b859a17452ea2573c4667a076462b905f577568c5cd51",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_loop_sfun.m",
+      "checkpoint_sha256": "31fb28d1633f4ba73d5f7d64057db6d4039d39e57a408faabfc29326985fc533",
+      "publication_sha256": "31fb28d1633f4ba73d5f7d64057db6d4039d39e57a408faabfc29326985fc533",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_loop_step.m",
+      "checkpoint_sha256": "1bb91f3d4992f7e7739a7caca009b78816d33e4df26aa987ed527c64de909dc0",
+      "publication_sha256": "1bb91f3d4992f7e7739a7caca009b78816d33e4df26aa987ed527c64de909dc0",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_matched_clean_scenario.m",
+      "checkpoint_sha256": "f20d35a1fa6da76b8eecd5f24769d2303cf153d75d8a53ee545f5d0997137837",
+      "publication_sha256": "f20d35a1fa6da76b8eecd5f24769d2303cf153d75d8a53ee545f5d0997137837",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_metrics.m",
+      "checkpoint_sha256": "46602fdcfedaa8aba696a6f927b8de9c993a86233605a3f7c03a30463b9810b9",
+      "publication_sha256": "46602fdcfedaa8aba696a6f927b8de9c993a86233605a3f7c03a30463b9810b9",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_motion_configuration.m",
+      "checkpoint_sha256": "78e6e9328a1cd4d8f0d405bbd12d32b617d7168a1fe790f9afedb5b1fe881d07",
+      "publication_sha256": "78e6e9328a1cd4d8f0d405bbd12d32b617d7168a1fe790f9afedb5b1fe881d07",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_motion_fixtures.m",
+      "checkpoint_sha256": "ba801c836ae9f31f06e93d460277bab82dc35db09b0eda0a4250b24430a0db72",
+      "publication_sha256": "ba801c836ae9f31f06e93d460277bab82dc35db09b0eda0a4250b24430a0db72",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_motion_metrics.m",
+      "checkpoint_sha256": "c0a8eab756290182c5db609d00bec161ac540ef1d43a32264b196f75392d6fc1",
+      "publication_sha256": "c0a8eab756290182c5db609d00bec161ac540ef1d43a32264b196f75392d6fc1",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_motion_profiles.m",
+      "checkpoint_sha256": "a0535d68077de4dafb09b3ef830157ef7af8e940b52fa4a3873e72e9ca9f693e",
+      "publication_sha256": "a0535d68077de4dafb09b3ef830157ef7af8e940b52fa4a3873e72e9ca9f693e",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_observer_configuration.m",
+      "checkpoint_sha256": "bb4e80d341354c81c4be54e7b5a32dd4347dcdabfe5eddf11afbe5ee6155a852",
+      "publication_sha256": "bb4e80d341354c81c4be54e7b5a32dd4347dcdabfe5eddf11afbe5ee6155a852",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_observer_initialize.m",
+      "checkpoint_sha256": "d3825203d692569b32d75ce815b5a8247a5693226dc81a07117d1d1f0bfd8a9a",
+      "publication_sha256": "d3825203d692569b32d75ce815b5a8247a5693226dc81a07117d1d1f0bfd8a9a",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_observer_reanchor.m",
+      "checkpoint_sha256": "71018ef52fb4ecd878d8872d520e5c2f75ced5928a9ebb2ed7e98893f7d4ff31",
+      "publication_sha256": "71018ef52fb4ecd878d8872d520e5c2f75ced5928a9ebb2ed7e98893f7d4ff31",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_observer_step.m",
+      "checkpoint_sha256": "03359feacbfa02bb3fd9ae302bb3b968a7471775730c556113a48f5abdbf5ac0",
+      "publication_sha256": "03359feacbfa02bb3fd9ae302bb3b968a7471775730c556113a48f5abdbf5ac0",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_reacquisition_configuration.m",
+      "checkpoint_sha256": "1ba9e49b21eb65a08389501e94b6008d45435c55b2b3416d344dfb9926b4d5a4",
+      "publication_sha256": "1ba9e49b21eb65a08389501e94b6008d45435c55b2b3416d344dfb9926b4d5a4",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_reacquisition_initialize.m",
+      "checkpoint_sha256": "03a3cf3a62f09d526b29d8df4afc794b06a59ebe5b497ce071d9b6f0a372ba09",
+      "publication_sha256": "03a3cf3a62f09d526b29d8df4afc794b06a59ebe5b497ce071d9b6f0a372ba09",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_reacquisition_step.m",
+      "checkpoint_sha256": "2a83c5ef56e77c5afd3ecc3861810c9b0dfb44b274970f68cdd4c8eb5f077c47",
+      "publication_sha256": "2a83c5ef56e77c5afd3ecc3861810c9b0dfb44b274970f68cdd4c8eb5f077c47",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_reference_governor_initialize.m",
+      "checkpoint_sha256": "3d47ed89c2c6ff5d2ad529057fcf5d0c5248d00fa2a206829138d6d80223fdaf",
+      "publication_sha256": "3d47ed89c2c6ff5d2ad529057fcf5d0c5248d00fa2a206829138d6d80223fdaf",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_reference_governor_step.m",
+      "checkpoint_sha256": "cf8c68624a427c01e498760c0c018226a63e4649b9d8055f25946a5d44d5da49",
+      "publication_sha256": "cf8c68624a427c01e498760c0c018226a63e4649b9d8055f25946a5d44d5da49",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_reference_profile.m",
+      "checkpoint_sha256": "d1b379fef92f5471da77359a68fff073efcdf86ccee9e33e7413ed0b898ff638",
+      "publication_sha256": "d1b379fef92f5471da77359a68fff073efcdf86ccee9e33e7413ed0b898ff638",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_scenario.m",
+      "checkpoint_sha256": "49379a373dd413f1d9ba9cb0522be7a92206e8c51b57e64c88d4488caed8b0a2",
+      "publication_sha256": "49379a373dd413f1d9ba9cb0522be7a92206e8c51b57e64c88d4488caed8b0a2",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_stop_hold_capacity.m",
+      "checkpoint_sha256": "8d0b9c9d11b27d2d285a694c850ec4d0b41048c23605c4aa34c3115eaea4e4e6",
+      "publication_sha256": "8d0b9c9d11b27d2d285a694c850ec4d0b41048c23605c4aa34c3115eaea4e4e6",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_stop_hold_configuration.m",
+      "checkpoint_sha256": "c56734e45a69992ec2e18cebc5ed75267342ac172e131b66b2c6959ca1d4b565",
+      "publication_sha256": "c56734e45a69992ec2e18cebc5ed75267342ac172e131b66b2c6959ca1d4b565",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_stop_hold_fixtures.m",
+      "checkpoint_sha256": "cb47630a97f4e373d1c35e32e2d6983992c7281c9b57afe3bad638c0060c785a",
+      "publication_sha256": "cb47630a97f4e373d1c35e32e2d6983992c7281c9b57afe3bad638c0060c785a",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_stop_hold_simulate.m",
+      "checkpoint_sha256": "56cc52993c856010c8e1a9a8429582bfecebb0c894c6f723ee81e105a16a399a",
+      "publication_sha256": "56cc52993c856010c8e1a9a8429582bfecebb0c894c6f723ee81e105a16a399a",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_stop_hold_step.m",
+      "checkpoint_sha256": "4dfb3fac57fbc07ae5945cb8d69bc3ae2b3aff0e62a9544bbfbc733f88b2b71c",
+      "publication_sha256": "4dfb3fac57fbc07ae5945cb8d69bc3ae2b3aff0e62a9544bbfbc733f88b2b71c",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_supervisor_configuration.m",
+      "checkpoint_sha256": "9ee958efd3c72e7d1d0b33afb3c2e4e68f4fec4cc27dcd2235c950d78c44f203",
+      "publication_sha256": "9ee958efd3c72e7d1d0b33afb3c2e4e68f4fec4cc27dcd2235c950d78c44f203",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_supervisor_initialize.m",
+      "checkpoint_sha256": "b0af938b20867f1590051d1810ab0b1330f6091487fd28bedd6a48440140e14a",
+      "publication_sha256": "b0af938b20867f1590051d1810ab0b1330f6091487fd28bedd6a48440140e14a",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_supervisor_step.m",
+      "checkpoint_sha256": "65e70664eee73aa8aa91443e8f481b577babb29597b074fce416c47fcdbf2b13",
+      "publication_sha256": "65e70664eee73aa8aa91443e8f481b577babb29597b074fce416c47fcdbf2b13",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_test_scenarios.m",
+      "checkpoint_sha256": "ed1ad186064111e70ea9a64b110ebef7fa3a0c72de967a030f8b9e97be7431ce",
+      "publication_sha256": "ed1ad186064111e70ea9a64b110ebef7fa3a0c72de967a030f8b9e97be7431ce",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_tuning_assess.m",
+      "checkpoint_sha256": "93ccc779600603f928fb76fb99258061e9e742413d6b7c23b8a365657e7b8a16",
+      "publication_sha256": "93ccc779600603f928fb76fb99258061e9e742413d6b7c23b8a365657e7b8a16",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_tuning_configuration.m",
+      "checkpoint_sha256": "6fc8b3c1894b1a8847576fc0fd89be9f229e79be94c0050e075dd88e83074949",
+      "publication_sha256": "6fc8b3c1894b1a8847576fc0fd89be9f229e79be94c0050e075dd88e83074949",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_tuning_criteria.m",
+      "checkpoint_sha256": "d64367bcfeb47fc8f3392781b1e3286cdbfe734340f8cc8c73506b2a5af50868",
+      "publication_sha256": "d64367bcfeb47fc8f3392781b1e3286cdbfe734340f8cc8c73506b2a5af50868",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_tuning_fixtures.m",
+      "checkpoint_sha256": "a2afb4ee1a2cff2266774f3d127293e346134b22442dcd1fdb5295d85faabb8d",
+      "publication_sha256": "a2afb4ee1a2cff2266774f3d127293e346134b22442dcd1fdb5295d85faabb8d",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_tuning_metrics.m",
+      "checkpoint_sha256": "ea8f009fa0166cdff95d9eff24b72050518b8081811b6cc3686a5a6677d24b3f",
+      "publication_sha256": "ea8f009fa0166cdff95d9eff24b72050518b8081811b6cc3686a5a6677d24b3f",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/physical_coupling_profile.m",
+      "checkpoint_sha256": "074579bd1ba7218324ae5e95609a6efec20aafeb1ecbd3678bac73289c607b81",
+      "publication_sha256": "074579bd1ba7218324ae5e95609a6efec20aafeb1ecbd3678bac73289c607b81",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/plot_phase3_motion_study.m",
+      "checkpoint_sha256": "a75c380b7fbd0e7a23afbe21d8edee4f0f6449507db23b93d7d12ab811683308",
+      "publication_sha256": "a75c380b7fbd0e7a23afbe21d8edee4f0f6449507db23b93d7d12ab811683308",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/plot_phase3_tuning_study.m",
+      "checkpoint_sha256": "d293588d319bcc7946b8503f3ce57fb5662878e38796850753bf91add36b4a80",
+      "publication_sha256": "d293588d319bcc7946b8503f3ce57fb5662878e38796850753bf91add36b4a80",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/prepare_fresh_output_folder.m",
+      "checkpoint_sha256": "6dc8a1f84d6e10159e6716858b88a88526b006bcf5d70d09d8123e0df4c47d90",
+      "publication_sha256": "6dc8a1f84d6e10159e6716858b88a88526b006bcf5d70d09d8123e0df4c47d90",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/require_empty_phase3_output_folder.m",
+      "checkpoint_sha256": "bdbd69522d654cdc8b025b90742fcf853675cd32e1697bc5b6c97098f1d72452",
+      "publication_sha256": "bdbd69522d654cdc8b025b90742fcf853675cd32e1697bc5b6c97098f1d72452",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/schedule_timestamped_packets.m",
+      "checkpoint_sha256": "77586a43a31be24be51c624d6f4f2b9240675bec26aa95e0cab99ff65ca831a5",
+      "publication_sha256": "77586a43a31be24be51c624d6f4f2b9240675bec26aa95e0cab99ff65ca831a5",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/simulate_faulted_actuator.m",
+      "checkpoint_sha256": "13687c9c559db5b8389dd0627e061a90babcc64e14ffe903db42c83eb292b83d",
+      "publication_sha256": "13687c9c559db5b8389dd0627e061a90babcc64e14ffe903db42c83eb292b83d",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/simulate_fourway_actuator.m",
+      "checkpoint_sha256": "bdfa74b357565e57fde6d6afcea54de4f0844d78c849477307f3c3d9e0bdc695",
+      "publication_sha256": "bdfa74b357565e57fde6d6afcea54de4f0844d78c849477307f3c3d9e0bdc695",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/simulate_phase2b_actuator.m",
+      "checkpoint_sha256": "b8a707f427470e918c0269b6073d7e3c0698e0c1c942fbaac6ea967c3f8ead27",
+      "publication_sha256": "b8a707f427470e918c0269b6073d7e3c0698e0c1c942fbaac6ea967c3f8ead27",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/simulate_phase3_actuator.m",
+      "checkpoint_sha256": "537a740585033bf93c60f224bf77cd3d7dec9bc2e160e95d9fe99e9abd1daa5e",
+      "publication_sha256": "537a740585033bf93c60f224bf77cd3d7dec9bc2e160e95d9fe99e9abd1daa5e",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/supply_fault_profile.m",
+      "checkpoint_sha256": "c46a59754e421e7b856eaea80051c3850a98574711b4a51a4884cc6afa194c27",
+      "publication_sha256": "c46a59754e421e7b856eaea80051c3850a98574711b4a51a4884cc6afa194c27",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/validate_encoder_scenario.m",
+      "checkpoint_sha256": "fe4730c3970ec9d26a1ac94fd59ca5ef373ddcc7f7f8fac7936ecf96f6abb4c6",
+      "publication_sha256": "fe4730c3970ec9d26a1ac94fd59ca5ef373ddcc7f7f8fac7936ecf96f6abb4c6",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/validate_parameters.m",
+      "checkpoint_sha256": "9e059fe0227987a296454202fbe0db0e3c22a29b9de444478863e39c2e1a9756",
+      "publication_sha256": "9e059fe0227987a296454202fbe0db0e3c22a29b9de444478863e39c2e1a9756",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/validate_phase2b_scenario.m",
+      "checkpoint_sha256": "b583ce6ce689fe0a2da9263121a6450cd9e14884f55c4211590663d783bee182",
+      "publication_sha256": "b583ce6ce689fe0a2da9263121a6450cd9e14884f55c4211590663d783bee182",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/validate_phase3_observer_configuration.m",
+      "checkpoint_sha256": "4ce9dfa2b95a7000aeceac1c4ae0223eddfcc386011fbd6eff6f5a6a81004843",
+      "publication_sha256": "4ce9dfa2b95a7000aeceac1c4ae0223eddfcc386011fbd6eff6f5a6a81004843",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/validate_phase3_reference_profile.m",
+      "checkpoint_sha256": "1a77f0689559e41df485ff0c3483b900870a8e8d678fc1160a421d1faf526f8d",
+      "publication_sha256": "1a77f0689559e41df485ff0c3483b900870a8e8d678fc1160a421d1faf526f8d",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/validate_phase3_scenario.m",
+      "checkpoint_sha256": "031826fa88d834a9f5ad9fc4a4f79d738deba4f02aad840151101065739e8805",
+      "publication_sha256": "031826fa88d834a9f5ad9fc4a4f79d738deba4f02aad840151101065739e8805",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/validate_profile_time.m",
+      "checkpoint_sha256": "553203ce709845bc34c5da58b00e7c1f80335946826cc2a7f4b6e54bedfaa578",
+      "publication_sha256": "553203ce709845bc34c5da58b00e7c1f80335946826cc2a7f4b6e54bedfaa578",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/validate_supply_scenario.m",
+      "checkpoint_sha256": "13e217fa31dd4b782219592cf02a03789483a79143cad507b9189829fe785d85",
+      "publication_sha256": "13e217fa31dd4b782219592cf02a03789483a79143cad507b9189829fe785d85",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/functions/write_run_manifest.m",
+      "checkpoint_sha256": "e7e7e788f0b05e945158a6c5a75748a75764ec270b876d8619b4319886763ae9",
+      "publication_sha256": "e7e7e788f0b05e945158a6c5a75748a75764ec270b876d8619b4319886763ae9",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/main.m",
+      "checkpoint_sha256": "723919cc191a4e17f6178e95642d7de95dd08eddd549029a5b30f431a1cf1929",
+      "publication_sha256": "723919cc191a4e17f6178e95642d7de95dd08eddd549029a5b30f431a1cf1929",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/models/EMI_Resilient_Actuator_Baseline.slx",
+      "checkpoint_sha256": "6542ae952684fc3f0227c373e33ebc0cb195ef5e5ff20e92670427d21971130a",
+      "publication_sha256": "6542ae952684fc3f0227c373e33ebc0cb195ef5e5ff20e92670427d21971130a",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/models/EMI_Resilient_Actuator_Phase2.slx",
+      "checkpoint_sha256": "1028bf00fe29e0d4156d5e3fd5ab622e2db2ea72c6e59f03ad117f9a8054b5c0",
+      "publication_sha256": "1028bf00fe29e0d4156d5e3fd5ab622e2db2ea72c6e59f03ad117f9a8054b5c0",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/models/EMI_Resilient_Actuator_Phase2B.slx",
+      "checkpoint_sha256": "70271952dde8f7eae810d41f11c56167aab1e077acdd9bca565909c71a40bdba",
+      "publication_sha256": "70271952dde8f7eae810d41f11c56167aab1e077acdd9bca565909c71a40bdba",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/models/EMI_Resilient_Actuator_Phase3.slx",
+      "checkpoint_sha256": "cec60b9aa56210d41370a90b82fff240ff7af20250c941240e05b3c8220ec2e2",
+      "publication_sha256": "cec60b9aa56210d41370a90b82fff240ff7af20250c941240e05b3c8220ec2e2",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/models/README.md",
+      "checkpoint_sha256": "8e4143242f9b6f7d6f1b48e84001c2e5844f8c2655f6b420df9bdb2a9dda140c",
+      "publication_sha256": "8e4143242f9b6f7d6f1b48e84001c2e5844f8c2655f6b420df9bdb2a9dda140c",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/parameters/actuator_parameters.m",
+      "checkpoint_sha256": "1aae0d6c2543d8d1bfe50af11a62b677cdc92c308338a72b2ae13f19d1ff32dc",
+      "publication_sha256": "1aae0d6c2543d8d1bfe50af11a62b677cdc92c308338a72b2ae13f19d1ff32dc",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/phase2_main.m",
+      "checkpoint_sha256": "784888bf83e458217e7ce5e2e2bb3144d61fe7a23228ddaccce6256eb742c1fb",
+      "publication_sha256": "784888bf83e458217e7ce5e2e2bb3144d61fe7a23228ddaccce6256eb742c1fb",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/phase2b_main.m",
+      "checkpoint_sha256": "7e8cff7c22577cda176edbbd2a4f57d479878e4ad0313a885b5af1ec555f7c52",
+      "publication_sha256": "7e8cff7c22577cda176edbbd2a4f57d479878e4ad0313a885b5af1ec555f7c52",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/phase2b_sensitivity_main.m",
+      "checkpoint_sha256": "ccc10c5b2f1cbd73bdc3e519a2747c5b8626f70d0fd8ec5174901970d8e91d5d",
+      "publication_sha256": "ccc10c5b2f1cbd73bdc3e519a2747c5b8626f70d0fd8ec5174901970d8e91d5d",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/phase3_main.m",
+      "checkpoint_sha256": "078fd1eed5253b3ee6956265caad8fb47c94a716871b0551f33f44c0ff495ff1",
+      "publication_sha256": "078fd1eed5253b3ee6956265caad8fb47c94a716871b0551f33f44c0ff495ff1",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/phase3_motion_main.m",
+      "checkpoint_sha256": "eb0b9c5b8d79ba3fe089064e6ed0fb2ada14e1c7bd905dcd3e6b256a3383443f",
+      "publication_sha256": "eb0b9c5b8d79ba3fe089064e6ed0fb2ada14e1c7bd905dcd3e6b256a3383443f",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/phase3_reacquisition_main.m",
+      "checkpoint_sha256": "3d4f9206973be4e063ad01711c8a5f6bf97fed52cf75a8594ddff51276a517b0",
+      "publication_sha256": "3d4f9206973be4e063ad01711c8a5f6bf97fed52cf75a8594ddff51276a517b0",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/phase3_stop_hold_main.m",
+      "checkpoint_sha256": "3d34d0dfec677ac7460fff73e96cece7767f3d190feb3db2126dc554db20ae6e",
+      "publication_sha256": "3d34d0dfec677ac7460fff73e96cece7767f3d190feb3db2126dc554db20ae6e",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/phase3_tuning_main.m",
+      "checkpoint_sha256": "b819fa013c501ec07fc129c7e95b58b03c101f0e1f82ebc981ea3a2b2b391b51",
+      "publication_sha256": "b819fa013c501ec07fc129c7e95b58b03c101f0e1f82ebc981ea3a2b2b391b51",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/audit_fourway_native_acceptance.m",
+      "checkpoint_sha256": "c7d486b06ec439b4e065153963dbf31a663b505cf0534a9a6509b294eff6fded",
+      "publication_sha256": "c7d486b06ec439b4e065153963dbf31a663b505cf0534a9a6509b294eff6fded",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/build_baseline_model.m",
+      "checkpoint_sha256": "23be95a1469470b6b262d0a0bf2ae150b2b9d7d3728ec270b5bd80f8d714788b",
+      "publication_sha256": "23be95a1469470b6b262d0a0bf2ae150b2b9d7d3728ec270b5bd80f8d714788b",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/build_phase2_model.m",
+      "checkpoint_sha256": "fc5e0749be0d6838e6f31ba694e1723191638ab0bd11b722c9b29881f049f8c3",
+      "publication_sha256": "fc5e0749be0d6838e6f31ba694e1723191638ab0bd11b722c9b29881f049f8c3",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/build_phase2b_model.m",
+      "checkpoint_sha256": "dbdceb45266b80235acf682cbb5508285ba2a9e50d48741ff5afb855d693b0d7",
+      "publication_sha256": "dbdceb45266b80235acf682cbb5508285ba2a9e50d48741ff5afb855d693b0d7",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/build_phase3_simulink_model.m",
+      "checkpoint_sha256": "2d06593c7dc4eb78924d321b7c6adf8e5a9a3391a46accd9a680db92c3bf50f2",
+      "publication_sha256": "2d06593c7dc4eb78924d321b7c6adf8e5a9a3391a46accd9a680db92c3bf50f2",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/plot_phase2b_sensitivity.m",
+      "checkpoint_sha256": "ea8e10d186dcdc9b2e0b6fea7635fb0a92b274fadbabfe28fd597b2e412ff378",
+      "publication_sha256": "ea8e10d186dcdc9b2e0b6fea7635fb0a92b274fadbabfe28fd597b2e412ff378",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/plot_phase3_reacquisition_study.m",
+      "checkpoint_sha256": "46773a83e5c293750d5de1bc35f93bc64f7fdfd3540d88048d32bf478e8133f4",
+      "publication_sha256": "46773a83e5c293750d5de1bc35f93bc64f7fdfd3540d88048d32bf478e8133f4",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/plot_phase3_study.m",
+      "checkpoint_sha256": "b8995416ea4ed0b0313de245c163c9d5d46f6105238fa43bf464056bb1e9fe2c",
+      "publication_sha256": "b8995416ea4ed0b0313de245c163c9d5d46f6105238fa43bf464056bb1e9fe2c",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_baseline.m",
+      "checkpoint_sha256": "9a085f8c3d48e101f6be917f3445fdde5d65e8c76fbb2423b5a96b5a1cc6a0d5",
+      "publication_sha256": "9a085f8c3d48e101f6be917f3445fdde5d65e8c76fbb2423b5a96b5a1cc6a0d5",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_communication_edge_study.m",
+      "checkpoint_sha256": "9403774a9e616a0f445abcbde1235c2c42416d7b2f9664fc94c1fc0798d8fbe2",
+      "publication_sha256": "9403774a9e616a0f445abcbde1235c2c42416d7b2f9664fc94c1fc0798d8fbe2",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_fourway_closure.m",
+      "checkpoint_sha256": "b442103154b617448b461f612da92daeeb28809bfe0635ef9135af82452d9ea9",
+      "publication_sha256": "b442103154b617448b461f612da92daeeb28809bfe0635ef9135af82452d9ea9",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_fourway_native_acceptance.m",
+      "checkpoint_sha256": "f342349349be6f5f3a227c47492f8a9e1c49ac44948b3b4574e5ae8e1c5293d0",
+      "publication_sha256": "f342349349be6f5f3a227c47492f8a9e1c49ac44948b3b4574e5ae8e1c5293d0",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_fourway_receiver_tests.m",
+      "checkpoint_sha256": "dd08db2ff2eaee44b2c9489b8e0ceac7a7de57024ea8089cad5526d5c41e9370",
+      "publication_sha256": "dd08db2ff2eaee44b2c9489b8e0ceac7a7de57024ea8089cad5526d5c41e9370",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_fourway_stage.m",
+      "checkpoint_sha256": "1e422c64fa465a3403b4f15b565b4e005ff6520f7c78c3290f0762a43e53175d",
+      "publication_sha256": "1e422c64fa465a3403b4f15b565b4e005ff6520f7c78c3290f0762a43e53175d",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase2_fault_study.m",
+      "checkpoint_sha256": "8d7d17da19727ef93c236981b2f0de2fde478f44dc207cfa372e046ba542015b",
+      "publication_sha256": "8d7d17da19727ef93c236981b2f0de2fde478f44dc207cfa372e046ba542015b",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase2a_evidence_study.m",
+      "checkpoint_sha256": "ff5e129d19d9522c6a98c3dae56da7d791607ffbd0395c74d499f15af134b686",
+      "publication_sha256": "ff5e129d19d9522c6a98c3dae56da7d791607ffbd0395c74d499f15af134b686",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase2b_packet_loss_monte_carlo.m",
+      "checkpoint_sha256": "e7f3a9acced1f15660a7e794080a38b29dcf0b6fe0f98e698315b6a2f8038e81",
+      "publication_sha256": "e7f3a9acced1f15660a7e794080a38b29dcf0b6fe0f98e698315b6a2f8038e81",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase2b_sensitivity_study.m",
+      "checkpoint_sha256": "b33f6dd7473febb1b5a9429ee862369eb2afc7485d3ba278d2d40b7a14934831",
+      "publication_sha256": "b33f6dd7473febb1b5a9429ee862369eb2afc7485d3ba278d2d40b7a14934831",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase2b_study.m",
+      "checkpoint_sha256": "0c1825730020bb1bb836fc96418ba877d93426661a58bd6e7245430a6cfa5504",
+      "publication_sha256": "0c1825730020bb1bb836fc96418ba877d93426661a58bd6e7245430a6cfa5504",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase3_ablation.m",
+      "checkpoint_sha256": "36d31b66696a754ebf18f87651cda53b8aee03621515d459255273f45157f740",
+      "publication_sha256": "36d31b66696a754ebf18f87651cda53b8aee03621515d459255273f45157f740",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase3_motion_study.m",
+      "checkpoint_sha256": "76121f7129fc176ec9e7f56ade56353f2f589978ad34e70935de8b645348492d",
+      "publication_sha256": "76121f7129fc176ec9e7f56ade56353f2f589978ad34e70935de8b645348492d",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase3_reacquisition_study.m",
+      "checkpoint_sha256": "574ec04cc95f0e78829ab955e701233dc68f6d72fbaa54013e0466851f6e7b3b",
+      "publication_sha256": "574ec04cc95f0e78829ab955e701233dc68f6d72fbaa54013e0466851f6e7b3b",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase3_stop_hold_study.m",
+      "checkpoint_sha256": "55d0c23286f2bb8a09a63f96c5c4fdfd3234f256a30e68e4b288a1d60e96ea94",
+      "publication_sha256": "55d0c23286f2bb8a09a63f96c5c4fdfd3234f256a30e68e4b288a1d60e96ea94",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase3_study.m",
+      "checkpoint_sha256": "1afcf0e54d64a2a303365df43378ccbde41ab1b2b8f08eceba4c12d313052c9c",
+      "publication_sha256": "1afcf0e54d64a2a303365df43378ccbde41ab1b2b8f08eceba4c12d313052c9c",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_phase3_tuning_study.m",
+      "checkpoint_sha256": "e3db8a506f6aef6933708c5078638bdbe4e3493831ecd2c31e57acd5baf848cb",
+      "publication_sha256": "e3db8a506f6aef6933708c5078638bdbe4e3493831ecd2c31e57acd5baf848cb",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/run_supply_integration_study.m",
+      "checkpoint_sha256": "916cc25c8ca01e0c41ab15b3012f2db262e984a1d0a401eea5b361cc45783568",
+      "publication_sha256": "916cc25c8ca01e0c41ab15b3012f2db262e984a1d0a401eea5b361cc45783568",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/smoke_test_phase2_model.m",
+      "checkpoint_sha256": "91b396de7dd73ddd95a632ebb382c1a4137b9a8e55c4c07d87b636a8fa21bdcf",
+      "publication_sha256": "91b396de7dd73ddd95a632ebb382c1a4137b9a8e55c4c07d87b636a8fa21bdcf",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/smoke_test_phase2b_model.m",
+      "checkpoint_sha256": "421f458642c322a89824e890581c8d21803904f40c5bbb0bc22e5ecddb4ad252",
+      "publication_sha256": "421f458642c322a89824e890581c8d21803904f40c5bbb0bc22e5ecddb4ad252",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/validate_phase2_simulink.m",
+      "checkpoint_sha256": "97840676edd5772559eeb061b55f4c1f6662b5e7814ba4e56f68aee3c4ce0009",
+      "publication_sha256": "97840676edd5772559eeb061b55f4c1f6662b5e7814ba4e56f68aee3c4ce0009",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/validate_phase2b_sensitivity.m",
+      "checkpoint_sha256": "a27a5afd33f2d8583f569afe8b4c0fcf39b306bb4c5d9155956a7f69acb898c8",
+      "publication_sha256": "a27a5afd33f2d8583f569afe8b4c0fcf39b306bb4c5d9155956a7f69acb898c8",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/validate_phase2b_simulink.m",
+      "checkpoint_sha256": "a506c4d9c52c9073e72bdadfe64e7f013fc5b855e136132310b38fbf39f7c966",
+      "publication_sha256": "a506c4d9c52c9073e72bdadfe64e7f013fc5b855e136132310b38fbf39f7c966",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/validate_phase3_motion_study.m",
+      "checkpoint_sha256": "6e0504b667d44d0edcbc3c9d978f2c9f923ccbfd22ec16d9e662547e99b5f6e1",
+      "publication_sha256": "6e0504b667d44d0edcbc3c9d978f2c9f923ccbfd22ec16d9e662547e99b5f6e1",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/validate_phase3_simulink.m",
+      "checkpoint_sha256": "b02e5e1ed4ba4ae64dc1cdddb8c0b84a7e3924828b621d8525410243951fdd88",
+      "publication_sha256": "b02e5e1ed4ba4ae64dc1cdddb8c0b84a7e3924828b621d8525410243951fdd88",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/validate_phase3_tuning_study.m",
+      "checkpoint_sha256": "8339444ac8bac0d602ceb16705f929783fc54c0c1db9ab474550ef7bbfcf2025",
+      "publication_sha256": "8339444ac8bac0d602ceb16705f929783fc54c0c1db9ab474550ef7bbfcf2025",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/scripts/write_phase2b_sensitivity_summary.m",
+      "checkpoint_sha256": "6868e3a3c9f8e813e2e8f117ad0c9e1a87eba9c4f262e893a0f1670c5ae85566",
+      "publication_sha256": "6868e3a3c9f8e813e2e8f117ad0c9e1a87eba9c4f262e893a0f1670c5ae85566",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/startup_project.m",
+      "checkpoint_sha256": "fd818d22397da607b474dc423fd3c0b5fa9e660bf98d2596352e258bcf80d21f",
+      "publication_sha256": "fd818d22397da607b474dc423fd3c0b5fa9e660bf98d2596352e258bcf80d21f",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestBaseline.m",
+      "checkpoint_sha256": "cff9f4efecdd872364813fc47e97a6d34583047fa9816971b6234b370e465aaa",
+      "publication_sha256": "cff9f4efecdd872364813fc47e97a6d34583047fa9816971b6234b370e465aaa",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestCommunicationEdges.m",
+      "checkpoint_sha256": "0026f78a4f9da65b0484e5eb7fd85aef5220cad8eaf460a900bac862b1f10fde",
+      "publication_sha256": "0026f78a4f9da65b0484e5eb7fd85aef5220cad8eaf460a900bac862b1f10fde",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestFaultInjection.m",
+      "checkpoint_sha256": "5fa98783e7b7f0a622521363c3eb8ee32c2369828045f4f95be3498893cb348a",
+      "publication_sha256": "5fa98783e7b7f0a622521363c3eb8ee32c2369828045f4f95be3498893cb348a",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestFourWayContracts.m",
+      "checkpoint_sha256": "878c57d14e4b1245a0f2158bc96a33ad208570b3fe9413294f391792f1172c9a",
+      "publication_sha256": "878c57d14e4b1245a0f2158bc96a33ad208570b3fe9413294f391792f1172c9a",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestFourWayMetrics.m",
+      "checkpoint_sha256": "70addad11d4d431f8b7af56b7f4ba0fdfd57dd38defe6bab05a17ecf6ac88c3c",
+      "publication_sha256": "70addad11d4d431f8b7af56b7f4ba0fdfd57dd38defe6bab05a17ecf6ac88c3c",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestFourWayNativeEvents.m",
+      "checkpoint_sha256": "4e6b7f8436d94199aa4fbe149c3358313d4bfe88bcf9113a92d782367ac3b961",
+      "publication_sha256": "4e6b7f8436d94199aa4fbe149c3358313d4bfe88bcf9113a92d782367ac3b961",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestFourWayPlantEvents.m",
+      "checkpoint_sha256": "f87548f3fc77da0e6c51e01b6ed13bbfb6ec8add1707869fd1a04690d1600ad5",
+      "publication_sha256": "f87548f3fc77da0e6c51e01b6ed13bbfb6ec8add1707869fd1a04690d1600ad5",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestInputValidation.m",
+      "checkpoint_sha256": "f72c2324ad5f4c21f2c5cdb11093780368b8ca85f9bcd35c3c0efc36ade2fe45",
+      "publication_sha256": "f72c2324ad5f4c21f2c5cdb11093780368b8ca85f9bcd35c3c0efc36ade2fe45",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestOutputPreservation.m",
+      "checkpoint_sha256": "2cfb3b54e2eeb8429b3b8887574d7fe62f4cfc69c81a5c0c858006fd73e53ec2",
+      "publication_sha256": "2cfb3b54e2eeb8429b3b8887574d7fe62f4cfc69c81a5c0c858006fd73e53ec2",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPacketProfileSummary.m",
+      "checkpoint_sha256": "3db311d106bbf9ac58a9dbb7f50c41594cfd1e6bc077da8a5b85c5de9c70e41b",
+      "publication_sha256": "3db311d106bbf9ac58a9dbb7f50c41594cfd1e6bc077da8a5b85c5de9c70e41b",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase2AEvidence.m",
+      "checkpoint_sha256": "53c3eb1d4a1a0cd94b282f7b8d788073b4dfad7a5e5f3ee9c61e74db92bf5a20",
+      "publication_sha256": "53c3eb1d4a1a0cd94b282f7b8d788073b4dfad7a5e5f3ee9c61e74db92bf5a20",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase2B.m",
+      "checkpoint_sha256": "6d28c55357093aa0708db63a956a964b1537a43e059b371dba9292057b891804",
+      "publication_sha256": "6d28c55357093aa0708db63a956a964b1537a43e059b371dba9292057b891804",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3Control.m",
+      "checkpoint_sha256": "9da248e5c1f7ccf67110bee91700acaf24f150a4a3ce88555b38a3fa088c8942",
+      "publication_sha256": "9da248e5c1f7ccf67110bee91700acaf24f150a4a3ce88555b38a3fa088c8942",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3ExternalMeasurement.m",
+      "checkpoint_sha256": "8f3f631ba92381234917d8a920a6ff290cae9bce35b248cecf31ac874ca7c8f0",
+      "publication_sha256": "8f3f631ba92381234917d8a920a6ff290cae9bce35b248cecf31ac874ca7c8f0",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3Integration.m",
+      "checkpoint_sha256": "bbe8ded308aa974fd83eaaef981df39889f905b6e8d8ae25492690d6f3c5442a",
+      "publication_sha256": "bbe8ded308aa974fd83eaaef981df39889f905b6e8d8ae25492690d6f3c5442a",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3Metrics.m",
+      "checkpoint_sha256": "167f83d27bf68ef5b0a897336fb478237b4b8befef979e4d788db3bf31aa0ff3",
+      "publication_sha256": "167f83d27bf68ef5b0a897336fb478237b4b8befef979e4d788db3bf31aa0ff3",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3MotionEnvelope.m",
+      "checkpoint_sha256": "dc9f5e25393f6e419d4353467419c75dc7620f774dbb208905269cb561928a41",
+      "publication_sha256": "dc9f5e25393f6e419d4353467419c75dc7620f774dbb208905269cb561928a41",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3MotionFixtures.m",
+      "checkpoint_sha256": "de083381afe86f30e1c33e2b97549404e2a702b20c2d023625a13e1235b63778",
+      "publication_sha256": "de083381afe86f30e1c33e2b97549404e2a702b20c2d023625a13e1235b63778",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3Observer.m",
+      "checkpoint_sha256": "c09f4744a30c1f7ecd568487c483a76b693176e0546ca00f6ea8337553d02eab",
+      "publication_sha256": "c09f4744a30c1f7ecd568487c483a76b693176e0546ca00f6ea8337553d02eab",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3Reacquisition.m",
+      "checkpoint_sha256": "1e78505e6a7d97991bb1d230c084362d07cd013172e0e848e5d076ee496719bf",
+      "publication_sha256": "1e78505e6a7d97991bb1d230c084362d07cd013172e0e848e5d076ee496719bf",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3ReacquisitionIntegration.m",
+      "checkpoint_sha256": "9da33bc46b6fffe1ae7a7903ebdccf9a46f3af7e3b3682daf83b88667d7f3fe2",
+      "publication_sha256": "9da33bc46b6fffe1ae7a7903ebdccf9a46f3af7e3b3682daf83b88667d7f3fe2",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3ReferenceGovernor.m",
+      "checkpoint_sha256": "5411e8a4c8f0f4eecc237c6a56108a5a0873702646ba48cba0aae34f62618a9d",
+      "publication_sha256": "5411e8a4c8f0f4eecc237c6a56108a5a0873702646ba48cba0aae34f62618a9d",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3Scenario.m",
+      "checkpoint_sha256": "202fb65d3d46a5478efd7c03f0a2d674908a81246f239cbcb421eab17ecd7c04",
+      "publication_sha256": "202fb65d3d46a5478efd7c03f0a2d674908a81246f239cbcb421eab17ecd7c04",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3Simulink.m",
+      "checkpoint_sha256": "10742415050ff0e7a5dfc87c77d950028fb60f5a91272f6a5d310878b6dec0b6",
+      "publication_sha256": "10742415050ff0e7a5dfc87c77d950028fb60f5a91272f6a5d310878b6dec0b6",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3StopHoldFixtures.m",
+      "checkpoint_sha256": "85bfa19d391a18b9366ffa532060af979b9ee99a7651e30680b257cd825d03cd",
+      "publication_sha256": "85bfa19d391a18b9366ffa532060af979b9ee99a7651e30680b257cd825d03cd",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3StopHoldStep.m",
+      "checkpoint_sha256": "7fd1f261be522b522e6a93070cddaaca513d36b7899db9e68bd6e2f4f0e844ef",
+      "publication_sha256": "7fd1f261be522b522e6a93070cddaaca513d36b7899db9e68bd6e2f4f0e844ef",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3Supervisor.m",
+      "checkpoint_sha256": "ae2d051d977866818226a26ade467d53e6d3c9b34c98c32837c0df81b518376c",
+      "publication_sha256": "ae2d051d977866818226a26ade467d53e6d3c9b34c98c32837c0df81b518376c",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3TuningAssessment.m",
+      "checkpoint_sha256": "455b5ff2aea98865d131d7bfc61d81b4e972894dd485418055b42df262cd2dd0",
+      "publication_sha256": "455b5ff2aea98865d131d7bfc61d81b4e972894dd485418055b42df262cd2dd0",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3TuningFixtures.m",
+      "checkpoint_sha256": "0ba35adae5a2427c179e87a8fa2e893c89cbbdc4dfc26b3ef9f5329e354b1a43",
+      "publication_sha256": "0ba35adae5a2427c179e87a8fa2e893c89cbbdc4dfc26b3ef9f5329e354b1a43",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestPhase3TuningTools.m",
+      "checkpoint_sha256": "fbb1a2d1a0180b2d2c36cc33e0a5dba891c5b24bbd82627bceed632cb1e19012",
+      "publication_sha256": "fbb1a2d1a0180b2d2c36cc33e0a5dba891c5b24bbd82627bceed632cb1e19012",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestSensitivityDesign.m",
+      "checkpoint_sha256": "59bdd752a69b3674b057ebe0d664f374bdc312a23acb773b60fae51a269bff70",
+      "publication_sha256": "59bdd752a69b3674b057ebe0d664f374bdc312a23acb773b60fae51a269bff70",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestSensitivityPhysics.m",
+      "checkpoint_sha256": "e8c06f7ac00de78411b94307699be0efa6f3b12aeb7bdd019a30c7d0f829deef",
+      "publication_sha256": "e8c06f7ac00de78411b94307699be0efa6f3b12aeb7bdd019a30c7d0f829deef",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestSimulinkParameters.m",
+      "checkpoint_sha256": "40ab5e9b7d3748e6c82eb274ac056913299940ff2092660d155dfff11beba550",
+      "publication_sha256": "40ab5e9b7d3748e6c82eb274ac056913299940ff2092660d155dfff11beba550",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestSupplyAndLoad.m",
+      "checkpoint_sha256": "61a47f538bc781431a8f5f63680da6d1fd97f0500f26fda73774d7b78915e684",
+      "publication_sha256": "61a47f538bc781431a8f5f63680da6d1fd97f0500f26fda73774d7b78915e684",
+      "byte_identical": true
+    },
+    {
+      "path": "03_MATLAB/tests/TestValidationGates.m",
+      "checkpoint_sha256": "c6d4e1256ca44cf8287e159cfb874c51ee99e574e15837cddeb8499f45a9e007",
+      "publication_sha256": "c6d4e1256ca44cf8287e159cfb874c51ee99e574e15837cddeb8499f45a9e007",
+      "byte_identical": true
+    },
+    {
+      "path": "04_EMI_Models/EMI_Modeling_Plan.md",
+      "checkpoint_sha256": "aba9fde38723c6556171dd216eba67cc3643e545a375d2ee031ae019c98d8ce9",
+      "publication_sha256": "aba9fde38723c6556171dd216eba67cc3643e545a375d2ee031ae019c98d8ce9",
+      "byte_identical": true
+    },
+    {
+      "path": "04_EMI_Models/Four_Way_Causal_Implementation.md",
+      "checkpoint_sha256": "f74cb76b661c991ae722347ef8167ee93e521cd9232ecfabbc30e33a00e8057a",
+      "publication_sha256": "f74cb76b661c991ae722347ef8167ee93e521cd9232ecfabbc30e33a00e8057a",
+      "byte_identical": true
+    },
+    {
+      "path": "04_EMI_Models/Four_Way_EMI_Experiment.md",
+      "checkpoint_sha256": "157daec046c3742b2f78a1071298606789759db04101c0d0a63bc43c3ce5f0be",
+      "publication_sha256": "157daec046c3742b2f78a1071298606789759db04101c0d0a63bc43c3ce5f0be",
+      "byte_identical": true
+    },
+    {
+      "path": "04_EMI_Models/Packet_Summary_Contract.md",
+      "checkpoint_sha256": "a3fb6e0b4b227653a1c07f127facd6e7c5f9bddd501ac2e0e0c037976e669524",
+      "publication_sha256": "a3fb6e0b4b227653a1c07f127facd6e7c5f9bddd501ac2e0e0c037976e669524",
+      "byte_identical": true
+    },
+    {
+      "path": "04_EMI_Models/Parameter_Identification_and_Switching_Case.md",
+      "checkpoint_sha256": "e92b801e114ec34344f848db875ad0a96dfe354171b2c09742213741eefc7040",
+      "publication_sha256": "e92b801e114ec34344f848db875ad0a96dfe354171b2c09742213741eefc7040",
+      "byte_identical": true
+    },
+    {
+      "path": "04_EMI_Models/Phase2B_Coupling_and_Communication_Faults.md",
+      "checkpoint_sha256": "f7bb0c98a9bf6d92d6451b2c0dba2bc80682ccc91e59fc6188f5020d98161ea5",
+      "publication_sha256": "f7bb0c98a9bf6d92d6451b2c0dba2bc80682ccc91e59fc6188f5020d98161ea5",
+      "byte_identical": true
+    },
+    {
+      "path": "04_EMI_Models/Phase2B_Sensitivity_Method.md",
+      "checkpoint_sha256": "432e87ce1e02609e2876f97f32907cddf9a98b72e375ab0bff0663ad0b9189b8",
+      "publication_sha256": "432e87ce1e02609e2876f97f32907cddf9a98b72e375ab0bff0663ad0b9189b8",
+      "byte_identical": true
+    },
+    {
+      "path": "04_EMI_Models/Phase2C_Supply_and_Load.md",
+      "checkpoint_sha256": "dbef8a36ad0dd7d212eeba6d36356a8b5bfd2615650dd97d35daafad19f77709",
+      "publication_sha256": "dbef8a36ad0dd7d212eeba6d36356a8b5bfd2615650dd97d35daafad19f77709",
+      "byte_identical": true
+    },
+    {
+      "path": "04_EMI_Models/Phase2_Encoder_Faults.md",
+      "checkpoint_sha256": "0ae487be1b152c43287eee7e66b096948207361cf711aaf3404d30fe262afd84",
+      "publication_sha256": "0ae487be1b152c43287eee7e66b096948207361cf711aaf3404d30fe262afd84",
+      "byte_identical": true
+    },
+    {
+      "path": "04_EMI_Models/four_way_emi_configuration.json",
+      "checkpoint_sha256": "b18e2107175105c77e520a05ffb3a976ee5a8e8b5a3539b01e17df4a29817782",
+      "publication_sha256": "b18e2107175105c77e520a05ffb3a976ee5a8e8b5a3539b01e17df4a29817782",
+      "byte_identical": true
+    },
+    {
+      "path": "04_EMI_Models/four_way_emi_fixtures.csv",
+      "checkpoint_sha256": "7723eb272faf969c1763e96dabcb12049ba8d810c6d8fe5ce04e23d9c1aec549",
+      "publication_sha256": "7723eb272faf969c1763e96dabcb12049ba8d810c6d8fe5ce04e23d9c1aec549",
+      "byte_identical": true
+    },
+    {
+      "path": "04_EMI_Models/four_way_emi_freeze_manifest.json",
+      "checkpoint_sha256": "78981aec8431fffb36e326f2d58730086338b64e0d2b8d1c2076b83f3ab38600",
+      "publication_sha256": "78981aec8431fffb36e326f2d58730086338b64e0d2b8d1c2076b83f3ab38600",
+      "byte_identical": true
+    },
+    {
+      "path": "05_Control_Algorithms/Control_Strategy.md",
+      "checkpoint_sha256": "89e02f176b020dc0e3ab1050c4ba5e4a1ec0b02b537005ee36de6c0054d51ebb",
+      "publication_sha256": "89e02f176b020dc0e3ab1050c4ba5e4a1ec0b02b537005ee36de6c0054d51ebb",
+      "byte_identical": true
+    },
+    {
+      "path": "05_Control_Algorithms/Phase3_Controller_Tuning.md",
+      "checkpoint_sha256": "c93a3da1cfb8b2f29aae644ea94bb19d91efb61cacd35e949eccf21683959afc",
+      "publication_sha256": "c93a3da1cfb8b2f29aae644ea94bb19d91efb61cacd35e949eccf21683959afc",
+      "byte_identical": true
+    },
+    {
+      "path": "05_Control_Algorithms/Phase3_Detection_and_Supervision.md",
+      "checkpoint_sha256": "c1b1627bfdf21264b2f4b8405ad381fa3922e8650d4d61cfc6afaf258d5b405a",
+      "publication_sha256": "c1b1627bfdf21264b2f4b8405ad381fa3922e8650d4d61cfc6afaf258d5b405a",
+      "byte_identical": true
+    },
+    {
+      "path": "05_Control_Algorithms/Phase3_Independent_Reference_Recovery.md",
+      "checkpoint_sha256": "18e684f93075c128279586ad23b1f8049b8e7c0f60c7ef8a7c1d7d927c2cc3c9",
+      "publication_sha256": "18e684f93075c128279586ad23b1f8049b8e7c0f60c7ef8a7c1d7d927c2cc3c9",
+      "byte_identical": true
+    },
+    {
+      "path": "05_Control_Algorithms/Phase3_Motion_Envelope.md",
+      "checkpoint_sha256": "302bed2d0f3a63ad838bdf406fff3296a96b982fa834f759b2233f91e96bc71e",
+      "publication_sha256": "302bed2d0f3a63ad838bdf406fff3296a96b982fa834f759b2233f91e96bc71e",
+      "byte_identical": true
+    },
+    {
+      "path": "05_Control_Algorithms/Phase3_Stop_Hold.md",
+      "checkpoint_sha256": "f091f4a0b32133365f284faae4e1be6ab4799750e6338449856a781c61f66ff2",
+      "publication_sha256": "f091f4a0b32133365f284faae4e1be6ab4799750e6338449856a781c61f66ff2",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/FOUR_WAY/README.md",
+      "checkpoint_sha256": "17dd656ef72da56255de5aa1595a79bad5a8badd92f66e1cdd89d459601b8854",
+      "publication_sha256": "17dd656ef72da56255de5aa1595a79bad5a8badd92f66e1cdd89d459601b8854",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/FOUR_WAY/functions/fourway_exact_mex.cpp",
+      "checkpoint_sha256": "cc1fdc1322a4115776d8a59453f35d2980f37e19c58a3e797a0f95712432dbd6",
+      "publication_sha256": "cc1fdc1322a4115776d8a59453f35d2980f37e19c58a3e797a0f95712432dbd6",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/FOUR_WAY/scripts/audit_exported_records.py",
+      "checkpoint_sha256": "e85ef62e4d538ffee701ae284f8a92b4bc2b9c6d706a8e7d680284c95ef04687",
+      "publication_sha256": "e85ef62e4d538ffee701ae284f8a92b4bc2b9c6d706a8e7d680284c95ef04687",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/FOUR_WAY/tests/TestFourwayReceiver.m",
+      "checkpoint_sha256": "07b5fb6fcc529047bfeee506ba4bd3451122b8ee02502ef89fd722e16c01e651",
+      "publication_sha256": "07b5fb6fcc529047bfeee506ba4bd3451122b8ee02502ef89fd722e16c01e651",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/README.md",
+      "checkpoint_sha256": "847aad71832c2d405a6b74764643612a481e10ee9ecc51fe755303beff08b08d",
+      "publication_sha256": "847aad71832c2d405a6b74764643612a481e10ee9ecc51fe755303beff08b08d",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/Circuit_Physics_and_Verification.md",
+      "checkpoint_sha256": "37724628a2cbb4f9798a1dad79c7c455498ea031ff5c0b30cf1bf20dc6974d02",
+      "publication_sha256": "37724628a2cbb4f9798a1dad79c7c455498ea031ff5c0b30cf1bf20dc6974d02",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/README.md",
+      "checkpoint_sha256": "0aaefda37d57b42900fd1d3cd4160c1e93612615d1303f24fa44064a7cf5ec18",
+      "publication_sha256": "0aaefda37d57b42900fd1d3cd4160c1e93612615d1303f24fa44064a7cf5ec18",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_baseline.m",
+      "checkpoint_sha256": "c5e813cad366e79b7381a924c454cabe15400617efe023efa4126f94dbed683c",
+      "publication_sha256": "c5e813cad366e79b7381a924c454cabe15400617efe023efa4126f94dbed683c",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_case.m",
+      "checkpoint_sha256": "9c5102307e1bb20afba5a382cda821e23d5dfc5b2f8a3d03e729cd98304b9c92",
+      "publication_sha256": "9c5102307e1bb20afba5a382cda821e23d5dfc5b2f8a3d03e729cd98304b9c92",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_compare_refinement.m",
+      "checkpoint_sha256": "35073985fb685d96b280772927f35b724a20b51bb35c15dface8836eb36abeca",
+      "publication_sha256": "35073985fb685d96b280772927f35b724a20b51bb35c15dface8836eb36abeca",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_metrics.m",
+      "checkpoint_sha256": "097982bc5edacdf7c7458cb573a3e3fd7b47b9dcfcd10752c6563b7e53174c51",
+      "publication_sha256": "097982bc5edacdf7c7458cb573a3e3fd7b47b9dcfcd10752c6563b7e53174c51",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_parameters.m",
+      "checkpoint_sha256": "2e31367987576c6e2df2ad8c1c1ebd5410539cebf00cd23b65bb67b26e35af6b",
+      "publication_sha256": "2e31367987576c6e2df2ad8c1c1ebd5410539cebf00cd23b65bb67b26e35af6b",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_prepare_output_folder.m",
+      "checkpoint_sha256": "2cfe4997388a10eda5f9573f81c1fc2ea77c99820fc12e07212436c41fc3243a",
+      "publication_sha256": "2cfe4997388a10eda5f9573f81c1fc2ea77c99820fc12e07212436c41fc3243a",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_reference.m",
+      "checkpoint_sha256": "954d4d07a680a4a9bc35ef55c12207922ad749718e757cc1f0ea43ba8262cf00",
+      "publication_sha256": "954d4d07a680a4a9bc35ef55c12207922ad749718e757cc1f0ea43ba8262cf00",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_simscape_signals.m",
+      "checkpoint_sha256": "6453a2729a25800c73cad48487ffb6c34e4a33fa028299dd38eed96684d47934",
+      "publication_sha256": "6453a2729a25800c73cad48487ffb6c34e4a33fa028299dd38eed96684d47934",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_state_space.m",
+      "checkpoint_sha256": "97c61a488c103478072c65ab2adba4404b1ff825bb874c7640678b80b3c5c8e2",
+      "publication_sha256": "97c61a488c103478072c65ab2adba4404b1ff825bb874c7640678b80b3c5c8e2",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_stimulus.m",
+      "checkpoint_sha256": "717ce922f10e28131c4d5ea4ac32c9592134f8bc19fcca43191385227f90737b",
+      "publication_sha256": "717ce922f10e28131c4d5ea4ac32c9592134f8bc19fcca43191385227f90737b",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_threshold_events.m",
+      "checkpoint_sha256": "bc984703e9826cf666ac12f200ab4f09a3731455dfe1142751e3f7ac444def02",
+      "publication_sha256": "bc984703e9826cf666ac12f200ab4f09a3731455dfe1142751e3f7ac444def02",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_write_manifest.m",
+      "checkpoint_sha256": "335010d73f608f3edecf45e05e28c3a647980ecb37fbd49efe055682e81260cb",
+      "publication_sha256": "335010d73f608f3edecf45e05e28c3a647980ecb37fbd49efe055682e81260cb",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/simulate_sc01a_simscape.m",
+      "checkpoint_sha256": "dae97b72f5ec3b53694cd770acdca51cb5c877704d5095c18a4314f5b63339fe",
+      "publication_sha256": "dae97b72f5ec3b53694cd770acdca51cb5c877704d5095c18a4314f5b63339fe",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/models/EMI_SC01A_Finite_Edge.png",
+      "checkpoint_sha256": "0a57d7d80a5de80e148b654eb149847546f3127ed5b09995d4628ccaa53faeff",
+      "publication_sha256": "0a57d7d80a5de80e148b654eb149847546f3127ed5b09995d4628ccaa53faeff",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/models/EMI_SC01A_Finite_Edge.slx",
+      "checkpoint_sha256": "223a0e2808cd45ba22fcd2e765adfeba3ee9b0b112d1693ff43356d47caa85e6",
+      "publication_sha256": "223a0e2808cd45ba22fcd2e765adfeba3ee9b0b112d1693ff43356d47caa85e6",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/sc01a_main.m",
+      "checkpoint_sha256": "683951f24bad9c7efcad44d676d5b1d89dca6b6c2a8535d90029c73b9dec2568",
+      "publication_sha256": "683951f24bad9c7efcad44d676d5b1d89dca6b6c2a8535d90029c73b9dec2568",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/sc01a_startup.m",
+      "checkpoint_sha256": "3040b09593bdba147b457abd987b4674b767d261bb2c6d1f33418ea5af4a10eb",
+      "publication_sha256": "3040b09593bdba147b457abd987b4674b767d261bb2c6d1f33418ea5af4a10eb",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/scripts/build_sc01a_model.m",
+      "checkpoint_sha256": "bba0603d23b14bac41c5f9f73b03743226f84f627277b947eb0a78bf8f9d0db8",
+      "publication_sha256": "bba0603d23b14bac41c5f9f73b03743226f84f627277b947eb0a78bf8f9d0db8",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/scripts/plot_sc01a.m",
+      "checkpoint_sha256": "2bf40f5c5766a982817790114a71f38ada4dccbcc4f17064f2940ae64c857cdf",
+      "publication_sha256": "2bf40f5c5766a982817790114a71f38ada4dccbcc4f17064f2940ae64c857cdf",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/scripts/plot_sc01a_refinement.m",
+      "checkpoint_sha256": "352dbb88fcaafefa32ea2d09ac9d67be405255f9355a806616d6f4de168bce9b",
+      "publication_sha256": "352dbb88fcaafefa32ea2d09ac9d67be405255f9355a806616d6f4de168bce9b",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/scripts/run_sc01a.m",
+      "checkpoint_sha256": "122fc4533e7be1f53b7c93e35bb3b3b4c1967bad1a78ef811193f45e859546ac",
+      "publication_sha256": "122fc4533e7be1f53b7c93e35bb3b3b4c1967bad1a78ef811193f45e859546ac",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/scripts/write_sc01a_summary.m",
+      "checkpoint_sha256": "9fa100adc0fbdf911f0b6b043063d6c9ad4526b4bf2af457cfd2ea785d222dc7",
+      "publication_sha256": "9fa100adc0fbdf911f0b6b043063d6c9ad4526b4bf2af457cfd2ea785d222dc7",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/tests/TestSC01AReference.m",
+      "checkpoint_sha256": "74eae64cae4f5a1df0f0a0038e06f2210c27ccf8eea8db7956197e9974183cf7",
+      "publication_sha256": "74eae64cae4f5a1df0f0a0038e06f2210c27ccf8eea8db7956197e9974183cf7",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/tests/TestSC01AThresholds.m",
+      "checkpoint_sha256": "cb7f4cb154329314f4f9897d92387952b99f30a1e944882eae928953af77c52f",
+      "publication_sha256": "cb7f4cb154329314f4f9897d92387952b99f30a1e944882eae928953af77c52f",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/Device_Source_and_Assumptions.md",
+      "checkpoint_sha256": "13c7a1f903a4a8fbdbb70ff89996bacdd40c1cba964625629850e051613e63e4",
+      "publication_sha256": "13c7a1f903a4a8fbdbb70ff89996bacdd40c1cba964625629850e051613e63e4",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/README.md",
+      "checkpoint_sha256": "608b60c0934bb85cce4366465cbf65d97720eb59c8cbc36c57cb00dbbdd57457",
+      "publication_sha256": "608b60c0934bb85cce4366465cbf65d97720eb59c8cbc36c57cb00dbbdd57457",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/functions/sc01b_case.m",
+      "checkpoint_sha256": "44342ca8c395495bec81ba87008681857f3bba0126755971f64b26f8ffe21507",
+      "publication_sha256": "44342ca8c395495bec81ba87008681857f3bba0126755971f64b26f8ffe21507",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/functions/sc01b_compare.m",
+      "checkpoint_sha256": "ed766095691bec056052a1b7511731a4f7697c76af6067feb36f1a2eb9601a45",
+      "publication_sha256": "ed766095691bec056052a1b7511731a4f7697c76af6067feb36f1a2eb9601a45",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/functions/sc01b_criteria.m",
+      "checkpoint_sha256": "e28f7c4fd9eee0631161c7270ed8ce5627a742e99960fbbd61fda199720fa1be",
+      "publication_sha256": "e28f7c4fd9eee0631161c7270ed8ce5627a742e99960fbbd61fda199720fa1be",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/functions/sc01b_energy_balance.m",
+      "checkpoint_sha256": "66edf571fb2ac8c9a835f2e964cea9dc6c59da63493e9181d85b9ab20eb193c9",
+      "publication_sha256": "66edf571fb2ac8c9a835f2e964cea9dc6c59da63493e9181d85b9ab20eb193c9",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/functions/sc01b_export_trace.m",
+      "checkpoint_sha256": "00a2a6674719c0e8cfe7cb0631e692ea42faa8ffc201d36398a2a153d57aa3e5",
+      "publication_sha256": "00a2a6674719c0e8cfe7cb0631e692ea42faa8ffc201d36398a2a153d57aa3e5",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/functions/sc01b_finalize.m",
+      "checkpoint_sha256": "20895252fa0e12df58d400af01db1e7eadb1833c59445b7c82e188eda6b09fdc",
+      "publication_sha256": "20895252fa0e12df58d400af01db1e7eadb1833c59445b7c82e188eda6b09fdc",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/functions/sc01b_gate_signals.m",
+      "checkpoint_sha256": "a723f0e975fb57cc01e34a69d55ba7a77e0764fca00c0afc82023614356dc453",
+      "publication_sha256": "a723f0e975fb57cc01e34a69d55ba7a77e0764fca00c0afc82023614356dc453",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/functions/sc01b_local_solver_settings.m",
+      "checkpoint_sha256": "84ab12a22420052e6d03c2f573ad670b1dc0dd1c3b2420da922ebff5c3beef5e",
+      "publication_sha256": "84ab12a22420052e6d03c2f573ad670b1dc0dd1c3b2420da922ebff5c3beef5e",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/functions/sc01b_metrics.m",
+      "checkpoint_sha256": "1158be85f762f4d84238da95a4202c7d1afce7c26b68cc667c96aef7090d7869",
+      "publication_sha256": "1158be85f762f4d84238da95a4202c7d1afce7c26b68cc667c96aef7090d7869",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/functions/sc01b_native_cache_key.m",
+      "checkpoint_sha256": "716611625bc5a0c1a4331ca9bda5b5c3d51a98a4ed1258dfd10b132e77ac911e",
+      "publication_sha256": "716611625bc5a0c1a4331ca9bda5b5c3d51a98a4ed1258dfd10b132e77ac911e",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/functions/sc01b_native_run.m",
+      "checkpoint_sha256": "12633fa92707ca30d50a4a85abface3afc9888c80da3ff3a052eb1a660ccc0ed",
+      "publication_sha256": "12633fa92707ca30d50a4a85abface3afc9888c80da3ff3a052eb1a660ccc0ed",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/functions/sc01b_output_folder.m",
+      "checkpoint_sha256": "84090b89c3ffbf0f836fd72315521b5bc5a8614efac71e7849e3af86c89678f4",
+      "publication_sha256": "84090b89c3ffbf0f836fd72315521b5bc5a8614efac71e7849e3af86c89678f4",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/functions/sc01b_parameters.m",
+      "checkpoint_sha256": "4e415589d6128f07682238f57428a43b74f5399b244ef5c749d4952076751580",
+      "publication_sha256": "4e415589d6128f07682238f57428a43b74f5399b244ef5c749d4952076751580",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/functions/simulate_sc01b_ngspice.m",
+      "checkpoint_sha256": "f30669cb16f82efe8501135de9e1e14d4e0eba1179c6ca696fc7befc23228871",
+      "publication_sha256": "f30669cb16f82efe8501135de9e1e14d4e0eba1179c6ca696fc7befc23228871",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/functions/simulate_sc01b_simscape.m",
+      "checkpoint_sha256": "516ff446abd70aea537f5bd88399eb9859078a95ef355fc68ab785ff522821da",
+      "publication_sha256": "516ff446abd70aea537f5bd88399eb9859078a95ef355fc68ab785ff522821da",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/models/EMI_SC01B_Device_Halfbridge.png",
+      "checkpoint_sha256": "9dcfff5217a99e7057c26153cb37b6faf9ffc8b00012caf95d07a53cc5af6000",
+      "publication_sha256": "9dcfff5217a99e7057c26153cb37b6faf9ffc8b00012caf95d07a53cc5af6000",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/models/EMI_SC01B_Device_Halfbridge.slx",
+      "checkpoint_sha256": "fe221ef926c7392fb3479fe33adaa26312c768e74227cb5cab062560c84154ad",
+      "publication_sha256": "fe221ef926c7392fb3479fe33adaa26312c768e74227cb5cab062560c84154ad",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/references/Infineon_IAUC100N04S6L014_datasheet.pdf",
+      "checkpoint_sha256": "04e6964841a2e4592f49e316f4a5e4262433b93534f1a596e0ab737d7415f61c",
+      "publication_sha256": "04e6964841a2e4592f49e316f4a5e4262433b93534f1a596e0ab737d7415f61c",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/references/Source_Manifest.json",
+      "checkpoint_sha256": "0d2a6603261a96cbadba7b625add74b8a2cab1a6c8447cf37d280efd72c910a7",
+      "publication_sha256": "0d2a6603261a96cbadba7b625add74b8a2cab1a6c8447cf37d280efd72c910a7",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/references/TI_UCC27211A_datasheet_RevD.pdf",
+      "checkpoint_sha256": "bd99060dc431a59bd94529889a7d4f1dbabb9eba6d8e47b5c5a07976fbec7bde",
+      "publication_sha256": "bd99060dc431a59bd94529889a7d4f1dbabb9eba6d8e47b5c5a07976fbec7bde",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/sc01b_startup.m",
+      "checkpoint_sha256": "b82612e1431b89b8196dcd3436cc6e59870ee2a0268502e00e014730c9155ee4",
+      "publication_sha256": "b82612e1431b89b8196dcd3436cc6e59870ee2a0268502e00e014730c9155ee4",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/scripts/audit_sc01b_exports.py",
+      "checkpoint_sha256": "cad500d674a249566784135a4d997c24969bf403648d374c8bac140bc00f444a",
+      "publication_sha256": "cad500d674a249566784135a4d997c24969bf403648d374c8bac140bc00f444a",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/scripts/build_sc01b_model.m",
+      "checkpoint_sha256": "e61943a6088b57a2b22a84b54cf0a20e2e8d9963f2bbeba739c3ff8c36fa106c",
+      "publication_sha256": "e61943a6088b57a2b22a84b54cf0a20e2e8d9963f2bbeba739c3ff8c36fa106c",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/scripts/sc01b_collect_workers.m",
+      "checkpoint_sha256": "595c6ddd4792fe941beac50b30d3d0537e9bed14d243930eee94044af7ca184f",
+      "publication_sha256": "595c6ddd4792fe941beac50b30d3d0537e9bed14d243930eee94044af7ca184f",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/scripts/sc01b_main.m",
+      "checkpoint_sha256": "d503d74af9ff81a8347fa8719513c52816918f0788f8b6da48e32611645b259a",
+      "publication_sha256": "d503d74af9ff81a8347fa8719513c52816918f0788f8b6da48e32611645b259a",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/scripts/sc01b_make_report.m",
+      "checkpoint_sha256": "98ca961918716a4ca8f20772d511f0245e2df8fff6ece22e37187ff6b25f977f",
+      "publication_sha256": "98ca961918716a4ca8f20772d511f0245e2df8fff6ece22e37187ff6b25f977f",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tests/TestSC01BEnergy.m",
+      "checkpoint_sha256": "060d53133f044f964f2061963afe61c3d3004322724e5f05e3b67cf49fe8d50d",
+      "publication_sha256": "060d53133f044f964f2061963afe61c3d3004322724e5f05e3b67cf49fe8d50d",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tests/TestSC01BMetrics.m",
+      "checkpoint_sha256": "1a9d9982632370d201e9ba2c9110f2ce3eccebf085cb4ca334e9b6e0ca7cc8bf",
+      "publication_sha256": "1a9d9982632370d201e9ba2c9110f2ce3eccebf085cb4ca334e9b6e0ca7cc8bf",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/tests/TestSC01BOutputPreservation.m",
+      "checkpoint_sha256": "3f14cb15b9558f0d9882458627752862a2c02396f5553d66668296bd56ef1c26",
+      "publication_sha256": "3f14cb15b9558f0d9882458627752862a2c02396f5553d66668296bd56ef1c26",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/+sc01b_driver/split_resistor.ssc",
+      "checkpoint_sha256": "d966f9fb4ff060f97b690f06997418b6a7bbaed213ef26d672d0bc3e5bbccb30",
+      "publication_sha256": "d966f9fb4ff060f97b690f06997418b6a7bbaed213ef26d672d0bc3e5bbccb30",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/Device_Source_and_Assumptions.md",
+      "checkpoint_sha256": "2159f4658517b5aa39b5331c93c5a71b89e2526c231858fdb389dcb5165beebe",
+      "publication_sha256": "2159f4658517b5aa39b5331c93c5a71b89e2526c231858fdb389dcb5165beebe",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/README.md",
+      "checkpoint_sha256": "f0f43794f36bb455baf2fc075a9a1170dd6983cd356827362a3ba4339bb37f5b",
+      "publication_sha256": "f0f43794f36bb455baf2fc075a9a1170dd6983cd356827362a3ba4339bb37f5b",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_campaign_acceptance.m",
+      "checkpoint_sha256": "0a5d18a2c0feccf5590e66ea72f6d2cfefb1986dd7973009e965fdfb79baf7d1",
+      "publication_sha256": "0a5d18a2c0feccf5590e66ea72f6d2cfefb1986dd7973009e965fdfb79baf7d1",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_case.m",
+      "checkpoint_sha256": "44342ca8c395495bec81ba87008681857f3bba0126755971f64b26f8ffe21507",
+      "publication_sha256": "44342ca8c395495bec81ba87008681857f3bba0126755971f64b26f8ffe21507",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_compare.m",
+      "checkpoint_sha256": "ed766095691bec056052a1b7511731a4f7697c76af6067feb36f1a2eb9601a45",
+      "publication_sha256": "ed766095691bec056052a1b7511731a4f7697c76af6067feb36f1a2eb9601a45",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_criteria.m",
+      "checkpoint_sha256": "f48e8fea32157bb4c1d68e6d749d14840caa4f8da54e9b39917f95412db2abab",
+      "publication_sha256": "f48e8fea32157bb4c1d68e6d749d14840caa4f8da54e9b39917f95412db2abab",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_energy_balance.m",
+      "checkpoint_sha256": "6fc593388fb563d316fea5645a9bd9b7ea2d98e2e7d04e0e54847c2bd50695e5",
+      "publication_sha256": "6fc593388fb563d316fea5645a9bd9b7ea2d98e2e7d04e0e54847c2bd50695e5",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_export_trace.m",
+      "checkpoint_sha256": "00a2a6674719c0e8cfe7cb0631e692ea42faa8ffc201d36398a2a153d57aa3e5",
+      "publication_sha256": "00a2a6674719c0e8cfe7cb0631e692ea42faa8ffc201d36398a2a153d57aa3e5",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_finalize.m",
+      "checkpoint_sha256": "02281f8b872d69cad9a56a6a2dfcaf442e911c9673f42c00dd71428145bf0d88",
+      "publication_sha256": "02281f8b872d69cad9a56a6a2dfcaf442e911c9673f42c00dd71428145bf0d88",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_gate_signals.m",
+      "checkpoint_sha256": "0f48498074870d8f192424c8271d3867a01607f6359dd6231a04403e1a8ec83e",
+      "publication_sha256": "0f48498074870d8f192424c8271d3867a01607f6359dd6231a04403e1a8ec83e",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_local_solver_settings.m",
+      "checkpoint_sha256": "84ab12a22420052e6d03c2f573ad670b1dc0dd1c3b2420da922ebff5c3beef5e",
+      "publication_sha256": "84ab12a22420052e6d03c2f573ad670b1dc0dd1c3b2420da922ebff5c3beef5e",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_metrics.m",
+      "checkpoint_sha256": "1158be85f762f4d84238da95a4202c7d1afce7c26b68cc667c96aef7090d7869",
+      "publication_sha256": "1158be85f762f4d84238da95a4202c7d1afce7c26b68cc667c96aef7090d7869",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_native_cache_key.m",
+      "checkpoint_sha256": "b5e571e96ef953f9f920045fd5876d3d250d37682b65a4cd1dd66b6f2a0cbb45",
+      "publication_sha256": "b5e571e96ef953f9f920045fd5876d3d250d37682b65a4cd1dd66b6f2a0cbb45",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_native_run.m",
+      "checkpoint_sha256": "12633fa92707ca30d50a4a85abface3afc9888c80da3ff3a052eb1a660ccc0ed",
+      "publication_sha256": "12633fa92707ca30d50a4a85abface3afc9888c80da3ff3a052eb1a660ccc0ed",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_parameters.m",
+      "checkpoint_sha256": "cc8d7806cb936101969d8abd08af76411b946353e4ae2d944d80c111c75ecfbd",
+      "publication_sha256": "cc8d7806cb936101969d8abd08af76411b946353e4ae2d944d80c111c75ecfbd",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_spice_normalize_parameters.m",
+      "checkpoint_sha256": "f0c1f7241ce6bbf4612c181364bc5caad59c9437122a28901f242f9b4f4aa807",
+      "publication_sha256": "f0c1f7241ce6bbf4612c181364bc5caad59c9437122a28901f242f9b4f4aa807",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_spice_pwl_expression.m",
+      "checkpoint_sha256": "2d8551209e1b0e3c8f9255ae94c4d81cdf90e80bcbdb84354f1e595b0f924c2a",
+      "publication_sha256": "2d8551209e1b0e3c8f9255ae94c4d81cdf90e80bcbdb84354f1e595b0f924c2a",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_spice_run.m",
+      "checkpoint_sha256": "4951b3cb790303b2033d704f38b70216ecefe2b252c15834820a0acf592a10b4",
+      "publication_sha256": "4951b3cb790303b2033d704f38b70216ecefe2b252c15834820a0acf592a10b4",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_spice_source_identity.m",
+      "checkpoint_sha256": "313fab6dd4db586705100adfff08d5a3fefa374253f900f44b36e21ea7104c29",
+      "publication_sha256": "313fab6dd4db586705100adfff08d5a3fefa374253f900f44b36e21ea7104c29",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_validate_native_record.m",
+      "checkpoint_sha256": "ff4d0aa25a5fbbb2f60370686202b53f1028e296a62cf5d75251b07f9f7bf39f",
+      "publication_sha256": "ff4d0aa25a5fbbb2f60370686202b53f1028e296a62cf5d75251b07f9f7bf39f",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/sc01b_validate_spice_record.m",
+      "checkpoint_sha256": "629b0a8d911bf514a0a279c34920a0d0f83199ec16fe7c7a4d78b282667103fa",
+      "publication_sha256": "629b0a8d911bf514a0a279c34920a0d0f83199ec16fe7c7a4d78b282667103fa",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/simulate_sc01b_ngspice.m",
+      "checkpoint_sha256": "b26da8ef7470dc3048215492d2172ed84429fac475e7ed6a0048a965fdc09598",
+      "publication_sha256": "b26da8ef7470dc3048215492d2172ed84429fac475e7ed6a0048a965fdc09598",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/functions/simulate_sc01b_simscape.m",
+      "checkpoint_sha256": "b3ed86023946da4ce8564ab308edd87fead0632a30bfb1629d89a6e1e9dba374",
+      "publication_sha256": "b3ed86023946da4ce8564ab308edd87fead0632a30bfb1629d89a6e1e9dba374",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/models/EMI_SC01B_R2_Halfbridge.png",
+      "checkpoint_sha256": "e4725c7b5b772a5ff3533763765a4f7e6034992b68410de715b7b45749dbf4f0",
+      "publication_sha256": "e4725c7b5b772a5ff3533763765a4f7e6034992b68410de715b7b45749dbf4f0",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/models/EMI_SC01B_R2_Halfbridge.slx",
+      "checkpoint_sha256": "d968677568e6cb0bb74f38e07c9a1e030ac3de39936a822eeed5e83167e6ec4a",
+      "publication_sha256": "d968677568e6cb0bb74f38e07c9a1e030ac3de39936a822eeed5e83167e6ec4a",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/references/Infineon_IAUC100N04S6L014_datasheet.pdf",
+      "checkpoint_sha256": "04e6964841a2e4592f49e316f4a5e4262433b93534f1a596e0ab737d7415f61c",
+      "publication_sha256": "04e6964841a2e4592f49e316f4a5e4262433b93534f1a596e0ab737d7415f61c",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/references/Revision2_Native_Source.json",
+      "checkpoint_sha256": "a5ad0014ff0b906c579dc8296e17d08b3e152474e3e1f8d805670272ff0d6b2e",
+      "publication_sha256": "a5ad0014ff0b906c579dc8296e17d08b3e152474e3e1f8d805670272ff0d6b2e",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/references/SC01B_Baseline_Summary.json",
+      "checkpoint_sha256": "74ff0455afb970bab6086aa43f98c9a05b9592c75f689194ff5febb3ecd6c763",
+      "publication_sha256": "74ff0455afb970bab6086aa43f98c9a05b9592c75f689194ff5febb3ecd6c763",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/references/Source_Manifest.json",
+      "checkpoint_sha256": "0d2a6603261a96cbadba7b625add74b8a2cab1a6c8447cf37d280efd72c910a7",
+      "publication_sha256": "0d2a6603261a96cbadba7b625add74b8a2cab1a6c8447cf37d280efd72c910a7",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/references/TI_UCC27211A_datasheet_RevD.pdf",
+      "checkpoint_sha256": "bd99060dc431a59bd94529889a7d4f1dbabb9eba6d8e47b5c5a07976fbec7bde",
+      "publication_sha256": "bd99060dc431a59bd94529889a7d4f1dbabb9eba6d8e47b5c5a07976fbec7bde",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/sc01b_driver_lib.slx",
+      "checkpoint_sha256": "ba4e3f544df578b656cf813ea76bd67603e298df270a4ea0526b9a5cb4ff2d51",
+      "publication_sha256": "ba4e3f544df578b656cf813ea76bd67603e298df270a4ea0526b9a5cb4ff2d51",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/sc01b_startup.m",
+      "checkpoint_sha256": "b82612e1431b89b8196dcd3436cc6e59870ee2a0268502e00e014730c9155ee4",
+      "publication_sha256": "b82612e1431b89b8196dcd3436cc6e59870ee2a0268502e00e014730c9155ee4",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/scripts/audit_sc01b_exports.py",
+      "checkpoint_sha256": "0778ad33f90cc0b50a2950afb4c77b5db4cc76e0b346b236dee0ba55e9cabcc2",
+      "publication_sha256": "0778ad33f90cc0b50a2950afb4c77b5db4cc76e0b346b236dee0ba55e9cabcc2",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/scripts/build_sc01b_model.m",
+      "checkpoint_sha256": "d47fe2be989ed6e24dd99ec9513fe0e948f7ba5d30f6dfc087ba09f2e23fb285",
+      "publication_sha256": "d47fe2be989ed6e24dd99ec9513fe0e948f7ba5d30f6dfc087ba09f2e23fb285",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/scripts/sc01b_collect_workers.m",
+      "checkpoint_sha256": "3845382c7902f7d870ba726f557e45b5770093c9577e862a221726bb12c03461",
+      "publication_sha256": "3845382c7902f7d870ba726f557e45b5770093c9577e862a221726bb12c03461",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/scripts/sc01b_main.m",
+      "checkpoint_sha256": "a10abc4fb393d4c07d51e5d8708a1633036f928134f050259df2873c29c8eb69",
+      "publication_sha256": "a10abc4fb393d4c07d51e5d8708a1633036f928134f050259df2873c29c8eb69",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/scripts/sc01b_make_report.m",
+      "checkpoint_sha256": "85a5bd3a7064abb1527f31dab464b140e35e2517280257392d15adc4490f48da",
+      "publication_sha256": "85a5bd3a7064abb1527f31dab464b140e35e2517280257392d15adc4490f48da",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tests/TestSC01BEnergy.m",
+      "checkpoint_sha256": "060d53133f044f964f2061963afe61c3d3004322724e5f05e3b67cf49fe8d50d",
+      "publication_sha256": "060d53133f044f964f2061963afe61c3d3004322724e5f05e3b67cf49fe8d50d",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tests/TestSC01BMetrics.m",
+      "checkpoint_sha256": "1a9d9982632370d201e9ba2c9110f2ce3eccebf085cb4ca334e9b6e0ca7cc8bf",
+      "publication_sha256": "1a9d9982632370d201e9ba2c9110f2ce3eccebf085cb4ca334e9b6e0ca7cc8bf",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tests/TestSC01BNativeRecord.m",
+      "checkpoint_sha256": "10f2925b4250400cd8fb2321a00322babb155bdf8c75d5e9964dee833b46d45f",
+      "publication_sha256": "10f2925b4250400cd8fb2321a00322babb155bdf8c75d5e9964dee833b46d45f",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tests/TestSC01BRevisedDriver.m",
+      "checkpoint_sha256": "3b58d3efe4242250c0c947881edc7529f2bdaf55dd10116942c47a1bbf14ad56",
+      "publication_sha256": "3b58d3efe4242250c0c947881edc7529f2bdaf55dd10116942c47a1bbf14ad56",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tests/TestSC01BRevisionAcceptance.m",
+      "checkpoint_sha256": "29a4a6102e228bf8d29ed7478311a4dd3f28434c2c4d83a4e95df8ece3dad1a1",
+      "publication_sha256": "29a4a6102e228bf8d29ed7478311a4dd3f28434c2c4d83a4e95df8ece3dad1a1",
+      "byte_identical": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/tests/test_audit_sc01b_exports.py",
+      "checkpoint_sha256": "ebe41ed1de0070116d84713d2e391b1d65623114d499be68a88f881f13d1e6e4",
+      "publication_sha256": "ebe41ed1de0070116d84713d2e391b1d65623114d499be68a88f881f13d1e6e4",
+      "byte_identical": true
+    },
+    {
+      "path": "07_Data/Data_Dictionary.md",
+      "checkpoint_sha256": "9f54277f76a1141f1f8b4b887d03ed75cc16c011b86ec5d7a59301b3a9d818ce",
+      "publication_sha256": "9f54277f76a1141f1f8b4b887d03ed75cc16c011b86ec5d7a59301b3a9d818ce",
+      "byte_identical": true
+    },
+    {
+      "path": "07_Data/README.md",
+      "checkpoint_sha256": "733dc9ab995a6184577d9d8f41dc084f6d4c6aaaa8da2c4ade15528113298f4b",
+      "publication_sha256": "733dc9ab995a6184577d9d8f41dc084f6d4c6aaaa8da2c4ade15528113298f4b",
+      "byte_identical": true
+    },
+    {
+      "path": "07_Data/processed/.gitkeep",
+      "checkpoint_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "publication_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "byte_identical": true
+    },
+    {
+      "path": "07_Data/raw/.gitkeep",
+      "checkpoint_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "publication_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "byte_identical": true
+    },
+    {
+      "path": "07_Data/synthetic/.gitkeep",
+      "checkpoint_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "publication_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "byte_identical": true
+    },
+    {
+      "path": "08_Results/README.md",
+      "checkpoint_sha256": "e697a368ce251417d646f7c755b270476e309826a3ec7ec3ca4852017a19163e",
+      "publication_sha256": "e697a368ce251417d646f7c755b270476e309826a3ec7ec3ca4852017a19163e",
+      "byte_identical": true
+    },
+    {
+      "path": "08_Results/figures/.gitkeep",
+      "checkpoint_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "publication_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "byte_identical": true
+    },
+    {
+      "path": "09_Report/Report_Outline.md",
+      "checkpoint_sha256": "50eb64defde1aaaa9864b3164c65cf12d8908ef8bb039545ef80db4482fec039",
+      "publication_sha256": "9992ea020e31e0cfaed8b300bb63f9663e14e950593f5644d8e4934a4b5f73bd",
+      "byte_identical": false
+    },
+    {
+      "path": "10_Hardware_Design/Hardware_Plan.md",
+      "checkpoint_sha256": "c303a7c91390fc563580da4a1bffd2aface3d8bfc37ff1d2692773ac1bb5e618",
+      "publication_sha256": "c303a7c91390fc563580da4a1bffd2aface3d8bfc37ff1d2692773ac1bb5e618",
+      "byte_identical": true
+    },
+    {
+      "path": "Project Notes_09-08-2026.md",
+      "checkpoint_sha256": "9bb8675e3c3f7ce9e94063c77472065264ceb065e873fbb0152e64f194f1c984",
+      "publication_sha256": "9bb8675e3c3f7ce9e94063c77472065264ceb065e873fbb0152e64f194f1c984",
+      "byte_identical": true
+    },
+    {
+      "path": "README.md",
+      "checkpoint_sha256": "da5baba13a9cf6f50d81e4c9cc2c4a7a1c3ae0c893e4af5fbeebc4436026ceae",
+      "publication_sha256": "c76740e38b6d01a81e5f86626bfc6cac6262d32afca4ecf94e9b0fe0ee8bb710",
+      "byte_identical": false
+    }
+  ],
+  "included_project_data": {
+    "path": "09_Report/Publication_2026-09-11/Public_Reproduction_Inputs.zip",
+    "bytes": 7886129,
+    "sha256": "d2fa696fa4a8508afa1077da2cc07e571718f32df6f557656f7e2b98f1d6d3fd",
+    "files": [
+      {
+        "path": "03_MATLAB/results/phase2b_fault_study.mat",
+        "group": "regression_inputs",
+        "bytes": 3272789,
+        "sha256": "870a49feb6935b889f533c56dde68f11f2f735c48338b9dd8a7a5c96f5f374f1",
+        "purpose": "Seeded pre-change communication profile evidence for TestCommunicationEdges; compare schedule arrays separately from versioned summary metadata."
+      },
+      {
+        "path": "03_MATLAB/results/development/phase3_motion_20260910_144242/campaign/evaluation/GOVERNED/fault_loaded_supply_interruption/response.csv",
+        "group": "regression_inputs",
+        "bytes": 853298,
+        "sha256": "0140315a46839584a03c8ebebdc08c3b859f60374a794e9f2e70f9952792e4c0",
+        "purpose": "Recorded loaded-stop initial state used by stop/hold fixtures."
+      },
+      {
+        "path": "03_MATLAB/results/development/phase3_tuning_20260910_141100/campaign/evaluation/G050_F050/eval_benign_noise_reversal/paired_run.mat",
+        "group": "motion_history",
+        "bytes": 1234012,
+        "sha256": "52fba6636732e3109250f8ac7ddbb1448017d31e9cab9398b04ead9d93027794",
+        "purpose": "Original noisy reversal for the optional motion historical identity check; absence must not be described as a reproduced history."
+      },
+      {
+        "path": "06_Circuit_Simulations/SC01B_R2/results/verification/nominal/native_finest.csv",
+        "group": "experiment_source",
+        "bytes": 11927554,
+        "sha256": "1ecdd83ee4f4846b70e2d40ba04f4b3188e737c94f08300a5bbbfcc36acb9cd5",
+        "purpose": "Frozen nominal native switching waveform for the design-only one-way susceptibility experiment."
+      },
+      {
+        "path": "06_Circuit_Simulations/SC01B_R2/results/verification/nominal/parameters.json",
+        "group": "experiment_source",
+        "bytes": 2295,
+        "sha256": "8bcf382b988bc05f70d1de16a5c33297f15c1a6b06436e386e30514f528f112e",
+        "purpose": "Parameters accompanying the prescribed native source waveform."
+      },
+      {
+        "path": "06_Circuit_Simulations/SC01B_R2/results/verification/source_identity.json",
+        "group": "experiment_source",
+        "bytes": 14061,
+        "sha256": "beb5b681bc730d5683d2e626b9961bf37aa6626fec90959f8f996134b26c97cd",
+        "purpose": "Original native source provenance; recorded paths remain historical, not rewritten for the new checkout."
+      }
+    ]
+  },
+  "historical_public_files_preserved": 326,
+  "generated_caches_removed": [
+    "03_MATLAB/EMI_Resilient_Actuator_Phase2.slxc",
+    "03_MATLAB/EMI_Resilient_Actuator_Phase2B.slxc",
+    "03_MATLAB/slprj/sim/varcache/EMI_Resilient_Actuator_Phase2/checksumOfCache.mat",
+    "03_MATLAB/slprj/sim/varcache/EMI_Resilient_Actuator_Phase2/tmwinternal/simulink_cache.xml",
+    "03_MATLAB/slprj/sim/varcache/EMI_Resilient_Actuator_Phase2/varInfo.mat",
+    "03_MATLAB/slprj/sim/varcache/EMI_Resilient_Actuator_Phase2B/checksumOfCache.mat",
+    "03_MATLAB/slprj/sim/varcache/EMI_Resilient_Actuator_Phase2B/tmwinternal/simulink_cache.xml",
+    "03_MATLAB/slprj/sim/varcache/EMI_Resilient_Actuator_Phase2B/varInfo.mat"
+  ],
+  "historical_summaries_added": [
+    "03_MATLAB/results/development/phase2_completion/encoder_evidence_final/Phase2A_Evidence_Summary.md",
+    "03_MATLAB/results/development/phase2_completion/installed_project/encoder_evidence/Phase2A_Evidence_Summary.md",
+    "03_MATLAB/results/development/phase2_completion/Phase2_Completion_Report.md",
+    "03_MATLAB/results/development/phase2_completion/sensitivity/Phase2B_Sensitivity_Summary.md",
+    "03_MATLAB/results/development/phase3/Phase3_Design_Contract.md",
+    "03_MATLAB/results/development/phase3/Phase3_Implementation_Report.md",
+    "03_MATLAB/results/development/phase3_motion_20260910_144242/Phase3_Motion_Envelope_Report.md",
+    "03_MATLAB/results/development/phase3_reacquisition_20260910_132934/Phase3_Reacquisition_Report.md",
+    "03_MATLAB/results/development/phase3_stop_hold_20260910_150537/Phase3_Stop_Hold_Report.md",
+    "03_MATLAB/results/development/phase3_tuning_20260910_141100/Phase3_Controller_Tuning_Report.md",
+    "03_MATLAB/results/development/v03/Development_Validation_Summary.md",
+    "03_MATLAB/results/development/v03/sensitivity/Phase2B_Sensitivity_Summary.md",
+    "06_Circuit_Simulations/SC01B_R2/results/verification/SC01B_Validation_Summary.md",
+    "06_Circuit_Simulations/SC01B_R2/results/verification/supplemental/driver/Driver_Investigation.md",
+    "06_Circuit_Simulations/SC01B_R2/results/verification/supplemental/driver/README.md",
+    "06_Circuit_Simulations/SC01B_R2/results/verification/supplemental/solver/README.md",
+    "06_Circuit_Simulations/SC01B_R2/results/verification/supplemental/solver/Solver_Resolution.md"
+  ],
+  "historical_metric_files_added": [
+    "03_MATLAB/results/development/phase3_motion_20260910_144242/motion_metrics.csv",
+    "03_MATLAB/results/development/phase3_tuning_20260910_141100/decision.json",
+    "03_MATLAB/results/development/phase3_tuning_20260910_141100/campaign/evaluation_metrics.csv",
+    "03_MATLAB/results/development/phase3_stop_hold_20260910_150537/stop_hold_metrics.csv"
+  ],
+  "interpretation": "Recorded numerical verification only. PLAN-V1 development and strict native-usability acceptance remain rejected. No four-way evaluation or closure-production records were executed.",
+  "publication_files": [
+    {
+      "path": "09_Report/Publication_2026-09-11/Announcement_Draft.md",
+      "bytes": 1198,
+      "sha256": "66c71ce45c2266840c96eaf0f54bdf7a76b892f0f6df7fd69cb45a3bc868cbca"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/assets/four_arm_design.png",
+      "bytes": 322046,
+      "sha256": "6bcab94f7b4cd946f11e6334040a59d0dfab96bab47121ef82c1c532a5ad4e83"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/assets/four_arm_design.svg",
+      "bytes": 5967,
+      "sha256": "9cfe4d7e91a366b2031840a6cc8be9f2db93fd37bde38044a543b8caa8017721"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/assets/four_arm_design_report.png",
+      "bytes": 288502,
+      "sha256": "4ea8375f4bcb9a50dd2366ec825adf5fd90c527fa74d3881b293aa9ee73913e3"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/assets/four_arm_design_report.svg",
+      "bytes": 5285,
+      "sha256": "affe0a5fcdd7cfb59c683cfffba221b99aff1f47fe0ea25c994f01cf37e83e59"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/assets/receiver_domain.png",
+      "bytes": 270819,
+      "sha256": "31dfaf4e940de470f38e70ebaa6aa2a65de28f721886add5d2736ec4303c915b"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/assets/receiver_domain.svg",
+      "bytes": 8743,
+      "sha256": "bce62b0ee0ef4859e8e9102a20a65b787fb9daab0d25bf803c655a9ed5ed7fb5"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/assets/receiver_domain_report.png",
+      "bytes": 249453,
+      "sha256": "2b4b14d630e8bd8b9ecff251c4936073774cb928424ae6948550d70d2a07e891"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/assets/receiver_domain_report.svg",
+      "bytes": 8518,
+      "sha256": "1727dbe5bdfb8c74ddcc4569797bf85ac62613bf3623d7dda3d0c8c86d93b0eb"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/assets/system_architecture.png",
+      "bytes": 505279,
+      "sha256": "1fe5514762b58f02d9a5cfc9c23a61d70af4daaf08b2675d7f81dbf122403640"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/assets/system_architecture.svg",
+      "bytes": 12768,
+      "sha256": "2fb36362a8632635f4f5b2667304d85d1f09f0d1e92b593374e5d1e40afe6432"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/EMI_Robotics_Progress_Report.docx",
+      "bytes": 996626,
+      "sha256": "03dd3b0d20aa03a42d12c51ba811cc6f3747810b75b3c31752362345dd58d48c"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/EMI_Robotics_Progress_Report.md",
+      "bytes": 29807,
+      "sha256": "d6f72890df95acda537b8b912cca9dcdfbf30707ec26fc6a3981df087439fc14"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/EMI_Robotics_Progress_Report.pdf",
+      "bytes": 1154838,
+      "sha256": "3c490dd30b2674a6096d8d7184123f58eabc557f37c9092f7d3b0213ac034c48"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/Evidence_Catalogue.md",
+      "bytes": 14556,
+      "sha256": "6dcd3ca8d37d10813eb2ba380d9c64fdfec5ffb4a02250bbd78d18a48c3582a3"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/Figure_Captions.md",
+      "bytes": 2832,
+      "sha256": "69a10cd5cb49f66591c26ee2512a71212ea041738fecf78796f4ae6a2af6c0f9"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/Public_Reproduction_Inputs.zip",
+      "bytes": 7886129,
+      "sha256": "d2fa696fa4a8508afa1077da2cc07e571718f32df6f557656f7e2b98f1d6d3fd"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/Public_Update.md",
+      "bytes": 2975,
+      "sha256": "c2333a37929465ce61418602107443b4d99be0a7d175e16b30d1e467aa2b79b8"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/Publication_Reproduction.md",
+      "bytes": 10972,
+      "sha256": "e5f1c8fde87b365d5a607fd5103a1ad9c98185f1535ef8af2f73a674a1d54ff8"
+    }
+  ]
+}

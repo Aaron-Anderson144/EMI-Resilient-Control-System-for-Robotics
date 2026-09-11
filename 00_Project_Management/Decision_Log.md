@@ -54,3 +54,73 @@ Use this file to record decisions that change the project architecture, scope, m
 | DEC-027 | Retain the frozen 47 ohm gate-drive stress failure and inspect internal channel currents. | Both engines reproduce the spike, and internal channels confirm simultaneous conduction even with zero 6 V midpoint overlap. Do not tune the holdout or widen event windows to manufacture a pass. | Implemented; mitigation open |
 | DEC-028 | Report signed drain-plus-gate terminal energy and exterior circuit energy closure. | Terminal energy includes stored-charge transfer and must not be labeled semiconductor heat. Source work, external resistance losses and external storage changes are accounted separately. | Implemented |
 | DEC-029 | Retain rejected strict-tolerance SPICE attempts as failed checks while evaluating the rest of the matrix. | The nominal all-tight check aborts at the first gate corner despite multiple numerical-control probes. No partial trace, successful process exit code or voltage-only check can substitute for the missing required reference. | Implemented; full numerical acceptance open |
+
+## SC-01B R2 resolution decisions, 2026-09-09
+
+| ID | Decision | Rationale and consequence | Status |
+|---|---|---|---|
+| DEC-030 | Preserve SC01B and identify the driver remedy as SC01B_R2: +12/−1.5 V, unchanged charge resistance, 3 Ω discharge path and unchanged 300 ns dead time. | Fixes the declared five-case model while retaining transistor equations. Negative rail and ideal split impedance are new assumptions; the existing cases were used for design selection. | Numerically verified; physical implementation open |
+| DEC-031 | Use exact clipped-linear B sources and fixed 1 ns TSTEP with independent TMAX. | Resolves the strict ngspice 41 limitation without smoothing, retiming, vendor-model edits or relaxed tolerances. Actual integration knots and finer-step/TSTEP-sensitivity evidence are retained. | Verified |
+| DEC-032 | Gate all required execution, unclipped energy/event records and zero above-floor native channel overlap; bind native and SPICE results to source/runtime hashes. | Waveform agreement or successful software tests alone cannot clear switching behavior. Independent CSV and solver-evidence audits supplement the full campaign. | Verified |
+
+## Parameter integrity and supply/load integration, 2026-09-09
+
+| ID | Decision | Rationale and consequence | Status |
+|---|---|---|---|
+| DEC-033 | Apply requested plant, controller, reference, load, timing and limits through shared SimulationInput configuration and require the updated model schema. | Metadata must describe the actual simulation; stale or wrong-project models fail explicitly. | Implemented; local acceptance recorded in the v0.3 development report |
+| DEC-034 | Retain both motor-voltage and signed load-torque plant inputs in analytical and Simulink models. | A configured nonzero load must affect motion and drive effort. | Implemented with an independent linear load-response comparison |
+| DEC-035 | Represent supply faults as an averaged motor-bus voltage while control/sensor rails remain powered. | Zero supply forces zero terminal voltage; it does not disconnect the winding or reset mechanical/electrical plant state. | Implemented; hardware topology remains provisional |
+| DEC-036 | Hold controller state by default during zero motor supply, with a separate reset-next-state scenario. | Explicit update semantics permit tests of state continuity and restart without claiming MCU brownout behavior or a physical safe stop. | Implemented and cross-validated |
+| DEC-037 | Reject nonfinite or malformed active inputs and compare complete finite sampled records before calculating acceptance maxima. | NaN comparisons must not silently pass; all logged channels and exact discrete profiles are verified. | Implemented with negative regression tests |
+| DEC-038 | Save development evidence in new output directories with source/model hashes; R2 requires explicit reuse for a populated output directory. | Protect frozen evidence and bind results to the code that produced them. Original SC01B remains preserved. | Implemented |
+
+## Phase 2 evidence completion, 2026-09-09
+
+| ID | Decision | Rationale and consequence | Status |
+|---|---|---|---|
+| DEC-039 | Extract timestamp acceptance from seeded delay/loss generation and verify handwritten arrival schedules. | Explicit collision/stale-arrival expectations supplement shared-profile MATLAB/Simulink comparisons; existing seeded fields stay exact. | Verified by E-006D campaign and frozen regressions |
+| DEC-040 | Record mean-removed, periodic-Hann, unpadded one-sided encoder spectra with sample rate, resolution and normalization. | Peak frequency comes from sampled data; interior-band fixtures avoid aliasing and edge-bin amplitude ambiguity. Closed-loop measurement differences remain a separately labeled diagnostic. | Verified by E-002B campaign |
+| DEC-041 | Measure count-jump recovery from the end of its actual affected sample using matched-position error and a complete threshold dwell. | Nearest-sample injection, first dwell start, confirmation and censoring are explicit; trajectory recovery does not implement supervisory recovery. | Verified by E-003B campaign |
+
+## Phase 3 prototype decisions, 2026-09-09
+
+| ID | Decision | Rationale and consequence | Status |
+|---|---|---|---|
+| DEC-042 | Use a timestamp-aware three-state observer with gated source-time corrections and replay of actual applied voltage. | Rejecting a value never refreshes confidence; no truth masks enter decisions. | Implemented; assumed model and thresholds |
+| DEC-043 | Require elapsed-duration credible evidence, latched zero-voltage stop and explicit qualified reset. | Holds cannot advance recovery; a loaded plant continues moving under its dynamics. | Numerically verified; physical stop/hold open |
+| DEC-044 | Preserve missed detections, censoring, worsened tracking and unresolved observer reacquisition. | Single-sensor consistency cannot prove truth; bounded commands alone do not prove resilience improvement. | Recorded in matched Phase 3 campaign |
+| DEC-045 | Use an independent Simulink plant with shared decision helpers, plus independent unit fixtures. | Validates integration without claiming independent detector implementations or hardware validation. | Numerically verified |
+
+## Independently referenced observer recovery, 2026-09-10
+
+| ID | Decision | Rationale and consequence | Status |
+|---|---|---|---|
+| DEC-046 | Keep reference-assisted reacquisition disabled by default; require a separate position-reference stream with declared error bounds. | The disputed primary encoder cannot establish its own truth. Synthetic reference measurements demonstrate the interface; hardware reference selection and independence remain open. | Implemented as an optional numerical extension |
+| DEC-047 | Reconstruct the current three-state estimate from a contiguous reference window and actual applied-voltage history, with scaled observability, fit and propagated measurement-error checks. | Avoids assuming zero velocity/current during zero-voltage stop. Unknown model/input/load errors remain outside the calculated bounds; a constant reference bias can fit. | Focused reconstruction and integration checks recorded |
+| DEC-048 | Permit an explicit re-anchor only while already latched stopped; discard earlier replay history and preserve primary trust/watermarks. | Reference data never satisfy primary credible dwell, queue a reset or release on the commit tick. Subsequent primary qualification and a separate reset remain mandatory. | Verified with exact release-boundary and still-corrupt-primary fixtures |
+
+## Frozen controller tuning, 2026-09-10
+
+| ID | Decision | Rationale and consequence | Status |
+|---|---|---|---|
+| DEC-049 | Declare a nine-policy gain/filter grid, eight tuning windows, twelve separate evaluation fixtures and comparative gates before running; freeze the choice before evaluation. | Prevents evaluation-driven tuning and stop-dependent scoring. The lowest-score policy is diagnostic only when no candidate is eligible. | Implemented; 226 numerical runs recorded |
+| DEC-050 | Retain historical defaults after G100_F020 improves tracking but fails current/disturbance requirements. | Aggregate gains of 17.35%/29.37% do not override 5/8 and 4/12 case-level outcomes. Tolerances are comparative assumptions, not hardware limits. | Default unchanged |
+| DEC-051 | Reconstruct actual clipping and compare single-limit removals with identical gains/filter. | Mode-cap removal improves the two stress-case RMSE values about 38% while peak current rises about 3.5 times. Active slew has little net tracking effect there; anti-windup benefit is not isolated. | Diagnostic evidence recorded |
+| DEC-052 | Retain the predeclared clean-reversal failure and complete diagnostic verification without clearing the rejection. | All three evaluation policies trigger position-rate alarms when the ±45° reference reversal exceeds the existing 25 rad/s envelope. This does not isolate noise as a cause or justify raising the threshold. | Study clean-operation acceptance false; motion-envelope alignment open |
+
+## Optional causal motion envelope, 2026-09-10
+
+| ID | Decision | Rationale and consequence | Status |
+|---|---|---|---|
+| DEC-053 | Keep the observer's 25 rad/s gate and historical controller unchanged; add an optional ±120° admitted request envelope and causal V10/A200 reference shaper. | Slew-limited internal position followed by beta=min(1,A*Ts/(2V)) smoothing bounds sampled reference speed/acceleration and global position range. It cannot guarantee actual plant speed or physical stopping. | Implemented without changing prior sources/models |
+| DEC-054 | Score original request, shaped command and shaping lag separately; freeze 2 development, 8 new clean, 8 new fault and 2 diagnostic cases before execution. | Removing false alarms can cost task response: original-reversal request-window RMSE rises 6.67%. Unknown load/model diagnostics do not establish an uncertainty envelope. | All 18 required governed behavior cases pass; 80 numerical runs recorded |
+| DEC-055 | Require new sensor alarms or supply stop by explicit deadlines, no preexisting-response credit, and genuine primary evidence plus separate reset after a long outage. | Reference shaping must not hide corruption, make stale packets credible or weaken the latch. | 348 project tests, 22 Simulink comparisons and 9,390 export-audit checks pass |
+
+## Separate passive stop/hold study, 2026-09-10
+
+| ID | Decision | Rationale and consequence | Status |
+|---|---|---|---|
+| DEC-056 | Keep the existing strict zero-voltage stop unchanged and compare passive mechanisms in a separate plant harness. | Terminal short already provides dynamic electrical braking but permits loaded drift. A 1.2 ohm external resistor reduces low-speed damping and has terminal voltage -Rext*i; it cannot statically hold. | Implemented; all 148 prior source/model hashes unchanged |
+| DEC-057 | Freeze an assumed 0.030 Nm equal static/sliding mechanical capacity with 30 ms delay and 20 ms ramp. | A bounded implicit friction inclusion permits finite-impulse capture, overload slip and recapture without clearing current/velocity. Capacity and the 3.75 nominal load ratio are unqualified assumptions. | 20 fixtures, three mechanisms, three steps; 180 runs complete |
+| DEC-058 | Require continuous independent dynamics, refinement and physical/numerical energy separation. | Exact affine propagation and event-separated continuous slip plus analytical sticking verify a different algorithm; load work can add energy during backdrive. Numerical dissipation is not brake heat. | 371 tests and 3,949 independent checks pass; frozen numerical acceptance true |
+| DEC-059 | Keep drive/brake handoff and physical validation open after successful numerical holding. | Zero-drive release under load causes renewed motion. Brake reaction is absent from the operating observer; a command bit or simulated torque is not trustworthy engagement feedback. | Next local integration task; broad Gate 3 remains open |

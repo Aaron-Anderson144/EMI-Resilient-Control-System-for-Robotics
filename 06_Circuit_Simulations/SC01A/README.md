@@ -10,9 +10,11 @@ From this folder in MATLAB:
 sc01a_main
 ```
 
-The full project workflow runs the existing control/sensitivity regressions, the circuit-equation and threshold tests, sixteen deterministic circuit cases, three maximum-step settings, three tighter-tolerance runs, repeated-period settling checks, figures and a generated report. Outputs go to `results`.
+The full project workflow runs the current control/sensitivity regressions, the circuit-equation and threshold tests, sixteen deterministic circuit cases, three maximum-step settings, three tighter-tolerance runs, repeated-period settling checks, figures and a generated report. Each invocation creates a unique `results/sc01a_workflow_<UTC stamp>` folder. Test results stay at its top level; native traces, figures, the MAT study and report go under `campaign`. `study.meta.outputFolder` records that campaign path, and `study.meta.workflowOutputFolder` records the workflow path.
 
-The saved `models/EMI_SC01A_Finite_Edge.slx` contains nominal parameters and input data in its model workspace. It can be opened and run directly without preparing base-workspace variables. The builder restores this nominal version after a successful campaign. `simulate_sc01a_simscape` temporarily overrides model-workspace parameters and sources for each case, then restores the stored defaults.
+Choose an explicit new or empty destination with `study=sc01a_main("C:/path/to/new-sc01a")`. For the circuit campaign alone, run `sc01a_startup`, then `study=run_sc01a("C:/path/to/new-circuit-campaign")`; omitting its output argument creates a unique `results/sc01a_<UTC stamp>` folder. Both reject populated folders or existing files before tests, simulations or output writes. Use the callable names directly rather than `run("sc01a_main.m")`. Existing saved evidence under `results` is preserved.
+
+The saved `models/EMI_SC01A_Finite_Edge.slx` contains nominal parameters and input data in its model workspace. It can be opened and run directly without preparing base-workspace variables. `simulate_sc01a_simscape` temporarily overrides model-workspace parameters and sources for each case, then restores the stored defaults. A successful campaign no longer rebuilds the saved model or overwrites its diagram; `build_sc01a_model` is an explicit regeneration step. Campaign caches and generated figures use the new output folder.
 
 For one case:
 
@@ -78,7 +80,7 @@ Threshold events are interpolated on the recorded waveform and matched by thresh
 
 ## Saved data
 
-`results/SC01A_Validation_Summary.md` is generated from the completed campaign. The results directory contains all case metrics, solver settings, native and reference sample counts, runtime and error values; convergence/tolerance/symmetry/period tables; threshold-event CSVs; short-case full refined time series; repeated-case last-period views; and the MAT study archive. `results/raw` retains the full refined native traces with their parameters and source definitions.
+`results/SC01A_Validation_Summary.md` and `results/raw` retain the historical campaign. A new full workflow writes `SC01A_Validation_Summary.md` within its own `campaign` folder, alongside case metrics, solver settings, native and reference sample counts, runtime and error values; convergence/tolerance/symmetry/period tables; threshold-event CSVs; short-case full refined time series; repeated-case last-period views; and the MAT study archive. Its `raw` child folder retains full refined native traces with their parameters and source definitions.
 
 The model diagram is exported alongside the SLX. The source builder, independent reference, test suite and campaign functions make the case definitions and validation logic reviewable.
 

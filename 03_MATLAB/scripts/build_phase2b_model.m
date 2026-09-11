@@ -13,12 +13,13 @@ params = actuator_parameters();
 validate_parameters(params);
 continuousPlant = actuator_state_space(params);
 controller = design_baseline_controller(params, continuousPlant);
-configure_phase2b_simulink_scenario("none", params);
 
 modelName = 'EMI_Resilient_Actuator_Phase2B';
 modelPath = fullfile(matlabRoot, 'models', [modelName, '.slx']);
 
 if isfile(modelPath) && ~overwriteExisting
+    assert_actuator_model_schema(string(modelName),"phase2b");
+    configure_phase2b_simulink_scenario("none",params);
     fprintf('Existing model preserved: %s\n', modelPath);
     return
 end
@@ -29,14 +30,13 @@ end
 load_system('simulink');
 new_system(modelName);
 
-controllerDiscrete = tf(controller.discrete);
-[controllerNum, controllerDen] = tfdata(controllerDiscrete, 'v');
-plantDiscrete = ss(c2d(continuousPlant(:, 1), ...
+[controllerA,controllerB,controllerC,controllerD] = ssdata(ss(controller.discrete));
+plantDiscrete = ss(c2d(continuousPlant, ...
     params.control.sampleTime_s, 'zoh'));
 [plantA, plantB, plantC, plantD] = ssdata(plantDiscrete);
 sampleTimeText = num2str(params.control.sampleTime_s, 17);
-maximumDelay = params.phase2b.communication.fixedDelay_samples + ...
-    params.phase2b.communication.maximumJitter_samples;
+maximumDelay = max(1,params.phase2b.communication.fixedDelay_samples + ...
+    params.phase2b.communication.maximumJitter_samples);
 
 add_block('simulink/Sources/Step', [modelName, '/Position Reference'], ...
     'Position', [30, 90, 80, 120], ...
@@ -48,18 +48,9 @@ add_block('simulink/Sources/Step', [modelName, '/Position Reference'], ...
 add_block('simulink/Math Operations/Sum', [modelName, '/Position Error'], ...
     'Position', [125, 86, 155, 124], 'Inputs', '+-');
 
-add_block('simulink/Discrete/Discrete Transfer Fcn', ...
-    [modelName, '/Discrete Position Controller'], ...
-    'Position', [190, 80, 310, 130], ...
-    'Numerator', mat2str(controllerNum, 17), ...
-    'Denominator', mat2str(controllerDen, 17), ...
-    'SampleTime', sampleTimeText);
-
-add_block('simulink/Discontinuities/Saturation', ...
-    [modelName, '/Drive Voltage Limit'], ...
-    'Position', [350, 83, 410, 127], ...
-    'UpperLimit', num2str(params.control.voltageLimit_V, 17), ...
-    'LowerLimit', num2str(-params.control.voltageLimit_V, 17));
+localAddController([modelName,'/Discrete Position Controller'], ...
+    controllerA,controllerB,controllerC,controllerD,sampleTimeText);
+localAddDynamicLimit([modelName,'/Drive Voltage Limit']);
 
 add_block('simulink/Discrete/Discrete State-Space', ...
     [modelName, '/Three-State Actuator Plant'], ...
@@ -70,6 +61,29 @@ add_block('simulink/Discrete/Discrete State-Space', ...
     'D', mat2str(plantD, 17), ...
     'InitialCondition', 'zeros(3,1)', ...
     'SampleTime', sampleTimeText);
+
+add_block('simulink/Sources/Constant',[modelName,'/Nominal Load Torque'], ...
+    'Position',[325,255,410,285], ...
+    'Value',num2str(params.mechanical.nominalLoadTorque_Nm,17));
+add_block('simulink/Signal Routing/Mux',[modelName,'/Plant Input Mux'], ...
+    'Position',[425,80,430,150],'Inputs','2');
+add_block('simulink/Sources/From Workspace',[modelName,'/Supply Profile'], ...
+    'Position',[30,365,140,400],'VariableName','phase2bSupplyProfile', ...
+    'Interpolate','off','OutputAfterFinalValue','Holding final value');
+add_block('simulink/Signal Routing/Demux',[modelName,'/Supply Profile Demux'], ...
+    'Position',[170,340,175,435],'Outputs','4');
+add_block('simulink/Sources/Constant',[modelName,'/Supply Controller Reset Policy'], ...
+    'Position',[30,455,160,485],'Value','0');
+add_block('simulink/Sinks/To Workspace',[modelName,'/Log Supply'], ...
+    'Position',[230,400,340,430],'VariableName','supplySimout', ...
+    'SaveFormat','Structure With Time');
+add_block('simulink/Sinks/To Workspace',[modelName,'/Log Controller State'], ...
+    'Position',[350,455,490,485],'VariableName','controllerStateSimout', ...
+    'SaveFormat','Structure With Time');
+add_block('simulink/Sinks/Terminator',[modelName,'/Unused Supply Voltage'], ...
+    'Position',[210,320,230,340]);
+add_block('simulink/Sinks/Terminator',[modelName,'/Unused Supply Window'], ...
+    'Position',[210,365,230,385]);
 
 add_block('simulink/Signal Routing/Demux', ...
     [modelName, '/Plant Output Demux'], ...
@@ -146,7 +160,17 @@ add_block('simulink/Sinks/To Workspace', ...
 add_line(modelName, 'Position Reference/1', 'Position Error/1', 'autorouting', 'on');
 add_line(modelName, 'Position Error/1', 'Discrete Position Controller/1', 'autorouting', 'on');
 add_line(modelName, 'Discrete Position Controller/1', 'Drive Voltage Limit/1', 'autorouting', 'on');
-add_line(modelName, 'Drive Voltage Limit/1', 'Three-State Actuator Plant/1', 'autorouting', 'on');
+add_line(modelName, 'Drive Voltage Limit/1', 'Plant Input Mux/1', 'autorouting', 'on');
+add_line(modelName, 'Nominal Load Torque/1', 'Plant Input Mux/2', 'autorouting', 'on');
+add_line(modelName, 'Plant Input Mux/1', 'Three-State Actuator Plant/1', 'autorouting', 'on');
+add_line(modelName, 'Supply Profile/1', 'Supply Profile Demux/1', 'autorouting', 'on');
+add_line(modelName, 'Supply Profile/1', 'Log Supply/1', 'autorouting', 'on');
+add_line(modelName, 'Supply Profile Demux/1', 'Unused Supply Voltage/1', 'autorouting', 'on');
+add_line(modelName, 'Supply Profile Demux/2', 'Drive Voltage Limit/2', 'autorouting', 'on');
+add_line(modelName, 'Supply Profile Demux/3', 'Discrete Position Controller/2', 'autorouting', 'on');
+add_line(modelName, 'Supply Profile Demux/4', 'Unused Supply Window/1', 'autorouting', 'on');
+add_line(modelName, 'Supply Controller Reset Policy/1', 'Discrete Position Controller/3', 'autorouting', 'on');
+add_line(modelName, 'Discrete Position Controller/2', 'Log Controller State/1', 'autorouting', 'on');
 add_line(modelName, 'Three-State Actuator Plant/1', 'Plant Output Demux/1', 'autorouting', 'on');
 add_line(modelName, 'Plant Output Demux/1', 'Sensor-Side Measurement/1', 'autorouting', 'on');
 add_line(modelName, 'Equivalent Physical Sensor Error/1', 'Sensor-Side Measurement/2', 'autorouting', 'on');
@@ -181,11 +205,87 @@ set_param(modelName, ...
 annotationText = sprintf([ ...
     'PHASE 2B: REDUCED-ORDER EMI COUPLING + PACKET CHANNEL\n', ...
     'Finite-edge physics sets receiver-equivalent disturbance levels.\n', ...
-    'Timestamped packets use newest-valid-arrival, out-of-order rejection, and hold-last reception.']);
+    'Timestamped packets use newest-valid-arrival, out-of-order rejection, and hold-last reception.\n', ...
+    'Supply zero imposes zero terminal voltage; independently powered controller state holds or resets.']);
 modelAnnotation = Simulink.Annotation(modelName, annotationText);
 modelAnnotation.Position = [30, 300];
 
+configuration = actuator_simulink_configuration(params,"phase2b");
+modelWorkspace = get_param(modelName,'ModelWorkspace');
+modelWorkspace.assignin('EMIActuatorModelSchema',configuration.schema);
 save_system(modelName, modelPath);
+configure_phase2b_simulink_scenario("none",params);
 close_system(modelName, 0);
 fprintf('Created Phase 2B Simulink model: %s\n', modelPath);
+end
+
+function localAddController(path,A,B,C,D,sampleTimeText)
+% An explicit x[k+1] realization makes interruption hold/reset unambiguous.
+add_block('built-in/Subsystem',path,'Position',[190,70,315,145]);
+add_block('built-in/Inport',[path,'/Error'],'Position',[25,45,55,65],'Port','1');
+add_block('built-in/Inport',[path,'/Drive Available'],'Position',[25,275,55,295],'Port','2');
+add_block('built-in/Inport',[path,'/Reset Policy'],'Position',[25,345,55,365],'Port','3');
+add_block('simulink/Discrete/Unit Delay',[path,'/Controller State'], ...
+    'Position',[590,150,675,185],'SampleTime',sampleTimeText, ...
+    'InitialCondition',mat2str(zeros(size(A,1),1),17));
+names = {'State A','Error B','State C','Error D'};
+values = {A,B,C,D};
+positions = {[160,125,235,165],[160,40,235,80],[725,130,800,170],[725,30,800,70]};
+for k=1:4
+    add_block('simulink/Math Operations/Gain',[path,'/',names{k}], ...
+        'Position',positions{k},'Gain',mat2str(values{k},17), ...
+        'Multiplication','Matrix(K*u)');
+end
+add_block('simulink/Math Operations/Sum',[path,'/Candidate State'], ...
+    'Position',[285,65,315,115],'Inputs','++');
+add_block('simulink/Math Operations/Sum',[path,'/Raw Command'], ...
+    'Position',[850,50,880,105],'Inputs','++');
+add_block('simulink/Sources/Constant',[path,'/Zero State'], ...
+    'Position',[180,230,240,260],'Value',mat2str(zeros(size(A,1),1),17));
+add_block('simulink/Signal Routing/Switch',[path,'/Unavailable State'], ...
+    'Position',[315,255,370,335],'Criteria','u2 >= Threshold','Threshold','0.5');
+add_block('simulink/Signal Routing/Switch',[path,'/Next Controller State'], ...
+    'Position',[455,115,510,200],'Criteria','u2 >= Threshold','Threshold','0.5');
+add_block('built-in/Outport',[path,'/Command'],'Position',[925,65,955,85],'Port','1');
+add_block('built-in/Outport',[path,'/State'],'Position',[725,215,755,235],'Port','2');
+localLine(path,'Error/1','Error B/1');
+localLine(path,'Error/1','Error D/1');
+localLine(path,'Controller State/1','State A/1');
+localLine(path,'Controller State/1','State C/1');
+localLine(path,'Controller State/1','State/1');
+localLine(path,'State A/1','Candidate State/1');
+localLine(path,'Error B/1','Candidate State/2');
+localLine(path,'State C/1','Raw Command/1');
+localLine(path,'Error D/1','Raw Command/2');
+localLine(path,'Raw Command/1','Command/1');
+localLine(path,'Zero State/1','Unavailable State/1');
+localLine(path,'Reset Policy/1','Unavailable State/2');
+localLine(path,'Controller State/1','Unavailable State/3');
+localLine(path,'Candidate State/1','Next Controller State/1');
+localLine(path,'Drive Available/1','Next Controller State/2');
+localLine(path,'Unavailable State/1','Next Controller State/3');
+localLine(path,'Next Controller State/1','Controller State/1');
+end
+
+function localAddDynamicLimit(path)
+add_block('built-in/Subsystem',path,'Position',[350,75,410,140]);
+add_block('built-in/Inport',[path,'/Raw Command'],'Position',[25,45,55,65],'Port','1');
+add_block('built-in/Inport',[path,'/Voltage Limit'],'Position',[25,125,55,145],'Port','2');
+add_block('simulink/Math Operations/Gain',[path,'/Negative Limit'], ...
+    'Position',[95,120,150,150],'Gain','-1');
+add_block('simulink/Math Operations/MinMax',[path,'/Lower Bound'], ...
+    'Position',[190,45,245,105],'Function','max','Inputs','2');
+add_block('simulink/Math Operations/MinMax',[path,'/Upper Bound'], ...
+    'Position',[300,45,355,105],'Function','min','Inputs','2');
+add_block('built-in/Outport',[path,'/Applied Command'],'Position',[405,60,435,80]);
+localLine(path,'Raw Command/1','Lower Bound/1');
+localLine(path,'Voltage Limit/1','Negative Limit/1');
+localLine(path,'Negative Limit/1','Lower Bound/2');
+localLine(path,'Lower Bound/1','Upper Bound/1');
+localLine(path,'Voltage Limit/1','Upper Bound/2');
+localLine(path,'Upper Bound/1','Applied Command/1');
+end
+
+function localLine(path,source,destination)
+add_line(path,source,destination,'autorouting','on');
 end

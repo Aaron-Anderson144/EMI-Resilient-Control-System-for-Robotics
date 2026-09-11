@@ -5,12 +5,15 @@ function profile = communication_channel_profile(time_s, params, scenario)
 % than the last accepted timestamp are discarded.
 
 arguments
-    time_s (:,1) double
+    time_s
     params (1,1) struct
     scenario (1,1) struct
 end
 
 validate_parameters(params);
+validate_phase2b_scenario(scenario, params);
+validate_profile_time(time_s, params, true);
+time_s = time_s(:);
 if isempty(time_s) || any(~isfinite(time_s)) || any(diff(time_s) <= 0)
     error('EMIProject:InvalidTimeVector', ...
         'The time vector must be finite and strictly increasing.');
@@ -45,74 +48,27 @@ if scenario.communication.packetLossEnabled
     clear cleanupRng
 end
 
-arrivalIndex = (1:n)' + transmitDelay_samples;
-arrivalIndex(packetDropped | arrivalIndex > n) = 0;
-
-newestSourceAtArrival = zeros(n, 1);
-arrivalCount = zeros(n, 1);
-for sourceIndex = 1:n
-    destinationIndex = arrivalIndex(sourceIndex);
-    if destinationIndex > 0
-        newestSourceAtArrival(destinationIndex) = sourceIndex;
-        arrivalCount(destinationIndex) = arrivalCount(destinationIndex) + 1;
-    end
-end
-
-sampleReceived = false(n, 1);
-acceptedSourceIndex = zeros(n, 1);
-acceptedDelay_samples = zeros(n, 1);
-collisionDiscardCount = zeros(n, 1);
-outOfOrderDiscardCount = zeros(n, 1);
-lastAccepted = 0;
-
-for k = 1:n
-    newestSource = newestSourceAtArrival(k);
-    if newestSource == 0
-        continue
-    end
-
-    collisionDiscardCount(k) = max(arrivalCount(k) - 1, 0);
-    if newestSource > lastAccepted
-        sampleReceived(k) = true;
-        acceptedSourceIndex(k) = newestSource;
-        acceptedDelay_samples(k) = k - newestSource;
-        lastAccepted = newestSource;
-    else
-        outOfOrderDiscardCount(k) = 1;
-    end
-end
-
-lastAcceptedSourceIndex = zeros(n, 1);
-measurementAge_samples = zeros(n, 1);
-lastAccepted = 0;
-for k = 1:n
-    if sampleReceived(k)
-        lastAccepted = acceptedSourceIndex(k);
-    end
-    lastAcceptedSourceIndex(k) = lastAccepted;
-    if lastAccepted == 0
-        measurementAge_samples(k) = k - 1;
-    else
-        measurementAge_samples(k) = k - lastAccepted;
-    end
-end
+schedule = schedule_timestamped_packets(transmitDelay_samples,packetDropped);
 
 profile.channelEnabled = channelEnabled;
 profile.configuredWindowActive = channelEnabled;
 profile.transmitDelay_samples = transmitDelay_samples;
 profile.packetDropped = packetDropped;
-profile.arrivalIndex = arrivalIndex;
-profile.sampleReceived = sampleReceived;
-profile.acceptedSourceIndex = acceptedSourceIndex;
-profile.acceptedDelay_samples = acceptedDelay_samples;
-profile.lastAcceptedSourceIndex = lastAcceptedSourceIndex;
-profile.heldLast = ~sampleReceived;
-profile.measurementAge_samples = measurementAge_samples;
-profile.measurementAge_s = measurementAge_samples .* ...
+profile.arrivalIndex = schedule.arrivalIndex;
+profile.sampleReceived = schedule.sampleReceived;
+profile.acceptedSourceIndex = schedule.acceptedSourceIndex;
+profile.acceptedDelay_samples = schedule.acceptedDelay_samples;
+profile.lastAcceptedSourceIndex = schedule.lastAcceptedSourceIndex;
+profile.heldLast = schedule.heldLast;
+profile.measurementAge_samples = schedule.measurementAge_samples;
+profile.measurementAge_s = schedule.measurementAge_samples .* ...
     params.control.sampleTime_s;
-profile.collisionDiscardCount = collisionDiscardCount;
-profile.outOfOrderDiscardCount = outOfOrderDiscardCount;
-profile.transmittedPacketCount = nnz(windowActive & scenario.communicationEnabled);
-profile.droppedPacketCount = nnz(packetDropped);
-profile.acceptedPacketCount = nnz(sampleReceived);
+profile.collisionDiscardCount = schedule.collisionDiscardCount;
+profile.outOfOrderDiscardCount = schedule.outOfOrderDiscardCount;
+% Versioned summaries use one source population consistently. Top-level
+% counts cover the full record; fault-window rates use packetSummary.faultWindow.
+profile.packetSummary = packet_profile_summary(profile,channelEnabled);
+profile.transmittedPacketCount = profile.packetSummary.record.transmittedPacketCount;
+profile.droppedPacketCount = profile.packetSummary.record.droppedPacketCount;
+profile.acceptedPacketCount = profile.packetSummary.record.acceptedPacketCount;
 end

@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": [
+    "40 retained dependency hashes validate",
+    "differing destination rejected before any first-file copy",
+    "altered input rejects complete selection before writes",
+    "dry run leaves destination empty",
+    "valid local restore and repeat preserve exact hashes",
+    "manifest traversal and absolute paths rejected"
+  ],
+  "original_dependency_check": {
+    "passed": true,
+    "dry_run": true,
+    "selected_files": 40,
+    "already_matching": 40,
+    "copied": 0,
+    "checkout": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics",
+    "evidence_root": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics"
+  },
+  "probe_folder": "C:\\Users\\adand\\Documents\\Codex\\2026-09-10\\le\\work\\baseline_consolidation\\bootstrap_check_fckdvtw_"
+}

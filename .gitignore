@@ -1,0 +1,30 @@
+# MATLAB and Simulink generated files
+*.asv
+*.autosave
+*.m~
+*.slxc
+*.slx.r20*
+*.mdl.r20*
+slprj/
+codegen/
+
+# Generated and historical evidence stays on disk, outside source history.
+# Local_Dependencies.json pins the inputs needed by a fresh checkout.
+/03_MATLAB/results/
+/06_Circuit_Simulations/*/results/
+/00_Project_Management/Audits/
+
+# Local circuit runtimes are pinned and restored separately, not committed.
+/06_Circuit_Simulations/*/tools/
+
+# Python and local verification output
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Compiled four-way engine and isolated native verification artifacts.
+/06_Circuit_Simulations/FOUR_WAY/work/
+
+# Operating-system files
+Thumbs.db
+.DS_Store

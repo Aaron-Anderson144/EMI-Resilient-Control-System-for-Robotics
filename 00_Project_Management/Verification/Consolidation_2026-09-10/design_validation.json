@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "design_id": "FOUR-WAY-EMI-PLAN-V1",
+  "development_fixtures": 2,
+  "evaluation_fixtures": 12,
+  "main_logical_records": 112,
+  "diagnostic_logical_records": 16,
+  "integrated_runs_executed": 0,
+  "source_rows": 40001,
+  "source_sha256": "1ecdd83ee4f4846b70e2d40ba04f4b3188e737c94f08300a5bbbfcc36acb9cd5",
+  "native_sample_checks_nonvacuous": true,
+  "aggregate_counterexample_rejected": true,
+  "counterexample_normalized_baseline": 0.12,
+  "counterexample_normalized_combined": 0.75,
+  "freeze_files": 16,
+  "unchanged_document_lines_restored": [
+    {
+      "path": "00_Project_Management/Roadmap.md",
+      "unchanged_lines_preserved": 125
+    },
+    {
+      "path": "01_Research/Research_Log.md",
+      "unchanged_lines_preserved": 118
+    },
+    {
+      "path": "01_Research/Literature_Review_Plan.md",
+      "unchanged_lines_preserved": 97
+    },
+    {
+      "path": "02_Requirements/System_Requirements.md",
+      "unchanged_lines_preserved": 67
+    },
+    {
+      "path": "02_Requirements/Verification_Traceability.md",
+      "unchanged_lines_preserved": 144
+    },
+    {
+      "path": "09_Report/Report_Outline.md",
+      "unchanged_lines_preserved": 81
+    }
+  ]
+}

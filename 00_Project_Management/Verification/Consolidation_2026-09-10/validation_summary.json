@@ -1,0 +1,13 @@
+{
+  "tests": 401,
+  "passed": 401,
+  "failed": 0,
+  "incomplete": 0,
+  "originalRecords": 116,
+  "allOriginalRecordsExact": true,
+  "originalMetricsExact": true,
+  "missedAndCensoredOutcomesRetained": true,
+  "physicalValidation": false,
+  "sourceCheckout": "C:\\Users\\adand\\Documents\\Codex\\2026-09-10\\le\\work\\baseline_consolidation\\fresh_checkout",
+  "priorEvidence": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\results\\development\\phase3_reacquisition_20260910_132934\\default_regression\\phase3_study.mat"
+}

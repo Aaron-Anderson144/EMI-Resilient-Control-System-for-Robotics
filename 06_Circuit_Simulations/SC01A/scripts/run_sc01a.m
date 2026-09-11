@@ -5,11 +5,16 @@ arguments
     options.IncludePWM (1,1) logical = true
 end
 root=fileparts(fileparts(mfilename('fullpath')));
-if outputFolder=="", outputFolder=fullfile(root,'results'); end
-if ~isfolder(outputFolder),mkdir(outputFolder);end
+addpath(fullfile(root,'functions'));
+outputFolder=sc01a_prepare_output_folder(outputFolder,fullfile(root,'results'),"sc01a");
+oldConfig=Simulink.fileGenControl('getConfig');
+cacheCleanup=onCleanup(@()Simulink.fileGenControl('setConfig','config',oldConfig));
+Simulink.fileGenControl('set','CacheFolder',fullfile(outputFolder,'cache'), ...
+    'CodeGenFolder',fullfile(outputFolder,'codegen'),'createDir',true);
 rawFolder=fullfile(outputFolder,'raw');if ~isfolder(rawFolder),mkdir(rawFolder);end
 p0=sc01a_parameters();
 study.meta.createdUTC=string(datetime('now','TimeZone','UTC','Format','yyyy-MM-dd HH:mm:ss z'));
+study.meta.outputFolder=outputFolder;
 study.meta.matlabVersion=string(version);
 study.meta.parameterId=p0.meta.id;
 study.meta.scope="Native Simscape finite-edge test-source harness; independent piecewise-exact circuit reference; assumed parameters";
@@ -144,8 +149,9 @@ plot_sc01a_refinement(study.refinementExamples.combined_rise,outputFolder);
 assert(study.meta.allGatesPassed,'SC01A:VerificationGateFailed', ...
     'At least one circuit verification gate failed; inspect the saved evidence tables.');
 fprintf('SC-01A complete: %d native runs, all declared gates passed.\n',study.meta.nativeRuns);
-% Publish a default model with nominal sources ready for standalone Run.
-build_sc01a_model(p0);
+% The adapter restores saved model defaults after each run. Rebuilding the
+% stored model and its diagram is an explicit build_sc01a_model operation.
+fprintf('Results folder: %s\n',outputFolder);
 end
 
 function indices=localReferenceIndices(t,knots)

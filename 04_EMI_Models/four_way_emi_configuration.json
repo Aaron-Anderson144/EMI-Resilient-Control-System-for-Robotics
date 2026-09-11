@@ -1,0 +1,186 @@
+{
+  "design_id": "FOUR-WAY-EMI-PLAN-V1",
+  "status": "design_only_not_implemented",
+  "frozen_date": "2026-09-10",
+  "source": {
+    "path": "06_Circuit_Simulations/SC01B_R2/results/verification/nominal/native_finest.csv",
+    "sha256": "1ecdd83ee4f4846b70e2d40ba04f4b3188e737c94f08300a5bbbfcc36acb9cd5",
+    "columns": [
+      "time_s",
+      "switch_V"
+    ],
+    "interpolation": "piecewise_linear_at_original_timestamps",
+    "synthetic_return_s": 1e-07,
+    "period_s": 5e-05,
+    "pulses_per_burst": 100,
+    "burst_anchor_s": [
+      0.25,
+      1.7
+    ],
+    "command_edge_anchor_s": 2.019e-06,
+    "native_source_fingerprint": "eba4730fdf73a0c5a146faa48615ea3aa559c72645de65e5fd5a27f7f5c8699d",
+    "source_identity_path": "06_Circuit_Simulations/SC01B_R2/results/verification/source_identity.json",
+    "parameters_path": "06_Circuit_Simulations/SC01B_R2/results/verification/nominal/parameters.json"
+  },
+  "task": {
+    "stop_time_s": 3,
+    "sample_time_s": 0.001,
+    "request_time_s": [
+      0,
+      0.1,
+      1.6
+    ],
+    "positive_request_deg": [
+      0,
+      30,
+      -15
+    ],
+    "load_Nm": 0,
+    "bus_V": 24,
+    "reset_s": 2,
+    "governor_velocity_rad_s": 10,
+    "governor_acceleration_rad_s2": 200,
+    "independent_reference": false
+  },
+  "receiver": {
+    "counts_per_revolution": 4096,
+    "positive_gray_states": [
+      "00",
+      "10",
+      "11",
+      "01"
+    ],
+    "initial_count": 0,
+    "threshold_V": 0.2,
+    "common_mode_limit_V": 7,
+    "minimum_pulse_filter": false,
+    "event_coincidence_s": 1e-12,
+    "invalid_transition": "hold_count_and_resynchronize_previous_AB",
+    "decoder_before_same_timestamp_sample": true,
+    "clean_transition_delay_limit_s": 1e-06,
+    "clean_sampled_count_error_limit": 1,
+    "attribution": "offline_own_exposed_trajectory_no_aggressor_shadow_decoder",
+    "domain_failure": "reject_comparison_hold_A_for_diagnostic_continuation_only",
+    "packet_source_index": "k+1 at time k*Ts,k=0..3000"
+  },
+  "arms": [
+    {
+      "id": "BASELINE",
+      "Cdiff_pF": 100,
+      "protection_enabled": false
+    },
+    {
+      "id": "EM_ONLY",
+      "Cdiff_pF": 1000,
+      "protection_enabled": false
+    },
+    {
+      "id": "SW_ONLY",
+      "Cdiff_pF": 100,
+      "protection_enabled": true
+    },
+    {
+      "id": "COMBINED",
+      "Cdiff_pF": 1000,
+      "protection_enabled": true
+    }
+  ],
+  "metrics": {
+    "window_s": [
+      [
+        0.24,
+        0.4
+      ],
+      [
+        1.69,
+        1.85
+      ]
+    ],
+    "window_interval": "left_closed_right_open",
+    "task_rmse_deg": 0.5,
+    "task_peak_deg": 2,
+    "final_request_error_deg": 0.5,
+    "tail_s": 0.1,
+    "recovery_dwell_s": 0.05,
+    "recovery_limit_s": 0.5,
+    "baseline_rmse_floor_deg": 0.25,
+    "comparison_relative_allowance": 0.1,
+    "position_absolute_allowance_deg": 0.25,
+    "current_absolute_allowance_A": 0.05,
+    "required_rescued_failures": 1,
+    "normalized_aggregate_gate": "mean(combined_i/d_i)<=0.9*mean(baseline_i/d_i); d_i=max(baseline_i,0.25deg)",
+    "recovery_scope": "each_burst_separately",
+    "required_recovered_bursts": 2,
+    "normalized_combined_to_baseline_factor_max": 0.9
+  },
+  "logical_records": {
+    "main": 112,
+    "closure_diagnostic": 16,
+    "total": 128
+  },
+  "claim": "Conditional numerical comparison only; null result retained",
+  "closure_diagnostics": {
+    "Ccp_pF": [
+      30,
+      300
+    ],
+    "Ccn_pF": 5,
+    "task_sign": 1,
+    "phase_ns": 0,
+    "return_duration_s": [
+      1e-07,
+      4.5e-05
+    ],
+    "exposed_logical_records": 16,
+    "excluded_from_evaluation": true
+  },
+  "victim": {
+    "driver_common_mode_V": 2.5,
+    "driver_open_circuit_differential_magnitude_V": 2,
+    "driver_transition_s": 1e-07,
+    "driver_Rp_Ohm": 47,
+    "driver_Rn_Ohm": 53,
+    "receiver_Rdiff_Ohm": 120,
+    "receiver_Cp_F": 5e-11,
+    "receiver_Cn_F": 7e-11,
+    "receiver_Rp_bias_Ohm": 10000.0,
+    "receiver_Rn_bias_Ohm": 20000.0,
+    "ground_R_Ohm": 0.025,
+    "ground_L_H": 2e-08,
+    "aggressor_return_current_A": 0,
+    "inductive_ep_V": 0,
+    "inductive_en_V": 0,
+    "initialization": "own_arm_DC_equilibrium_low_A"
+  },
+  "verification": {
+    "native_steps_s": [
+      5e-10,
+      2.5e-10,
+      1.25e-10
+    ],
+    "pointwise_voltage_allowance_V": 0.0001,
+    "threshold_time_allowance_s": 1e-09,
+    "threshold_sequence_exact": true,
+    "decoder_sequence_exact": true,
+    "event_fixture_Cdiff_pF": [
+      100,
+      1000
+    ],
+    "event_fixture_Ccp_pF": [
+      30,
+      300
+    ],
+    "event_fixture_initial_A": [
+      0,
+      1
+    ],
+    "event_fixture_intended_transition_s": 2.019e-06,
+    "event_fixture_stop_s": 5e-05,
+    "event_fixture_virtual_sample_times_s": [
+      1.969e-06,
+      2.019e-06,
+      2.069e-06
+    ]
+  },
+  "authority": "Prose contract controls any semantics omitted here; a prose/JSON disagreement rejects design validation."
+}

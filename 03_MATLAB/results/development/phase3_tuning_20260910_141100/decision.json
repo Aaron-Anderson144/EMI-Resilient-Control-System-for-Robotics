@@ -1,0 +1,38 @@
+{
+  "selectedPolicy": {
+    "id": "G100_F020",
+    "options": {
+      "degradedBandwidthRatio": 1,
+      "referenceTimeConstant_s": 0.02
+    },
+    "description": "100% degraded tuning target; 20 ms degraded/recovery reference filter; historical caps and slew"
+  },
+  "tuningAssessment": {
+    "Policy": "G100_F020",
+    "FixtureCount": 8,
+    "PassedCases": 5,
+    "AllComparativeGatesPass": false,
+    "TrackingScore": 0.82651265048620093,
+    "HistoricalTrackingScore": 1,
+    "AggregateImprovementFraction": 0.17348734951379907,
+    "MeaningfulImprovement": true,
+    "Eligible": false
+  },
+  "evaluationAssessment": {
+    "Policy": "G100_F020",
+    "FixtureCount": 12,
+    "PassedCases": 4,
+    "AllComparativeGatesPass": false,
+    "TrackingScore": 0.70629764268217221,
+    "HistoricalTrackingScore": 1,
+    "AggregateImprovementFraction": 0.29370235731782779,
+    "MeaningfulImprovement": true,
+    "Eligible": false
+  },
+  "recommendation": "retain_historical_default",
+  "defaultsChanged": false,
+  "totalNumericalRuns": 226,
+  "evaluationCompleted": true,
+  "executionAccepted": false,
+  "physicalValidation": false
+}

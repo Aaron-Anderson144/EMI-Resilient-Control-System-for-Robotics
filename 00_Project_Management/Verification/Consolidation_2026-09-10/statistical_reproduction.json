@@ -1,0 +1,8 @@
+{
+  "historical_table_byte_identical": true,
+  "sha256": "484432c14c5bcddf35f5b7fdeedeb93b3cfbcff3cf60d19332e8e88ac00cc9ad",
+  "trials": 600,
+  "nominal_opportunities": 80000,
+  "nominal_drops": 15934,
+  "nominal_drop_fraction": 0.199175
+}

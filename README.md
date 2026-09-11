@@ -1,102 +1,100 @@
-# EMI-Resilient Control System for Robotics
+# EMI Resilient Control System for Robotics
 
-MATLAB/Simulink workspace for electromagnetic-interference characterization and fault-tolerant control of robotic actuators.
+**Can electrical design and fault-tolerant control work together to make robotic actuators more resistant to electromagnetic interference?**
 
-## Current Status
+This research project builds a MATLAB/Simulink actuator model, electrical interference models, and a controller that detects suspect feedback and manages degraded operation, recovery and stop commands. Its purpose is to follow interference through the whole chain: from a switching waveform, through the receiver circuit and encoder count, to the actuator's motion.
 
-- Phase 0 workspace and research documents: prepared
-- Phase 1 baseline actuator model: executed and verified on 2026-09-08
-- Simulink model: generated and successfully simulated on 2026-09-08
-- Phase 2A encoder fault injection: implemented and cross-validated
-- Phase 2B reduced-order coupling, ground-offset, and communication implementation: software-verified on 2026-09-08
-- Phase 2B parameter sensitivity: completed on 2026-09-09; 26 controls, 1,886 study simulations, 512 combined-parameter sets in two contexts, and 11 selected Simulink comparisons
-- SC-01A finite-edge native Simscape circuit: completed and numerically verified on 2026-09-09; 16 cases, 51 native simulations, three step sizes and tighter-tolerance checks
-- SC-01B device-parameterized half-bridge: implementation and 29-attempt campaign complete (27 completed, 2 strict-tolerance attempts rejected); 84 tests pass, but gate-event failures and solver limits leave full numerical/source acceptance open
-- Supply-interruption faults, measured source identification and receiver/decoder integration: remaining Phase 2/Phase 4 work
-- Resilient-control implementation: planned for Phase 3
-- Hardware validation: future work
+The work is at a **verified simulation and integration milestone**. The latest experiment also establishes a clear limit: its higher exposure leaves the assumed receiver operating domain, so the planned comparison of combined mitigation has not proceeded to evaluation. Hardware validation remains future work.
 
-All 84 automated tests pass: 45 control/sensitivity tests, 22 SC-01A circuit/threshold checks and 17 SC-01B energy, event and comparison checks. The Phase 2A MATLAB and Simulink implementations agree within a `1e-9` rad validation tolerance for all scenarios. All ten original Phase 2B Simulink scenarios completed with 1501 finite samples, exact discrete-profile agreement, and a largest continuous-signal MATLAB/Simulink difference of approximately `2.2751e-12`. The configured `p=0.20` packet-loss study observed 15,934 drops in 80,000 opportunities (`0.199175`) with a Wilson 95% interval of `[0.19642, 0.20196]`; the `p=0` and `p=1` edge cases were exact.
+[Illustrated progress report (PDF)](09_Report/Publication_2026-09-11/EMI_Robotics_Progress_Report.pdf) · [Editable report (Word)](09_Report/Publication_2026-09-11/EMI_Robotics_Progress_Report.docx) · [Public project update](09_Report/Publication_2026-09-11/Public_Update.md) · [Reproduction guide](09_Report/Publication_2026-09-11/Publication_Reproduction.md)
 
-The sensitivity study found the largest one-at-a-time position changes from ground offset, the assumed voltage-to-angle mapping, ground conversion, and envelope frequency within its declared ranges. The largest sampled active position delta was 13.56 degrees with the fixed communication faults. These exploratory results are not hardware limits or failure probabilities. See `03_MATLAB/results/sensitivity/Phase2B_Sensitivity_Summary.md` and `04_EMI_Models/Phase2B_Sensitivity_Method.md`.
+## How the project works
 
-These results verify software behavior against the stated reduced-order equations and an independent Simulink realization. They do not physically validate the assumed coupling, receiver, cable, encoder, or communication parameters. Parameter identification and measurement-based comparison remain necessary for hardware validation.
+![Causal actuator and interference architecture](09_Report/Publication_2026-09-11/assets/system_architecture.png)
 
-The numerical parameters in this package are representative starting values, not measurements from a selected motor, cable, receiver, or installation. Results must not be presented as experimental findings until the model is parameterized and validated.
+The controller holds a voltage command for each 1 ms interval. The motor trajectory determines the intended encoder transitions; the loaded circuit and receiver determine the observed transitions; a persistent quadrature decoder supplies the measured position for the next control decision. The controller receives position, a source index and a receipt flag. It does not receive the true position or an interference label.
 
-## Workspace Map
+The interference source is an externally replayed, numerically verified switching waveform. It is a one-way susceptibility study, with an explicitly defined synthetic return between replay pulses. The present causal experiment models a loaded A-channel circuit with ideal B-channel timing. It does not yet model bidirectional coupling to the actuator's own driven winding or a complete physical encoder installation. See the [implementation and scope](04_EMI_Models/Four_Way_Causal_Implementation.md).
 
-| Folder | Purpose |
+## September 2026 checkpoint
+
+| Verified evidence | Result and meaning |
 |---|---|
-| `00_Project_Management` | Charter, roadmap, decisions, risks, and milestones |
-| `01_Research` | Literature-review plan and research log |
-| `02_Requirements` | System requirements, FMEA, and simulation test plan |
-| `03_MATLAB` | MATLAB and Simulink source files for the digital twin |
-| `04_EMI_Models` | Electromagnetic coupling models and assumptions |
-| `05_Control_Algorithms` | Baseline and resilient-control design notes |
-| `06_Circuit_Simulations` | Native Simscape finite-edge circuit, independent reference, tests and transient results |
-| `07_Data` | Raw, synthetic, and processed datasets |
-| `08_Results` | Approved figures, tables, and result summaries |
-| `09_Report` | Research-report structure and drafts |
-| `10_Hardware_Design` | Future testbed architecture and hardware planning |
+| Full project regression suite | **468/468 tests pass**, with zero failures or incomplete tests |
+| Original controller behavior | **116/116 records remain exact**, including all 31 channels, plant states and reasons |
+| Native circuit numerical comparisons | **24/24 comparisons and 16/16 refinements pass**; largest node-voltage error is 0.0802 mV against a 0.1 mV allowance |
+| Development experiment | **16 records / 8 matched clean-exposed pairs**; all eight clean companions pass |
+| Independent record audit | **352/352 reconstruction and scoring checks pass** |
+| Evaluation | **Unopened**: receiver-domain acceptance is rejected; combined benefit is not demonstrated |
 
-## Initial Virtual Platform
+These counts describe different checks and are not additive. The final native set includes six tighter-tolerance reruns after initial failures: 30 executions produced 24 final comparisons. Numerical agreement does not establish physical validity or receiver usability.
 
-- Nominal 24 V robotic actuator
-- BLDC or servo motor represented initially by a three-state DC-equivalent model
-- Position feedback from an incremental encoder
-- Discrete position controller with a 1 ms initial sample time
-- Protocol-agnostic timestamped sensor channel; protocol-specific CAN behavior remains future work
-- PWM motor drive treated as the main anticipated EMI source
+The development result is the key finding:
 
-The controller-rate model runs at 1 kHz and therefore cannot resolve the individual edges of the assumed 20 kHz PWM source. Phase 2B uses analytically derived edge peaks and a 120 Hz receiver-equivalent baseband envelope for system sensitivity studies. Its volts-to-radians mapping is phenomenological, not a physical encoder-decoder law.
+![Development exposures and the assumed receiver domain](00_Project_Management/Verification/Causal_Receiver_2026-09-11/receiver_domain_checkpoint.png)
 
-## MATLAB Quick Start
+- **Lower exposure (DEV01, coupling 10/9 pF):** all four arms pass, with no persistent EMI count error or paired actuator disturbance. Peak common mode is about 3.348 V.
+- **Higher exposure (DEV02, coupling 200/5 pF):** all four exposed arms exceed the assumed 7 V common-mode domain. Peaks are 7.557 V with 100 pF differential capacitance and 8.038 V with 1,000 pF. These records are rejected for interpreting control effects.
 
-1. Copy this entire folder to the desired project location.
-2. Open MATLAB using a license appropriate for the intended use.
-3. Set the MATLAB current folder to `03_MATLAB`.
-4. Run `startup_project`.
-5. Run `main` to execute the analytical baseline simulation.
-6. Run `build_baseline_model` to create `models/EMI_Resilient_Actuator_Baseline.slx`.
-7. Run the tests with `runtests("tests")`.
-8. Run `phase2b_main` to generate the Phase 2B analytical study, packet-loss statistical study, Simulink model, smoke-test table, and MATLAB/Simulink comparison after reviewing the assumed parameters.
-9. Run `phase2b_sensitivity_main` to reproduce the sensitivity tests, 1,886-run study, figures, selected Simulink checks, and generated summary in `results/sensitivity`.
+The 7 V value is an assumed model-domain boundary, not a measured damage or immunity limit. After it is crossed, the model holds A only to finish diagnostic recording. Later count errors, tracking differences and stop commands cannot be credited as physical receiver behavior or mitigation benefit.
 
-Phase 2B definitions, equations, scenario semantics, and limitations are recorded in `04_EMI_Models/Phase2B_Coupling_and_Communication_Faults.md`.
+Read the [checkpoint](00_Project_Management/Causal_Receiver_Checkpoint.md), [compact verification evidence](00_Project_Management/Verification/Causal_Receiver_2026-09-11), and [requirement evidence status](02_Requirements/Research_Evidence_Status.md) for the supporting records and limits.
 
-## Required MathWorks Products
+## The comparison being developed
 
-- MATLAB
-- Simulink
-- Control System Toolbox
+The frozen first plan separates electrical and software treatments using four arms, each paired with its own clean run:
 
-Simscape is required for SC-01A. SC-01B also requires Simscape Electrical and the IAUC100N04S6L014 vendor model shipped in the tested MATLAB R2026a installation. A portable ngspice 41 runtime is included for the independent original-equation comparison; it does not change any installed application.
+| Arm | Differential capacitance | Control policy |
+|---|---:|---|
+| BASELINE | 100 pF | Original baseline policy |
+| EM_ONLY | 1,000 pF | Original baseline policy |
+| SW_ONLY | 100 pF | Phase 3 protected policy |
+| COMBINED | 1,000 pF | Phase 3 protected policy |
 
-## Optional Products for Later Phases
+A larger capacitance is the prescribed electrical treatment, not an established improvement. Tracking, current, command effort, count corruption, false alarms and recovery must be assessed together. The current plan completed 16 development records; its 96 evaluation records and 16 separate closure diagnostics remain unopened. See [FOUR-WAY-EMI-PLAN-V1](04_EMI_Models/Four_Way_EMI_Experiment.md).
 
-- Stateflow
-- Motor Control Blockset
-- Simulink Test
-- Simulink Fault Analyzer
-- Embedded Coder
+The next research milestone is a justified receiver/topology decision, followed by a new reviewed experiment version. PLAN-V1 and its negative development outcome remain preserved. Hardware identification, calibrated limits and physical validation follow as separate work.
 
-## Model Fidelity Rules
+## Work completed along the way
 
-1. Every parameter must have a source, measured value, or explicit assumption label.
-2. Every result must identify the model fidelity level used.
-3. Averaged models are for controller design; switching models are for conducted-noise studies.
-4. Circuit and system simulations do not replace radiated-emissions or immunity testing.
-5. Simulation conclusions must be checked against hardware before being treated as validated engineering guidance.
+| Workstream | Contribution | Scope still open |
+|---|---|---|
+| Actuator and fault library | Reproducible representative actuator; encoder, communication and motor-bus fault models | Selected hardware and identified parameters |
+| Reduced-order EMI models | Capacitive, inductive and shared-impedance studies; parameter sensitivity | Measured coupling and receiver transfer |
+| Native electrical circuits | Finite-edge loaded network and revised switching-source verification | Physical circuit measurements and component selection |
+| Fault-tolerant control | Observer, suspect/degraded/recovery/stop modes; explicit missed-fault and recovery cases | Wider model/load uncertainty and measured thresholds |
+| Motion shaping | Rate-alarm samples in the preserved clean reversal reduced from 41 to zero, with a 6.67% original-request tracking RMSE cost | Calibrated operating envelope |
+| Separate stop/hold study | Assumed mechanical-brake model and independent numerical audit | Integrated loaded brake handoff and physical stop/restart |
+| Causal integration | Continuous circuit state, receiver events, persistent decoder and strict measurement boundary | Accepted four-arm evaluation and physical validation |
 
-## Licensing Note
+Historical campaign sizes and their original acceptance limits remain in the [research log](01_Research/Research_Log.md) and [report evidence map](09_Report/Report_Outline.md). A simulation stop command does not by itself establish safe physical holding.
 
-Use the package only with software licenses that permit the intended personal, academic, research, government, or commercial activity. License suitability is the user's responsibility.
+## Run the project locally
 
-## Native Circuit Quick Start
+For a first analytical baseline, install MATLAB and Control System Toolbox, open `03_MATLAB`, and run:
 
-Set the MATLAB current folder to `06_Circuit_Simulations/SC01A` and run `sc01a_main`. This reproduces the 67-test regression suite and the 51-run circuit campaign, including exact-reference comparisons, solver refinement, threshold-event analysis and PWM settling. The saved `models/EMI_SC01A_Finite_Edge.slx` also runs directly with embedded nominal inputs.
+```matlab
+startup_project
+study = run_baseline;  % creates a fresh timestamped results folder
+```
 
-The nominal combined rising edge produces approximately 51.7 mV peak differential disturbance; a deliberately exaggerated 300/5 pF imbalance case crosses the illustrative receiver band. These are circuit calculations with assumed bench inputs, not measured immunity limits or decoded encoder failures. See `06_Circuit_Simulations/SC01A/results/SC01A_Validation_Summary.md` for the evidence and `06_Circuit_Simulations/SC01A/Circuit_Physics_and_Verification.md` for the equations and sources.
+The complete checkpoint was tested with MATLAB R2026a Update 3, Simulink, Control System Toolbox, Simscape and Simscape Electrical. The causal receiver engine also requires a configured MATLAB-supported C++ compiler. Historical independent circuit comparisons use pinned local ngspice runtimes. The R2 vendor model is supplied by the tested MATLAB installation.
 
-For the selected-device source, set the current folder to `06_Circuit_Simulations/SC01B`, run `sc01b_startup`, then `study=sc01b_main`. The frozen five-case study compares three native integration steps, two SPICE steps and representative tolerance refinements, with terminal-energy and external energy-balance checks. See `SC01B/results/verification/SC01B_Validation_Summary.md` for exact results and failed gates. The saved `SC01B/models/EMI_SC01B_Device_Halfbridge.slx` includes runnable nominal defaults. This is isothermal numerical source verification, not physical validation or decoded encoder-error prediction.
+**A source-only clone is not the complete experiment archive.** Regression fixtures, the frozen switching waveform, historical records and runtime distributions have separate storage and identity checks. Start with the [publication reproduction guide](09_Report/Publication_2026-09-11/Publication_Reproduction.md), which distinguishes reading evidence, running the baseline and reproducing the full suite or research campaigns. The [unchanged dependency manifest](00_Project_Management/Local_Dependencies.json) and [local bootstrap instructions](00_Project_Management/Local_Reproduction.md) identify the required retained files.
+
+## Repository map
+
+| Folder | Contents |
+|---|---|
+| `00_Project_Management` | Charter, roadmap, checkpoints, compact evidence and provenance |
+| `01_Research` | Research log and literature-review plan |
+| `02_Requirements` | Requirements, FMEA, test plan and evidence status |
+| `03_MATLAB` | Actuator, fault and control implementation; tests and saved models |
+| `04_EMI_Models` | Model assumptions, experiment contract and causal implementation |
+| `05_Control_Algorithms` | Detection, supervision, recovery, motion and stop/hold designs |
+| `06_Circuit_Simulations` | Native circuits, independent references and receiver engine |
+| `07_Data` / `08_Results` | Data organization and results planning |
+| `09_Report` | Progress publication and report assembly map |
+| `10_Hardware_Design` | Future testbed planning |
+
+The numerical parameters are representative assumptions, not measurements from a selected actuator, cable or receiver. This project does not claim demonstrated hardware immunity, universal fault detection, physical safety or compliance. Formal Draft requirement approvals remain unchanged.

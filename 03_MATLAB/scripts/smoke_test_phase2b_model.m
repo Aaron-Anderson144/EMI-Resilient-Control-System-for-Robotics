@@ -1,9 +1,19 @@
-function smokeTestSummary = smoke_test_phase2b_model()
+function smokeTestSummary = smoke_test_phase2b_model(outputFolder)
 %SMOKE_TEST_PHASE2B_MODEL Exercise every Phase 2B model scenario.
+arguments
+    outputFolder (1,1) string = ""
+end
 
 scriptPath = mfilename('fullpath');
 matlabRoot = fileparts(fileparts(scriptPath));
+addpath(fullfile(matlabRoot,'functions'));
+outputFolder=prepare_fresh_output_folder(outputFolder, ...
+    fullfile(matlabRoot,'results','development'),"phase2b_smoke");
 run(fullfile(matlabRoot, 'startup_project.m'));
+oldConfig=Simulink.fileGenControl('getConfig');
+cacheCleanup=onCleanup(@()Simulink.fileGenControl('setConfig','config',oldConfig));
+Simulink.fileGenControl('set','CacheFolder',fullfile(outputFolder,'cache'), ...
+    'CodeGenFolder',fullfile(outputFolder,'codegen'),'createDir',true);
 
 params = actuator_parameters();
 modelName = 'EMI_Resilient_Actuator_Phase2B';
@@ -62,7 +72,7 @@ if ~all(completed & finiteOutputs & acceptedSourceMonotonic & ...
         'At least one Phase 2B scenario failed its smoke-test gate.');
 end
 
-writetable(smokeTestSummary, fullfile(matlabRoot, 'results', ...
+writetable(smokeTestSummary, fullfile(outputFolder, ...
     'phase2b_simulink_smoke_test.csv'));
 disp(smokeTestSummary);
 clear modelCleanup

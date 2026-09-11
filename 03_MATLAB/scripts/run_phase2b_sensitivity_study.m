@@ -12,11 +12,10 @@ arguments
 end
 assert(options.Levels >= 3 && options.GridLevels >= 3, ...
     'EMIProject:TooFewSensitivityLevels', 'At least three levels are required.');
-if outputFolder == ""
-    outputFolder = fullfile(fileparts(fileparts(mfilename('fullpath'))), ...
-        'results', 'sensitivity');
-end
-if ~isfolder(outputFolder), mkdir(outputFolder); end
+matlabRoot=fileparts(fileparts(mfilename('fullpath')));
+addpath(fullfile(matlabRoot,'functions'));
+outputFolder=prepare_fresh_output_folder(outputFolder, ...
+    fullfile(matlabRoot,'results','development'),"phase2b_sensitivity");
 startClock = tic;
 params = actuator_parameters();
 catalog = phase2b_sensitivity_catalog(params);
@@ -27,6 +26,7 @@ for c = 1:2
     nominalResults{c} = simulate_phase2b_actuator(params, localScenario(params, contexts(c)));
 end
 study.metadata.createdUTC = string(datetime('now','TimeZone','UTC','Format','yyyy-MM-dd HH:mm:ss z'));
+study.metadata.outputFolder=outputFolder;
 study.metadata.matlabVersion = string(version);
 study.metadata.parameterSetId = params.meta.parameterSetId;
 study.metadata.options = options;

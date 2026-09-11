@@ -1,8 +1,16 @@
-%RUN_BASELINE Simulate and record the clean analytical actuator baseline.
+function study = run_baseline(outputFolder)
+%RUN_BASELINE Simulate the clean baseline in a new evidence directory.
+arguments
+    outputFolder (1,1) string = ""
+end
 
 scriptPath = mfilename('fullpath');
 matlabRoot = fileparts(fileparts(scriptPath));
+addpath(fullfile(matlabRoot,'functions'));
+outputFolder = prepare_fresh_output_folder(outputFolder, ...
+    fullfile(matlabRoot,'results','development'),"baseline");
 run(fullfile(matlabRoot, 'startup_project.m'));
+resultsFolder=outputFolder;
 
 params = actuator_parameters();
 validate_parameters(params);
@@ -16,6 +24,9 @@ theta_ref_rad(time_s >= params.simulation.stepTime_s) = ...
 
 theta_rad = lsim(model.referenceToPosition, theta_ref_rad, time_s);
 voltage_cmd_V = lsim(model.referenceToCommand, theta_ref_rad, time_s);
+loadTorque_Nm = repmat(params.mechanical.nominalLoadTorque_Nm,size(time_s));
+theta_rad = theta_rad + lsim(model.loadToPosition,loadTorque_Nm,time_s);
+voltage_cmd_V = voltage_cmd_V + lsim(model.loadToCommand,loadTorque_Nm,time_s);
 
 theta_rad = theta_rad(:);
 voltage_cmd_V = voltage_cmd_V(:);
@@ -49,9 +60,8 @@ else
 end
 
 metrics.linearCommandExceedsNominalVoltage = ...
-    metrics.peakVoltageCommand_V > params.control.voltageLimit_V;
+    metrics.peakVoltageCommand_V > min(params.control.voltageLimit_V,params.electrical.nominalVoltage_V);
 
-resultsFolder = fullfile(matlabRoot, 'results');
 timeSeries = table( ...
     time_s, theta_ref_rad, theta_rad, position_error_rad, voltage_cmd_V);
 
@@ -107,3 +117,6 @@ fprintf('  Overshoot: %.3f %%\n', metrics.overshoot_percent);
 fprintf('  Settling time: %.6g s\n', metrics.settlingTime_s);
 fprintf('  Peak linear command: %.3f V\n', metrics.peakVoltageCommand_V);
 fprintf('  Results folder: %s\n', resultsFolder);
+study=struct('outputFolder',resultsFolder,'parameters',params, ...
+    'metrics',metrics,'timeSeries',timeSeries,'closedLoopPoles',closedLoopPoles);
+end

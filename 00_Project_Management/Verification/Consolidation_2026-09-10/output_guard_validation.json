@@ -1,0 +1,140 @@
+{
+  "createdUTC": "2026-09-10T20:13:09.402331+00:00",
+  "covered_entrypoints": [
+    "main / run_baseline",
+    "phase2_main / run_phase2_fault_study",
+    "smoke_test_phase2_model",
+    "validate_phase2_simulink",
+    "phase2b_main / run_phase2b_study",
+    "run_phase2b_packet_loss_monte_carlo",
+    "smoke_test_phase2b_model",
+    "validate_phase2b_simulink",
+    "phase2b_sensitivity_main / run_phase2b_sensitivity_study",
+    "validate_phase2b_sensitivity",
+    "sc01a_main / run_sc01a"
+  ],
+  "focused_tests": {
+    "count": 22,
+    "all_passed": true,
+    "csv": "C:\\Users\\adand\\Documents\\Codex\\2026-09-10\\le\\work\\baseline_consolidation\\output_guard\\focused_tests.csv",
+    "scope": "Unique/empty defaults; rejection of populated/file/missing/whitespace targets; each named runner rejects before outputs or simulation; real baseline/Phase2/Phase2B analytical exports."
+  },
+  "scratch_positive_workflows": {
+    "phase2bSmokeCases": 10,
+    "phase2bValidationCases": 10,
+    "sensitivityStudyRuns": 313,
+    "sensitivityGlobalSamples": 1,
+    "sensitivityValidationCases": 1,
+    "allChecksPassed": true,
+    "scratchProject": "C:\\Users\\adand\\Documents\\Codex\\2026-09-10\\le\\work\\baseline_consolidation\\output_guard\\scratch_project"
+  },
+  "model_and_diagram_checks": [
+    {
+      "path": "03_MATLAB/models/EMI_Resilient_Actuator_Baseline.slx",
+      "expected_sha256": "6542ae952684fc3f0227c373e33ebc0cb195ef5e5ff20e92670427d21971130a",
+      "original_sha256": "6542ae952684fc3f0227c373e33ebc0cb195ef5e5ff20e92670427d21971130a",
+      "scratch_sha256": "6542ae952684fc3f0227c373e33ebc0cb195ef5e5ff20e92670427d21971130a",
+      "original_match": true,
+      "scratch_match": true
+    },
+    {
+      "path": "03_MATLAB/models/EMI_Resilient_Actuator_Phase2.slx",
+      "expected_sha256": "1028bf00fe29e0d4156d5e3fd5ab622e2db2ea72c6e59f03ad117f9a8054b5c0",
+      "original_sha256": "1028bf00fe29e0d4156d5e3fd5ab622e2db2ea72c6e59f03ad117f9a8054b5c0",
+      "scratch_sha256": "1028bf00fe29e0d4156d5e3fd5ab622e2db2ea72c6e59f03ad117f9a8054b5c0",
+      "original_match": true,
+      "scratch_match": true
+    },
+    {
+      "path": "03_MATLAB/models/EMI_Resilient_Actuator_Phase2B.slx",
+      "expected_sha256": "70271952dde8f7eae810d41f11c56167aab1e077acdd9bca565909c71a40bdba",
+      "original_sha256": "70271952dde8f7eae810d41f11c56167aab1e077acdd9bca565909c71a40bdba",
+      "scratch_sha256": "70271952dde8f7eae810d41f11c56167aab1e077acdd9bca565909c71a40bdba",
+      "original_match": true,
+      "scratch_match": true
+    },
+    {
+      "path": "03_MATLAB/models/EMI_Resilient_Actuator_Phase3.slx",
+      "expected_sha256": "cec60b9aa56210d41370a90b82fff240ff7af20250c941240e05b3c8220ec2e2",
+      "original_sha256": "cec60b9aa56210d41370a90b82fff240ff7af20250c941240e05b3c8220ec2e2",
+      "scratch_sha256": "cec60b9aa56210d41370a90b82fff240ff7af20250c941240e05b3c8220ec2e2",
+      "original_match": true,
+      "scratch_match": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/models/EMI_SC01A_Finite_Edge.png",
+      "expected_sha256": "0a57d7d80a5de80e148b654eb149847546f3127ed5b09995d4628ccaa53faeff",
+      "original_sha256": "0a57d7d80a5de80e148b654eb149847546f3127ed5b09995d4628ccaa53faeff",
+      "scratch_sha256": "0a57d7d80a5de80e148b654eb149847546f3127ed5b09995d4628ccaa53faeff",
+      "original_match": true,
+      "scratch_match": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/models/EMI_SC01A_Finite_Edge.slx",
+      "expected_sha256": "223a0e2808cd45ba22fcd2e765adfeba3ee9b0b112d1693ff43356d47caa85e6",
+      "original_sha256": "223a0e2808cd45ba22fcd2e765adfeba3ee9b0b112d1693ff43356d47caa85e6",
+      "scratch_sha256": "223a0e2808cd45ba22fcd2e765adfeba3ee9b0b112d1693ff43356d47caa85e6",
+      "original_match": true,
+      "scratch_match": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/models/EMI_SC01B_Device_Halfbridge.png",
+      "expected_sha256": "9dcfff5217a99e7057c26153cb37b6faf9ffc8b00012caf95d07a53cc5af6000",
+      "original_sha256": "9dcfff5217a99e7057c26153cb37b6faf9ffc8b00012caf95d07a53cc5af6000",
+      "scratch_sha256": "9dcfff5217a99e7057c26153cb37b6faf9ffc8b00012caf95d07a53cc5af6000",
+      "original_match": true,
+      "scratch_match": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/models/EMI_SC01B_Device_Halfbridge.slx",
+      "expected_sha256": "fe221ef926c7392fb3479fe33adaa26312c768e74227cb5cab062560c84154ad",
+      "original_sha256": "fe221ef926c7392fb3479fe33adaa26312c768e74227cb5cab062560c84154ad",
+      "scratch_sha256": "fe221ef926c7392fb3479fe33adaa26312c768e74227cb5cab062560c84154ad",
+      "original_match": true,
+      "scratch_match": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/+sc01b_driver/split_resistor.ssc",
+      "expected_sha256": "d966f9fb4ff060f97b690f06997418b6a7bbaed213ef26d672d0bc3e5bbccb30",
+      "original_sha256": "d966f9fb4ff060f97b690f06997418b6a7bbaed213ef26d672d0bc3e5bbccb30",
+      "scratch_sha256": "d966f9fb4ff060f97b690f06997418b6a7bbaed213ef26d672d0bc3e5bbccb30",
+      "original_match": true,
+      "scratch_match": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/models/EMI_SC01B_R2_Halfbridge.png",
+      "expected_sha256": "e4725c7b5b772a5ff3533763765a4f7e6034992b68410de715b7b45749dbf4f0",
+      "original_sha256": "e4725c7b5b772a5ff3533763765a4f7e6034992b68410de715b7b45749dbf4f0",
+      "scratch_sha256": "e4725c7b5b772a5ff3533763765a4f7e6034992b68410de715b7b45749dbf4f0",
+      "original_match": true,
+      "scratch_match": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/models/EMI_SC01B_R2_Halfbridge.slx",
+      "expected_sha256": "d968677568e6cb0bb74f38e07c9a1e030ac3de39936a822eeed5e83167e6ec4a",
+      "original_sha256": "d968677568e6cb0bb74f38e07c9a1e030ac3de39936a822eeed5e83167e6ec4a",
+      "scratch_sha256": "d968677568e6cb0bb74f38e07c9a1e030ac3de39936a822eeed5e83167e6ec4a",
+      "original_match": true,
+      "scratch_match": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/sc01b_driver_lib.slx",
+      "expected_sha256": "ba4e3f544df578b656cf813ea76bd67603e298df270a4ea0526b9a5cb4ff2d51",
+      "original_sha256": "ba4e3f544df578b656cf813ea76bd67603e298df270a4ea0526b9a5cb4ff2d51",
+      "scratch_sha256": "ba4e3f544df578b656cf813ea76bd67603e298df270a4ea0526b9a5cb4ff2d51",
+      "original_match": true,
+      "scratch_match": true
+    }
+  ],
+  "historical_files_metadata_checked": 2451,
+  "historical_metadata_changes": [],
+  "model_restore_performed": false,
+  "limits": [
+    "No complete 1886-run sensitivity repeat. Smallest legal 313-run grid and one selected validation case were used.",
+    "SC01A output guard and destination helper exercised; no new full native SC01A campaign was run for this output-routing change.",
+    "Low-level plotting/summary helpers are intentionally usable inside their owning populated fresh workflow folder.",
+    "Bare named calls remain supported; converted function files must not be invoked with run(file).",
+    "Historical preservation check compares original size/mtime; model/diagram/component checks use SHA-256."
+  ],
+  "all_checks_pass": true
+}

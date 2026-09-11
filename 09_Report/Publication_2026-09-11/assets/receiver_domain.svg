@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="1030" viewBox="0 0 1450 1030" role="img" aria-labelledby="title desc">
+<title id="title">Development exposes a receiver model boundary</title><desc id="desc">Grouped bar chart of peak absolute receiver common-mode voltage. DEV01 at coupling Ccp/Ccn 10/9 pF reaches 3.34750050200855 V at 100 pF and 3.34750776203227 V at 1000 pF differential capacitance. DEV02 at coupling 200/5 pF reaches 7.5574846311737 V and 8.03757142585377 V respectively. The assumed model domain is at most 7 V. DEV01 passes and has no persistent EMI count error. All exposed DEV02 arms are rejected, so later fallback diagnostics cannot support a mitigation claim.</desc>
+<rect width="1450" height="1030" fill="white"/>
+<defs><marker id="navyArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#123B55"/></marker><marker id="tealArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#168B85"/></marker><marker id="amberArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#BE781C"/></marker></defs>
+<text x="70" y="65" font-family="Arial, Helvetica, sans-serif" font-size="41" fill="#111827" font-weight="700" text-anchor="start" >Development exposes a receiver model boundary</text>
+<text x="70" y="108" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#556573" font-weight="400" text-anchor="start" >Peak absolute common-mode voltage at the receiver in the development campaign</text>
+<rect x="610" y="146" width="31" height="20" rx="0" fill="#123B55" stroke="#123B55" stroke-width="2"/>
+<text x="653" y="165" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#556573" font-weight="400" text-anchor="start" >Cd = 100 pF</text>
+<rect x="925" y="146" width="31" height="20" rx="0" fill="#168B85" stroke="#168B85" stroke-width="2"/>
+<text x="968" y="165" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#556573" font-weight="400" text-anchor="start" >Cd = 1,000 pF</text>
+<path d="M 175 762.0 H 1360" fill="none" stroke="#E4EBEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="771.0" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#556573" font-weight="400" text-anchor="end" >0</text>
+<path d="M 175 702.1111111111111 H 1360" fill="none" stroke="#E4EBEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="711.1111111111111" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#556573" font-weight="400" text-anchor="end" >1</text>
+<path d="M 175 642.2222222222222 H 1360" fill="none" stroke="#E4EBEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="651.2222222222222" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#556573" font-weight="400" text-anchor="end" >2</text>
+<path d="M 175 582.3333333333334 H 1360" fill="none" stroke="#E4EBEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="591.3333333333334" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#556573" font-weight="400" text-anchor="end" >3</text>
+<path d="M 175 522.4444444444445 H 1360" fill="none" stroke="#E4EBEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="531.4444444444445" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#556573" font-weight="400" text-anchor="end" >4</text>
+<path d="M 175 462.55555555555554 H 1360" fill="none" stroke="#E4EBEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="471.55555555555554" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#556573" font-weight="400" text-anchor="end" >5</text>
+<path d="M 175 402.6666666666667 H 1360" fill="none" stroke="#E4EBEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="411.6666666666667" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#556573" font-weight="400" text-anchor="end" >6</text>
+<path d="M 175 342.7777777777778 H 1360" fill="none" stroke="#E4EBEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="351.7777777777778" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#556573" font-weight="400" text-anchor="end" >7</text>
+<path d="M 175 282.8888888888889 H 1360" fill="none" stroke="#E4EBEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="291.8888888888889" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#556573" font-weight="400" text-anchor="end" >8</text>
+<path d="M 175 223.0 H 1360" fill="none" stroke="#E4EBEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="232.0" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#556573" font-weight="400" text-anchor="end" >9</text>
+<text x="60" y="492" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#556573" font-weight="400" text-anchor="middle" transform="rotate(-90 60 492)">Peak |common-mode voltage| (V)</text>
+<rect x="311" y="561.5219143797102" width="140" height="200.4780856202898" rx="0" fill="#123B55" stroke="#123B55" stroke-width="0"/>
+<text x="381" y="543.5219143797102" font-family="Arial, Helvetica, sans-serif" font-size="29" fill="#111827" font-weight="700" text-anchor="middle" >3.348 V</text>
+<rect x="509" y="561.5214795849563" width="140" height="200.4785204150437" rx="0" fill="#168B85" stroke="#168B85" stroke-width="0"/>
+<text x="579" y="543.5214795849563" font-family="Arial, Helvetica, sans-serif" font-size="29" fill="#111827" font-weight="700" text-anchor="middle" >3.348 V</text>
+<rect x="881" y="309.3906426441529" width="140" height="452.6093573558471" rx="0" fill="#123B55" stroke="#123B55" stroke-width="0"/>
+<text x="951" y="291.3906426441529" font-family="Arial, Helvetica, sans-serif" font-size="29" fill="#111827" font-weight="700" text-anchor="middle" >7.557 V</text>
+<rect x="1079" y="280.63877794053536" width="140" height="481.36122205946464" rx="0" fill="#168B85" stroke="#168B85" stroke-width="0"/>
+<text x="1149" y="262.63877794053536" font-family="Arial, Helvetica, sans-serif" font-size="29" fill="#111827" font-weight="700" text-anchor="middle" >8.038 V</text>
+<path d="M 175 342.7777777777778 H 1360" fill="none" stroke="#BE781C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<rect x="187" y="294.7777777777778" width="463" height="39" rx="0" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+<text x="198" y="322.7777777777778" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#BE781C" font-weight="700" text-anchor="start" >Assumed model-domain limit: 7 V</text>
+<path d="M 175 762 H 1360" fill="none" stroke="#556573" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="480" y="814" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#111827" font-weight="700" text-anchor="middle" >DEV01</text>
+<text x="480" y="853" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#556573" font-weight="400" text-anchor="middle" >Ccp / Ccn = 10 / 9 pF</text>
+<text x="1050" y="814" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#111827" font-weight="700" text-anchor="middle" >DEV02</text>
+<text x="1050" y="853" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#556573" font-weight="400" text-anchor="middle" >Ccp / Ccn = 200 / 5 pF</text>
+<text x="480" y="910" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#168B85" font-weight="700" text-anchor="middle" >Within the assumed receiver domain</text>
+<text x="480" y="949" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#556573" font-weight="400" text-anchor="middle" >No persistent EMI count error</text>
+<text x="1050" y="910" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#BE781C" font-weight="700" text-anchor="middle" >All four exposed arms rejected</text>
+<text x="1050" y="949" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#556573" font-weight="400" text-anchor="middle" >Later fallback behavior is diagnostic only</text>
+<text x="70" y="1008" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#556573" font-weight="400" text-anchor="start" >The software counterparts have identical peaks. The 7 V limit is a model assumption, not a measured damage threshold.</text>
+</svg>

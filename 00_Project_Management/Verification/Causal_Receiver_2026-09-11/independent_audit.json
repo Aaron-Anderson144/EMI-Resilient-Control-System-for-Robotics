@@ -1,0 +1,151 @@
+{
+  "audit": "Independent Python reconstruction from exported CSV event and controller records",
+  "campaigns": [
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\results\\development\\fourway_development_20260911_01",
+      "records": [
+        {
+          "record": "DEV01_BASELINE_clean",
+          "checks": 18,
+          "passed": 18,
+          "failed": []
+        },
+        {
+          "record": "DEV01_BASELINE_exposed",
+          "checks": 17,
+          "passed": 17,
+          "failed": []
+        },
+        {
+          "record": "DEV01_COMBINED_clean",
+          "checks": 18,
+          "passed": 18,
+          "failed": []
+        },
+        {
+          "record": "DEV01_COMBINED_exposed",
+          "checks": 17,
+          "passed": 17,
+          "failed": []
+        },
+        {
+          "record": "DEV01_EM_ONLY_clean",
+          "checks": 18,
+          "passed": 18,
+          "failed": []
+        },
+        {
+          "record": "DEV01_EM_ONLY_exposed",
+          "checks": 17,
+          "passed": 17,
+          "failed": []
+        },
+        {
+          "record": "DEV01_SW_ONLY_clean",
+          "checks": 18,
+          "passed": 18,
+          "failed": []
+        },
+        {
+          "record": "DEV01_SW_ONLY_exposed",
+          "checks": 17,
+          "passed": 17,
+          "failed": []
+        },
+        {
+          "record": "DEV02_BASELINE_clean",
+          "checks": 18,
+          "passed": 18,
+          "failed": []
+        },
+        {
+          "record": "DEV02_BASELINE_exposed",
+          "checks": 17,
+          "passed": 17,
+          "failed": []
+        },
+        {
+          "record": "DEV02_COMBINED_clean",
+          "checks": 18,
+          "passed": 18,
+          "failed": []
+        },
+        {
+          "record": "DEV02_COMBINED_exposed",
+          "checks": 17,
+          "passed": 17,
+          "failed": []
+        },
+        {
+          "record": "DEV02_EM_ONLY_clean",
+          "checks": 18,
+          "passed": 18,
+          "failed": []
+        },
+        {
+          "record": "DEV02_EM_ONLY_exposed",
+          "checks": 17,
+          "passed": 17,
+          "failed": []
+        },
+        {
+          "record": "DEV02_SW_ONLY_clean",
+          "checks": 18,
+          "passed": 18,
+          "failed": []
+        },
+        {
+          "record": "DEV02_SW_ONLY_exposed",
+          "checks": 17,
+          "passed": 17,
+          "failed": []
+        }
+      ],
+      "metrics": [
+        {
+          "pair": "DEV01_BASELINE",
+          "checks": 9,
+          "failed": []
+        },
+        {
+          "pair": "DEV01_EM_ONLY",
+          "checks": 9,
+          "failed": []
+        },
+        {
+          "pair": "DEV01_SW_ONLY",
+          "checks": 9,
+          "failed": []
+        },
+        {
+          "pair": "DEV01_COMBINED",
+          "checks": 9,
+          "failed": []
+        },
+        {
+          "pair": "DEV02_BASELINE",
+          "checks": 9,
+          "failed": []
+        },
+        {
+          "pair": "DEV02_EM_ONLY",
+          "checks": 9,
+          "failed": []
+        },
+        {
+          "pair": "DEV02_SW_ONLY",
+          "checks": 9,
+          "failed": []
+        },
+        {
+          "pair": "DEV02_COMBINED",
+          "checks": 9,
+          "failed": []
+        }
+      ],
+      "all_passed": true
+    }
+  ],
+  "all_passed": true,
+  "physical_validation": false
+}

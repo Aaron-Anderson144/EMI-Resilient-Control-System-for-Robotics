@@ -1,0 +1,3 @@
+# Preserve exact source bytes across local checkouts: circuit/run manifests
+# fingerprint files, including their original line endings.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

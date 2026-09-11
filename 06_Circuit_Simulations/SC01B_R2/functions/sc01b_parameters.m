@@ -1,0 +1,44 @@
+function p=sc01b_parameters()
+%SC01B_PARAMETERS Frozen device model and explicitly sourced/assumed fixture.
+p.meta.id="SC01B-R2-IAUC100N04S6L014";
+p.meta.case="nominal";
+p.meta.scope="Isothermal device-model verification; no physical source validation";
+p.device.series="Infineon OptiMOS6 40V";
+p.device.name="IAUC100N04S6L014";
+p.device.temperature_C=25;
+p.device.voltageRating_V=40;
+p.device.gateRating_V=16;
+p.device.source="MATLAB R2026a shipped Infineon SPICE model, typical parameters";
+p.bus.voltage_V=24;
+p.bus.feedResistance_Ohm=0.05;
+p.bus.feedInductance_H=20e-9;
+p.bus.capacitance_F=10e-6;
+p.bus.capacitorESR_Ohm=0.01;
+p.bus.provenance="Assumed bench supply and local decoupling, not selected layout or capacitor";
+p.load.inductance_H=2.5e-3;
+p.load.resistance_Ohm=8;
+p.load.referenceCurrent_A=3;
+p.load.provenance="Assumed8ohm/2.5mH load; high-side initiallyON, consistentDC operating point near3A; current follows circuit equations";
+p.driver.reference="Revised bipolar behavioral driver with directional gate impedance; not UCC27211A-equivalent";
+p.driver.voltage_V=12;
+p.driver.outputResistance_Ohm=3;
+p.driver.externalResistance_Ohm=22;
+p.driver.additionalTurnOnResistance_Ohm=0;
+p.driver.turnOffResistance_Ohm=3;
+p.driver.offVoltage_V=-1.5;
+p.driver.riseDelay_s=20e-9;
+p.driver.fallDelay_s=19e-9;
+p.driver.commandRamp_s=20e-9;
+p.driver.provenance="R2 assumes 12V on/-1.5V off regulated floating supplies and unequal charge/discharge impedance. Ron=3ohm+external gate resistor; total Roff=3ohm. The original 20/19ns delays,20ns linear ramps,and300ns deadtime are retained. Negative rail and split-output behavior are explicit design changes; no complete driver IC, current limit, clamp diode dynamics, or bootstrap dynamics are modeled.";
+p.control.highOn_s=4e-6;
+p.control.highOff_s=2e-6;
+p.control.initialHigh=true;
+p.control.deadTime_s=300e-9;
+p.control.provenance="Assumed high-side off/on commutation pair with complementary low-side operation; dead time commanded before driver delay";
+p.simulation.stopTime_s=5e-6;
+p.simulation.maxStep_s=0.5e-9;
+p.simulation.relativeTolerance=1e-5;
+p.simulation.absoluteTolerance=1e-9;
+p.validation.startTime_s=1e-6;
+p.validation.provenance="Exclude initialization preamble from edge comparison; separately report initial and pre-edge current";
+end

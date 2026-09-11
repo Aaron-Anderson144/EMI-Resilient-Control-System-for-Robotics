@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "design_id": "FOUR-WAY-EMI-PLAN-V1",
+  "passed": false,
+  "numerical_passed": true,
+  "requiredNativeRuns": 24,
+  "executedNativeRuns": 24,
+  "passedNativeRuns": 12,
+  "nativeRecordsNumericallyPassed": 24,
+  "requiredRefinements": 16,
+  "executedRefinements": 16,
+  "passedRefinements": 16,
+  "integerCountsExact": true,
+  "receiverDomainRejectedRuns": 12,
+  "receiverDomainRejectedFixtures": 4,
+  "engine": "fourway_exact_cc1fdc1322a41157",
+  "engine_source_sha256": "cc1fdc1322a4115776d8a59453f35d2980f37e19c58a3e797a0f95712432dbd6",
+  "numerical_report": "native_final_summary.json",
+  "numerical_report_sha256": "811fb13a5e8123dd4b8106e7f3c62af55a0123abc0dae15e9fd22e0316686d2c",
+  "scope": "Strict usable native acceptance. All 24 numerical comparisons and 16 refinements pass; 12 runs cross the frozen 7 V receiver common-mode domain and are rejected for control-effect interpretation. Evaluation approval is withheld."
+}

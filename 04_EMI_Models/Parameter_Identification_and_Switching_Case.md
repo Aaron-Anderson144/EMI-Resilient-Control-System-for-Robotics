@@ -1,5 +1,6 @@
 # Parameter Identification and the Next Switching Circuit Case
 
+Current update (v0.3, 2026-09-09): SC01A and SC01B_R2 are implemented and numerically verified; older proposed-design wording below records the planning context. Motor-supply/load integration is now separately verified. Physical source and receiver identification remain open.
 Date: 2026-09-09  
 Status: SC-01A implemented and numerically verified on 2026-09-09. SC-01B and physical parameter identification remain proposed; no hardware validation is claimed.
 

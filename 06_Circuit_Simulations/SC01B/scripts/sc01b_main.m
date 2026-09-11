@@ -9,10 +9,11 @@ arguments
     options.Finalize (1,1) logical = true
 end
 root=fileparts(fileparts(mfilename('fullpath')));run(fullfile(root,'sc01b_startup.m'));
-if options.OutputFolder=="",options.OutputFolder=fullfile(root,'results','verification');end
+% Select and check the destination before any campaign output can be written.
+folder=sc01b_output_folder(root,options.OutputFolder,options.ReuseCompletedRuns);
 if options.NgspiceExecutable=="",options.NgspiceExecutable=fullfile(root,'tools','ngspice','bin','ngspice.exe');end
 assert(isfile(options.NgspiceExecutable),'SC01B:RuntimeMissing','See README for the portable ngspice runtime.');
-folder=options.OutputFolder;if ~isfolder(folder),mkdir(folder);end
+if ~isfolder(folder),mkdir(folder);end
 c=sc01b_criteria();writeJSON(fullfile(folder,'criteria.json'),c);
 caseNames=c.caseNames;if ~isempty(options.Cases),caseNames=options.Cases;end
 assert(all(ismember(caseNames,c.caseNames)) && numel(unique(caseNames))==numel(caseNames),'SC01B:Cases','Unknown or duplicate cases.');

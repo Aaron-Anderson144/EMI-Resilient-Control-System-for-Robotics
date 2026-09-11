@@ -1,0 +1,61 @@
+{
+  "source_campaign": "SC01B/results/verification",
+  "scope": "Immutable original campaign finest native metrics; not the later exploratory 0.5 ns reproduction.",
+  "source_sha256": {
+    "metrics.csv": "dd8c0a48f5c4039b72e73681ca429fedd53b8a1b55465185209ec5e2b91fea11",
+    "status.json": "7509615ec35fd660615ab42b8a063f312fb27872fed3fb24474f2e313db3fcbc"
+  },
+  "status": {
+    "numericalCampaignPassed": false,
+    "operatingPointsPassed": false,
+    "physicalSourceValidated": false,
+    "tests": {
+      "Total": 84,
+      "Passed": 84,
+      "Failed": 0,
+      "Incomplete": 0
+    }
+  },
+  "cases": [
+    {
+      "Case": "nominal",
+      "PeakNativeTerminal_A": 8.24605379874291,
+      "PeakSpiceTerminal_A": 8.24585370034613,
+      "PeakSharedForwardChannelCurrent_A": 3.19690171405656,
+      "NativeChannelOverlap_s": 4.06449577199143e-08,
+      "NativeUnresolvedEvents": 1
+    },
+    {
+      "Case": "holdout_bus18",
+      "PeakNativeTerminal_A": 5.98653823137176,
+      "PeakSpiceTerminal_A": 5.98685008741911,
+      "PeakSharedForwardChannelCurrent_A": 0.307106210310368,
+      "NativeChannelOverlap_s": 3.3036771188161e-08,
+      "NativeUnresolvedEvents": 1
+    },
+    {
+      "Case": "holdout_load4ohm",
+      "PeakNativeTerminal_A": 12.0572811580484,
+      "PeakSpiceTerminal_A": 12.0561940535845,
+      "PeakSharedForwardChannelCurrent_A": 3.78336946219586,
+      "NativeChannelOverlap_s": 3.72401852388277e-08,
+      "NativeUnresolvedEvents": 1
+    },
+    {
+      "Case": "holdout_gate47",
+      "PeakNativeTerminal_A": 186.919472830665,
+      "PeakSpiceTerminal_A": 186.919663538992,
+      "PeakSharedForwardChannelCurrent_A": 183.464202233378,
+      "NativeChannelOverlap_s": 3.04193070608188e-07,
+      "NativeUnresolvedEvents": 2
+    },
+    {
+      "Case": "holdout_bus30_load16_gate10",
+      "PeakNativeTerminal_A": 11.5431740253923,
+      "PeakSpiceTerminal_A": 11.5435356842715,
+      "PeakSharedForwardChannelCurrent_A": 5.10636178954194,
+      "NativeChannelOverlap_s": 1.63050139549996e-08,
+      "NativeUnresolvedEvents": 1
+    }
+  ]
+}

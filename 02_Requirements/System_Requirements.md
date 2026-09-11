@@ -18,9 +18,10 @@
 | FUN-004A | The model shall support independent Gaussian noise, sinusoidal interference, count-jump, and hold-last encoder-dropout scenarios. | Scenario tests and MATLAB/Simulink cross-validation | Verified |
 | FUN-004B | The model shall support independent communication delay, jitter, packet-loss, and ground-offset scenarios. | Scenario, causality, determinism, boundary, and MATLAB/Simulink tests | Verified |
 | FUN-004C | The model shall support independent reduced-order capacitive, inductive, and shared-impedance coupling scenarios. | Equation, scaling, isolation, superposition, and MATLAB/Simulink tests | Verified |
+| FUN-004D | The averaged actuator shall support motor-bus sag and interruption with bounded applied voltage, continuous plant/load dynamics and explicit controller-state hold/reset semantics. | Supply/load unit tests and 13-case MATLAB/Simulink campaign | Verified in v0.3; hardware brownout outside scope |
 | FUN-005 | The controller shall expose normal, degraded, recovery, and safe-stop operating modes. | State-transition tests | Draft |
 | FUN-006 | Every simulation shall record the configuration and parameter set used. | Scenario-manifest and output inspection | Verified for Phase 2B |
-| FUN-007 | Communication reception shall accept only newer source timestamps, reject out-of-order arrivals, and hold the last accepted value when no newer packet arrives. | Packet-schedule tests and discrete-profile cross-validation | Partial |
+| FUN-007 | Communication reception shall accept only newer source timestamps, reject out-of-order arrivals, and hold the last accepted value when no newer packet arrives. | Hand-constructed collision/stale-arrival tests, frozen-profile regression and discrete-profile cross-validation | Verified for the specified numerical receiver |
 
 ## Baseline Performance Requirements
 
@@ -31,7 +32,7 @@ Initial thresholds are provisional until a physical actuator or authoritative pa
 | PERF-001 | The clean discrete closed loop shall have all poles strictly inside the unit circle. | Pole calculation | Verified |
 | PERF-002 | The clean baseline shall track a 30 degree position command with a bounded response. | Simulation | Verified |
 | PERF-003 | Baseline tracking error, overshoot, settling time, and control effort shall be recorded. | Results file | Verified |
-| PERF-004 | The model shall enforce the nominal drive-voltage limit when saturation is enabled. | Simulation | Draft |
+| PERF-004 | All nonlinear actuator models shall enforce the configured drive-voltage limit bounded by available bus voltage; Phase 2C additionally varies the available bus during supply faults. | Both-polarity saturation tests, low-bus checks across all three models, and supply integration comparisons | Verified in v0.3 |
 | PERF-005 | Identical parameters and random seed shall reproduce identical outputs within numerical tolerance. | Automated test | Verified |
 
 ## Resilience Requirements
@@ -64,3 +65,9 @@ Initial thresholds are provisional until a physical actuator or authoritative pa
 | SAFE-003 | Initial testing shall use current-limited, bench-scale power. | Procedure review | Draft |
 | SAFE-004 | EMI injection shall use controlled conducted or localized near-field methods. | Procedure review | Draft |
 | SAFE-005 | Formal compliance shall not be claimed without appropriate facilities, calibration, and procedures. | Report review | Draft |
+
+## Approval and evidence reconciliation, 2026-09-10
+
+The historical Status column is preserved. A recorded numerical test does not approve the wording of a Draft requirement; no Draft row is promoted to Accepted or Verified by this update. Conversely, Draft does not mean that all related numerical behavior is absent. Read the independent approval/evidence columns in [Research Evidence Status](Research_Evidence_Status.md) and the scope-specific [Verification Traceability](Verification_Traceability.md).
+
+FUN-005 and RES-001/002/003/004 have recorded Phase3 numerical evidence with explicit misses, non-recovery and physical-limit boundaries. SAFE-001/002/003/004 remain physical inspection/procedure work; voltage clipping and the separate assumed-brake plant study do not close them. RES-005 remains design-only/open under [FOUR-WAY-EMI-PLAN-V1](../04_EMI_Models/Four_Way_EMI_Experiment.md): causal interface implementation and a completed four-arm evaluation are required. DATA-002 and literature/source applicability remain partial. Existing Verified rows retain their stated fixture scope; no universal or physical extension is inferred.

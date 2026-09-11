@@ -1,0 +1,15 @@
+{
+  "requiredNativeRecords": 24,
+  "nativeRecordsAudited": 24,
+  "nativeRecordsNumericallyPassed": 24,
+  "refinementsRequired": 16,
+  "refinementsPassed": 16,
+  "receiverDomainRejectedRecords": 12,
+  "receiverDomainRejectedFixtures": 4,
+  "peakPointwiseVoltageError_V": 8.0202320795974558E-5,
+  "peakRefinementVoltageError_V": 7.2725194282252659E-6,
+  "peakThresholdTimeError_ns": 0.0019675618264073814,
+  "engine": "fourway_exact_cc1fdc1322a41157",
+  "passed": true,
+  "scope": "Numerical engine/circuit agreement; domain-rejected cases remain unusable for control-effect inference."
+}

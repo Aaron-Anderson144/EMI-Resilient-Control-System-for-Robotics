@@ -11,12 +11,17 @@ end
 
 scenario = phase2b_scenario(scenarioName, params);
 signals = phase2b_simulink_signals(params, scenario);
+modelName = "EMI_Resilient_Actuator_Phase2B";
+configure_actuator_simulink_parameters(modelName,params,"phase2b");
+set_param(char(modelName + "/Supply Controller Reset Policy"),'Value', ...
+    num2str(double(string(signals.supply.controllerStatePolicy) == "reset")));
 
 assignin('base', 'phase2bEquivalentEncoderError', ...
     signals.phase2bEquivalentEncoderError);
 assignin('base', 'phase2bAcceptedDelay', signals.phase2bAcceptedDelay);
 assignin('base', 'phase2bSampleReceived', signals.phase2bSampleReceived);
 assignin('base', 'phase2bDiagnostics', signals.phase2bDiagnostics);
+assignin('base', 'phase2bSupplyProfile', signals.phase2bSupplyProfile);
 assignin('base', 'phase2bScenario', scenario);
 assignin('base', 'phase2bParameters', params);
 

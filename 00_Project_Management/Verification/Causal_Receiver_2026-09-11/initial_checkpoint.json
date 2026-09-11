@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-09-11T13:10:47.332700+00:00",
+  "frozen_files_verified": 16,
+  "baseline_commit": "74850c244fae7dfdb1349fb8f81450e0655c447b",
+  "saved_models": [
+    {
+      "path": "03_MATLAB/models/EMI_Resilient_Actuator_Baseline.slx",
+      "sha256": "6542ae952684fc3f0227c373e33ebc0cb195ef5e5ff20e92670427d21971130a"
+    },
+    {
+      "path": "03_MATLAB/models/EMI_Resilient_Actuator_Phase2.slx",
+      "sha256": "1028bf00fe29e0d4156d5e3fd5ab622e2db2ea72c6e59f03ad117f9a8054b5c0"
+    },
+    {
+      "path": "03_MATLAB/models/EMI_Resilient_Actuator_Phase2B.slx",
+      "sha256": "70271952dde8f7eae810d41f11c56167aab1e077acdd9bca565909c71a40bdba"
+    },
+    {
+      "path": "03_MATLAB/models/EMI_Resilient_Actuator_Phase3.slx",
+      "sha256": "cec60b9aa56210d41370a90b82fff240ff7af20250c941240e05b3c8220ec2e2"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/sc01b_driver_lib.slx",
+      "sha256": "ba4e3f544df578b656cf813ea76bd67603e298df270a4ea0526b9a5cb4ff2d51"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/models/EMI_SC01A_Finite_Edge.slx",
+      "sha256": "223a0e2808cd45ba22fcd2e765adfeba3ee9b0b112d1693ff43356d47caa85e6"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/models/EMI_SC01B_Device_Halfbridge.slx",
+      "sha256": "fe221ef926c7392fb3479fe33adaa26312c768e74227cb5cab062560c84154ad"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/models/EMI_SC01B_R2_Halfbridge.slx",
+      "sha256": "d968677568e6cb0bb74f38e07c9a1e030ac3de39936a822eeed5e83167e6ec4a"
+    }
+  ]
+}

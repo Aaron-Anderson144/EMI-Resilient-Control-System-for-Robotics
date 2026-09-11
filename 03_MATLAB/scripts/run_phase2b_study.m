@@ -1,12 +1,19 @@
-%RUN_PHASE2B_STUDY Run the isolated and combined Phase 2B fault cases.
+function study = run_phase2b_study(outputFolder)
+%RUN_PHASE2B_STUDY Run the Phase 2B fault cases in a new evidence directory.
 % Results are always compared with the matched, all-faults-disabled case.
+arguments
+    outputFolder (1,1) string = ""
+end
 
 scriptPath = mfilename('fullpath');
 matlabRoot = fileparts(fileparts(scriptPath));
+addpath(fullfile(matlabRoot,'functions'));
+outputFolder = prepare_fresh_output_folder(outputFolder, ...
+    fullfile(matlabRoot,'results','development'),"phase2b");
 run(fullfile(matlabRoot, 'startup_project.m'));
+resultsFolder=outputFolder;
 
 params = actuator_parameters();
-resultsFolder = fullfile(matlabRoot, 'results');
 scenarioNames = [ ...
     "none", ...
     "capacitive_coupling", ...
@@ -69,6 +76,11 @@ localCreateSummaryFigure(studyResults, metricDetails, scenarioNames, ...
 
 disp(phase2bMetrics);
 fprintf('Phase 2B analytical study completed.\n');
+fprintf('Results folder: %s\n',resultsFolder);
+study=struct('outputFolder',resultsFolder,'parameters',params, ...
+    'scenarioNames',scenarioNames,'results',{studyResults}, ...
+    'metrics',phase2bMetrics,'scenarioManifest',scenarioManifest);
+end
 
 function record = localManifestRecord(result, params)
 scenario = result.scenario;
@@ -99,8 +111,8 @@ record.receiverMarginExceeded = any( ...
 record.maxTransmitDelay_samples = max( ...
     result.communication.transmitDelay_samples);
 record.packetOpportunityCount = ...
-    result.communication.transmittedPacketCount;
-record.packetDropCount = result.communication.droppedPacketCount;
+    result.communication.packetSummary.faultWindow.transmittedPacketCount;
+record.packetDropCount = result.communication.packetSummary.faultWindow.droppedPacketCount;
 record.jitterRandomSeed = ...
     params.phase2b.communication.jitterRandomSeed;
 record.packetLossRandomSeed = ...

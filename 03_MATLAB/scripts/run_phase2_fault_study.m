@@ -1,15 +1,22 @@
-%RUN_PHASE2_FAULT_STUDY Compare independently enabled encoder faults.
+function study = run_phase2_fault_study(outputFolder)
+%RUN_PHASE2_FAULT_STUDY Compare encoder faults in a new evidence directory.
+arguments
+    outputFolder (1,1) string = ""
+end
 
 scriptPath = mfilename('fullpath');
 matlabRoot = fileparts(fileparts(scriptPath));
+addpath(fullfile(matlabRoot,'functions'));
+outputFolder=prepare_fresh_output_folder(outputFolder, ...
+    fullfile(matlabRoot,'results','development'),"phase2");
 run(fullfile(matlabRoot, 'startup_project.m'));
+resultsFolder=outputFolder;
 
 params = actuator_parameters();
 scenarioNames = ["none", "gaussian", "sinusoidal", "count_jump", "dropout"];
 scenarioCount = numel(scenarioNames);
 studyResults = cell(scenarioCount, 1);
 metricRecords = cell(scenarioCount, 1);
-resultsFolder = fullfile(matlabRoot, 'results');
 
 for scenarioIndex = 1:scenarioCount
     scenario = encoder_fault_scenario( ...
@@ -81,3 +88,7 @@ exportgraphics(figureHandle, ...
 
 disp(phase2Metrics);
 fprintf('Phase 2 analytical fault study completed.\n');
+fprintf('Results folder: %s\n',resultsFolder);
+study=struct('outputFolder',resultsFolder,'parameters',params, ...
+    'scenarioNames',scenarioNames,'results',{studyResults},'metrics',phase2Metrics);
+end

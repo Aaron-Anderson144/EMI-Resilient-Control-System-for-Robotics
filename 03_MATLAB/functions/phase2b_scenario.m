@@ -7,6 +7,7 @@ arguments
 end
 
 name = lower(strtrim(name));
+validate_parameters(params);
 
 scenario.name = name;
 scenario.description = "";
@@ -19,6 +20,18 @@ scenario.groundOffset.enabled = false;
 scenario.communication.fixedDelayEnabled = false;
 scenario.communication.jitterEnabled = false;
 scenario.communication.packetLossEnabled = false;
+if isfield(params,'supply')
+    supplyDefaults=params.supply;
+else
+    % Historical v0.2 parameter archives retain their no-supply behavior.
+    supplyDefaults=struct('startTime_s',params.phase2b.source.startTime_s, ...
+        'stopTime_s',params.phase2b.source.stopTime_s,'sagVoltage_V',0.5, ...
+        'interruptionVoltage_V',0,'controllerStatePolicy',"hold");
+end
+scenario.supply = struct('enabled',false, ...
+    'voltage_V',params.electrical.nominalVoltage_V, ...
+    'startTime_s',supplyDefaults.startTime_s,'stopTime_s',supplyDefaults.stopTime_s, ...
+    'controllerStatePolicy',supplyDefaults.controllerStatePolicy);
 
 switch name
     case "none"
@@ -49,7 +62,7 @@ switch name
     case "packet_loss"
         scenario.description = "Seeded packet loss with hold-last reception only";
         scenario.communication.packetLossEnabled = true;
-    case "combined_phase2b"
+    case {"combined_phase2b", "combined_supply"}
         scenario.description = "Exploratory combination of every Phase 2B mechanism";
         scenario.coupling.capacitiveEnabled = true;
         scenario.coupling.inductiveEnabled = true;
@@ -58,6 +71,22 @@ switch name
         scenario.communication.fixedDelayEnabled = true;
         scenario.communication.jitterEnabled = true;
         scenario.communication.packetLossEnabled = true;
+        if name=="combined_supply"
+            scenario.description="Combined Phase 2B faults and motor-supply interruption";
+            scenario.supply.enabled=true;
+            scenario.supply.voltage_V=supplyDefaults.interruptionVoltage_V;
+        end
+    case "supply_sag"
+        scenario.description="Reduced motor-bus voltage; controller remains powered";
+        scenario.supply.enabled=true;
+        scenario.supply.voltage_V=supplyDefaults.sagVoltage_V;
+    case {"supply_interruption", "supply_interruption_reset"}
+        scenario.description="Motor bus unavailable; plant and load remain active";
+        scenario.supply.enabled=true;
+        scenario.supply.voltage_V=supplyDefaults.interruptionVoltage_V;
+        if name=="supply_interruption_reset"
+            scenario.supply.controllerStatePolicy="reset";
+        end
     otherwise
         error("phase2b_scenario:UnknownScenario", ...
             "Unknown Phase 2B scenario '%s'.", name);
@@ -83,6 +112,10 @@ end
 if communicationEnabled
     starts(end + 1) = params.phase2b.communication.startTime_s;
     stops(end + 1) = params.phase2b.communication.stopTime_s;
+end
+if scenario.supply.enabled
+    starts(end+1)=scenario.supply.startTime_s;
+    stops(end+1)=scenario.supply.stopTime_s;
 end
 
 scenario.physicalEnabled = physicalEnabled;

@@ -2,6 +2,8 @@ function profile = encoder_fault_profile(time_s, params, scenario)
 %ENCODER_FAULT_PROFILE Generate deterministic additive and dropout faults.
 
 validate_parameters(params);
+validate_encoder_scenario(scenario, params);
+validate_profile_time(time_s, params);
 time_s = time_s(:);
 
 if isempty(time_s) || any(~isfinite(time_s)) || ...
@@ -60,4 +62,3 @@ profile.anyFaultActive = ...
     profile.additiveFaultActive | profile.dropoutActive;
 profile.scenarioName = scenario.name;
 end
-

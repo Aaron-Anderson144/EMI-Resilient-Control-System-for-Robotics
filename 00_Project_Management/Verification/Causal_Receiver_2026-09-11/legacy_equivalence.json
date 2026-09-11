@@ -1,0 +1,11 @@
+{
+  "records": 116,
+  "samplesPerRecord": 3001,
+  "first20ExactRecords": 116,
+  "all31ChannelsExactRecords": 116,
+  "plantExactRecords": 116,
+  "reasonExactRecords": 116,
+  "prechangeLoopSHA256": "0c79081c2172cdb493c97255dee3d059481780b9fbb131e0bd093748de3bb94c",
+  "comparison": "isequaln: exact, matching NaN masks, no tolerance",
+  "passed": true
+}

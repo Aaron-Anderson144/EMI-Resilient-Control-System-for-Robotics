@@ -1,0 +1,12 @@
+{
+  "tests": 468,
+  "passed": true,
+  "passed_tests": 468,
+  "failed": 0,
+  "incomplete": 0,
+  "legacy_first20_passed": true,
+  "legacy_all31_passed": true,
+  "legacy_records": 116,
+  "matlab_version": "26.1.0.3276743 (R2026a) Update 3",
+  "physical_validation": false
+}

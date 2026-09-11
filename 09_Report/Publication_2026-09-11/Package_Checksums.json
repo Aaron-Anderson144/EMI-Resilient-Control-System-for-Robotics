@@ -1,0 +1,110 @@
+{
+  "schema": "emi-publication-artifacts-v1",
+  "files": [
+    {
+      "path": "Announcement_Draft.md",
+      "bytes": 1198,
+      "sha256": "66c71ce45c2266840c96eaf0f54bdf7a76b892f0f6df7fd69cb45a3bc868cbca"
+    },
+    {
+      "path": "assets/four_arm_design.png",
+      "bytes": 322046,
+      "sha256": "6bcab94f7b4cd946f11e6334040a59d0dfab96bab47121ef82c1c532a5ad4e83"
+    },
+    {
+      "path": "assets/four_arm_design.svg",
+      "bytes": 5967,
+      "sha256": "9cfe4d7e91a366b2031840a6cc8be9f2db93fd37bde38044a543b8caa8017721"
+    },
+    {
+      "path": "assets/four_arm_design_report.png",
+      "bytes": 288502,
+      "sha256": "4ea8375f4bcb9a50dd2366ec825adf5fd90c527fa74d3881b293aa9ee73913e3"
+    },
+    {
+      "path": "assets/four_arm_design_report.svg",
+      "bytes": 5285,
+      "sha256": "affe0a5fcdd7cfb59c683cfffba221b99aff1f47fe0ea25c994f01cf37e83e59"
+    },
+    {
+      "path": "assets/receiver_domain.png",
+      "bytes": 270819,
+      "sha256": "31dfaf4e940de470f38e70ebaa6aa2a65de28f721886add5d2736ec4303c915b"
+    },
+    {
+      "path": "assets/receiver_domain.svg",
+      "bytes": 8743,
+      "sha256": "bce62b0ee0ef4859e8e9102a20a65b787fb9daab0d25bf803c655a9ed5ed7fb5"
+    },
+    {
+      "path": "assets/receiver_domain_report.png",
+      "bytes": 249453,
+      "sha256": "2b4b14d630e8bd8b9ecff251c4936073774cb928424ae6948550d70d2a07e891"
+    },
+    {
+      "path": "assets/receiver_domain_report.svg",
+      "bytes": 8518,
+      "sha256": "1727dbe5bdfb8c74ddcc4569797bf85ac62613bf3623d7dda3d0c8c86d93b0eb"
+    },
+    {
+      "path": "assets/system_architecture.png",
+      "bytes": 505279,
+      "sha256": "1fe5514762b58f02d9a5cfc9c23a61d70af4daaf08b2675d7f81dbf122403640"
+    },
+    {
+      "path": "assets/system_architecture.svg",
+      "bytes": 12768,
+      "sha256": "2fb36362a8632635f4f5b2667304d85d1f09f0d1e92b593374e5d1e40afe6432"
+    },
+    {
+      "path": "EMI_Robotics_Progress_Report.docx",
+      "bytes": 996626,
+      "sha256": "03dd3b0d20aa03a42d12c51ba811cc6f3747810b75b3c31752362345dd58d48c"
+    },
+    {
+      "path": "EMI_Robotics_Progress_Report.md",
+      "bytes": 29807,
+      "sha256": "d6f72890df95acda537b8b912cca9dcdfbf30707ec26fc6a3981df087439fc14"
+    },
+    {
+      "path": "EMI_Robotics_Progress_Report.pdf",
+      "bytes": 1154838,
+      "sha256": "3c490dd30b2674a6096d8d7184123f58eabc557f37c9092f7d3b0213ac034c48"
+    },
+    {
+      "path": "Evidence_Catalogue.md",
+      "bytes": 14556,
+      "sha256": "6dcd3ca8d37d10813eb2ba380d9c64fdfec5ffb4a02250bbd78d18a48c3582a3"
+    },
+    {
+      "path": "Figure_Captions.md",
+      "bytes": 2832,
+      "sha256": "69a10cd5cb49f66591c26ee2512a71212ea041738fecf78796f4ae6a2af6c0f9"
+    },
+    {
+      "path": "Public_Reproduction_Inputs.zip",
+      "bytes": 7886129,
+      "sha256": "d2fa696fa4a8508afa1077da2cc07e571718f32df6f557656f7e2b98f1d6d3fd"
+    },
+    {
+      "path": "Public_Update.md",
+      "bytes": 2975,
+      "sha256": "c2333a37929465ce61418602107443b4d99be0a7d175e16b30d1e467aa2b79b8"
+    },
+    {
+      "path": "Publication_Reproduction.md",
+      "bytes": 10972,
+      "sha256": "e5f1c8fde87b365d5a607fd5103a1ad9c98185f1535ef8af2f73a674a1d54ff8"
+    },
+    {
+      "path": "Publication_Source_Manifest.json",
+      "bytes": 126639,
+      "sha256": "cbdb2acfeb9ce881d79aa160e8d08f595db7f7cc70793b6b9760e4877cc1d969"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1599,
+      "sha256": "9fc39cc479055ac27690ac796ae944b79de95e4713cb96b15574aa7836b07b96"
+    }
+  ]
+}

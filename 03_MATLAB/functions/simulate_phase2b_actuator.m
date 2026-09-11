@@ -16,10 +16,10 @@ reference_rad(time_s >= params.simulation.stepTime_s) = ...
     params.simulation.stepAmplitude_rad;
 physical = physical_coupling_profile(time_s, params, scenario);
 communication = communication_channel_profile(time_s, params, scenario);
+supply = supply_fault_profile(time_s, params, scenario);
 
 continuousPlant = actuator_state_space(params);
-voltagePlant = continuousPlant(:, 1);
-discretePlant = ss(c2d(voltagePlant, Ts, 'zoh'));
+discretePlant = ss(c2d(continuousPlant, Ts, 'zoh'));
 [plantA, plantB, plantC, plantD] = ssdata(discretePlant);
 
 controller = design_baseline_controller(params, continuousPlant);
@@ -39,9 +39,11 @@ receivedMeasurement_rad = zeros(n, 1);
 trackingError_rad = zeros(n, 1);
 unsaturatedCommand_V = zeros(n, 1);
 command_V = zeros(n, 1);
+controllerState_log = zeros(n, size(controllerA, 1));
 
 for k = 1:n
-    y = plantC * plantState + plantD * previousDriveVoltage_V;
+    y = plantC * plantState + ...
+        plantD * [previousDriveVoltage_V; params.mechanical.nominalLoadTorque_Nm];
     state(k, :) = plantState.';
     output(k, :) = y.';
 
@@ -55,16 +57,22 @@ for k = 1:n
     receivedMeasurement_rad(k) = lastReceivedMeasurement_rad;
 
     trackingError_rad(k) = reference_rad(k) - receivedMeasurement_rad(k);
+    controllerState_log(k,:) = controllerState.';
     rawCommand = controllerC * controllerState + ...
         controllerD * trackingError_rad(k);
     unsaturatedCommand_V(k) = rawCommand;
     command_V(k) = min(max(unsaturatedCommand_V(k), ...
-        -params.control.voltageLimit_V), params.control.voltageLimit_V);
+        -supply.commandLimit_V(k)), supply.commandLimit_V(k));
 
     if k < n
-        controllerState = controllerA * controllerState + ...
-            controllerB * trackingError_rad(k);
-        plantState = plantA * plantState + plantB * command_V(k);
+        if supply.driveAvailable(k)
+            controllerState = controllerA * controllerState + ...
+                controllerB * trackingError_rad(k);
+        elseif supply.controllerStatePolicy == "reset"
+            controllerState(:) = 0;
+        end % "hold" retains x_k while the motor bus is unavailable.
+        plantState = plantA * plantState + ...
+            plantB * [command_V(k); params.mechanical.nominalLoadTorque_Nm];
         previousDriveVoltage_V = command_V(k);
     end
 end
@@ -84,8 +92,11 @@ result.command_V = command_V;
 result.state = state;
 result.physical = physical;
 result.communication = communication;
+result.supply = supply;
+result.controllerState_log = controllerState_log;
 result.profile.configuredWindowActive = ...
-    physical.configuredWindowActive | communication.configuredWindowActive;
+    physical.configuredWindowActive | communication.configuredWindowActive | ...
+    supply.configuredWindowActive;
 
 result.timeSeries = table(time_s, reference_rad, result.position_rad, ...
     result.velocity_rad_s, result.current_A, ...
@@ -119,4 +130,11 @@ result.timeSeries = table(time_s, reference_rad, result.position_rad, ...
     'measurement_age_s', 'collision_discard_count', ...
     'out_of_order_discard_count'});
 result.table = result.timeSeries;
+% Supply diagnostics are separate to preserve the established Phase 2B CSV
+% and 29-channel Simulink interface used by the exploratory study.
+result.supplyTimeSeries = table(time_s, supply.voltage_V, supply.commandLimit_V, ...
+    supply.driveAvailable, supply.configuredWindowActive, ...
+    repmat(params.mechanical.nominalLoadTorque_Nm,n,1), ...
+    'VariableNames', {'time_s','supply_voltage_V','command_limit_V', ...
+    'drive_available','supply_window_active','load_torque_Nm'});
 end
