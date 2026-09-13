@@ -4,13 +4,17 @@
 
 **Larry Anderson — Research collaborator and technical adviser.** Larry Anderson is recognized as a key project contributor. See the [professional contribution record](CONTRIBUTIONS.md).
 
-The idea is simple: keep the motor's physics model and learn when its predictions tend to be wrong. This folder contains the MATLAB code, trained models, simulations, a tool for replaying controller logs, and the results.
+**Finding so far: a learned correction can improve forecasts when the motor behaves differently from the physics model.**
+
+In the original held-out simulations, adding a learned correction reduced 50 ms position-forecast error by about **66–80% compared with nominal physics alone** across three conditions with motor-model mismatch. This supports using learned correction to account for behavior the physics model does not capture accurately.
+
+The idea is simple: keep the motor's physics model and learn patterns in its prediction errors. This folder contains the MATLAB code, trained models, simulations, a tool for replaying controller logs, and the results.
 
 ## Original benchmark
 
-The hybrid approach helped when the simulated motor behaved differently from the physics model. At 50 ms, its error was about 66–80% lower than nominal physics in the three mismatch conditions. But **quadratic EDMD did not beat the simpler learned linear correction**. Both learned corrections also made things worse when the physics model already matched the motor well. For now, this is an offline research prototype.
+The improvement appeared under parameter and load variation, added nonlinear friction, and larger mismatch with faster motion. Both the linear and quadratic EDMD versions added their learned correction to the same nominal physics model.
 
-Mean error across ten unseen trajectories per condition, in degrees; lower is better:
+Mean 50 ms position-forecast RMSE across ten unseen trajectories per condition, in degrees; lower is better:
 
 | Condition | Nominal physics | Simple persistent correction | Linear hybrid | EDMD hybrid |
 |---|---:|---:|---:|---:|
@@ -18,6 +22,8 @@ Mean error across ten unseen trajectories per condition, in degrees; lower is be
 | Parameter and load variation | 1.4938 | 0.3238 | 0.2975 | 0.2992 |
 | Added nonlinear friction | 2.8697 | 1.1548 | 0.8005 | 0.8010 |
 | Larger mismatch and faster motion | 7.0768 | 3.4341 | 2.3763 | 2.3787 |
+
+The linear and quadratic corrections performed similarly, so the evidence currently supports the shared hybrid approach; an additional benefit from quadratic features remains unestablished. Physics alone was most accurate when its model already matched the motor, and both unweighted learned corrections reduced accuracy in that condition. The practical next step is to preserve the mismatch benefit while improving when and how correction is applied.
 
 For these 50 ms forecasts, every method was given the recorded future voltages. That makes this a prediction test; it does not show better closed-loop control or EMI resilience. The [results and limitations](docs/RESULTS.md) explain what the numbers mean.
 
@@ -37,7 +43,7 @@ Each experiment creates a new results folder and updates `results/latest_run.jso
 
 The diagnostic and correction runners create separate result folders and pointers. They preserve the original `latest_run.json`, trained predictors and replay defaults. The [implementation note](docs/IMPLEMENTATION_20260913.md) describes their data contracts and protocol; [the update results](docs/RESULTS_20260913.md) report the completed comparison.
 
-The [verification and validation review](docs/VERIFICATION_AND_VALIDATION.md) records the timing/replay fixes, independent evidence audit and current acceptance limits. Software verification passed; the original incremental EDMD-benefit screen failed all four regimes. Hardware, receiver-fault and closed-loop validation have not been established.
+The [verification and validation review](docs/VERIFICATION_AND_VALIDATION.md) records the timing/replay fixes, independent evidence audit, detailed model comparisons and current acceptance limits. All 13 full reproduction stages passed, and an independent audit checked all 302,080 saved forecast endpoints. These checks support the reproducibility of the reported simulation results. Hardware, receiver-fault and closed-loop validation have not been established.
 
 The [three-video analysis](docs/VIDEO_ANALYSIS.md) and [historical implementation proposal](docs/VIDEO_IMPLEMENTATION_PLAN.md) preserve the reasoning behind the changes. The result and verification reports distinguish implemented work from remaining experiments.
 
@@ -76,9 +82,11 @@ The correction predicts the expected encoder reading. The estimated motor state 
 | `CONTRIBUTIONS.md` | Project contributor credit and acknowledgments |
 | `PROVENANCE.md`, `package_manifest.json` | Source origins, run history and final file hashes |
 
-## Development decision
+## Building on the finding
 
-Keep the linear hybrid as the simpler learned comparison. The new optional weighting rule uses completed prediction errors and training-domain checks to decide how much correction to apply. In the additional simulated trajectories it reduced nominal 50 ms EDMD error from 0.1842 to 0.0077 degrees, compared with 0.0061 degrees for physics. It also gave up substantial accuracy under larger mismatch; it is not a general replacement for the unweighted predictor.
+The next research objective is to retain the demonstrated forecast improvement under motor-model mismatch while preserving the accuracy of physics when it already predicts well.
+
+The new optional weighting rule uses completed prediction errors and training-domain checks to decide how much correction to apply. In the additional simulated trajectories it reduced nominal 50 ms EDMD error from 0.1842 to 0.0077 degrees, compared with 0.0061 degrees for physics. It also gave up substantial accuracy under larger mismatch, so choosing when and how much correction to apply remains an open problem. The rule is an optional research variant rather than a general replacement for the unweighted predictor.
 
 Diagnostics now expose signed error, reversal behavior, singular directions, ridge filtering and recursive feature consistency. The additional scenarios include load steps, reversals and a changed acquisition controller. State-informed dictionaries, a disturbance-estimating observer, independent recordings and receiver-fault tests remain subsequent experiments.
 

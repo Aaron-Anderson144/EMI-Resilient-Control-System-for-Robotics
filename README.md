@@ -10,9 +10,11 @@ The work is at a **verified simulation and integration milestone**. The latest e
 
 ## EDMD hybrid-estimation research
 
-The [EDMD research module](11_EDMD_Hybrid_Estimation/README.md) adds physics-plus-learned innovation forecasts, optional correction weighting, transient scenarios and reproducible verification. It includes the MATLAB code, trained models, simulated records, result tables, figures and the [three-video analysis](11_EDMD_Hybrid_Estimation/docs/VIDEO_ANALYSIS.md).
+**Finding so far: a learned correction can improve forecasts when the motor behaves differently from the physics model.** In the original three simulated mismatch conditions, the [EDMD hybrid-estimation module](11_EDMD_Hybrid_Estimation/README.md) reduced 50 ms position-forecast error by about **66–80% compared with nominal physics alone**. It keeps the motor's physics model and adds a learned correction for its prediction errors.
 
-**74 automated tests and 13 full reproduction stages passed.** An independent audit checked all 302,080 saved forecast endpoints. These results verify the documented offline workflow; quadratic EDMD did not pass its incremental-benefit screen, and hardware, EMI recovery and closed-loop effectiveness remain unvalidated. Read the [verification and validation report](11_EDMD_Hybrid_Estimation/docs/VERIFICATION_AND_VALIDATION.md) for the evidence and limits.
+The module includes MATLAB code, trained models, simulated records, result tables, figures, optional correction weighting, transient scenarios and the [three-video analysis](11_EDMD_Hybrid_Estimation/docs/VIDEO_ANALYSIS.md). Physics alone was most accurate when its model already matched the motor. The forecasts used recorded future voltages; hardware, EMI recovery and closed-loop effectiveness remain unvalidated.
+
+**74 automated tests and 13 full reproduction stages passed.** An independent audit checked all 302,080 saved forecast endpoints. These checks support the reproducibility of the reported simulation results. Read the [verification and validation report](11_EDMD_Hybrid_Estimation/docs/VERIFICATION_AND_VALIDATION.md) for the evidence and limits.
 
 From `11_EDMD_Hybrid_Estimation` in MATLAB, run `run_checks` for automated checks or `run_verification` for complete reproduction. The module bundles its own simulation data and reference files.
 

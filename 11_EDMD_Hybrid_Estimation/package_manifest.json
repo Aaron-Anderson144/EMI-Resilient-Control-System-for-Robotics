@@ -198,8 +198,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6997,
-      "sha256": "018416699ff6e9cab7d31aa6fab997199677465d2e7f4073f3b7fcf5475971b8"
+      "bytes": 8089,
+      "sha256": "ade9c8c7da54471b436855702771a2a5a0b9d40ebb3f8dba7e1aabb3265e79e3"
     },
     {
       "path": "reference_project/03_MATLAB/functions/actuator_state_space.m",
@@ -852,7 +852,7 @@
       "sha256": "a059950de5b13d70eb774687572924fb8c0747f332b6d803231def4dbddf71a8"
     }
   ],
-  "updatedLocal": "2026-09-13T15:10:59.4912922-04:00",
-  "revisionNote": "Publication packaging of verified version 0.2.1: includes dated video analysis and implementation proposal, portable documentation links and GitHub publication scope. MATLAB source and all verified numerical evidence are unchanged. 74 tests and 13 reproduction stages passed; incremental EDMD benefit remains unestablished.",
+  "updatedLocal": "2026-09-13T16:16:08.678868-04:00",
+  "revisionNote": "Publication packaging of verified version 0.2.1: includes dated video analysis and implementation proposal, portable documentation links and GitHub publication scope. MATLAB source and all verified numerical evidence are unchanged. 74 tests and 13 reproduction stages passed; incremental EDMD benefit remains unestablished. README framing now leads with the demonstrated model-mismatch forecast benefit; benchmark tables, source code and numerical evidence remain unchanged.",
   "latestVerification": "results/verifications/tp55928c7e_de86_468d_876a_52017f370741"
 }
