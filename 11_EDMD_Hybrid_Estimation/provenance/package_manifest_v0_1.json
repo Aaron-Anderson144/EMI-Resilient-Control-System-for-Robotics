@@ -1,0 +1,297 @@
+{
+  "name": "EDMD Hybrid Estimation",
+  "version": "0.1",
+  "status": "Offline research prototype",
+  "createdLocal": "2026-09-12T21:11:53.8091478-04:00",
+  "keyContributor": {
+    "name": "Larry Anderson",
+    "role": "Research collaborator and technical adviser"
+  },
+  "testedEnvironment": "MATLAB R2026a with Control System Toolbox",
+  "latestRun": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462",
+  "manifestScope": "Final delivered files, excluding this manifest; not a preregistration",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 20,
+      "sha256": "e1dbc2dbdc4efeabc0f25ef95ae80f038f3e8fdab03351fa303b446974a9b231"
+    },
+    {
+      "path": "code/edmd_fit.m",
+      "bytes": 2851,
+      "sha256": "dd4da87c15bea747a7092d2d021ec428072dd1403dd40a956e12fc70bc25cb43"
+    },
+    {
+      "path": "code/edmd_lift.m",
+      "bytes": 478,
+      "sha256": "8ed55452289dd91b28adfd6f1dc2f7ed5fdf3578bf552efaffd4f00f2a4ede16"
+    },
+    {
+      "path": "code/edmd_load_controller.m",
+      "bytes": 2586,
+      "sha256": "93a0dfb195ba8c5de0a0ecf9433f76cc3922b538feabc1ebe66625ba52cc9a34"
+    },
+    {
+      "path": "code/edmd_predict.m",
+      "bytes": 1555,
+      "sha256": "c696abab8fc0ac9dfcabd774fb276ac2161328bffe70c074b126f1b9b6fe0e26"
+    },
+    {
+      "path": "code/edmd_score.m",
+      "bytes": 2011,
+      "sha256": "73f75d589b8a2d16f91cc13670df88c53195ccad325d978bf7a668579679ad76"
+    },
+    {
+      "path": "code/edmd_snapshot_pairs.m",
+      "bytes": 2817,
+      "sha256": "ed2a9b82603c9fca458d52dbcccda13728b4a4316f2c2bf10174f4da996934b1"
+    },
+    {
+      "path": "code/hybrid_forecast.m",
+      "bytes": 4381,
+      "sha256": "0700fdb0a8f17ea40f5a267f97b8e3ebadccbfc9af5dab09a2b95bdd8b214b7b"
+    },
+    {
+      "path": "code/hybrid_make_figures.m",
+      "bytes": 3221,
+      "sha256": "726c6b8193a792f0327bde46af46097fe4cd05304e9187032c32b5942af05230"
+    },
+    {
+      "path": "code/hybrid_prepare_records.m",
+      "bytes": 1641,
+      "sha256": "f58753abb5bec013272b5d2f11240555b7816a6839f3a4a8b44b67b287204928"
+    },
+    {
+      "path": "code/hybrid_reference_observer.m",
+      "bytes": 6107,
+      "sha256": "b71e1cfc5bebd87100daf4bc35c4d90b39a1c25dabb2e8c28d59314f186f54a8"
+    },
+    {
+      "path": "code/hybrid_score.m",
+      "bytes": 7362,
+      "sha256": "8774d12cc3e494efd53758f1738e07c90e2743937eec330ccaa28f0b52e0dd32"
+    },
+    {
+      "path": "code/hybrid_summarize.m",
+      "bytes": 3124,
+      "sha256": "a583e74f19bc0d76eaf50477035d8d514f09b463538d94ba2de4e5a39dad01e8"
+    },
+    {
+      "path": "code/hybrid_write_json.m",
+      "bytes": 276,
+      "sha256": "9b8d35673959da5a25615b16c8a9a2ad6c5c33fbeb3a14b8077e475095548b56"
+    },
+    {
+      "path": "code/study_generate_records.m",
+      "bytes": 9286,
+      "sha256": "48b21b18ab3f31fe561cb45e72be0a6121cde63151de6be83244de8c81cdd9d1"
+    },
+    {
+      "path": "CONTRIBUTIONS.md",
+      "bytes": 332,
+      "sha256": "5005362a53096f51b3ecc4539ef4c333c63feaf930511ea4473f758d8dc6ae21"
+    },
+    {
+      "path": "docs/DESIGN.md",
+      "bytes": 4891,
+      "sha256": "f95c719651b967c07744a658c455947eb487ecba3eb43660619e864dbd06585f"
+    },
+    {
+      "path": "docs/EDMD_Primer_PMU.docx",
+      "bytes": 216539,
+      "sha256": "96d86c9165884efff8c590445f5b9cf1b950e56fa81f0d950468b5580f5f5197"
+    },
+    {
+      "path": "docs/PREVIOUS_ASSESSMENT.md",
+      "bytes": 10627,
+      "sha256": "3c2adf93ac685388a27262931f9407118a58a9475a898134230e568dcead5527"
+    },
+    {
+      "path": "docs/RESULTS.md",
+      "bytes": 7756,
+      "sha256": "4dd8ae78d4532364be9b421e6937f643de378d8ab6f9b958ee547b0aef9ad9da"
+    },
+    {
+      "path": "docs/USING_YOUR_DATA.md",
+      "bytes": 3676,
+      "sha256": "d89d4ddd41aa0a2a7814d1345c08ee524cb2b1ee4e7807e1f50103f28e022554"
+    },
+    {
+      "path": "PROVENANCE.md",
+      "bytes": 3276,
+      "sha256": "c11876a83bb0ed98ebe55bd0bc323393200d614367d2036e28a97dbc45affd42"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4837,
+      "sha256": "56b9cb4c257f241c0f83f1b8cc880dbff7363d8b45880951d3622e4f995b4d84"
+    },
+    {
+      "path": "reference_project/03_MATLAB/functions/actuator_state_space.m",
+      "bytes": 916,
+      "sha256": "62a51dc69fe6f8426c0f91d571b13a1689f5705343054a7ef37eb818a8edaeea"
+    },
+    {
+      "path": "reference_project/03_MATLAB/functions/validate_parameters.m",
+      "bytes": 9136,
+      "sha256": "9e059fe0227987a296454202fbe0db0e3c22a29b9de444478863e39c2e1a9756"
+    },
+    {
+      "path": "reference_project/03_MATLAB/parameters/actuator_parameters.m",
+      "bytes": 5280,
+      "sha256": "1aae0d6c2543d8d1bfe50af11a62b677cdc92c308338a72b2ae13f19d1ff32dc"
+    },
+    {
+      "path": "reference_project/README.md",
+      "bytes": 487,
+      "sha256": "e06cb60102c4f3385a3abb2ce568f406d64e5a77879e85ecf52596f7b88842c6"
+    },
+    {
+      "path": "replay_controller.m",
+      "bytes": 5949,
+      "sha256": "19b9bd226d487418a3677af566cefa9e8a1e17c8897338886c98139755bd8a0b"
+    },
+    {
+      "path": "results/latest_run.json",
+      "bytes": 57,
+      "sha256": "e633c95a816cf0d5bfc1a4c2b2204926b4f0fd8a1530ecc9585fd2506cd5ce1c"
+    },
+    {
+      "path": "results/replays/tpbfe7264c_3ccc_4412_a8ce_fb821965c2f6/replay.csv",
+      "bytes": 358797,
+      "sha256": "cebe9a1484961885bbd631046c4de226a0dce0e68cdbce977b7dd81a1e5b0e0b"
+    },
+    {
+      "path": "results/replays/tpbfe7264c_3ccc_4412_a8ce_fb821965c2f6/replay_metadata.json",
+      "bytes": 1402,
+      "sha256": "151e575a0be7ba496d8cb407c67e84204a05dbe55ebeaba1dfca8bdcb79fc7a2"
+    },
+    {
+      "path": "results/test_results.csv",
+      "bytes": 2192,
+      "sha256": "37177d4520e06aca97d0c9b610002fec4ff27622492007c4da5129cf6b96b737"
+    },
+    {
+      "path": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462/benefit_screen.json",
+      "bytes": 436,
+      "sha256": "63af06ee763b48af1ff1de14c453149566125d0a568ad94ceeff1422e3ee6dca"
+    },
+    {
+      "path": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462/development_records.mat",
+      "bytes": 8516650,
+      "sha256": "8c8ad2358cd7b18d1b2a55e51404ce62f0683e5d76dc14c3844ca10594e21679"
+    },
+    {
+      "path": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462/example_forecast.png",
+      "bytes": 107182,
+      "sha256": "989e5e6c624f4e8be961964ca765b5c8f737bde5a730dd199177e8790c798bca"
+    },
+    {
+      "path": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462/execution.json",
+      "bytes": 968,
+      "sha256": "59bd431d56104ec1488cfe3269eaff8b981a5e685c9f0ff114903fdf1e5c36a6"
+    },
+    {
+      "path": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462/forecast_comparison.png",
+      "bytes": 129660,
+      "sha256": "9346202f80599ca8eca69f87c9e826b7a4e0f26cd99cc95bc9b4b8f7e52714fd"
+    },
+    {
+      "path": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462/forecast_per_run.csv",
+      "bytes": 121546,
+      "sha256": "db50a91fecdf29cb5566f1e6f5abdc3d616a9478a5a2bd926491ee1b13f06c00"
+    },
+    {
+      "path": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462/forecast_summary.csv",
+      "bytes": 13458,
+      "sha256": "07a10bffa3fd25dfbe5f3fc5120ed70e8091c1c3a14b8a2764518d98fc9f26d0"
+    },
+    {
+      "path": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462/paired_comparisons_50ms.csv",
+      "bytes": 1619,
+      "sha256": "50d8dae356ab397ce54cf67726eff7e241bba402cc542e03a8a2754c53666c6c"
+    },
+    {
+      "path": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462/regime_forecast_summary.csv",
+      "bytes": 7375,
+      "sha256": "7378b6c9fc74d3da721d0057237294eec8c32b2c8ea3da5401fe97a864c3ee25"
+    },
+    {
+      "path": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462/selected_models.csv",
+      "bytes": 203,
+      "sha256": "c9827747a41fd0549e5590b97d61765f80f198588741a1f0f9c0f3751908e888"
+    },
+    {
+      "path": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462/selected_models.mat",
+      "bytes": 5575,
+      "sha256": "30bc9785a8cd6bd6f0d32becf15c92ec7129fdf23de40a40671c43b050bd1f32"
+    },
+    {
+      "path": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462/selection_frozen.json",
+      "bytes": 312,
+      "sha256": "7067195258a91126e382975df3cc9f9265ce8662ef85c9af7f4212bf3316b158"
+    },
+    {
+      "path": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462/study_plan.json",
+      "bytes": 3407,
+      "sha256": "24514f1950cee3f08ca3ae4e6e154392272b36753e24ec0ae650c9f1d7533ea9"
+    },
+    {
+      "path": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462/test_records.mat",
+      "bytes": 9503833,
+      "sha256": "5d6fd96b2e4a97b99d5b0268c306efc5681d8bb703a7251c9250c17f1bae7d06"
+    },
+    {
+      "path": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462/validation_candidates.csv",
+      "bytes": 1166,
+      "sha256": "7bac2e38f757f1082067c48bfb0a949ee61fed1633e2f3ccd64f58a23a34a266"
+    },
+    {
+      "path": "results/verification_summary.json",
+      "bytes": 1829,
+      "sha256": "ba96e345829c8c6e55cad7538d10d3da7aa676c4b8fbdb6a08baf21f23337a26"
+    },
+    {
+      "path": "run_checks.m",
+      "bytes": 584,
+      "sha256": "c723d4d8e5587f8d241a24f31909a505378f93b5c0cd4d19bcd2ef82e41a5cd8"
+    },
+    {
+      "path": "run_experiment.m",
+      "bytes": 6901,
+      "sha256": "4ec141fae5c4175f96c4ccb1d04350b45c53302d653010ccb9eae232736873c6"
+    },
+    {
+      "path": "source_snapshot_initial.json",
+      "bytes": 3565,
+      "sha256": "45ac068b97deb412e71e8793f58e4fc0d8906f1ae1c3a7ad40db4f9ef4572fcc"
+    },
+    {
+      "path": "tests/TestEDMDPrototype.m",
+      "bytes": 5169,
+      "sha256": "724f2a435338e70f12c4e72ebdc6aab4129e9183e926d6169693104cbcca8fb1"
+    },
+    {
+      "path": "tests/TestHybridForecast.m",
+      "bytes": 3790,
+      "sha256": "ef58d5b5f519acdb795bb4d5060163dd79d0cc699d6a0b94ed4aefe95a7bbdf0"
+    },
+    {
+      "path": "tests/TestHybridPreparation.m",
+      "bytes": 5422,
+      "sha256": "134c1f8dd70648f85a316a3170476a0c521507c10e865945f9555b407ddddb4d"
+    },
+    {
+      "path": "tests/TestHybridReplay.m",
+      "bytes": 6065,
+      "sha256": "be5a63386492600337b63cca1348605dd04b416d38ab3e9f0450c8df66dff01f"
+    },
+    {
+      "path": "tests/TestStudyGenerator.m",
+      "bytes": 5395,
+      "sha256": "67fe0b487d5e3fb018e9eeab1400d96e4c7a974c9037ff8421cb1d4f7699d529"
+    }
+  ],
+  "updatedLocal": "2026-09-12T22:15:43-04:00",
+  "revisionNote": "Clarified that the earlier assessment refers to separate archives. Wording and packaging updates leave numerical results and executable code unchanged; historical source and publication manifests retain their original identities."
+}

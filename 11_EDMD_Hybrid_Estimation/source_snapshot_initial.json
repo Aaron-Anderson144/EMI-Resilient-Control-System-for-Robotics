@@ -1,0 +1,98 @@
+{
+  "purpose": "Code identity at initial execution; captured after invocation began and before model selection. Not a prior registration.",
+  "created": "2026-09-12T21:03:23.1156323-04:00",
+  "files": [
+    {
+      "path": "run_checks.m",
+      "sha256": "C723D4D8E5587F8D241A24F31909A505378F93B5C0CD4D19BCD2EF82E41A5CD8"
+    },
+    {
+      "path": "run_experiment.m",
+      "sha256": "4EC141FAE5C4175F96C4CCB1D04350B45C53302D653010CCB9EAE232736873C6"
+    },
+    {
+      "path": "code/edmd_fit.m",
+      "sha256": "DD4DA87C15BEA747A7092D2D021EC428072DD1403DD40A956E12FC70BC25CB43"
+    },
+    {
+      "path": "code/edmd_lift.m",
+      "sha256": "8ED55452289DD91B28ADFD6F1DC2F7ED5FDF3578BF552EFAFFD4F00F2A4EDE16"
+    },
+    {
+      "path": "code/edmd_load_controller.m",
+      "sha256": "93A0DFB195BA8C5DE0A0ECF9433F76CC3922B538FEABC1EBE66625BA52CC9A34"
+    },
+    {
+      "path": "code/edmd_predict.m",
+      "sha256": "C696ABAB8FC0AC9DFCABD774FB276AC2161328BFFE70C074B126F1B9B6FE0E26"
+    },
+    {
+      "path": "code/edmd_score.m",
+      "sha256": "73F75D589B8A2D16F91CC13670DF88C53195CCAD325D978BF7A668579679AD76"
+    },
+    {
+      "path": "code/edmd_snapshot_pairs.m",
+      "sha256": "ED2A9B82603C9FCA458D52DBCCCDA13728B4A4316F2C2BF10174F4DA996934B1"
+    },
+    {
+      "path": "code/hybrid_forecast.m",
+      "sha256": "0700FDB0A8F17EA40F5A267F97B8E3EBADCCBFC9AF5DAB09A2B95BDD8B214B7B"
+    },
+    {
+      "path": "code/hybrid_make_figures.m",
+      "sha256": "47B26694AF1916E792977CE90013D86B0B10A375901B158CA607BFA622F53213"
+    },
+    {
+      "path": "code/hybrid_prepare_records.m",
+      "sha256": "F58753ABB5BEC013272B5D2F11240555B7816A6839F3A4A8B44B67B287204928"
+    },
+    {
+      "path": "code/hybrid_reference_observer.m",
+      "sha256": "B71E1CFC5BEBD87100DAF4BC35C4D90B39A1C25DABB2E8C28D59314F186F54A8"
+    },
+    {
+      "path": "code/hybrid_score.m",
+      "sha256": "8774D12CC3E494EFD53758F1738E07C90E2743937EEC330CCAA28F0B52E0DD32"
+    },
+    {
+      "path": "code/hybrid_summarize.m",
+      "sha256": "A421D45BD3A0565BECFE78D1ED705B7ACC91541234217042486BE18E02139786"
+    },
+    {
+      "path": "code/hybrid_write_json.m",
+      "sha256": "9B8D35673959DA5A25615B16C8A9A2AD6C5C33FBEB3A14B8077E475095548B56"
+    },
+    {
+      "path": "code/study_generate_records.m",
+      "sha256": "48B21B18AB3F31FE561CB45E72BE0A6121CDE63151DE6BE83244DE8C81CDD9D1"
+    },
+    {
+      "path": "reference_project/03_MATLAB/functions/actuator_state_space.m",
+      "sha256": "62A51DC69FE6F8426C0F91D571B13A1689F5705343054A7EF37EB818A8EDAEEA"
+    },
+    {
+      "path": "reference_project/03_MATLAB/functions/validate_parameters.m",
+      "sha256": "9E059FE0227987A296454202FBE0DB0E3C22A29B9DE444478863E39C2E1A9756"
+    },
+    {
+      "path": "reference_project/03_MATLAB/parameters/actuator_parameters.m",
+      "sha256": "1AAE0D6C2543D8D1BFE50AF11A62B677CDC92C308338A72B2AE13F19D1FF32DC"
+    },
+    {
+      "path": "tests/TestEDMDPrototype.m",
+      "sha256": "724F2A435338E70F12C4E72EBDC6AAB4129E9183E926D6169693104CBCCA8FB1"
+    },
+    {
+      "path": "tests/TestHybridForecast.m",
+      "sha256": "EF58D5B5F519ACDB795BB4D5060163DD79D0CC699D6A0B94ED4AEFE95A7BBDF0"
+    },
+    {
+      "path": "tests/TestHybridPreparation.m",
+      "sha256": "134C1F8DD70648F85A316A3170476A0C521507C10E865945F9555B407DDDDB4D"
+    },
+    {
+      "path": "tests/TestStudyGenerator.m",
+      "sha256": "67FE0B487D5E3FB018E9EEAB1400D96E4C7A974C9037FF8421CB1D4F7699D529"
+    }
+  ]
+}

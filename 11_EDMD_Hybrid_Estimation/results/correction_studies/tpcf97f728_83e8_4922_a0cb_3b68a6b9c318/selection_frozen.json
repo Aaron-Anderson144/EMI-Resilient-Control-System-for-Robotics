@@ -1,0 +1,41 @@
+{
+  "selection": [
+    {
+      "baseModel": "Linear hybrid",
+      "candidateId": 10,
+      "policy": {
+        "windowSamples": 250,
+        "minRelativeImprovement": 0.25,
+        "weights": [
+          0,
+          0.25,
+          0.5,
+          1
+        ],
+        "domainMargin": 0.1
+      },
+      "validationRMSE_rad": 0.0080409716378715083,
+      "nominalValidationRMSE_rad": 0.00016529294912242788
+    },
+    {
+      "baseModel": "EDMD hybrid",
+      "candidateId": 10,
+      "policy": {
+        "windowSamples": 250,
+        "minRelativeImprovement": 0.25,
+        "weights": [
+          0,
+          0.25,
+          0.5,
+          1
+        ],
+        "domainMargin": 0.1
+      },
+      "validationRMSE_rad": 0.0080669485222985612,
+      "nominalValidationRMSE_rad": 0.00016594600881922095
+    }
+  ],
+  "selectionCompleteBeforeTestGeneration": true,
+  "nominalLimit_rad": 0.00024934345974527664,
+  "timeLocal": "13-Sep-2026 14:39:39"
+}

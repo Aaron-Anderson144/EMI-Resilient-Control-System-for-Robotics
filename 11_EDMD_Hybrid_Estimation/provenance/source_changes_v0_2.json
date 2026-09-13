@@ -1,0 +1,54 @@
+[
+  {
+    "path": "run_correction_study.m",
+    "change": "added"
+  },
+  {
+    "path": "run_diagnostics.m",
+    "change": "added"
+  },
+  {
+    "path": "code/hybrid_correction_weight.m",
+    "change": "added"
+  },
+  {
+    "path": "code/hybrid_endpoint_summary.m",
+    "change": "added"
+  },
+  {
+    "path": "code/hybrid_forecast.m",
+    "change": "modified"
+  },
+  {
+    "path": "code/hybrid_model_diagnostics.m",
+    "change": "added"
+  },
+  {
+    "path": "code/hybrid_score.m",
+    "change": "modified"
+  },
+  {
+    "path": "code/study_generate_records.m",
+    "change": "modified"
+  },
+  {
+    "path": "tests/TestHybridCorrectionPolicy.m",
+    "change": "added"
+  },
+  {
+    "path": "tests/TestHybridCorrectionWeight.m",
+    "change": "added"
+  },
+  {
+    "path": "tests/TestHybridEndpointDiagnostics.m",
+    "change": "added"
+  },
+  {
+    "path": "tests/TestHybridModelDiagnostics.m",
+    "change": "added"
+  },
+  {
+    "path": "tests/TestStudyTransients.m",
+    "change": "added"
+  }
+]

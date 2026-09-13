@@ -1,0 +1,33 @@
+{
+  "schema": "hybrid-verification-v1",
+  "outputDirectory": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\11_EDMD_Hybrid_Estimation\\results\\verifications\\tp55928c7e_de86_468d_876a_52017f370741",
+  "verificationPassed": true,
+  "automatedTests": 74,
+  "passedTests": 74,
+  "checksPassed": 13,
+  "distinctRecordedTrajectories": 128,
+  "originalReproduction": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\11_EDMD_Hybrid_Estimation\\results\\verifications\\tp55928c7e_de86_468d_876a_52017f370741\\reproduced_original\\tpd9f9e5b7_476c_4eae_af58_d798111a6479",
+  "correctionReproduction": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\11_EDMD_Hybrid_Estimation\\results\\verifications\\tp55928c7e_de86_468d_876a_52017f370741\\reproduced_correction\\tp2c9b7b94_7795_478d_a1df_7510cf8da21f",
+  "diagnosticReproduction": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\11_EDMD_Hybrid_Estimation\\results\\verifications\\tp55928c7e_de86_468d_876a_52017f370741\\reproduced_diagnostics\\tp5001ff8b_0733_4b9c_ac36_1bb164fe5478",
+  "edmdBenefitScreen": {
+    "regimes": [
+      "nominal",
+      "varied",
+      "nonlinear",
+      "stress"
+    ],
+    "passed": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "allRegimesPass": false,
+    "nonfiniteForecastCountAllModelsAndHorizons": 0,
+    "screen": "In each regime, EDMD must reduce mean 50 ms RMSE by at least 10 percent against each of the three baselines, win at least 7 of 10 paired runs against each, and produce no nonfinite tested forecasts."
+  },
+  "hardwareValidation": "not established",
+  "closedLoopValidation": "not established",
+  "scope": "Code verification and reproduction of already examined simulated forecasts; no new unseen test, hardware, receiver-fault or closed-loop validation.",
+  "completedLocal": "13-Sep-2026 14:59:37"
+}

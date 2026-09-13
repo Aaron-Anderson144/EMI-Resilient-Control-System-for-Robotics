@@ -1,0 +1,119 @@
+
+	Home License -- for personal use only.  Not for government,
+	academic, research, commercial, or other organizational use.
+
+VERIFICATION_OUTPUT C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\verifications\tp55928c7e_de86_468d_876a_52017f370741
+Running TestEDMDPrototype
+.......... ..
+Done TestEDMDPrototype
+__________
+
+Running TestHybridCorrectionPolicy
+........
+Done TestHybridCorrectionPolicy
+__________
+
+Running TestHybridCorrectionWeight
+.......
+Done TestHybridCorrectionWeight
+__________
+
+Running TestHybridEndpointDiagnostics
+.......
+Done TestHybridEndpointDiagnostics
+__________
+
+Running TestHybridForecast
+......
+Done TestHybridForecast
+__________
+
+Running TestHybridModelDiagnostics
+........
+Done TestHybridModelDiagnostics
+__________
+
+Running TestHybridPreparation
+......
+Done TestHybridPreparation
+__________
+
+Running TestHybridReplay
+HYBRID_REPLAY C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\replay_test_work\tp991979c8_cfbd_4a78_89ea_170ef5c66238\basic\tp394afcab_ea0d_454f_b47c_1799c3c0f0e0
+.HYBRID_REPLAY C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\replay_test_work\tp991979c8_cfbd_4a78_89ea_170ef5c66238\truth\tpd1b60188_23e2_4eb5_83d7_ee1d4f90afca
+HYBRID_REPLAY C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\replay_test_work\tp991979c8_cfbd_4a78_89ea_170ef5c66238\truth\tpec9afb9a_b6c5_4148_851a_898c4ea04ec9
+.HYBRID_REPLAY C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\replay_test_work\tp991979c8_cfbd_4a78_89ea_170ef5c66238\causal\tp14b05604_f1f2_416c_8c83_ff4c3daac931
+HYBRID_REPLAY C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\replay_test_work\tp991979c8_cfbd_4a78_89ea_170ef5c66238\causal\tp826a315e_4261_4199_ad68_86597dc20172
+.HYBRID_REPLAY C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\replay_test_work\tp991979c8_cfbd_4a78_89ea_170ef5c66238\command\tp44081210_00c1_4d9b_949e_c6a2367356e9
+HYBRID_REPLAY C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\replay_test_work\tp991979c8_cfbd_4a78_89ea_170ef5c66238\command\tp673e7439_bc59_4bda_9bb3_ac51ccc7e70f
+..HYBRID_REPLAY C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\replay_test_work\tp991979c8_cfbd_4a78_89ea_170ef5c66238\long_delay\tp2950e396_2e99_49fa_831d_0c47bf40095d
+...
+Done TestHybridReplay
+__________
+
+Running TestStudyGenerator
+..Nominal RK4 vs exact ZOH max [rad, rad/s, A]: 6.833e-11 3.063e-08 2.534e-08
+.nonlinear RK4 four vs eight max [rad, rad/s, A]: 3.211e-10 7.886e-08 2.894e-08
+stress RK4 four vs eight max [rad, rad/s, A]: 3.997e-10 1.707e-07 2.464e-08
+.nonlinear full transient RK4 four vs eight max [rad, rad/s, A]: 2.716e-10 5.386e-08 2.632e-08
+stress full transient RK4 four vs eight max [rad, rad/s, A]: 2.514e-10 8.139e-08 9.745e-08
+..
+Done TestStudyGenerator
+__________
+
+Running TestStudyTransients
+......
+Done TestStudyTransients
+__________
+
+HYBRID_OUTPUT C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\verifications\tp55928c7e_de86_468d_876a_52017f370741\reproduced_original\tpd9f9e5b7_476c_4eae_af58_d798111a6479
+Candidate 1/18: degree 1 delay 2 ridge 1.0e-10; 50ms 3.40116e+34 degrees
+Candidate 2/18: degree 1 delay 2 ridge 1.0e-06; 50ms 0.668996 degrees
+Candidate 3/18: degree 1 delay 2 ridge 1.0e-03; 50ms 0.422934 degrees
+Candidate 4/18: degree 1 delay 5 ridge 1.0e-10; 50ms 7.03639e+94 degrees
+Candidate 5/18: degree 1 delay 5 ridge 1.0e-06; 50ms 0.896148 degrees
+Candidate 6/18: degree 1 delay 5 ridge 1.0e-03; 50ms 0.451188 degrees
+Candidate 7/18: degree 1 delay 10 ridge 1.0e-10; 50ms 2.50467e+70 degrees
+Candidate 8/18: degree 1 delay 10 ridge 1.0e-06; 50ms 0.491667 degrees
+Candidate 9/18: degree 1 delay 10 ridge 1.0e-03; 50ms 0.447615 degrees
+Candidate 10/18: degree 2 delay 2 ridge 1.0e-10; 50ms 3.79158e+34 degrees
+Candidate 11/18: degree 2 delay 2 ridge 1.0e-06; 50ms 0.672921 degrees
+Candidate 12/18: degree 2 delay 2 ridge 1.0e-03; 50ms 0.424615 degrees
+Candidate 13/18: degree 2 delay 5 ridge 1.0e-10; 50ms 6.52702e+94 degrees
+Candidate 14/18: degree 2 delay 5 ridge 1.0e-06; 50ms 0.895519 degrees
+Candidate 15/18: degree 2 delay 5 ridge 1.0e-03; 50ms 0.452998 degrees
+Candidate 16/18: degree 2 delay 10 ridge 1.0e-10; 50ms 3.44408e+70 degrees
+Candidate 17/18: degree 2 delay 10 ridge 1.0e-06; 50ms 0.486635 degrees
+Candidate 18/18: degree 2 delay 10 ridge 1.0e-03; 50ms 0.448436 degrees
+MODEL_SELECTION_FROZEN. Generating untouched test seeds.
+    candidateId    degree    delay    ridge    features    rank    spectralRadius    validation50msRMSE_rad    fitAndScoreSeconds
+    ___________    ______    _____    _____    ________    ____    ______________    ______________________    __________________
+
+         3           1         2      0.001        6         7           1                 0.0073816                  1.554      
+        12           2         2      0.001       21        22           1                 0.0074109                 1.6771      
+
+      regime              baseline            baselineMeanRMSE_deg    EDMDMeanRMSE_deg    improvementPercent    bootstrap95LowPercent    bootstrap95HighPercent    pairedWins    runCount    comparisonPass
+    ___________    _______________________    ____________________    ________________    __________________    _____________________    ______________________    __________    ________    ______________
+
+    "nominal"      "Nominal physics"               0.0060512              0.18596               -2973.1                -3368.9                  -2691.7                 0           10           false     
+    "nominal"      "Persistent innovation"          0.026021              0.18596               -614.64                -705.03                  -545.15                 0           10           false     
+    "nominal"      "Linear hybrid"                   0.18424              0.18596              -0.93113                -2.5965                  0.93619                 4           10           false     
+    "varied"       "Nominal physics"                  1.4938              0.29925                79.967                 78.283                   81.744                10           10           true      
+    "varied"       "Persistent innovation"           0.32377              0.29925                7.5762                -1.8877                   16.903                 6           10           false     
+    "varied"       "Linear hybrid"                   0.29746              0.29925              -0.60064                -2.1823                  0.77382                 4           10           false     
+    "nonlinear"    "Nominal physics"                  2.8697              0.80101                72.087                 70.365                   73.846                10           10           true      
+    "nonlinear"    "Persistent innovation"            1.1548              0.80101                30.638                 29.719                    31.67                10           10           true      
+    "nonlinear"    "Linear hybrid"                   0.80048              0.80101             -0.066377               -0.25301                  0.13841                 5           10           false     
+    "stress"       "Nominal physics"                  7.0768               2.3787                66.388                 64.362                   68.099                10           10           true      
+    "stress"       "Persistent innovation"            3.4341               2.3787                30.735                  30.06                   31.545                10           10           true      
+    "stress"       "Linear hybrid"                    2.3763               2.3787              -0.09811               -0.32653                  0.13441                 5           10           false     
+
+HYBRID_COMPLETE C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\verifications\tp55928c7e_de86_468d_876a_52017f370741\reproduced_original\tpd9f9e5b7_476c_4eae_af58_d798111a6479
+CORRECTION_STUDY_OUTPUT C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\verifications\tp55928c7e_de86_468d_876a_52017f370741\reproduced_correction\tp2c9b7b94_7795_478d_a1df_7510cf8da21f
+Selected Linear hybrid policy: window 250, improvement 0.25, validation 0.460714 deg.
+Selected EDMD hybrid policy: window 250, improvement 0.25, validation 0.462202 deg.
+CORRECTION_SELECTION_FROZEN. Generating fresh test trajectories.
+CORRECTION_STUDY_COMPLETE: 52 fresh trajectories.
+DIAGNOSTICS_OUTPUT C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\verifications\tp55928c7e_de86_468d_876a_52017f370741\reproduced_diagnostics\tp5001ff8b_0733_4b9c_ac36_1bb164fe5478
+DIAGNOSTICS_COMPLETE: 102400 endpoints; baseline difference 5e-16 radians.
+VERIFICATION_COMPLETE: 74 tests; 13 audit stages; EDMD benefit all-regime pass=0.

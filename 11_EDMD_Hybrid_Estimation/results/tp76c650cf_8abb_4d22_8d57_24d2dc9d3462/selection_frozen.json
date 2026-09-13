@@ -1,0 +1,9 @@
+{
+  "selectedCandidateIds": [
+    3,
+    12
+  ],
+  "selectionCompleteBeforeTestGeneration": true,
+  "criterion": "Lowest equal-run mean validation 50 ms truth endpoint RMSE, separately for degree 1 and degree 2. Fixed warmup yields identical origins for all candidates.",
+  "timeLocal": "12-Sep-2026 21:04:03"
+}

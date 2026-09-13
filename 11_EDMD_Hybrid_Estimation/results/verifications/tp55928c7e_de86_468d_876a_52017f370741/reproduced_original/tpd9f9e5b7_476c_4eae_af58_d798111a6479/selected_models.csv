@@ -1,0 +1,3 @@
+candidateId,degree,delay,ridge,features,rank,spectralRadius,validation50msRMSE_rad,fitAndScoreSeconds
+3,1,2,0.001,6,7,1,0.0073815899428687,1.5540351
+12,2,2,0.001,21,22,1,0.00741093073641406,1.6771458

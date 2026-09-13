@@ -1,0 +1,38 @@
+[
+  {
+    "path": "replay_controller.m",
+    "change": "modified"
+  },
+  {
+    "path": "run_verification.m",
+    "change": "added"
+  },
+  {
+    "path": "code/hybrid_model_diagnostics.m",
+    "change": "modified"
+  },
+  {
+    "path": "code/hybrid_score.m",
+    "change": "modified"
+  },
+  {
+    "path": "tests/TestEDMDPrototype.m",
+    "change": "modified"
+  },
+  {
+    "path": "tests/TestHybridEndpointDiagnostics.m",
+    "change": "modified"
+  },
+  {
+    "path": "tests/TestHybridModelDiagnostics.m",
+    "change": "modified"
+  },
+  {
+    "path": "tests/TestHybridReplay.m",
+    "change": "modified"
+  },
+  {
+    "path": "tests/TestStudyGenerator.m",
+    "change": "modified"
+  }
+]

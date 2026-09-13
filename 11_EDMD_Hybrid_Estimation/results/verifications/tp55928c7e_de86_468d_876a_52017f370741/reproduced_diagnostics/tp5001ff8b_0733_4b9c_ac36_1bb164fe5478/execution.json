@@ -1,0 +1,10 @@
+{
+  "schema": "hybrid-diagnostics-v1",
+  "sourceRun": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\11_EDMD_Hybrid_Estimation\\results\\tp76c650cf_8abb_4d22_8d57_24d2dc9d3462",
+  "outputDirectory": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\11_EDMD_Hybrid_Estimation\\results\\verifications\\tp55928c7e_de86_468d_876a_52017f370741\\reproduced_diagnostics\\tp5001ff8b_0733_4b9c_ac36_1bb164fe5478",
+  "endpointRows": 102400,
+  "maximumBaselineRMSEDifference_rad": 4.9960036108132044E-16,
+  "baselineReproduced": true,
+  "scope": "Exploratory reuse of previously examined data; no model changes, no new generalization claim.",
+  "completedLocal": "13-Sep-2026 14:59:35"
+}

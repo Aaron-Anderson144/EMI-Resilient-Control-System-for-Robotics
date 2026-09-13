@@ -1,0 +1,101 @@
+{
+  "schema": "hybrid-verification-v0.2",
+  "verifiedLocal": "2026-09-13T14:44:58.2158311-04:00",
+  "automatedTests": 66,
+  "passed": 66,
+  "failed": 0,
+  "incomplete": 0,
+  "environment": "MATLAB R2026a with Control System Toolbox",
+  "originalVerification": "provenance/verification_summary_v0_1.json",
+  "immutableOriginalArtifactsChecked": 20,
+  "immutableOriginalArtifactHashMismatches": 0,
+  "diagnostics": {
+    "schema": "hybrid-diagnostics-v1",
+    "sourceRun": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\11_EDMD_Hybrid_Estimation\\results\\tp76c650cf_8abb_4d22_8d57_24d2dc9d3462",
+    "outputDirectory": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\11_EDMD_Hybrid_Estimation\\results\\diagnostics\\tpcca256fb_a82d_4e50_bb0a_9c7b23c3c087",
+    "endpointRows": 102400,
+    "maximumBaselineRMSEDifference_rad": 4.996003610813204E-16,
+    "baselineReproduced": true,
+    "scope": "Exploratory reuse of previously examined data; no model changes, no new generalization claim.",
+    "completedLocal": "13-Sep-2026 14:39:16"
+  },
+  "correctionStudy": {
+    "schema": "hybrid-correction-study-v1",
+    "sourceRun": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\11_EDMD_Hybrid_Estimation\\results\\tp76c650cf_8abb_4d22_8d57_24d2dc9d3462",
+    "outputDirectory": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\11_EDMD_Hybrid_Estimation\\results\\correction_studies\\tpcf97f728_83e8_4922_a0cb_3b68a6b9c318",
+    "selection": [
+      {
+        "baseModel": "Linear hybrid",
+        "candidateId": 10,
+        "policy": {
+          "windowSamples": 250,
+          "minRelativeImprovement": 0.25,
+          "weights": [
+            0,
+            0.25,
+            0.5,
+            1
+          ],
+          "domainMargin": 0.1
+        },
+        "validationRMSE_rad": 0.008040971637871508,
+        "nominalValidationRMSE_rad": 0.00016529294912242788
+      },
+      {
+        "baseModel": "EDMD hybrid",
+        "candidateId": 10,
+        "policy": {
+          "windowSamples": 250,
+          "minRelativeImprovement": 0.25,
+          "weights": [
+            0,
+            0.25,
+            0.5,
+            1
+          ],
+          "domainMargin": 0.1
+        },
+        "validationRMSE_rad": 0.008066948522298561,
+        "nominalValidationRMSE_rad": 0.00016594600881922095
+      }
+    ],
+    "testRunCount": 52,
+    "testEndpointCount": 199680,
+    "scope": "Fresh hypothetical healthy-data tests conditional on recorded future voltage. Includes explicit load steps/reversals/controller change; no receiver faults, hardware or improved closed-loop-control claim.",
+    "completedLocal": "13-Sep-2026 14:40:01"
+  },
+  "finalEndpointAudit": {
+    "appliedNonfinite": 0,
+    "rows": 199680,
+    "rawLearnedNonfinite": 0
+  },
+  "independentAudit": {
+    "pairedAllEventRows": 5200,
+    "perRunRows": 1560,
+    "originalDiagnosticPerRunRows": 800,
+    "uniqueEvaluationSeeds": 52,
+    "originalDiagnosticCSVNumericDifferences": 0,
+    "eligibleCandidateIds": [
+      1,
+      10
+    ],
+    "maximumSummaryDifference_rad": 6.7E-16,
+    "summaryRows": 180,
+    "validationCandidates": 20,
+    "selectedCandidateIds": [
+      10,
+      10
+    ]
+  },
+  "reportingRerun": {
+    "policyChanged": false,
+    "byteIdenticalCSV": [
+      "validation_candidates.csv",
+      "forecast_endpoints.csv",
+      "forecast_per_run.csv",
+      "forecast_summary.csv",
+      "paired_comparisons.csv"
+    ],
+    "newUnseenEvidence": false
+  }
+}

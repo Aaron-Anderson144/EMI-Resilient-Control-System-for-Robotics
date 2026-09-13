@@ -1,0 +1,30 @@
+{
+  "outputDirectory": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462",
+  "outputPathBase": "Package root",
+  "trainingRuns": 24,
+  "validationRuns": 12,
+  "testRuns": 40,
+  "selectedCandidateIds": [
+    3,
+    12
+  ],
+  "benefitScreen": {
+    "regimes": [
+      "nominal",
+      "varied",
+      "nonlinear",
+      "stress"
+    ],
+    "passed": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "allRegimesPass": false,
+    "nonfiniteForecastCountAllModelsAndHorizons": 0,
+    "screen": "In each regime, EDMD must reduce mean 50 ms RMSE by at least 10 percent against each of the three baselines, win at least 7 of 10 paired runs against each, and produce no nonfinite tested forecasts."
+  },
+  "scope": "Offline shadow prototype with synchronous healthy data and recorded future voltage sequences; no receiver, EMI exposure, packet-recovery, control intervention, hardware or closed-loop stability claim.",
+  "completedLocal": "12-Sep-2026 21:04:21"
+}

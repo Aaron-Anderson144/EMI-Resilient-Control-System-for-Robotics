@@ -1,0 +1,44 @@
+{
+  "automatedTests": 32,
+  "passed": 32,
+  "trainingTrajectories": 24,
+  "validationTrajectories": 12,
+  "testTrajectories": 40,
+  "distinctSeeds": 76,
+  "distinctMeasuredTrajectories": 76,
+  "distinctTruthTrajectories": 76,
+  "testResultRows": 800,
+  "originsPerTestTrajectoryPerHorizon": 128,
+  "nonfiniteTestForecasts": 0,
+  "selectedCandidateIds": [
+    3,
+    12
+  ],
+  "independentAudit": "Selection minima, split uniqueness and all 12 paired comparisons recomputed from stored data",
+  "controllerReplay": {
+    "record": "DEV01_BASELINE_clean",
+    "rows": 3001,
+    "eligibleFiniteEDMDPredictions": 2800,
+    "purpose": "Compatibility and causality check only"
+  },
+  "referenceCopies": [
+    {
+      "source": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\parameters\\actuator_parameters.m",
+      "packagedPath": "reference_project/03_MATLAB/parameters/actuator_parameters.m",
+      "sha256": "1AAE0D6C2543D8D1BFE50AF11A62B677CDC92C308338A72B2AE13F19D1FF32DC",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\actuator_state_space.m",
+      "packagedPath": "reference_project/03_MATLAB/functions/actuator_state_space.m",
+      "sha256": "62A51DC69FE6F8426C0F91D571B13A1689F5705343054A7EF37EB818A8EDAEEA",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\validate_parameters.m",
+      "packagedPath": "reference_project/03_MATLAB/functions/validate_parameters.m",
+      "sha256": "9E059FE0227987A296454202FBE0DB0E3C22A29B9DE444478863E39C2E1A9756",
+      "unchanged": true
+    }
+  ]
+}

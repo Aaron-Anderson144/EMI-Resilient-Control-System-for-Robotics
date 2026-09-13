@@ -1,0 +1,23 @@
+{
+  "scope": "Healthy synchronous one-step shadow replay; no control intervention or detector",
+  "sourceCSV": "C:/Users/adand/OneDrive/Desktop/Projects/EMI-Resilient Control System for Robotics/03_MATLAB/results/development/fourway_development_20260911_01/DEV01_BASELINE_clean/controller.csv",
+  "selectedModelsFile": "results/tp76c650cf_8abb_4d22_8d57_24d2dc9d3462/selected_models.mat",
+  "outputDirectory": "results/replays/tpbfe7264c_3ccc_4412_a8ce_fb821965c2f6",
+  "packagePathBase": "Package root for selectedModelsFile and outputDirectory",
+  "sampleTime_s": 0.001,
+  "warmupSeconds": 0.2,
+  "firstEligibleTargetTime_s": 0.201,
+  "sampleCount": 3001,
+  "eligibleForecastCount": 2800,
+  "models": {
+    "linearDelay": 2,
+    "edmdDelay": 2
+  },
+  "linearNonfiniteForecastCount": 0,
+  "edmdNonfiniteForecastCount": 0,
+  "initialStateAssumption": "Known zero position, velocity, and current at record start",
+  "causalInputs": "Target j uses measured history through j-1 and already-applied voltage u(j-1)",
+  "errorDefinition": "Prediction minus received encoder measurement; no truth-state error is calculated",
+  "eligibilityMeaning": "Input/history eligibility only; nonfinite forecasts remain failures and are counted separately",
+  "limitations": "Model generalization, EMI fault detection, packet recovery, receiver validity beyond the input gate, and hardware safety are not established"
+}

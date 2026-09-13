@@ -1,0 +1,12 @@
+{
+  "schema": "hybrid-verification-v1",
+  "sourceRun": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\11_EDMD_Hybrid_Estimation\\results\\tp76c650cf_8abb_4d22_8d57_24d2dc9d3462",
+  "correctionRun": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\11_EDMD_Hybrid_Estimation\\results\\correction_studies\\tpcf97f728_83e8_4922_a0cb_3b68a6b9c318",
+  "diagnosticRun": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\11_EDMD_Hybrid_Estimation\\results\\diagnostics\\tpcca256fb_a82d_4e50_bb0a_9c7b23c3c087",
+  "createdLocal": "13-Sep-2026 14:55:53",
+  "scope": "Code verification and reproduction of already examined simulated forecasts; no new unseen test, hardware, receiver-fault or closed-loop validation.",
+  "tableAbsoluteTolerance": 1E-12,
+  "tableRelativeTolerance": 1E-10,
+  "modelAbsoluteTolerance": 1E-12,
+  "modelRelativeTolerance": 1E-10
+}

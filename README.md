@@ -8,6 +8,14 @@ The work is at a **verified simulation and integration milestone**. The latest e
 
 [Illustrated progress report (PDF)](09_Report/Publication_2026-09-11/EMI_Robotics_Progress_Report.pdf) · [Editable report (Word)](09_Report/Publication_2026-09-11/EMI_Robotics_Progress_Report.docx) · [Public project update](09_Report/Publication_2026-09-11/Public_Update.md) · [Reproduction guide](09_Report/Publication_2026-09-11/Publication_Reproduction.md)
 
+## EDMD hybrid-estimation research
+
+The [EDMD research module](11_EDMD_Hybrid_Estimation/README.md) adds physics-plus-learned innovation forecasts, optional correction weighting, transient scenarios and reproducible verification. It includes the MATLAB code, trained models, simulated records, result tables, figures and the [three-video analysis](11_EDMD_Hybrid_Estimation/docs/VIDEO_ANALYSIS.md).
+
+**74 automated tests and 13 full reproduction stages passed.** An independent audit checked all 302,080 saved forecast endpoints. These results verify the documented offline workflow; quadratic EDMD did not pass its incremental-benefit screen, and hardware, EMI recovery and closed-loop effectiveness remain unvalidated. Read the [verification and validation report](11_EDMD_Hybrid_Estimation/docs/VERIFICATION_AND_VALIDATION.md) for the evidence and limits.
+
+From `11_EDMD_Hybrid_Estimation` in MATLAB, run `run_checks` for automated checks or `run_verification` for complete reproduction. The module bundles its own simulation data and reference files.
+
 ## How the project works
 
 ![Causal actuator and interference architecture](09_Report/Publication_2026-09-11/assets/system_architecture.png)
@@ -96,5 +104,6 @@ The complete checkpoint was tested with MATLAB R2026a Update 3, Simulink, Contro
 | `07_Data` / `08_Results` | Data organization and results planning |
 | `09_Report` | Progress publication and report assembly map |
 | `10_Hardware_Design` | Future testbed planning |
+| `11_EDMD_Hybrid_Estimation` | Verified offline learned-estimation research, simulations and reproducible evidence |
 
 The numerical parameters are representative assumptions, not measurements from a selected actuator, cable or receiver. This project does not claim demonstrated hardware immunity, universal fault detection, physical safety or compliance. Formal Draft requirement approvals remain unchanged.

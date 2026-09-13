@@ -1,0 +1,9 @@
+{
+  "sourceFilesChecked": 36,
+  "sourceHashMismatches": 0,
+  "originalArtifactsChecked": 20,
+  "originalArtifactHashMismatches": 0,
+  "correctionSelectionOrderRecorded": true,
+  "meaning": "Checks current hashes and recorded execution order; no independent preregistration claim",
+  "checkedLocal": "2026-09-13T15:02:19.0729701-04:00"
+}

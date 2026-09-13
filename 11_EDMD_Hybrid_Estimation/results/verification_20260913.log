@@ -1,0 +1,70 @@
+
+	Home License -- for personal use only.  Not for government,
+	academic, research, commercial, or other organizational use.
+
+Running TestEDMDPrototype
+.......... .
+Done TestEDMDPrototype
+__________
+
+Running TestHybridCorrectionPolicy
+........
+Done TestHybridCorrectionPolicy
+__________
+
+Running TestHybridCorrectionWeight
+.......
+Done TestHybridCorrectionWeight
+__________
+
+Running TestHybridEndpointDiagnostics
+......
+Done TestHybridEndpointDiagnostics
+__________
+
+Running TestHybridForecast
+......
+Done TestHybridForecast
+__________
+
+Running TestHybridModelDiagnostics
+.......
+Done TestHybridModelDiagnostics
+__________
+
+Running TestHybridPreparation
+......
+Done TestHybridPreparation
+__________
+
+Running TestHybridReplay
+HYBRID_REPLAY C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\replay_test_work\tp15ad6f2e_ccb2_407b_818f_b66d3cf54bb0\basic\tpcb4042f7_e6a5_4150_9afa_5dd12e31e496
+.HYBRID_REPLAY C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\replay_test_work\tp15ad6f2e_ccb2_407b_818f_b66d3cf54bb0\truth\tp344769ff_49fe_4aa6_ab62_8e814d3bc0dc
+HYBRID_REPLAY C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\replay_test_work\tp15ad6f2e_ccb2_407b_818f_b66d3cf54bb0\truth\tp6087c0ca_c5e5_452b_b2c9_ab055da444a7
+.HYBRID_REPLAY C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\replay_test_work\tp15ad6f2e_ccb2_407b_818f_b66d3cf54bb0\causal\tpac37dc37_7b2f_4038_bd14_5e7e2c8b0be3
+HYBRID_REPLAY C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\replay_test_work\tp15ad6f2e_ccb2_407b_818f_b66d3cf54bb0\causal\tp22ab26ba_ac19_4d84_bd52_43e031ae0dab
+..
+Done TestHybridReplay
+__________
+
+Running TestStudyGenerator
+..Nominal RK4 vs exact ZOH max [rad, rad/s, A]: 6.833e-11 3.063e-08 2.534e-08
+.nonlinear RK4 four vs eight max [rad, rad/s, A]: 3.211e-10 7.886e-08 2.894e-08
+stress RK4 four vs eight max [rad, rad/s, A]: 3.997e-10 1.707e-07 2.464e-08
+..
+Done TestStudyGenerator
+__________
+
+Running TestStudyTransients
+......
+Done TestStudyTransients
+__________
+
+66 tests passed.
+DIAGNOSTICS_OUTPUT C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\diagnostics\tpcca256fb_a82d_4e50_bb0a_9c7b23c3c087
+DIAGNOSTICS_COMPLETE: 102400 endpoints; baseline difference 5e-16 radians.
+CORRECTION_STUDY_OUTPUT C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\11_EDMD_Hybrid_Estimation\results\correction_studies\tpcf97f728_83e8_4922_a0cb_3b68a6b9c318
+Selected Linear hybrid policy: window 250, improvement 0.25, validation 0.460714 deg.
+Selected EDMD hybrid policy: window 250, improvement 0.25, validation 0.462202 deg.
+CORRECTION_SELECTION_FROZEN. Generating fresh test trajectories.
+CORRECTION_STUDY_COMPLETE: 52 fresh trajectories.
