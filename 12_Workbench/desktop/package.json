@@ -1,0 +1,14 @@
+{
+  "name": "emi-robotics-signal-lab",
+  "productName": "EMI Robotics - Signal Lab",
+  "version": "1.2.2",
+  "private": true,
+  "description": "A portable local desktop workbench for EMI robotics research",
+  "main": "main.js",
+  "engines": {
+    "electron": "43.7.0"
+  },
+  "scripts": {
+    "test": "node --test ../tests/desktop-boundary.test.cjs"
+  }
+}

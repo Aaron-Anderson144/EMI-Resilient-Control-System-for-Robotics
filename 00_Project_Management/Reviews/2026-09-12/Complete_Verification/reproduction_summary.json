@@ -1,0 +1,31 @@
+{
+  "frozenInputs": {
+    "design_id": "FOUR-WAY-EMI-PLAN-V1",
+    "frozen_files_verified": 16,
+    "verified_utc": "13-Sep-2026 02:15:58",
+    "passed": true
+  },
+  "evaluationGuard": {
+    "blocked": true,
+    "exception": "EMIProject:FourWayAcceptance",
+    "outputCreated": false,
+    "evaluationExecuted": false
+  },
+  "native": {
+    "requiredNativeRuns": 24,
+    "executedNativeRuns": 24,
+    "passedNativeRuns": 24,
+    "requiredRefinements": 16,
+    "executedRefinements": 16,
+    "passedRefinements": 16,
+    "receiverDomainRejectedRuns": 12,
+    "absoluteVoltageGate_V": 0.0001,
+    "eventTimingGate_s": 1E-9,
+    "integerCountsExact": true,
+    "solver": "ode23t native Simscape conserving network",
+    "sourceModel": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01A\\models\\EMI_SC01A_Finite_Edge.slx",
+    "nativeModel": "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\outputs\\Project_Verification_2026-09-12\\fresh_native\\model\\EMI_FourWay_Native_Event.slx",
+    "passed": true
+  },
+  "physicalValidation": false
+}

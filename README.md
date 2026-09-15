@@ -8,6 +8,15 @@ The work is at a **verified simulation and integration milestone**. The latest e
 
 [Illustrated progress report (PDF)](09_Report/Publication_2026-09-11/EMI_Robotics_Progress_Report.pdf) · [Editable report (Word)](09_Report/Publication_2026-09-11/EMI_Robotics_Progress_Report.docx) · [Public project update](09_Report/Publication_2026-09-11/Public_Update.md) · [Reproduction guide](09_Report/Publication_2026-09-11/Publication_Reproduction.md)
 
+## Open the Workbench on Windows
+
+1. [Download the Windows app](https://github.com/Aaron-Anderson144/EMI-Resilient-Control-System-for-Robotics/releases/latest) and extract the entire portable ZIP.
+2. Double-click **Open EMI Workbench.lnk** in the extracted folder.
+
+**The Windows shortcut is the main way to launch Signal Lab.** Keep it beside the other extracted files when moving the app. It opens a local desktop window with saved evidence, experiment workflows, logs, and results. Python and the browser runtime are included; viewing saved results needs no account or internet connection. New simulations and tests require separately installed, licensed MATLAB.
+
+For source development, clone or download and extract this repository, then double-click [Open EMI Workbench.lnk](Open%20EMI%20Workbench.lnk) in the project root. The source launcher requires Python 3.10 or newer and opens the browser interface. Download the whole project, rather than only the shortcut. See the [Workbench guide](12_Workbench/README.md) and [desktop packaging guide](12_Workbench/desktop/README.md).
+
 ## EDMD hybrid-estimation research
 
 **Finding so far: a learned correction can improve forecasts when the motor behaves differently from the physics model.** In the original three simulated mismatch conditions, the [EDMD hybrid-estimation module](11_EDMD_Hybrid_Estimation/README.md) reduced 50 ms position-forecast error by about **66–80% compared with nominal physics alone**. It keeps the motor's physics model and adds a learned correction for its prediction errors.
@@ -107,5 +116,6 @@ The complete checkpoint was tested with MATLAB R2026a Update 3, Simulink, Contro
 | `09_Report` | Progress publication and report assembly map |
 | `10_Hardware_Design` | Future testbed planning |
 | `11_EDMD_Hybrid_Estimation` | Verified offline learned-estimation research, simulations and reproducible evidence |
+| `12_Workbench` | Local research workbench, Windows shortcut, workflows, and desktop packaging |
 
 The numerical parameters are representative assumptions, not measurements from a selected actuator, cable or receiver. This project does not claim demonstrated hardware immunity, universal fault detection, physical safety or compliance. Formal Draft requirement approvals remain unchanged.

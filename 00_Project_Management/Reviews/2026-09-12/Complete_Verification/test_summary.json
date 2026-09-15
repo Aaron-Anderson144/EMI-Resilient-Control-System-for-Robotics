@@ -1,0 +1,19 @@
+{
+  "main": {
+    "tests": 468,
+    "passed": 468,
+    "failed": 0,
+    "incomplete": 0,
+    "elapsedSeconds": 189.4219447,
+    "failedNames": []
+  },
+  "hybrid": {
+    "tests": 32,
+    "passed": 32,
+    "failed": 0,
+    "incomplete": 0,
+    "elapsedSeconds": 11.7988228,
+    "failedNames": []
+  },
+  "allPassed": true
+}

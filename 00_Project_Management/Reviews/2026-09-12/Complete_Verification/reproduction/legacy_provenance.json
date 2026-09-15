@@ -1,0 +1,27 @@
+[
+  {
+    "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-11\\let\\work\\measurement_boundary\\capture_before.m",
+    "bytes": 1387,
+    "sha256": "1036afc4769d08cfa132c0d0101a712d7adc963cbfb6efac17ed738f6719e3bc"
+  },
+  {
+    "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-11\\let\\work\\measurement_boundary\\verify_after.m",
+    "bytes": 2347,
+    "sha256": "9fe5eacc16dad6fc6e41ec610c3ad7a579ff7b05ccef9f3906514b23011ee596"
+  },
+  {
+    "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-11\\let\\work\\measurement_boundary\\legacy_before.mat",
+    "bytes": 23324990,
+    "sha256": "a7638d00990160321e348a67d9f228405ca60783da68316fb94e37db04baf9c5"
+  },
+  {
+    "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-11\\let\\work\\measurement_boundary\\before\\phase3_loop_step.m",
+    "bytes": 5335,
+    "sha256": "0c79081c2172cdb493c97255dee3d059481780b9fbb131e0bd093748de3bb94c"
+  },
+  {
+    "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\work\\project_verification_20260912\\verify_legacy.m",
+    "bytes": 2442,
+    "sha256": "95b617c733c8f4c8a6ddcc9b367332bf90abd6dc65721db1cd08b4f60ac9e63d"
+  }
+]

@@ -1,0 +1,381 @@
+{
+  "updated_local": "2026-09-12T22:01:21-04:00",
+  "scope": "Clearer, more direct wording in the working project documents and publication reports.",
+  "markdown_reviewed": 69,
+  "markdown_revised": 68,
+  "word_copies_revised": 2,
+  "pdf_copies_revised": 2,
+  "preservation": {
+    "numbers": true,
+    "equations": true,
+    "commands": true,
+    "links": true,
+    "executable_source_files": true,
+    "experimental_conclusions": true
+  },
+  "report_pages_visually_checked": 11,
+  "historical_records": "The original freeze, source, publication and numerical records retain their original identities. Current wording changes do not alter those dated results or claim to match their original document bytes.",
+  "publication_status": "Local wording update. Earlier publication status records describe the original published version.",
+  "changed_documents": [
+    {
+      "path": "README.md",
+      "before_sha256": "c76740e38b6d01a81e5f86626bfc6cac6262d32afca4ecf94e9b0fe0ee8bb710",
+      "after_sha256": "c6b6cf79a88a3afa86e96c2383fce7c9ff92da81ef39579ee1711d78be542d05"
+    },
+    {
+      "path": "10_Hardware_Design/Hardware_Plan.md",
+      "before_sha256": "c303a7c91390fc563580da4a1bffd2aface3d8bfc37ff1d2692773ac1bb5e618",
+      "after_sha256": "43a7c2f1f28b66caef8a919a1f0680e7227a1e8251c092234845916f6c71f732"
+    },
+    {
+      "path": "publication_package_2026-09-11/README.md",
+      "before_sha256": "9fc39cc479055ac27690ac796ae944b79de95e4713cb96b15574aa7836b07b96",
+      "after_sha256": "65f67d4a8df661dc48c7684ea763aafddb94f3554bf091e271431b4b6f7ab2b8"
+    },
+    {
+      "path": "publication_package_2026-09-11/Public_Update.md",
+      "before_sha256": "c2333a37929465ce61418602107443b4d99be0a7d175e16b30d1e467aa2b79b8",
+      "after_sha256": "40c05fc4b7af8c76db782d639c086cd6304bf3c31e749bff6f0c182e8fb7d135"
+    },
+    {
+      "path": "publication_package_2026-09-11/Publication_Reproduction.md",
+      "before_sha256": "1643397300354f2511f911521061db09a44e2bd23880df77cea40f72afa87fb2",
+      "after_sha256": "affac5aed4b59431bdb4fe971ba9b9b30b2d8d0584e7ceb8bee874690bff9648"
+    },
+    {
+      "path": "publication_package_2026-09-11/Figure_Captions.md",
+      "before_sha256": "69a10cd5cb49f66591c26ee2512a71212ea041738fecf78796f4ae6a2af6c0f9",
+      "after_sha256": "403efefac38eacf5146d8aae6717f8da8a48bf9390bd374f290c689430e67e8a"
+    },
+    {
+      "path": "publication_package_2026-09-11/Evidence_Catalogue.md",
+      "before_sha256": "ea0b8ed7e5ce321f0090eb90fdfe7e74c0d87f9d0ee5231e0f547106f5c9de27",
+      "after_sha256": "24d4b36e308af1cd5469b7bb4363380e276e15eeb4071cd673bdaa1637d022d2"
+    },
+    {
+      "path": "publication_package_2026-09-11/EMI_Robotics_Progress_Report.pdf",
+      "before_sha256": "3c490dd30b2674a6096d8d7184123f58eabc557f37c9092f7d3b0213ac034c48",
+      "after_sha256": "ff7f105a83b20fba885c0e04d2ce6d649ce140064acc19191bdf5332532f45a6"
+    },
+    {
+      "path": "publication_package_2026-09-11/EMI_Robotics_Progress_Report.md",
+      "before_sha256": "d6f72890df95acda537b8b912cca9dcdfbf30707ec26fc6a3981df087439fc14",
+      "after_sha256": "86e345b16ac988df364b5ec0436256fd10e42ed984db8c79b94a0ee7b7a47036"
+    },
+    {
+      "path": "publication_package_2026-09-11/EMI_Robotics_Progress_Report.docx",
+      "before_sha256": "03dd3b0d20aa03a42d12c51ba811cc6f3747810b75b3c31752362345dd58d48c",
+      "after_sha256": "3afc16dabde5151968f7f0205580583f09f5001ddb98d6f0511e5306c615fbf0"
+    },
+    {
+      "path": "02_Requirements/Verification_Traceability.md",
+      "before_sha256": "098811d2303dabdcc8ac7587be1fdd2117126fdf25c6f6aaba447eb6f401bc5d",
+      "after_sha256": "c52c35970f455efa4aa4f1b72de75da0452bd868ac59fe5383c1b34380701f5c"
+    },
+    {
+      "path": "02_Requirements/System_Requirements.md",
+      "before_sha256": "4cc829f73d89a0d092018c9a6a9c878237f91e9802e25bbee916002420d73ffa",
+      "after_sha256": "e88a976c1061e552f3043b5e35476f15f7d0d9b256603c36ba2430fe7fdaee58"
+    },
+    {
+      "path": "02_Requirements/Simulation_Test_Plan.md",
+      "before_sha256": "db5f760ef87fd6c2ff2eb0afa34a0dca5381712e0e15bcd7a36b513bafabb11b",
+      "after_sha256": "9e1c06a3bea55ef94f0401b62ef1d72b7c047741beb2d66d14b6598c80ecdf8b"
+    },
+    {
+      "path": "02_Requirements/Research_Evidence_Status.md",
+      "before_sha256": "6b3a601451bb96d8d292ed4a8b23d7c3ca42cd5b138a47dd4348b20deda26676",
+      "after_sha256": "8ceac532ae6c72edbf6266fba8dcc8c191d9da218e46ff7cf4cd8d18e75ba831"
+    },
+    {
+      "path": "02_Requirements/Failure_Modes_and_Effects_Analysis.md",
+      "before_sha256": "f5f72ad6765acc8bda02f2a916ebe4b7541c4a8c15b0425328bf035bd7209a8d",
+      "after_sha256": "d28c554d09c4eea4615418d63af546d6f2295d2af2125b3c4f6bc2588fe183f9"
+    },
+    {
+      "path": "09_Report/Report_Outline.md",
+      "before_sha256": "9992ea020e31e0cfaed8b300bb63f9663e14e950593f5644d8e4934a4b5f73bd",
+      "after_sha256": "bdc8dfe8825749c93f06c3cff1b8b7ec4a1a2e2d0557cb8e3f929ba2a1c4f087"
+    },
+    {
+      "path": "01_Research/Research_Log.md",
+      "before_sha256": "27e523e3a49df5e7afc161f16f8164e9e60c732fe2f90f6b6047b2fc0a8e717f",
+      "after_sha256": "0ae2459676871327365041a631aa33ceba28d8b9f596f5179603c403bd7810c3"
+    },
+    {
+      "path": "01_Research/Literature_Review_Plan.md",
+      "before_sha256": "879c6a25ee2bdbe79917607009332a8bcb229f0d7ad08815685da38d7624bb2e",
+      "after_sha256": "d601a35b65cb8a1bec1fb19f8d5fd69ef860b65fb189d81087536937c90b3915"
+    },
+    {
+      "path": "publication_package_2026-09-11/Announcement_Draft.md",
+      "before_sha256": "66c71ce45c2266840c96eaf0f54bdf7a76b892f0f6df7fd69cb45a3bc868cbca",
+      "after_sha256": "199dc9792d9a921839b6a2aefc5ffd9754e0ac906a426abe0054f14abdd7e615"
+    },
+    {
+      "path": "Project Notes_09-08-2026.md",
+      "before_sha256": "9bb8675e3c3f7ce9e94063c77472065264ceb065e873fbb0152e64f194f1c984",
+      "after_sha256": "f80f51d554cb8d84e2abb43d16a71ea5525eba3dd96c270f67fd0aa8cff70d21"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/README.md",
+      "before_sha256": "9fc39cc479055ac27690ac796ae944b79de95e4713cb96b15574aa7836b07b96",
+      "after_sha256": "65f67d4a8df661dc48c7684ea763aafddb94f3554bf091e271431b4b6f7ab2b8"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/Public_Update.md",
+      "before_sha256": "c2333a37929465ce61418602107443b4d99be0a7d175e16b30d1e467aa2b79b8",
+      "after_sha256": "40c05fc4b7af8c76db782d639c086cd6304bf3c31e749bff6f0c182e8fb7d135"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/Publication_Reproduction.md",
+      "before_sha256": "e5f1c8fde87b365d5a607fd5103a1ad9c98185f1535ef8af2f73a674a1d54ff8",
+      "after_sha256": "f3b60c8b5f10b1e225dd01c68e5d2d143cab2da3388039598221d64693d5922f"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/Figure_Captions.md",
+      "before_sha256": "69a10cd5cb49f66591c26ee2512a71212ea041738fecf78796f4ae6a2af6c0f9",
+      "after_sha256": "403efefac38eacf5146d8aae6717f8da8a48bf9390bd374f290c689430e67e8a"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/Evidence_Catalogue.md",
+      "before_sha256": "6dcd3ca8d37d10813eb2ba380d9c64fdfec5ffb4a02250bbd78d18a48c3582a3",
+      "after_sha256": "3db3536b3b71302f3891deb911f611345276e1770bd382825425d2685e49f8ef"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/EMI_Robotics_Progress_Report.pdf",
+      "before_sha256": "3c490dd30b2674a6096d8d7184123f58eabc557f37c9092f7d3b0213ac034c48",
+      "after_sha256": "ff7f105a83b20fba885c0e04d2ce6d649ce140064acc19191bdf5332532f45a6"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/EMI_Robotics_Progress_Report.md",
+      "before_sha256": "d6f72890df95acda537b8b912cca9dcdfbf30707ec26fc6a3981df087439fc14",
+      "after_sha256": "86e345b16ac988df364b5ec0436256fd10e42ed984db8c79b94a0ee7b7a47036"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/EMI_Robotics_Progress_Report.docx",
+      "before_sha256": "03dd3b0d20aa03a42d12c51ba811cc6f3747810b75b3c31752362345dd58d48c",
+      "after_sha256": "3afc16dabde5151968f7f0205580583f09f5001ddb98d6f0511e5306c615fbf0"
+    },
+    {
+      "path": "09_Report/Publication_2026-09-11/Announcement_Draft.md",
+      "before_sha256": "66c71ce45c2266840c96eaf0f54bdf7a76b892f0f6df7fd69cb45a3bc868cbca",
+      "after_sha256": "199dc9792d9a921839b6a2aefc5ffd9754e0ac906a426abe0054f14abdd7e615"
+    },
+    {
+      "path": "07_Data/README.md",
+      "before_sha256": "733dc9ab995a6184577d9d8f41dc084f6d4c6aaaa8da2c4ade15528113298f4b",
+      "after_sha256": "9ffd291f967b15565a41e398f6df60d76932e8183fc3bb319bbcc6479ca6ab79"
+    },
+    {
+      "path": "00_Project_Management/Consolidation_Checkpoint.md",
+      "before_sha256": "519ac98c160c4fae7066089c62156519d14f8c1ac335f1da108062fff4dde004",
+      "after_sha256": "a9f21f89e4fc896c0a3906b7381abe83606589d551749ac6e3591ad27fb0508a"
+    },
+    {
+      "path": "00_Project_Management/Causal_Receiver_Checkpoint.md",
+      "before_sha256": "99e52dd045aba120a9ee1ab7dfd058d43d4c4a491209bb9cad5b2fb433512f0d",
+      "after_sha256": "eed24e4bc7a37c9ad06048e9b04c0dedfd6bc1c810308eb6de67b63de401c016"
+    },
+    {
+      "path": "00_Project_Management/Research_Charter.md",
+      "before_sha256": "4426c1ad21a203ba8b8ce2633d793ece04347d6f17d6d431ed9c5e34637d7e58",
+      "after_sha256": "fd8f9e257f111e38b35d174abee2a06184f411fa2153580e2ec1b2a6a19b1e84"
+    },
+    {
+      "path": "00_Project_Management/Local_Reproduction.md",
+      "before_sha256": "47f2cda713ff87f5cc5a2ccfe1e6686f4387207d7bc66e0de7cd45a3e743bbec",
+      "after_sha256": "e10bb25682fbdc8a11f6d32352f08a7c6f8c998d109f644c064592b225643e6a"
+    },
+    {
+      "path": "00_Project_Management/Decision_Log.md",
+      "before_sha256": "a798dc6db65e6a1e2f6f9617070e54155827884dd61820df689b1ab28bd9ada1",
+      "after_sha256": "97365d477cca1128eae4b0291836172e2f6508ed977fb9d26d49e81239423248"
+    },
+    {
+      "path": "00_Project_Management/Roadmap.md",
+      "before_sha256": "db774c4de72acea748c865ec3bca20cb5360863a21439e5abd0754c0e0db66fa",
+      "after_sha256": "9ed5f576ae6f3a3d62f4740f3807243aebf12cf0382d3759bacb072d5c028a07"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/README.md",
+      "before_sha256": "f0f43794f36bb455baf2fc075a9a1170dd6983cd356827362a3ba4339bb37f5b",
+      "after_sha256": "969461ae5df12e71a20950302b22256fe0599045908496c9d62a2805da1da09f"
+    },
+    {
+      "path": "07_Data/Data_Dictionary.md",
+      "before_sha256": "9f54277f76a1141f1f8b4b887d03ed75cc16c011b86ec5d7a59301b3a9d818ce",
+      "after_sha256": "d8c436e07bb346da9292cd1a951eb7d42bb9ff76eeb057296396e4adb00a94a1"
+    },
+    {
+      "path": "11_EDMD_Hybrid_Estimation/PROVENANCE.md",
+      "before_sha256": "58718c9aead33ed6a99950779dc725cc52469a9aca7c8d7d243be277d243957a",
+      "after_sha256": "c11876a83bb0ed98ebe55bd0bc323393200d614367d2036e28a97dbc45affd42"
+    },
+    {
+      "path": "11_EDMD_Hybrid_Estimation/docs/USING_YOUR_DATA.md",
+      "before_sha256": "ef1bcfa175d6e3f2e8feafc2f49528f6271f80c0efb76cd6a1b02c67dcc0d903",
+      "after_sha256": "d89d4ddd41aa0a2a7814d1345c08ee524cb2b1ee4e7807e1f50103f28e022554"
+    },
+    {
+      "path": "11_EDMD_Hybrid_Estimation/docs/RESULTS.md",
+      "before_sha256": "fcf7f11a6d2d5fded98cdb4cdb93618c01d8f5f7d673ed9ef3242ed0fb9f2c4c",
+      "after_sha256": "4dd8ae78d4532364be9b421e6937f643de378d8ab6f9b958ee547b0aef9ad9da"
+    },
+    {
+      "path": "11_EDMD_Hybrid_Estimation/docs/PREVIOUS_ASSESSMENT.md",
+      "before_sha256": "4b175c5563637b97256cb66e61ec466c5e3e8ba4b3ba00460c37730c6187ea54",
+      "after_sha256": "3876bed6621867d271e38b24a59d9153fd9f20201d20b9c184f542e20dde434d"
+    },
+    {
+      "path": "11_EDMD_Hybrid_Estimation/docs/DESIGN.md",
+      "before_sha256": "48c5b4f68e863c7b24652747d9a5ca1a83b3ff8617f08c7fa253122d2d7a79bf",
+      "after_sha256": "f95c719651b967c07744a658c455947eb487ecba3eb43660619e864dbd06585f"
+    },
+    {
+      "path": "11_EDMD_Hybrid_Estimation/CONTRIBUTIONS.md",
+      "before_sha256": "6fd7a70f049237d734570d55bdfdd43e32bcc3164ba4564f6210e0aa06eb0737",
+      "after_sha256": "5005362a53096f51b3ecc4539ef4c333c63feaf930511ea4473f758d8dc6ae21"
+    },
+    {
+      "path": "00_Project_Management/Reviews/2026-09-12/Receiver_Revision_Brief.md",
+      "before_sha256": "c65a0015820f4b6da44202112f4830b1cf10f7b6893ef73668832912c1b35499",
+      "after_sha256": "aacede56edcc062f39189b7e39f72f8a9ac9126e747bba92449457140415c01c"
+    },
+    {
+      "path": "00_Project_Management/Reviews/2026-09-12/Project_Progress_Review.md",
+      "before_sha256": "634d984d25742f4c1b26cb2d1cbbb8e8dbefd6eb171fc5a683cf57a964d837d6",
+      "after_sha256": "5c43cde08cbf725153e2ac30b115bae9d685b9d071b836f26586d11e585a548a"
+    },
+    {
+      "path": "06_Circuit_Simulations/README.md",
+      "before_sha256": "847aad71832c2d405a6b74764643612a481e10ee9ecc51fe755303beff08b08d",
+      "after_sha256": "2ceef13051bb371429c54806c4af1f0ec7b0eb65e52fde05169de5ea1e83b9bb"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/Device_Source_and_Assumptions.md",
+      "before_sha256": "2159f4658517b5aa39b5331c93c5a71b89e2526c231858fdb389dcb5165beebe",
+      "after_sha256": "b730319a331c877e1564cedf95660aeb41ffd24bb9caaf1d7683c4af8bbade40"
+    },
+    {
+      "path": "11_EDMD_Hybrid_Estimation/reference_project/README.md",
+      "before_sha256": "62d15d082ae13195aad516623b69633704dfef024b695405032cf8f670473632",
+      "after_sha256": "e06cb60102c4f3385a3abb2ce568f406d64e5a77879e85ecf52596f7b88842c6"
+    },
+    {
+      "path": "04_EMI_Models/Phase2_Encoder_Faults.md",
+      "before_sha256": "0ae487be1b152c43287eee7e66b096948207361cf711aaf3404d30fe262afd84",
+      "after_sha256": "a2e8f37d775c955cd51e9417f41f68caba3aa1b2ea0bf2dd85190df1c7bf1144"
+    },
+    {
+      "path": "04_EMI_Models/Phase2C_Supply_and_Load.md",
+      "before_sha256": "dbef8a36ad0dd7d212eeba6d36356a8b5bfd2615650dd97d35daafad19f77709",
+      "after_sha256": "8043c2719f3ef8dd7e873462a56fd042ec9a3cf450912e38ba175ffd1e7ed23b"
+    },
+    {
+      "path": "04_EMI_Models/Phase2B_Sensitivity_Method.md",
+      "before_sha256": "432e87ce1e02609e2876f97f32907cddf9a98b72e375ab0bff0663ad0b9189b8",
+      "after_sha256": "b7a7d660dbe0fb48daff6dc0e9a1dd8c16a2802f5fb99ca73628bfa4b9b50f55"
+    },
+    {
+      "path": "04_EMI_Models/Phase2B_Coupling_and_Communication_Faults.md",
+      "before_sha256": "f7bb0c98a9bf6d92d6451b2c0dba2bc80682ccc91e59fc6188f5020d98161ea5",
+      "after_sha256": "dbdb8c8eb1d753bfe278bd4e734176508c06f1fb45b69490a0b5d4a167d27225"
+    },
+    {
+      "path": "04_EMI_Models/Parameter_Identification_and_Switching_Case.md",
+      "before_sha256": "e92b801e114ec34344f848db875ad0a96dfe354171b2c09742213741eefc7040",
+      "after_sha256": "1b19264a16f2761b2cfa728287f2e0cd386a180d398d5f4b833c31635c97dd82"
+    },
+    {
+      "path": "04_EMI_Models/Packet_Summary_Contract.md",
+      "before_sha256": "a3fb6e0b4b227653a1c07f127facd6e7c5f9bddd501ac2e0e0c037976e669524",
+      "after_sha256": "56e98f0f9b8be6d906acb217cd2c24869221b5127748e656dfd0f86e944a07a5"
+    },
+    {
+      "path": "04_EMI_Models/Four_Way_EMI_Experiment.md",
+      "before_sha256": "157daec046c3742b2f78a1071298606789759db04101c0d0a63bc43c3ce5f0be",
+      "after_sha256": "8592a4e47cefa3f760667477c03450452480937f266fe0923f303588a71745b7"
+    },
+    {
+      "path": "04_EMI_Models/Four_Way_Causal_Implementation.md",
+      "before_sha256": "f74cb76b661c991ae722347ef8167ee93e521cd9232ecfabbc30e33a00e8057a",
+      "after_sha256": "8951ec7f2036da8e98fdc6903ed7f6f4e57272535c3b1f91b163c92c872a94d0"
+    },
+    {
+      "path": "04_EMI_Models/EMI_Modeling_Plan.md",
+      "before_sha256": "aba9fde38723c6556171dd216eba67cc3643e545a375d2ee031ae019c98d8ce9",
+      "after_sha256": "922510f21b1c6e87a8421fadac67e87ac7daeb50469ca0ee30d3029a928ce49b"
+    },
+    {
+      "path": "06_Circuit_Simulations/FOUR_WAY/README.md",
+      "before_sha256": "17dd656ef72da56255de5aa1595a79bad5a8badd92f66e1cdd89d459601b8854",
+      "after_sha256": "c5296bf2f0b0f29fd2ec11f143ca25ca02c6e862f87b3dc35345c1f77c84167b"
+    },
+    {
+      "path": "05_Control_Algorithms/Phase3_Stop_Hold.md",
+      "before_sha256": "f091f4a0b32133365f284faae4e1be6ab4799750e6338449856a781c61f66ff2",
+      "after_sha256": "1a3bc7a44c5db22cd7ca56efcf40fcfc33b6d5009dec2ef0221ad9ba598b8d49"
+    },
+    {
+      "path": "05_Control_Algorithms/Phase3_Motion_Envelope.md",
+      "before_sha256": "302bed2d0f3a63ad838bdf406fff3296a96b982fa834f759b2233f91e96bc71e",
+      "after_sha256": "18086d4359e2c45e824f82030828361154dc06d204f05bdd54c649f374e1cc88"
+    },
+    {
+      "path": "05_Control_Algorithms/Phase3_Independent_Reference_Recovery.md",
+      "before_sha256": "18e684f93075c128279586ad23b1f8049b8e7c0f60c7ef8a7c1d7d927c2cc3c9",
+      "after_sha256": "f401ee8784733129bcd25204c8e197f4109f5ad1aa4997b3420e9db53ad117c3"
+    },
+    {
+      "path": "05_Control_Algorithms/Phase3_Detection_and_Supervision.md",
+      "before_sha256": "c1b1627bfdf21264b2f4b8405ad381fa3922e8650d4d61cfc6afaf258d5b405a",
+      "after_sha256": "4db68c187e3d992b49c7d446dd8a358b17e028f6bfd59d2abced73fb2bc3d516"
+    },
+    {
+      "path": "05_Control_Algorithms/Phase3_Controller_Tuning.md",
+      "before_sha256": "c93a3da1cfb8b2f29aae644ea94bb19d91efb61cacd35e949eccf21683959afc",
+      "after_sha256": "4b82d57f4e044098381b5be04a62e6b11bad092af45112a40e57835b5e09d077"
+    },
+    {
+      "path": "05_Control_Algorithms/Control_Strategy.md",
+      "before_sha256": "89e02f176b020dc0e3ab1050c4ba5e4a1ec0b02b537005ee36de6c0054d51ebb",
+      "after_sha256": "df0b79c0fd7c783bd08ae719622d72d13f20e25cf8dc43c986c734596d3895f8"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/Device_Source_and_Assumptions.md",
+      "before_sha256": "13c7a1f903a4a8fbdbb70ff89996bacdd40c1cba964625629850e051613e63e4",
+      "after_sha256": "71e3b31c8d7e207519f04360f89e112fa4210480b4129610a523a9a1be7ceec6"
+    },
+    {
+      "path": "11_EDMD_Hybrid_Estimation/README.md",
+      "before_sha256": "d511bcbbd8a88d9fcddb5e3d5424684740a3a34d3cdc09af15d76448bf63b82e",
+      "after_sha256": "56b9cb4c257f241c0f83f1b8cc880dbff7363d8b45880951d3622e4f995b4d84"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B/README.md",
+      "before_sha256": "608b60c0934bb85cce4366465cbf65d97720eb59c8cbc36c57cb00dbbdd57457",
+      "after_sha256": "b233aaaf4e9dadd5b3037917a3602bc9140575ecc7658cf72a297f52fca029c8"
+    },
+    {
+      "path": "03_MATLAB/models/README.md",
+      "before_sha256": "8e4143242f9b6f7d6f1b48e84001c2e5844f8c2655f6b420df9bdb2a9dda140c",
+      "after_sha256": "77c35e1d881b1438fac2d7191baec1ef64931fcd7e5ed8de68dbaa47b9bf8a5d"
+    },
+    {
+      "path": "03_MATLAB/README.md",
+      "before_sha256": "79b8b3c6b0bbb645b8036a03be8cf764dfc9a4fcbdb64b4d7d79f85065ce8cf0",
+      "after_sha256": "60b6f645cb6082b98840906318b333505403fdb37a620b5895033779846618c8"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/README.md",
+      "before_sha256": "0aaefda37d57b42900fd1d3cd4160c1e93612615d1303f24fa44064a7cf5ec18",
+      "after_sha256": "b7e4436b7354cfcc7424b127d87f47c9777bc4110918fd41a89e67b658b60291"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/Circuit_Physics_and_Verification.md",
+      "before_sha256": "37724628a2cbb4f9798a1dad79c7c455498ea031ff5c0b30cf1bf20dc6974d02",
+      "after_sha256": "633de59ed64a28ba97e63cdb1336b621499c7cb25a397f491beefc000ca3a9df"
+    }
+  ]
+}

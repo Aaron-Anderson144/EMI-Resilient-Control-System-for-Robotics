@@ -1,0 +1,73 @@
+{
+  "completed_local": "2026-09-12T22:27:06.291765-04:00",
+  "verification_checks_passed": true,
+  "research_acceptance_passed": false,
+  "hardware_validated": false,
+  "matlab_tests": {
+    "main": 468,
+    "original_sc01b": 22,
+    "edmd_hybrid": 32,
+    "total": 522,
+    "failed": 0,
+    "incomplete": 0
+  },
+  "python_tests": {
+    "sc01b_r2": 4,
+    "four_way_audit_v2": 6,
+    "total": 10,
+    "failed": 0
+  },
+  "frozen_files_verified": 16,
+  "declared_dependencies_verified": 40,
+  "existing_package_manifest_entries_verified": 106,
+  "legacy_exact_records": 116,
+  "legacy_channels_per_record": 31,
+  "legacy_samples_per_record": 3001,
+  "development": {
+    "fresh_records": 16,
+    "matched_pairs": 8,
+    "generator_csvs_exact": 181,
+    "numeric_fields_exact": 6205957,
+    "text_fields_exact": 144292,
+    "excluded_elapsed_fields": 16,
+    "acceptance": "rejected: all four exposed DEV02 arms exceed receiver domain"
+  },
+  "native": {
+    "fresh_runs": 24,
+    "numerical_passes": 24,
+    "refinement_passes": 16,
+    "domain_rejections": 12,
+    "solver_settings": "Final archived per-case settings, reproduced without retuning or gate changes"
+  },
+  "edmd": {
+    "fresh_training_runs": 24,
+    "fresh_validation_runs": 12,
+    "fresh_test_runs": 40,
+    "candidates": 18,
+    "selected_candidates": [
+      3,
+      12
+    ],
+    "benefit_regimes_passed": 0,
+    "benefit_regimes_tested": 4,
+    "interpretation": "Repeatability with known seeds; no additional independent evidence"
+  },
+  "evaluation_guard_blocked": true,
+  "evaluation_records_opened": 0,
+  "closure_records_opened": 0,
+  "goal_alignment": "Aligned with the charter; main comparative milestone remains blocked.",
+  "next_priority": "Receiver/topology characterization, then an accepted development result and a newly frozen comparison.",
+  "repairs": [
+    "Restored canonical frozen plan to exact original bytes and retained a clearly labeled reading copy.",
+    "Added a versioned pair-coverage audit and six focused tests; preserved original auditor.",
+    "Rebuilt stale publication ZIP and synchronized the clarified EDMD package.",
+    "Reconciled current roadmap, research log, requirements traceability and repository map."
+  ],
+  "not_performed": [
+    "Hardware testing",
+    "Reserved four-way evaluation or closure runs",
+    "Rerun of every historical native circuit, motion, recovery, stop/hold and tuning campaign",
+    "Fresh external literature or receiver-datasheet research",
+    "Remote publication or HTTP-link verification"
+  ]
+}

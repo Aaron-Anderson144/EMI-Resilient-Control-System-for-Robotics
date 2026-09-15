@@ -1,0 +1,38 @@
+[
+  {
+    "name": "four_way_original_fresh_records",
+    "argv": [
+      "C:\\Users\\adand\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY\\scripts\\audit_exported_records.py",
+      "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\outputs\\Project_Verification_2026-09-12\\fresh_development",
+      "--output",
+      "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\outputs\\Project_Verification_2026-09-12\\evidence_audits\\four_way_original_fresh_records.json"
+    ],
+    "cwd": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics",
+    "started_utc": "2026-09-13T02:19:59.520560+00:00",
+    "duration_seconds": 1.235000000015134,
+    "exit_code": 0,
+    "log": "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\outputs\\Project_Verification_2026-09-12\\evidence_audits\\four_way_original_fresh_records.log"
+  },
+  {
+    "name": "four_way_v2_fresh_records",
+    "argv": [
+      "C:\\Users\\adand\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY\\scripts\\audit_exported_records_v2.py",
+      "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\outputs\\Project_Verification_2026-09-12\\fresh_development",
+      "--output",
+      "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\outputs\\Project_Verification_2026-09-12\\evidence_audits\\four_way_v2_fresh_records.json"
+    ],
+    "cwd": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics",
+    "started_utc": "2026-09-13T02:19:59.520560+00:00",
+    "duration_seconds": 1.235000000015134,
+    "exit_code": 0,
+    "log": "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\outputs\\Project_Verification_2026-09-12\\evidence_audits\\four_way_v2_fresh_records.log"
+  }
+]

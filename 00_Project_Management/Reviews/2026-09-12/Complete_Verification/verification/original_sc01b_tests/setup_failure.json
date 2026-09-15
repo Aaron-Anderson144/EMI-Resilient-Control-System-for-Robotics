@@ -1,0 +1,7 @@
+{
+  "stage": "scratch_runner_setup",
+  "testExecutionStarted": false,
+  "projectCodeChanged": false,
+  "error": "MATLAB could not concatenate TestSuite.empty with the concrete fromFile result.",
+  "resolution": "Initialize the suite from the first concrete test file; retry in a fresh MATLAB process."
+}

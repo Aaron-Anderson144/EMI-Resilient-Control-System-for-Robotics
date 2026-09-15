@@ -1,0 +1,1347 @@
+{
+  "scope": "Independent exported-CSV check; no MATLAB execution or production code imports. Does not independently rerun event classification or simulation refinement.",
+  "results_directory": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01B_R2\\results\\verification",
+  "criteria_sha256": "4553f7f1c0f38fcd0bf1ab8d00b8ee4003706c2f8dd5f66931318b15cde51dc9",
+  "audit_script_sha256": "0778ad33f90cc0b50a2950afb4c77b5db4cc76e0b346b236dee0ba55e9cabcc2",
+  "cases": {
+    "nominal": {
+      "case": "nominal",
+      "revision": "SC01B-R2-IAUC100N04S6L014",
+      "input_sha256": {
+        "parameters.json": "8bcf382b988bc05f70d1de16a5c33297f15c1a6b06436e386e30514f528f112e",
+        "native_finest.csv": "1ecdd83ee4f4846b70e2d40ba04f4b3188e737c94f08300a5bbbfcc36acb9cd5",
+        "spice_finest.csv": "b0d05ce20bca48ece9d05a795e609713d885b5e4f681df5cdce34c8992945ef8"
+      },
+      "native": {
+        "samples_in_csv": 40001,
+        "initial_load_A": 2.98096418175676,
+        "window_s": [
+          1e-06,
+          5e-06
+        ],
+        "max_abs_switch_kcl_A": 1.0658141036401503e-14,
+        "max_abs_high_voltage_identity_V": 1.0302869668521453e-13,
+        "max_abs_low_voltage_identity_V": 0.0,
+        "max_abs_high_gate_kvl_V": 6.661842767166566e-05,
+        "max_abs_low_gate_kvl_V": 6.62737745348192e-05,
+        "gate_law": {
+          "turn_on_ohm": 25,
+          "turn_off_ohm": 3,
+          "off_bias_V": -1.5,
+          "law_based_work_J": 9.147474693884881e-07,
+          "measured_drop_work_J": 9.147474693866004e-07,
+          "work_difference_J": -1.887718802074615e-18,
+          "work_difference_limit_J": 9.147474693884881e-10
+        },
+        "independent_checks": {
+          "switch_kcl": true,
+          "terminal_voltage_identities": true,
+          "directional_gate_law": true,
+          "gate_work_law_matches_measured_drop": true,
+          "device_voltage_ratings": true,
+          "independent_energy_closure": true,
+          "positive_local_bus": true
+        },
+        "all_independent_engine_checks_passed": true,
+        "identity_absolute_allowances": {
+          "current_A": 0.01,
+          "voltage_V": 0.01
+        },
+        "load_flux_balance_residual_Vs": 6.813533027713592e-17,
+        "feed_flux_balance_residual_Vs": 1.138200522872966e-21,
+        "capacitor_charge_residual_C": 5.0345653151325485e-18,
+        "energy": {
+          "dc_source_work_J": 0.00014215359919235037,
+          "high_drive_work_J": 6.271563305462071e-07,
+          "low_drive_work_J": 5.568222467515447e-07,
+          "external_resistor_losses": {
+            "feed_resistor_J": 7.466836736584025e-07,
+            "capacitor_esr_J": 7.165368424395915e-08,
+            "load_resistor_J": 0.0002825960390439779,
+            "gate_resistors_J": 9.147474693884881e-07
+          },
+          "signed_device_terminal_energies": {
+            "high_drain_J": 1.8268458955321512e-06,
+            "high_gate_J": 1.464315283760619e-07,
+            "low_drain_J": 1.4851117575085401e-06,
+            "low_gate_J": 1.2279957953508916e-07
+          },
+          "external_storage_changes": {
+            "feed_inductor_change_J": -2.452041037132619e-08,
+            "load_inductor_change_J": -0.0001418782709819366,
+            "dc_link_capacitor_change_J": -2.669943470644967e-06
+          },
+          "source_total_J": 0.0001433375777696481,
+          "resistor_total_J": 0.0002843291238712687,
+          "device_total_J": 3.5811887609518423e-06,
+          "storage_change_total_J": -0.0001445727348629529,
+          "closure_residual_J": 3.804465423251635e-16,
+          "independent_throughput_scale_J": 0.0004324830474951735,
+          "independent_0p1pct_or_0p1nJ_limit_J": 4.324830474951735e-07,
+          "closure_within_independent_limit": true,
+          "meaning": "Signed terminal transfer including stored charge, not semiconductor dissipated heat."
+        },
+        "channel": {
+          "current_convention": "Internal modeled channel drain-to-source current; simultaneous positive conduction.",
+          "peak_high_channel_A": 9.83796911992297,
+          "peak_low_channel_A": 3.52571863685094e-11,
+          "peak_common_positive_channel_A": 3.52571863685094e-11,
+          "time_peak_common_s": 4.065e-06,
+          "common_positive_charge_C": 9.262072698538516e-20,
+          "overlap_threshold_A": 0.0029809642151747903,
+          "duration_both_channels_above_threshold_s": 0.0,
+          "method": "Exact piecewise-linear envelope/interval integration, with signal-zero and channel-intersection knots inserted."
+        }
+      },
+      "spice": {
+        "samples_in_csv": 40281,
+        "initial_load_A": 2.9809641817701,
+        "window_s": [
+          1e-06,
+          5e-06
+        ],
+        "max_abs_switch_kcl_A": 1.474891320185634e-09,
+        "max_abs_high_voltage_identity_V": 2.41193731653766e-11,
+        "max_abs_low_voltage_identity_V": 2.4201085579989012e-11,
+        "max_abs_high_gate_kvl_V": 0.00045466834005956854,
+        "max_abs_low_gate_kvl_V": 0.0016588808000754796,
+        "gate_law": {
+          "turn_on_ohm": 25,
+          "turn_off_ohm": 3,
+          "off_bias_V": -1.5,
+          "law_based_work_J": 9.147474194095462e-07,
+          "measured_drop_work_J": 9.147474278588487e-07,
+          "work_difference_J": 8.449302514902126e-15,
+          "work_difference_limit_J": 9.147474194095462e-10
+        },
+        "independent_checks": {
+          "switch_kcl": true,
+          "terminal_voltage_identities": true,
+          "directional_gate_law": true,
+          "gate_work_law_matches_measured_drop": true,
+          "device_voltage_ratings": true,
+          "independent_energy_closure": true,
+          "positive_local_bus": true
+        },
+        "all_independent_engine_checks_passed": true,
+        "identity_absolute_allowances": {
+          "current_A": 0.01,
+          "voltage_V": 0.01
+        },
+        "load_flux_balance_residual_Vs": -8.474571413542853e-15,
+        "feed_flux_balance_residual_Vs": 9.491478975656041e-17,
+        "capacitor_charge_residual_C": 1.0184892902630668e-15,
+        "energy": {
+          "dc_source_work_J": 0.00014215361575131946,
+          "high_drive_work_J": 6.271563104432566e-07,
+          "low_drive_work_J": 5.568222123407024e-07,
+          "external_resistor_losses": {
+            "feed_resistor_J": 7.466837651655449e-07,
+            "capacitor_esr_J": 7.165373756740759e-08,
+            "load_resistor_J": 0.00028259603918204094,
+            "gate_resistors_J": 9.147474194095462e-07
+          },
+          "signed_device_terminal_energies": {
+            "high_drain_J": 1.8268507518430125e-06,
+            "high_gate_J": 1.4643158053888203e-07,
+            "low_drain_J": 1.4851160872829975e-06,
+            "low_gate_J": 1.2279951438622836e-07
+          },
+          "external_storage_changes": {
+            "feed_inductor_change_J": -2.4520397492560023e-08,
+            "load_inductor_change_J": -0.00014187826244596024,
+            "dc_link_capacitor_change_J": -2.6699449410978106e-06
+          },
+          "source_total_J": 0.0001433375942741034,
+          "resistor_total_J": 0.00028432912410418347,
+          "device_total_J": 3.5811979340511206e-06,
+          "storage_change_total_J": -0.00014457272778455063,
+          "closure_residual_J": 2.0419430035722996e-14,
+          "independent_throughput_scale_J": 0.0004324830498227852,
+          "independent_0p1pct_or_0p1nJ_limit_J": 4.324830498227852e-07,
+          "closure_within_independent_limit": true,
+          "meaning": "Signed terminal transfer including stored charge, not semiconductor dissipated heat."
+        },
+        "channel": null
+      },
+      "cross_engine": {
+        "reference": "Original-SPICE CSV",
+        "time_alignment": "Unshifted union of both CSV integration grids; linear interpolation.",
+        "comparison_knots": 64277,
+        "all_waveforms_pass": true,
+        "signals": {
+          "switch_V": {
+            "max_abs_difference": 0.0052674326442921915,
+            "time_of_max_difference_s": 2.08469798541687e-06,
+            "reference_peak_absolute": 24.142802674538,
+            "allowance": 0.24142802674538,
+            "difference_to_allowance": 0.0218178175719733,
+            "pass": true
+          },
+          "bus_V": {
+            "max_abs_difference": 1.7561099596719032e-05,
+            "time_of_max_difference_s": 4.06194388363054e-06,
+            "reference_peak_absolute": 24.0175937895578,
+            "allowance": 0.240175937895578,
+            "difference_to_allowance": 7.311764763193773e-05,
+            "pass": true
+          },
+          "highVgs_V": {
+            "max_abs_difference": 0.0008240844761346899,
+            "time_of_max_difference_s": 4.04003776071129e-06,
+            "reference_peak_absolute": 11.9999966982164,
+            "allowance": 0.119999966982164,
+            "difference_to_allowance": 0.006867372524003914,
+            "pass": true
+          },
+          "lowVgs_V": {
+            "max_abs_difference": 0.0011564126455039236,
+            "time_of_max_difference_s": 2.08469798541687e-06,
+            "reference_peak_absolute": 11.9999864535205,
+            "allowance": 0.11999986453520499,
+            "difference_to_allowance": 0.009636782924572892,
+            "pass": true
+          },
+          "highVds_V": {
+            "max_abs_difference": 0.005256272528711747,
+            "time_of_max_difference_s": 2.08469798541687e-06,
+            "reference_peak_absolute": 24.9319111004534,
+            "allowance": 0.24931911100453402,
+            "difference_to_allowance": 0.02108250950973493,
+            "pass": true
+          },
+          "lowVds_V": {
+            "max_abs_difference": 0.005267432644997183,
+            "time_of_max_difference_s": 2.08469798541687e-06,
+            "reference_peak_absolute": 24.1428026745621,
+            "allowance": 0.241428026745621,
+            "difference_to_allowance": 0.021817817574871612,
+            "pass": true
+          },
+          "highCurrent_A": {
+            "max_abs_difference": 0.0017663498583653237,
+            "time_of_max_difference_s": 4.06194388363054e-06,
+            "reference_peak_absolute": 8.05022570173774,
+            "allowance": 0.0805022570173774,
+            "difference_to_allowance": 0.021941619077636983,
+            "pass": true
+          },
+          "lowCurrent_A": {
+            "max_abs_difference": 0.0017663506971707932,
+            "time_of_max_difference_s": 4.06194388363054e-06,
+            "reference_peak_absolute": 5.08838152480726,
+            "allowance": 0.0508838152480726,
+            "difference_to_allowance": 0.034713409137254105,
+            "pass": true
+          },
+          "highGateCurrent_A": {
+            "max_abs_difference": 0.0002109457805119508,
+            "time_of_max_difference_s": 2.03904484820973e-06,
+            "reference_peak_absolute": 1.60589308537443,
+            "allowance": 0.0160589308537443,
+            "difference_to_allowance": 0.013135730045363928,
+            "pass": true
+          },
+          "lowGateCurrent_A": {
+            "max_abs_difference": 0.00021060681784068613,
+            "time_of_max_difference_s": 3.7390400442028e-06,
+            "reference_peak_absolute": 1.60587214830638,
+            "allowance": 0.016058721483063802,
+            "difference_to_allowance": 0.013114793606875919,
+            "pass": true
+          },
+          "loadCurrent_A": {
+            "max_abs_difference": 2.6250064344424118e-09,
+            "time_of_max_difference_s": 4.06225e-06,
+            "reference_peak_absolute": 2.98096421518945,
+            "allowance": 0.0298096421518945,
+            "difference_to_allowance": 8.805897169334466e-08,
+            "pass": true
+          },
+          "feedCurrent_A": {
+            "max_abs_difference": 1.907694812980365e-06,
+            "time_of_max_difference_s": 4.05969388363053e-06,
+            "reference_peak_absolute": 2.98096722499785,
+            "allowance": 0.0298096722499785,
+            "difference_to_allowance": 6.399583319745291e-05,
+            "pass": true
+          }
+        }
+      },
+      "modeled_channel_overlap_passed": true,
+      "all_independent_case_checks_passed": true
+    },
+    "holdout_bus18": {
+      "case": "holdout_bus18",
+      "revision": "SC01B-R2-IAUC100N04S6L014",
+      "input_sha256": {
+        "parameters.json": "4ca5f1becfab6491cd5a3aaee32b8c3980b940b07dee6b007a1b61cc060dd154",
+        "native_finest.csv": "129ec1ab47b2d06ad768b819dce5688fac7aaf68dc17e87052542dc69f484d7a",
+        "spice_finest.csv": "6cf6527f57ca8bca3932bd4cec974882c18ea421b0fc12c4a36f69b74d52dea6"
+      },
+      "native": {
+        "samples_in_csv": 40001,
+        "initial_load_A": 2.23572313825636,
+        "window_s": [
+          1e-06,
+          5e-06
+        ],
+        "max_abs_switch_kcl_A": 1.0658141036401503e-14,
+        "max_abs_high_voltage_identity_V": 1.0302869668521453e-13,
+        "max_abs_low_voltage_identity_V": 0.0,
+        "max_abs_high_gate_kvl_V": 5.761794322830231e-05,
+        "max_abs_low_gate_kvl_V": 5.815930590063789e-05,
+        "gate_law": {
+          "turn_on_ohm": 25,
+          "turn_off_ohm": 3,
+          "off_bias_V": -1.5,
+          "law_based_work_J": 9.085060378558022e-07,
+          "measured_drop_work_J": 9.085060378539196e-07,
+          "work_difference_J": -1.8826366043910893e-18,
+          "work_difference_limit_J": 9.085060378558022e-10
+        },
+        "independent_checks": {
+          "switch_kcl": true,
+          "terminal_voltage_identities": true,
+          "directional_gate_law": true,
+          "gate_work_law_matches_measured_drop": true,
+          "device_voltage_ratings": true,
+          "independent_energy_closure": true,
+          "positive_local_bus": true
+        },
+        "all_independent_engine_checks_passed": true,
+        "identity_absolute_allowances": {
+          "current_A": 0.01,
+          "voltage_V": 0.01
+        },
+        "load_flux_balance_residual_Vs": 2.692412807460409e-16,
+        "feed_flux_balance_residual_Vs": 3.5711868585751864e-20,
+        "capacitor_charge_residual_C": -2.3361036336375595e-18,
+        "energy": {
+          "dc_source_work_J": 8.011928835089004e-05,
+          "high_drive_work_J": 6.225787008183322e-07,
+          "low_drive_work_J": 5.566188982157777e-07,
+          "external_resistor_losses": {
+            "feed_resistor_J": 4.208904434167818e-07,
+            "capacitor_esr_J": 4.0531098921975013e-08,
+            "load_resistor_J": 0.0001589589589446681,
+            "gate_resistors_J": 9.085060378558022e-07
+          },
+          "signed_device_terminal_energies": {
+            "high_drain_J": 1.1380904017267881e-06,
+            "high_gate_J": 1.4678015951105004e-07,
+            "low_drain_J": 1.0695464202265715e-06,
+            "low_gate_J": 1.2391140166914012e-07
+          },
+          "external_storage_changes": {
+            "feed_inductor_change_J": -1.3695361094863783e-08,
+            "load_inductor_change_J": -7.998194251588875e-05,
+            "dc_link_capacitor_change_J": -1.5130910816759525e-06
+          },
+          "source_total_J": 8.129848594992415e-05,
+          "resistor_total_J": 0.00016032888652486264,
+          "device_total_J": 2.4783283831335498e-06,
+          "storage_change_total_J": -8.150872895865957e-05,
+          "closure_residual_J": 5.875291572698949e-16,
+          "independent_throughput_scale_J": 0.0002443159438666558,
+          "independent_0p1pct_or_0p1nJ_limit_J": 2.443159438666558e-07,
+          "closure_within_independent_limit": true,
+          "meaning": "Signed terminal transfer including stored charge, not semiconductor dissipated heat."
+        },
+        "channel": {
+          "current_convention": "Internal modeled channel drain-to-source current; simultaneous positive conduction.",
+          "peak_high_channel_A": 7.45311804431218,
+          "peak_low_channel_A": 5.73959893735405e-13,
+          "peak_common_positive_channel_A": 5.73959893735405e-13,
+          "time_peak_common_s": 4.06675e-06,
+          "common_positive_charge_C": 3.3148990690946884e-21,
+          "overlap_threshold_A": 0.0022357231718979002,
+          "duration_both_channels_above_threshold_s": 0.0,
+          "method": "Exact piecewise-linear envelope/interval integration, with signal-zero and channel-intersection knots inserted."
+        }
+      },
+      "spice": {
+        "samples_in_csv": 40268,
+        "initial_load_A": 2.23572313826523,
+        "window_s": [
+          1e-06,
+          5e-06
+        ],
+        "max_abs_switch_kcl_A": 1.2638272650633553e-09,
+        "max_abs_high_voltage_identity_V": 1.8115287048203754e-11,
+        "max_abs_low_voltage_identity_V": 1.8200552176494966e-11,
+        "max_abs_high_gate_kvl_V": 0.0007222585296293715,
+        "max_abs_low_gate_kvl_V": 0.0012691302994678466,
+        "gate_law": {
+          "turn_on_ohm": 25,
+          "turn_off_ohm": 3,
+          "off_bias_V": -1.5,
+          "law_based_work_J": 9.085059892120621e-07,
+          "measured_drop_work_J": 9.08506005108299e-07,
+          "work_difference_J": 1.5896236933814472e-14,
+          "work_difference_limit_J": 9.085059892120621e-10
+        },
+        "independent_checks": {
+          "switch_kcl": true,
+          "terminal_voltage_identities": true,
+          "directional_gate_law": true,
+          "gate_work_law_matches_measured_drop": true,
+          "device_voltage_ratings": true,
+          "independent_energy_closure": true,
+          "positive_local_bus": true
+        },
+        "all_independent_engine_checks_passed": true,
+        "identity_absolute_allowances": {
+          "current_A": 0.01,
+          "voltage_V": 0.01
+        },
+        "load_flux_balance_residual_Vs": -6.282470474839458e-15,
+        "feed_flux_balance_residual_Vs": 7.107951174985407e-17,
+        "capacitor_charge_residual_C": 3.9728216918479e-16,
+        "energy": {
+          "dc_source_work_J": 8.011929346720408e-05,
+          "high_drive_work_J": 6.225786923028324e-07,
+          "low_drive_work_J": 5.566188776050589e-07,
+          "external_resistor_losses": {
+            "feed_resistor_J": 4.2089047442688976e-07,
+            "capacitor_esr_J": 4.0531112604568075e-08,
+            "load_resistor_J": 0.00015895895905671843,
+            "gate_resistors_J": 9.085059892120621e-07
+          },
+          "signed_device_terminal_energies": {
+            "high_drain_J": 1.1380872276646342e-06,
+            "high_gate_J": 1.4678020851821027e-07,
+            "low_drain_J": 1.069547463680728e-06,
+            "low_gate_J": 1.239113562813817e-07
+          },
+          "external_storage_changes": {
+            "feed_inductor_change_J": -1.3695362415441155e-08,
+            "load_inductor_change_J": -7.998193555427746e-05,
+            "dc_link_capacitor_change_J": -1.5130909524233972e-06
+          },
+          "source_total_J": 8.129849103711197e-05,
+          "resistor_total_J": 0.00016032888663296196,
+          "device_total_J": 2.478326256144954e-06,
+          "storage_change_total_J": -8.150872186911629e-05,
+          "closure_residual_J": 1.7121341237130716e-14,
+          "independent_throughput_scale_J": 0.0002443159347582232,
+          "independent_0p1pct_or_0p1nJ_limit_J": 2.443159347582232e-07,
+          "closure_within_independent_limit": true,
+          "meaning": "Signed terminal transfer including stored charge, not semiconductor dissipated heat."
+        },
+        "channel": null
+      },
+      "cross_engine": {
+        "reference": "Original-SPICE CSV",
+        "time_alignment": "Unshifted union of both CSV integration grids; linear interpolation.",
+        "comparison_knots": 64264,
+        "all_waveforms_pass": true,
+        "signals": {
+          "switch_V": {
+            "max_abs_difference": 0.0023998840153307555,
+            "time_of_max_difference_s": 2.08969473680142e-06,
+            "reference_peak_absolute": 18.2103660837418,
+            "allowance": 0.182103660837418,
+            "difference_to_allowance": 0.013178669798809646,
+            "pass": true
+          },
+          "bus_V": {
+            "max_abs_difference": 1.0004421156395438e-05,
+            "time_of_max_difference_s": 4.06294456749582e-06,
+            "reference_peak_absolute": 18.0131963973908,
+            "allowance": 0.18013196397390802,
+            "difference_to_allowance": 5.553939975830481e-05,
+            "pass": true
+          },
+          "highVgs_V": {
+            "max_abs_difference": 0.0008212183129701067,
+            "time_of_max_difference_s": 4.04003798453979e-06,
+            "reference_peak_absolute": 11.9999966982452,
+            "allowance": 0.119999966982452,
+            "difference_to_allowance": 0.006843487824377454,
+            "pass": true
+          },
+          "lowVgs_V": {
+            "max_abs_difference": 0.0010160836419532693,
+            "time_of_max_difference_s": 3.739e-06,
+            "reference_peak_absolute": 11.9999864035265,
+            "allowance": 0.119999864035265,
+            "difference_to_allowance": 0.008467373276811942,
+            "pass": true
+          },
+          "highVds_V": {
+            "max_abs_difference": 0.0023946906270069235,
+            "time_of_max_difference_s": 2.08969473680142e-06,
+            "reference_peak_absolute": 18.8595028647417,
+            "allowance": 0.188595028647417,
+            "difference_to_allowance": 0.012697527841435607,
+            "pass": true
+          },
+          "lowVds_V": {
+            "max_abs_difference": 0.0023998840159887846,
+            "time_of_max_difference_s": 2.08969473680142e-06,
+            "reference_peak_absolute": 18.21036608376,
+            "allowance": 0.18210366083760002,
+            "difference_to_allowance": 0.01317866980240996,
+            "pass": true
+          },
+          "highCurrent_A": {
+            "max_abs_difference": 0.001011521257024306,
+            "time_of_max_difference_s": 4.06294456749582e-06,
+            "reference_peak_absolute": 5.83029912766177,
+            "allowance": 0.0583029912766177,
+            "difference_to_allowance": 0.0173493886827377,
+            "pass": true
+          },
+          "lowCurrent_A": {
+            "max_abs_difference": 0.001011521371763635,
+            "time_of_max_difference_s": 4.06294456749582e-06,
+            "reference_peak_absolute": 3.60894884157529,
+            "allowance": 0.0360894884157529,
+            "difference_to_allowance": 0.028028143821570786,
+            "pass": true
+          },
+          "highGateCurrent_A": {
+            "max_abs_difference": 0.00021083888109951765,
+            "time_of_max_difference_s": 2.03904550271546e-06,
+            "reference_peak_absolute": 1.60589058455092,
+            "allowance": 0.0160589058455092,
+            "difference_to_allowance": 0.013129093795545093,
+            "pass": true
+          },
+          "lowGateCurrent_A": {
+            "max_abs_difference": 0.00020970957321231332,
+            "time_of_max_difference_s": 3.73904020699866e-06,
+            "reference_peak_absolute": 1.60587370899824,
+            "allowance": 0.0160587370899824,
+            "difference_to_allowance": 0.013058908184201622,
+            "pass": true
+          },
+          "loadCurrent_A": {
+            "max_abs_difference": 2.234390450439605e-09,
+            "time_of_max_difference_s": 4.06325e-06,
+            "reference_peak_absolute": 2.23572317190597,
+            "allowance": 0.022357231719059702,
+            "difference_to_allowance": 9.994038969210893e-08,
+            "pass": true
+          },
+          "feedCurrent_A": {
+            "max_abs_difference": 1.349685088691821e-06,
+            "time_of_max_difference_s": 4.06081956749581e-06,
+            "reference_peak_absolute": 2.23572728603131,
+            "allowance": 0.0223572728603131,
+            "difference_to_allowance": 6.03689500559649e-05,
+            "pass": true
+          }
+        }
+      },
+      "modeled_channel_overlap_passed": true,
+      "all_independent_case_checks_passed": true
+    },
+    "holdout_load4ohm": {
+      "case": "holdout_load4ohm",
+      "revision": "SC01B-R2-IAUC100N04S6L014",
+      "input_sha256": {
+        "parameters.json": "b704e6b932a0b21e857e275a808835059b0e8796ebba5a5aac8e19fbedc26511",
+        "native_finest.csv": "52178d9c19c05e21a007d50f77cbaa215aa265dff73a28dec79dd9e49c6a648e",
+        "spice_finest.csv": "119d672d63a835cda62ecbb1639809e425bee98d17f0d017349f65fc85a7c29a"
+      },
+      "native": {
+        "samples_in_csv": 40001,
+        "initial_load_A": 5.92433679132377,
+        "window_s": [
+          1e-06,
+          5e-06
+        ],
+        "max_abs_switch_kcl_A": 4.973799150320701e-14,
+        "max_abs_high_voltage_identity_V": 1.0302869668521453e-13,
+        "max_abs_low_voltage_identity_V": 0.0,
+        "max_abs_high_gate_kvl_V": 6.328515845976391e-05,
+        "max_abs_low_gate_kvl_V": 5.801539362107371e-05,
+        "gate_law": {
+          "turn_on_ohm": 25,
+          "turn_off_ohm": 3,
+          "off_bias_V": -1.5,
+          "law_based_work_J": 9.167050149905507e-07,
+          "measured_drop_work_J": 9.167050149886444e-07,
+          "work_difference_J": -1.9063535269142097e-18,
+          "work_difference_limit_J": 9.167050149905508e-10
+        },
+        "independent_checks": {
+          "switch_kcl": true,
+          "terminal_voltage_identities": true,
+          "directional_gate_law": true,
+          "gate_work_law_matches_measured_drop": true,
+          "device_voltage_ratings": true,
+          "independent_energy_closure": true,
+          "positive_local_bus": true
+        },
+        "all_independent_engine_checks_passed": true,
+        "identity_absolute_allowances": {
+          "current_A": 0.01,
+          "voltage_V": 0.01
+        },
+        "load_flux_balance_residual_Vs": -1.316560250576304e-16,
+        "feed_flux_balance_residual_Vs": 2.6009867181117402e-20,
+        "capacitor_charge_residual_C": 7.79873822448875e-18,
+        "energy": {
+          "dc_source_work_J": 0.0002806882144172901,
+          "high_drive_work_J": 6.271384261686776e-07,
+          "low_drive_work_J": 5.562208196398408e-07,
+          "external_resistor_losses": {
+            "feed_resistor_J": 2.9301378824666356e-06,
+            "capacitor_esr_J": 2.7721068227773646e-07,
+            "load_resistor_J": 0.0005598114256950236,
+            "gate_resistors_J": 9.167050149905507e-07
+          },
+          "signed_device_terminal_energies": {
+            "high_drain_J": 2.597583393677034e-06,
+            "high_gate_J": 1.4420776155935499e-07,
+            "low_drain_J": 2.912479029844549e-06,
+            "low_gate_J": 1.224464692605187e-07
+          },
+          "external_storage_changes": {
+            "feed_inductor_change_J": -9.8661745266925e-08,
+            "load_inductor_change_J": -0.00028242684921885974,
+            "dc_link_capacitor_change_J": -5.31511130152353e-06
+          },
+          "source_total_J": 0.00028187157366309863,
+          "resistor_total_J": 0.0005639354792747586,
+          "device_total_J": 5.7767166543414565e-06,
+          "storage_change_total_J": -0.0002878406222656502,
+          "closure_residual_J": -3.5122729377667916e-16,
+          "independent_throughput_scale_J": 0.0008575528181947502,
+          "independent_0p1pct_or_0p1nJ_limit_J": 8.575528181947501e-07,
+          "closure_within_independent_limit": true,
+          "meaning": "Signed terminal transfer including stored charge, not semiconductor dissipated heat."
+        },
+        "channel": {
+          "current_convention": "Internal modeled channel drain-to-source current; simultaneous positive conduction.",
+          "peak_high_channel_A": 13.6087068090833,
+          "peak_low_channel_A": 1.78988410554839e-10,
+          "peak_common_positive_channel_A": 1.78988410554839e-10,
+          "time_peak_common_s": 4.0655e-06,
+          "common_positive_charge_C": 3.4193654576329376e-19,
+          "overlap_threshold_A": 0.00592433682398401,
+          "duration_both_channels_above_threshold_s": 0.0,
+          "method": "Exact piecewise-linear envelope/interval integration, with signal-zero and channel-intersection knots inserted."
+        }
+      },
+      "spice": {
+        "samples_in_csv": 40292,
+        "initial_load_A": 5.92433679210808,
+        "window_s": [
+          1e-06,
+          5e-06
+        ],
+        "max_abs_switch_kcl_A": 1.5745165171665576e-09,
+        "max_abs_high_voltage_identity_V": 2.4133584020091803e-11,
+        "max_abs_low_voltage_identity_V": 2.4101609596982598e-11,
+        "max_abs_high_gate_kvl_V": 0.00045466824032362204,
+        "max_abs_low_gate_kvl_V": 0.0008525843866760141,
+        "gate_law": {
+          "turn_on_ohm": 25,
+          "turn_off_ohm": 3,
+          "off_bias_V": -1.5,
+          "law_based_work_J": 9.167050288809243e-07,
+          "measured_drop_work_J": 9.167050316023914e-07,
+          "work_difference_J": 2.7214670963424158e-15,
+          "work_difference_limit_J": 9.167050288809243e-10
+        },
+        "independent_checks": {
+          "switch_kcl": true,
+          "terminal_voltage_identities": true,
+          "directional_gate_law": true,
+          "gate_work_law_matches_measured_drop": true,
+          "device_voltage_ratings": true,
+          "independent_energy_closure": true,
+          "positive_local_bus": true
+        },
+        "all_independent_engine_checks_passed": true,
+        "identity_absolute_allowances": {
+          "current_A": 0.01,
+          "voltage_V": 0.01
+        },
+        "load_flux_balance_residual_Vs": -5.920612578761558e-14,
+        "feed_flux_balance_residual_Vs": 8.914110216816478e-17,
+        "capacitor_charge_residual_C": 9.591493780566521e-16,
+        "energy": {
+          "dc_source_work_J": 0.00028068824518743353,
+          "high_drive_work_J": 6.271384060880127e-07,
+          "low_drive_work_J": 5.562207763415803e-07,
+          "external_resistor_losses": {
+            "feed_resistor_J": 2.9301382088704905e-06,
+            "capacitor_esr_J": 2.772108942191245e-07,
+            "load_resistor_J": 0.0005598114258295678,
+            "gate_resistors_J": 9.167050288809243e-07
+          },
+          "signed_device_terminal_energies": {
+            "high_drain_J": 2.5976018880543905e-06,
+            "high_gate_J": 1.4420778592723255e-07,
+            "low_drain_J": 2.912494143379311e-06,
+            "low_gate_J": 1.224463648999692e-07
+          },
+          "external_storage_changes": {
+            "feed_inductor_change_J": -9.866167934416524e-08,
+            "load_inductor_change_J": -0.0002824268487230697,
+            "dc_link_capacitor_change_J": -5.315115058911602e-06
+          },
+          "source_total_J": 0.00028187160436986313,
+          "resistor_total_J": 0.0005639354799615383,
+          "device_total_J": 5.776750182260903e-06,
+          "storage_change_total_J": -0.00028784062546132545,
+          "closure_residual_J": -3.1261061447795946e-13,
+          "independent_throughput_scale_J": 0.0008575528556051247,
+          "independent_0p1pct_or_0p1nJ_limit_J": 8.575528556051247e-07,
+          "closure_within_independent_limit": true,
+          "meaning": "Signed terminal transfer including stored charge, not semiconductor dissipated heat."
+        },
+        "channel": null
+      },
+      "cross_engine": {
+        "reference": "Original-SPICE CSV",
+        "time_alignment": "Unshifted union of both CSV integration grids; linear interpolation.",
+        "comparison_knots": 64288,
+        "all_waveforms_pass": true,
+        "signals": {
+          "switch_V": {
+            "max_abs_difference": 0.014695857175245353,
+            "time_of_max_difference_s": 2.07083609948616e-06,
+            "reference_peak_absolute": 24.0970143716993,
+            "allowance": 0.240970143716993,
+            "difference_to_allowance": 0.06098621575503096,
+            "pass": true
+          },
+          "bus_V": {
+            "max_abs_difference": 2.8592772054025772e-05,
+            "time_of_max_difference_s": 2.0709250976764e-06,
+            "reference_peak_absolute": 24.0349682334234,
+            "allowance": 0.24034968233423398,
+            "difference_to_allowance": 0.00011896321965703379,
+            "pass": true
+          },
+          "highVgs_V": {
+            "max_abs_difference": 0.0008220222985821923,
+            "time_of_max_difference_s": 4.04003841156422e-06,
+            "reference_peak_absolute": 11.9999966982187,
+            "allowance": 0.119999966982187,
+            "difference_to_allowance": 0.006850187706336742,
+            "pass": true
+          },
+          "lowVgs_V": {
+            "max_abs_difference": 0.002746328858323377,
+            "time_of_max_difference_s": 2.07083609948616e-06,
+            "reference_peak_absolute": 11.9999864660745,
+            "allowance": 0.119999864660745,
+            "difference_to_allowance": 0.022886099630925423,
+            "pass": true
+          },
+          "highVds_V": {
+            "max_abs_difference": 0.014672873870768655,
+            "time_of_max_difference_s": 2.07083609948616e-06,
+            "reference_peak_absolute": 25.3804444315841,
+            "allowance": 0.253804444315841,
+            "difference_to_allowance": 0.05781172946092836,
+            "pass": true
+          },
+          "lowVds_V": {
+            "max_abs_difference": 0.01469585717615729,
+            "time_of_max_difference_s": 2.07083609948616e-06,
+            "reference_peak_absolute": 24.0970143717234,
+            "allowance": 0.24097014371723402,
+            "difference_to_allowance": 0.060986215758754396,
+            "pass": true
+          },
+          "highCurrent_A": {
+            "max_abs_difference": 0.0028473605816980996,
+            "time_of_max_difference_s": 2.0709250976764e-06,
+            "reference_peak_absolute": 11.8420337966183,
+            "allowance": 0.118420337966183,
+            "difference_to_allowance": 0.024044523353000506,
+            "pass": true
+          },
+          "lowCurrent_A": {
+            "max_abs_difference": 0.0028473589588440262,
+            "time_of_max_difference_s": 2.0709250976764e-06,
+            "reference_peak_absolute": 6.17191340407239,
+            "allowance": 0.0617191340407239,
+            "difference_to_allowance": 0.04613413657043964,
+            "pass": true
+          },
+          "highGateCurrent_A": {
+            "max_abs_difference": 0.00021074197481629753,
+            "time_of_max_difference_s": 2.03904002223378e-06,
+            "reference_peak_absolute": 1.60590341147686,
+            "allowance": 0.0160590341147686,
+            "difference_to_allowance": 0.013122954550703012,
+            "pass": true
+          },
+          "lowGateCurrent_A": {
+            "max_abs_difference": 0.0002108752343195075,
+            "time_of_max_difference_s": 3.73904487480002e-06,
+            "reference_peak_absolute": 1.60586174628774,
+            "allowance": 0.0160586174628774,
+            "difference_to_allowance": 0.013131593352104337,
+            "pass": true
+          },
+          "loadCurrent_A": {
+            "max_abs_difference": 2.6604718428302476e-09,
+            "time_of_max_difference_s": 2.07079979626753e-06,
+            "reference_peak_absolute": 5.92433682476687,
+            "allowance": 0.0592433682476687,
+            "difference_to_allowance": 4.490750478109321e-08,
+            "pass": true
+          },
+          "feedCurrent_A": {
+            "max_abs_difference": 2.6370658583463324e-06,
+            "time_of_max_difference_s": 4.06069557462967e-06,
+            "reference_peak_absolute": 5.92433985088201,
+            "allowance": 0.0592433985088201,
+            "difference_to_allowance": 4.451240011076894e-05,
+            "pass": true
+          }
+        }
+      },
+      "modeled_channel_overlap_passed": true,
+      "all_independent_case_checks_passed": true
+    },
+    "holdout_gate47": {
+      "case": "holdout_gate47",
+      "revision": "SC01B-R2-IAUC100N04S6L014",
+      "input_sha256": {
+        "parameters.json": "7d077bb4d06b64abd53bf02c2d60996d911759be8d3dbd1f05ffa5b64c789c02",
+        "native_finest.csv": "c348f7b80c7a7d09a1a1fe22e6f541167354e4102a9a92eb96835eb7dfe75787",
+        "spice_finest.csv": "5411b3fd63ace077daf0e19650c7e140fc5f30ed579c975e8fabc5875ca70d00"
+      },
+      "native": {
+        "samples_in_csv": 40001,
+        "initial_load_A": 2.98096418174296,
+        "window_s": [
+          1e-06,
+          5e-06
+        ],
+        "max_abs_switch_kcl_A": 1.1102230246251565e-14,
+        "max_abs_high_voltage_identity_V": 1.0302869668521453e-13,
+        "max_abs_low_voltage_identity_V": 0.0,
+        "max_abs_high_gate_kvl_V": 0.0001190778219968372,
+        "max_abs_low_gate_kvl_V": 0.008203035241619052,
+        "gate_law": {
+          "turn_on_ohm": 50,
+          "turn_off_ohm": 3,
+          "off_bias_V": -1.5,
+          "law_based_work_J": 9.713412811770414e-07,
+          "measured_drop_work_J": 9.713412803242177e-07,
+          "work_difference_J": -8.528236879982044e-16,
+          "work_difference_limit_J": 9.713412811770414e-10
+        },
+        "independent_checks": {
+          "switch_kcl": true,
+          "terminal_voltage_identities": true,
+          "directional_gate_law": true,
+          "gate_work_law_matches_measured_drop": true,
+          "device_voltage_ratings": true,
+          "independent_energy_closure": true,
+          "positive_local_bus": true
+        },
+        "all_independent_engine_checks_passed": true,
+        "identity_absolute_allowances": {
+          "current_A": 0.01,
+          "voltage_V": 0.01
+        },
+        "load_flux_balance_residual_Vs": 4.523833564695767e-17,
+        "feed_flux_balance_residual_Vs": -6.7481394372076e-21,
+        "capacitor_charge_residual_C": 5.134515202908556e-18,
+        "energy": {
+          "dc_source_work_J": 0.00014069492698188073,
+          "high_drive_work_J": 6.324487773252452e-07,
+          "low_drive_work_J": 5.794683349433314e-07,
+          "external_resistor_losses": {
+            "feed_resistor_J": 7.395531276456379e-07,
+            "capacitor_esr_J": 7.080945228986207e-08,
+            "load_resistor_J": 0.0002825811553686909,
+            "gate_resistors_J": 9.713412811770414e-07
+          },
+          "signed_device_terminal_energies": {
+            "high_drain_J": 2.515766903739822e-06,
+            "high_gate_J": 1.287924662006295e-07,
+            "low_drain_J": 1.5260984864609194e-06,
+            "low_gate_J": 1.1178336574372922e-07
+          },
+          "external_storage_changes": {
+            "feed_inductor_change_J": -2.671795576235165e-08,
+            "load_inductor_change_J": -0.00014428602878856944,
+            "dc_link_capacitor_change_J": -2.4257096129366576e-06
+          },
+          "source_total_J": 0.0001419068440941493,
+          "resistor_total_J": 0.00028436285922980344,
+          "device_total_J": 4.2824412221451e-06,
+          "storage_change_total_J": -0.00014673845635726845,
+          "closure_residual_J": -5.307711735402787e-16,
+          "independent_throughput_scale_J": 0.000435383756809217,
+          "independent_0p1pct_or_0p1nJ_limit_J": 4.35383756809217e-07,
+          "closure_within_independent_limit": true,
+          "meaning": "Signed terminal transfer including stored charge, not semiconductor dissipated heat."
+        },
+        "channel": {
+          "current_convention": "Internal modeled channel drain-to-source current; simultaneous positive conduction.",
+          "peak_high_channel_A": 7.13270752050619,
+          "peak_low_channel_A": 1.6359228679808e-13,
+          "peak_common_positive_channel_A": 1.6359228679808e-13,
+          "time_peak_common_s": 4.091e-06,
+          "common_positive_charge_C": 1.3778009253415714e-21,
+          "overlap_threshold_A": 0.00298096421516096,
+          "duration_both_channels_above_threshold_s": 0.0,
+          "method": "Exact piecewise-linear envelope/interval integration, with signal-zero and channel-intersection knots inserted."
+        }
+      },
+      "spice": {
+        "samples_in_csv": 40266,
+        "initial_load_A": 2.98096418175919,
+        "window_s": [
+          1e-06,
+          5e-06
+        ],
+        "max_abs_switch_kcl_A": 1.5827441579574497e-09,
+        "max_abs_high_voltage_identity_V": 2.41193731653766e-11,
+        "max_abs_low_voltage_identity_V": 2.4101609596982598e-11,
+        "max_abs_high_gate_kvl_V": 0.004912342292019645,
+        "max_abs_low_gate_kvl_V": 0.003721361008335089,
+        "gate_law": {
+          "turn_on_ohm": 50,
+          "turn_off_ohm": 3,
+          "off_bias_V": -1.5,
+          "law_based_work_J": 9.71341578143006e-07,
+          "measured_drop_work_J": 9.713415965560435e-07,
+          "work_difference_J": 1.841303747081508e-14,
+          "work_difference_limit_J": 9.71341578143006e-10
+        },
+        "independent_checks": {
+          "switch_kcl": true,
+          "terminal_voltage_identities": true,
+          "directional_gate_law": true,
+          "gate_work_law_matches_measured_drop": true,
+          "device_voltage_ratings": true,
+          "independent_energy_closure": true,
+          "positive_local_bus": true
+        },
+        "all_independent_engine_checks_passed": true,
+        "identity_absolute_allowances": {
+          "current_A": 0.01,
+          "voltage_V": 0.01
+        },
+        "load_flux_balance_residual_Vs": -8.479070852558668e-15,
+        "feed_flux_balance_residual_Vs": 9.49653371094323e-17,
+        "capacitor_charge_residual_C": 9.449342064380344e-16,
+        "energy": {
+          "dc_source_work_J": 0.00014069493469128522,
+          "high_drive_work_J": 6.324487541691955e-07,
+          "low_drive_work_J": 5.794690165879952e-07,
+          "external_resistor_losses": {
+            "feed_resistor_J": 7.395531740629061e-07,
+            "capacitor_esr_J": 7.080946276719947e-08,
+            "load_resistor_J": 0.00028258115549912856,
+            "gate_resistors_J": 9.71341578143006e-07
+          },
+          "signed_device_terminal_energies": {
+            "high_drain_J": 2.515765158736965e-06,
+            "high_gate_J": 1.2879253678473917e-07,
+            "low_drain_J": 1.526100426875355e-06,
+            "low_gate_J": 1.1178363741640801e-07
+          },
+          "external_storage_changes": {
+            "feed_inductor_change_J": -2.6717956497466408e-08,
+            "load_inductor_change_J": -0.00014428602152840363,
+            "dc_link_capacitor_change_J": -2.425709554551645e-06
+          },
+          "source_total_J": 0.0001419068524620424,
+          "resistor_total_J": 0.0002843628597141017,
+          "device_total_J": 4.282441759813467e-06,
+          "storage_change_total_J": -0.00014673844903945275,
+          "closure_residual_J": 2.7579989073794886e-14,
+          "independent_throughput_scale_J": 0.0004353837505133679,
+          "independent_0p1pct_or_0p1nJ_limit_J": 4.353837505133679e-07,
+          "closure_within_independent_limit": true,
+          "meaning": "Signed terminal transfer including stored charge, not semiconductor dissipated heat."
+        },
+        "channel": null
+      },
+      "cross_engine": {
+        "reference": "Original-SPICE CSV",
+        "time_alignment": "Unshifted union of both CSV integration grids; linear interpolation.",
+        "comparison_knots": 64262,
+        "all_waveforms_pass": true,
+        "signals": {
+          "switch_V": {
+            "max_abs_difference": 0.005248862159300205,
+            "time_of_max_difference_s": 2.08468035597582e-06,
+            "reference_peak_absolute": 24.0255170106318,
+            "allowance": 0.240255170106318,
+            "difference_to_allowance": 0.021847031041943746,
+            "pass": true
+          },
+          "bus_V": {
+            "max_abs_difference": 1.1515787342375461e-05,
+            "time_of_max_difference_s": 2.08468035597582e-06,
+            "reference_peak_absolute": 24.0175950131902,
+            "allowance": 0.240175950131902,
+            "difference_to_allowance": 4.7947295872259974e-05,
+            "pass": true
+          },
+          "highVgs_V": {
+            "max_abs_difference": 0.0010680511804535137,
+            "time_of_max_difference_s": 4.04e-06,
+            "reference_peak_absolute": 11.9999933950645,
+            "allowance": 0.11999993395064501,
+            "difference_to_allowance": 0.008900431402677225,
+            "pass": true
+          },
+          "lowVgs_V": {
+            "max_abs_difference": 0.00563896525838814,
+            "time_of_max_difference_s": 3.71901731226541e-06,
+            "reference_peak_absolute": 11.9909681985015,
+            "allowance": 0.119909681985015,
+            "difference_to_allowance": 0.0470267718589466,
+            "pass": true
+          },
+          "highVds_V": {
+            "max_abs_difference": 0.005237346395809084,
+            "time_of_max_difference_s": 2.08468035597582e-06,
+            "reference_peak_absolute": 24.9329747278852,
+            "allowance": 0.249329747278852,
+            "difference_to_allowance": 0.021005702099202796,
+            "pass": true
+          },
+          "lowVds_V": {
+            "max_abs_difference": 0.005248862160006196,
+            "time_of_max_difference_s": 2.08468035597582e-06,
+            "reference_peak_absolute": 24.0255170106558,
+            "allowance": 0.240255170106558,
+            "difference_to_allowance": 0.021847031044860427,
+            "pass": true
+          },
+          "highCurrent_A": {
+            "max_abs_difference": 0.0011472073267263516,
+            "time_of_max_difference_s": 2.08468035597582e-06,
+            "reference_peak_absolute": 6.11920635737375,
+            "allowance": 0.06119206357373751,
+            "difference_to_allowance": 0.018747648955226796,
+            "pass": true
+          },
+          "lowCurrent_A": {
+            "max_abs_difference": 0.0011472054426575617,
+            "time_of_max_difference_s": 2.08468035597582e-06,
+            "reference_peak_absolute": 3.15761787450375,
+            "allowance": 0.0315761787450375,
+            "difference_to_allowance": 0.03633135763262222,
+            "pass": true
+          },
+          "highGateCurrent_A": {
+            "max_abs_difference": 0.00021055677295622743,
+            "time_of_max_difference_s": 2.03904605719799e-06,
+            "reference_peak_absolute": 1.60589294857601,
+            "allowance": 0.016058929485760102,
+            "difference_to_allowance": 0.013111507410436913,
+            "pass": true
+          },
+          "lowGateCurrent_A": {
+            "max_abs_difference": 0.0006074726230713044,
+            "time_of_max_difference_s": 3.71903120829822e-06,
+            "reference_peak_absolute": 1.60522253142375,
+            "allowance": 0.0160522253142375,
+            "difference_to_allowance": 0.03784351460183576,
+            "pass": true
+          },
+          "loadCurrent_A": {
+            "max_abs_difference": 1.8533663492803498e-09,
+            "time_of_max_difference_s": 2.08457290403921e-06,
+            "reference_peak_absolute": 2.98096421517823,
+            "allowance": 0.029809642151782303,
+            "difference_to_allowance": 6.217338470027685e-08,
+            "pass": true
+          },
+          "feedCurrent_A": {
+            "max_abs_difference": 6.347722769639574e-07,
+            "time_of_max_difference_s": 2.08680353877435e-06,
+            "reference_peak_absolute": 2.98096722489963,
+            "allowance": 0.0298096722489963,
+            "difference_to_allowance": 2.129417162529623e-05,
+            "pass": true
+          }
+        }
+      },
+      "modeled_channel_overlap_passed": true,
+      "all_independent_case_checks_passed": true
+    },
+    "holdout_bus30_load16_gate10": {
+      "case": "holdout_bus30_load16_gate10",
+      "revision": "SC01B-R2-IAUC100N04S6L014",
+      "input_sha256": {
+        "parameters.json": "0bbd8e64990f98c30fbd8755b38fd04b13cabe48e2317c764d01fa101a92fb55",
+        "native_finest.csv": "ddf0333c38683a4f292159ec75fcd256efbae4dc3a8a7239bc498d19071ab2c6",
+        "spice_finest.csv": "50f3eee4eadaa7c10b494b21fd2f59a2332edfd86c01d948a7d06220a3f94e1f"
+      },
+      "native": {
+        "samples_in_csv": 40001,
+        "initial_load_A": 1.86903237471528,
+        "window_s": [
+          1e-06,
+          5e-06
+        ],
+        "max_abs_switch_kcl_A": 5.0182080713057076e-14,
+        "max_abs_high_voltage_identity_V": 1.0302869668521453e-13,
+        "max_abs_low_voltage_identity_V": 0.0,
+        "max_abs_high_gate_kvl_V": 3.3511189263117885e-05,
+        "max_abs_low_gate_kvl_V": 3.1391899699546545e-05,
+        "gate_law": {
+          "turn_on_ohm": 13,
+          "turn_off_ohm": 3,
+          "off_bias_V": -1.5,
+          "law_based_work_J": 8.44371179946333e-07,
+          "measured_drop_work_J": 8.443711799459817e-07,
+          "work_difference_J": -3.5130691487372107e-19,
+          "work_difference_limit_J": 8.443711799463331e-10
+        },
+        "independent_checks": {
+          "switch_kcl": true,
+          "terminal_voltage_identities": true,
+          "directional_gate_law": true,
+          "gate_work_law_matches_measured_drop": true,
+          "device_voltage_ratings": true,
+          "independent_energy_closure": true,
+          "positive_local_bus": true
+        },
+        "all_independent_engine_checks_passed": true,
+        "identity_absolute_allowances": {
+          "current_A": 0.01,
+          "voltage_V": 0.01
+        },
+        "load_flux_balance_residual_Vs": 1.2747507042998318e-16,
+        "feed_flux_balance_residual_Vs": -1.751224074836015e-20,
+        "capacitor_charge_residual_C": 4.4623151499234635e-18,
+        "energy": {
+          "dc_source_work_J": 0.00011312532938722177,
+          "high_drive_work_J": 6.163350708596588e-07,
+          "low_drive_work_J": 5.380130668365496e-07,
+          "external_resistor_losses": {
+            "feed_resistor_J": 2.979846184923219e-07,
+            "capacitor_esr_J": 3.088723662984317e-08,
+            "load_resistor_J": 0.00022085994120004223,
+            "gate_resistors_J": 8.44371179946333e-07
+          },
+          "signed_device_terminal_energies": {
+            "high_drain_J": 1.6467920665678164e-06,
+            "high_gate_J": 1.7026074078320153e-07,
+            "low_drain_J": 1.1364807717049718e-06,
+            "low_gate_J": 1.3971621696702506e-07
+          },
+          "external_storage_changes": {
+            "feed_inductor_change_J": -9.088669417950044e-09,
+            "load_inductor_change_J": -0.0001087372659604302,
+            "dc_link_capacitor_change_J": -2.1004018767581558e-06
+          },
+          "source_total_J": 0.00011427967752491799,
+          "resistor_total_J": 0.00022203318423511074,
+          "device_total_J": 3.093249796023015e-06,
+          "storage_change_total_J": -0.00011084675650660632,
+          "closure_residual_J": 3.9055672758359083e-16,
+          "independent_throughput_scale_J": 0.0003359731905377401,
+          "independent_0p1pct_or_0p1nJ_limit_J": 3.3597319053774007e-07,
+          "closure_within_independent_limit": true,
+          "meaning": "Signed terminal transfer including stored charge, not semiconductor dissipated heat."
+        },
+        "channel": {
+          "current_convention": "Internal modeled channel drain-to-source current; simultaneous positive conduction.",
+          "peak_high_channel_A": 13.7380601110596,
+          "peak_low_channel_A": 1.51517513932667e-07,
+          "peak_common_positive_channel_A": 1.51517513932667e-07,
+          "time_peak_common_s": 4.051375e-06,
+          "common_positive_charge_C": 1.9332820795717944e-16,
+          "overlap_threshold_A": 0.00186903240841403,
+          "duration_both_channels_above_threshold_s": 0.0,
+          "method": "Exact piecewise-linear envelope/interval integration, with signal-zero and channel-intersection knots inserted."
+        }
+      },
+      "spice": {
+        "samples_in_csv": 40369,
+        "initial_load_A": 1.86903237471779,
+        "window_s": [
+          1e-06,
+          5e-06
+        ],
+        "max_abs_switch_kcl_A": 2.1031705266238987e-09,
+        "max_abs_high_voltage_identity_V": 3.0112801141513046e-11,
+        "max_abs_low_voltage_identity_V": 3.030109496648947e-11,
+        "max_abs_high_gate_kvl_V": 0.000454072444470278,
+        "max_abs_low_gate_kvl_V": 0.00018729564489028405,
+        "gate_law": {
+          "turn_on_ohm": 13,
+          "turn_off_ohm": 3,
+          "off_bias_V": -1.5,
+          "law_based_work_J": 8.443712135922744e-07,
+          "measured_drop_work_J": 8.443712145670418e-07,
+          "work_difference_J": 9.747673156452617e-16,
+          "work_difference_limit_J": 8.443712135922744e-10
+        },
+        "independent_checks": {
+          "switch_kcl": true,
+          "terminal_voltage_identities": true,
+          "directional_gate_law": true,
+          "gate_work_law_matches_measured_drop": true,
+          "device_voltage_ratings": true,
+          "independent_energy_closure": true,
+          "positive_local_bus": true
+        },
+        "all_independent_engine_checks_passed": true,
+        "identity_absolute_allowances": {
+          "current_A": 0.01,
+          "voltage_V": 0.01
+        },
+        "load_flux_balance_residual_Vs": -2.977153435888488e-14,
+        "feed_flux_balance_residual_Vs": 1.2218179693364916e-16,
+        "capacitor_charge_residual_C": 9.99422009520111e-16,
+        "energy": {
+          "dc_source_work_J": 0.00011312531481553426,
+          "high_drive_work_J": 6.163350319530605e-07,
+          "low_drive_work_J": 5.380130175291387e-07,
+          "external_resistor_losses": {
+            "feed_resistor_J": 2.9798458366723165e-07,
+            "capacitor_esr_J": 3.088745471150255e-08,
+            "load_resistor_J": 0.00022085994148092383,
+            "gate_resistors_J": 8.443712135922744e-07
+          },
+          "signed_device_terminal_energies": {
+            "high_drain_J": 1.6467507215050467e-06,
+            "high_gate_J": 1.7026073840213182e-07,
+            "low_drain_J": 1.1364963439023313e-06,
+            "low_gate_J": 1.3971609651302558e-07
+          },
+          "external_storage_changes": {
+            "feed_inductor_change_J": -9.088686602821907e-09,
+            "load_inductor_change_J": -0.00010873725879779473,
+            "dc_link_capacitor_change_J": -2.100398276573401e-06
+          },
+          "source_total_J": 0.00011427966286501647,
+          "resistor_total_J": 0.00022203318473289484,
+          "device_total_J": 3.0932239003225355e-06,
+          "storage_change_total_J": -0.00011084674576097096,
+          "closure_residual_J": -7.229947977110962e-15,
+          "independent_throughput_scale_J": 0.00033597315439418834,
+          "independent_0p1pct_or_0p1nJ_limit_J": 3.3597315439418834e-07,
+          "closure_within_independent_limit": true,
+          "meaning": "Signed terminal transfer including stored charge, not semiconductor dissipated heat."
+        },
+        "channel": null
+      },
+      "cross_engine": {
+        "reference": "Original-SPICE CSV",
+        "time_alignment": "Unshifted union of both CSV integration grids; linear interpolation.",
+        "comparison_knots": 64365,
+        "all_waveforms_pass": true,
+        "signals": {
+          "switch_V": {
+            "max_abs_difference": 0.004632684465665449,
+            "time_of_max_difference_s": 4.06080437442858e-06,
+            "reference_peak_absolute": 30.2651668549445,
+            "allowance": 0.30265166854944503,
+            "difference_to_allowance": 0.015306984718997491,
+            "pass": true
+          },
+          "bus_V": {
+            "max_abs_difference": 4.321506648352624e-05,
+            "time_of_max_difference_s": 4.04994209436784e-06,
+            "reference_peak_absolute": 30.0110255838161,
+            "allowance": 0.300110255838161,
+            "difference_to_allowance": 0.00014399729980181227,
+            "pass": true
+          },
+          "highVgs_V": {
+            "max_abs_difference": 0.0011686098264358513,
+            "time_of_max_difference_s": 4.06080437442858e-06,
+            "reference_peak_absolute": 11.9999982829879,
+            "allowance": 0.119999982829879,
+            "difference_to_allowance": 0.00973841661371369,
+            "pass": true
+          },
+          "lowVgs_V": {
+            "max_abs_difference": 0.00095183388645248,
+            "time_of_max_difference_s": 2.34004039359097e-06,
+            "reference_peak_absolute": 11.9999984198544,
+            "allowance": 0.119999984198544,
+            "difference_to_allowance": 0.007931950098240338,
+            "pass": true
+          },
+          "highVds_V": {
+            "max_abs_difference": 0.004642257269922748,
+            "time_of_max_difference_s": 4.06080437442858e-06,
+            "reference_peak_absolute": 30.7953687476194,
+            "allowance": 0.307953687476194,
+            "difference_to_allowance": 0.01507453055025234,
+            "pass": true
+          },
+          "lowVds_V": {
+            "max_abs_difference": 0.004632684495664563,
+            "time_of_max_difference_s": 4.06080437442858e-06,
+            "reference_peak_absolute": 30.2651668549747,
+            "allowance": 0.302651668549747,
+            "difference_to_allowance": 0.015306984818103147,
+            "pass": true
+          },
+          "highCurrent_A": {
+            "max_abs_difference": 0.004339125369456909,
+            "time_of_max_difference_s": 4.04981709436784e-06,
+            "reference_peak_absolute": 10.5828242562986,
+            "allowance": 0.10582824256298601,
+            "difference_to_allowance": 0.04100158203869239,
+            "pass": true
+          },
+          "lowCurrent_A": {
+            "max_abs_difference": 0.004339127793429043,
+            "time_of_max_difference_s": 4.04981709436784e-06,
+            "reference_peak_absolute": 8.73733732389349,
+            "allowance": 0.0873733732389349,
+            "difference_to_allowance": 0.049661900789421065,
+            "pass": true
+          },
+          "highGateCurrent_A": {
+            "max_abs_difference": 0.00021063467393256374,
+            "time_of_max_difference_s": 2.03904565479422e-06,
+            "reference_peak_absolute": 1.60588923861102,
+            "allowance": 0.0160588923861102,
+            "difference_to_allowance": 0.013116388656713818,
+            "pass": true
+          },
+          "lowGateCurrent_A": {
+            "max_abs_difference": 0.00021070919284493783,
+            "time_of_max_difference_s": 3.73904030877012e-06,
+            "reference_peak_absolute": 1.60587692620337,
+            "allowance": 0.0160587692620337,
+            "difference_to_allowance": 0.013121129608798762,
+            "pass": true
+          },
+          "loadCurrent_A": {
+            "max_abs_difference": 4.566242939318954e-09,
+            "time_of_max_difference_s": 4.05e-06,
+            "reference_peak_absolute": 1.86903240841794,
+            "allowance": 0.0186903240841794,
+            "difference_to_allowance": 2.443105276694529e-07,
+            "pass": true
+          },
+          "feedCurrent_A": {
+            "max_abs_difference": 3.3080658073947333e-06,
+            "time_of_max_difference_s": 4.04657852128789e-06,
+            "reference_peak_absolute": 1.86903504803902,
+            "allowance": 0.0186903504803902,
+            "difference_to_allowance": 0.00017699324637414024,
+            "pass": true
+          }
+        }
+      },
+      "modeled_channel_overlap_passed": true,
+      "all_independent_case_checks_passed": true
+    }
+  },
+  "numpy_version": "2.3.5",
+  "all_declared_cases_audited": true,
+  "all_independent_checks_passed": true,
+  "physical_source_validated": false
+}

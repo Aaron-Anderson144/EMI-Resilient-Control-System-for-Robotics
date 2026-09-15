@@ -1,0 +1,10 @@
+{
+  "probe": "Eight metric rows replaced in memory by eight copies of the first valid pair; saved files untouched.",
+  "original_unique_pairs": 8,
+  "substituted_unique_pairs": 1,
+  "auditor_all_passed": true,
+  "reported_metric_pair_count": 8,
+  "reported_unique_metric_pairs": 1,
+  "defect": "Metric row count is checked, but unique pair identity and coverage are not checked.",
+  "current_saved_metrics_valid": true
+}

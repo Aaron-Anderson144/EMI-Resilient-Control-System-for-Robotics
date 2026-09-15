@@ -1,0 +1,9 @@
+test_channel_peak_between_native_knots_is_found (__main__.AuditTests.test_channel_peak_between_native_knots_is_found) ... ok
+test_negative_off_bias_and_full_command_span (__main__.AuditTests.test_negative_off_bias_and_full_command_span) ... ok
+test_split_resistor_reduces_to_symmetric_resistor (__main__.AuditTests.test_split_resistor_reduces_to_symmetric_resistor) ... ok
+test_split_resistor_work_inserts_current_zero (__main__.AuditTests.test_split_resistor_work_inserts_current_zero) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.185s
+
+OK

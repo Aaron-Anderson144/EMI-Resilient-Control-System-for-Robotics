@@ -1,0 +1,5 @@
+Fixture,Arm,Episode,OriginBurst,FirstCorruptPacket_s,LastCorruptPacket_s,FirstAlarm_s,DetectionDelay_s,Status
+DEV02,BASELINE,1,1,0.252,3,NaN,NaN,unprotected_diagnostic
+DEV02,EM_ONLY,1,1,0.251,3,NaN,NaN,unprotected_diagnostic
+DEV02,SW_ONLY,1,1,0.252,3,0.255,0.003,detected
+DEV02,COMBINED,1,1,0.251,3,0.254,0.003,detected

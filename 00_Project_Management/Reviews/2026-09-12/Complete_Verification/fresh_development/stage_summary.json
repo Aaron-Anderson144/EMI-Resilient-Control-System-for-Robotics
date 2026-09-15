@@ -1,0 +1,8 @@
+{
+  "partition": "development",
+  "logical_records": 16,
+  "unique_executions": 16,
+  "paired_results": 8,
+  "all_execution_clean_guards_pass": false,
+  "physical_validation": false
+}

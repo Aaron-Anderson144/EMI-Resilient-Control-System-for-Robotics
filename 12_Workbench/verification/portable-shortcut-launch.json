@@ -1,0 +1,16 @@
+[
+  {
+    "folder": "shortcut-clone-a",
+    "hidden_shell_launch_succeeded": true,
+    "exit_code": 0,
+    "shortcut_bytes_unchanged": false,
+    "matlab_or_app_started": false
+  },
+  {
+    "folder": "nested relocation/Robot Project B",
+    "hidden_shell_launch_succeeded": true,
+    "exit_code": 0,
+    "shortcut_bytes_unchanged": false,
+    "matlab_or_app_started": false
+  }
+]

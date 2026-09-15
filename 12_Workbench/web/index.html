@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#d5dadd">
+  <title>Signal Lab · EMI Robotics</title>
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <link rel="preload" href="/fonts/BarlowCondensed-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="/fonts/Rajdhani-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to workbench</a>
+
+
+  <main id="main" tabindex="-1">
+    <header class="console-header">
+<div class="publication-line"><a class="brand" href="#overview" aria-label="EMI Robotics overview"><span class="brand-mark" aria-hidden="true">EMI</span><span>EMI ROBOTICS<small>Research workbench</small></span></a><p class="publication-note">MODEL / TEST / ANALYZE</p><div class="runtime-pill" id="runtime-status" role="status"><span class="status-dot" aria-hidden="true"></span><span>Connecting to workspace…</span></div></div>
+<nav class="console-index" aria-label="Workbench navigation"><a class="nav-link active" href="#overview"><span aria-hidden="true">00</span><span class="nav-title">Overview</span><span class="nav-arrow" aria-hidden="true">↘</span></a><a class="nav-link" href="#experiments"><span aria-hidden="true">01</span><span class="nav-title">Experiments</span><span class="nav-arrow" aria-hidden="true">↘</span></a><a class="nav-link" href="#results"><span aria-hidden="true">02</span><span class="nav-title">Results &amp; comparison</span><span class="nav-arrow" aria-hidden="true">↘</span></a><a class="nav-link" href="#references"><span aria-hidden="true">03</span><span class="nav-title">Research documents</span><span class="nav-arrow" aria-hidden="true">↘</span></a></nav>
+</header>
+    <div class="page-content">
+      <div id="connection-error" class="notice error-notice" role="alert" hidden><div><strong>Workspace connection interrupted</strong><p id="connection-error-text"></p></div><button class="button small secondary" id="retry-connection" type="button">Try again</button></div>
+
+      <section id="overview" class="section overview-section" aria-labelledby="overview-title">
+        <div class="intro"><div class="intro-title"><div class="eyebrow"><span><span class="numeric-index">00</span> / SYSTEM OVERVIEW</span><span class="workspace-label">LOCAL WORKSPACE</span></div><h1 id="overview-title">Signal <span>Lab</span><span class="title-period" aria-hidden="true">.</span></h1></div><div class="intro-aside"><p class="intro-copy">SIMULATION &amp; VERIFICATION</p><div class="intro-actions"><a class="button primary" href="#experiments">Launch a workflow <span aria-hidden="true">↗</span></a><a class="text-link" href="#results">Inspect saved results <span aria-hidden="true">↗</span></a></div></div></div>
+        <div class="overview-grid">
+          <article class="milestone-card"><div class="card-eyebrow">CURRENT RESEARCH MILESTONE</div><h2 id="research-title">Loading project status…</h2><p id="research-detail">The workbench is reading the current project evidence.</p><div class="next-step"><span>NEXT STEP</span><p id="research-next">Loading the next research step.</p></div></article>
+          <article class="system-card" aria-labelledby="system-title"><div class="card-heading"><div><span class="eyebrow">SIGNAL CHAIN / CLOSED LOOP</span><h2 id="system-title">Signal processing<br> <span>and feedback</span></h2></div><span class="small-tag">SIMULATION</span></div><div class="pipeline" aria-label="Circuit to receiver to decoder to controller"><div class="pipeline-node"><span class="node-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M3 14h5l2-6 4 12 4-12 2 6h5"/></svg></span><strong>Circuit</strong><small>Interference</small></div><span class="pipeline-arrow" aria-hidden="true">→</span><div class="pipeline-node"><span class="node-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M4 20h7V8h7v12h6M4 8h3m14 0h3"/></svg></span><strong>Receiver</strong><small>Signal edges</small></div><span class="pipeline-arrow" aria-hidden="true">→</span><div class="pipeline-node"><span class="node-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M4 9h7v10h7V9h6M4 23h7V13h7v10h6"/></svg></span><strong>Decoder</strong><small>Encoder count</small></div><span class="pipeline-arrow" aria-hidden="true">→</span><div class="pipeline-node"><span class="node-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="8"/><path d="M14 2v4m0 16v4M2 14h4m16 0h4m-12 4 3-4-3-4"/></svg></span><strong>Controller</strong><small>Motor response</small></div></div><div class="feedback-line" aria-hidden="true"><span>MEASURED POSITION FEEDBACK</span></div><p class="system-note">The next control decision uses the measured position. Physical validation remains a later milestone.</p></article>
+        </div>
+        <div class="section-heading evidence-heading"><h2>Recorded verification</h2><span class="muted">Main robotics project · historical checkpoint</span></div>
+        <div class="evidence-grid" id="evidence-grid"><p class="empty-inline">Loading recorded evidence…</p></div>
+        <p class="evidence-footnote">These records describe earlier checks; they are not results from this workbench. Combined mitigation benefit remains unproven.</p>
+      </section>
+
+      <section id="experiments" class="section" aria-labelledby="experiments-title">
+        <div class="section-heading"><div class="section-title"><span class="section-number" aria-hidden="true">01</span><div><span class="eyebrow">EXECUTE / WORKFLOWS</span><h2 id="experiments-title">Run an experiment</h2></div></div><span class="muted">Repeatable workflows. Saved results.</span></div>
+        <div class="experiment-grid"><form class="panel launcher" id="run-form"><label for="workflow-select">Choose a workflow</label><select id="workflow-select" name="workflow" disabled><option>Loading workflows…</option></select><p id="workflow-description" class="workflow-description">Available workflows will appear when the workspace is connected.</p><div id="workflow-unavailable" class="notice compact" hidden></div><div class="launch-footer"><p>Each run keeps its own results<br>and execution log.</p><button id="run-button" class="button primary" type="submit" disabled><span aria-hidden="true">▷</span><span id="run-button-label">Run experiment</span></button></div><p id="launch-message" class="launch-message" role="status" aria-live="polite"></p></form>
+        <article class="panel session-panel"><span class="eyebrow">WORKBENCH ACTIVITY</span><div id="activity-content"><div class="activity-empty-icon" aria-hidden="true">↗</div><h3>Your first run starts here</h3><p>Choose a workflow to create a fresh result. Earlier project evidence stays available above.</p></div><a class="text-link" href="#results">Open results <span aria-hidden="true">→</span></a></article></div>
+      </section>
+
+      <section id="results" class="section" aria-labelledby="results-title">
+        <div class="section-heading"><div class="section-title"><span class="section-number" aria-hidden="true">02</span><div><span class="eyebrow">INSPECT / SAVED RUNS</span><h2 id="results-title">Results &amp; comparison</h2></div></div><button type="button" class="button small secondary" id="refresh-results"><span aria-hidden="true">↻</span>Refresh</button></div>
+        <div class="results-grid"><div class="panel history-panel"><div class="panel-subheading"><h3>Run history</h3><span class="count-tag" id="run-count">0</span></div><div id="run-history" aria-label="Saved runs"><div class="empty-state small-empty"><span aria-hidden="true">▤</span><h3>No workbench runs yet</h3><p>Your experiments will be listed here with their status and saved outputs.</p></div></div></div><article class="panel detail-panel" id="run-detail" aria-live="polite" aria-label="Selected run"><div class="empty-state"><span class="detail-empty-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 37h33M11 33V10m6 18 7-9 7 4 9-13"/></svg></span><h3>Make the next result visible</h3><p>Run an experiment, then inspect its response, metrics, files, and execution log here.</p><a class="text-link" href="#experiments">Choose an experiment <span aria-hidden="true">↑</span></a></div></article></div>
+        <div class="panel comparison-panel" id="comparison-panel" hidden><div class="panel-subheading"><div><span class="eyebrow">SIDE BY SIDE</span><h3>Compare saved metrics</h3></div><span class="muted">Same workflow, separate runs</span></div><div class="comparison-controls"><div><label for="compare-first">First run</label><select id="compare-first"></select></div><div><label for="compare-second">Second run</label><select id="compare-second"></select></div></div><div id="comparison-content" class="comparison-content"></div><p class="comparison-note">Differences reflect these saved runs only. A baseline comparison does not establish EMI mitigation benefit.</p></div>
+      </section>
+
+      <section id="references" class="section" aria-labelledby="references-title"><div class="section-heading"><div class="section-title"><span class="section-number" aria-hidden="true">03</span><div><span class="eyebrow">CONTEXT / READING ROOM</span><h2 id="references-title">Research documents</h2></div></div><span class="muted">The assumptions behind the results</span></div><div class="document-grid" id="document-grid"><p class="empty-inline">Loading research documents…</p></div></section>
+      <footer class="page-footer"><a class="footer-wordmark" href="#overview">Signal Lab</a><span>EMI ROBOTICS<br>FROM SIGNAL TO MOTION</span><span id="last-updated">Connecting…</span></footer>
+    </div>
+  </main>
+</body>
+</html>

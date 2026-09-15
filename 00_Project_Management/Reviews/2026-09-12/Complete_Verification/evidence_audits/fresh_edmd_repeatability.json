@@ -1,0 +1,91 @@
+{
+  "scope": "Repeated training, validation, selection, and test scoring with the original seeds. Reproducibility only; these are not new held-out trajectories.",
+  "saved_run": "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\outputs\\EDMD_Hybrid_Estimation\\results\\tp76c650cf_8abb_4d22_8d57_24d2dc9d3462",
+  "fresh_run": "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\outputs\\Project_Verification_2026-09-12\\fresh_edmd\\tpfb26ae18_1c11_4b5c_9ebd_7e2068e23b1f",
+  "relative_tolerance": 1e-10,
+  "absolute_tolerance": 1e-12,
+  "all_passed": true,
+  "all_numeric_fields_exact": false,
+  "failures": [],
+  "files": [
+    {
+      "file": "selected_models.csv",
+      "rows": 2,
+      "numeric_fields": 16,
+      "text_fields": 0,
+      "exact_numeric_matches": 16,
+      "numeric_matches_within_tolerance": 16,
+      "ignored_fit_timing_fields": 2,
+      "maximum_absolute_difference": 0.0,
+      "maximum_relative_difference": 0.0,
+      "saved_sha256": "c9827747a41fd0549e5590b97d61765f80f198588741a1f0f9c0f3751908e888",
+      "fresh_sha256": "91f15c7b1b0deb3af21db727cbb70eedc04cd12adeb12dce3ebef31736af8a2b"
+    },
+    {
+      "file": "validation_candidates.csv",
+      "rows": 18,
+      "numeric_fields": 144,
+      "text_fields": 0,
+      "exact_numeric_matches": 144,
+      "numeric_matches_within_tolerance": 144,
+      "ignored_fit_timing_fields": 18,
+      "maximum_absolute_difference": 0.0,
+      "maximum_relative_difference": 0.0,
+      "saved_sha256": "7bac2e38f757f1082067c48bfb0a949ee61fed1633e2f3ccd64f58a23a34a266",
+      "fresh_sha256": "62c12090341101da85e1e0f4be92d7e97fb1d738cb0e6a2603a4d409628f1329"
+    },
+    {
+      "file": "forecast_per_run.csv",
+      "rows": 800,
+      "numeric_fields": 9600,
+      "text_fields": 2400,
+      "exact_numeric_matches": 9600,
+      "numeric_matches_within_tolerance": 9600,
+      "ignored_fit_timing_fields": 0,
+      "maximum_absolute_difference": 0.0,
+      "maximum_relative_difference": 0.0,
+      "saved_sha256": "db50a91fecdf29cb5566f1e6f5abdc3d616a9478a5a2bd926491ee1b13f06c00",
+      "fresh_sha256": "db50a91fecdf29cb5566f1e6f5abdc3d616a9478a5a2bd926491ee1b13f06c00"
+    },
+    {
+      "file": "forecast_summary.csv",
+      "rows": 80,
+      "numeric_fields": 1040,
+      "text_fields": 160,
+      "exact_numeric_matches": 1040,
+      "numeric_matches_within_tolerance": 1040,
+      "ignored_fit_timing_fields": 0,
+      "maximum_absolute_difference": 0.0,
+      "maximum_relative_difference": 0.0,
+      "saved_sha256": "07a10bffa3fd25dfbe5f3fc5120ed70e8091c1c3a14b8a2764518d98fc9f26d0",
+      "fresh_sha256": "07a10bffa3fd25dfbe5f3fc5120ed70e8091c1c3a14b8a2764518d98fc9f26d0"
+    },
+    {
+      "file": "regime_forecast_summary.csv",
+      "rows": 80,
+      "numeric_fields": 560,
+      "text_fields": 160,
+      "exact_numeric_matches": 505,
+      "numeric_matches_within_tolerance": 560,
+      "ignored_fit_timing_fields": 0,
+      "maximum_absolute_difference": 1.0125233984581428e-13,
+      "maximum_relative_difference": 9.235875652779527e-15,
+      "saved_sha256": "7378b6c9fc74d3da721d0057237294eec8c32b2c8ea3da5401fe97a864c3ee25",
+      "fresh_sha256": "5f9c4d335d644e5d58ec9277ae4aa567dfa1c91e9c813fc2d4470dd8991b5313"
+    },
+    {
+      "file": "paired_comparisons_50ms.csv",
+      "rows": 12,
+      "numeric_fields": 96,
+      "text_fields": 24,
+      "exact_numeric_matches": 82,
+      "numeric_matches_within_tolerance": 96,
+      "ignored_fit_timing_fields": 0,
+      "maximum_absolute_difference": 1.0231815394945443e-12,
+      "maximum_relative_difference": 1.6736481419376147e-12,
+      "saved_sha256": "50d8dae356ab397ce54cf67726eff7e241bba402cc542e03a8a2754c53666c6c",
+      "fresh_sha256": "60b3eaad738cd6f66e0554a974507b6767f0438cda99e9c06c177b9b321c0e2e"
+    }
+  ],
+  "benefit_decision_identical": true
+}

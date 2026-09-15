@@ -1,0 +1,5 @@
+runs/
+local/
+server.lock
+__pycache__/
+*.pyc

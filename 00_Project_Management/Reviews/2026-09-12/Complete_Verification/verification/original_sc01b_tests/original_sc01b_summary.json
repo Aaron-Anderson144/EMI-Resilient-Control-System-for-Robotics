@@ -1,0 +1,25 @@
+{
+  "scope": "Preserved original SC01B analytic metrics, energy and output-preservation tests",
+  "sourceRoot": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01B",
+  "matlabVersion": "26.1.0.3276743 (R2026a) Update 3",
+  "startedUTC": "13-Sep-2026 02:21:09",
+  "completedUTC": "13-Sep-2026 02:21:14",
+  "tests": 22,
+  "passed": 22,
+  "failed": 0,
+  "incomplete": 0,
+  "elapsedSeconds": 4.5697635,
+  "failedNames": [],
+  "testClasses": [
+    "TestSC01BOutputPreservation",
+    "TestSC01BMetrics",
+    "TestSC01BEnergy"
+  ],
+  "resolvedModelId": "SC01B-IAUC100N04S6L014-V1",
+  "resolvedMetrics": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01B\\functions\\sc01b_metrics.m",
+  "resolvedEnergy": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01B\\functions\\sc01b_energy_balance.m",
+  "r2PathAbsent": true,
+  "nativeOrSpiceCampaignRun": false,
+  "setupNote": "Fresh default MATLAB path plus original SC01B paths. The output-preservation test calls original startup, which adds SC01A helper paths; R2 remains absent.",
+  "interpretation": "These verify original implementation behavior, not acceptance of the original rejected circuit operating points."
+}

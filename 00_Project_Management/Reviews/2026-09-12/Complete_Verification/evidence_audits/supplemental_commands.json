@@ -1,0 +1,36 @@
+[
+  {
+    "name": "four_way_v2_saved_records",
+    "argv": [
+      "C:\\Users\\adand\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY\\scripts\\audit_exported_records_v2.py",
+      "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\results\\development\\fourway_development_20260911_01",
+      "--output",
+      "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\outputs\\Project_Verification_2026-09-12\\evidence_audits\\four_way_v2_saved_records.json"
+    ],
+    "cwd": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics",
+    "started_utc": "2026-09-13T02:18:20.675981+00:00",
+    "duration_seconds": 1.1710000000020955,
+    "exit_code": 0,
+    "log": "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\outputs\\Project_Verification_2026-09-12\\evidence_audits\\four_way_v2_saved_records.log"
+  },
+  {
+    "name": "four_way_v2_python_tests",
+    "argv": [
+      "C:\\Users\\adand\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY\\tests\\test_audit_exported_records_v2.py",
+      "-v"
+    ],
+    "cwd": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics",
+    "started_utc": "2026-09-13T02:18:20.675981+00:00",
+    "duration_seconds": 0.10899999999674037,
+    "exit_code": 0,
+    "log": "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\outputs\\Project_Verification_2026-09-12\\evidence_audits\\four_way_v2_python_tests.log"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "date": "2026-09-12",
+  "source_commit": "6e437538b300084b3c7788043262feccdced5c6f",
+  "scope": "Local review and documentation; fresh regression and retained-input hash verification. No new comparative experiment.",
+  "files": [
+    {
+      "path": "all_project_tests.csv",
+      "bytes": 39427,
+      "sha256": "0d204a08b0b64199403040908561c4b5a049ea641a565dbf3178dc9aa8ed7ec7"
+    },
+    {
+      "path": "checkpoint_integrity.json",
+      "bytes": 86943,
+      "sha256": "390e645b0726075c686f8accec2061c4a87837a638b4a9b9d79ea4ded1b74465"
+    },
+    {
+      "path": "products.json",
+      "bytes": 1695,
+      "sha256": "18402f5a4e25546a8c6644ebe5e778a794090c263eb421a8fba954183e96740a"
+    },
+    {
+      "path": "Project_Progress_Review.md",
+      "bytes": 6412,
+      "sha256": "5c43cde08cbf725153e2ac30b115bae9d685b9d071b836f26586d11e585a548a"
+    },
+    {
+      "path": "Receiver_Revision_Brief.md",
+      "bytes": 7311,
+      "sha256": "aacede56edcc062f39189b7e39f72f8a9ac9126e747bba92449457140415c01c"
+    },
+    {
+      "path": "verification_summary.json",
+      "bytes": 322,
+      "sha256": "f9eb72a3b3a3b10ef94c5f0a9205dca738375c09266533b0a434fb0fa4830ba6"
+    },
+    {
+      "path": "Writing_Revision.json",
+      "bytes": 19714,
+      "sha256": "aa8edf50c3d7bd6b4c90d6f7031a4c88d6d6460e4891ba10b5d11911479dbc36"
+    }
+  ],
+  "updatedLocal": "2026-09-12T22:01:21-04:00",
+  "revisionNote": "Wording updated locally. Numerical results and executable code are unchanged; historical source and publication manifests keep their original identities."
+}

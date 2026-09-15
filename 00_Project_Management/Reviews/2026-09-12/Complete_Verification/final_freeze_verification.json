@@ -1,0 +1,103 @@
+{
+  "verified_utc": "2026-09-13T02:27:06.291765+00:00",
+  "passed": true,
+  "files_verified": 16,
+  "files": [
+    {
+      "path": "04_EMI_Models/Four_Way_EMI_Experiment.md",
+      "sha256": "157daec046c3742b2f78a1071298606789759db04101c0d0a63bc43c3ce5f0be",
+      "bytes": 20936,
+      "passed": true
+    },
+    {
+      "path": "04_EMI_Models/four_way_emi_configuration.json",
+      "sha256": "b18e2107175105c77e520a05ffb3a976ee5a8e8b5a3539b01e17df4a29817782",
+      "bytes": 5083,
+      "passed": true
+    },
+    {
+      "path": "04_EMI_Models/four_way_emi_fixtures.csv",
+      "sha256": "7723eb272faf969c1763e96dabcb12049ba8d810c6d8fe5ce04e23d9c1aec549",
+      "bytes": 1278,
+      "passed": true
+    },
+    {
+      "path": "00_Project_Management/Local_Dependencies.json",
+      "sha256": "76f82e57a6c0b43326f4cf66d841cb83369a7a9604354b0e02b61aab7471f169",
+      "bytes": 14694,
+      "passed": true
+    },
+    {
+      "path": "03_MATLAB/parameters/actuator_parameters.m",
+      "sha256": "1aae0d6c2543d8d1bfe50af11a62b677cdc92c308338a72b2ae13f19d1ff32dc",
+      "bytes": 5280,
+      "passed": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_configuration.m",
+      "sha256": "3fae3440a31bf94be7d07802e509d45fb48fed3b13ef2f5b1ee8b646372e8c94",
+      "bytes": 770,
+      "passed": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_control_configuration.m",
+      "sha256": "ebcc663c66cbbcb07fe43975557ab3de214b5e8e46c5819bb5fad3b93ebaf66c",
+      "bytes": 1396,
+      "passed": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_observer_configuration.m",
+      "sha256": "bb4e80d341354c81c4be54e7b5a32dd4347dcdabfe5eddf11afbe5ee6155a852",
+      "bytes": 2598,
+      "passed": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_supervisor_configuration.m",
+      "sha256": "9ee958efd3c72e7d1d0b33afb3c2e4e68f4fec4cc27dcd2235c950d78c44f203",
+      "bytes": 2480,
+      "passed": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_reacquisition_configuration.m",
+      "sha256": "1ba9e49b21eb65a08389501e94b6008d45435c55b2b3416d344dfb9926b4d5a4",
+      "bytes": 5786,
+      "passed": true
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_motion_configuration.m",
+      "sha256": "78e6e9328a1cd4d8f0d405bbd12d32b617d7168a1fe790f9afedb5b1fe881d07",
+      "bytes": 2737,
+      "passed": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_parameters.m",
+      "sha256": "2e31367987576c6e2df2ad8c1c1ebd5410539cebf00cd23b65bb67b26e35af6b",
+      "bytes": 1225,
+      "passed": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_state_space.m",
+      "sha256": "97c61a488c103478072c65ab2adba4404b1ff825bb874c7640678b80b3c5c8e2",
+      "bytes": 1806,
+      "passed": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/results/verification/nominal/native_finest.csv",
+      "sha256": "1ecdd83ee4f4846b70e2d40ba04f4b3188e737c94f08300a5bbbfcc36acb9cd5",
+      "bytes": 11927554,
+      "passed": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/results/verification/nominal/parameters.json",
+      "sha256": "8bcf382b988bc05f70d1de16a5c33297f15c1a6b06436e386e30514f528f112e",
+      "bytes": 2295,
+      "passed": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/results/verification/source_identity.json",
+      "sha256": "beb5b681bc730d5683d2e626b9961bf37aa6626fec90959f8f996134b26c97cd",
+      "bytes": 14061,
+      "passed": true
+    }
+  ]
+}

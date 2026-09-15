@@ -1,0 +1,244 @@
+[
+  {
+    "run_directory": "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\outputs\\edmd_robot_study\\runs\\tp6d389707_9044_47c6_890d_f70abc06312e",
+    "scope": "Independent arithmetic from saved per-trajectory metrics only; no forecast rerun, training, or confidence-interval reconstruction.",
+    "checks": 3892,
+    "failures": [],
+    "all_passed": true,
+    "per_run_rows": 800,
+    "groups": 80,
+    "unique_test_trajectories": 40,
+    "input_sha256": {
+      "forecast_per_run.csv": "5b21fc2ae02228c6220ee6f750b447f7554114d4f5f15bd883609a3f68266bfa",
+      "forecast_summary.csv": "837fd53ca21015eb033a5333ca28217953a30f2974fe4f206a5eca87bc9ad0eb",
+      "regime_forecast_summary.csv": "9d394998792484a82454a4000d19d181fd80b226f0f70e8604cea378c87cf664",
+      "paired_comparisons_50ms.csv": "e7bea10dd3160c9ed9ff801fc6c54c1d40ca2f07cd771c58f743add0165f33f3",
+      "benefit_screen.json": "4b3de51f804e27271b5fc5c4ea1b73fb507a17d195799677ed3346339ed954f6"
+    },
+    "comparisons_50ms": [
+      {
+        "regime": "nominal",
+        "baseline": "Original physics observer",
+        "improvement_percent": -4857.797367924938,
+        "paired_wins": 0,
+        "run_count": 10,
+        "screen_passed": false
+      },
+      {
+        "regime": "nominal",
+        "baseline": "Ungated nominal observer",
+        "improvement_percent": -4857.797367924938,
+        "paired_wins": 0,
+        "run_count": 10,
+        "screen_passed": false
+      },
+      {
+        "regime": "nominal",
+        "baseline": "Learned linear",
+        "improvement_percent": 0.6194317033184515,
+        "paired_wins": 6,
+        "run_count": 10,
+        "screen_passed": false
+      },
+      {
+        "regime": "varied",
+        "baseline": "Original physics observer",
+        "improvement_percent": 96.75178517858878,
+        "paired_wins": 10,
+        "run_count": 10,
+        "screen_passed": true
+      },
+      {
+        "regime": "varied",
+        "baseline": "Ungated nominal observer",
+        "improvement_percent": 74.72995082441871,
+        "paired_wins": 10,
+        "run_count": 10,
+        "screen_passed": true
+      },
+      {
+        "regime": "varied",
+        "baseline": "Learned linear",
+        "improvement_percent": -0.04734261370920034,
+        "paired_wins": 5,
+        "run_count": 10,
+        "screen_passed": false
+      },
+      {
+        "regime": "nonlinear",
+        "baseline": "Original physics observer",
+        "improvement_percent": 94.84988100202163,
+        "paired_wins": 10,
+        "run_count": 10,
+        "screen_passed": true
+      },
+      {
+        "regime": "nonlinear",
+        "baseline": "Ungated nominal observer",
+        "improvement_percent": 72.88715033656058,
+        "paired_wins": 10,
+        "run_count": 10,
+        "screen_passed": true
+      },
+      {
+        "regime": "nonlinear",
+        "baseline": "Learned linear",
+        "improvement_percent": 0.18364125024885602,
+        "paired_wins": 6,
+        "run_count": 10,
+        "screen_passed": false
+      },
+      {
+        "regime": "stress",
+        "baseline": "Original physics observer",
+        "improvement_percent": 93.884987736149,
+        "paired_wins": 10,
+        "run_count": 10,
+        "screen_passed": true
+      },
+      {
+        "regime": "stress",
+        "baseline": "Ungated nominal observer",
+        "improvement_percent": 62.68838315531964,
+        "paired_wins": 10,
+        "run_count": 10,
+        "screen_passed": true
+      },
+      {
+        "regime": "stress",
+        "baseline": "Learned linear",
+        "improvement_percent": 0.3743693202922338,
+        "paired_wins": 8,
+        "run_count": 10,
+        "screen_passed": false
+      }
+    ],
+    "benefit_by_regime": {
+      "nominal": false,
+      "varied": false,
+      "nonlinear": false,
+      "stress": false
+    }
+  },
+  {
+    "run_directory": "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\outputs\\EDMD_Hybrid_Estimation\\results\\tp76c650cf_8abb_4d22_8d57_24d2dc9d3462",
+    "scope": "Independent arithmetic from saved per-trajectory metrics only; no forecast rerun, training, or confidence-interval reconstruction.",
+    "checks": 2810,
+    "failures": [],
+    "all_passed": true,
+    "per_run_rows": 800,
+    "groups": 80,
+    "unique_test_trajectories": 40,
+    "input_sha256": {
+      "forecast_per_run.csv": "db50a91fecdf29cb5566f1e6f5abdc3d616a9478a5a2bd926491ee1b13f06c00",
+      "forecast_summary.csv": "07a10bffa3fd25dfbe5f3fc5120ed70e8091c1c3a14b8a2764518d98fc9f26d0",
+      "regime_forecast_summary.csv": "7378b6c9fc74d3da721d0057237294eec8c32b2c8ea3da5401fe97a864c3ee25",
+      "paired_comparisons_50ms.csv": "50d8dae356ab397ce54cf67726eff7e241bba402cc542e03a8a2754c53666c6c",
+      "benefit_screen.json": "63af06ee763b48af1ff1de14c453149566125d0a568ad94ceeff1422e3ee6dca"
+    },
+    "comparisons_50ms": [
+      {
+        "regime": "nominal",
+        "baseline": "Nominal physics",
+        "improvement_percent": -2973.094509225758,
+        "paired_wins": 0,
+        "run_count": 10,
+        "screen_passed": false
+      },
+      {
+        "regime": "nominal",
+        "baseline": "Persistent innovation",
+        "improvement_percent": -614.6395309973138,
+        "paired_wins": 0,
+        "run_count": 10,
+        "screen_passed": false
+      },
+      {
+        "regime": "nominal",
+        "baseline": "Linear hybrid",
+        "improvement_percent": -0.9311326217016136,
+        "paired_wins": 4,
+        "run_count": 10,
+        "screen_passed": false
+      },
+      {
+        "regime": "varied",
+        "baseline": "Nominal physics",
+        "improvement_percent": 79.96697881274788,
+        "paired_wins": 10,
+        "run_count": 10,
+        "screen_passed": true
+      },
+      {
+        "regime": "varied",
+        "baseline": "Persistent innovation",
+        "improvement_percent": 7.576220956275936,
+        "paired_wins": 6,
+        "run_count": 10,
+        "screen_passed": false
+      },
+      {
+        "regime": "varied",
+        "baseline": "Linear hybrid",
+        "improvement_percent": -0.6006425356990253,
+        "paired_wins": 4,
+        "run_count": 10,
+        "screen_passed": false
+      },
+      {
+        "regime": "nonlinear",
+        "baseline": "Nominal physics",
+        "improvement_percent": 72.0873255919956,
+        "paired_wins": 10,
+        "run_count": 10,
+        "screen_passed": true
+      },
+      {
+        "regime": "nonlinear",
+        "baseline": "Persistent innovation",
+        "improvement_percent": 30.638079245736694,
+        "paired_wins": 10,
+        "run_count": 10,
+        "screen_passed": true
+      },
+      {
+        "regime": "nonlinear",
+        "baseline": "Linear hybrid",
+        "improvement_percent": -0.06637696933891046,
+        "paired_wins": 5,
+        "run_count": 10,
+        "screen_passed": false
+      },
+      {
+        "regime": "stress",
+        "baseline": "Nominal physics",
+        "improvement_percent": 66.38789639863126,
+        "paired_wins": 10,
+        "run_count": 10,
+        "screen_passed": true
+      },
+      {
+        "regime": "stress",
+        "baseline": "Persistent innovation",
+        "improvement_percent": 30.734678226231505,
+        "paired_wins": 10,
+        "run_count": 10,
+        "screen_passed": true
+      },
+      {
+        "regime": "stress",
+        "baseline": "Linear hybrid",
+        "improvement_percent": -0.09811004193620576,
+        "paired_wins": 5,
+        "run_count": 10,
+        "screen_passed": false
+      }
+    ],
+    "benefit_by_regime": {
+      "nominal": false,
+      "varied": false,
+      "nonlinear": false,
+      "stress": false
+    }
+  }
+]

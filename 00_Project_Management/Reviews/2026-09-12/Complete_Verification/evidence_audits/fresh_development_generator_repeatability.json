@@ -1,0 +1,18 @@
+{
+  "scope": "Exact comparison of run_fourway_stage CSV exports only; the saved-only historical domain summary is tracked separately.",
+  "saved_directory": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\results\\development\\fourway_development_20260911_01",
+  "fresh_directory": "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\outputs\\Project_Verification_2026-09-12\\fresh_development",
+  "csv_files_compared": 181,
+  "numeric_fields_compared": 6205957,
+  "text_fields_compared": 144292,
+  "allowed_elapsed_fields": 16,
+  "failure_examples": [],
+  "all_passed": true,
+  "excluded_historical_supplement": {
+    "file": "domain_and_clean_decoder_summary.csv",
+    "reason": "CSV file is missing from one campaign"
+  },
+  "exclusion_basis": "run_fourway_stage.m writes record_index, metrics, recovery, detection_episodes, burst_attribution and per-record exports; it does not write domain_and_clean_decoder_summary.csv.",
+  "initial_report_preserved": "fresh_development_repeatability.json",
+  "generator_source_sha256": "1e422c64fa465a3403b4f15b565b4e005ff6520f7c78c3290f0762a43e53175d"
+}

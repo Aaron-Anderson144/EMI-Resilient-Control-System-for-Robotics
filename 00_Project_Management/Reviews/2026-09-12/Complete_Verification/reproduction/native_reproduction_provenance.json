@@ -1,0 +1,10 @@
+{
+  "production_runner": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\scripts\\run_fourway_native_acceptance.m",
+  "production_sha256": "f342349349be6f5f3a227c47492f8a9e1c49ac44948b3b4574e5ae8e1c5293d0",
+  "scratch_runner": "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\work\\project_verification_20260912\\verify_native_reproduction.m",
+  "scratch_sha256": "5dc51c4fad8355dfd310cd15ba5d97519549fd164bbca2a3087b7c5033a02466",
+  "changes": [
+    "Function name and project root for scratch execution",
+    "Use final archived per-case solver settings; no tuning or gate changes"
+  ]
+}

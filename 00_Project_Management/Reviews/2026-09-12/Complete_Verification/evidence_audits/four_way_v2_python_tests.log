@@ -1,0 +1,11 @@
+test_complete_distinct_pairs_pass (__main__.PairCoverageTests.test_complete_distinct_pairs_pass) ... ok
+test_duplicate_rows_cannot_replace_missing_pairs (__main__.PairCoverageTests.test_duplicate_rows_cannot_replace_missing_pairs) ... ok
+test_missing_metric_pair_rejects (__main__.PairCoverageTests.test_missing_metric_pair_rejects) ... ok
+test_mixed_partitions_reject (__main__.PairCoverageTests.test_mixed_partitions_reject) ... ok
+test_record_identity_cannot_disagree_with_pair_metadata (__main__.PairCoverageTests.test_record_identity_cannot_disagree_with_pair_metadata) ... ok
+test_unexpected_pair_rejects_even_with_correct_row_count (__main__.PairCoverageTests.test_unexpected_pair_rejects_even_with_correct_row_count) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

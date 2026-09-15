@@ -1,0 +1,1828 @@
+{
+  "scope": "Exact numeric and text CSV comparison for the same development fixtures; not new independent validation data.",
+  "saved_directory": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\results\\development\\fourway_development_20260911_01",
+  "fresh_directory": "C:\\Users\\adand\\Documents\\Codex\\2026-09-12\\a\\outputs\\Project_Verification_2026-09-12\\fresh_development",
+  "csv_files_compared": 181,
+  "numeric_fields_compared": 6205957,
+  "text_fields_compared": 144292,
+  "allowed_elapsed_fields": 16,
+  "failure_examples": [
+    {
+      "file": "domain_and_clean_decoder_summary.csv",
+      "reason": "CSV file is missing from one campaign"
+    }
+  ],
+  "all_passed": false,
+  "files": [
+    {
+      "file": "DEV01_BASELINE_clean/controller.csv",
+      "rows": 3001,
+      "columns": 49,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "65aa6688a92e307f2a9a0dbb987e93a157ee5e03037a5fa552d666a24f1c00f5",
+      "fresh_sha256": "65aa6688a92e307f2a9a0dbb987e93a157ee5e03037a5fa552d666a24f1c00f5"
+    },
+    {
+      "file": "DEV01_BASELINE_clean/intended_AB.csv",
+      "rows": 964,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "0ed4ada1daa7a0f563f98608438225d691a016d40d6d4fb57fa7955719c87152",
+      "fresh_sha256": "0ed4ada1daa7a0f563f98608438225d691a016d40d6d4fb57fa7955719c87152"
+    },
+    {
+      "file": "DEV01_BASELINE_clean/plant_interval_metrics.csv",
+      "rows": 3000,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "dbdf5a46650aee250fb1ddf923166ec17a20b85edc277ec858db4edbe6d2d145",
+      "fresh_sha256": "dbdf5a46650aee250fb1ddf923166ec17a20b85edc277ec858db4edbe6d2d145"
+    },
+    {
+      "file": "DEV01_BASELINE_clean/receiver_circuit_boundaries.csv",
+      "rows": 964,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "d3a11ad505fa101dd2bad4a3d1c0e616f69060f4b46ac82d86775a91f9bb1486",
+      "fresh_sha256": "d3a11ad505fa101dd2bad4a3d1c0e616f69060f4b46ac82d86775a91f9bb1486"
+    },
+    {
+      "file": "DEV01_BASELINE_clean/receiver_decoder_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "ed73310046ebc18c76d8b75edc0d96a5e99abe805f9436767683b31f1d990eb2",
+      "fresh_sha256": "ed73310046ebc18c76d8b75edc0d96a5e99abe805f9436767683b31f1d990eb2"
+    },
+    {
+      "file": "DEV01_BASELINE_clean/receiver_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "f35ed39a346134d9747ef4d97e21e81d1195466284913deb18e37191030e40d6",
+      "fresh_sha256": "f35ed39a346134d9747ef4d97e21e81d1195466284913deb18e37191030e40d6"
+    },
+    {
+      "file": "DEV01_BASELINE_clean/receiver_threshold_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "e44e31ed0808623d614b8c9dad1a2e49f973a1bc144140bb675fe3316ea4b801",
+      "fresh_sha256": "e44e31ed0808623d614b8c9dad1a2e49f973a1bc144140bb675fe3316ea4b801"
+    },
+    {
+      "file": "DEV01_BASELINE_clean/shadow_circuit_boundaries.csv",
+      "rows": 964,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "d3a11ad505fa101dd2bad4a3d1c0e616f69060f4b46ac82d86775a91f9bb1486",
+      "fresh_sha256": "d3a11ad505fa101dd2bad4a3d1c0e616f69060f4b46ac82d86775a91f9bb1486"
+    },
+    {
+      "file": "DEV01_BASELINE_clean/shadow_decoder_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "ed73310046ebc18c76d8b75edc0d96a5e99abe805f9436767683b31f1d990eb2",
+      "fresh_sha256": "ed73310046ebc18c76d8b75edc0d96a5e99abe805f9436767683b31f1d990eb2"
+    },
+    {
+      "file": "DEV01_BASELINE_clean/shadow_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "f35ed39a346134d9747ef4d97e21e81d1195466284913deb18e37191030e40d6",
+      "fresh_sha256": "f35ed39a346134d9747ef4d97e21e81d1195466284913deb18e37191030e40d6"
+    },
+    {
+      "file": "DEV01_BASELINE_clean/shadow_threshold_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "e44e31ed0808623d614b8c9dad1a2e49f973a1bc144140bb675fe3316ea4b801",
+      "fresh_sha256": "e44e31ed0808623d614b8c9dad1a2e49f973a1bc144140bb675fe3316ea4b801"
+    },
+    {
+      "file": "DEV01_BASELINE_exposed/controller.csv",
+      "rows": 3001,
+      "columns": 49,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "65aa6688a92e307f2a9a0dbb987e93a157ee5e03037a5fa552d666a24f1c00f5",
+      "fresh_sha256": "65aa6688a92e307f2a9a0dbb987e93a157ee5e03037a5fa552d666a24f1c00f5"
+    },
+    {
+      "file": "DEV01_BASELINE_exposed/intended_AB.csv",
+      "rows": 964,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "0ed4ada1daa7a0f563f98608438225d691a016d40d6d4fb57fa7955719c87152",
+      "fresh_sha256": "0ed4ada1daa7a0f563f98608438225d691a016d40d6d4fb57fa7955719c87152"
+    },
+    {
+      "file": "DEV01_BASELINE_exposed/plant_interval_metrics.csv",
+      "rows": 3000,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "dbdf5a46650aee250fb1ddf923166ec17a20b85edc277ec858db4edbe6d2d145",
+      "fresh_sha256": "dbdf5a46650aee250fb1ddf923166ec17a20b85edc277ec858db4edbe6d2d145"
+    },
+    {
+      "file": "DEV01_BASELINE_exposed/receiver_circuit_boundaries.csv",
+      "rows": 1764,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "00fd0d1057e1d2bde7678e8910b4bb7310698cc2cd5e41d08dda36c51dfe77fa",
+      "fresh_sha256": "00fd0d1057e1d2bde7678e8910b4bb7310698cc2cd5e41d08dda36c51dfe77fa"
+    },
+    {
+      "file": "DEV01_BASELINE_exposed/receiver_decoder_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "5437818d9c1a4300d7a689e856681d3554635f8e80376d4eb81efde96b75d892",
+      "fresh_sha256": "5437818d9c1a4300d7a689e856681d3554635f8e80376d4eb81efde96b75d892"
+    },
+    {
+      "file": "DEV01_BASELINE_exposed/receiver_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "a3123bd1ff1668c4e507c748c9409f3f8718b4a0f5786f40eadc4cb55318e92c",
+      "fresh_sha256": "a3123bd1ff1668c4e507c748c9409f3f8718b4a0f5786f40eadc4cb55318e92c"
+    },
+    {
+      "file": "DEV01_BASELINE_exposed/receiver_threshold_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "5603567075d287f3770351e3a2c041ed9a3883757f9dfc05922d93c5a1f36885",
+      "fresh_sha256": "5603567075d287f3770351e3a2c041ed9a3883757f9dfc05922d93c5a1f36885"
+    },
+    {
+      "file": "DEV01_BASELINE_exposed/shadow_circuit_boundaries.csv",
+      "rows": 964,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "d3a11ad505fa101dd2bad4a3d1c0e616f69060f4b46ac82d86775a91f9bb1486",
+      "fresh_sha256": "d3a11ad505fa101dd2bad4a3d1c0e616f69060f4b46ac82d86775a91f9bb1486"
+    },
+    {
+      "file": "DEV01_BASELINE_exposed/shadow_decoder_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "ed73310046ebc18c76d8b75edc0d96a5e99abe805f9436767683b31f1d990eb2",
+      "fresh_sha256": "ed73310046ebc18c76d8b75edc0d96a5e99abe805f9436767683b31f1d990eb2"
+    },
+    {
+      "file": "DEV01_BASELINE_exposed/shadow_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "f35ed39a346134d9747ef4d97e21e81d1195466284913deb18e37191030e40d6",
+      "fresh_sha256": "f35ed39a346134d9747ef4d97e21e81d1195466284913deb18e37191030e40d6"
+    },
+    {
+      "file": "DEV01_BASELINE_exposed/shadow_threshold_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "e44e31ed0808623d614b8c9dad1a2e49f973a1bc144140bb675fe3316ea4b801",
+      "fresh_sha256": "e44e31ed0808623d614b8c9dad1a2e49f973a1bc144140bb675fe3316ea4b801"
+    },
+    {
+      "file": "DEV01_COMBINED_clean/controller.csv",
+      "rows": 3001,
+      "columns": 49,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "25de53aeb9022d9cad626633c6db029d8fa913439357bed5b1c885fbd20d2d72",
+      "fresh_sha256": "25de53aeb9022d9cad626633c6db029d8fa913439357bed5b1c885fbd20d2d72"
+    },
+    {
+      "file": "DEV01_COMBINED_clean/intended_AB.csv",
+      "rows": 961,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "3c3ca18baffe31229f71913d4b892ea6d6f0e88fcaef62bf28f99413f4d2d96c",
+      "fresh_sha256": "3c3ca18baffe31229f71913d4b892ea6d6f0e88fcaef62bf28f99413f4d2d96c"
+    },
+    {
+      "file": "DEV01_COMBINED_clean/plant_interval_metrics.csv",
+      "rows": 3000,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "df9b419bf1f4dfe192de5a3db1d7c4526e8edbca845e96f6c542b41d3a16d8ea",
+      "fresh_sha256": "df9b419bf1f4dfe192de5a3db1d7c4526e8edbca845e96f6c542b41d3a16d8ea"
+    },
+    {
+      "file": "DEV01_COMBINED_clean/receiver_circuit_boundaries.csv",
+      "rows": 962,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "4c318141d693872f1a82177148307a4b4565292f9794fbbdc6e0cdfe6e1574d3",
+      "fresh_sha256": "4c318141d693872f1a82177148307a4b4565292f9794fbbdc6e0cdfe6e1574d3"
+    },
+    {
+      "file": "DEV01_COMBINED_clean/receiver_decoder_events.csv",
+      "rows": 961,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "cfa5735fcd6508a2e0cf85a3f2b225ffb192b1fac6b03337074b11ed8721fc1c",
+      "fresh_sha256": "cfa5735fcd6508a2e0cf85a3f2b225ffb192b1fac6b03337074b11ed8721fc1c"
+    },
+    {
+      "file": "DEV01_COMBINED_clean/receiver_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "4b09fb124881b699a5291a8fe7c3c0d3db5aa63bc6977fd7c1bd611b1d446119",
+      "fresh_sha256": "4b09fb124881b699a5291a8fe7c3c0d3db5aa63bc6977fd7c1bd611b1d446119"
+    },
+    {
+      "file": "DEV01_COMBINED_clean/receiver_threshold_events.csv",
+      "rows": 962,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "ed9bf9141dce40465eade1c4452b4289d4d1503b5d684bea83fa759758c2c2d3",
+      "fresh_sha256": "ed9bf9141dce40465eade1c4452b4289d4d1503b5d684bea83fa759758c2c2d3"
+    },
+    {
+      "file": "DEV01_COMBINED_clean/shadow_circuit_boundaries.csv",
+      "rows": 962,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "4c318141d693872f1a82177148307a4b4565292f9794fbbdc6e0cdfe6e1574d3",
+      "fresh_sha256": "4c318141d693872f1a82177148307a4b4565292f9794fbbdc6e0cdfe6e1574d3"
+    },
+    {
+      "file": "DEV01_COMBINED_clean/shadow_decoder_events.csv",
+      "rows": 961,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "cfa5735fcd6508a2e0cf85a3f2b225ffb192b1fac6b03337074b11ed8721fc1c",
+      "fresh_sha256": "cfa5735fcd6508a2e0cf85a3f2b225ffb192b1fac6b03337074b11ed8721fc1c"
+    },
+    {
+      "file": "DEV01_COMBINED_clean/shadow_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "4b09fb124881b699a5291a8fe7c3c0d3db5aa63bc6977fd7c1bd611b1d446119",
+      "fresh_sha256": "4b09fb124881b699a5291a8fe7c3c0d3db5aa63bc6977fd7c1bd611b1d446119"
+    },
+    {
+      "file": "DEV01_COMBINED_clean/shadow_threshold_events.csv",
+      "rows": 962,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "ed9bf9141dce40465eade1c4452b4289d4d1503b5d684bea83fa759758c2c2d3",
+      "fresh_sha256": "ed9bf9141dce40465eade1c4452b4289d4d1503b5d684bea83fa759758c2c2d3"
+    },
+    {
+      "file": "DEV01_COMBINED_exposed/controller.csv",
+      "rows": 3001,
+      "columns": 49,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "25de53aeb9022d9cad626633c6db029d8fa913439357bed5b1c885fbd20d2d72",
+      "fresh_sha256": "25de53aeb9022d9cad626633c6db029d8fa913439357bed5b1c885fbd20d2d72"
+    },
+    {
+      "file": "DEV01_COMBINED_exposed/intended_AB.csv",
+      "rows": 961,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "3c3ca18baffe31229f71913d4b892ea6d6f0e88fcaef62bf28f99413f4d2d96c",
+      "fresh_sha256": "3c3ca18baffe31229f71913d4b892ea6d6f0e88fcaef62bf28f99413f4d2d96c"
+    },
+    {
+      "file": "DEV01_COMBINED_exposed/plant_interval_metrics.csv",
+      "rows": 3000,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "df9b419bf1f4dfe192de5a3db1d7c4526e8edbca845e96f6c542b41d3a16d8ea",
+      "fresh_sha256": "df9b419bf1f4dfe192de5a3db1d7c4526e8edbca845e96f6c542b41d3a16d8ea"
+    },
+    {
+      "file": "DEV01_COMBINED_exposed/receiver_circuit_boundaries.csv",
+      "rows": 1762,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "4f0cc368abb08ce1eebba2e8e34aa4ef8c682c1ff69bee79185932348defc797",
+      "fresh_sha256": "4f0cc368abb08ce1eebba2e8e34aa4ef8c682c1ff69bee79185932348defc797"
+    },
+    {
+      "file": "DEV01_COMBINED_exposed/receiver_decoder_events.csv",
+      "rows": 961,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "cfa5735fcd6508a2e0cf85a3f2b225ffb192b1fac6b03337074b11ed8721fc1c",
+      "fresh_sha256": "cfa5735fcd6508a2e0cf85a3f2b225ffb192b1fac6b03337074b11ed8721fc1c"
+    },
+    {
+      "file": "DEV01_COMBINED_exposed/receiver_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "f9837ab4a38b830827d41a3bdae406e75d2e0692ae29f8e028771d33533080ab",
+      "fresh_sha256": "f9837ab4a38b830827d41a3bdae406e75d2e0692ae29f8e028771d33533080ab"
+    },
+    {
+      "file": "DEV01_COMBINED_exposed/receiver_threshold_events.csv",
+      "rows": 962,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "65e7ace95009562a46a930d829aaba2966f1a96751f87500beed8e360e4f0072",
+      "fresh_sha256": "65e7ace95009562a46a930d829aaba2966f1a96751f87500beed8e360e4f0072"
+    },
+    {
+      "file": "DEV01_COMBINED_exposed/shadow_circuit_boundaries.csv",
+      "rows": 962,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "4c318141d693872f1a82177148307a4b4565292f9794fbbdc6e0cdfe6e1574d3",
+      "fresh_sha256": "4c318141d693872f1a82177148307a4b4565292f9794fbbdc6e0cdfe6e1574d3"
+    },
+    {
+      "file": "DEV01_COMBINED_exposed/shadow_decoder_events.csv",
+      "rows": 961,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "cfa5735fcd6508a2e0cf85a3f2b225ffb192b1fac6b03337074b11ed8721fc1c",
+      "fresh_sha256": "cfa5735fcd6508a2e0cf85a3f2b225ffb192b1fac6b03337074b11ed8721fc1c"
+    },
+    {
+      "file": "DEV01_COMBINED_exposed/shadow_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "4b09fb124881b699a5291a8fe7c3c0d3db5aa63bc6977fd7c1bd611b1d446119",
+      "fresh_sha256": "4b09fb124881b699a5291a8fe7c3c0d3db5aa63bc6977fd7c1bd611b1d446119"
+    },
+    {
+      "file": "DEV01_COMBINED_exposed/shadow_threshold_events.csv",
+      "rows": 962,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "ed9bf9141dce40465eade1c4452b4289d4d1503b5d684bea83fa759758c2c2d3",
+      "fresh_sha256": "ed9bf9141dce40465eade1c4452b4289d4d1503b5d684bea83fa759758c2c2d3"
+    },
+    {
+      "file": "DEV01_EM_ONLY_clean/controller.csv",
+      "rows": 3001,
+      "columns": 49,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "65aa6688a92e307f2a9a0dbb987e93a157ee5e03037a5fa552d666a24f1c00f5",
+      "fresh_sha256": "65aa6688a92e307f2a9a0dbb987e93a157ee5e03037a5fa552d666a24f1c00f5"
+    },
+    {
+      "file": "DEV01_EM_ONLY_clean/intended_AB.csv",
+      "rows": 964,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "0ed4ada1daa7a0f563f98608438225d691a016d40d6d4fb57fa7955719c87152",
+      "fresh_sha256": "0ed4ada1daa7a0f563f98608438225d691a016d40d6d4fb57fa7955719c87152"
+    },
+    {
+      "file": "DEV01_EM_ONLY_clean/plant_interval_metrics.csv",
+      "rows": 3000,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "dbdf5a46650aee250fb1ddf923166ec17a20b85edc277ec858db4edbe6d2d145",
+      "fresh_sha256": "dbdf5a46650aee250fb1ddf923166ec17a20b85edc277ec858db4edbe6d2d145"
+    },
+    {
+      "file": "DEV01_EM_ONLY_clean/receiver_circuit_boundaries.csv",
+      "rows": 964,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "e9d817883951483f6180224091a52fe454af07cc1cfe5fa47a2b64af7fba604e",
+      "fresh_sha256": "e9d817883951483f6180224091a52fe454af07cc1cfe5fa47a2b64af7fba604e"
+    },
+    {
+      "file": "DEV01_EM_ONLY_clean/receiver_decoder_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "4b2d2705758c5631adc84ceb323a7fcec46c6ece053ebfdfd44f68613e2cdccc",
+      "fresh_sha256": "4b2d2705758c5631adc84ceb323a7fcec46c6ece053ebfdfd44f68613e2cdccc"
+    },
+    {
+      "file": "DEV01_EM_ONLY_clean/receiver_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "aa27852ec9b9ff5559c9e8f9a74c7dd60eec2c5d5f8fc86a7a1ee90a575472d8",
+      "fresh_sha256": "aa27852ec9b9ff5559c9e8f9a74c7dd60eec2c5d5f8fc86a7a1ee90a575472d8"
+    },
+    {
+      "file": "DEV01_EM_ONLY_clean/receiver_threshold_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "1e1dd7e1565f9f7bc0fb9c50c7f2a3a0e3651f20069f18043e303c058110f93b",
+      "fresh_sha256": "1e1dd7e1565f9f7bc0fb9c50c7f2a3a0e3651f20069f18043e303c058110f93b"
+    },
+    {
+      "file": "DEV01_EM_ONLY_clean/shadow_circuit_boundaries.csv",
+      "rows": 964,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "e9d817883951483f6180224091a52fe454af07cc1cfe5fa47a2b64af7fba604e",
+      "fresh_sha256": "e9d817883951483f6180224091a52fe454af07cc1cfe5fa47a2b64af7fba604e"
+    },
+    {
+      "file": "DEV01_EM_ONLY_clean/shadow_decoder_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "4b2d2705758c5631adc84ceb323a7fcec46c6ece053ebfdfd44f68613e2cdccc",
+      "fresh_sha256": "4b2d2705758c5631adc84ceb323a7fcec46c6ece053ebfdfd44f68613e2cdccc"
+    },
+    {
+      "file": "DEV01_EM_ONLY_clean/shadow_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "aa27852ec9b9ff5559c9e8f9a74c7dd60eec2c5d5f8fc86a7a1ee90a575472d8",
+      "fresh_sha256": "aa27852ec9b9ff5559c9e8f9a74c7dd60eec2c5d5f8fc86a7a1ee90a575472d8"
+    },
+    {
+      "file": "DEV01_EM_ONLY_clean/shadow_threshold_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "1e1dd7e1565f9f7bc0fb9c50c7f2a3a0e3651f20069f18043e303c058110f93b",
+      "fresh_sha256": "1e1dd7e1565f9f7bc0fb9c50c7f2a3a0e3651f20069f18043e303c058110f93b"
+    },
+    {
+      "file": "DEV01_EM_ONLY_exposed/controller.csv",
+      "rows": 3001,
+      "columns": 49,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "65aa6688a92e307f2a9a0dbb987e93a157ee5e03037a5fa552d666a24f1c00f5",
+      "fresh_sha256": "65aa6688a92e307f2a9a0dbb987e93a157ee5e03037a5fa552d666a24f1c00f5"
+    },
+    {
+      "file": "DEV01_EM_ONLY_exposed/intended_AB.csv",
+      "rows": 964,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "0ed4ada1daa7a0f563f98608438225d691a016d40d6d4fb57fa7955719c87152",
+      "fresh_sha256": "0ed4ada1daa7a0f563f98608438225d691a016d40d6d4fb57fa7955719c87152"
+    },
+    {
+      "file": "DEV01_EM_ONLY_exposed/plant_interval_metrics.csv",
+      "rows": 3000,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "dbdf5a46650aee250fb1ddf923166ec17a20b85edc277ec858db4edbe6d2d145",
+      "fresh_sha256": "dbdf5a46650aee250fb1ddf923166ec17a20b85edc277ec858db4edbe6d2d145"
+    },
+    {
+      "file": "DEV01_EM_ONLY_exposed/receiver_circuit_boundaries.csv",
+      "rows": 1764,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "feaf6d027aa4690a532e4f676247dfacdb989454a56874af7877800c4920a33c",
+      "fresh_sha256": "feaf6d027aa4690a532e4f676247dfacdb989454a56874af7877800c4920a33c"
+    },
+    {
+      "file": "DEV01_EM_ONLY_exposed/receiver_decoder_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "3d66512751bc153b01eff7e65c4eeb97ad083e536cc070a73e433df6e704859b",
+      "fresh_sha256": "3d66512751bc153b01eff7e65c4eeb97ad083e536cc070a73e433df6e704859b"
+    },
+    {
+      "file": "DEV01_EM_ONLY_exposed/receiver_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "e310a00c9ed11062ed3df5be9b6496c81afa322dd6354ea72d1703b25ba174c1",
+      "fresh_sha256": "e310a00c9ed11062ed3df5be9b6496c81afa322dd6354ea72d1703b25ba174c1"
+    },
+    {
+      "file": "DEV01_EM_ONLY_exposed/receiver_threshold_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "86b335b43cdb4e7b683e279d9b0e28de94e363cce6d938a8d301cb936f5df0ce",
+      "fresh_sha256": "86b335b43cdb4e7b683e279d9b0e28de94e363cce6d938a8d301cb936f5df0ce"
+    },
+    {
+      "file": "DEV01_EM_ONLY_exposed/shadow_circuit_boundaries.csv",
+      "rows": 964,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "e9d817883951483f6180224091a52fe454af07cc1cfe5fa47a2b64af7fba604e",
+      "fresh_sha256": "e9d817883951483f6180224091a52fe454af07cc1cfe5fa47a2b64af7fba604e"
+    },
+    {
+      "file": "DEV01_EM_ONLY_exposed/shadow_decoder_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "4b2d2705758c5631adc84ceb323a7fcec46c6ece053ebfdfd44f68613e2cdccc",
+      "fresh_sha256": "4b2d2705758c5631adc84ceb323a7fcec46c6ece053ebfdfd44f68613e2cdccc"
+    },
+    {
+      "file": "DEV01_EM_ONLY_exposed/shadow_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "aa27852ec9b9ff5559c9e8f9a74c7dd60eec2c5d5f8fc86a7a1ee90a575472d8",
+      "fresh_sha256": "aa27852ec9b9ff5559c9e8f9a74c7dd60eec2c5d5f8fc86a7a1ee90a575472d8"
+    },
+    {
+      "file": "DEV01_EM_ONLY_exposed/shadow_threshold_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "1e1dd7e1565f9f7bc0fb9c50c7f2a3a0e3651f20069f18043e303c058110f93b",
+      "fresh_sha256": "1e1dd7e1565f9f7bc0fb9c50c7f2a3a0e3651f20069f18043e303c058110f93b"
+    },
+    {
+      "file": "DEV01_SW_ONLY_clean/controller.csv",
+      "rows": 3001,
+      "columns": 49,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "25de53aeb9022d9cad626633c6db029d8fa913439357bed5b1c885fbd20d2d72",
+      "fresh_sha256": "25de53aeb9022d9cad626633c6db029d8fa913439357bed5b1c885fbd20d2d72"
+    },
+    {
+      "file": "DEV01_SW_ONLY_clean/intended_AB.csv",
+      "rows": 961,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "3c3ca18baffe31229f71913d4b892ea6d6f0e88fcaef62bf28f99413f4d2d96c",
+      "fresh_sha256": "3c3ca18baffe31229f71913d4b892ea6d6f0e88fcaef62bf28f99413f4d2d96c"
+    },
+    {
+      "file": "DEV01_SW_ONLY_clean/plant_interval_metrics.csv",
+      "rows": 3000,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "df9b419bf1f4dfe192de5a3db1d7c4526e8edbca845e96f6c542b41d3a16d8ea",
+      "fresh_sha256": "df9b419bf1f4dfe192de5a3db1d7c4526e8edbca845e96f6c542b41d3a16d8ea"
+    },
+    {
+      "file": "DEV01_SW_ONLY_clean/receiver_circuit_boundaries.csv",
+      "rows": 962,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "50287f01472ebb30d5fc08515e3d2a292d51ecb0d9623fb2cd1dbc23f8755ac5",
+      "fresh_sha256": "50287f01472ebb30d5fc08515e3d2a292d51ecb0d9623fb2cd1dbc23f8755ac5"
+    },
+    {
+      "file": "DEV01_SW_ONLY_clean/receiver_decoder_events.csv",
+      "rows": 961,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "c2621d12a9cea40d10a37631731611d521ef894bf9b2984e86a5f24d4c8ecb50",
+      "fresh_sha256": "c2621d12a9cea40d10a37631731611d521ef894bf9b2984e86a5f24d4c8ecb50"
+    },
+    {
+      "file": "DEV01_SW_ONLY_clean/receiver_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "dd47f46cdcd50daa130c64fd4d1e3a1a2a41cab421e563a748e05096d125aca6",
+      "fresh_sha256": "dd47f46cdcd50daa130c64fd4d1e3a1a2a41cab421e563a748e05096d125aca6"
+    },
+    {
+      "file": "DEV01_SW_ONLY_clean/receiver_threshold_events.csv",
+      "rows": 962,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "2cb7d0c24409eeed4180fc0b9b2c52a058c73dd6e2e849d410cb2618d566c8e0",
+      "fresh_sha256": "2cb7d0c24409eeed4180fc0b9b2c52a058c73dd6e2e849d410cb2618d566c8e0"
+    },
+    {
+      "file": "DEV01_SW_ONLY_clean/shadow_circuit_boundaries.csv",
+      "rows": 962,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "50287f01472ebb30d5fc08515e3d2a292d51ecb0d9623fb2cd1dbc23f8755ac5",
+      "fresh_sha256": "50287f01472ebb30d5fc08515e3d2a292d51ecb0d9623fb2cd1dbc23f8755ac5"
+    },
+    {
+      "file": "DEV01_SW_ONLY_clean/shadow_decoder_events.csv",
+      "rows": 961,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "c2621d12a9cea40d10a37631731611d521ef894bf9b2984e86a5f24d4c8ecb50",
+      "fresh_sha256": "c2621d12a9cea40d10a37631731611d521ef894bf9b2984e86a5f24d4c8ecb50"
+    },
+    {
+      "file": "DEV01_SW_ONLY_clean/shadow_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "dd47f46cdcd50daa130c64fd4d1e3a1a2a41cab421e563a748e05096d125aca6",
+      "fresh_sha256": "dd47f46cdcd50daa130c64fd4d1e3a1a2a41cab421e563a748e05096d125aca6"
+    },
+    {
+      "file": "DEV01_SW_ONLY_clean/shadow_threshold_events.csv",
+      "rows": 962,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "2cb7d0c24409eeed4180fc0b9b2c52a058c73dd6e2e849d410cb2618d566c8e0",
+      "fresh_sha256": "2cb7d0c24409eeed4180fc0b9b2c52a058c73dd6e2e849d410cb2618d566c8e0"
+    },
+    {
+      "file": "DEV01_SW_ONLY_exposed/controller.csv",
+      "rows": 3001,
+      "columns": 49,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "25de53aeb9022d9cad626633c6db029d8fa913439357bed5b1c885fbd20d2d72",
+      "fresh_sha256": "25de53aeb9022d9cad626633c6db029d8fa913439357bed5b1c885fbd20d2d72"
+    },
+    {
+      "file": "DEV01_SW_ONLY_exposed/intended_AB.csv",
+      "rows": 961,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "3c3ca18baffe31229f71913d4b892ea6d6f0e88fcaef62bf28f99413f4d2d96c",
+      "fresh_sha256": "3c3ca18baffe31229f71913d4b892ea6d6f0e88fcaef62bf28f99413f4d2d96c"
+    },
+    {
+      "file": "DEV01_SW_ONLY_exposed/plant_interval_metrics.csv",
+      "rows": 3000,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "df9b419bf1f4dfe192de5a3db1d7c4526e8edbca845e96f6c542b41d3a16d8ea",
+      "fresh_sha256": "df9b419bf1f4dfe192de5a3db1d7c4526e8edbca845e96f6c542b41d3a16d8ea"
+    },
+    {
+      "file": "DEV01_SW_ONLY_exposed/receiver_circuit_boundaries.csv",
+      "rows": 1762,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "e9c19478f8837b99a439d868a5692fa797bb2b05c413af5ae3eb0cfce56a1b56",
+      "fresh_sha256": "e9c19478f8837b99a439d868a5692fa797bb2b05c413af5ae3eb0cfce56a1b56"
+    },
+    {
+      "file": "DEV01_SW_ONLY_exposed/receiver_decoder_events.csv",
+      "rows": 961,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "c2621d12a9cea40d10a37631731611d521ef894bf9b2984e86a5f24d4c8ecb50",
+      "fresh_sha256": "c2621d12a9cea40d10a37631731611d521ef894bf9b2984e86a5f24d4c8ecb50"
+    },
+    {
+      "file": "DEV01_SW_ONLY_exposed/receiver_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "ca029ffd50670467a825a5de7dcc7f519115275fbbbe1787259ae7a53e83d237",
+      "fresh_sha256": "ca029ffd50670467a825a5de7dcc7f519115275fbbbe1787259ae7a53e83d237"
+    },
+    {
+      "file": "DEV01_SW_ONLY_exposed/receiver_threshold_events.csv",
+      "rows": 962,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "2cb7d0c24409eeed4180fc0b9b2c52a058c73dd6e2e849d410cb2618d566c8e0",
+      "fresh_sha256": "2cb7d0c24409eeed4180fc0b9b2c52a058c73dd6e2e849d410cb2618d566c8e0"
+    },
+    {
+      "file": "DEV01_SW_ONLY_exposed/shadow_circuit_boundaries.csv",
+      "rows": 962,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "50287f01472ebb30d5fc08515e3d2a292d51ecb0d9623fb2cd1dbc23f8755ac5",
+      "fresh_sha256": "50287f01472ebb30d5fc08515e3d2a292d51ecb0d9623fb2cd1dbc23f8755ac5"
+    },
+    {
+      "file": "DEV01_SW_ONLY_exposed/shadow_decoder_events.csv",
+      "rows": 961,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "c2621d12a9cea40d10a37631731611d521ef894bf9b2984e86a5f24d4c8ecb50",
+      "fresh_sha256": "c2621d12a9cea40d10a37631731611d521ef894bf9b2984e86a5f24d4c8ecb50"
+    },
+    {
+      "file": "DEV01_SW_ONLY_exposed/shadow_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "dd47f46cdcd50daa130c64fd4d1e3a1a2a41cab421e563a748e05096d125aca6",
+      "fresh_sha256": "dd47f46cdcd50daa130c64fd4d1e3a1a2a41cab421e563a748e05096d125aca6"
+    },
+    {
+      "file": "DEV01_SW_ONLY_exposed/shadow_threshold_events.csv",
+      "rows": 962,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "2cb7d0c24409eeed4180fc0b9b2c52a058c73dd6e2e849d410cb2618d566c8e0",
+      "fresh_sha256": "2cb7d0c24409eeed4180fc0b9b2c52a058c73dd6e2e849d410cb2618d566c8e0"
+    },
+    {
+      "file": "DEV02_BASELINE_clean/controller.csv",
+      "rows": 3001,
+      "columns": 49,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "65aa6688a92e307f2a9a0dbb987e93a157ee5e03037a5fa552d666a24f1c00f5",
+      "fresh_sha256": "65aa6688a92e307f2a9a0dbb987e93a157ee5e03037a5fa552d666a24f1c00f5"
+    },
+    {
+      "file": "DEV02_BASELINE_clean/intended_AB.csv",
+      "rows": 964,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "0ed4ada1daa7a0f563f98608438225d691a016d40d6d4fb57fa7955719c87152",
+      "fresh_sha256": "0ed4ada1daa7a0f563f98608438225d691a016d40d6d4fb57fa7955719c87152"
+    },
+    {
+      "file": "DEV02_BASELINE_clean/plant_interval_metrics.csv",
+      "rows": 3000,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "dbdf5a46650aee250fb1ddf923166ec17a20b85edc277ec858db4edbe6d2d145",
+      "fresh_sha256": "dbdf5a46650aee250fb1ddf923166ec17a20b85edc277ec858db4edbe6d2d145"
+    },
+    {
+      "file": "DEV02_BASELINE_clean/receiver_circuit_boundaries.csv",
+      "rows": 964,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "f9d5d5cb3341e4cbe6ff9ec7824c67891af566b2ac89d73e6204f277b2ddf330",
+      "fresh_sha256": "f9d5d5cb3341e4cbe6ff9ec7824c67891af566b2ac89d73e6204f277b2ddf330"
+    },
+    {
+      "file": "DEV02_BASELINE_clean/receiver_decoder_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "57e7be014544f2f975859c6ea3694e64718e059366c724b26c00f51b3d3a8fb8",
+      "fresh_sha256": "57e7be014544f2f975859c6ea3694e64718e059366c724b26c00f51b3d3a8fb8"
+    },
+    {
+      "file": "DEV02_BASELINE_clean/receiver_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "cc5e13a225f7f549cde405bc9d4943a67a06c78391a88e2ea7127f1e203f82d4",
+      "fresh_sha256": "cc5e13a225f7f549cde405bc9d4943a67a06c78391a88e2ea7127f1e203f82d4"
+    },
+    {
+      "file": "DEV02_BASELINE_clean/receiver_threshold_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "acf31b9fef925dba43c2c07ed52e70bc5958e940224c77c651254c6fb33ef4cc",
+      "fresh_sha256": "acf31b9fef925dba43c2c07ed52e70bc5958e940224c77c651254c6fb33ef4cc"
+    },
+    {
+      "file": "DEV02_BASELINE_clean/shadow_circuit_boundaries.csv",
+      "rows": 964,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "f9d5d5cb3341e4cbe6ff9ec7824c67891af566b2ac89d73e6204f277b2ddf330",
+      "fresh_sha256": "f9d5d5cb3341e4cbe6ff9ec7824c67891af566b2ac89d73e6204f277b2ddf330"
+    },
+    {
+      "file": "DEV02_BASELINE_clean/shadow_decoder_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "57e7be014544f2f975859c6ea3694e64718e059366c724b26c00f51b3d3a8fb8",
+      "fresh_sha256": "57e7be014544f2f975859c6ea3694e64718e059366c724b26c00f51b3d3a8fb8"
+    },
+    {
+      "file": "DEV02_BASELINE_clean/shadow_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "cc5e13a225f7f549cde405bc9d4943a67a06c78391a88e2ea7127f1e203f82d4",
+      "fresh_sha256": "cc5e13a225f7f549cde405bc9d4943a67a06c78391a88e2ea7127f1e203f82d4"
+    },
+    {
+      "file": "DEV02_BASELINE_clean/shadow_threshold_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "acf31b9fef925dba43c2c07ed52e70bc5958e940224c77c651254c6fb33ef4cc",
+      "fresh_sha256": "acf31b9fef925dba43c2c07ed52e70bc5958e940224c77c651254c6fb33ef4cc"
+    },
+    {
+      "file": "DEV02_BASELINE_exposed/controller.csv",
+      "rows": 3001,
+      "columns": 49,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "ad5d412b408d15073ca1bcc65d87b89798e5cbaa8bc3f87dc93d5d07c4a340fd",
+      "fresh_sha256": "ad5d412b408d15073ca1bcc65d87b89798e5cbaa8bc3f87dc93d5d07c4a340fd"
+    },
+    {
+      "file": "DEV02_BASELINE_exposed/intended_AB.csv",
+      "rows": 24512,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "13e880153cb61516316dc4793bb9dedda9002cc76d34264688f0c211825f9026",
+      "fresh_sha256": "13e880153cb61516316dc4793bb9dedda9002cc76d34264688f0c211825f9026"
+    },
+    {
+      "file": "DEV02_BASELINE_exposed/plant_interval_metrics.csv",
+      "rows": 3000,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "d1d1c5fcd3ffa46ba7147871eb9a9091e11d1f1ee0f13c241d97bb1afea4f8ac",
+      "fresh_sha256": "d1d1c5fcd3ffa46ba7147871eb9a9091e11d1f1ee0f13c241d97bb1afea4f8ac"
+    },
+    {
+      "file": "DEV02_BASELINE_exposed/receiver_circuit_boundaries.csv",
+      "rows": 25314,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "0941724eb86c54e1365c9d7e4c9eb7dc5d5e99489363b10ab0ac2fd63721d2eb",
+      "fresh_sha256": "0941724eb86c54e1365c9d7e4c9eb7dc5d5e99489363b10ab0ac2fd63721d2eb"
+    },
+    {
+      "file": "DEV02_BASELINE_exposed/receiver_decoder_events.csv",
+      "rows": 12350,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "3a628968d11f9c253e4248609e6a7daafbaf78de75bc8c989f922b6256681a76",
+      "fresh_sha256": "3a628968d11f9c253e4248609e6a7daafbaf78de75bc8c989f922b6256681a76"
+    },
+    {
+      "file": "DEV02_BASELINE_exposed/receiver_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "8fd691c024c68291b7fe2b629fd9e88589698c7740dcf73437dec9406e5dd4cc",
+      "fresh_sha256": "8fd691c024c68291b7fe2b629fd9e88589698c7740dcf73437dec9406e5dd4cc"
+    },
+    {
+      "file": "DEV02_BASELINE_exposed/receiver_threshold_events.csv",
+      "rows": 25718,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "c00ee4eadd1cf5559e1b94438f0bee18fce75b6818cdb743fcc6f0be8649af93",
+      "fresh_sha256": "c00ee4eadd1cf5559e1b94438f0bee18fce75b6818cdb743fcc6f0be8649af93"
+    },
+    {
+      "file": "DEV02_BASELINE_exposed/shadow_circuit_boundaries.csv",
+      "rows": 24514,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "20804e8a045bb1905735b02d970edd852791e60fe97f3e50d65d0fe1fdd86834",
+      "fresh_sha256": "20804e8a045bb1905735b02d970edd852791e60fe97f3e50d65d0fe1fdd86834"
+    },
+    {
+      "file": "DEV02_BASELINE_exposed/shadow_decoder_events.csv",
+      "rows": 24512,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "43f87d64f6f908aa8780e000183a67b9db090981de80bf4f9ae2753d8ffb082a",
+      "fresh_sha256": "43f87d64f6f908aa8780e000183a67b9db090981de80bf4f9ae2753d8ffb082a"
+    },
+    {
+      "file": "DEV02_BASELINE_exposed/shadow_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "1894c3ac3685d6acdc286e51e8fad029e5f188f56885178c9241b996d465b782",
+      "fresh_sha256": "1894c3ac3685d6acdc286e51e8fad029e5f188f56885178c9241b996d465b782"
+    },
+    {
+      "file": "DEV02_BASELINE_exposed/shadow_threshold_events.csv",
+      "rows": 24514,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "29ef38423d8bccc07693efe296ebb108f36e52eb157ea5f1d7b262b7fd58d9df",
+      "fresh_sha256": "29ef38423d8bccc07693efe296ebb108f36e52eb157ea5f1d7b262b7fd58d9df"
+    },
+    {
+      "file": "DEV02_COMBINED_clean/controller.csv",
+      "rows": 3001,
+      "columns": 49,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "25de53aeb9022d9cad626633c6db029d8fa913439357bed5b1c885fbd20d2d72",
+      "fresh_sha256": "25de53aeb9022d9cad626633c6db029d8fa913439357bed5b1c885fbd20d2d72"
+    },
+    {
+      "file": "DEV02_COMBINED_clean/intended_AB.csv",
+      "rows": 961,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "3c3ca18baffe31229f71913d4b892ea6d6f0e88fcaef62bf28f99413f4d2d96c",
+      "fresh_sha256": "3c3ca18baffe31229f71913d4b892ea6d6f0e88fcaef62bf28f99413f4d2d96c"
+    },
+    {
+      "file": "DEV02_COMBINED_clean/plant_interval_metrics.csv",
+      "rows": 3000,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "df9b419bf1f4dfe192de5a3db1d7c4526e8edbca845e96f6c542b41d3a16d8ea",
+      "fresh_sha256": "df9b419bf1f4dfe192de5a3db1d7c4526e8edbca845e96f6c542b41d3a16d8ea"
+    },
+    {
+      "file": "DEV02_COMBINED_clean/receiver_circuit_boundaries.csv",
+      "rows": 962,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "e91b3dc1093a937d4b17ce1d6ff18e934480b84b0ac1aac8c7b2ca39688c9072",
+      "fresh_sha256": "e91b3dc1093a937d4b17ce1d6ff18e934480b84b0ac1aac8c7b2ca39688c9072"
+    },
+    {
+      "file": "DEV02_COMBINED_clean/receiver_decoder_events.csv",
+      "rows": 961,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "314b979f30312f813088fbfff182938ee6595dc00101e8292fa456bf91a385a7",
+      "fresh_sha256": "314b979f30312f813088fbfff182938ee6595dc00101e8292fa456bf91a385a7"
+    },
+    {
+      "file": "DEV02_COMBINED_clean/receiver_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "02c0ba14b4cdd0768707b52bdfbc5e0a45171881c3950663cff45941b5e5a6c1",
+      "fresh_sha256": "02c0ba14b4cdd0768707b52bdfbc5e0a45171881c3950663cff45941b5e5a6c1"
+    },
+    {
+      "file": "DEV02_COMBINED_clean/receiver_threshold_events.csv",
+      "rows": 962,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "53aaaaafb55701808a278488703c64b81858d75378f2c0e737513ffeca24b8d1",
+      "fresh_sha256": "53aaaaafb55701808a278488703c64b81858d75378f2c0e737513ffeca24b8d1"
+    },
+    {
+      "file": "DEV02_COMBINED_clean/shadow_circuit_boundaries.csv",
+      "rows": 962,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "e91b3dc1093a937d4b17ce1d6ff18e934480b84b0ac1aac8c7b2ca39688c9072",
+      "fresh_sha256": "e91b3dc1093a937d4b17ce1d6ff18e934480b84b0ac1aac8c7b2ca39688c9072"
+    },
+    {
+      "file": "DEV02_COMBINED_clean/shadow_decoder_events.csv",
+      "rows": 961,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "314b979f30312f813088fbfff182938ee6595dc00101e8292fa456bf91a385a7",
+      "fresh_sha256": "314b979f30312f813088fbfff182938ee6595dc00101e8292fa456bf91a385a7"
+    },
+    {
+      "file": "DEV02_COMBINED_clean/shadow_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "02c0ba14b4cdd0768707b52bdfbc5e0a45171881c3950663cff45941b5e5a6c1",
+      "fresh_sha256": "02c0ba14b4cdd0768707b52bdfbc5e0a45171881c3950663cff45941b5e5a6c1"
+    },
+    {
+      "file": "DEV02_COMBINED_clean/shadow_threshold_events.csv",
+      "rows": 962,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "53aaaaafb55701808a278488703c64b81858d75378f2c0e737513ffeca24b8d1",
+      "fresh_sha256": "53aaaaafb55701808a278488703c64b81858d75378f2c0e737513ffeca24b8d1"
+    },
+    {
+      "file": "DEV02_COMBINED_exposed/controller.csv",
+      "rows": 3001,
+      "columns": 49,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "23b677c4b70c29c7aa3a2715ac0179d9c22750222c0d1429c80c57129c3b3fe8",
+      "fresh_sha256": "23b677c4b70c29c7aa3a2715ac0179d9c22750222c0d1429c80c57129c3b3fe8"
+    },
+    {
+      "file": "DEV02_COMBINED_exposed/intended_AB.csv",
+      "rows": 381,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "ca5b797a3e4c361eb1733cb1ee8199a07b356d1dfd9b058e17047d1b2a4551aa",
+      "fresh_sha256": "ca5b797a3e4c361eb1733cb1ee8199a07b356d1dfd9b058e17047d1b2a4551aa"
+    },
+    {
+      "file": "DEV02_COMBINED_exposed/plant_interval_metrics.csv",
+      "rows": 3000,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "b412a237aabd5550e40f7b3c6cfaa60d58a484c8dba1cb503f3371b45ce0dddc",
+      "fresh_sha256": "b412a237aabd5550e40f7b3c6cfaa60d58a484c8dba1cb503f3371b45ce0dddc"
+    },
+    {
+      "file": "DEV02_COMBINED_exposed/receiver_circuit_boundaries.csv",
+      "rows": 1182,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "d30e26ad3323319b6e58333a6e7bef18d1a98b6124aad6a73626bba08d46fc57",
+      "fresh_sha256": "d30e26ad3323319b6e58333a6e7bef18d1a98b6124aad6a73626bba08d46fc57"
+    },
+    {
+      "file": "DEV02_COMBINED_exposed/receiver_decoder_events.csv",
+      "rows": 284,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "914583af87dfae8d906eb23b2af3e692a912a886ff1d0355b0a8396f88950d7d",
+      "fresh_sha256": "914583af87dfae8d906eb23b2af3e692a912a886ff1d0355b0a8396f88950d7d"
+    },
+    {
+      "file": "DEV02_COMBINED_exposed/receiver_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "111291a2382fb0454d1cb2634fb0f5da0d5c4e0a0b37f3f258105b9ef22672b1",
+      "fresh_sha256": "111291a2382fb0454d1cb2634fb0f5da0d5c4e0a0b37f3f258105b9ef22672b1"
+    },
+    {
+      "file": "DEV02_COMBINED_exposed/receiver_threshold_events.csv",
+      "rows": 1582,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "11b7f3861ecdb0df4519da8d2b0adbd4b2f55f7836b853afc9f3c83b417e3dd8",
+      "fresh_sha256": "11b7f3861ecdb0df4519da8d2b0adbd4b2f55f7836b853afc9f3c83b417e3dd8"
+    },
+    {
+      "file": "DEV02_COMBINED_exposed/shadow_circuit_boundaries.csv",
+      "rows": 382,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "6b83c227b57bcc157b00e491cf0671c23bd85d011ebcbbea933a724252bf18cb",
+      "fresh_sha256": "6b83c227b57bcc157b00e491cf0671c23bd85d011ebcbbea933a724252bf18cb"
+    },
+    {
+      "file": "DEV02_COMBINED_exposed/shadow_decoder_events.csv",
+      "rows": 381,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "ccda003d5628473519b291ee644ab1eab81d76124fcf32507aec158e948d0ef3",
+      "fresh_sha256": "ccda003d5628473519b291ee644ab1eab81d76124fcf32507aec158e948d0ef3"
+    },
+    {
+      "file": "DEV02_COMBINED_exposed/shadow_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "4108de842303d83a608662b0c93f54c651cc5deb789d2eecacb3398628b1ad65",
+      "fresh_sha256": "4108de842303d83a608662b0c93f54c651cc5deb789d2eecacb3398628b1ad65"
+    },
+    {
+      "file": "DEV02_COMBINED_exposed/shadow_threshold_events.csv",
+      "rows": 382,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "ec5761bae566265c9e03aa960c87a4e8fc4226dc0d84d8020d54af0508703153",
+      "fresh_sha256": "ec5761bae566265c9e03aa960c87a4e8fc4226dc0d84d8020d54af0508703153"
+    },
+    {
+      "file": "DEV02_EM_ONLY_clean/controller.csv",
+      "rows": 3001,
+      "columns": 49,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "65aa6688a92e307f2a9a0dbb987e93a157ee5e03037a5fa552d666a24f1c00f5",
+      "fresh_sha256": "65aa6688a92e307f2a9a0dbb987e93a157ee5e03037a5fa552d666a24f1c00f5"
+    },
+    {
+      "file": "DEV02_EM_ONLY_clean/intended_AB.csv",
+      "rows": 964,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "0ed4ada1daa7a0f563f98608438225d691a016d40d6d4fb57fa7955719c87152",
+      "fresh_sha256": "0ed4ada1daa7a0f563f98608438225d691a016d40d6d4fb57fa7955719c87152"
+    },
+    {
+      "file": "DEV02_EM_ONLY_clean/plant_interval_metrics.csv",
+      "rows": 3000,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "dbdf5a46650aee250fb1ddf923166ec17a20b85edc277ec858db4edbe6d2d145",
+      "fresh_sha256": "dbdf5a46650aee250fb1ddf923166ec17a20b85edc277ec858db4edbe6d2d145"
+    },
+    {
+      "file": "DEV02_EM_ONLY_clean/receiver_circuit_boundaries.csv",
+      "rows": 964,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "ba0235cd80f949dd533f016658e7f48a59e3f9f1e40b1a4997f28d6b1f6d8b99",
+      "fresh_sha256": "ba0235cd80f949dd533f016658e7f48a59e3f9f1e40b1a4997f28d6b1f6d8b99"
+    },
+    {
+      "file": "DEV02_EM_ONLY_clean/receiver_decoder_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "875c3ed4ffb917c2e92acbbeb46339fa30e29ecf39609a6fb6dc39d12f0637f0",
+      "fresh_sha256": "875c3ed4ffb917c2e92acbbeb46339fa30e29ecf39609a6fb6dc39d12f0637f0"
+    },
+    {
+      "file": "DEV02_EM_ONLY_clean/receiver_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "eb6b8355bf3313b41357bb2a3ab88941e847657e77d9b19f12f45a7d4a7cb7e0",
+      "fresh_sha256": "eb6b8355bf3313b41357bb2a3ab88941e847657e77d9b19f12f45a7d4a7cb7e0"
+    },
+    {
+      "file": "DEV02_EM_ONLY_clean/receiver_threshold_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "8a6ef7de7215e48c33e26668d27be6db1fea77bbf2e68104db8e14bf3b29838b",
+      "fresh_sha256": "8a6ef7de7215e48c33e26668d27be6db1fea77bbf2e68104db8e14bf3b29838b"
+    },
+    {
+      "file": "DEV02_EM_ONLY_clean/shadow_circuit_boundaries.csv",
+      "rows": 964,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "ba0235cd80f949dd533f016658e7f48a59e3f9f1e40b1a4997f28d6b1f6d8b99",
+      "fresh_sha256": "ba0235cd80f949dd533f016658e7f48a59e3f9f1e40b1a4997f28d6b1f6d8b99"
+    },
+    {
+      "file": "DEV02_EM_ONLY_clean/shadow_decoder_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "875c3ed4ffb917c2e92acbbeb46339fa30e29ecf39609a6fb6dc39d12f0637f0",
+      "fresh_sha256": "875c3ed4ffb917c2e92acbbeb46339fa30e29ecf39609a6fb6dc39d12f0637f0"
+    },
+    {
+      "file": "DEV02_EM_ONLY_clean/shadow_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "eb6b8355bf3313b41357bb2a3ab88941e847657e77d9b19f12f45a7d4a7cb7e0",
+      "fresh_sha256": "eb6b8355bf3313b41357bb2a3ab88941e847657e77d9b19f12f45a7d4a7cb7e0"
+    },
+    {
+      "file": "DEV02_EM_ONLY_clean/shadow_threshold_events.csv",
+      "rows": 964,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "8a6ef7de7215e48c33e26668d27be6db1fea77bbf2e68104db8e14bf3b29838b",
+      "fresh_sha256": "8a6ef7de7215e48c33e26668d27be6db1fea77bbf2e68104db8e14bf3b29838b"
+    },
+    {
+      "file": "DEV02_EM_ONLY_exposed/controller.csv",
+      "rows": 3001,
+      "columns": 49,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "1c478824103fee801ec541100293c6f052def96be2e6286b5c99d85577f8a178",
+      "fresh_sha256": "1c478824103fee801ec541100293c6f052def96be2e6286b5c99d85577f8a178"
+    },
+    {
+      "file": "DEV02_EM_ONLY_exposed/intended_AB.csv",
+      "rows": 24495,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "2805416b8a3c7dc7b57a5ae91baa65e920e2b6eeb104d566e6e71929ed7e2079",
+      "fresh_sha256": "2805416b8a3c7dc7b57a5ae91baa65e920e2b6eeb104d566e6e71929ed7e2079"
+    },
+    {
+      "file": "DEV02_EM_ONLY_exposed/plant_interval_metrics.csv",
+      "rows": 3000,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "98b918f7585ddefae224157b9b2fd80e0c2e98932918f09d5ecfb9e8f57c82be",
+      "fresh_sha256": "98b918f7585ddefae224157b9b2fd80e0c2e98932918f09d5ecfb9e8f57c82be"
+    },
+    {
+      "file": "DEV02_EM_ONLY_exposed/receiver_circuit_boundaries.csv",
+      "rows": 25294,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "8a854d370cf4ff2d75eb0325a9330721f3c53fdff9a42a267fc786c9ec5f6181",
+      "fresh_sha256": "8a854d370cf4ff2d75eb0325a9330721f3c53fdff9a42a267fc786c9ec5f6181"
+    },
+    {
+      "file": "DEV02_EM_ONLY_exposed/receiver_decoder_events.csv",
+      "rows": 12342,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "8a3afce279f09a2c7c59f990e22991c2e8ba42191c9371a087cdb048b5247d5f",
+      "fresh_sha256": "8a3afce279f09a2c7c59f990e22991c2e8ba42191c9371a087cdb048b5247d5f"
+    },
+    {
+      "file": "DEV02_EM_ONLY_exposed/receiver_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "4d61eaf0c6189836e5e531baf0c467d62e9df4c905e8619f4379214cf709c557",
+      "fresh_sha256": "4d61eaf0c6189836e5e531baf0c467d62e9df4c905e8619f4379214cf709c557"
+    },
+    {
+      "file": "DEV02_EM_ONLY_exposed/receiver_threshold_events.csv",
+      "rows": 25694,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "75fa69e0689d3c18700d03e9b4806a2317ff1bec09ab830d56b22da32b28880e",
+      "fresh_sha256": "75fa69e0689d3c18700d03e9b4806a2317ff1bec09ab830d56b22da32b28880e"
+    },
+    {
+      "file": "DEV02_EM_ONLY_exposed/shadow_circuit_boundaries.csv",
+      "rows": 24494,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "9d7bce02894d33cce5cb41c35f89c34b4de05754bc19f4a599bd78306aefb318",
+      "fresh_sha256": "9d7bce02894d33cce5cb41c35f89c34b4de05754bc19f4a599bd78306aefb318"
+    },
+    {
+      "file": "DEV02_EM_ONLY_exposed/shadow_decoder_events.csv",
+      "rows": 24495,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "8e607898af138e5bb56c9f4586f23e6b9a651856d680824ad249093143d4bb49",
+      "fresh_sha256": "8e607898af138e5bb56c9f4586f23e6b9a651856d680824ad249093143d4bb49"
+    },
+    {
+      "file": "DEV02_EM_ONLY_exposed/shadow_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "4c5b251e92c701af0021201e23d1dcb8356d0084a6691c8d4c0ff42176c543d3",
+      "fresh_sha256": "4c5b251e92c701af0021201e23d1dcb8356d0084a6691c8d4c0ff42176c543d3"
+    },
+    {
+      "file": "DEV02_EM_ONLY_exposed/shadow_threshold_events.csv",
+      "rows": 24494,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "e63b1e91ee17bcdd3df4b92db744baebdc7ae2afc0318b6443df049ac8af476a",
+      "fresh_sha256": "e63b1e91ee17bcdd3df4b92db744baebdc7ae2afc0318b6443df049ac8af476a"
+    },
+    {
+      "file": "DEV02_SW_ONLY_clean/controller.csv",
+      "rows": 3001,
+      "columns": 49,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "25de53aeb9022d9cad626633c6db029d8fa913439357bed5b1c885fbd20d2d72",
+      "fresh_sha256": "25de53aeb9022d9cad626633c6db029d8fa913439357bed5b1c885fbd20d2d72"
+    },
+    {
+      "file": "DEV02_SW_ONLY_clean/intended_AB.csv",
+      "rows": 961,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "3c3ca18baffe31229f71913d4b892ea6d6f0e88fcaef62bf28f99413f4d2d96c",
+      "fresh_sha256": "3c3ca18baffe31229f71913d4b892ea6d6f0e88fcaef62bf28f99413f4d2d96c"
+    },
+    {
+      "file": "DEV02_SW_ONLY_clean/plant_interval_metrics.csv",
+      "rows": 3000,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "df9b419bf1f4dfe192de5a3db1d7c4526e8edbca845e96f6c542b41d3a16d8ea",
+      "fresh_sha256": "df9b419bf1f4dfe192de5a3db1d7c4526e8edbca845e96f6c542b41d3a16d8ea"
+    },
+    {
+      "file": "DEV02_SW_ONLY_clean/receiver_circuit_boundaries.csv",
+      "rows": 962,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "69545fcfac6e7ff1c9218a3f2b95b829bb66411db0e5a057d87cd40a8b692937",
+      "fresh_sha256": "69545fcfac6e7ff1c9218a3f2b95b829bb66411db0e5a057d87cd40a8b692937"
+    },
+    {
+      "file": "DEV02_SW_ONLY_clean/receiver_decoder_events.csv",
+      "rows": 961,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "3e702a497ce3bc9b9ef1722bd0cf4335f41b86b4f0a1a36e2c4cedc80271a996",
+      "fresh_sha256": "3e702a497ce3bc9b9ef1722bd0cf4335f41b86b4f0a1a36e2c4cedc80271a996"
+    },
+    {
+      "file": "DEV02_SW_ONLY_clean/receiver_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "e0e6c8cbef5815aa0d9227364076530514f293d22a038c1a31feb4cbd4e8de95",
+      "fresh_sha256": "e0e6c8cbef5815aa0d9227364076530514f293d22a038c1a31feb4cbd4e8de95"
+    },
+    {
+      "file": "DEV02_SW_ONLY_clean/receiver_threshold_events.csv",
+      "rows": 962,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "0813d6c447833e981b6b952f1ea5c2f3606c0aeb1f974de20108bddd720fe15e",
+      "fresh_sha256": "0813d6c447833e981b6b952f1ea5c2f3606c0aeb1f974de20108bddd720fe15e"
+    },
+    {
+      "file": "DEV02_SW_ONLY_clean/shadow_circuit_boundaries.csv",
+      "rows": 962,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "69545fcfac6e7ff1c9218a3f2b95b829bb66411db0e5a057d87cd40a8b692937",
+      "fresh_sha256": "69545fcfac6e7ff1c9218a3f2b95b829bb66411db0e5a057d87cd40a8b692937"
+    },
+    {
+      "file": "DEV02_SW_ONLY_clean/shadow_decoder_events.csv",
+      "rows": 961,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "3e702a497ce3bc9b9ef1722bd0cf4335f41b86b4f0a1a36e2c4cedc80271a996",
+      "fresh_sha256": "3e702a497ce3bc9b9ef1722bd0cf4335f41b86b4f0a1a36e2c4cedc80271a996"
+    },
+    {
+      "file": "DEV02_SW_ONLY_clean/shadow_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "e0e6c8cbef5815aa0d9227364076530514f293d22a038c1a31feb4cbd4e8de95",
+      "fresh_sha256": "e0e6c8cbef5815aa0d9227364076530514f293d22a038c1a31feb4cbd4e8de95"
+    },
+    {
+      "file": "DEV02_SW_ONLY_clean/shadow_threshold_events.csv",
+      "rows": 962,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "0813d6c447833e981b6b952f1ea5c2f3606c0aeb1f974de20108bddd720fe15e",
+      "fresh_sha256": "0813d6c447833e981b6b952f1ea5c2f3606c0aeb1f974de20108bddd720fe15e"
+    },
+    {
+      "file": "DEV02_SW_ONLY_exposed/controller.csv",
+      "rows": 3001,
+      "columns": 49,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "5cc1544759a1f536b88e67920fff96a2035549fe81b20e8c726ce43c0b6e5d74",
+      "fresh_sha256": "5cc1544759a1f536b88e67920fff96a2035549fe81b20e8c726ce43c0b6e5d74"
+    },
+    {
+      "file": "DEV02_SW_ONLY_exposed/intended_AB.csv",
+      "rows": 381,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "4a6a16f810ee65b4aa949c46917ec1b5d03eaf092d70244f390da0cef9b06c75",
+      "fresh_sha256": "4a6a16f810ee65b4aa949c46917ec1b5d03eaf092d70244f390da0cef9b06c75"
+    },
+    {
+      "file": "DEV02_SW_ONLY_exposed/plant_interval_metrics.csv",
+      "rows": 3000,
+      "columns": 3,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "e7e81e5bc6698ee4d2965a6f77b08ae930db043a2679be4e586a8d9a87851102",
+      "fresh_sha256": "e7e81e5bc6698ee4d2965a6f77b08ae930db043a2679be4e586a8d9a87851102"
+    },
+    {
+      "file": "DEV02_SW_ONLY_exposed/receiver_circuit_boundaries.csv",
+      "rows": 1182,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "dd6b18ea4fdab579e83a11aec94b3a22379beff6de6898e62f6f0cd116bd1f1d",
+      "fresh_sha256": "dd6b18ea4fdab579e83a11aec94b3a22379beff6de6898e62f6f0cd116bd1f1d"
+    },
+    {
+      "file": "DEV02_SW_ONLY_exposed/receiver_decoder_events.csv",
+      "rows": 285,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "7410b8d25ad580a3a07e1eec724352a1585d9a5a64e22c8f9429db1d3f15b277",
+      "fresh_sha256": "7410b8d25ad580a3a07e1eec724352a1585d9a5a64e22c8f9429db1d3f15b277"
+    },
+    {
+      "file": "DEV02_SW_ONLY_exposed/receiver_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "4fc16a94f32d660a0fe7893eee16e2755879f8fb114cc95bb82df031d9a85d2f",
+      "fresh_sha256": "4fc16a94f32d660a0fe7893eee16e2755879f8fb114cc95bb82df031d9a85d2f"
+    },
+    {
+      "file": "DEV02_SW_ONLY_exposed/receiver_threshold_events.csv",
+      "rows": 1582,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "dc074619706af9a6b07b0ce6bc0a516041da9408cf2cd585d4ffe3f08903ab84",
+      "fresh_sha256": "dc074619706af9a6b07b0ce6bc0a516041da9408cf2cd585d4ffe3f08903ab84"
+    },
+    {
+      "file": "DEV02_SW_ONLY_exposed/shadow_circuit_boundaries.csv",
+      "rows": 382,
+      "columns": 7,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "b51d1877bf0798f621ce37f8f7b0fb27db01e0d2d5de49164687b9976e076f54",
+      "fresh_sha256": "b51d1877bf0798f621ce37f8f7b0fb27db01e0d2d5de49164687b9976e076f54"
+    },
+    {
+      "file": "DEV02_SW_ONLY_exposed/shadow_decoder_events.csv",
+      "rows": 381,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "8f9be5e3de8a210ec0fef72ceb8b0d05bcdadc49e9b7e72b9a35e56c928df617",
+      "fresh_sha256": "8f9be5e3de8a210ec0fef72ceb8b0d05bcdadc49e9b7e72b9a35e56c928df617"
+    },
+    {
+      "file": "DEV02_SW_ONLY_exposed/shadow_packets.csv",
+      "rows": 3001,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "359cf72103a24b7f45487aade69ce3b5a92790086fbe1222ed9970353bf69826",
+      "fresh_sha256": "359cf72103a24b7f45487aade69ce3b5a92790086fbe1222ed9970353bf69826"
+    },
+    {
+      "file": "DEV02_SW_ONLY_exposed/shadow_threshold_events.csv",
+      "rows": 382,
+      "columns": 8,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "3e162f4fd442e0712553729c92526a0e543019b2c0e748f6b111fdfe49a3b0be",
+      "fresh_sha256": "3e162f4fd442e0712553729c92526a0e543019b2c0e748f6b111fdfe49a3b0be"
+    },
+    {
+      "file": "burst_attribution.csv",
+      "rows": 16,
+      "columns": 10,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "a6ab58ec7f078f85a4f955a002ccd89809421c2e8db3c847ae7ddf74890f2e94",
+      "fresh_sha256": "a6ab58ec7f078f85a4f955a002ccd89809421c2e8db3c847ae7ddf74890f2e94"
+    },
+    {
+      "file": "detection_episodes.csv",
+      "rows": 4,
+      "columns": 9,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "7ae8a46e7db17c6bbdf0be4565497dae9d644a7100fdd650a0badad78fd17e41",
+      "fresh_sha256": "7ae8a46e7db17c6bbdf0be4565497dae9d644a7100fdd650a0badad78fd17e41"
+    },
+    {
+      "file": "metrics.csv",
+      "rows": 8,
+      "columns": 84,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "6d9f033f0ccb768175e7c92b725f67b2cacaa0a04374280012884394f4811a83",
+      "fresh_sha256": "6d9f033f0ccb768175e7c92b725f67b2cacaa0a04374280012884394f4811a83"
+    },
+    {
+      "file": "record_index.csv",
+      "rows": 16,
+      "columns": 5,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "a20ba62dcfa7810f7c0beea7a1332c9f49f8c41eed0a8f880281cfaf0d106def",
+      "fresh_sha256": "de9714f2373180c1d90a6c9572240fcd79d014dcd5232595438c927c14897290"
+    },
+    {
+      "file": "recovery.csv",
+      "rows": 16,
+      "columns": 9,
+      "different_fields": 0,
+      "different_numeric_fields": 0,
+      "maximum_absolute_numeric_difference": 0.0,
+      "saved_sha256": "cac0a4d7a2dfb515601e535a9cfa7c72f8db769792e5dd1a24add5dbd617c8b0",
+      "fresh_sha256": "cac0a4d7a2dfb515601e535a9cfa7c72f8db769792e5dd1a24add5dbd617c8b0"
+    }
+  ]
+}

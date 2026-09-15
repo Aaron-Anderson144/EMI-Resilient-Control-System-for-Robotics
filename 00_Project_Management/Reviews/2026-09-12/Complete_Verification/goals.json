@@ -1,0 +1,193 @@
+{
+  "schema": "robotics-goal-assessment-v1",
+  "assessment_date": "2026-09-12",
+  "project_root": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics",
+  "assessment_type": "current-evidence-review-with-fresh-verification",
+  "primary_question": "How much can combined electromagnetic design and fault-tolerant control increase actuator tolerance to conducted and near-field EMI?",
+  "alignment": "Aligned; receiver characterization remains the critical path. EDMD is a separate supporting estimation workstream.",
+  "central_hypothesis_status": "not_demonstrated",
+  "fresh_verification": {
+    "status": "passed",
+    "new_passes_claimed_by_this_review": true,
+    "historical_robotics_tests_passed": 468,
+    "historical_robotics_tests_total": 468,
+    "historical_hybrid_tests_passed": 32,
+    "historical_hybrid_tests_total": 32,
+    "counts_are_separate_checkpoints": true,
+    "result_source": "Coordinator-confirmed main, hybrid, Python and reproduction results; this reviewer independently ran the original SC01B tests and rechecked frozen hashes.",
+    "robotics_tests_passed": 468,
+    "robotics_tests_total": 468,
+    "hybrid_tests_passed": 32,
+    "hybrid_tests_total": 32,
+    "original_sc01b_tests_passed": 22,
+    "original_sc01b_tests_total": 22,
+    "matlab_tests_passed": 522,
+    "matlab_tests_total": 522,
+    "python_tests_passed": 10,
+    "python_tests_total": 10,
+    "python_four_way_tests_passed": 6,
+    "python_sc01b_r2_tests_passed": 4,
+    "frozen_files_verified": 16,
+    "broad_campaign_reproduction_scope": "Completed for 116 legacy controller records, 16 four-way development records, 24 four-way native comparisons, 16 native refinements and the full hybrid EDMD study. The original SC01B native/SPICE campaign was not rerun; other historical campaigns beyond the listed scope were not reproduced in this review.",
+    "physical_validation": false
+  },
+  "fresh_reproduction": {
+    "status": "completed_with_original_rejections_preserved",
+    "legacy_records": 116,
+    "legacy_all_31_channels_exact_records": 116,
+    "legacy_plant_exact_records": 116,
+    "legacy_reason_exact_records": 116,
+    "legacy_equality": "Exact isequaln comparison, including matching NaN masks; no tolerance.",
+    "development_records": 16,
+    "development_clean_companions": 8,
+    "development_outcome_unchanged": true,
+    "development_all_execution_clean_guards_pass": false,
+    "native_numerical_checks_passed": 24,
+    "native_numerical_checks_total": 24,
+    "native_refinement_checks_passed": 16,
+    "native_refinement_checks_total": 16,
+    "native_receiver_domain_rejected_runs": 12,
+    "native_comparison_scope": "Four-way receiver study; numerical agreement does not establish physical validity outside the receiver domain.",
+    "evaluation_guard_blocked": true,
+    "evaluation_guard_output_created": false,
+    "evaluation_executed": false,
+    "original_sc01b_native_or_spice_campaign_rerun": false,
+    "original_sc01b_test_scope": "22 isolated original-scope analytic metrics, energy accounting and output-preservation tests; no R2 path or native/SPICE campaign.",
+    "all_historical_campaigns_rerun": false
+  },
+  "goals": [
+    {
+      "id": 1,
+      "objective": "Clean reproducible actuator-control baseline",
+      "status": "numerically_supported",
+      "supported": "Nominal three-state model, controller, matched no-fault runs, freshly reproduced 116 legacy records with all 31 channels, plant traces and reason fields exact, and newly passed regression suite.",
+      "remaining": "Physical actuator/load identification; numerical reproduction does not establish hardware behavior."
+    },
+    {
+      "id": 2,
+      "objective": "Reduced-order electromagnetic coupling models",
+      "status": "partial",
+      "supported": "Capacitive, inductive and shared-impedance equations, sensitivity studies and circuit comparisons; integrated capacitive A channel.",
+      "remaining": "Defensible receiver domain and measured cable/return/mutual behavior; ideal B timing limits the integrated scope."
+    },
+    {
+      "id": 3,
+      "objective": "Repeatable sensor, power and communication fault injection",
+      "status": "implemented_subset_fresh_regression_passed",
+      "supported": "Encoder, timestamped communication, ground-offset and averaged motor-bus mechanisms.",
+      "remaining": "Current-sensor corruption, physical controller brownout and full protocol-specific physical errors."
+    },
+    {
+      "id": 4,
+      "objective": "Fault detection using physical limits and model residuals",
+      "status": "partial",
+      "supported": "Plausibility, residual and freshness checks with saved missed-fault outcomes.",
+      "remaining": "Stationary freeze, small bias, slow drift, model/load uncertainty and calibrated thresholds. EDMD does not close these gaps."
+    },
+    {
+      "id": 5,
+      "objective": "Degraded operation, recovery and safe-stop logic",
+      "status": "partial_gate_3_open",
+      "supported": "Numerical supervision, qualification/reset, optional reference reconstruction, motion shaping and separate stop/hold study.",
+      "remaining": "Failed primary-only recovery, motion under zero-voltage load, integrated drive/brake handoff and reliable loaded restart."
+    },
+    {
+      "id": 6,
+      "objective": "Four-way mitigation comparison",
+      "status": "development_rejected_evaluation_unopened",
+      "supported": "Causal interface, freshly reproduced 16 development records and eight clean companions, with unchanged rejection outcomes and evaluation still blocked.",
+      "remaining": "Usable receiver model, accepted development, newly frozen comparison and complete evaluation.",
+      "open_requirements": [
+        "RES-005",
+        "A01",
+        "Gate 4"
+      ],
+      "development_outcomes": {
+        "DEV01": "No persistent EMI count corruption or paired actuator disturbance.",
+        "DEV02": "All four exposed arms exceed the assumed 7 V receiver domain.",
+        "fallback_results_support_mitigation_claim": false,
+        "original_evaluation_records_unopened": 96,
+        "original_closure_records_unopened": 16
+      }
+    },
+    {
+      "id": 7,
+      "objective": "Traceable simulation-to-circuit-to-hardware validation",
+      "status": "numerical_path_supported_physical_gate_5_open",
+      "supported": "Source history, provenance, reproduction instructions and reports; fresh four-way native numerical comparisons passed 24/24 and refinements passed 16/16.",
+      "remaining": "Twelve native operating points remain outside the receiver domain; selected hardware, connected schematic, calibration, independent measurements and partial literature review."
+    }
+  ],
+  "edmd": {
+    "role": "supporting_estimation_research",
+    "run_id": "tp76c650cf_8abb_4d22_8d57_24d2dc9d3462",
+    "fresh_reproduction_run_id": "tpfb26ae18_1c11_4b5c_9ebd_7e2068e23b1f",
+    "fresh_reproduction_status": "completed_same_selection_and_conclusion",
+    "training_runs": 24,
+    "validation_runs": 12,
+    "test_runs": 40,
+    "candidate_count": 18,
+    "selected_candidate_ids": [3, 12],
+    "selection_complete_before_test_generation": true,
+    "quadratic_advantage_over_linear_demonstrated": false,
+    "nominal_degradation": true,
+    "nominal_50ms_edmd_rmse_deg": 0.18596,
+    "nominal_50ms_physics_rmse_deg": 0.00605,
+    "benefit_screen_passed_regimes": 0,
+    "benefit_screen_total_regimes": 4,
+    "nonfinite_forecasts_all_models_and_horizons": 0,
+    "multistep_forecasts_use_recorded_future_voltage": true,
+    "emi_receiver_exposure_tested": false,
+    "closed_loop_improvement_demonstrated": false,
+    "recommendation": "Keep separate from the control path and the receiver milestone; compare a small linear correction with a disturbance-estimating physics observer."
+  },
+  "priorities": [
+    "Preserve the newly passed software checks, scoped reproductions and all 16 frozen-file hashes; keep receiver-domain rejections visible and the readable plan separate from the authoritative restored source.",
+    "Complete receiver/topology assumptions and electrical characterization before control-effect scoring.",
+    "Freeze new separate development/evaluation fixtures, then compare the four arms only after acceptance.",
+    "Keep loaded restart, remaining physical fault mechanisms and literature work tied to their specific claims.",
+    "Maintain EDMD as documented supporting work with its negative quadratic-versus-linear result and unchanged Draft approvals."
+  ],
+  "documentation_gaps": [
+    {
+      "file": "02_Requirements/Verification_Traceability.md",
+      "issue": "FUN-004C and dated RES-005/A02 rows still describe absent/design-only integration.",
+      "recommended_action": "Add a dated current-status reconciliation while preserving historical checkpoint claims.",
+      "reconciliation_status": "Current note added; historical wording and approval statuses preserved."
+    },
+    {
+      "files": [
+        "00_Project_Management/Roadmap.md",
+        "01_Research/Research_Log.md",
+        "README.md"
+      ],
+      "issue": "Completed EDMD work is not recorded in the central progress narrative/repository map.",
+      "recommended_action": "Add it as a separate supporting workstream with the negative quadratic-versus-linear result.",
+      "reconciliation_status": "Current note added; historical wording and approval statuses preserved."
+    },
+    {
+      "file": "00_Project_Management/Roadmap.md",
+      "issue": "Gate 0 defines approval conditions but no explicit completed approval record was found.",
+      "recommended_action": "Keep gate criteria separate from recorded approvals; preserve Draft statuses.",
+      "reconciliation_status": "Current note added; historical wording and approval statuses preserved."
+    },
+    {
+      "file": "04_EMI_Models/Four_Way_EMI_Experiment_Readable.md",
+      "issue": "Readable companion retains the frozen historical design-only heading.",
+      "recommended_action": "Identify the companion as explanatory and the restored original as authoritative for frozen checks.",
+      "reconciliation_status": "Current note added; historical wording and approval statuses preserved."
+    }
+  ],
+  "schedule_status": "No dated schedule or phase-duration commitment found; on-schedule and percentage-complete claims unsupported.",
+  "formal_approvals_changed": false,
+  "project_files_changed_by_this_review": true,
+  "new_hardware_claims": false,
+  "external_research_performed": false,
+  "project_documentation_edits": [
+    "README.md",
+    "00_Project_Management/Roadmap.md",
+    "01_Research/Research_Log.md",
+    "02_Requirements/Verification_Traceability.md"
+  ],
+  "executable_or_frozen_files_changed_by_this_review": false
+}

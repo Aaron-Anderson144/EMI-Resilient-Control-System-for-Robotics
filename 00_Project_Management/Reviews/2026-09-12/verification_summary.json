@@ -1,0 +1,12 @@
+{
+  "review_date": "2026-09-12",
+  "tests": 468,
+  "passed": 468,
+  "failed": 0,
+  "incomplete": 0,
+  "saved_rejection_enforced": true,
+  "rejection_identifier": "EMIProject:FourWayAcceptance",
+  "matlab_version": "26.1.0.3276743 (R2026a) Update 3",
+  "historical_campaigns_rerun": false,
+  "physical_validation": false
+}

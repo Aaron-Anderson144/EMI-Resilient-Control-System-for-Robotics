@@ -1,0 +1,96 @@
+{
+  "case": "nominal",
+  "native_kcl_A": 1.0658141036401503e-14,
+  "spice_kcl_A": 1.7838748256338022e-09,
+  "native_closure_nJ": 5.983711789947499e-07,
+  "spice_closure_nJ": 5.979835767180863e-06,
+  "waveforms_pass": true,
+  "native_channel": {
+    "current_convention": "Internal modeled channel drain-to-source current; simultaneous positive conduction.",
+    "peak_high_channel_A": 10.0311914502033,
+    "peak_low_channel_A": 3.19690171405656,
+    "peak_common_positive_channel_A": 3.19690171405656,
+    "time_peak_common_s": 4.064625e-06,
+    "common_positive_charge_C": 4.1165881645090126e-08,
+    "overlap_threshold_A": 0.00298096419015807,
+    "duration_both_channels_above_threshold_s": 4.064495771991491e-08,
+    "method": "Exact piecewise-linear envelope/interval integration, with signal-zero and channel-intersection knots inserted."
+  }
+}
+{
+  "case": "holdout_bus18",
+  "native_kcl_A": 1.0658141036401503e-14,
+  "spice_kcl_A": 1.450515263456964e-09,
+  "native_closure_nJ": 2.1019969619062717e-08,
+  "spice_closure_nJ": -5.639613125454912e-07,
+  "waveforms_pass": true,
+  "native_channel": {
+    "current_convention": "Internal modeled channel drain-to-source current; simultaneous positive conduction.",
+    "peak_high_channel_A": 7.6082966994244,
+    "peak_low_channel_A": 0.307106210310368,
+    "peak_common_positive_channel_A": 0.307106210310368,
+    "time_peak_common_s": 4.066e-06,
+    "common_positive_charge_C": 3.508369293822938e-09,
+    "overlap_threshold_A": 0.0022357231467165,
+    "duration_both_channels_above_threshold_s": 3.303677118816077e-08,
+    "method": "Exact piecewise-linear envelope/interval integration, with signal-zero and channel-intersection knots inserted."
+  }
+}
+{
+  "case": "holdout_load4ohm",
+  "native_kcl_A": 5.062616992290714e-14,
+  "spice_kcl_A": 2.135317700435735e-09,
+  "native_closure_nJ": 2.1498102777128825e-06,
+  "spice_closure_nJ": -0.00031840762665380495,
+  "waveforms_pass": true,
+  "native_channel": {
+    "current_convention": "Internal modeled channel drain-to-source current; simultaneous positive conduction.",
+    "peak_high_channel_A": 13.8229157760077,
+    "peak_low_channel_A": 3.78336946219586,
+    "peak_common_positive_channel_A": 3.78336946219586,
+    "time_peak_common_s": 4.064625e-06,
+    "common_positive_charge_C": 5.096391571179464e-08,
+    "overlap_threshold_A": 0.00592433679959518,
+    "duration_both_channels_above_threshold_s": 3.724018523882837e-08,
+    "method": "Exact piecewise-linear envelope/interval integration, with signal-zero and channel-intersection knots inserted."
+  }
+}
+{
+  "case": "holdout_gate47",
+  "native_kcl_A": 9.778844400898379e-13,
+  "spice_kcl_A": 2.3317796582489336e-09,
+  "native_closure_nJ": 5.525256901312003e-06,
+  "spice_closure_nJ": 1.7574754585664154e-05,
+  "waveforms_pass": true,
+  "native_channel": {
+    "current_convention": "Internal modeled channel drain-to-source current; simultaneous positive conduction.",
+    "peak_high_channel_A": 187.095493005914,
+    "peak_low_channel_A": 183.464202233378,
+    "peak_common_positive_channel_A": 183.464202233378,
+    "time_peak_common_s": 4.13675e-06,
+    "common_positive_charge_C": 2.3422606636517336e-05,
+    "overlap_threshold_A": 0.00298096418635246,
+    "duration_both_channels_above_threshold_s": 3.0419307060818664e-07,
+    "method": "Exact piecewise-linear envelope/interval integration, with signal-zero and channel-intersection knots inserted."
+  }
+}
+{
+  "case": "holdout_bus30_load16_gate10",
+  "native_kcl_A": 5.1736392947532295e-14,
+  "spice_kcl_A": 3.4495604150919235e-09,
+  "native_closure_nJ": 3.7907773708240056e-07,
+  "spice_closure_nJ": 0.0010198838437192395,
+  "waveforms_pass": true,
+  "native_channel": {
+    "current_convention": "Internal modeled channel drain-to-source current; simultaneous positive conduction.",
+    "peak_high_channel_A": 14.6814049676138,
+    "peak_low_channel_A": 5.10636178954194,
+    "peak_common_positive_channel_A": 5.10636178954194,
+    "time_peak_common_s": 4.048875e-06,
+    "common_positive_charge_C": 3.1374110312449525e-08,
+    "overlap_threshold_A": 0.00186903238865743,
+    "duration_both_channels_above_threshold_s": 1.6305013954999612e-08,
+    "method": "Exact piecewise-linear envelope/interval integration, with signal-zero and channel-intersection knots inserted."
+  }
+}
+Audit saved to C:\Users\adand\Documents\Codex\2026-09-12\a\outputs\Project_Verification_2026-09-12\evidence_audits\sc01b_original_saved_records.json
