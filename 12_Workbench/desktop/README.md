@@ -8,7 +8,7 @@ Keep it beside `Start EMI Workbench.cmd`, the executable, `resources`, and
 `workspace`. The shortcut uses a relative target and works when the whole folder
 is moved. Opening **EMI Robotics.exe** directly is also supported. No installer,
 administrator access, Codex, browser installation, Python installation, or Node.js
-installation is required. The app opens in its own desktop window.
+installation is required to open the app. The app opens in its own desktop window.
 
 Everything the interface needs is included. It uses a private loopback connection
 on this computer. It has no accounts, cloud services, telemetry, or auto-updater.
@@ -17,7 +17,7 @@ Application requests are limited to its own local service and built-in resources
 ## Running research workflows
 
 The package includes the baseline control simulation, receiver model checks, and
-the 468-test main robotics suite, plus the saved evidence and research documents.
+the 468-test main robotics suite, the conditional Receiver V2 characterization workflow, four-way v2 development, reserved evaluation, and source-return comparison, plus native run history and research documents.
 Opening documents and inspecting saved results works without MATLAB.
 
 **New simulations and tests require separately installed, licensed MATLAB and
@@ -25,11 +25,18 @@ the products used by the selected workflow. MATLAB is not bundled.** This releas
 is tested with Windows x64 MATLAB R2026a and the existing installed products.
 MATLAB's own licensing rules and any sign-in requirements still apply.
 
-The included Windows receiver MEX matches the packaged source and avoids a C++
+The included Windows receiver MEX binaries match the packaged sources and avoid a C++
 build on the tested configuration. A different MATLAB environment or a changed
 receiver source may require a compatible compiler. The whole research archive,
 external SPICE runtimes, and additional research campaigns are outside this compact
-release. The three named workbench workflows are the supported execution scope.
+release. Seven named workbench workflows are supported. Receiver characterization reports electrical-domain checks and sensitivity to assumed threshold, latency and pulse behavior. Four-way v2 development runs 256 records across all 16 receiver assumptions and requires Parallel Computing Toolbox.
+
+**Evaluation and source-return comparison require the original accepted local scientific project and its evidence.** Public downloads leave this private binding unset and show an explanation on both controls. Other workflows remain available. If the original accepted setup exists on this computer, configure `workspace/12_Workbench/local/accepted-science.json` following the [Workbench guide](../README.md#accepted-v2-evaluation-and-source-return-controls), then restart the app. The private file is excluded from Git and public packages.
+
+The binding preserves the exact paths and hashes in the pinned acceptance receipt. Both controls verify acceptance before starting; missing or changed source/evidence keeps them disabled. The accepted MATLAB runner additionally requires a working local **Python 3.12 `py` launcher**. The bundled Python opens the app but does not replace that scientific prerequisite. Moving this app alone to another computer does not transfer the accepted project/evidence setup.
+
+Evaluation runs 1,536 records and displays 768 matched comparisons plus 16 separate benefit screens. Source-return comparison runs 256 records and displays 128 comparisons. Both keep new results in this app's run folder. Full raw files stay on disk; the results show compact summary links and a complete artifact inventory. These are conditional simulations, not hardware validation.
+
 
 ## Your files
 
@@ -44,17 +51,14 @@ the app before moving it. If a run is active, closing offers to keep the window
 open or let the run finish in the background before the app exits. Launching the
 app again restores an existing window.
 
-Historical run records preserve their original paths and provenance. Their saved
-outputs are included locally; those recorded paths do not select the new run's
-working folder. New runs use this packaged workspace. The package includes all
-16 frozen scientific inputs unchanged; `workspace/bundle_manifest.json` records
+Imported evidence cards and imported history entries have been removed. Original research records remain in the source project. Native saved runs remain available. New runs save results in this packaged workspace; the two acceptance-checked workflows use the original accepted scientific sources as described above. The package includes all
+16 original frozen scientific inputs and 54 frozen v2 protocol files unchanged; `workspace/bundle_manifest.json` records
 their original identity. `release_manifest.json` records the release file hashes.
 
 ## Runtime provenance and notices
 
 The Instrument edition uses bundled Barlow Condensed headings, Rajdhani Semibold
-numerals, IBM Plex Sans controls, and IBM Plex Mono logs. Recorded Verification highlights the main robotics
-project; the separate EDMD study remains available in Research documents. They are served directly from the app's
+numerals, IBM Plex Sans controls, and IBM Plex Mono logs. Fonts are served directly from the app's
 `workspace/12_Workbench/web/fonts` folder. Font files, original Open Font License
 notices, source URLs, and SHA-256 identities are included there; the interface
 does not contact a font service or require fonts to be installed in Windows.
@@ -69,6 +73,13 @@ This local build has no added publisher signing certificate. It is a portable
 research application, not an installer or a MATLAB Runtime compiled application.
 
 ## Rebuilding
+
+For a source-only checkout, first restore the six pinned inputs using the
+[publication reproduction guide](../../09_Report/Publication_2026-09-11/Publication_Reproduction.md).
+The builder also needs the source-named Windows receiver MEX binaries for both
+`FOUR_WAY` and `FOUR_WAY_V2`. Generate them with the matching MATLAB/C++ setup,
+or restore matching binaries from the verified Windows release. The builder
+checks frozen inputs before copying; a missing or different input stops the build.
 
 The reproducible builder and complete desktop source are in
 `workspace/12_Workbench/desktop`. Download the two official archives named in

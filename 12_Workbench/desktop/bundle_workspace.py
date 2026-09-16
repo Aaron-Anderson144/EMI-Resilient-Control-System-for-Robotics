@@ -1,7 +1,7 @@
 """Copy the compact, byte-verified workspace used by EMI Workbench Desktop.
 
 The scientific files and historical evidence are never rewritten. This package
-supports the three workbench workflows, not every archived research campaign.
+supports the workbench workflows, not every archived research campaign.
 The desktop application and its Python/browser runtimes are packaged separately.
 """
 from __future__ import annotations
@@ -31,6 +31,15 @@ SOURCE_DIRECTORIES = (
     "06_Circuit_Simulations/FOUR_WAY/functions",
     "06_Circuit_Simulations/FOUR_WAY/scripts",
     "06_Circuit_Simulations/FOUR_WAY/tests",
+    "06_Circuit_Simulations/RECEIVER_V2/functions",
+    "06_Circuit_Simulations/RECEIVER_V2/scripts",
+    "06_Circuit_Simulations/RECEIVER_V2/tests",
+    "06_Circuit_Simulations/FOUR_WAY_V2/functions",
+    "06_Circuit_Simulations/FOUR_WAY_V2/scripts",
+    "06_Circuit_Simulations/FOUR_WAY_V2/tests",
+    "06_Circuit_Simulations/FOUR_WAY_V2/audit",
+    "00_Project_Management/Verification/Receiver_V2_2026-09-15",
+    "00_Project_Management/Verification/Four_Way_V2_2026-09-15",
     "12_Workbench/matlab",
 )
 ROOT_PATTERNS = (
@@ -41,10 +50,14 @@ ROOT_PATTERNS = (
     "06_Circuit_Simulations/SC01B_R2/*.md",
     "06_Circuit_Simulations/SC01B_R2/sc01b_driver_lib.slx",
     "06_Circuit_Simulations/FOUR_WAY/README.md",
+    "06_Circuit_Simulations/RECEIVER_V2/*.md",
+    "06_Circuit_Simulations/RECEIVER_V2/*.json",
+    "06_Circuit_Simulations/FOUR_WAY_V2/*.md",
 )
 REVIEW = "00_Project_Management/Reviews/2026-09-12/Complete_Verification"
 DOCUMENTS = (
     "README.md",
+    "LICENSE",
     "00_Project_Management/Roadmap.md",
     "00_Project_Management/Reviews/2026-09-12/Receiver_Revision_Brief.md",
     "09_Report/Publication_2026-09-11/EMI_Robotics_Progress_Report.pdf",
@@ -60,7 +73,9 @@ DOCUMENTS = (
 )
 DEPENDENCIES = "00_Project_Management/Local_Dependencies.json"
 FREEZE = "04_EMI_Models/four_way_emi_freeze_manifest.json"
+V2_FREEZE = "04_EMI_Models/four_way_emi_v2_freeze_manifest.json"
 ENGINE_SOURCE = "06_Circuit_Simulations/FOUR_WAY/functions/fourway_exact_mex.cpp"
+V2_ENGINE_SOURCE = "06_Circuit_Simulations/FOUR_WAY_V2/functions/fourway_v2_exact_mex.cpp"
 RUN_ID = re.compile(r"\d{8}T\d{6}Z_[a-f0-9]{12}\Z")
 EXCLUDED_COMPONENTS = {".git", "__pycache__", "slprj", "node_modules"}
 EXCLUDED_SUFFIXES = {".pyc", ".pyo", ".slxc", ".tmp"}
@@ -145,6 +160,10 @@ def build_workspace(source: Path, destination: Path) -> dict:
     frozen = read_json(local_path(source, FREEZE))
     for item in frozen["files"]:
         add(item["path"], "original_design_freeze", expected=item)
+    add(V2_FREEZE, "v2_protocol_freeze")
+    v2_frozen = read_json(local_path(source, V2_FREEZE))
+    for item in v2_frozen["files"]:
+        add(item["path"], "v2_protocol_freeze", expected=item)
     add(DEPENDENCIES, "dependency_manifest")
     dependencies = read_json(local_path(source, DEPENDENCIES))
     for item in dependencies["files"]:
@@ -157,6 +176,9 @@ def build_workspace(source: Path, destination: Path) -> dict:
     engine_sha = digest(local_path(source, ENGINE_SOURCE))
     engine = f"06_Circuit_Simulations/FOUR_WAY/work/fourway_exact_{engine_sha[:16]}.mexw64"
     add(engine, "prebuilt_windows_receiver")
+    v2_engine_sha = digest(local_path(source, V2_ENGINE_SOURCE))
+    v2_engine = f"06_Circuit_Simulations/FOUR_WAY_V2/work/fourway_v2_exact_{v2_engine_sha[:16]}.mexw64"
+    add(v2_engine, "prebuilt_windows_v2_receiver")
     for relative in DOCUMENTS:
         add(relative, "saved_document_or_evidence", optional=True)
 
@@ -176,6 +198,10 @@ def build_workspace(source: Path, destination: Path) -> dict:
             if record.get("id") != folder.name or record.get("status") != "completed":
                 skipped_runs.append({"id": folder.name, "reason": "not a completed run"})
                 continue
+            provenance = record.get("provenance")
+            if isinstance(provenance, dict) and str(provenance.get("kind", "")).startswith("imported_"):
+                skipped_runs.append({"id": folder.name, "reason": "imported evidence excluded from app history"})
+                continue
             add(relative + "/run.json", "saved_completed_run")
             for name in ("result.json", "matlab.log"):
                 add(relative + "/" + name, "saved_completed_run", optional=True)
@@ -192,7 +218,7 @@ def build_workspace(source: Path, destination: Path) -> dict:
         "schema": "emi-workbench-bundled-workspace-v1",
         "created_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "source_root": str(source),
-        "scope": "Existing baseline, receiver_tests, and project_tests workflows; compact saved evidence and completed workbench runs.",
+        "scope": "Seven workflows: baseline, receiver_tests, receiver_characterization, four_way_v2_development, four_way_v2_evaluation, four_way_v2_closure, and project_tests. Reserved evaluation and closure bind to the original accepted local scientific project and evidence; other workflows use the bundled snapshot. Imported evidence entries are excluded from history.",
         "runtime": {
             "target": "Windows x64",
             "installed_mathworks_runtime": dependencies.get("installed_runtime", {}),
@@ -200,11 +226,15 @@ def build_workspace(source: Path, destination: Path) -> dict:
             "receiver_source_sha256": engine_sha,
             "receiver_binary_path": engine,
             "receiver_binary_sha256": planned[engine]["sha256"],
+            "v2_receiver_source_sha256": v2_engine_sha,
+            "v2_receiver_binary_path": v2_engine,
+            "v2_receiver_binary_sha256": planned[v2_engine]["sha256"],
         },
         "original_freeze_files_verified": len(frozen["files"]),
+        "v2_protocol_files_verified": len(v2_frozen["files"]),
         "original_frozen_manifests_modified": False,
         "included_pinned_input_groups": ["regression_inputs", "experiment_source", "motion_history"],
-        "excluded_scopes": ["Full historical campaign archives", "Original SC01B suite and runtime", "EDMD execution campaigns", "ngspice distributions (not used by the three exposed workflows)", "Git history", "Compilation caches", "Scratch data and old executable run scripts", "Desktop application and browser/Python runtimes (packaged separately)"],
+        "excluded_scopes": ["Full historical campaign archives", "Original SC01B suite and runtime", "EDMD execution campaigns", "ngspice distributions (not used by the exposed workflows)", "Git history", "Compilation caches", "Scratch data and old executable run scripts", "Desktop application and browser/Python runtimes (packaged separately)"],
         "provenance_note": "Saved records retain their original paths, hashes, dates, outcomes and provenance. Their presence does not represent a new reproduction or research acceptance. Historical document links to excluded full archives may be unavailable.",
         "missing_optional_files": missing_optional,
         "saved_completed_runs": completed_runs,

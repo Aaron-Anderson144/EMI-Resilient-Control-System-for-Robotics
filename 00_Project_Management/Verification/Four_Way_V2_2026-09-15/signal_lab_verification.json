@@ -1,0 +1,132 @@
+{
+  "schema": "signal-lab-four-way-v2-integration-v1",
+  "generated_utc": "2026-09-15T23:04:37.276456+00:00",
+  "version": "1.4.0",
+  "scientific_acceptance": "Separate Gate A-D reports; this integration summary grants no research acceptance.",
+  "tests": {
+    "backend_passed": 35,
+    "bundle_passed": 3,
+    "adapter_passed": 12,
+    "desktop_boundaries_passed": 7,
+    "javascript_syntax": "passed"
+  },
+  "real_evidence": {
+    "development_records": 256,
+    "parsed_pairs": 128,
+    "variants": 16,
+    "http_artifacts_byte_verified": 13,
+    "http_documents_checked": 12,
+    "import_is_new_execution": false
+  },
+  "portable_workspace": {
+    "files": 614,
+    "bytes": 110957186,
+    "original_frozen_verified": 16,
+    "v2_frozen_verified": 54,
+    "current_v2_engine": "06_Circuit_Simulations/FOUR_WAY_V2/work/fourway_v2_exact_e3f7c536bdf8561c.mexw64",
+    "matlab_copy_smoke": "passed"
+  },
+  "visual_verification": {
+    "status": "blocked",
+    "reason": "In-app browser unavailable; Chrome browser-use extension denied local preview. No security or automation workaround attempted. Current visual/responsive rendering was not rechecked."
+  },
+  "sources": [
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\server.py",
+      "bytes": 34452,
+      "sha256": "6a6be1c66d35b68560f44064276f4464e584be55fe94dde643ae3eec1c5ea59b"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\web\\app.js",
+      "bytes": 35539,
+      "sha256": "f3797a6231aaee2af336afc56a958bc3932e5c173a664890077054d6b42a5d9e"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\matlab\\emi_workbench_run.m",
+      "bytes": 15932,
+      "sha256": "a0b9e5554a206f22c2f9df6f49630b00a70242ddc52eef6a2b9e824fd0f4ae58"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\matlab\\emi_workbench_development_result.m",
+      "bytes": 1655,
+      "sha256": "5e367cb4ec141af5beed45238fdfd125aa43658aac8d73bc8af40ef21111f50e"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\matlab\\TestEmiWorkbenchAdapter.m",
+      "bytes": 13818,
+      "sha256": "0935ad5cec17d93f7056ee5095141e3d34c49478b6646e1fac942061a0df25d3"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\desktop\\bundle_workspace.py",
+      "bytes": 14212,
+      "sha256": "641bade4ece2d137d954a638cdaf663c818d87b44b751d1df37aa6ff9a6c6ac7"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\desktop\\package.json",
+      "bytes": 368,
+      "sha256": "8faed976d693cce8a8558093ab4a002f0f59c9a0216510c131edf005962a80fb"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\desktop\\README.md",
+      "bytes": 5456,
+      "sha256": "8daa9ed3ee5ad188eef901ad1fe0a21d54ff305da892aa72335c9d738c14af29"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\README.md",
+      "bytes": 9695,
+      "sha256": "8ba448dcef16aa32ae5e7492525278bf35df6b4f74d3128b1839c4ce1cef3eda"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\tests\\test_server.py",
+      "bytes": 22201,
+      "sha256": "3d594eac970f73fcf02fb7d20007b024fade2b1bbbc674a693adec64feb1e6e8"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\tests\\test_bundle_workspace.py",
+      "bytes": 3116,
+      "sha256": "8b8c1764ffecb36dc7387b0b478638c1fb211fc68cf368ac2ef5bd30742c3492"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\verification\\four-way-v2-2026-09-15\\backend-tests.log",
+      "bytes": 5116,
+      "sha256": "9f218eada0d62540c54bd2837b2c9a60503cdc1974ea9977b49ad0d01108fb9c"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\verification\\four-way-v2-2026-09-15\\adapter-tests-002.log",
+      "bytes": 212,
+      "sha256": "6bae171ed8f08eebd0ec5070b6c6fccc99a492f7757790edb0af01ee0a8d28b9"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\verification\\four-way-v2-2026-09-15\\adapter-test-results-002.csv",
+      "bytes": 1074,
+      "sha256": "b53674a02eeccf23e5ba50de9ffc24e4ca8051a6bca775f27bd0f05617a352dc"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\verification\\four-way-v2-2026-09-15\\desktop-tests.log",
+      "bytes": 670,
+      "sha256": "c8fa1cc788f30aed4d50868c751fd118a9dabc38cb33940e3e1b66be5dc9ae56"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\verification\\four-way-v2-2026-09-15\\browser-http-smoke.json",
+      "bytes": 6417,
+      "sha256": "174d33cdb2ecfc61e90235d80191f1ca5b46b7a6fd55e557ad12396b04f47938"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\verification\\four-way-v2-2026-09-15\\bundle-check.log",
+      "bytes": 227,
+      "sha256": "a59989488d97e134346dce24436857b5d11e63832feba5779ac61941b484783c"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\verification\\four-way-v2-2026-09-15\\bundle-matlab-smoke-002.log",
+      "bytes": 414,
+      "sha256": "bad61c52737a24a2d8c7068d01c68c72b7280e182135c834e623058d7196a2df"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\verification\\four-way-v2-2026-09-15\\imported-run.json",
+      "bytes": 3746,
+      "sha256": "991f90fa1d19bc80dde97f406f1cbe3ead923e7c5c39996763feda036c2324cb"
+    }
+  ]
+}

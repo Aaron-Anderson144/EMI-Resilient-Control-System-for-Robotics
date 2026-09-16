@@ -1,0 +1,195 @@
+{
+  "checked_utc": "2026-09-15T23:01:58.636423+00:00",
+  "passed": true,
+  "run_id": "20260915T225937Z_3da5012894ef",
+  "scope": "Real development evidence parsed in MATLAB and displayed through actual local HTTP API; all response artifacts match retained bytes. Adapter dispatch tested with isolated stage fixtures; complete scientific campaign executed separately.",
+  "pairs_checked_against_csv": 128,
+  "variants": 16,
+  "fixtures": 2,
+  "arms": 4,
+  "expected_workflows_only": [
+    "baseline",
+    "four_way_v2_development",
+    "project_tests",
+    "receiver_characterization",
+    "receiver_tests"
+  ],
+  "evaluation_launcher_absent": true,
+  "artifact_responses": [
+    {
+      "name": "matlab.log",
+      "status": 200,
+      "bytes": 181,
+      "sha256": "32980e1789109013aa07c26c63d8ae7307de13acad65ca097829365ba934bbd1"
+    },
+    {
+      "name": "output/four_way_v2_development/IMPORT.md",
+      "status": 200,
+      "bytes": 404,
+      "sha256": "51b27071698e45dffdbc18b46cca953fe3a85a7cd8e514feed6e3bf4eed5c930"
+    },
+    {
+      "name": "output/four_way_v2_development/burst_attribution.csv",
+      "status": 200,
+      "bytes": 20142,
+      "sha256": "5913f58eb9cd0f356cd425784b420f3d96b0af9151a3000811c855ede318cd67"
+    },
+    {
+      "name": "output/four_way_v2_development/campaign.mat",
+      "status": 200,
+      "bytes": 13407,
+      "sha256": "066516af32d4351bd26fa79f28d1defd790dfaa038939b7ad29d60bc95a14a84"
+    },
+    {
+      "name": "output/four_way_v2_development/detection_episodes.csv",
+      "status": 200,
+      "bytes": 119,
+      "sha256": "5a50238d17b1df41920b93e21e915956dd74c5e501bb5eb9d6cdd1c9a88e1145"
+    },
+    {
+      "name": "output/four_way_v2_development/execution_identity.json",
+      "status": 200,
+      "bytes": 42722,
+      "sha256": "973efe937e1fa9f48f56bc19319222ca8d33b42f411f158a951df20bdf6758ce"
+    },
+    {
+      "name": "output/four_way_v2_development/import_provenance.json",
+      "status": 200,
+      "bytes": 3400,
+      "sha256": "d3843530f7d6bb45d5a2270da96347c6ab5a00a9f35b9641dae0cba5d8f3219f"
+    },
+    {
+      "name": "output/four_way_v2_development/metrics.csv",
+      "status": 200,
+      "bytes": 83469,
+      "sha256": "11510fbf5d8324669c2092696d2cdcd422f135d56125d2c5f4d5f568d6059c0b"
+    },
+    {
+      "name": "output/four_way_v2_development/pair_failures.csv",
+      "status": 200,
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "name": "output/four_way_v2_development/record_index.csv",
+      "status": 200,
+      "bytes": 18987,
+      "sha256": "18ce2f28129f5ffee7c709e636cde705a30a0a802cae110b2c1f7735c6cdb13a"
+    },
+    {
+      "name": "output/four_way_v2_development/recovery.csv",
+      "status": 200,
+      "bytes": 20716,
+      "sha256": "1672fd75f731f864dacd3ce673596d6306a958287e6b0eec99c4eed5076786e4"
+    },
+    {
+      "name": "output/four_way_v2_development/stage_summary.json",
+      "status": 200,
+      "bytes": 44444,
+      "sha256": "e73e1c07a5d7b2360316fdbea59e037b2ef55765ab5896a41e3a075d2c5856e5"
+    },
+    {
+      "name": "result.json",
+      "status": 200,
+      "bytes": 110495,
+      "sha256": "0325fe8e92bcccc1c599bee7434824d96c752a2f26c6dcf132bd84010fb00c3f"
+    }
+  ],
+  "document_responses": [
+    {
+      "url": "/artifacts/README.md",
+      "status": 200
+    },
+    {
+      "url": "/artifacts/00_Project_Management/Roadmap.md",
+      "status": 200
+    },
+    {
+      "url": "/artifacts/00_Project_Management/Reviews/2026-09-12/Receiver_Revision_Brief.md",
+      "status": 200
+    },
+    {
+      "url": "/artifacts/04_EMI_Models/Receiver_V2_Contract.md",
+      "status": 200
+    },
+    {
+      "url": "/artifacts/04_EMI_Models/Four_Way_EMI_Experiment_V2.md",
+      "status": 200
+    },
+    {
+      "url": "/artifacts/00_Project_Management/Verification/Four_Way_V2_2026-09-15/Results.md",
+      "status": 200
+    },
+    {
+      "url": "/artifacts/06_Circuit_Simulations/FOUR_WAY_V2/README.md",
+      "status": 200
+    },
+    {
+      "url": "/artifacts/09_Report/Publication_2026-09-11/EMI_Robotics_Progress_Report.pdf",
+      "status": 200
+    },
+    {
+      "url": "/artifacts/11_EDMD_Hybrid_Estimation/README.md",
+      "status": 200
+    },
+    {
+      "url": "/artifacts/11_EDMD_Hybrid_Estimation/docs/VERIFICATION_AND_VALIDATION.md",
+      "status": 200
+    },
+    {
+      "url": "/artifacts/11_EDMD_Hybrid_Estimation/docs/RESULTS_20260913.md",
+      "status": 200
+    },
+    {
+      "url": "/artifacts/00_Project_Management/Reviews/2026-09-12/Complete_Verification/Verification_Report.md",
+      "status": 200
+    }
+  ],
+  "browser_visual_check": {
+    "passed": null,
+    "status": "blocked",
+    "reason": "Previous in-app browser unavailable. Only Chrome present; its browser-use extension rejected local preview with net::ERR_BLOCKED_BY_CLIENT. No bypass attempted. Temporary test tab closed.",
+    "responsive_layout_rechecked": false
+  },
+  "tests": {
+    "python_backend": 35,
+    "workspace_bundle": 3,
+    "matlab_adapter": 12,
+    "desktop_boundaries": 7,
+    "javascript_syntax": "passed"
+  },
+  "sources": [
+    {
+      "path": "server.py",
+      "sha256": "6a6be1c66d35b68560f44064276f4464e584be55fe94dde643ae3eec1c5ea59b"
+    },
+    {
+      "path": "web/app.js",
+      "sha256": "f3797a6231aaee2af336afc56a958bc3932e5c173a664890077054d6b42a5d9e"
+    },
+    {
+      "path": "matlab/emi_workbench_run.m",
+      "sha256": "a0b9e5554a206f22c2f9df6f49630b00a70242ddc52eef6a2b9e824fd0f4ae58"
+    },
+    {
+      "path": "matlab/emi_workbench_development_result.m",
+      "sha256": "5e367cb4ec141af5beed45238fdfd125aa43658aac8d73bc8af40ef21111f50e"
+    },
+    {
+      "path": "matlab/TestEmiWorkbenchAdapter.m",
+      "sha256": "0935ad5cec17d93f7056ee5095141e3d34c49478b6646e1fac942061a0df25d3"
+    },
+    {
+      "path": "desktop/bundle_workspace.py",
+      "sha256": "641bade4ece2d137d954a638cdaf663c818d87b44b751d1df37aa6ff9a6c6ac7"
+    },
+    {
+      "path": "tests/test_server.py",
+      "sha256": "3d594eac970f73fcf02fb7d20007b024fade2b1bbbc674a693adec64feb1e6e8"
+    },
+    {
+      "path": "tests/test_bundle_workspace.py",
+      "sha256": "8b8c1764ffecb36dc7387b0b478638c1fb211fc68cf368ac2ef5bd30742c3492"
+    }
+  ]
+}

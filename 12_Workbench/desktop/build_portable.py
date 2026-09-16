@@ -71,7 +71,7 @@ def build(source: Path, cache: Path, destination: Path) -> dict:
     workspace = destination / "workspace"
     build_workspace(source, workspace)
     workbench = workspace / "12_Workbench"
-    for name in ("server.py", "README.md"):
+    for name in ("server.py", "acceptance.py", "README.md"):
         shutil.copy2(source / "12_Workbench" / name, workbench / name)
     for folder in ("web", "tests", "desktop"):
         shutil.copytree(source / "12_Workbench" / folder, workbench / folder,

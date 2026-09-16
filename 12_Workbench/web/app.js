@@ -21,7 +21,6 @@
   let detailSignature = "";
   let historySignature = "";
   let workflowSignature = "";
-  let evidenceSignature = "";
   let documentSignature = "";
   let comparisonSignature = "";
   let comparisonRequest = 0;
@@ -57,9 +56,9 @@
     return el("span", `run-status ${knownStatuses.has(value) ? value : "unknown"}`, value.charAt(0).toUpperCase() + value.slice(1));
   }
 
-  async function api(path, options = {}) {
+  async function api(path, options = {}, timeoutMs = 12000) {
     const controller = new AbortController();
-    const timeout = window.setTimeout(() => controller.abort(), 12000);
+    const timeout = window.setTimeout(() => controller.abort(), timeoutMs);
     try {
       const response = await fetch(path, { ...options, signal: controller.signal, cache: "no-store" });
       let payload;
@@ -87,24 +86,6 @@
     const available = !!runtime?.matlab_available;
     $("runtime-status").className = `runtime-pill ${available ? "available" : "unavailable"}`;
     $("runtime-status").lastElementChild.textContent = available ? "MATLAB available" : "MATLAB unavailable";
-  }
-
-  function renderEvidence(items) {
-    // Keep the overview focused on robotics; EDMD stays in research documents.
-    items = items.filter((item) => item.id !== "edmd_tests" && item.id !== "edmd_benefit");
-    const signature = JSON.stringify(items);
-    if (signature === evidenceSignature) return;
-    evidenceSignature = signature;
-    const cards = items.map((item) => {
-      const card = el("article", "evidence-card");
-      const value = String(item.value ?? "Not recorded");
-      card.append(el("span", "evidence-label", item.label || "Recorded evidence"), el("strong", `evidence-value${value.length > 11 ? " long" : ""}`, value), el("p", "", item.detail || ""));
-      const source = item.url ? fileLink("View evidence ↗", item.url) : el("span", "evidence-source", "Project record");
-      if (item.source) source.title = String(item.source);
-      card.append(source);
-      return card;
-    });
-    $("evidence-grid").replaceChildren(...(cards.length ? cards : [el("p", "empty-inline", "No historical verification records were supplied by this workspace.")]));
   }
 
   function renderDocuments(items) {
@@ -144,7 +125,7 @@
   function updateLauncher() {
     const workflow = state?.workflows?.find((item) => item.id === $("workflow-select").value);
     const activeRun = state?.runs?.find((run) => activeStatuses.has(run.status));
-    const allowed = connected && !submitting && !!workflow?.enabled && !activeRun;
+    const allowed = connected && !submitting && workflow?.enabled === true && !activeRun;
     $("workflow-select").disabled = submitting || !state?.workflows?.length;
     $("run-button").disabled = !allowed;
     $("run-button-label").textContent = submitting ? "Starting experiment…" : activeRun ? "Experiment in progress" : "Run experiment";
@@ -153,7 +134,7 @@
     let reason = "";
     if (!connected && state) reason = "Reconnect to the workspace before starting an experiment.";
     else if (activeRun) reason = "An experiment is already in progress. Its results will update automatically below.";
-    else if (workflow && !workflow.enabled) reason = workflow.reason || "This workflow is currently unavailable.";
+    else if (workflow && workflow.enabled !== true) reason = workflow.disabled_reason || workflow.reason || "This workflow is currently unavailable.";
     $("workflow-unavailable").hidden = !reason;
     $("workflow-unavailable").textContent = reason;
   }
@@ -202,6 +183,8 @@
   }
 
   const metricLabels = {
+    logicalrecords: "Logical records", pairedresults: "Matched comparisons", comparisonpairs: "Return comparisons", receiverhypotheses: "Receiver assumptions", failedrecords: "Failed records", failedpairs: "Failed comparisons", developmentguardspass: "Development execution guards", evaluationguardspass: "Evaluation execution guards", passinghypotheses: "Assumptions meeting benefit screen", allhypothesesbenefitpass: "All assumptions meet benefit screen", closuredomainnumericspass: "Return comparison validity guards",
+    totalcases: "Characterization cases", validcases: "Within domain and converged", invalidcases: "Outside model domain", unresolvedcases: "Unresolved cases", cleanerrorcases: "Clean cases with errors", exposederrorcases: "Disturbed cases with count error", pulselawdependentcases: "Pulse-model dependent cases",
     parametersetid: "Parameter set", stable: "Linear model stable", maximumpolemagnitude: "Largest pole magnitude", trackingrmse_rad: "Tracking RMSE", finalerror_rad: "Final position error", peakvoltagecommand_v: "Peak voltage command", settlingtime_s: "Settling time", linearcommandexceedsnominalvoltage: "Command exceeds nominal voltage", tests: "Total tests", elapsedseconds: "Elapsed time",
     rmse: "Tracking RMSE", tracking_rmse: "Tracking RMSE", tracking_rmse_rad: "Tracking RMSE", position_rmse_rad: "Position RMSE", peak_error_rad: "Peak position error", peak_current_a: "Peak current", max_current_a: "Peak current", settling_time_s: "Settling time", overshoot_percent: "Overshoot", duration_s: "Recorded duration", sample_count: "Recorded samples", passed: "Passed", failed: "Failed", incomplete: "Incomplete", total: "Total checks", tests_passed: "Tests passed", tests_failed: "Tests failed", tests_incomplete: "Tests incomplete", tests_total: "Total tests", steady_state_error: "Steady-state error", peak_voltage_v: "Peak voltage", rise_time_s: "Rise time", percent_overshoot: "Overshoot"
   };
@@ -236,12 +219,174 @@
     return request;
   }
 
+  function renderCharacterization(study) {
+    if (!study || typeof study !== "object" || !study.studyId) return null;
+    const section = el("section", "characterization-findings");
+    const asArray = (value) => value === undefined || value === null ? [] : Array.isArray(value) ? value : [value];
+    section.append(el("span", "eyebrow", "RECEIVER V2 / CONDITIONAL SIMULATION"), el("h4", "", "Characterization findings"));
+    section.append(el("p", "characterization-scope", study.scope || "The receiver behavior is a declared simulation assumption; measured characterization is still required."));
+    const findings = asArray(study.findings).filter((item) => typeof item === "string");
+    if (findings.length) {
+      const list = el("ul", "finding-list");
+      findings.forEach((finding) => list.append(el("li", "", finding)));
+      section.append(list);
+    }
+    const decision = study.suitableForFourWay === true ? "The clean-case numerical prerequisite passed in simulation." : "The clean-case numerical prerequisite was not established by this run.";
+    section.append(el("p", "characterization-gate", `${decision} Every disturbed control case still needs its own domain and behavior checks. The control comparison remains gated; completion of this sweep does not establish physical validity or mitigation benefit.`));
+    const limitations = asArray(study.limitations).filter((item) => typeof item === "string");
+    if (limitations.length) {
+      section.append(el("h5", "", "Interpretation limits"));
+      const list = el("ul", "finding-list limits-list");
+      limitations.forEach((limitation) => list.append(el("li", "", limitation)));
+      section.append(list);
+    }
+    const cases = asArray(study.cases).filter((item) => item && typeof item === "object");
+    if (cases.length) {
+      const wrapper = el("div", "characterization-table");
+      wrapper.tabIndex = 0;
+      wrapper.setAttribute("role", "region");
+      wrapper.setAttribute("aria-label", "Scrollable receiver characterization cases");
+      const table = el("table");
+      table.append(el("caption", "", "Matched clean and disturbed cases. Domain status refers to the declared model limits."));
+      const head = el("thead");
+      const heading = el("tr");
+      for (const label of ["Case / fixture", "Cdiff / Ccp (pF)", "Input", "Pulse / threshold / delay", "Domain / numerics", "Final count error", "Extra / missed edges"]) {
+        const cell = el("th", "", label);
+        cell.scope = "col";
+        heading.append(cell);
+      }
+      head.append(heading);
+      const body = el("tbody");
+      for (const item of cases) {
+        const row = el("tr");
+        const identity = el("td", "case-identity", item.caseId || "Unrecorded");
+        identity.append(el("small", "", item.fixtureId || ""));
+        const polarity = item.polarity === 1 ? "positive" : item.polarity === -1 ? "negative" : item.polarity;
+        const input = item.exposed === true ? `Disturbed${polarity ? ` · ${polarity}` : ""}` : item.exposed === false ? "Clean" : "Unrecorded";
+        const capacitors = `${formatValue(item.capacitance_pF ?? "—")} / ${formatValue(item.couplingP_pF ?? "—")}`;
+        const delay = typeof item.latency_ns === "number" ? `${formatValue(item.latency_ns)} ns` : "";
+        const convergence = item.numericalConverged === true ? "converged" : item.numericalConverged === false ? "unresolved" : "not recorded";
+        const values = [capacitors, input, [item.pulseLaw, item.thresholdVariant, delay].filter(Boolean).join(" / "), `${item.domainStatus || "not recorded"} / ${convergence}`, item.finalCountError];
+        row.append(identity);
+        values.forEach((value) => row.append(el("td", "", value === undefined || value === null ? "Unrecorded" : formatValue(value))));
+        row.append(el("td", "", `${formatValue(item.extraEdges ?? "—")} / ${formatValue(item.missedEdges ?? "—")}`));
+        body.append(row);
+      }
+      table.append(head, body);
+      wrapper.append(table);
+      section.append(wrapper, el("p", "characterization-footnote", "Cdiff is the differential filter capacitor; Ccp is the disturbance coupling to the positive input. Open cases.csv below for voltage extrema, first violation time, time outside the model domain, and numerical convergence. Per-case outputs retain event timing."));
+    }
+    return section;
+  }
+
+  const resultArray = (value) => (Array.isArray(value) ? value : value ? [value] : []).filter((item) => item && typeof item === "object");
+  const resultFlag = (value) => value === true || value === 1 ? "Pass" : value === false || value === 0 ? "Fail" : "Unrecorded";
+  const resultNumber = (value) => value === null || value === undefined ? "—" : formatValue(value);
+  const armLabel = (arm) => ({ BASELINE: "Baseline", EM_ONLY: "Circuit only", SW_ONLY: "Software only", COMBINED: "Combined" })[arm] || arm || "Unrecorded";
+
+  function resultIdentity(primary, secondary) {
+    const cell = el("td", "case-identity", primary || "Unrecorded");
+    if (secondary) cell.append(el("small", "", secondary));
+    return cell;
+  }
+
+  function resultTable(label, caption, headings, rows) {
+    const wrapper = el("div", "characterization-table");
+    wrapper.tabIndex = 0;
+    wrapper.setAttribute("role", "region");
+    wrapper.setAttribute("aria-label", label);
+    const table = el("table"), head = el("thead"), heading = el("tr"), body = el("tbody");
+    table.append(el("caption", "", caption));
+    headings.forEach((label) => { const cell = el("th", "", label); cell.scope = "col"; heading.append(cell); });
+    head.append(heading);
+    rows.forEach((cells) => {
+      const row = el("tr");
+      cells.forEach((cell) => row.append(cell instanceof Node ? cell : el("td", "", cell)));
+      body.append(row);
+    });
+    table.append(head, body); wrapper.append(table);
+    return wrapper;
+  }
+
+  function renderPairedResults(pairs, partition) {
+    const items = resultArray(pairs);
+    if (!items.length) return el("p", "empty-inline", "No matched comparisons were saved in this result.");
+    return resultTable(`Scrollable ${partition} results by receiver assumption`,
+      `${items.length} saved matched ${partition} comparisons. Receiver assumptions remain separate; no pooled benefit is calculated.`,
+      ["Fixture / assumption", "Control arm", "Domain / numerics", "Clean / execution guards", "Paired RMSE / peak (°)", "Peak current (A)", "EMI count peak / final", "Task success"],
+      items.map((item) => [resultIdentity(item.Fixture, item.Variant), armLabel(item.Arm),
+        `${resultFlag(item.ReceiverDomainPass)} / ${resultFlag(item.ReceiverNumericsPass)}`,
+        `${resultFlag(item.CleanGuardPass)} / ${resultFlag(item.ExecutionGuardPass)}`,
+        `${resultNumber(item.WindowPairedRMSE_deg)} / ${resultNumber(item.WindowPairedPeak_deg)}`,
+        resultNumber(item.PeakCurrent_A), `${resultNumber(item.EMICountPeak_counts)} / ${resultNumber(item.EMICountFinal_counts)}`, resultFlag(item.TaskSuccess)]));
+  }
+
+  function renderDevelopment(study) {
+    if (!study?.summary) return null;
+    const section = el("section", "characterization-findings");
+    section.append(el("span", "eyebrow", "FOUR-WAY V2 / DEVELOPMENT"), el("h4", "", "Results by receiver assumption"));
+    section.append(el("p", "characterization-scope", "These two development fixtures compare the baseline, circuit mitigation, software mitigation, and combined arms. Each disturbed record is paired with its clean companion under the same receiver assumption."));
+    section.append(el("p", "characterization-gate", `Development execution and clean-case guards: ${resultFlag(study.summary.all_execution_clean_guards_pass)}. This is conditional simulation evidence; it does not establish measured receiver validity or a mitigation benefit. Evaluation launch readiness is checked separately for the selected workflow.`));
+    section.append(renderPairedResults(study.pairs, "development"));
+    section.append(el("p", "characterization-footnote", "Open metrics.csv for all motion, control, count, recovery, and guard measures; record_index.csv retains every execution, including failures. Saved record files contain causal packet, event, and motor traces."));
+    return section;
+  }
+
+  function renderEvaluation(study) {
+    if (!study?.summary) return null;
+    const section = el("section", "characterization-findings");
+    section.append(el("span", "eyebrow", "FOUR-WAY V2 / EVALUATION"), el("h4", "", "Evaluation by receiver assumption"));
+    section.append(el("p", "characterization-scope", "The twelve evaluation fixtures retain all 16 receiver assumptions and four control arms. Disturbed runs are compared with their own clean companions. These are conditional simulation results; physical receiver behavior remains unmeasured."));
+    section.append(el("p", "characterization-gate", `Evaluation execution and clean-case guards: ${resultFlag(study.summary.all_execution_clean_guards_pass)}. Completing the workflow does not mean that the combined treatment met the benefit screen.`));
+    const hypotheses = resultArray(study.hypotheses ?? study.summary.assessment?.hypotheses);
+    section.append(el("h5", "", "Combined-benefit screens"));
+    if (hypotheses.length) {
+      const passing = hypotheses.filter((item) => item.combined_benefit_demonstrated === true || item.combined_benefit_demonstrated === 1).length;
+      section.append(el("p", "", `${passing} of ${hypotheses.length} saved receiver assumptions met the combined-benefit screen. This count is not a probability of real-world success.`));
+      section.append(resultTable("Scrollable benefit screens by receiver assumption", "Each receiver assumption keeps its own benefit decision and guard results.",
+        ["Assumption / behavior", "Normalized RMSE: baseline / combined", "Execution guards", "Aggregate", "RMSE / peak / current", "Rescued tasks / rescue gate", "Combined benefit"],
+        hypotheses.map((item) => {
+          const variant = item.variant || {};
+          const delay = typeof variant.latencyRise_s === "number" && typeof variant.latencyFall_s === "number" ? `${resultNumber(variant.latencyRise_s * 1e9)}/${resultNumber(variant.latencyFall_s * 1e9)} ns` : "";
+          const behavior = [variant.threshold_id, variant.pulseLaw, delay].filter(Boolean).join(" · ");
+          return [resultIdentity(variant.id, behavior), `${resultNumber(item.baseline_normalized_mean)} / ${resultNumber(item.combined_normalized_mean)}`,
+            resultFlag(item.all_execution_clean_guards_pass), resultFlag(item.aggregate_gate),
+            `${resultFlag(item.per_fixture_rmse_gate)} / ${resultFlag(item.per_fixture_peak_gate)} / ${resultFlag(item.current_gate)}`,
+            `${resultNumber(item.rescued_failures)} / ${resultFlag(item.rescued_failure_gate)}`, resultFlag(item.combined_benefit_demonstrated)];
+        })));
+    } else section.append(el("p", "empty-inline", "Benefit screens were not saved in this result."));
+    section.append(el("p", "characterization-footnote", "A benefit requires the aggregate improvement and every per-fixture guard, plus at least one failed baseline task rescued by the combined treatment. When both paired errors are zero, the aggregate inequality alone does not show a reduction. Equality with circuit-only results does not establish an added software contribution."));
+    section.append(el("h5", "", "Matched evaluation comparisons"), renderPairedResults(study.pairs, "evaluation"));
+    section.append(el("p", "characterization-footnote", "The complete evaluation contains 768 matched comparisons and 1,536 logical records. Paired position measures subtract the matching arm's clean trajectory; count errors use its no-aggressor receiver shadow. Current is the absolute motor-current peak. Open metrics.csv and record_index.csv below for all saved measures and record identities."));
+    return section;
+  }
+
+  function renderClosure(study) {
+    if (!study?.summary) return null;
+    const section = el("section", "characterization-findings");
+    section.append(el("span", "eyebrow", "FOUR-WAY V2 / SOURCE RETURN"), el("h4", "", "Source-return comparison"));
+    section.append(el("p", "characterization-scope", "These separate diagnostics compare a 100 ns source return with a 45 µs return at 40 and 240 pF disturbance coupling, with positive task sign and zero phase. All 16 receiver assumptions and four arms remain separate."));
+    section.append(el("p", "characterization-gate", "This comparison is excluded from the primary benefit screen. Its position differences compare two disturbed full-record trajectories, not a disturbed trajectory against a clean companion. Physical receiver behavior remains unmeasured."));
+    const comparisons = resultArray(study.comparisons);
+    if (comparisons.length) {
+      section.append(resultTable("Scrollable source-return comparisons", `${comparisons.length} saved return comparisons. The complete diagnostic contains 128 comparisons and 256 logical records.`,
+        ["Fixture / assumption", "Control arm / coupling", "Return difference RMSE / peak (°)", "Peak count: short / long", "Final count: short / long", "Domain + numerics: short / long"],
+        comparisons.map((item) => [resultIdentity(item.Fixture, item.Variant), `${armLabel(item.Arm)} / ${resultNumber(item.Ccp_pF)} pF`,
+          `${resultNumber(item.ReturnSensitivityRMSE_deg)} / ${resultNumber(item.ReturnSensitivityPeak_deg)}`,
+          `${resultNumber(item.ShortReturnPeakCountError)} / ${resultNumber(item.LongReturnPeakCountError)}`,
+          `${resultNumber(item.ShortReturnFinalCountError)} / ${resultNumber(item.LongReturnFinalCountError)}`,
+          `${resultFlag(item.ShortReturnDomainNumericsPass)} / ${resultFlag(item.LongReturnDomainNumericsPass)}`])));
+    } else section.append(el("p", "empty-inline", "No source-return comparisons were saved in this result."));
+    section.append(el("p", "characterization-footnote", "Short means 100 ns and long means 45 µs. A failed domain or numerical guard limits that row to diagnostics. Open closure_comparisons.csv and record_index.csv below for the saved comparisons and every execution."));
+    return section;
+  }
+
   function renderDetail(run) {
     if (run.id !== selectedId) return;
     const signature = JSON.stringify(run);
     if (signature === detailSignature) return;
     detailSignature = signature;
-    const wasLogOpen = $("run-detail").querySelector("details")?.open || false;
+    const wasLogOpen = $("run-detail").querySelector("details.run-log")?.open || false;
     const focusedElement = $("run-detail").contains(document.activeElement) ? document.activeElement : null;
     const focusedTag = focusedElement?.tagName;
     const focusedHref = focusedElement?.getAttribute("href");
@@ -274,13 +419,38 @@
       }
       fragment.append(grid);
     }
+    if (run.workflow === "receiver_characterization") {
+      const characterization = renderCharacterization(run.characterization);
+      if (characterization) fragment.append(characterization);
+    }
+    if (run.workflow === "four_way_v2_development") {
+      const development = renderDevelopment(run.development);
+      if (development) fragment.append(development);
+    }
+    if (run.workflow === "four_way_v2_evaluation") {
+      const evaluation = renderEvaluation(run.evaluation);
+      if (evaluation) fragment.append(evaluation);
+    }
+    if (run.workflow === "four_way_v2_closure") {
+      const closure = renderClosure(run.closure);
+      if (closure) fragment.append(closure);
+    }
     if (["failed", "interrupted"].includes(run.status)) fragment.append(el("p", "detail-notice", "This run did not finish successfully. Inspect the execution log before using any partial outputs."));
     const artifacts = Array.isArray(run.artifacts) ? run.artifacts : [];
     fragment.append(el("h4", "artifact-heading", "Saved outputs"));
     if (artifacts.length) {
       const links = el("div", "artifact-list");
-      for (const artifact of artifacts) links.append(fileLink(`${artifact.name} ↗`, artifact.url, "artifact-link"));
+      const fourWay = ["four_way_v2_development", "four_way_v2_evaluation", "four_way_v2_closure"].includes(run.workflow);
+      const caseArtifacts = run.workflow === "receiver_characterization" ? artifacts.filter((artifact) => /\/details\//.test(artifact.name || "")) : fourWay ? artifacts.filter((artifact) => new RegExp(`/${run.workflow}/[^/]+/`).test(artifact.name || "")) : [];
+      for (const artifact of artifacts.filter((item) => !caseArtifacts.includes(item))) links.append(fileLink(`${artifact.name} ↗`, artifact.url, "artifact-link"));
       fragment.append(links);
+      if (caseArtifacts.length) {
+        const details = el("details", "case-artifacts");
+        const caseLinks = el("div", "artifact-list");
+        caseArtifacts.forEach((artifact) => caseLinks.append(fileLink(`${artifact.name} ↗`, artifact.url, "artifact-link")));
+        details.append(el("summary", "", `Per-case traces and event timing (${caseArtifacts.length} files)`), caseLinks);
+        fragment.append(details);
+      }
       const plot = artifacts.find((artifact) => /\.png$/i.test(artifact.name || "") && safeUrl(artifact.url));
       if (plot) {
         const anchor = fileLink("", plot.url, "artifact-image-link");
@@ -405,7 +575,6 @@
       $("research-title").textContent = state.research?.title || "Research status not recorded";
       $("research-detail").textContent = state.research?.detail || "Review the project documents for current research context.";
       $("research-next").textContent = state.research?.next_step || "Review the current project plan.";
-      renderEvidence(state.evidence || []);
       renderDocuments(state.documents || []);
       renderWorkflows(state.workflows);
       renderActivity(state.runs);
@@ -430,7 +599,9 @@
     $("launch-message").textContent = "Starting your experiment…";
     updateLauncher();
     try {
-      const run = await api("/api/runs", { method: "POST", headers: { "Content-Type": "application/json", "X-EMI-Token": state.token }, body: JSON.stringify({ workflow }) });
+      // Gated workflows verify local evidence before returning a run identity.
+      // Allow that bounded preflight to finish; routine polling stays responsive.
+      const run = await api("/api/runs", { method: "POST", headers: { "Content-Type": "application/json", "X-EMI-Token": state.token }, body: JSON.stringify({ workflow }) }, 240000);
       if (!run.id) throw new Error("The workspace did not return a run identifier. Refresh before starting another run.");
       selectedId = run.id;
       detailSignature = "";

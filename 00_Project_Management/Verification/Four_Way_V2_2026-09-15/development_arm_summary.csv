@@ -1,0 +1,5 @@
+Arm,Cases,WindowRMSE_min_deg,WindowRMSE_max_deg,WindowPeak_max_deg,EMICountPeak_max_counts,EMICountFinal_abs_max_counts,AbsoluteCurrentPeak_max_A,ExecutionGuardFailures
+BASELINE,32,0.0,0.0,0.0,0.0,0.0,0.123617853957655,0
+EM_ONLY,32,0.0,0.0,0.0,0.0,0.0,0.123617853957655,0
+SW_ONLY,32,0.0,0.0,0.0,0.0,0.0,0.12387652076775,0
+COMBINED,32,0.0,0.0,0.0,0.0,0.0,0.12387652076775,0

@@ -1,7 +1,7 @@
 {
   "name": "emi-robotics-signal-lab",
   "productName": "EMI Robotics - Signal Lab",
-  "version": "1.2.2",
+  "version": "1.5.0",
   "private": true,
   "description": "A portable local desktop workbench for EMI robotics research",
   "main": "main.js",

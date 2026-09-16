@@ -28,3 +28,6 @@ __pycache__/
 # Operating-system files
 Thumbs.db
 .DS_Store
+
+# Generated PLAN-V2 receiver engine; rebuilt or supplied with the app.
+/06_Circuit_Simulations/FOUR_WAY_V2/work/

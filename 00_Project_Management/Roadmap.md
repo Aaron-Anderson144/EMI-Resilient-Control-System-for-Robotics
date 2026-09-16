@@ -1,8 +1,30 @@
 # Project Roadmap
 
+## Integrated V2 checkpoint — 15 September 2026
+
+The causal V2 receiver/control integration and full frozen experiment are complete: 256 development records, 1,536 reserved evaluation records, and 256 separate source-return diagnostics. Electrical filtering removed the small observed sampled-count errors. The combined treatment did not meet the predefined task-benefit criterion under any of the 16 receiver hypotheses; every baseline task already passed. These are conditional numerical results; physical receiver behavior remains unmeasured.
+
+The causal adapter, independent native acceptance, all 256 development records, separate implementation freeze, all 1,536 reserved records and 256 return-sensitivity diagnostics are complete. Full independent reconstruction/scoring audits passed. [Results and evidence](Verification/Four_Way_V2_2026-09-15/Results.md).
+
+**Next research step:** measure the actual receiver's fast-pulse behavior and loaded circuit response, then use those measurements to constrain a new experiment. The present numerical hypotheses do not identify physical receiver behavior.
+
+## Receiver V2 preparation checkpoint - 15 September 2026
+
+The [receiver contract](../04_EMI_Models/Receiver_V2_Contract.md), Signal Lab characterization workflow, and conditional [PLAN-V2](../04_EMI_Models/Four_Way_EMI_Experiment_V2.md) protocol are implemented/documented. The compact electrical campaign has 40 records / 640 behavioral cases: all numerically converged and in-domain, no final count errors, and 80 cases with pulse-law-dependent edge behavior. The nine receiver-engine tests include independent KCL/matrix-exponential checks and multiple-root, grazing and event-ordering adversaries. See the [new evidence checkpoint](Verification/Receiver_V2_2026-09-15/README.md).
+
+**Next at that preparation checkpoint:** implement the causal V2 motor/receiver adapter, verify native circuit and full event/count agreement, complete all 256 development logical records, and freeze that accepted implementation before the 1,536 reserved evaluation records. The finalized protocol is not an implementation acceptance. Six-microsecond electrical records do not establish three-second control behavior, hardware validity or combined benefit. The September 12 historical status below is retained as its dated checkpoint.
+
+## Historical status — 12 September 2026 verification
+
+Fresh verification passed **468/468 robotics tests** and **32/32 hybrid-estimation checks**. All **16 frozen PLAN-V1 files** match their recorded hashes after exact restoration of the authoritative plan. These checks confirm their stated implementation scopes; they do not accept the rejected development experiment or prove combined mitigation benefit. Gates 3, 4 and 5 remain open, and formal Draft approvals are unchanged. Gate definitions below state the completion conditions; they are not approval records. No completed Gate 0 approval record was found in this review.
+
+The immediate research path is receiver/topology characterization, accepted development under a defensible model scope, then a newly frozen four-arm evaluation. Keep the historical PLAN-V1 criteria and results intact. A wider receiver voltage limit alone does not resolve threshold, loading, timing or fast-transient uncertainty.
+
+The [EDMD hybrid experiment](../11_EDMD_Hybrid_Estimation/docs/RESULTS.md) is completed supporting work on estimation under model mismatch. Quadratic EDMD did not improve on the linear correction, both learned versions degraded nominal accuracy, and no condition passed its benefit screen. Its multistep forecasts use recorded future voltages, so they do not demonstrate improved control or EMI resilience. Keep it separate from the control/protection path and from the receiver milestone. A future estimation study should compare the small linear correction with a disturbance-estimating physics observer while preserving nominal accuracy.
+
 ## Phase 0 — Foundation
 
-**Purpose:** Establish scope, organization, traceability, and acceptance logic.
+**Purpose:** Define the scope, organize the work, and decide what evidence each phase needs.
 
 ### Tasks
 
@@ -50,7 +72,8 @@ The baseline model is stable, reproducible, documented, and free of fault inject
 - [x] Implement the selected-device SC-01B half-bridge and its numerical verification campaign; retain failed operating points explicitly.
 - [x] Resolve the SC-01B modeled gate-drive failures in the declared five-case R2 fixture. The physical operating envelope remains unvalidated.
 - [x] Resolve strict SPICE failures with identical algebraic source waveforms and separate print/integration settings; retain the original rejected evidence and verify finer steps.
-- [ ] Identify receiver/decoder behavior and connect circuit events to the controller model when supported by evidence.
+- [x] Implement and numerically verify the assumed causal receiver/decoder connection to control; September 11 checkpoint records the development-domain rejection.
+- [ ] Identify receiver/decoder behavior and a defensible operating domain before accepting a revised comparative experiment.
 - [x] Add averaged motor-supply sag/interruption, explicit controller-state hold/reset, loaded plant continuity and MATLAB/Simulink coverage. Physical controller brownout remains a separate hardware-specific task.
 - [x] Complete fixed-seed Monte Carlo packet-loss execution and confidence-interval reporting.
 - [x] Sweep assumed parasitics, edge rates, path-transfer factors, and receiver sensitivity; record diagnostic-only and inactive controls separately.
@@ -84,9 +107,9 @@ Each fault has documented units, provenance, severity parameters, half-open acti
 
 ### Gate 3
 
-The controller responds predictably to every defined fault and avoids unsafe or unbounded simulated commands.
+The controller responds predictably to every defined fault and keeps simulated commands within safe, finite bounds.
 
-**Gate status:** The declared numerical implementation and bounded-command checks are verified in [Phase 3 evidence](../03_MATLAB/results/development/phase3/Phase3_Implementation_Report.md). The broader gate remains open: stationary freeze, small bias and slow drift can be missed; the default dropout can prevent observer reacquisition; zero-voltage stop permits loaded motion. These outcomes are retained, not treated as successful detection/recovery or physical safety.
+**Gate status:** [Phase 3 evidence](../03_MATLAB/results/development/phase3/Phase3_Implementation_Report.md) verifies the implemented numerical behavior and command limits. The broader gate remains open: stationary freeze, small bias and slow drift can be missed; the default dropout can prevent observer reacquisition; zero-voltage stop permits loaded motion. These remain recorded limitations. They do not count as successful detection, recovery or physical safety.
 
 ## Phase 4 — Electromagnetic Mitigation Models
 
@@ -99,7 +122,8 @@ The controller responds predictably to every defined fault and avoids unsafe or 
 - Compare shield and grounding equivalent circuits.
 - Create switching-level drive cases in Simscape Electrical.
 - [x] Freeze the first bounded four-way experiment design, including an actual differential-capacitance intervention, historical software policy, matched clean companions and separate development/evaluation fixtures.
-- [ ] Implement and accept the causal source/coupling/receiver/decoder-to-control interface (A02).
+- [x] Implement and numerically verify the causal source/coupling/receiver/decoder-to-control interface (A02 numerical scope).
+- [ ] Resolve receiver/topology characterization and accept the revised model domain; numerical integration alone does not close A02.
 - [ ] Execute and report all four experiment configurations: baseline, electromagnetic-only, software-only and combined protection (A01). A frozen design alone does not complete the comparison.
 
 ### Gate 4
@@ -122,12 +146,14 @@ All comparison cases use identical disturbances and report uncertainty, limitati
 
 The validated model reproduces specified measured behaviors within documented error bounds.
 
-## Immediate Next Milestone
+## Historical next milestone recorded 12 September 2026
+
+The [12 September progress review](Reviews/2026-09-12/Project_Progress_Review.md) recorded 468/468 passing local tests and unchanged checkpoint files at that review. The [receiver revision brief](Reviews/2026-09-12/Receiver_Revision_Brief.md) sets out the characterization work needed before a new plan. THVD1450 is a provisional modeling candidate; no replacement receiver is validated and no PLAN-V2 is frozen.
 
 The [causal receiver checkpoint](Causal_Receiver_Checkpoint.md) now implements and verifies A02's numerical source/circuit/receiver/decoder boundary while preserving the historical controller. All 468 tests and 116 exact legacy records pass. Native comparison passes 24/24 numerical records and 16/16 refinements.
 
 The unchanged [PLAN-V1](../04_EMI_Models/Four_Way_EMI_Experiment.md) stops at its development gate: all eight clean companions pass, DEV01 has no persistent EMI count error, and every exposed DEV02 arm exceeds the assumed 7 V common-mode domain. Its fallback diagnostics cannot support mitigation claims. The 96 evaluation and 16 closure records remain unopened; A01 / RES-005 and Gate 4 remain open.
 
-Next review the receiver/topology assumptions against a defensible operating domain, then freeze a new versioned plan and separate development/evaluation fixtures before further comparative evaluation. Preserve all PLAN-V1 data and criteria; do not retune that failed design. Physical source/cable/receiver identification and the partial literature review remain open.
+Next, review the receiver and circuit-topology assumptions and establish a defensible operating domain. Then freeze a new versioned plan with separate development and evaluation fixtures before comparing mitigation results. Preserve all PLAN-V1 data and criteria; do not retune that failed design. Physical source, cable and receiver identification and the partial literature review remain open.
 
-Drive/brake handoff, release interlocks and brake-aware estimation remain necessary for an integrated loaded restart claim. The existing zero-load comparison does not establish physical holding, safety, immunity or requirement approval. Formal Draft approvals and physical Gate 5 remain unchanged.
+An integrated loaded restart still needs drive/brake handoff, release interlocks and an estimator that accounts for brake torque. The existing zero-load comparison does not establish physical holding, safety, immunity or requirement approval. Formal Draft approvals and physical Gate 5 remain unchanged.

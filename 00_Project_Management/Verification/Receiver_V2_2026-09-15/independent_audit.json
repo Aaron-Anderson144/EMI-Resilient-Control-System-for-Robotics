@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": [
+    "640 unique cases",
+    "40 complete 16-variant circuit groups",
+    "320 matched clean/exposed pairs",
+    "all clean domains/counts/delay guards",
+    "summary counts independently reconstructed",
+    "valid-case signed voltages",
+    "pulse law comparisons independently reconstructed"
+  ],
+  "valid_cases": 640,
+  "outside_cases": 0,
+  "unresolved_cases": 0,
+  "valid_exposed_final_count_error_cases": 0,
+  "diagnostic_exposed_final_count_error_cases": 0,
+  "pulse_law_dependent_cases": 80,
+  "valid_pulse_law_dependent_cases": 80,
+  "cases_sha256": "006f5d8e4e00617ab055791e0c9f0623c181aa52c9c9f341bd34e7c2982a02b4",
+  "scope": "Independent saved-record coverage/summary audit; continuous solver verification is separate."
+}

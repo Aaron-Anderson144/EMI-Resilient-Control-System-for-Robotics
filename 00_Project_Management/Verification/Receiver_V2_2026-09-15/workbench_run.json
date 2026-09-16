@@ -1,0 +1,11 @@
+{
+  "run_id": "20260915T220331Z_85ff004252b0",
+  "project_relative_run": "12_Workbench/runs/20260915T220331Z_85ff004252b0",
+  "run_status": "completed",
+  "result_sha256": "62b36e35c9ce4897c713ca646cd4f491b77d7620eb731d7e2f9976ed39b86f0b",
+  "full_details": "12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details",
+  "source_identity_verified": true,
+  "physical_validation": false,
+  "evaluation_executed": false,
+  "details_preserved_in_workbench_run": true
+}

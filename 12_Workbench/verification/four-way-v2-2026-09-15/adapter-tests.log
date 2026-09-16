@@ -1,0 +1,33 @@
+
+	Home License -- for personal use only.  Not for government,
+	academic, research, commercial, or other organizational use.
+
+Running TestEmiWorkbenchAdapter
+.........
+================================================================================
+Verification failed in TestEmiWorkbenchAdapter/developmentCompletionKeepsFailedResearchGuards.
+    ---------------------
+    Framework Diagnostic:
+    ---------------------
+    verifyFalse failed.
+    --> The value must be logical. It is of type "double".
+    
+    Actual Value:
+         0
+    ------------------
+    Stack Information:
+    ------------------
+    In C:\Users\adand\OneDrive\Desktop\Projects\EMI-Resilient Control System for Robotics\12_Workbench\matlab\TestEmiWorkbenchAdapter.m (TestEmiWorkbenchAdapter.developmentCompletionKeepsFailedResearchGuards) at 143
+================================================================================
+. ..
+Done TestEmiWorkbenchAdapter
+__________
+
+Failure Summary:
+
+     Name                                                                    Failed  Incomplete  Reason(s)
+    =====================================================================================================================
+     TestEmiWorkbenchAdapter/developmentCompletionKeepsFailedResearchGuards    X                 Failed by verification.
+{Error using assert
+Assertion failed.
+} 

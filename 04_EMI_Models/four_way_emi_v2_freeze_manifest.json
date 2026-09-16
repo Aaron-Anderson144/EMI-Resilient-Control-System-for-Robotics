@@ -1,0 +1,280 @@
+{
+  "design_id": "FOUR-WAY-EMI-PLAN-V2",
+  "freeze_type": "conditional_protocol_only",
+  "frozen_utc": "2026-09-15T22:07:24.832604+00:00",
+  "evaluation_unopened": true,
+  "implementation_accepted": false,
+  "characterization_summary": "00_Project_Management/Verification/Receiver_V2_2026-09-15/summary.json",
+  "files": [
+    {
+      "path": "00_Project_Management/Local_Dependencies.json",
+      "bytes": 14694,
+      "sha256": "76f82e57a6c0b43326f4cf66d841cb83369a7a9604354b0e02b61aab7471f169"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/adapter-test-results.csv",
+      "bytes": 818,
+      "sha256": "5c1ba42250655797f252d247ac3fbf25e731d644e2003c4eb6c0f9e2e333408d"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/adapter-tests.log",
+      "bytes": 208,
+      "sha256": "0dffb07e25e949e40c37385e22cb904de807af12359f4e689f37f9c0d24dd381"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/audit_characterization.py",
+      "bytes": 4764,
+      "sha256": "1cc0012d4ff1dd86534dabd7d3181ee815dd9c7ff54f0b07430765e6326ef60e"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/backend-tests.log",
+      "bytes": 4392,
+      "sha256": "0b08d318742d6c224f3dd736aad88c6361e7f357037126b337f4840e2b82d5cb"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/browser-smoke.json",
+      "bytes": 67064,
+      "sha256": "bd7196719dbb55d685bbfcf589db8cf122fcd4b6fce23e76e81a3930d2ebb459"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/cases.csv",
+      "bytes": 283965,
+      "sha256": "006f5d8e4e00617ab055791e0c9f0623c181aa52c9c9f341bd34e7c2982a02b4"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/characterization.png",
+      "bytes": 80809,
+      "sha256": "b39a8dc85de8f1bec30e0935398d1bec0adc4e89cd3a3a24743f02966d41daa4"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/desktop-boundary-tests.log",
+      "bytes": 670,
+      "sha256": "3c079ff5dd3cb412b4a6a058e628dd7416afe4e037d180db7a842b98c78c72e0"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/independent_audit.json",
+      "bytes": 789,
+      "sha256": "593eb8934ec5510c494256923d5a77669cb54e8d48217b0212fde0995703e574"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/parameters.json",
+      "bytes": 3230,
+      "sha256": "ab6fa2b748f22c5ba9f1347288766ccecb158e85e2a2726bbe06024a4066859f"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/README.md",
+      "bytes": 3454,
+      "sha256": "63c89c8e2062e576a0b1ed6c4edd27f894420a95099fcef03c8d2741388fdff2"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/receiver_tests.csv",
+      "bytes": 689,
+      "sha256": "99567a9d3e0431d959f13814573c1ebc8993a1f891f1a3d69b072e152344427b"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/receiver_tests.log",
+      "bytes": 190,
+      "sha256": "8e8ad5b32f99a998ab6043b8b4d0994de5fa3093e0aa01c610d7b5df18dbe517"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/report.md",
+      "bytes": 4007,
+      "sha256": "c8c1a165e453d84f116a4af91820ee766551d8b9bf4cdb3303fd61c3e6ae3542"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/reserved_v2_axes.json",
+      "bytes": 452,
+      "sha256": "79cd48d93d94d98dc66015a894e5b51cf6ebb64d5703a8614ef6df2a832a3cbb"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/source_identity.json",
+      "bytes": 2436,
+      "sha256": "e4d6ff6ce4f4248804d7a6995246d7dd4440bb4388bebc2a7015122f0ee7142a"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/summary.json",
+      "bytes": 938554,
+      "sha256": "a256ae3e8caf7956f64bcf4ce94fa2bce051bf69003cfb373c1f93a29720f6f3"
+    },
+    {
+      "path": "00_Project_Management/Verification/Receiver_V2_2026-09-15/workbench_run.json",
+      "bytes": 508,
+      "sha256": "30bcf2d31e2cd3e83588592bcbbb88f22647c76f6ce4bcdb973f14db5a7f287f"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_configuration.m",
+      "bytes": 770,
+      "sha256": "3fae3440a31bf94be7d07802e509d45fb48fed3b13ef2f5b1ee8b646372e8c94"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_control_configuration.m",
+      "bytes": 1396,
+      "sha256": "ebcc663c66cbbcb07fe43975557ab3de214b5e8e46c5819bb5fad3b93ebaf66c"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_motion_configuration.m",
+      "bytes": 2737,
+      "sha256": "78e6e9328a1cd4d8f0d405bbd12d32b617d7168a1fe790f9afedb5b1fe881d07"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_observer_configuration.m",
+      "bytes": 2598,
+      "sha256": "bb4e80d341354c81c4be54e7b5a32dd4347dcdabfe5eddf11afbe5ee6155a852"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_reacquisition_configuration.m",
+      "bytes": 5786,
+      "sha256": "1ba9e49b21eb65a08389501e94b6008d45435c55b2b3416d344dfb9926b4d5a4"
+    },
+    {
+      "path": "03_MATLAB/functions/phase3_supervisor_configuration.m",
+      "bytes": 2480,
+      "sha256": "9ee958efd3c72e7d1d0b33afb3c2e4e68f4fec4cc27dcd2235c950d78c44f203"
+    },
+    {
+      "path": "03_MATLAB/parameters/actuator_parameters.m",
+      "bytes": 5280,
+      "sha256": "1aae0d6c2543d8d1bfe50af11a62b677cdc92c308338a72b2ae13f19d1ff32dc"
+    },
+    {
+      "path": "04_EMI_Models/four_way_emi_configuration.json",
+      "bytes": 5083,
+      "sha256": "b18e2107175105c77e520a05ffb3a976ee5a8e8b5a3539b01e17df4a29817782"
+    },
+    {
+      "path": "04_EMI_Models/Four_Way_EMI_Experiment.md",
+      "bytes": 20936,
+      "sha256": "157daec046c3742b2f78a1071298606789759db04101c0d0a63bc43c3ce5f0be"
+    },
+    {
+      "path": "04_EMI_Models/Four_Way_EMI_Experiment_V2.md",
+      "bytes": 13328,
+      "sha256": "bea961613c181f42daf17c5a07e96ea4d8952c65cec89d23fdac8b9d417ab13d"
+    },
+    {
+      "path": "04_EMI_Models/four_way_emi_fixtures.csv",
+      "bytes": 1278,
+      "sha256": "7723eb272faf969c1763e96dabcb12049ba8d810c6d8fe5ce04e23d9c1aec549"
+    },
+    {
+      "path": "04_EMI_Models/four_way_emi_freeze_manifest.json",
+      "bytes": 3716,
+      "sha256": "78981aec8431fffb36e326f2d58730086338b64e0d2b8d1c2076b83f3ab38600"
+    },
+    {
+      "path": "04_EMI_Models/four_way_emi_v2_configuration.json",
+      "bytes": 4570,
+      "sha256": "039bbe9b9feb4bcea8d5c8e98622fdc2f68471b5849b43ece270e498ae3ae1fe"
+    },
+    {
+      "path": "04_EMI_Models/four_way_emi_v2_fixtures.csv",
+      "bytes": 504,
+      "sha256": "24c04cdc5fd3b63953c1cafe118e9a9a42a9bcf2fc356b775d7b50395fa2527c"
+    },
+    {
+      "path": "04_EMI_Models/Receiver_V2_Contract.md",
+      "bytes": 9281,
+      "sha256": "c37c7e42ed238f2f6e762a88ee5cb2ed4e45862c48d2f5cda0891c4fc4b0ac07"
+    },
+    {
+      "path": "04_EMI_Models/verify_four_way_v2.py",
+      "bytes": 5053,
+      "sha256": "b914940054bf80eda06d6fee3285ba161c9b12d37fb0057aae5c506195873b71"
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_analyze.m",
+      "bytes": 6772,
+      "sha256": "ae03d681274c30007759c1d4c6dd7a5065716fc98401a89b8b9e2a70cce1ee06"
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_behavior.m",
+      "bytes": 1370,
+      "sha256": "34efde91bb78d6e28dcee891c39f702cf9dbe6571187c583a08e95f7eb1b489a"
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_decode.m",
+      "bytes": 1159,
+      "sha256": "32bad95d169efd3f0c494e5dea558997bdfba6e0ced72ddb73f6defa4482a37d"
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_fixture.m",
+      "bytes": 935,
+      "sha256": "8d7fb1f0ec0c830e9a27ece286bbad1e2f54622c9e08dd3aba8ecd7373f8502b"
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_logic.m",
+      "bytes": 1807,
+      "sha256": "199a465c9829991249b3908ca8cc1729e638289ea92cd6316db809bc94515fb9"
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_native_source.m",
+      "bytes": 978,
+      "sha256": "3040a307b31cee0f08d9089d2c2b508161eaa8ea6fdb2efd231efc6ae9a38dfd"
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_network.m",
+      "bytes": 1054,
+      "sha256": "93973aac4904c00de6eff0940d89991a0a376e33fd2b7f9802eb19b86ac6a1fc"
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_parameters.m",
+      "bytes": 247,
+      "sha256": "971ecf3ff34b30e5956b0205c19f4e4edf52f48cb8fe611660db3869168e65d3"
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_segments.m",
+      "bytes": 1237,
+      "sha256": "009a4e7567a1bc94e62a08452f03a77da50adffd9eafc69d0895e798deba41e8"
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_signal.m",
+      "bytes": 444,
+      "sha256": "f82a4ef5af0a8b7695b1131f9e752d9a1be73faf9624714a977c16a0000862da"
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/README.md",
+      "bytes": 8500,
+      "sha256": "6a2ac132110d9e5c6d1f85aec262031dc1fea9e93b6bc9b96365f4071ca42e91"
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/receiver_characterization_config.json",
+      "bytes": 2976,
+      "sha256": "32f5918dfd22d7c67d14660b9906bec8edb1db2d42147a9f77e2718e25dcac93"
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/scripts/run_receiver_characterization.m",
+      "bytes": 16715,
+      "sha256": "0dbd29238cc46bb2f6ef3db3130e59bb39b53bb42e1acd4f70b2a6c15c6c29e6"
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/tests/TestReceiverV2.m",
+      "bytes": 5820,
+      "sha256": "283a4f4aabf44abf8e7550e7c8c069257a42183e03c9ffa36c5a5035ac56fccf"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_parameters.m",
+      "bytes": 1225,
+      "sha256": "2e31367987576c6e2df2ad8c1c1ebd5410539cebf00cd23b65bb67b26e35af6b"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01A/functions/sc01a_state_space.m",
+      "bytes": 1806,
+      "sha256": "97c61a488c103478072c65ab2adba4404b1ff825bb874c7640678b80b3c5c8e2"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/results/verification/nominal/native_finest.csv",
+      "bytes": 11927554,
+      "sha256": "1ecdd83ee4f4846b70e2d40ba04f4b3188e737c94f08300a5bbbfcc36acb9cd5"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/results/verification/nominal/parameters.json",
+      "bytes": 2295,
+      "sha256": "8bcf382b988bc05f70d1de16a5c33297f15c1a6b06436e386e30514f528f112e"
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/results/verification/source_identity.json",
+      "bytes": 14061,
+      "sha256": "beb5b681bc730d5683d2e626b9961bf37aa6626fec90959f8f996134b26c97cd"
+    }
+  ]
+}

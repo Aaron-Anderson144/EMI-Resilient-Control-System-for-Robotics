@@ -1,0 +1,17 @@
+Variant,ThresholdPair,Rise_V,Fall_V,AssumedLatency_ns,PulseLaw
+V01,typical_illustration,-0.1,-0.13,25.0,transport
+V02,typical_illustration,-0.1,-0.13,25.0,inertial
+V03,typical_illustration,-0.1,-0.13,40.0,transport
+V04,typical_illustration,-0.1,-0.13,40.0,inertial
+V05,lower_illustration,-0.17,-0.2,25.0,transport
+V06,lower_illustration,-0.17,-0.2,25.0,inertial
+V07,lower_illustration,-0.17,-0.2,40.0,transport
+V08,lower_illustration,-0.17,-0.2,40.0,inertial
+V09,upper_illustration,-0.02,-0.05,25.0,transport
+V10,upper_illustration,-0.02,-0.05,25.0,inertial
+V11,upper_illustration,-0.02,-0.05,40.0,transport
+V12,upper_illustration,-0.02,-0.05,40.0,inertial
+V13,narrow_hysteresis_assumption,-0.1,-0.105,25.0,transport
+V14,narrow_hysteresis_assumption,-0.1,-0.105,25.0,inertial
+V15,narrow_hysteresis_assumption,-0.1,-0.105,40.0,transport
+V16,narrow_hysteresis_assumption,-0.1,-0.105,40.0,inertial

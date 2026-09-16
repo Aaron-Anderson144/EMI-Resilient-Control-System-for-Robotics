@@ -1,0 +1,13 @@
+Name,Passed,Failed,Incomplete,Duration_s
+TestEmiWorkbenchAdapter/unsupportedWorkflowFailsWithReadableResult,1,0,0,3.9301415
+TestEmiWorkbenchAdapter/existingEmptyOutputIsRejected,1,0,0,0.2290346
+TestEmiWorkbenchAdapter/historicalFilesAndResultAreNeverOverwritten,1,0,0,0.2501214
+TestEmiWorkbenchAdapter/missingProjectSavesFailureBeforeReturning,1,0,0,0.172651
+TestEmiWorkbenchAdapter/baselineExportsStrictJsonAndRestoresCallerState,1,0,0,2.351485
+TestEmiWorkbenchAdapter/workflowFailureRetainsPartialEvidenceAndRestoresState,1,0,0,0.6393733
+TestEmiWorkbenchAdapter/characterizationCompletionDoesNotRequireScientificAcceptance,1,0,0,0.8390587
+TestEmiWorkbenchAdapter/characterizationFailureKeepsPartialOutputs,1,0,0,0.6113313
+TestEmiWorkbenchAdapter/missingCharacterizationSourceFailsClearly,1,0,0,0.3990739
+TestEmiWorkbenchAdapter/developmentCompletionKeepsFailedResearchGuards,1,0,0,3.7361639
+TestEmiWorkbenchAdapter/incompleteDevelopmentRetainsFailuresAndPairs,1,0,0,1.0644909
+TestEmiWorkbenchAdapter/developmentParserRejectsReservedEvaluation,1,0,0,0.6227405

@@ -1,0 +1,1392 @@
+{
+  "schema": "signal-lab-receiver-v2-browser-verification-1",
+  "verifiedAt": "2026-09-15T22:07:24.355300+00:00",
+  "runId": "20260915T220331Z_85ff004252b0",
+  "runPath": "12_Workbench/runs/20260915T220331Z_85ff004252b0",
+  "runStatus": "completed",
+  "browser": "Codex in-app browser",
+  "launchMethod": "Clicked Run experiment in the browser with Receiver v2 characterization selected",
+  "metrics": {
+    "totalCases": 640,
+    "validCases": 640,
+    "invalidCases": 0,
+    "unresolvedCases": 0,
+    "cleanErrorCases": 0,
+    "exposedErrorCases": 0,
+    "pulseLawDependentCases": 80
+  },
+  "physicalValidation": false,
+  "evaluationReady": false,
+  "browserChecks": {
+    "duplicateSubmissionDisabledWhileStartingAndRunning": true,
+    "completedStatusAndMetricsVisible": true,
+    "conditionalScopeAndCleanPrerequisiteCaveatVisible": true,
+    "all640CaseRowsRendered": true,
+    "circuitCapacitanceLatencyAndDomainConvergenceDisplayed": true,
+    "detailOutputDisclosureOpenedAndClosed": true,
+    "detailOutputLinks": 160,
+    "plotLoaded": true,
+    "plotDimensions": [
+      1786,
+      980
+    ],
+    "executionLogOpenedAndCompletionVisible": true,
+    "consoleErrors": 0,
+    "narrowViewport": {
+      "width": 390,
+      "height": 844,
+      "documentClientWidth": 375,
+      "documentScrollWidth": 375,
+      "caseTableClientWidth": 278,
+      "caseTableScrollWidth": 742,
+      "pageHorizontalOverflow": false,
+      "tableScrollsWithinPanel": true
+    },
+    "viewportOverrideReset": true
+  },
+  "http": {
+    "documentsChecked": 10,
+    "artifactsChecked": 168,
+    "allPassed": true,
+    "checks": [
+      {
+        "kind": "document",
+        "name": "Project overview",
+        "url": "/artifacts/README.md",
+        "status": 200,
+        "bytes": 14669
+      },
+      {
+        "kind": "document",
+        "name": "Research roadmap",
+        "url": "/artifacts/00_Project_Management/Roadmap.md",
+        "status": 200,
+        "bytes": 13520
+      },
+      {
+        "kind": "document",
+        "name": "Receiver revision brief",
+        "url": "/artifacts/00_Project_Management/Reviews/2026-09-12/Receiver_Revision_Brief.md",
+        "status": 200,
+        "bytes": 7311
+      },
+      {
+        "kind": "document",
+        "name": "Receiver v2 contract",
+        "url": "/artifacts/04_EMI_Models/Receiver_V2_Contract.md",
+        "status": 200,
+        "bytes": 9281
+      },
+      {
+        "kind": "document",
+        "name": "Next four-way experiment",
+        "url": "/artifacts/04_EMI_Models/Four_Way_EMI_Experiment_V2.md",
+        "status": 200,
+        "bytes": 13328
+      },
+      {
+        "kind": "document",
+        "name": "Progress report",
+        "url": "/artifacts/09_Report/Publication_2026-09-11/EMI_Robotics_Progress_Report.pdf",
+        "status": 200,
+        "bytes": 841696
+      },
+      {
+        "kind": "document",
+        "name": "EDMD project",
+        "url": "/artifacts/11_EDMD_Hybrid_Estimation/README.md",
+        "status": 200,
+        "bytes": 8089
+      },
+      {
+        "kind": "document",
+        "name": "EDMD verification",
+        "url": "/artifacts/11_EDMD_Hybrid_Estimation/docs/VERIFICATION_AND_VALIDATION.md",
+        "status": 200,
+        "bytes": 9905
+      },
+      {
+        "kind": "document",
+        "name": "EDMD findings",
+        "url": "/artifacts/11_EDMD_Hybrid_Estimation/docs/RESULTS_20260913.md",
+        "status": 200,
+        "bytes": 9194
+      },
+      {
+        "kind": "document",
+        "name": "Complete verification review",
+        "url": "/artifacts/00_Project_Management/Reviews/2026-09-12/Complete_Verification/Verification_Report.md",
+        "status": 200,
+        "bytes": 9545
+      },
+      {
+        "kind": "run_artifact",
+        "name": "matlab.log",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/matlab.log",
+        "status": 200,
+        "bytes": 2783
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/cases.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/cases.csv",
+        "status": 200,
+        "bytes": 283965
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/characterization.png",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/characterization.png",
+        "status": 200,
+        "bytes": 80809
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp300_cd1000_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp300_cd1000_false.mat",
+        "status": 200,
+        "bytes": 824919
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp300_cd1000_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp300_cd1000_false_crossings.csv",
+        "status": 200,
+        "bytes": 903
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp300_cd1000_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp300_cd1000_false_logic.csv",
+        "status": 200,
+        "bytes": 9618
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp300_cd1000_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp300_cd1000_false_trace.csv",
+        "status": 200,
+        "bytes": 1475146
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp300_cd1000_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp300_cd1000_true.mat",
+        "status": 200,
+        "bytes": 843176
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp300_cd1000_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp300_cd1000_true_crossings.csv",
+        "status": 200,
+        "bytes": 902
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp300_cd1000_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp300_cd1000_true_logic.csv",
+        "status": 200,
+        "bytes": 9594
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp300_cd1000_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp300_cd1000_true_trace.csv",
+        "status": 200,
+        "bytes": 1471495
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp300_cd100_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp300_cd100_false.mat",
+        "status": 200,
+        "bytes": 623758
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp300_cd100_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp300_cd100_false_crossings.csv",
+        "status": 200,
+        "bytes": 904
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp300_cd100_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp300_cd100_false_logic.csv",
+        "status": 200,
+        "bytes": 9618
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp300_cd100_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp300_cd100_false_trace.csv",
+        "status": 200,
+        "bytes": 1506007
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp300_cd100_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp300_cd100_true.mat",
+        "status": 200,
+        "bytes": 750996
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp300_cd100_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp300_cd100_true_crossings.csv",
+        "status": 200,
+        "bytes": 903
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp300_cd100_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp300_cd100_true_logic.csv",
+        "status": 200,
+        "bytes": 9606
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp300_cd100_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp300_cd100_true_trace.csv",
+        "status": 200,
+        "bytes": 1485365
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp30_cd1000_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp30_cd1000_false.mat",
+        "status": 200,
+        "bytes": 813657
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp30_cd1000_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp30_cd1000_false_crossings.csv",
+        "status": 200,
+        "bytes": 903
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp30_cd1000_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp30_cd1000_false_logic.csv",
+        "status": 200,
+        "bytes": 9582
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp30_cd1000_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp30_cd1000_false_trace.csv",
+        "status": 200,
+        "bytes": 1478911
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp30_cd1000_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp30_cd1000_true.mat",
+        "status": 200,
+        "bytes": 824917
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp30_cd1000_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp30_cd1000_true_crossings.csv",
+        "status": 200,
+        "bytes": 904
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp30_cd1000_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp30_cd1000_true_logic.csv",
+        "status": 200,
+        "bytes": 9594
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp30_cd1000_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp30_cd1000_true_trace.csv",
+        "status": 200,
+        "bytes": 1476792
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp30_cd100_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp30_cd100_false.mat",
+        "status": 200,
+        "bytes": 534757
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp30_cd100_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp30_cd100_false_crossings.csv",
+        "status": 200,
+        "bytes": 905
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp30_cd100_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp30_cd100_false_logic.csv",
+        "status": 200,
+        "bytes": 9630
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp30_cd100_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp30_cd100_false_trace.csv",
+        "status": 200,
+        "bytes": 1435968
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp30_cd100_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp30_cd100_true.mat",
+        "status": 200,
+        "bytes": 709549
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp30_cd100_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp30_cd100_true_crossings.csv",
+        "status": 200,
+        "bytes": 905
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp30_cd100_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp30_cd100_true_logic.csv",
+        "status": 200,
+        "bytes": 9630
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_+1_cp30_cd100_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_%2B1_cp30_cd100_true_trace.csv",
+        "status": 200,
+        "bytes": 1488610
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp300_cd1000_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp300_cd1000_false.mat",
+        "status": 200,
+        "bytes": 825023
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp300_cd1000_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp300_cd1000_false_crossings.csv",
+        "status": 200,
+        "bytes": 903
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp300_cd1000_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp300_cd1000_false_logic.csv",
+        "status": 200,
+        "bytes": 9618
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp300_cd1000_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp300_cd1000_false_trace.csv",
+        "status": 200,
+        "bytes": 1475146
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp300_cd1000_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp300_cd1000_true.mat",
+        "status": 200,
+        "bytes": 843819
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp300_cd1000_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp300_cd1000_true_crossings.csv",
+        "status": 200,
+        "bytes": 1353
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp300_cd1000_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp300_cd1000_true_logic.csv",
+        "status": 200,
+        "bytes": 13608
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp300_cd1000_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp300_cd1000_true_trace.csv",
+        "status": 200,
+        "bytes": 1471221
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp300_cd100_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp300_cd100_false.mat",
+        "status": 200,
+        "bytes": 623864
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp300_cd100_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp300_cd100_false_crossings.csv",
+        "status": 200,
+        "bytes": 904
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp300_cd100_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp300_cd100_false_logic.csv",
+        "status": 200,
+        "bytes": 9618
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp300_cd100_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp300_cd100_false_trace.csv",
+        "status": 200,
+        "bytes": 1506007
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp300_cd100_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp300_cd100_true.mat",
+        "status": 200,
+        "bytes": 751844
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp300_cd100_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp300_cd100_true_crossings.csv",
+        "status": 200,
+        "bytes": 1353
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp300_cd100_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp300_cd100_true_logic.csv",
+        "status": 200,
+        "bytes": 13628
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp300_cd100_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp300_cd100_true_trace.csv",
+        "status": 200,
+        "bytes": 1487507
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp30_cd1000_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp30_cd1000_false.mat",
+        "status": 200,
+        "bytes": 813764
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp30_cd1000_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp30_cd1000_false_crossings.csv",
+        "status": 200,
+        "bytes": 903
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp30_cd1000_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp30_cd1000_false_logic.csv",
+        "status": 200,
+        "bytes": 9582
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp30_cd1000_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp30_cd1000_false_trace.csv",
+        "status": 200,
+        "bytes": 1478911
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp30_cd1000_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp30_cd1000_true.mat",
+        "status": 200,
+        "bytes": 824121
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp30_cd1000_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp30_cd1000_true_crossings.csv",
+        "status": 200,
+        "bytes": 905
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp30_cd1000_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp30_cd1000_true_logic.csv",
+        "status": 200,
+        "bytes": 9606
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp30_cd1000_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp30_cd1000_true_trace.csv",
+        "status": 200,
+        "bytes": 1477733
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp30_cd100_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp30_cd100_false.mat",
+        "status": 200,
+        "bytes": 534862
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp30_cd100_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp30_cd100_false_crossings.csv",
+        "status": 200,
+        "bytes": 905
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp30_cd100_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp30_cd100_false_logic.csv",
+        "status": 200,
+        "bytes": 9630
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp30_cd100_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp30_cd100_false_trace.csv",
+        "status": 200,
+        "bytes": 1435968
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp30_cd100_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp30_cd100_true.mat",
+        "status": 200,
+        "bytes": 709891
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp30_cd100_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp30_cd100_true_crossings.csv",
+        "status": 200,
+        "bytes": 904
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp30_cd100_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp30_cd100_true_logic.csv",
+        "status": 200,
+        "bytes": 9618
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/native_-1_cp30_cd100_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/native_-1_cp30_cd100_true_trace.csv",
+        "status": 200,
+        "bytes": 1491796
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_+1_cp30_cd1000_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_%2B1_cp30_cd1000_false.mat",
+        "status": 200,
+        "bytes": 463800
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_+1_cp30_cd1000_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_%2B1_cp30_cd1000_false_crossings.csv",
+        "status": 200,
+        "bytes": 903
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_+1_cp30_cd1000_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_%2B1_cp30_cd1000_false_logic.csv",
+        "status": 200,
+        "bytes": 9582
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_+1_cp30_cd1000_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_%2B1_cp30_cd1000_false_trace.csv",
+        "status": 200,
+        "bytes": 1479553
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_+1_cp30_cd1000_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_%2B1_cp30_cd1000_true.mat",
+        "status": 200,
+        "bytes": 464529
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_+1_cp30_cd1000_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_%2B1_cp30_cd1000_true_crossings.csv",
+        "status": 200,
+        "bytes": 903
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_+1_cp30_cd1000_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_%2B1_cp30_cd1000_true_logic.csv",
+        "status": 200,
+        "bytes": 9594
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_+1_cp30_cd1000_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_%2B1_cp30_cd1000_true_trace.csv",
+        "status": 200,
+        "bytes": 1479047
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_+1_cp30_cd100_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_%2B1_cp30_cd100_false.mat",
+        "status": 200,
+        "bytes": 301787
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_+1_cp30_cd100_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_%2B1_cp30_cd100_false_crossings.csv",
+        "status": 200,
+        "bytes": 903
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_+1_cp30_cd100_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_%2B1_cp30_cd100_false_logic.csv",
+        "status": 200,
+        "bytes": 9618
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_+1_cp30_cd100_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_%2B1_cp30_cd100_false_trace.csv",
+        "status": 200,
+        "bytes": 1508455
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_+1_cp30_cd100_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_%2B1_cp30_cd100_true.mat",
+        "status": 200,
+        "bytes": 304577
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_+1_cp30_cd100_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_%2B1_cp30_cd100_true_crossings.csv",
+        "status": 200,
+        "bytes": 1355
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_+1_cp30_cd100_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_%2B1_cp30_cd100_true_logic.csv",
+        "status": 200,
+        "bytes": 12344
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_+1_cp30_cd100_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_%2B1_cp30_cd100_true_trace.csv",
+        "status": 200,
+        "bytes": 1509489
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_-1_cp30_cd1000_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_-1_cp30_cd1000_false.mat",
+        "status": 200,
+        "bytes": 463801
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_-1_cp30_cd1000_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_-1_cp30_cd1000_false_crossings.csv",
+        "status": 200,
+        "bytes": 903
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_-1_cp30_cd1000_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_-1_cp30_cd1000_false_logic.csv",
+        "status": 200,
+        "bytes": 9582
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_-1_cp30_cd1000_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_-1_cp30_cd1000_false_trace.csv",
+        "status": 200,
+        "bytes": 1479553
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_-1_cp30_cd1000_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_-1_cp30_cd1000_true.mat",
+        "status": 200,
+        "bytes": 464621
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_-1_cp30_cd1000_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_-1_cp30_cd1000_true_crossings.csv",
+        "status": 200,
+        "bytes": 901
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_-1_cp30_cd1000_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_-1_cp30_cd1000_true_logic.csv",
+        "status": 200,
+        "bytes": 9570
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_-1_cp30_cd1000_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_-1_cp30_cd1000_true_trace.csv",
+        "status": 200,
+        "bytes": 1479040
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_-1_cp30_cd100_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_-1_cp30_cd100_false.mat",
+        "status": 200,
+        "bytes": 301789
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_-1_cp30_cd100_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_-1_cp30_cd100_false_crossings.csv",
+        "status": 200,
+        "bytes": 903
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_-1_cp30_cd100_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_-1_cp30_cd100_false_logic.csv",
+        "status": 200,
+        "bytes": 9618
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_-1_cp30_cd100_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_-1_cp30_cd100_false_trace.csv",
+        "status": 200,
+        "bytes": 1508455
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_-1_cp30_cd100_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_-1_cp30_cd100_true.mat",
+        "status": 200,
+        "bytes": 304513
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_-1_cp30_cd100_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_-1_cp30_cd100_true_crossings.csv",
+        "status": 200,
+        "bytes": 1356
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_-1_cp30_cd100_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_-1_cp30_cd100_true_logic.csv",
+        "status": 200,
+        "bytes": 12336
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_10ns_-1_cp30_cd100_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_10ns_-1_cp30_cd100_true_trace.csv",
+        "status": 200,
+        "bytes": 1509539
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_+1_cp30_cd1000_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_%2B1_cp30_cd1000_false.mat",
+        "status": 200,
+        "bytes": 463792
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_+1_cp30_cd1000_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_%2B1_cp30_cd1000_false_crossings.csv",
+        "status": 200,
+        "bytes": 904
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_+1_cp30_cd1000_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_%2B1_cp30_cd1000_false_logic.csv",
+        "status": 200,
+        "bytes": 9594
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_+1_cp30_cd1000_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_%2B1_cp30_cd1000_false_trace.csv",
+        "status": 200,
+        "bytes": 1479541
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_+1_cp30_cd1000_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_%2B1_cp30_cd1000_true.mat",
+        "status": 200,
+        "bytes": 462148
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_+1_cp30_cd1000_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_%2B1_cp30_cd1000_true_crossings.csv",
+        "status": 200,
+        "bytes": 902
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_+1_cp30_cd1000_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_%2B1_cp30_cd1000_true_logic.csv",
+        "status": 200,
+        "bytes": 9594
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_+1_cp30_cd1000_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_%2B1_cp30_cd1000_true_trace.csv",
+        "status": 200,
+        "bytes": 1479503
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_+1_cp30_cd100_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_%2B1_cp30_cd100_false.mat",
+        "status": 200,
+        "bytes": 301769
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_+1_cp30_cd100_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_%2B1_cp30_cd100_false_crossings.csv",
+        "status": 200,
+        "bytes": 905
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_+1_cp30_cd100_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_%2B1_cp30_cd100_false_logic.csv",
+        "status": 200,
+        "bytes": 9630
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_+1_cp30_cd100_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_%2B1_cp30_cd100_false_trace.csv",
+        "status": 200,
+        "bytes": 1508486
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_+1_cp30_cd100_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_%2B1_cp30_cd100_true.mat",
+        "status": 200,
+        "bytes": 309332
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_+1_cp30_cd100_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_%2B1_cp30_cd100_true_crossings.csv",
+        "status": 200,
+        "bytes": 904
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_+1_cp30_cd100_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_%2B1_cp30_cd100_true_logic.csv",
+        "status": 200,
+        "bytes": 9630
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_+1_cp30_cd100_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_%2B1_cp30_cd100_true_trace.csv",
+        "status": 200,
+        "bytes": 1508501
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_-1_cp30_cd1000_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_-1_cp30_cd1000_false.mat",
+        "status": 200,
+        "bytes": 463793
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_-1_cp30_cd1000_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_-1_cp30_cd1000_false_crossings.csv",
+        "status": 200,
+        "bytes": 904
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_-1_cp30_cd1000_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_-1_cp30_cd1000_false_logic.csv",
+        "status": 200,
+        "bytes": 9594
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_-1_cp30_cd1000_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_-1_cp30_cd1000_false_trace.csv",
+        "status": 200,
+        "bytes": 1479541
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_-1_cp30_cd1000_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_-1_cp30_cd1000_true.mat",
+        "status": 200,
+        "bytes": 465830
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_-1_cp30_cd1000_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_-1_cp30_cd1000_true_crossings.csv",
+        "status": 200,
+        "bytes": 904
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_-1_cp30_cd1000_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_-1_cp30_cd1000_true_logic.csv",
+        "status": 200,
+        "bytes": 9594
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_-1_cp30_cd1000_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_-1_cp30_cd1000_true_trace.csv",
+        "status": 200,
+        "bytes": 1478941
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_-1_cp30_cd100_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_-1_cp30_cd100_false.mat",
+        "status": 200,
+        "bytes": 301768
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_-1_cp30_cd100_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_-1_cp30_cd100_false_crossings.csv",
+        "status": 200,
+        "bytes": 905
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_-1_cp30_cd100_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_-1_cp30_cd100_false_logic.csv",
+        "status": 200,
+        "bytes": 9630
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_-1_cp30_cd100_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_-1_cp30_cd100_false_trace.csv",
+        "status": 200,
+        "bytes": 1508486
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_-1_cp30_cd100_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_-1_cp30_cd100_true.mat",
+        "status": 200,
+        "bytes": 310698
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_-1_cp30_cd100_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_-1_cp30_cd100_true_crossings.csv",
+        "status": 200,
+        "bytes": 1808
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_-1_cp30_cd100_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_-1_cp30_cd100_true_logic.csv",
+        "status": 200,
+        "bytes": 15074
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_200ns_-1_cp30_cd100_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_200ns_-1_cp30_cd100_true_trace.csv",
+        "status": 200,
+        "bytes": 1508611
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_+1_cp30_cd1000_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_%2B1_cp30_cd1000_false.mat",
+        "status": 200,
+        "bytes": 463810
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_+1_cp30_cd1000_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_%2B1_cp30_cd1000_false_crossings.csv",
+        "status": 200,
+        "bytes": 903
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_+1_cp30_cd1000_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_%2B1_cp30_cd1000_false_logic.csv",
+        "status": 200,
+        "bytes": 9582
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_+1_cp30_cd1000_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_%2B1_cp30_cd1000_false_trace.csv",
+        "status": 200,
+        "bytes": 1479560
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_+1_cp30_cd1000_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_%2B1_cp30_cd1000_true.mat",
+        "status": 200,
+        "bytes": 464522
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_+1_cp30_cd1000_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_%2B1_cp30_cd1000_true_crossings.csv",
+        "status": 200,
+        "bytes": 902
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_+1_cp30_cd1000_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_%2B1_cp30_cd1000_true_logic.csv",
+        "status": 200,
+        "bytes": 9570
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_+1_cp30_cd1000_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_%2B1_cp30_cd1000_true_trace.csv",
+        "status": 200,
+        "bytes": 1479100
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_+1_cp30_cd100_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_%2B1_cp30_cd100_false.mat",
+        "status": 200,
+        "bytes": 301771
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_+1_cp30_cd100_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_%2B1_cp30_cd100_false_crossings.csv",
+        "status": 200,
+        "bytes": 905
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_+1_cp30_cd100_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_%2B1_cp30_cd100_false_logic.csv",
+        "status": 200,
+        "bytes": 9630
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_+1_cp30_cd100_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_%2B1_cp30_cd100_false_trace.csv",
+        "status": 200,
+        "bytes": 1508502
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_+1_cp30_cd100_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_%2B1_cp30_cd100_true.mat",
+        "status": 200,
+        "bytes": 304732
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_+1_cp30_cd100_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_%2B1_cp30_cd100_true_crossings.csv",
+        "status": 200,
+        "bytes": 1358
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_+1_cp30_cd100_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_%2B1_cp30_cd100_true_logic.csv",
+        "status": 200,
+        "bytes": 12352
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_+1_cp30_cd100_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_%2B1_cp30_cd100_true_trace.csv",
+        "status": 200,
+        "bytes": 1509480
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_-1_cp30_cd1000_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_-1_cp30_cd1000_false.mat",
+        "status": 200,
+        "bytes": 463808
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_-1_cp30_cd1000_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_-1_cp30_cd1000_false_crossings.csv",
+        "status": 200,
+        "bytes": 903
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_-1_cp30_cd1000_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_-1_cp30_cd1000_false_logic.csv",
+        "status": 200,
+        "bytes": 9582
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_-1_cp30_cd1000_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_-1_cp30_cd1000_false_trace.csv",
+        "status": 200,
+        "bytes": 1479560
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_-1_cp30_cd1000_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_-1_cp30_cd1000_true.mat",
+        "status": 200,
+        "bytes": 464692
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_-1_cp30_cd1000_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_-1_cp30_cd1000_true_crossings.csv",
+        "status": 200,
+        "bytes": 903
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_-1_cp30_cd1000_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_-1_cp30_cd1000_true_logic.csv",
+        "status": 200,
+        "bytes": 9582
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_-1_cp30_cd1000_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_-1_cp30_cd1000_true_trace.csv",
+        "status": 200,
+        "bytes": 1479118
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_-1_cp30_cd100_false.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_-1_cp30_cd100_false.mat",
+        "status": 200,
+        "bytes": 301772
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_-1_cp30_cd100_false_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_-1_cp30_cd100_false_crossings.csv",
+        "status": 200,
+        "bytes": 905
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_-1_cp30_cd100_false_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_-1_cp30_cd100_false_logic.csv",
+        "status": 200,
+        "bytes": 9630
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_-1_cp30_cd100_false_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_-1_cp30_cd100_false_trace.csv",
+        "status": 200,
+        "bytes": 1508502
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_-1_cp30_cd100_true.mat",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_-1_cp30_cd100_true.mat",
+        "status": 200,
+        "bytes": 304707
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_-1_cp30_cd100_true_crossings.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_-1_cp30_cd100_true_crossings.csv",
+        "status": 200,
+        "bytes": 1357
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_-1_cp30_cd100_true_logic.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_-1_cp30_cd100_true_logic.csv",
+        "status": 200,
+        "bytes": 12340
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/details/pulse_40ns_-1_cp30_cd100_true_trace.csv",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/details/pulse_40ns_-1_cp30_cd100_true_trace.csv",
+        "status": 200,
+        "bytes": 1509384
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/parameters.json",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/parameters.json",
+        "status": 200,
+        "bytes": 3230
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/report.md",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/report.md",
+        "status": 200,
+        "bytes": 4007
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/source_identity.json",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/source_identity.json",
+        "status": 200,
+        "bytes": 2436
+      },
+      {
+        "kind": "run_artifact",
+        "name": "output/receiver_characterization/summary.json",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/output/receiver_characterization/summary.json",
+        "status": 200,
+        "bytes": 938554
+      },
+      {
+        "kind": "run_artifact",
+        "name": "result.json",
+        "url": "/artifacts/12_Workbench/runs/20260915T220331Z_85ff004252b0/result.json",
+        "status": 200,
+        "bytes": 1007176
+      }
+    ]
+  },
+  "sourceHashes": [
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_analyze.m",
+      "sha256": "ae03d681274c30007759c1d4c6dd7a5065716fc98401a89b8b9e2a70cce1ee06",
+      "matches": true
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_behavior.m",
+      "sha256": "34efde91bb78d6e28dcee891c39f702cf9dbe6571187c583a08e95f7eb1b489a",
+      "matches": true
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_decode.m",
+      "sha256": "32bad95d169efd3f0c494e5dea558997bdfba6e0ced72ddb73f6defa4482a37d",
+      "matches": true
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_fixture.m",
+      "sha256": "8d7fb1f0ec0c830e9a27ece286bbad1e2f54622c9e08dd3aba8ecd7373f8502b",
+      "matches": true
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_logic.m",
+      "sha256": "199a465c9829991249b3908ca8cc1729e638289ea92cd6316db809bc94515fb9",
+      "matches": true
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_native_source.m",
+      "sha256": "3040a307b31cee0f08d9089d2c2b508161eaa8ea6fdb2efd231efc6ae9a38dfd",
+      "matches": true
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_network.m",
+      "sha256": "93973aac4904c00de6eff0940d89991a0a376e33fd2b7f9802eb19b86ac6a1fc",
+      "matches": true
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_parameters.m",
+      "sha256": "971ecf3ff34b30e5956b0205c19f4e4edf52f48cb8fe611660db3869168e65d3",
+      "matches": true
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_segments.m",
+      "sha256": "009a4e7567a1bc94e62a08452f03a77da50adffd9eafc69d0895e798deba41e8",
+      "matches": true
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/functions/receiver_v2_signal.m",
+      "sha256": "f82a4ef5af0a8b7695b1131f9e752d9a1be73faf9624714a977c16a0000862da",
+      "matches": true
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/scripts/run_receiver_characterization.m",
+      "sha256": "0dbd29238cc46bb2f6ef3db3130e59bb39b53bb42e1acd4f70b2a6c15c6c29e6",
+      "matches": true
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/tests/TestReceiverV2.m",
+      "sha256": "283a4f4aabf44abf8e7550e7c8c069257a42183e03c9ffa36c5a5035ac56fccf",
+      "matches": true
+    },
+    {
+      "path": "06_Circuit_Simulations/RECEIVER_V2/receiver_characterization_config.json",
+      "sha256": "32f5918dfd22d7c67d14660b9906bec8edb1db2d42147a9f77e2718e25dcac93",
+      "matches": true
+    },
+    {
+      "path": "06_Circuit_Simulations/SC01B_R2/results/verification/nominal/native_finest.csv",
+      "sha256": "1ecdd83ee4f4846b70e2d40ba04f4b3188e737c94f08300a5bbbfcc36acb9cd5",
+      "matches": true
+    }
+  ],
+  "adapterFileSha256": "f952e50ddba61d7e59dd2746d9869849a3a8fa80adec2547528f14bbff0f499b",
+  "resultFileBytes": 1007176,
+  "recordedRegressionChecks": {
+    "backend": {
+      "passed": 33,
+      "total": 33,
+      "log": "backend-tests.log"
+    },
+    "adapter": {
+      "passed": 9,
+      "total": 9,
+      "log": "adapter-tests.log",
+      "csv": "adapter-test-results.csv"
+    },
+    "desktopBoundary": {
+      "passed": 7,
+      "total": 7,
+      "log": "desktop-boundary-tests.log"
+    }
+  }
+}

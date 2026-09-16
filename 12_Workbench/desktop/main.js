@@ -48,7 +48,8 @@ function cleanEnvironment(environment) {
 }
 
 function hasActiveRun(state) {
-  return Array.isArray(state?.runs) && state.runs.some(run => ACTIVE.has(run.status));
+  return state?.launch_pending === true ||
+    (Array.isArray(state?.runs) && state.runs.some(run => ACTIVE.has(run.status)));
 }
 
 function pathsFor(executable, resources) {
@@ -400,7 +401,7 @@ async function startDesktop() {
       ] },
       { label: 'Help', submenu: [{ label: 'About Signal Lab', click: () => void dialog.showMessageBox({
         type: 'info', title: 'About Signal Lab', message: TITLE,
-        detail: 'Portable local research workbench\n\nThe desktop interface, Python service, project files, documents, and saved results run from this application folder. No account, Codex, or internet connection is required.\n\nNew simulations and receiver/project tests require a separately installed, licensed MATLAB with the toolboxes required by the selected workflow. MATLAB and its license are not included.\n\nResults: workspace/12_Workbench/runs\nDesktop settings and logs: local',
+        detail: 'Portable local research workbench\n\nThe desktop interface, Python service, project files, documents, and saved results run from this application folder. No account, Codex, or internet connection is required.\n\nNew simulations and receiver/project tests require a separately installed, licensed MATLAB with the toolboxes required by the selected workflow. MATLAB and its license are not included. Evaluation and source-return controls also require the original accepted local project/evidence and the Python 3.12 launcher.\n\nResults: workspace/12_Workbench/runs\nDesktop settings and logs: local',
       }) }] },
     ]));
   }

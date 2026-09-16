@@ -30,6 +30,10 @@ class FakeProcess:
 
 class WorkbenchTests(unittest.TestCase):
     def setUp(self):
+        fixture = {"passed": True, "reason": "", "scientific_project_root": "C:/accepted/project", "acceptance_path": "C:/accepted/receipt.json"}
+        checker = patch.object(server.acceptance, "check_acceptance", return_value=fixture)
+        checker.start()
+        self.addCleanup(checker.stop)
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)
         (self.root / "12_Workbench/matlab").mkdir(parents=True)
@@ -46,10 +50,10 @@ class WorkbenchTests(unittest.TestCase):
         path.write_text(json.dumps(value), encoding="utf-8")
         return path
 
-    def start_fake(self, process=None):
+    def start_fake(self, process=None, workflow="baseline"):
         process = process or FakeProcess()
         with patch.object(server.subprocess, "Popen", return_value=process) as popen:
-            run = self.workbench.start_run("baseline")
+            run = self.workbench.start_run(workflow)
         return process, run, popen
 
     def finish(self, process, run, result=None):
@@ -62,31 +66,154 @@ class WorkbenchTests(unittest.TestCase):
             time.sleep(0.01)
         return self.workbench.get_run(run["id"])
 
-    def test_missing_evidence_is_unknown(self):
-        self.assertTrue(all(card["value"] == "Unknown" for card in self.workbench.state()["evidence"]))
-        self.assertTrue(all(card["url"] is None for card in self.workbench.state()["evidence"]))
+    def test_imported_evidence_is_absent_but_original_files_are_preserved(self):
+        run_id = "20260915T120000Z_123456abcdef"
+        path = self.write(f"12_Workbench/runs/{run_id}/run.json", {
+            "id": run_id, "workflow": "four_way_v2_development", "status": "completed",
+            "provenance": {"kind": "imported_completed_development_evidence"}})
+        self.workbench._load_runs()
+        self.assertNotIn("evidence", self.workbench.state())
+        self.assertEqual(self.workbench.state()["runs"], [])
+        self.assertTrue(path.is_file())
+        with self.assertRaises(server.WorkbenchError):
+            self.workbench.get_run(run_id)
 
-    def test_evidence_uses_saved_counts_and_refreshes(self):
-        self.write(server.MAIN_EVIDENCE, {"passed": 8, "tests": 9})
-        self.write(server.EDMD_EVIDENCE, {"passed": 5, "automatedTests": 6,
-                   "matlabVerification": {"edmdBenefitScreen": {"passed": [False, True, False]}}})
-        self.write(server.RESEARCH_EVIDENCE, {"research_acceptance_passed": False})
-        cards = {card["id"]: card["value"] for card in self.workbench.evidence()}
-        self.assertEqual(cards, {"main_tests": "8 / 9", "edmd_tests": "5 / 6", "edmd_benefit": "1 / 3", "research_acceptance": "Not accepted"})
-        self.write(server.MAIN_EVIDENCE, {"passed": 18, "tests": 20})
-        self.assertEqual(self.workbench.evidence()[0]["value"], "18 / 20")
+    def test_missing_acceptance_only_blocks_reserved_workflows(self):
+        self.workbench.acceptance_status = {"passed": False, "reason": "Accepted evidence is missing."}
+        self.workbench.acceptance_checked = time.monotonic()
+        workflows = {w["id"]: w for w in self.workbench.state()["workflows"]}
+        for key in server.GATED_WORKFLOWS:
+            self.assertFalse(workflows[key]["enabled"])
+            self.assertEqual(workflows[key]["disabled_reason"], "Accepted evidence is missing.")
+        self.assertTrue(workflows["baseline"]["enabled"])
 
-    def test_invalid_counts_are_not_green(self):
-        self.write(server.MAIN_EVIDENCE, {"passed": True, "tests": 1})
-        self.assertEqual(self.workbench.evidence()[0]["value"], "Unknown")
+    def test_changed_acceptance_is_rechecked_before_any_output_or_launch(self):
+        self.workbench.acceptance_status = {"passed": True}
+        self.workbench.acceptance_checker = lambda: {"passed": False, "reason": "Evidence changed."}
+        with patch.object(server.subprocess, "Popen") as popen:
+            for workflow in server.GATED_WORKFLOWS:
+                with self.assertRaisesRegex(server.WorkbenchError, "Evidence changed"):
+                    self.workbench.start_run(workflow)
+            popen.assert_not_called()
+        self.assertEqual(list(self.workbench.runs_dir.iterdir()), [])
+        self.assertFalse(self.workbench.launch_preflight)
+
+    def test_preflight_reserves_launch_without_blocking_status(self):
+        started, release = threading.Event(), threading.Event()
+        def check():
+            started.set()
+            release.wait(2)
+            return {"passed": False, "reason": "Evidence changed."}
+        self.workbench.acceptance_checker = check
+        failures = []
+        def launch():
+            try:
+                self.workbench.start_run("four_way_v2_evaluation")
+            except server.WorkbenchError as exc:
+                failures.append(str(exc))
+        worker = threading.Thread(target=launch)
+        worker.start()
+        try:
+            self.assertTrue(started.wait(1))
+            self.assertTrue(self.workbench.state()["launch_pending"])
+            self.assertTrue(all(not w["enabled"] for w in self.workbench.state()["workflows"]))
+            with self.assertRaises(server.WorkbenchError):
+                self.workbench.start_run("baseline")
+        finally:
+            release.set()
+            worker.join(2)
+        self.assertEqual(failures, ["Evidence changed."])
+
+    def test_reserved_runs_use_verified_binding_and_preserve_negative_findings(self):
+        for workflow, payload_key in [("four_way_v2_evaluation", "evaluation"), ("four_way_v2_closure", "closure")]:
+            process, run, _ = self.start_fake(workflow=workflow)
+            runner = (self.workbench._run_dir(run["id"]) / "runner.m").read_text()
+            self.assertIn("'C:/accepted/project'", runner)
+            self.assertIn("'C:/accepted/receipt.json'", runner)
+            payload = {"summary": {"complete": True, "allHypothesesBenefitPass": False}, "pairs": [{"Variant": "V01"}]}
+            result = self.finish(process, run, {"workflow": workflow, "status": "passed", payload_key: payload})
+            self.assertEqual(result["status"], "completed")
+            self.assertEqual(result[payload_key], payload)
+            self.assertNotIn(payload_key, self.workbench.state()["runs"][0])
+            self.workbench.close()
+            self.workbench = server.Workbench(self.root, matlab=sys.executable)
+            self.assertEqual(self.workbench.get_run(run["id"])[payload_key], payload)
+
+    def test_reserved_result_cannot_hide_failed_process(self):
+        process, run, _ = self.start_fake(FakeProcess(code=1), workflow="four_way_v2_evaluation")
+        result = self.finish(process, run, {"workflow": "four_way_v2_evaluation", "status": "passed", "evaluation": {"summary": {"complete": True}}})
+        self.assertEqual(result["status"], "failed")
 
     def test_unrecognized_workflow_never_launches(self):
         with patch.object(server.subprocess, "Popen") as popen:
-            for workflow in ["system('bad')", "../baseline", [], None]:
+            for workflow in ["system('bad')", "../baseline", "evaluate_campaign", "four_way", "four_way_v1_evaluation", [], None]:
                 with self.assertRaises(server.WorkbenchError):
                     self.workbench.start_run(workflow)
             popen.assert_not_called()
         self.assertEqual(list(self.workbench.runs_dir.iterdir()), [])
+
+    def test_characterization_is_distinct_and_exposes_conditional_findings(self):
+        workflows = {item["id"]: item for item in self.workbench.state()["workflows"]}
+        self.assertIn("receiver_characterization", workflows)
+        self.assertIn("receiver_tests", workflows)
+        process, run, _ = self.start_fake(workflow="receiver_characterization")
+        folder = self.workbench._run_dir(run["id"])
+        output = folder / "output/receiver_characterization"
+        output.mkdir(parents=True)
+        (output / "cases.csv").write_text("caseId,domainStatus\nC1,invalid\n")
+        study = {"studyId": "RECEIVER-V2", "scope": "Conditional simulation", "totalCases": 1,
+                 "validCases": 0, "invalidCases": 1, "suitableForFourWay": False,
+                 "findings": ["No candidate established"], "limitations": ["Not measured"],
+                 "cases": [{"caseId": "C1", "domainStatus": "invalid"}]}
+        result = self.finish(process, run, {"workflow": "receiver_characterization", "status": "passed",
+                    "summary": "Conditional sweep completed", "metrics": {"totalCases": 1},
+                    "characterization": study, "artifacts": ["output/receiver_characterization/cases.csv"]})
+        self.assertEqual(result["status"], "completed")
+        self.assertEqual(result["characterization"], study)
+        artifact = next(item for item in result["artifacts"] if item["name"].endswith("cases.csv"))
+        self.assertEqual(self.workbench.artifact_path(artifact["url"].removeprefix("/artifacts/")), output / "cases.csv")
+        self.assertFalse(result["characterization"]["suitableForFourWay"])
+        self.workbench.close()
+        self.workbench = server.Workbench(self.root, matlab=sys.executable)
+        self.assertEqual(self.workbench.get_run(run["id"])["characterization"], study)
+        self.assertNotIn("evaluate_campaign", {item["id"] for item in self.workbench.state()["workflows"]})
+
+    def test_characterization_result_cannot_hide_execution_failure(self):
+        process, run, _ = self.start_fake(FakeProcess(code=1), workflow="receiver_characterization")
+        result = self.finish(process, run, {"workflow": "receiver_characterization", "status": "passed",
+                    "characterization": {"studyId": "RECEIVER-V2", "suitableForFourWay": True}})
+        self.assertEqual(result["status"], "failed")
+        self.assertIn("code 1", result["summary"])
+
+    def test_development_preserves_per_hypothesis_results_and_failed_guards(self):
+        self.assertIn("four_way_v2_development", {w["id"] for w in self.workbench.state()["workflows"]})
+        process, run, _ = self.start_fake(workflow="four_way_v2_development")
+        study = {"summary": {"complete": True, "all_execution_clean_guards_pass": False},
+                 "pairs": [{"Variant": "V01", "Arm": "BASELINE", "ExecutionGuardPass": False}]}
+        result = self.finish(process, run, {"workflow": "four_way_v2_development", "status": "passed",
+                    "summary": "Development completed; conditional simulation only.", "development": study})
+        self.assertEqual(result["status"], "completed")
+        self.assertFalse(result["development"]["summary"]["all_execution_clean_guards_pass"])
+        self.assertNotIn("development", self.workbench.state()["runs"][0])
+        self.workbench.close()
+        self.workbench = server.Workbench(self.root, matlab=sys.executable)
+        self.assertEqual(self.workbench.get_run(run["id"])["development"], study)
+
+    def test_development_cannot_hide_process_failure(self):
+        process, run, _ = self.start_fake(FakeProcess(code=1), workflow="four_way_v2_development")
+        result = self.finish(process, run, {"workflow": "four_way_v2_development", "status": "passed",
+                    "development": {"summary": {"complete": True}}})
+        self.assertEqual(result["status"], "failed")
+
+    def test_v2_documents_are_allowlisted_only_when_present(self):
+        docs = ["04_EMI_Models/Receiver_V2_Contract.md", "04_EMI_Models/Four_Way_EMI_Experiment_V2.md"]
+        for relative in docs:
+            path = self.root / relative
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("Conditional simulation contract")
+            self.assertEqual(self.workbench.artifact_path(relative), path)
+        document_urls = {item["url"] for item in self.workbench.state()["documents"]}
+        self.assertTrue(all(server.artifact_url(relative) in document_urls for relative in docs))
 
     def test_run_is_isolated_and_output_not_precreated(self):
         process, run, popen = self.start_fake()
@@ -147,7 +274,7 @@ class WorkbenchTests(unittest.TestCase):
                 self.workbench.start_run("baseline")
             popen.assert_not_called()
         self.assertEqual(self.workbench.runs, {})
-        self.assertTrue(all(workflow["enabled"] for workflow in self.workbench.state()["workflows"]))
+        self.assertTrue(all(workflow["enabled"] for workflow in self.workbench.state()["workflows"] if workflow["id"] not in server.GATED_WORKFLOWS))
 
     def test_postlaunch_persistence_failure_blocks_until_process_exits(self):
         saved = self.workbench._save
@@ -166,7 +293,7 @@ class WorkbenchTests(unittest.TestCase):
                 self.workbench.start_run("baseline")
             self.assertEqual(self.finish(process, run)["status"], "failed")
         self.assertFalse(self.workbench.runs[run["id"]].get("needs_recovery"))
-        self.assertTrue(all(workflow["enabled"] for workflow in self.workbench.state()["workflows"]))
+        self.assertTrue(all(workflow["enabled"] for workflow in self.workbench.state()["workflows"] if workflow["id"] not in server.GATED_WORKFLOWS))
 
     def test_current_process_identity_is_live(self):
         alive, identity = server.process_identity(os.getpid())
@@ -262,7 +389,7 @@ class WorkbenchTests(unittest.TestCase):
                     self.skipTest("This account cannot create symbolic links or junctions")
             try:
                 with self.assertRaises(server.WorkbenchError):
-                    self.workbench.artifact_path(server.EDMD_EVIDENCE)
+                    self.workbench.artifact_path("11_EDMD_Hybrid_Estimation/results/verification_summary.json")
             finally:
                 if link.is_symlink():
                     link.unlink()
@@ -282,6 +409,10 @@ class WorkbenchTests(unittest.TestCase):
 
 class HttpTests(unittest.TestCase):
     def setUp(self):
+        fixture = {"passed": True, "reason": "", "scientific_project_root": "C:/accepted/project", "acceptance_path": "C:/accepted/receipt.json"}
+        checker = patch.object(server.acceptance, "check_acceptance", return_value=fixture)
+        checker.start()
+        self.addCleanup(checker.stop)
         self.temp = tempfile.TemporaryDirectory()
         root = Path(self.temp.name)
         (root / "12_Workbench/web").mkdir(parents=True)

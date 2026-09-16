@@ -1,0 +1,679 @@
+{
+  "design_id": "FOUR-WAY-EMI-PLAN-V2",
+  "partition": "development",
+  "logical_records": 256,
+  "expected_records": 256,
+  "unique_executions": 256,
+  "failed_records": 0,
+  "paired_results": 128,
+  "failed_pairs": 0,
+  "complete": true,
+  "all_execution_clean_guards_pass": true,
+  "physical_validation": false,
+  "receiver_hypotheses": 16,
+  "parallel_workers": 8,
+  "execution_identity": {
+    "design_id": "FOUR-WAY-EMI-PLAN-V2",
+    "engine": "fourway_v2_exact_e3f7c536bdf8561c",
+    "matlab_version": "26.1.0.3276743 (R2026a) Update 3",
+    "captured_utc": "15-Sep-2026 22:45:14",
+    "files": [
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\actuator_simulink_configuration.m",
+        "sha256": "6c967bbc7d0191d3fa9d8168d52cf1871be976e20bbb4aefd8d641914848dab2"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\actuator_state_space.m",
+        "sha256": "62a51dc69fe6f8426c0f91d571b13a1689f5705343054a7ef37eb818a8edaeea"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\apply_actuator_simulation_input.m",
+        "sha256": "3f8d054174a4fa93664ca936873bfa9e6e45ddeccad25d3cadd41e34b1ef3821"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\apply_phase2b_sensitivity_value.m",
+        "sha256": "6344015d606510cafcef117e71e760a852db9e4551963b67cb578e274a9a099c"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\assert_actuator_model_schema.m",
+        "sha256": "a42a2112372c6e118b65a5990d8bc1aefdf66046487bbf34c67ac55e05217c0c"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\baseline_closed_loop.m",
+        "sha256": "1b9a699910e0b0eeb4a9bd6f7023b8779a42b8023b88e8c03a89eefc2eb52136"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\communication_channel_profile.m",
+        "sha256": "117a56d170309a1e0c7f8a515b03e4026d05756291468229b0c32963269df6d2"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\communication_edge_cases.m",
+        "sha256": "0f50d14373570ce5ddbf059759c4ae403a6916fc9c7c35b8975c3e8588242eb6"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\compare_logged_arrays.m",
+        "sha256": "84d594c16d5c5d70e4ac783ff8fd40520d2c25829c57a39afbf4b9130add064e"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\configure_actuator_simulink_parameters.m",
+        "sha256": "cee80831abc36d333b03c73f3ad60bf4dc91992f3b5f2b55c791902b2b139ed1"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\configure_phase2_simulink_fault.m",
+        "sha256": "aca8ed5eb336816d4509ceb5e842b7b31c92053f4cbf5f60242240ca61e51be4"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\configure_phase2b_simulink_scenario.m",
+        "sha256": "b5c6378c71ef6e9bb0d260b2516415a9f1cf708730c6091bac039f75c2eba8b6"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\create_baseline_simulation_input.m",
+        "sha256": "a57b1da04a8cc3314a83f88e36bbccea77c4d9b8936f96a456b7203abd73e92f"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\create_phase2_simulation_input.m",
+        "sha256": "0b147320035e417610c168825f451f9424e06fafc7453568480b5e6eed674e1e"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\create_phase2b_simulation_input.m",
+        "sha256": "3edf50e040d79de1397a2633dcfe4451d62653358d5c502a81fcf78e13f9bd20"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\design_baseline_controller.m",
+        "sha256": "76baafa171ee6f67754c8cadf6f723f46dd7396e94fbf94683be6eb4e19f2930"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\encoder_fault_profile.m",
+        "sha256": "b65c72d7ecb0b0f3c2db6daa2e552a428ed35650b1cf982faad29f05a6ee9427"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\encoder_fault_scenario.m",
+        "sha256": "18cb8340304bea5285de59e693c2c04a80efc82a4931b094941d41039afca0ec"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_assess.m",
+        "sha256": "b9c6276605c21735ca090031fab36242da0f3004f16350be98b4f47f60ad3cc8"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_build_engine.m",
+        "sha256": "78c3f6d51856c55d385dfcd6cc4b6f13e9b3601963d3a7e8fc4a8c876cf9afb7"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_decoder_audit.m",
+        "sha256": "f0bf9dfc98808eec70184b9a7a31e7926ae81cbf6c698fefe543c46855006d03"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_decoder_count_at.m",
+        "sha256": "38bc6c0e324f05c63afce89dfafafea07eaef0ba9b13d90b378bbdd2b461e3f0"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_exact.m",
+        "sha256": "b7a08fd1a87d85ccf6240a6ace1d337dd2ef4c07ad5cfda7420bbf38968ffb13"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_fixture.m",
+        "sha256": "8acc94e90259e4aa62a80920ee10130499dc362523e4a131dad3e167442baa17"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_implementation_inventory.m",
+        "sha256": "b73ddd5e36ca0e2f8b42e14b6be3b189a68f05ca3452a042cad21ab028db4b20"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_metrics.m",
+        "sha256": "dd7bb3554b07e606d89e3e10467fca9c0fd832d16f17cdc00fa0b7c38ff7a4c2"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_native_events.m",
+        "sha256": "a4dd8f5441616fa2d6da2d6a70357f20714ba124858b322f068d840920d608b7"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_plant_events.m",
+        "sha256": "fe184ba6e5c9f9e2c8b6f07490f9d9e932397cc670382241e3ba0792337af42a"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_plant_segment.m",
+        "sha256": "b2684a625330001d454e34867afe6c06df1c7b7d5ed284430aa331e3273ecbe9"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_plant_state.m",
+        "sha256": "7aff36b15c72ce8cce83994ee4da7a0fcdee50e18f7a85cfc048a0e2f141b448"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_receiver_advance.m",
+        "sha256": "5dcf12d8aa485ebbb61d9416eecfa43ff5aa6a9760288bf4bf0d5c3c51088591"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_receiver_export.m",
+        "sha256": "49de44ee6b8231148736c64458ab8f07845b51aae0133a811a2acac9c553e613"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_receiver_init.m",
+        "sha256": "973406e1a5cf8a905b3093b4b4a3e1e5a76f8de1c2aa4d7f7d0929b5696282bd"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_receiver_reconstruct.m",
+        "sha256": "a193267cfe77095a3bd070b25d9a4a2d07ec06abcf0f2fd6d5efe7d0e5f79eba"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_replay.m",
+        "sha256": "a9068413e48ead3e3417b606f014ace5c772cb868fb9ef688fa2cc9c047f42b0"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_require_acceptance.m",
+        "sha256": "2ad65f5ed1aff9e85e7f151103f262e6998345fa172d8fb67a1dcfc73c88eb85"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_source_metadata.m",
+        "sha256": "00d59d692a8a17fc7a96d1818f9400bf06d27c794ba546b4a5190b6b639ca3f6"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_verify_freeze.m",
+        "sha256": "a1b9e6d83de0921f3d0f710eb6dee58e8b1cc739301876f7fbaf970ae6217321"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_write_record.m",
+        "sha256": "7ca91f5296f675eb624514a91d43893444a867906282610c4946a738fa41b97f"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\packet_profile_summary.m",
+        "sha256": "c731730922b262bd7dc4893345a2908df0e6f02a441178a79b06d89f2e6086b5"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase2a_recovery_metrics.m",
+        "sha256": "9265f2fa4cc0e8e4de877b4b5d51752c2087e37b92d5b0c31e2a112a635ffa5c"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase2a_windowed_spectrum.m",
+        "sha256": "82894b3588a2a1f9f2ca67bf9d039f6583ed0aa49f3272d89a954493ffec0dd9"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase2b_metrics.m",
+        "sha256": "94538e041b35670ed867102c4c487980ea43c50dd5c6a6f482c78cbe655175fa"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase2b_scenario.m",
+        "sha256": "608c6da4e909e1b9d9c209612110c819cc94a67f3436fbec936fb88365b91abc"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase2b_sensitivity_catalog.m",
+        "sha256": "7b9fdfbe7d8dc90200fe1d6eaf2d3c5c2bed31ae06b0f3feb7a491824c130c2c"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase2b_sensitivity_design.m",
+        "sha256": "bf0572f7774fc71c24a69b6f3f63291cb4dfc528da9527da591e777fcca46907"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase2b_simulink_signals.m",
+        "sha256": "1f8d569d8e67ef5b898cc4116048ca8a002e9f5ce8fccc7e0329dd3c08e62f0c"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_configuration.m",
+        "sha256": "3fae3440a31bf94be7d07802e509d45fb48fed3b13ef2f5b1ee8b646372e8c94"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_control_activity.m",
+        "sha256": "6a9c6d577e3a9f843d0862db7c7a31282eaaf962718fb874eb3179ed12721e13"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_control_configuration.m",
+        "sha256": "ebcc663c66cbbcb07fe43975557ab3de214b5e8e46c5819bb5fad3b93ebaf66c"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_control_initialize.m",
+        "sha256": "9c1270a4031ce30bcd2ba8479e2362bbb8a03340af64a13180aa6342b35e9df5"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_control_step.m",
+        "sha256": "5740607c79e8febb1ca2b231fe1089195e5c04f6c0140bf4af859fa2183d2d83"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_external_measurement.m",
+        "sha256": "5b2d2d8b39cb5f5a0b1215b8e7dbfd10de6c862a2d2c6503ea79b3e2edebc65e"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_fault_profiles.m",
+        "sha256": "149365130bd8b1d9c93397300edc1d33092cc67de7d7df569fb5826459450ecc"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_logged_values.m",
+        "sha256": "03003d22c8e0d72075c608f6479152fc6a39a6dda69cddfb3a9c264a913d4d46"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_loop_initialize.m",
+        "sha256": "ba478d5eba3a59af111b859a17452ea2573c4667a076462b905f577568c5cd51"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_loop_sfun.m",
+        "sha256": "31fb28d1633f4ba73d5f7d64057db6d4039d39e57a408faabfc29326985fc533"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_loop_step.m",
+        "sha256": "1bb91f3d4992f7e7739a7caca009b78816d33e4df26aa987ed527c64de909dc0"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_matched_clean_scenario.m",
+        "sha256": "f20d35a1fa6da76b8eecd5f24769d2303cf153d75d8a53ee545f5d0997137837"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_metrics.m",
+        "sha256": "46602fdcfedaa8aba696a6f927b8de9c993a86233605a3f7c03a30463b9810b9"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_motion_configuration.m",
+        "sha256": "78e6e9328a1cd4d8f0d405bbd12d32b617d7168a1fe790f9afedb5b1fe881d07"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_motion_fixtures.m",
+        "sha256": "ba801c836ae9f31f06e93d460277bab82dc35db09b0eda0a4250b24430a0db72"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_motion_metrics.m",
+        "sha256": "c0a8eab756290182c5db609d00bec161ac540ef1d43a32264b196f75392d6fc1"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_motion_profiles.m",
+        "sha256": "a0535d68077de4dafb09b3ef830157ef7af8e940b52fa4a3873e72e9ca9f693e"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_observer_configuration.m",
+        "sha256": "bb4e80d341354c81c4be54e7b5a32dd4347dcdabfe5eddf11afbe5ee6155a852"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_observer_initialize.m",
+        "sha256": "d3825203d692569b32d75ce815b5a8247a5693226dc81a07117d1d1f0bfd8a9a"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_observer_reanchor.m",
+        "sha256": "71018ef52fb4ecd878d8872d520e5c2f75ced5928a9ebb2ed7e98893f7d4ff31"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_observer_step.m",
+        "sha256": "03359feacbfa02bb3fd9ae302bb3b968a7471775730c556113a48f5abdbf5ac0"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_reacquisition_configuration.m",
+        "sha256": "1ba9e49b21eb65a08389501e94b6008d45435c55b2b3416d344dfb9926b4d5a4"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_reacquisition_initialize.m",
+        "sha256": "03a3cf3a62f09d526b29d8df4afc794b06a59ebe5b497ce071d9b6f0a372ba09"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_reacquisition_step.m",
+        "sha256": "2a83c5ef56e77c5afd3ecc3861810c9b0dfb44b274970f68cdd4c8eb5f077c47"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_reference_governor_initialize.m",
+        "sha256": "3d47ed89c2c6ff5d2ad529057fcf5d0c5248d00fa2a206829138d6d80223fdaf"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_reference_governor_step.m",
+        "sha256": "cf8c68624a427c01e498760c0c018226a63e4649b9d8055f25946a5d44d5da49"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_reference_profile.m",
+        "sha256": "d1b379fef92f5471da77359a68fff073efcdf86ccee9e33e7413ed0b898ff638"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_scenario.m",
+        "sha256": "49379a373dd413f1d9ba9cb0522be7a92206e8c51b57e64c88d4488caed8b0a2"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_stop_hold_capacity.m",
+        "sha256": "8d0b9c9d11b27d2d285a694c850ec4d0b41048c23605c4aa34c3115eaea4e4e6"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_stop_hold_configuration.m",
+        "sha256": "c56734e45a69992ec2e18cebc5ed75267342ac172e131b66b2c6959ca1d4b565"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_stop_hold_fixtures.m",
+        "sha256": "cb47630a97f4e373d1c35e32e2d6983992c7281c9b57afe3bad638c0060c785a"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_stop_hold_simulate.m",
+        "sha256": "56cc52993c856010c8e1a9a8429582bfecebb0c894c6f723ee81e105a16a399a"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_stop_hold_step.m",
+        "sha256": "4dfb3fac57fbc07ae5945cb8d69bc3ae2b3aff0e62a9544bbfbc733f88b2b71c"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_supervisor_configuration.m",
+        "sha256": "9ee958efd3c72e7d1d0b33afb3c2e4e68f4fec4cc27dcd2235c950d78c44f203"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_supervisor_initialize.m",
+        "sha256": "b0af938b20867f1590051d1810ab0b1330f6091487fd28bedd6a48440140e14a"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_supervisor_step.m",
+        "sha256": "65e70664eee73aa8aa91443e8f481b577babb29597b074fce416c47fcdbf2b13"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_test_scenarios.m",
+        "sha256": "ed1ad186064111e70ea9a64b110ebef7fa3a0c72de967a030f8b9e97be7431ce"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_tuning_assess.m",
+        "sha256": "93ccc779600603f928fb76fb99258061e9e742413d6b7c23b8a365657e7b8a16"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_tuning_configuration.m",
+        "sha256": "6fc8b3c1894b1a8847576fc0fd89be9f229e79be94c0050e075dd88e83074949"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_tuning_criteria.m",
+        "sha256": "d64367bcfeb47fc8f3392781b1e3286cdbfe734340f8cc8c73506b2a5af50868"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_tuning_fixtures.m",
+        "sha256": "a2afb4ee1a2cff2266774f3d127293e346134b22442dcd1fdb5295d85faabb8d"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\phase3_tuning_metrics.m",
+        "sha256": "ea8f009fa0166cdff95d9eff24b72050518b8081811b6cc3686a5a6677d24b3f"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\physical_coupling_profile.m",
+        "sha256": "074579bd1ba7218324ae5e95609a6efec20aafeb1ecbd3678bac73289c607b81"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\plot_phase3_motion_study.m",
+        "sha256": "a75c380b7fbd0e7a23afbe21d8edee4f0f6449507db23b93d7d12ab811683308"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\plot_phase3_tuning_study.m",
+        "sha256": "d293588d319bcc7946b8503f3ce57fb5662878e38796850753bf91add36b4a80"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\prepare_fresh_output_folder.m",
+        "sha256": "6dc8a1f84d6e10159e6716858b88a88526b006bcf5d70d09d8123e0df4c47d90"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\require_empty_phase3_output_folder.m",
+        "sha256": "bdbd69522d654cdc8b025b90742fcf853675cd32e1697bc5b6c97098f1d72452"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\schedule_timestamped_packets.m",
+        "sha256": "77586a43a31be24be51c624d6f4f2b9240675bec26aa95e0cab99ff65ca831a5"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\simulate_faulted_actuator.m",
+        "sha256": "13687c9c559db5b8389dd0627e061a90babcc64e14ffe903db42c83eb292b83d"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\simulate_fourway_actuator.m",
+        "sha256": "bdfa74b357565e57fde6d6afcea54de4f0844d78c849477307f3c3d9e0bdc695"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\simulate_phase2b_actuator.m",
+        "sha256": "b8a707f427470e918c0269b6073d7e3c0698e0c1c942fbaac6ea967c3f8ead27"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\simulate_phase3_actuator.m",
+        "sha256": "537a740585033bf93c60f224bf77cd3d7dec9bc2e160e95d9fe99e9abd1daa5e"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\supply_fault_profile.m",
+        "sha256": "c46a59754e421e7b856eaea80051c3850a98574711b4a51a4884cc6afa194c27"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\validate_encoder_scenario.m",
+        "sha256": "fe4730c3970ec9d26a1ac94fd59ca5ef373ddcc7f7f8fac7936ecf96f6abb4c6"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\validate_parameters.m",
+        "sha256": "9e059fe0227987a296454202fbe0db0e3c22a29b9de444478863e39c2e1a9756"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\validate_phase2b_scenario.m",
+        "sha256": "b583ce6ce689fe0a2da9263121a6450cd9e14884f55c4211590663d783bee182"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\validate_phase3_observer_configuration.m",
+        "sha256": "4ce9dfa2b95a7000aeceac1c4ae0223eddfcc386011fbd6eff6f5a6a81004843"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\validate_phase3_reference_profile.m",
+        "sha256": "1a77f0689559e41df485ff0c3483b900870a8e8d678fc1160a421d1faf526f8d"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\validate_phase3_scenario.m",
+        "sha256": "031826fa88d834a9f5ad9fc4a4f79d738deba4f02aad840151101065739e8805"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\validate_profile_time.m",
+        "sha256": "553203ce709845bc34c5da58b00e7c1f80335946826cc2a7f4b6e54bedfaa578"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\validate_supply_scenario.m",
+        "sha256": "13e217fa31dd4b782219592cf02a03789483a79143cad507b9189829fe785d85"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\write_run_manifest.m",
+        "sha256": "e7e7e788f0b05e945158a6c5a75748a75764ec270b876d8619b4319886763ae9"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\parameters\\actuator_parameters.m",
+        "sha256": "1aae0d6c2543d8d1bfe50af11a62b677cdc92c308338a72b2ae13f19d1ff32dc"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY\\functions\\fourway_exact_mex.cpp",
+        "sha256": "cc1fdc1322a4115776d8a59453f35d2980f37e19c58a3e797a0f95712432dbd6"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_assess.m",
+        "sha256": "25739697e52d6740041dceb145b42b907e78987ebcdec16f0f1dd200ba485fdd"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_build_engine.m",
+        "sha256": "2baa1564f36638654b0fa874cd825fa42df497d75f8991fc7b2c66fccc530178"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_exact.m",
+        "sha256": "d3a89a57556a4af3cfd5a01c1da0473294233c3a1ad638535498b1ad1c5fbb72"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_exact_mex.cpp",
+        "sha256": "e3f7c536bdf8561cedb3e24a9010e42e3de00663d79617d9a909c60bc5661cdd"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_execution_identity.m",
+        "sha256": "16b980e581399090c6a5cc9c8abbbacabaabf1dd70f2d148965d28dabdaffe82"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_fixture.m",
+        "sha256": "72396195f631f9e9ef322a7d28dcba034eff26cd516c2f89f05ade28639dd09a"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_metrics.m",
+        "sha256": "822fed2490a05503cc2590265c3b79353927a0abaf69767ea47e7bf971031725"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_native_audit.m",
+        "sha256": "dca6d239a6a438a2eeda80220c85bc64f120455a1590fca8a4029cfd1d882ad6"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_native_events.m",
+        "sha256": "90f6265d9ccefd1aca4b87f9f73ac51421ecb4d2b6342b97270171153018924e"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_native_generate.m",
+        "sha256": "384a1abc3d6b11762e06d5ceee61c739d0fff1be20fc725755a9397603514fa8"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_native_hash.m",
+        "sha256": "f59de58340ea07a6894eb2353296fdae1b34a5ed7503762854734feca58a29cb"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_native_json.m",
+        "sha256": "2c1af888b8fbebb9cd6095fe2db3362023488cec463eab2d3b09bb647a22e23b"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_native_kcl.m",
+        "sha256": "2c9d177da07f967f06a59767b1e60981ac58fbf069b6a42939052e1cbb2858f5"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_native_parameters.m",
+        "sha256": "5bfd30019a5fce2d184398d4ba1b89e5838eafdef920bdae586bb5a6e90fe3d4"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_native_variants.m",
+        "sha256": "02726b764f25a78e2263b707695550c18b4f4e208ebe2253b47b305022517295"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_receiver_advance.m",
+        "sha256": "64f554473c1fc8779b68695d6f255c90d97d467420b7c694b99b37e44f00dc89"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_receiver_export.m",
+        "sha256": "8ff02c1bed36ef87a455940c65fee53a191c09bdf6c74d214c08e61eadf5e5ec"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_receiver_init.m",
+        "sha256": "695eaba26a181b0b982a42f3530baf9b0ad4a2bf4ae2947767e04c21377802f0"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_receiver_reconstruct.m",
+        "sha256": "3a2750f682030888f609279ace77c792a09bc7a5c9cfac106595510b183b805e"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_replay.m",
+        "sha256": "3821a522d78c675d25dcb4fc05a52ea7bc303bd1baa908feee0047a9f9992fdd"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_require_acceptance.m",
+        "sha256": "eac43a0157f00cfa6549fe54f2e91550b75830b1d62cc4cfbdd7042f3243beaf"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_root.m",
+        "sha256": "3289de7fda49adef6a18e1449e70244db2f9b133a3bc93130fe87581a7bb74df"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_variant.m",
+        "sha256": "17bb17aa21de2d5ff082b0bd666c797a8732136a31b4ec8f19548354fc06164b"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_verify_freeze.m",
+        "sha256": "004ca8544df0ed833073a563a473be76ac20e3ec0391788f146706b1b7081881"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_write_record.m",
+        "sha256": "c5aae0e14e89b4bc87d592b9b5fe1386db20a44b67c7f912232b0464599ad2cf"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\simulate_fourway_v2_actuator.m",
+        "sha256": "7d4325fa6ec55a996f01169ce5d055743dc7e714b2dfeaed6244a41e06b1cb1c"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\scripts\\run_fourway_v2_native_acceptance.m",
+        "sha256": "e71f3c8d64d9422ec4abf00d75ffd611f2bee460e2d60c762f73052cc2e0b757"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\scripts\\run_fourway_v2_parallel.m",
+        "sha256": "0d2a81a99fc5e9f3a2f93f0f30ac4d1902bb3fa131077ef19ac8d8afdcc83d24"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\scripts\\run_fourway_v2_stage.m",
+        "sha256": "d3302b1c4115717a7d970bdd97542763db194c9718bb043f67a014eeb6ac6b99"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\work\\fourway_v2_exact_e3f7c536bdf8561c.mexw64",
+        "sha256": "b17aa393c013dd0704d795fe8974b659f19aac3a080a3436d57d0dad9f77f384"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\RECEIVER_V2\\functions\\receiver_v2_analyze.m",
+        "sha256": "ae03d681274c30007759c1d4c6dd7a5065716fc98401a89b8b9e2a70cce1ee06"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\RECEIVER_V2\\functions\\receiver_v2_behavior.m",
+        "sha256": "34efde91bb78d6e28dcee891c39f702cf9dbe6571187c583a08e95f7eb1b489a"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\RECEIVER_V2\\functions\\receiver_v2_decode.m",
+        "sha256": "32bad95d169efd3f0c494e5dea558997bdfba6e0ced72ddb73f6defa4482a37d"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\RECEIVER_V2\\functions\\receiver_v2_fixture.m",
+        "sha256": "8d7fb1f0ec0c830e9a27ece286bbad1e2f54622c9e08dd3aba8ecd7373f8502b"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\RECEIVER_V2\\functions\\receiver_v2_logic.m",
+        "sha256": "199a465c9829991249b3908ca8cc1729e638289ea92cd6316db809bc94515fb9"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\RECEIVER_V2\\functions\\receiver_v2_native_source.m",
+        "sha256": "3040a307b31cee0f08d9089d2c2b508161eaa8ea6fdb2efd231efc6ae9a38dfd"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\RECEIVER_V2\\functions\\receiver_v2_network.m",
+        "sha256": "93973aac4904c00de6eff0940d89991a0a376e33fd2b7f9802eb19b86ac6a1fc"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\RECEIVER_V2\\functions\\receiver_v2_parameters.m",
+        "sha256": "971ecf3ff34b30e5956b0205c19f4e4edf52f48cb8fe611660db3869168e65d3"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\RECEIVER_V2\\functions\\receiver_v2_segments.m",
+        "sha256": "009a4e7567a1bc94e62a08452f03a77da50adffd9eafc69d0895e798deba41e8"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\RECEIVER_V2\\functions\\receiver_v2_signal.m",
+        "sha256": "f82a4ef5af0a8b7695b1131f9e752d9a1be73faf9624714a977c16a0000862da"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01A\\functions\\sc01a_baseline.m",
+        "sha256": "c5e813cad366e79b7381a924c454cabe15400617efe023efa4126f94dbed683c"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01A\\functions\\sc01a_case.m",
+        "sha256": "9c5102307e1bb20afba5a382cda821e23d5dfc5b2f8a3d03e729cd98304b9c92"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01A\\functions\\sc01a_compare_refinement.m",
+        "sha256": "35073985fb685d96b280772927f35b724a20b51bb35c15dface8836eb36abeca"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01A\\functions\\sc01a_metrics.m",
+        "sha256": "097982bc5edacdf7c7458cb573a3e3fd7b47b9dcfcd10752c6563b7e53174c51"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01A\\functions\\sc01a_parameters.m",
+        "sha256": "2e31367987576c6e2df2ad8c1c1ebd5410539cebf00cd23b65bb67b26e35af6b"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01A\\functions\\sc01a_prepare_output_folder.m",
+        "sha256": "2cfe4997388a10eda5f9573f81c1fc2ea77c99820fc12e07212436c41fc3243a"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01A\\functions\\sc01a_reference.m",
+        "sha256": "954d4d07a680a4a9bc35ef55c12207922ad749718e757cc1f0ea43ba8262cf00"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01A\\functions\\sc01a_simscape_signals.m",
+        "sha256": "6453a2729a25800c73cad48487ffb6c34e4a33fa028299dd38eed96684d47934"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01A\\functions\\sc01a_state_space.m",
+        "sha256": "97c61a488c103478072c65ab2adba4404b1ff825bb874c7640678b80b3c5c8e2"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01A\\functions\\sc01a_stimulus.m",
+        "sha256": "717ce922f10e28131c4d5ea4ac32c9592134f8bc19fcca43191385227f90737b"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01A\\functions\\sc01a_threshold_events.m",
+        "sha256": "bc984703e9826cf666ac12f200ab4f09a3731455dfe1142751e3f7ac444def02"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01A\\functions\\sc01a_write_manifest.m",
+        "sha256": "335010d73f608f3edecf45e05e28c3a647980ecb37fbd49efe055682e81260cb"
+      },
+      {
+        "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01A\\functions\\simulate_sc01a_simscape.m",
+        "sha256": "dae97b72f5ec3b53694cd770acdca51cb5c877704d5095c18a4314f5b63339fe"
+      }
+    ]
+  }
+}

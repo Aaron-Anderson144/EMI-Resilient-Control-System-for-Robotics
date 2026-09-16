@@ -1,0 +1,410 @@
+{
+  "rawFolder": "C:/Users/adand/Documents/Codex/2026-09-15/wha-2/work/v2_integration/native/attempt_002",
+  "records": [
+    {
+      "Case": "Cd100_Ccp40_Ccn7_A0",
+      "MaxStep_ns": 0.5,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp40_Ccn7_A0\\native_0.5ns\\native_raw.mat",
+      "RawSHA256": "280fed8f1c623d70ebbf857ab2cdd431db344b38510ff577dcb2e41d525a5e64"
+    },
+    {
+      "Case": "Cd100_Ccp40_Ccn7_A0",
+      "MaxStep_ns": 0.25,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp40_Ccn7_A0\\native_0.25ns\\native_raw.mat",
+      "RawSHA256": "0d7cf980c98035f7806da14817e4592a32bf900ffd34bd09be624a4892f92b10"
+    },
+    {
+      "Case": "Cd100_Ccp40_Ccn7_A0",
+      "MaxStep_ns": 0.125,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp40_Ccn7_A0\\native_0.125ns\\native_raw.mat",
+      "RawSHA256": "1aa7424ea7c383ee907e9b91fe411e1be3ef932fb32893f6adbfa2844ef78522"
+    },
+    {
+      "Case": "Cd100_Ccp40_Ccn7_A1",
+      "MaxStep_ns": 0.5,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp40_Ccn7_A1\\native_0.5ns\\native_raw.mat",
+      "RawSHA256": "a316962949ab2ecf52774c5b6ba9d654fe1630d03a8b6de1a0fbdfe111500554"
+    },
+    {
+      "Case": "Cd100_Ccp40_Ccn7_A1",
+      "MaxStep_ns": 0.25,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp40_Ccn7_A1\\native_0.25ns\\native_raw.mat",
+      "RawSHA256": "a929e9f3cf0d382dfd97bf57cae83d158523a24eab9bffc1dc9a10c517427264"
+    },
+    {
+      "Case": "Cd100_Ccp40_Ccn7_A1",
+      "MaxStep_ns": 0.125,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp40_Ccn7_A1\\native_0.125ns\\native_raw.mat",
+      "RawSHA256": "4164be301d75fbfbf2f3d801c703e7700fffa22f6086f7c6890e9f02f7a9ff68"
+    },
+    {
+      "Case": "Cd100_Ccp240_Ccn7_A0",
+      "MaxStep_ns": 0.5,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp240_Ccn7_A0\\native_0.5ns\\native_raw.mat",
+      "RawSHA256": "a106e5928484bc17ab1fcf945b3cde8e609aae8d24c8ad46042f8d69803b3db2"
+    },
+    {
+      "Case": "Cd100_Ccp240_Ccn7_A0",
+      "MaxStep_ns": 0.25,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp240_Ccn7_A0\\native_0.25ns\\native_raw.mat",
+      "RawSHA256": "960a9d3f370c1f454a0e11677008bcb31f6c7f8226b83c34ba8c13976c34ba5c"
+    },
+    {
+      "Case": "Cd100_Ccp240_Ccn7_A0",
+      "MaxStep_ns": 0.125,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp240_Ccn7_A0\\native_0.125ns\\native_raw.mat",
+      "RawSHA256": "478bc1419e8e7bbf391ab49a5fbc649ec27fe85b71d65896ff5d923917bc41b1"
+    },
+    {
+      "Case": "Cd100_Ccp240_Ccn7_A1",
+      "MaxStep_ns": 0.5,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp240_Ccn7_A1\\native_0.5ns\\native_raw.mat",
+      "RawSHA256": "7ac38d872d153f74708872a48a5d40b05e7c1b57ec3223309e6b3f061bdf36c2"
+    },
+    {
+      "Case": "Cd100_Ccp240_Ccn7_A1",
+      "MaxStep_ns": 0.25,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp240_Ccn7_A1\\native_0.25ns\\native_raw.mat",
+      "RawSHA256": "1558b90a05669b02cccfee0a67c65d062cb96f606e74367f4e073ee2d71b0d93"
+    },
+    {
+      "Case": "Cd100_Ccp240_Ccn7_A1",
+      "MaxStep_ns": 0.125,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp240_Ccn7_A1\\native_0.125ns\\native_raw.mat",
+      "RawSHA256": "139ecb9425c2f95e6a74d0d6b31a76d413be76e2b9a9f7eaeadcca6cef35655a"
+    },
+    {
+      "Case": "Cd1000_Ccp40_Ccn7_A0",
+      "MaxStep_ns": 0.5,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp40_Ccn7_A0\\native_0.5ns\\native_raw.mat",
+      "RawSHA256": "ac57ceb78f80acaa9a5fac89c88c4ac39d17004d09306046a7ab1d639982d038"
+    },
+    {
+      "Case": "Cd1000_Ccp40_Ccn7_A0",
+      "MaxStep_ns": 0.25,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp40_Ccn7_A0\\native_0.25ns\\native_raw.mat",
+      "RawSHA256": "fc8a266f5742d96338215cd44380eec2004dfb0d32cd78bc02681e5b6bea4b5d"
+    },
+    {
+      "Case": "Cd1000_Ccp40_Ccn7_A0",
+      "MaxStep_ns": 0.125,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp40_Ccn7_A0\\native_0.125ns\\native_raw.mat",
+      "RawSHA256": "10c6d5b0da4cf712c6ff5fa876442d966bcee47bf8936c1ff57ae2e338ff8934"
+    },
+    {
+      "Case": "Cd1000_Ccp40_Ccn7_A1",
+      "MaxStep_ns": 0.5,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp40_Ccn7_A1\\native_0.5ns\\native_raw.mat",
+      "RawSHA256": "8fa852ebdc1534ea1867774b8247e4088e7c622902abc1ee334e20560f7dbe2d"
+    },
+    {
+      "Case": "Cd1000_Ccp40_Ccn7_A1",
+      "MaxStep_ns": 0.25,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp40_Ccn7_A1\\native_0.25ns\\native_raw.mat",
+      "RawSHA256": "01697ef871cb4b0f16bf6500930492e06253baea183996dc34318dcacb7a93ef"
+    },
+    {
+      "Case": "Cd1000_Ccp40_Ccn7_A1",
+      "MaxStep_ns": 0.125,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp40_Ccn7_A1\\native_0.125ns\\native_raw.mat",
+      "RawSHA256": "87b07485fd684eb07e4a3c380e70d33382d8b49acc95d5bba5dcb62a6da20f5a"
+    },
+    {
+      "Case": "Cd1000_Ccp240_Ccn7_A0",
+      "MaxStep_ns": 0.5,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp240_Ccn7_A0\\native_0.5ns\\native_raw.mat",
+      "RawSHA256": "b3d28006808f1fb23ddba63e752c1b34567eb23eb6aa0b7736916258f55aeb7f"
+    },
+    {
+      "Case": "Cd1000_Ccp240_Ccn7_A0",
+      "MaxStep_ns": 0.25,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp240_Ccn7_A0\\native_0.25ns\\native_raw.mat",
+      "RawSHA256": "ac24ba2d50669e87a745f6b41a56443d9746dd417d35b6b4655a86484aa4be9e"
+    },
+    {
+      "Case": "Cd1000_Ccp240_Ccn7_A0",
+      "MaxStep_ns": 0.125,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp240_Ccn7_A0\\native_0.125ns\\native_raw.mat",
+      "RawSHA256": "04195edf0c07a360196734c9e4d5e57eb6a58f2b0f197660972629e54a783ab9"
+    },
+    {
+      "Case": "Cd1000_Ccp240_Ccn7_A1",
+      "MaxStep_ns": 0.5,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp240_Ccn7_A1\\native_0.5ns\\native_raw.mat",
+      "RawSHA256": "14ce297eef9cc4129362c6c980be996029b51b2f68e6277943f95aba91b42aeb"
+    },
+    {
+      "Case": "Cd1000_Ccp240_Ccn7_A1",
+      "MaxStep_ns": 0.25,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp240_Ccn7_A1\\native_0.25ns\\native_raw.mat",
+      "RawSHA256": "35ce0e8df623b9944dd6d5e4aa6518c751226ef6a757399b4c10f92e6315a41f"
+    },
+    {
+      "Case": "Cd1000_Ccp240_Ccn7_A1",
+      "MaxStep_ns": 0.125,
+      "RawFile": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp240_Ccn7_A1\\native_0.125ns\\native_raw.mat",
+      "RawSHA256": "5344dbd58feb2050d81e164c7bd86327ab9be860d7ef3e1eda0b949f74af6911"
+    }
+  ],
+  "engine": "fourway_v2_exact_e3f7c536bdf8561c",
+  "startedAt": "2026-09-15T22:52:05Z",
+  "matlabVersion": "26.1.0.3276743 (R2026a) Update 3",
+  "matlabRelease": "2026a",
+  "platform": "PCWIN64",
+  "inputFiles": [
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\native_generation.json",
+      "bytes": 822,
+      "sha256": "a1fb5cfe57fceac89fd311a160abec28f87776ee20469c4f0dbd1504f0890d19"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01A\\models\\EMI_SC01A_Finite_Edge.slx",
+      "bytes": 191265,
+      "sha256": "223a0e2808cd45ba22fcd2e765adfeba3ee9b0b112d1693ff43356d47caa85e6"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\model\\EMI_FourWay_V2_Native.slx",
+      "bytes": 191265,
+      "sha256": "223a0e2808cd45ba22fcd2e765adfeba3ee9b0b112d1693ff43356d47caa85e6"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\04_EMI_Models\\four_way_emi_v2_configuration.json",
+      "bytes": 4570,
+      "sha256": "039bbe9b9feb4bcea8d5c8e98622fdc2f68471b5849b43ece270e498ae3ae1fe"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\RECEIVER_V2\\receiver_characterization_config.json",
+      "bytes": 2976,
+      "sha256": "32f5918dfd22d7c67d14660b9906bec8edb1db2d42147a9f77e2718e25dcac93"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01B_R2\\results\\verification\\nominal\\native_finest.csv",
+      "bytes": 1.1927554E+7,
+      "sha256": "1ecdd83ee4f4846b70e2d40ba04f4b3188e737c94f08300a5bbbfcc36acb9cd5"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp40_Ccn7_A0\\native_0.5ns\\native_raw.mat",
+      "bytes": 3.650995E+6,
+      "sha256": "280fed8f1c623d70ebbf857ab2cdd431db344b38510ff577dcb2e41d525a5e64"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp40_Ccn7_A0\\native_0.25ns\\native_raw.mat",
+      "bytes": 4.171235E+6,
+      "sha256": "0d7cf980c98035f7806da14817e4592a32bf900ffd34bd09be624a4892f92b10"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp40_Ccn7_A0\\native_0.125ns\\native_raw.mat",
+      "bytes": 5.657055E+6,
+      "sha256": "1aa7424ea7c383ee907e9b91fe411e1be3ef932fb32893f6adbfa2844ef78522"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp40_Ccn7_A1\\native_0.5ns\\native_raw.mat",
+      "bytes": 3.662218E+6,
+      "sha256": "a316962949ab2ecf52774c5b6ba9d654fe1630d03a8b6de1a0fbdfe111500554"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp40_Ccn7_A1\\native_0.25ns\\native_raw.mat",
+      "bytes": 4.128149E+6,
+      "sha256": "a929e9f3cf0d382dfd97bf57cae83d158523a24eab9bffc1dc9a10c517427264"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp40_Ccn7_A1\\native_0.125ns\\native_raw.mat",
+      "bytes": 5.655857E+6,
+      "sha256": "4164be301d75fbfbf2f3d801c703e7700fffa22f6086f7c6890e9f02f7a9ff68"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp240_Ccn7_A0\\native_0.5ns\\native_raw.mat",
+      "bytes": 4.021207E+6,
+      "sha256": "a106e5928484bc17ab1fcf945b3cde8e609aae8d24c8ad46042f8d69803b3db2"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp240_Ccn7_A0\\native_0.25ns\\native_raw.mat",
+      "bytes": 4.52429E+6,
+      "sha256": "960a9d3f370c1f454a0e11677008bcb31f6c7f8226b83c34ba8c13976c34ba5c"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp240_Ccn7_A0\\native_0.125ns\\native_raw.mat",
+      "bytes": 5.711071E+6,
+      "sha256": "478bc1419e8e7bbf391ab49a5fbc649ec27fe85b71d65896ff5d923917bc41b1"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp240_Ccn7_A1\\native_0.5ns\\native_raw.mat",
+      "bytes": 4.00107E+6,
+      "sha256": "7ac38d872d153f74708872a48a5d40b05e7c1b57ec3223309e6b3f061bdf36c2"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp240_Ccn7_A1\\native_0.25ns\\native_raw.mat",
+      "bytes": 4.545674E+6,
+      "sha256": "1558b90a05669b02cccfee0a67c65d062cb96f606e74367f4e073ee2d71b0d93"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd100_Ccp240_Ccn7_A1\\native_0.125ns\\native_raw.mat",
+      "bytes": 5.728376E+6,
+      "sha256": "139ecb9425c2f95e6a74d0d6b31a76d413be76e2b9a9f7eaeadcca6cef35655a"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp40_Ccn7_A0\\native_0.5ns\\native_raw.mat",
+      "bytes": 4.420797E+6,
+      "sha256": "ac57ceb78f80acaa9a5fac89c88c4ac39d17004d09306046a7ab1d639982d038"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp40_Ccn7_A0\\native_0.25ns\\native_raw.mat",
+      "bytes": 4.86971E+6,
+      "sha256": "fc8a266f5742d96338215cd44380eec2004dfb0d32cd78bc02681e5b6bea4b5d"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp40_Ccn7_A0\\native_0.125ns\\native_raw.mat",
+      "bytes": 6.572626E+6,
+      "sha256": "10c6d5b0da4cf712c6ff5fa876442d966bcee47bf8936c1ff57ae2e338ff8934"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp40_Ccn7_A1\\native_0.5ns\\native_raw.mat",
+      "bytes": 4.3533E+6,
+      "sha256": "8fa852ebdc1534ea1867774b8247e4088e7c622902abc1ee334e20560f7dbe2d"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp40_Ccn7_A1\\native_0.25ns\\native_raw.mat",
+      "bytes": 4.901836E+6,
+      "sha256": "01697ef871cb4b0f16bf6500930492e06253baea183996dc34318dcacb7a93ef"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp40_Ccn7_A1\\native_0.125ns\\native_raw.mat",
+      "bytes": 6.00716E+6,
+      "sha256": "87b07485fd684eb07e4a3c380e70d33382d8b49acc95d5bba5dcb62a6da20f5a"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp240_Ccn7_A0\\native_0.5ns\\native_raw.mat",
+      "bytes": 4.51413E+6,
+      "sha256": "b3d28006808f1fb23ddba63e752c1b34567eb23eb6aa0b7736916258f55aeb7f"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp240_Ccn7_A0\\native_0.25ns\\native_raw.mat",
+      "bytes": 5.153258E+6,
+      "sha256": "ac24ba2d50669e87a745f6b41a56443d9746dd417d35b6b4655a86484aa4be9e"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp240_Ccn7_A0\\native_0.125ns\\native_raw.mat",
+      "bytes": 6.397394E+6,
+      "sha256": "04195edf0c07a360196734c9e4d5e57eb6a58f2b0f197660972629e54a783ab9"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp240_Ccn7_A1\\native_0.5ns\\native_raw.mat",
+      "bytes": 4.417423E+6,
+      "sha256": "14ce297eef9cc4129362c6c980be996029b51b2f68e6277943f95aba91b42aeb"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp240_Ccn7_A1\\native_0.25ns\\native_raw.mat",
+      "bytes": 5.058182E+6,
+      "sha256": "35ce0e8df623b9944dd6d5e4aa6518c751226ef6a757399b4c10f92e6315a41f"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\attempt_002\\Cd1000_Ccp240_Ccn7_A1\\native_0.125ns\\native_raw.mat",
+      "bytes": 6.304163E+6,
+      "sha256": "5344dbd58feb2050d81e164c7bd86327ab9be860d7ef3e1eda0b949f74af6911"
+    }
+  ],
+  "implementationFiles": [
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_native_audit.m",
+      "bytes": 15989,
+      "sha256": "3467022dd836456b1da4c16953df2cf2cb60a0e93b1372f7e4ccc3cf7a51a94d"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_native_events.m",
+      "bytes": 4251,
+      "sha256": "90f6265d9ccefd1aca4b87f9f73ac51421ecb4d2b6342b97270171153018924e"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_native_hash.m",
+      "bytes": 381,
+      "sha256": "f59de58340ea07a6894eb2353296fdae1b34a5ed7503762854734feca58a29cb"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_native_json.m",
+      "bytes": 263,
+      "sha256": "2c1af888b8fbebb9cd6095fe2db3362023488cec463eab2d3b09bb647a22e23b"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_native_kcl.m",
+      "bytes": 1115,
+      "sha256": "2c9d177da07f967f06a59767b1e60981ac58fbf069b6a42939052e1cbb2858f5"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_native_parameters.m",
+      "bytes": 1118,
+      "sha256": "5bfd30019a5fce2d184398d4ba1b89e5838eafdef920bdae586bb5a6e90fe3d4"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_native_variants.m",
+      "bytes": 789,
+      "sha256": "02726b764f25a78e2263b707695550c18b4f4e208ebe2253b47b305022517295"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_native_generate.m",
+      "bytes": 6400,
+      "sha256": "384a1abc3d6b11762e06d5ceee61c739d0fff1be20fc725755a9397603514fa8"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_receiver_init.m",
+      "bytes": 4553,
+      "sha256": "695eaba26a181b0b982a42f3530baf9b0ad4a2bf4ae2947767e04c21377802f0"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_exact.m",
+      "bytes": 211,
+      "sha256": "d3a89a57556a4af3cfd5a01c1da0473294233c3a1ad638535498b1ad1c5fbb72"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_build_engine.m",
+      "bytes": 690,
+      "sha256": "2baa1564f36638654b0fa874cd825fa42df497d75f8991fc7b2c66fccc530178"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_replay.m",
+      "bytes": 695,
+      "sha256": "3821a522d78c675d25dcb4fc05a52ea7bc303bd1baa908feee0047a9f9992fdd"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\work\\fourway_v2_exact_e3f7c536bdf8561c.mexw64",
+      "bytes": 67584,
+      "sha256": "b17aa393c013dd0704d795fe8974b659f19aac3a080a3436d57d0dad9f77f384"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\FOUR_WAY_V2\\functions\\fourway_v2_exact_mex.cpp",
+      "bytes": 14434,
+      "sha256": "e3f7c536bdf8561cedb3e24a9010e42e3de00663d79617d9a909c60bc5661cdd"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\RECEIVER_V2\\functions\\receiver_v2_native_source.m",
+      "bytes": 978,
+      "sha256": "3040a307b31cee0f08d9089d2c2b508161eaa8ea6fdb2efd231efc6ae9a38dfd"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\RECEIVER_V2\\functions\\receiver_v2_network.m",
+      "bytes": 1054,
+      "sha256": "93973aac4904c00de6eff0940d89991a0a376e33fd2b7f9802eb19b86ac6a1fc"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\RECEIVER_V2\\functions\\receiver_v2_parameters.m",
+      "bytes": 247,
+      "sha256": "971ecf3ff34b30e5956b0205c19f4e4edf52f48cb8fe611660db3869168e65d3"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01A\\functions\\sc01a_parameters.m",
+      "bytes": 1225,
+      "sha256": "2e31367987576c6e2df2ad8c1c1ebd5410539cebf00cd23b65bb67b26e35af6b"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\SC01A\\functions\\sc01a_simscape_signals.m",
+      "bytes": 1530,
+      "sha256": "6453a2729a25800c73cad48487ffb6c34e4a33fa028299dd38eed96684d47934"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\03_MATLAB\\functions\\fourway_replay.m",
+      "bytes": 1466,
+      "sha256": "a9068413e48ead3e3417b606f014ace5c772cb868fb9ef688fa2cc9c047f42b0"
+    }
+  ],
+  "finishedAt": "2026-09-15T22:53:52Z",
+  "inputsAndImplementationUnchanged": true
+}

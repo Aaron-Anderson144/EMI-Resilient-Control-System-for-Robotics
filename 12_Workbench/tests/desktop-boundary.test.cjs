@@ -44,6 +44,7 @@ test('Python launch environment cannot inherit another runtime configuration', (
 });
 
 test('close gate preserves queued or active experiments', () => {
+  assert.equal(hasActiveRun({ launch_pending: true, runs: [] }), true);
   assert.equal(hasActiveRun({ runs: [{ status: 'completed' }, { status: 'running' }] }), true);
   assert.equal(hasActiveRun({ runs: [{ status: 'queued' }] }), true);
   assert.equal(hasActiveRun({ runs: [{ status: 'completed' }, { status: 'failed' }] }), false);

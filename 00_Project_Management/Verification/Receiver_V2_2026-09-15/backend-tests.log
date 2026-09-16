@@ -1,0 +1,38 @@
+test_host_rebinding_and_cross_origin_are_denied (test_server.HttpTests.test_host_rebinding_and_cross_origin_are_denied) ... ok
+test_post_requires_csrf_token_and_json (test_server.HttpTests.test_post_requires_csrf_token_and_json) ... ok
+test_state_and_static_page_are_available_locally (test_server.HttpTests.test_state_and_static_page_are_available_locally) ... ok
+test_url_encoded_traversal_and_unlisted_files_are_denied (test_server.HttpTests.test_url_encoded_traversal_and_unlisted_files_are_denied) ... ok
+test_valid_post_dispatches_only_allowlisted_workflow (test_server.HttpTests.test_valid_post_dispatches_only_allowlisted_workflow) ... ok
+test_artifact_access_is_allowlisted_and_traversal_rejected (test_server.WorkbenchTests.test_artifact_access_is_allowlisted_and_traversal_rejected) ... ok
+test_characterization_is_distinct_and_exposes_conditional_findings (test_server.WorkbenchTests.test_characterization_is_distinct_and_exposes_conditional_findings) ... ok
+test_characterization_result_cannot_hide_execution_failure (test_server.WorkbenchTests.test_characterization_result_cannot_hide_execution_failure) ... ok
+test_current_process_identity_is_live (test_server.WorkbenchTests.test_current_process_identity_is_live) ... ok
+test_evidence_uses_saved_counts_and_refreshes (test_server.WorkbenchTests.test_evidence_uses_saved_counts_and_refreshes) ... ok
+test_failed_checks_override_zero_exit (test_server.WorkbenchTests.test_failed_checks_override_zero_exit) ... ok
+test_incomplete_launch_record_blocks_duplicate_after_restart (test_server.WorkbenchTests.test_incomplete_launch_record_blocks_duplicate_after_restart) ... ok
+test_initial_persistence_failure_does_not_publish_or_launch (test_server.WorkbenchTests.test_initial_persistence_failure_does_not_publish_or_launch) ... ok
+test_invalid_counts_are_not_green (test_server.WorkbenchTests.test_invalid_counts_are_not_green) ... ok
+test_launch_failure_is_recorded (test_server.WorkbenchTests.test_launch_failure_is_recorded) ... ok
+test_log_tail_is_bounded (test_server.WorkbenchTests.test_log_tail_is_bounded) ... ok
+test_matlab_literal_escapes_quotes_and_windows_slashes (test_server.WorkbenchTests.test_matlab_literal_escapes_quotes_and_windows_slashes) ... ok
+test_missing_evidence_is_unknown (test_server.WorkbenchTests.test_missing_evidence_is_unknown) ... ok
+test_nonzero_exit_overrides_passed_result (test_server.WorkbenchTests.test_nonzero_exit_overrides_passed_result) ... ok
+test_oversized_or_nonfinite_json_is_unavailable (test_server.WorkbenchTests.test_oversized_or_nonfinite_json_is_unavailable) ... ok
+test_postlaunch_persistence_failure_blocks_until_process_exits (test_server.WorkbenchTests.test_postlaunch_persistence_failure_blocks_until_process_exits) ... ok
+test_project_lock_blocks_second_server (test_server.WorkbenchTests.test_project_lock_blocks_second_server) ... ok
+test_restarted_server_does_not_infer_success_without_exit_code (test_server.WorkbenchTests.test_restarted_server_does_not_infer_success_without_exit_code) ... ok
+test_restarted_server_waits_for_existing_process (test_server.WorkbenchTests.test_restarted_server_waits_for_existing_process) ... ok
+test_run_is_isolated_and_output_not_precreated (test_server.WorkbenchTests.test_run_is_isolated_and_output_not_precreated) ... ok
+test_run_result_cannot_expose_outside_files (test_server.WorkbenchTests.test_run_result_cannot_expose_outside_files) ... ok
+test_second_run_rejected_while_first_is_active (test_server.WorkbenchTests.test_second_run_rejected_while_first_is_active) ... ok
+test_success_requires_result_and_zero_exit (test_server.WorkbenchTests.test_success_requires_result_and_zero_exit) ... ok
+test_symlink_escape_is_rejected (test_server.WorkbenchTests.test_symlink_escape_is_rejected) ... ok
+test_unrecognized_workflow_never_launches (test_server.WorkbenchTests.test_unrecognized_workflow_never_launches) ... ok
+test_v2_documents_are_allowlisted_only_when_present (test_server.WorkbenchTests.test_v2_documents_are_allowlisted_only_when_present) ... ok
+test_wrong_workflow_result_is_failed (test_server.WorkbenchTests.test_wrong_workflow_result_is_failed) ... ok
+test_zero_exit_with_missing_result_is_failed (test_server.WorkbenchTests.test_zero_exit_with_missing_result_is_failed) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 1.128s
+
+OK

@@ -1,0 +1,15 @@
+fixture_id,stage,Ccp_pF,Ccn_pF,task_sign,phase_ns
+V2DEV01,development,20,8,1,0
+V2DEV02,development,160,8,1,0
+V2EVAL01,evaluation,40,7,1,-75
+V2EVAL02,evaluation,40,7,1,75
+V2EVAL03,evaluation,40,7,-1,-75
+V2EVAL04,evaluation,40,7,-1,75
+V2EVAL05,evaluation,120,7,1,-75
+V2EVAL06,evaluation,120,7,1,75
+V2EVAL07,evaluation,120,7,-1,-75
+V2EVAL08,evaluation,120,7,-1,75
+V2EVAL09,evaluation,240,7,1,-75
+V2EVAL10,evaluation,240,7,1,75
+V2EVAL11,evaluation,240,7,-1,-75
+V2EVAL12,evaluation,240,7,-1,75

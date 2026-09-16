@@ -1,0 +1,70 @@
+{
+  "design_id": "FOUR-WAY-EMI-PLAN-V2",
+  "status": "complete",
+  "complete": true,
+  "physical_validation": false,
+  "scope": "Conditional numerical study; no physical receiver or hardware validation",
+  "acceptance": {
+    "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\implementation_acceptance.json",
+    "sha256": "7f1f5b897fd205a7d6af40416a8a73a9b2612f9c1e98c198bde3adf7a02d9714",
+    "passed": true,
+    "frozen_utc": "2026-09-15T22:54:25.711932+00:00"
+  },
+  "development": {
+    "logical_records": 256,
+    "paired_results": 128,
+    "complete": true,
+    "all_guards_pass": true,
+    "all_execution_clean_guards_pass": true,
+    "audit": {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\review\\development_audit_001.json",
+      "sha256": "2426d2455d77f590419b9722b0badc5c1b9398098822623ff2bb129701756243",
+      "all_passed": true,
+      "records": 256,
+      "pairs": 128
+    }
+  },
+  "native": {
+    "records": 24,
+    "variant_comparisons": 384,
+    "refinements": 256,
+    "passed": true
+  },
+  "tests": {
+    "matlab_passed": 155,
+    "python_passed": 14,
+    "passed": true,
+    "supplemental_audit_method_passed": 6
+  },
+  "evaluation": {
+    "logical_records": 1536,
+    "paired_results": 768,
+    "complete": true,
+    "all_guards_pass": true,
+    "all_execution_clean_guards_pass": true,
+    "passing_hypotheses": 0,
+    "audit": {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\review\\evaluation_audit_001.json",
+      "sha256": "602c5189ea94ea5e4c230a4cd6789b5c571dbc6d265037980b3c0ac2d68aa2bd",
+      "all_passed": true,
+      "records": 1536,
+      "pairs": 768
+    }
+  },
+  "closure": {
+    "logical_records": 256,
+    "comparison_pairs": 128,
+    "complete": true,
+    "all_guards_pass": true,
+    "all_domain_numerics_pass": true,
+    "guard_scope": "Declared diagnostic domain/numerics guards; no clean companion or primary benefit scoring",
+    "excluded_from_primary_evaluation": true,
+    "audit": {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\review\\closure_audit_001.json",
+      "sha256": "7dc177b5fc3f8b8ed3842eb1df2b3fa26424b27ef0c4252e590d7242f15205fb",
+      "all_passed": true,
+      "records": 256,
+      "pairs": 128
+    }
+  }
+}

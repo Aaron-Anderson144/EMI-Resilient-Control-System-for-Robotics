@@ -1,0 +1,17 @@
+Variant,baseline_normalized_mean,combined_normalized_mean,baseline_raw_mean_RMSE_deg,combined_raw_mean_RMSE_deg,all_execution_clean_guards_pass,per_fixture_rmse_gate,per_fixture_peak_gate,current_gate,rescued_failures,baseline_task_failures,aggregate_gate,rescued_failure_gate,combined_benefit_demonstrated
+V01,0.0018035839203017132,0.0,0.0004508959800754283,0.0,True,True,True,True,0,0,True,False,False
+V02,0.0018035839203017132,0.0,0.0004508959800754283,0.0,True,True,True,True,0,0,True,False,False
+V03,0.0,0.0,0.0,0.0,True,True,True,True,0,0,True,False,False
+V04,0.0,0.0,0.0,0.0,True,True,True,True,0,0,True,False,False
+V05,0.0018035839203017132,0.0,0.0004508959800754283,0.0,True,True,True,True,0,0,True,False,False
+V06,0.0018035839203017132,0.0,0.0004508959800754283,0.0,True,True,True,True,0,0,True,False,False
+V07,0.0,0.0,0.0,0.0,True,True,True,True,0,0,True,False,False
+V08,0.0,0.0,0.0,0.0,True,True,True,True,0,0,True,False,False
+V09,0.0018035839203017132,0.0,0.0004508959800754283,0.0,True,True,True,True,0,0,True,False,False
+V10,0.0018035839203017132,0.0,0.0004508959800754283,0.0,True,True,True,True,0,0,True,False,False
+V11,0.0,0.0,0.0,0.0,True,True,True,True,0,0,True,False,False
+V12,0.0,0.0,0.0,0.0,True,True,True,True,0,0,True,False,False
+V13,0.0018035839203017132,0.0,0.0004508959800754283,0.0,True,True,True,True,0,0,True,False,False
+V14,0.0018035839203017132,0.0,0.0004508959800754283,0.0,True,True,True,True,0,0,True,False,False
+V15,0.0,0.0,0.0,0.0,True,True,True,True,0,0,True,False,False
+V16,0.0,0.0,0.0,0.0,True,True,True,True,0,0,True,False,False

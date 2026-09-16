@@ -1,0 +1,108 @@
+{
+  "studyId": "RECEIVER-CHARACTERIZATION-V2",
+  "schemaVersion": 1,
+  "receiver": {
+    "part": "THVD1450DR",
+    "supply_V": 5,
+    "ambient_C": 25,
+    "outputLoad_pF": 15,
+    "driverEnable": 0,
+    "receiverEnableBar": 0,
+    "preEnabledSettling_s": 2E-5,
+    "pinOperatingLimit_V": 15,
+    "differentialOperatingLimit_V": 15,
+    "pinStressLimit_V": 18,
+    "differentialStressLimit_V": 18,
+    "thresholdPairs": [
+      {
+        "id": "typical_illustration",
+        "rise_V": -0.1,
+        "fall_V": -0.13
+      },
+      {
+        "id": "lower_illustration",
+        "rise_V": -0.17,
+        "fall_V": -0.2
+      },
+      {
+        "id": "upper_illustration",
+        "rise_V": -0.02,
+        "fall_V": -0.05
+      },
+      {
+        "id": "narrow_hysteresis_assumption",
+        "rise_V": -0.1,
+        "fall_V": -0.105
+      }
+    ],
+    "postThresholdLatency_s": [
+      2.5E-8,
+      4E-8
+    ],
+    "pulseLaws": [
+      "transport",
+      "inertial"
+    ],
+    "latencyMeaning": "Assumed post-threshold latency; TI delay is measured at vd=0 and is not an exact Schmitt-trip latency.",
+    "dynamicStatus": "Uncharacterized physical narrow-pulse, overdrive, common-mode slew and clamp behavior"
+  },
+  "network": {
+    "driverCommonMode_V": 2.5,
+    "driverDifferentialMagnitude_V": 2,
+    "driverTransition_s": 1E-7,
+    "driverRp_Ohm": 47,
+    "driverRn_Ohm": 53,
+    "termination_Ohm": 120,
+    "pinCp_F": 5E-11,
+    "pinCn_F": 7E-11,
+    "biasRp_Ohm": 10000,
+    "biasRn_Ohm": 20000,
+    "returnR_Ohm": 0.025,
+    "returnL_H": 2E-8,
+    "Cdiff_pF": [
+      100,
+      1000
+    ],
+    "Ccp_pF": [
+      30,
+      300
+    ],
+    "Ccn_pF": 5,
+    "groundDefinition": "IC ground, pin shunts and bias returns are the quiet reference 0 V; the encoder driver reference is the dynamic shared-return node g. No receiver ground displacement is silently added.",
+    "aggressorReturnCurrent_A": 0,
+    "inductiveCoupling_H": 0,
+    "clamps": "Absent; currents beyond domain are diagnostic linear-network values only.",
+    "cable": "Lumped capacitances only; no propagation, distributed loss or measured cable model."
+  },
+  "source": {
+    "path": "06_Circuit_Simulations/SC01B_R2/results/verification/nominal/native_finest.csv",
+    "sha256": "1ecdd83ee4f4846b70e2d40ba04f4b3188e737c94f08300a5bbbfcc36acb9cd5",
+    "interpolation": "piecewise_linear_at_all_40001_original_timestamps",
+    "syntheticReturn_s": 1E-7,
+    "nativeStop_s": 6E-6,
+    "polarities": [
+      -1,
+      1
+    ],
+    "syntheticPulseWidths_s": [
+      1E-8,
+      4E-8,
+      2E-7
+    ],
+    "syntheticEdge_s": 5E-9,
+    "syntheticAmplitude_V": 24,
+    "syntheticStart_s": 2E-6,
+    "syntheticStop_s": 6E-6
+  },
+  "numerics": {
+    "coarseCell_s": 1E-9,
+    "fineCell_s": 5E-10,
+    "rootTolerance_s": 1E-13,
+    "extremaAllowance_V": 0.001,
+    "eventAllowance_s": 1E-10,
+    "maxAdaptiveRounds": 18,
+    "method": "Exact affine-segment modal propagation; continuous linear-interpolation error bounds M2*h^2/8; adaptive root isolation and coarse/fine verification."
+  },
+  "scope": "Conditional numerical characterization only; no physical receiver validation or control scoring.",
+  "datasheet": "https://www.ti.com/lit/ds/symlink/thvd1451.pdf"
+}

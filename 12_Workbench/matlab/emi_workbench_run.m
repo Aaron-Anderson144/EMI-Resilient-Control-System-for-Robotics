@@ -1,4 +1,4 @@
-function result = emi_workbench_run(projectRoot, workflow, runDir)
+function result = emi_workbench_run(projectRoot, workflow, runDir, acceptancePath)
 %EMI_WORKBENCH_RUN Run one existing workflow and retain its evidence.
 % The launcher creates runDir. This adapter requires a new output child and
 % never reuses result.json. Failed tests remain failed and raise an error
@@ -7,6 +7,7 @@ arguments
     projectRoot (1,1) string
     workflow (1,1) string
     runDir (1,1) string
+    acceptancePath (1,1) string = ""
 end
 
 projectRoot = string(java.io.File(char(projectRoot)).getCanonicalPath());
@@ -36,8 +37,16 @@ try
             '06_Circuit_Simulations/SC01B_R2/tests', ...
             '06_Circuit_Simulations/FOUR_WAY/tests'};
     end
-    assert(any(workflow == ["baseline", "receiver_tests", "project_tests"]), ...
+    assert(any(workflow == ["baseline", "receiver_characterization", "four_way_v2_development", ...
+        "four_way_v2_evaluation", "four_way_v2_closure", "receiver_tests", "project_tests"]), ...
         'EMIWorkbench:UnknownWorkflow', 'Unsupported workbench workflow: %s', workflow);
+    if any(workflow == ["four_way_v2_evaluation", "four_way_v2_closure"])
+        assert(strlength(acceptancePath)>0 && isfile(acceptancePath), ...
+            'EMIWorkbench:MissingAcceptance', 'A separately verified V2 implementation acceptance file is required.');
+        acceptancePath = string(java.io.File(char(acceptancePath)).getCanonicalPath());
+        result.provenance.acceptance_path = acceptancePath;
+        result.provenance.acceptance_file_sha256 = localHash(acceptancePath);
+    end
     assert(~isfolder(outputFolder) && ~isfile(outputFolder), ...
         'EMIWorkbench:OutputExists', ...
         'The output directory already exists. Start a new workbench run.');
@@ -67,6 +76,88 @@ try
         fullfile(projectRoot, '03_MATLAB', 'parameters', 'actuator_parameters.m'));
 
     switch workflow
+        case {"four_way_v2_evaluation", "four_way_v2_closure"}
+            v2Root = fullfile(projectRoot, '06_Circuit_Simulations', 'FOUR_WAY_V2');
+            runnerName = 'run_fourway_v2_stage.m';
+            if workflow == "four_way_v2_closure", runnerName = 'run_fourway_v2_closure.m'; end
+            runnerFile = fullfile(v2Root, 'scripts', runnerName);
+            assert(isfile(runnerFile), 'EMIWorkbench:MissingV2Runner', ...
+                'The selected four-way v2 runner is missing from the verified scientific workspace.');
+            addpath(fullfile(v2Root, 'functions'), fullfile(v2Root, 'scripts'));
+            result.provenance.v2_runner_file_sha256 = localHash(runnerFile);
+            studyFolder = fullfile(outputFolder, workflow);
+            if workflow == "four_way_v2_evaluation"
+                run_fourway_v2_stage("evaluation", studyFolder, acceptancePath);
+                result.evaluation = emi_workbench_evaluation_result(studyFolder);
+                summary = result.evaluation.summary;
+                result.metrics = struct('logicalRecords', summary.logical_records, ...
+                    'pairedResults', summary.paired_results, 'receiverHypotheses', summary.receiver_hypotheses, ...
+                    'failedRecords', summary.failed_records, 'failedPairs', summary.failed_pairs, ...
+                    'evaluationGuardsPass', summary.all_execution_clean_guards_pass);
+                if isfield(summary, 'assessment')
+                    result.metrics.passingHypotheses = summary.assessment.passing_hypotheses;
+                    result.metrics.allHypothesesBenefitPass = summary.assessment.all_hypotheses_pass;
+                end
+                result.summary = string(sprintf(['Evaluation completed: %d records and %d matched comparisons under %d receiver assumptions. ' ...
+                    'Execution, research guards, and each hypothesis benefit screen are separate results. Conditional simulation only.'], ...
+                    summary.logical_records, summary.paired_results, summary.receiver_hypotheses));
+            else
+                run_fourway_v2_closure(studyFolder, acceptancePath);
+                result.closure = emi_workbench_closure_result(studyFolder);
+                summary = result.closure.summary;
+                result.metrics = struct('logicalRecords', summary.logical_records, ...
+                    'comparisonPairs', summary.comparison_pairs, 'receiverHypotheses', result.closure.receiverHypotheses, ...
+                    'failedRecords', result.closure.failedRecords, ...
+                    'closureDomainNumericsPass', result.closure.domainNumericsPass);
+                result.summary = string(sprintf(['Return-sensitivity diagnostic completed: %d records and %d short/long-return comparisons. ' ...
+                    'This conditional diagnostic is excluded from primary evaluation scoring and does not establish mitigation benefit.'], ...
+                    summary.logical_records, summary.comparison_pairs));
+            end
+            assert(strcmp(result.provenance.acceptance_file_sha256, localHash(acceptancePath)), ...
+                'EMIWorkbench:AcceptanceChanged', 'The acceptance file changed during execution; retain these outputs for review.');
+            assert(summary.complete, 'EMIWorkbench:V2ExecutionIncomplete', ...
+                'The selected V2 execution is incomplete; failed records and partial outputs remain available.');
+            result.status = "passed";
+        case "four_way_v2_development"
+            v2Root = fullfile(projectRoot, '06_Circuit_Simulations', 'FOUR_WAY_V2');
+            runnerFile = fullfile(v2Root, 'scripts', 'run_fourway_v2_stage.m');
+            assert(isfile(runnerFile), 'EMIWorkbench:MissingDevelopment', ...
+                'Four-way v2 development source is missing from this workspace.');
+            addpath(fullfile(v2Root, 'functions'), fullfile(v2Root, 'scripts'));
+            result.provenance.development_runner_file_sha256 = localHash(runnerFile);
+            developmentFolder = fullfile(outputFolder, 'four_way_v2_development');
+            run_fourway_v2_stage("development", developmentFolder);
+            result.development = emi_workbench_development_result(developmentFolder);
+            summary = result.development.summary;
+            result.metrics = struct('logicalRecords', summary.logical_records, ...
+                'pairedResults', summary.paired_results, 'receiverHypotheses', summary.receiver_hypotheses, ...
+                'failedRecords', summary.failed_records, 'failedPairs', summary.failed_pairs, ...
+                'developmentGuardsPass', summary.all_execution_clean_guards_pass);
+            result.summary = string(sprintf(['Development completed: %d records and %d matched comparisons across %d receiver assumptions. ' ...
+                'Conditional simulation only; each hypothesis retains its own results. Reserved evaluation requires separately verified acceptance.'], ...
+                summary.logical_records, summary.paired_results, summary.receiver_hypotheses));
+            assert(summary.complete, 'EMIWorkbench:DevelopmentIncomplete', ...
+                'Development execution is incomplete; failed records and partial outputs remain available.');
+            result.status = "passed";
+        case "receiver_characterization"
+            receiverRoot = fullfile(projectRoot, '06_Circuit_Simulations', 'RECEIVER_V2');
+            runnerFile = fullfile(receiverRoot, 'scripts', 'run_receiver_characterization.m');
+            assert(isfile(runnerFile), 'EMIWorkbench:MissingCharacterization', ...
+                'Receiver v2 characterization source is missing from this workspace.');
+            addpath(fullfile(receiverRoot, 'functions'), fullfile(receiverRoot, 'scripts'));
+            result.provenance.receiver_characterization_file_sha256 = localHash(runnerFile);
+            study = run_receiver_characterization(fullfile(outputFolder, 'receiver_characterization'));
+            result.characterization = study;
+            result.metrics = struct('totalCases', study.totalCases, ...
+                'validCases', study.validCases, 'invalidCases', study.invalidCases, ...
+                'unresolvedCases', study.unresolvedCases, 'cleanErrorCases', study.cleanErrorCases, ...
+                'exposedErrorCases', study.exposedErrorCases, ...
+                'pulseLawDependentCases', study.pulseLawDependentCases);
+            result.status = "passed";
+            result.summary = string(sprintf(['Receiver characterization completed: %d cases; ' ...
+                '%d within the model domain with converged numerics, %d outside, %d unresolved. ' ...
+                'Conditional simulation only; inspect domain and timing findings before interpreting control comparisons.'], ...
+                study.totalCases, study.validCases, study.invalidCases, study.unresolvedCases));
         case "baseline"
             study = run_baseline(outputFolder);
             result.metrics = study.metrics;
@@ -129,7 +220,7 @@ try
             localWriteTestSummary(outputFolder, result);
     end
 
-    result.artifacts = localArtifacts(outputFolder, runDir);
+    result.artifacts = localArtifacts(outputFolder, runDir, workflow);
     result.finished_at = localTimestamp();
     result.duration_s = toc(started);
     localWriteJson(resultPath, result);
@@ -153,7 +244,7 @@ catch failure
                 warning('EMIWorkbench:SummaryWriteFailed', '%s', summaryFailure.message);
             end
         end
-        result.artifacts = localArtifacts(outputFolder, runDir);
+        result.artifacts = localArtifacts(outputFolder, runDir, workflow);
     end
     result.finished_at = localTimestamp();
     result.duration_s = toc(started);
@@ -220,7 +311,7 @@ if isfield(result, 'error'), summary.error = result.error; end
 localWriteJson(fullfile(outputFolder, 'test_summary.json'), summary);
 end
 
-function artifacts = localArtifacts(outputFolder, runDir)
+function artifacts = localArtifacts(outputFolder, runDir, workflow)
 listing = dir(fullfile(outputFolder, '**', '*'));
 listing = listing(~[listing.isdir]);
 artifacts = cell(numel(listing), 1);
@@ -230,6 +321,24 @@ for index = 1:numel(listing)
     artifacts{index} = strrep(absolutePath(numel(prefix) + 1:end), '\', '/');
 end
 artifacts = sort(artifacts);
+if any(workflow == ["four_way_v2_evaluation", "four_way_v2_closure"])
+    % Complete campaigns contain thousands of raw files. Keep the response
+    % small while retaining an explicit inventory and every raw file on disk.
+    indexPath = fullfile(outputFolder, 'artifact_index.csv');
+    indexRelative = 'output/artifact_index.csv';
+    if ~isfile(indexPath)
+        paths = strings(numel(listing),1); sizes = zeros(numel(listing),1);
+        for k = 1:numel(listing)
+            absolutePath = fullfile(listing(k).folder, listing(k).name);
+            paths(k) = string(strrep(absolutePath(numel(prefix)+1:end), '\', '/'));
+            sizes(k) = listing(k).bytes;
+        end
+        inventory = sortrows(table(paths, sizes, 'VariableNames', {'Artifact','Bytes'}), 'Artifact');
+        writetable(inventory, indexPath);
+    end
+    artifacts = artifacts(count(string(artifacts), '/') <= 2);
+    artifacts = sort(unique([artifacts; {indexRelative}]));
+end
 end
 
 function localWriteJson(destination, value)

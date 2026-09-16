@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "design_id": "FOUR-WAY-EMI-PLAN-V2",
+  "final": true,
+  "generated_utc": "2026-09-15T23:20:27.217950+00:00",
+  "physical_validation": false,
+  "input_files": [
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\closure_001\\closure_comparisons.csv",
+      "sha256": "b57c93763a6b86978245253904f76e339f42c7568cecb849f8f3826df47ced45",
+      "role": "source-return comparisons"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\closure_001\\record_index.csv",
+      "sha256": "a515a31c214435fb6fcb6a0952941ddc478408a47c6af275c02e1531822fa417",
+      "role": "closure record index"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\closure_001\\stage_summary.json",
+      "sha256": "1dd6c3f3c472bda8d695bd22dce2c01dd1a92dbb080fa78c2e539dc6c0ca91ef",
+      "role": "closure campaign summary"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\development_001\\metrics.csv",
+      "sha256": "11510fbf5d8324669c2092696d2cdcd422f135d56125d2c5f4d5f568d6059c0b",
+      "role": "development paired metrics"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\development_001\\record_index.csv",
+      "sha256": "18ce2f28129f5ffee7c709e636cde705a30a0a802cae110b2c1f7735c6cdb13a",
+      "role": "development complete record index"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\development_001\\stage_summary.json",
+      "sha256": "e73e1c07a5d7b2360316fdbea59e037b2ef55765ab5896a41e3a075d2c5856e5",
+      "role": "development campaign summary"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\evaluation_001\\metrics.csv",
+      "sha256": "687a3197a2b6cc3939d397518e085d5a8645d5d607578ee05eb50ac51822479b",
+      "role": "evaluation paired metrics"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\evaluation_001\\record_index.csv",
+      "sha256": "7add15c9a50bfd3b339e9548b91078089156688515402dbdb6c49488c0b1d7d8",
+      "role": "evaluation complete record index"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\evaluation_001\\stage_summary.json",
+      "sha256": "2b80511245d18a88a30c6085948f3aa4ba4ab9981353f33bad7d996dffeeedf7",
+      "role": "evaluation campaign summary"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\implementation_acceptance.json",
+      "sha256": "7f1f5b897fd205a7d6af40416a8a73a9b2612f9c1e98c198bde3adf7a02d9714",
+      "role": "accepted implementation/evidence freeze"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\native\\audit_005\\native_summary.json",
+      "sha256": "e5e576ede4b1bc2091588611a49881b8287cea4fe920dd5ca4d4b782e8a99059",
+      "role": "accepted native evidence"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\reporting\\generate_research_summary.py",
+      "sha256": "794de949743f6b1b6b186aa5daa02d933138cef377062a867cf7f4a8d69994ed",
+      "role": "report generator"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\review\\closure_audit_001.json",
+      "sha256": "7dc177b5fc3f8b8ed3842eb1df2b3fa26424b27ef0c4252e590d7242f15205fb",
+      "role": "independent closure_diagnostic audit"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\review\\development_audit_001.json",
+      "sha256": "2426d2455d77f590419b9722b0badc5c1b9398098822623ff2bb129701756243",
+      "role": "accepted independent_audit evidence"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\review\\evaluation_audit_001.json",
+      "sha256": "602c5189ea94ea5e4c230a4cd6789b5c571dbc6d265037980b3c0ac2d68aa2bd",
+      "role": "independent evaluation audit"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\review\\parallel_cache_tests.json",
+      "sha256": "f6b7bf4de3850249afff113860ee018d7173052d9b124c3a69471ca80ca782d2",
+      "role": "supplemental independent audit-method verification"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\review\\python_audit_gate_tests.log",
+      "sha256": "afaa1084b015c7db0cd8ee58bc2123ea8839bf457d2989651da6d00e4641ef76",
+      "role": "independent audit/gate test log"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\tests_summary.json",
+      "sha256": "95132535472b18787ee8ca04293a94bfdbb7f737891a6239efdf2306bf62871b",
+      "role": "accepted tests evidence"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\06_Circuit_Simulations\\RECEIVER_V2\\receiver_characterization_config.json",
+      "sha256": "32f5918dfd22d7c67d14660b9906bec8edb1db2d42147a9f77e2718e25dcac93",
+      "role": "frozen receiver hypothesis definitions"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "closure_sensitivity_summary.csv",
+      "sha256": "e08f9792f168487bed61ddc90964dcd4e1c17dc7e69bd044f0a037c1b2e77676"
+    },
+    {
+      "name": "development_arm_summary.csv",
+      "sha256": "40caa9832574528849c92432ca5a805b76b2461a9ea0aec74da76df167731e1c"
+    },
+    {
+      "name": "evaluation_affected_cases.csv",
+      "sha256": "013c66636ee4789b19aa5d6626b2b6be1e5d77d15726a6e2cf99b782f4bac4a3"
+    },
+    {
+      "name": "evaluation_arm_summary.csv",
+      "sha256": "4b78f7bbe71c6f0a97aaab687da39992a72884f861990c7992ad89452d10bd8d"
+    },
+    {
+      "name": "evaluation_hypotheses.png",
+      "sha256": "8f05b90df405dcf9ba9f16bca2895147feb5c0ec5f3d1a1252672a18a6ca15bc"
+    },
+    {
+      "name": "evaluation_hypotheses.svg",
+      "sha256": "92234fc84c5168a8486c5ba7dd14bca2e2dcda61c8b1d5560a6a05e01590f4ad"
+    },
+    {
+      "name": "receiver_hypotheses.csv",
+      "sha256": "ac1d7b994f2c332feaa73fcf3a25f225f34bd66a596a85ee37bef69712e1edf0"
+    },
+    {
+      "name": "research_results_summary.json",
+      "sha256": "1f0afc4b765bfb9f4c2889025bcd360a6ce2998ee53a47b90f7aa28ab4a41a90"
+    },
+    {
+      "name": "Results.md",
+      "sha256": "5a2a79b4cbd81a81467b0e6580e11eab296630a7542801dde679375847324ba2"
+    },
+    {
+      "name": "source_return_sensitivity.png",
+      "sha256": "473295a6426f759f7ead557a061b944df81e1742fa0fa7ec68464f99231a7f2a"
+    },
+    {
+      "name": "source_return_sensitivity.svg",
+      "sha256": "140a60686bf033712b2983a8455a2fbce6e6c833c1700e88c56f34eaf3fc3bfa"
+    },
+    {
+      "name": "study_summary.json",
+      "sha256": "8e20d29e3a4554337d75670701443278528cecb367cf3e3449da5b84755ed528"
+    },
+    {
+      "name": "variant_benefit_screens.csv",
+      "sha256": "7cddec732a934690980596f1d4da8b412cffef2a6bc78ce6be469f14f3946bce"
+    }
+  ]
+}

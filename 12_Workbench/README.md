@@ -1,6 +1,6 @@
 # EMI Robotics · Signal Lab
 
-A local interface for the existing EMI robotics project. It brings the saved research checkpoint, experiment launch, live logs, and run artifacts together. The MATLAB models remain the source of the calculations.
+A local interface for the existing EMI robotics project. It brings experiment launch, live logs, and run artifacts together. The MATLAB models remain the source of the calculations.
 
 ## Portable desktop edition
 
@@ -28,22 +28,64 @@ Use `--port 8766` for a different port, `--no-browser` to start without opening 
 
 ## What you can do
 
-- Read the saved verification checkpoint with links to its evidence.
 - Run the clean baseline and inspect its position response, command voltage, metrics, and data.
+- Run **Receiver v2 characterization** to inspect matched clean/disturbed fixtures, circuit capacitance, receiver assumptions, voltage limits, and encoder errors.
+- Run **Four-way v2 development** to compare the four control arms on the two declared development fixtures under all 16 receiver assumptions.
+- Run **Four-way v2 evaluation** to inspect all 1,536 records, 768 matched comparisons, and 16 independent benefit screens.
+- Run **Source-return comparison** to inspect 256 diagnostic records and 128 comparisons.
 - Run the focused circuit and receiver checks.
 - Run the robotics test suite.
 - Follow a run's log, revisit saved runs, and open their artifacts.
 - Reach the roadmap, receiver revision brief, and research documentation.
 
-The first release uses the existing experiment settings. Parameter editing and a revised receiver experiment are future integration steps.
+The workflows use declared experiment settings. Receiver characterization uses a reproducible sweep defined by the [receiver v2 contract](../04_EMI_Models/Receiver_V2_Contract.md). The [next four-way experiment plan](../04_EMI_Models/Four_Way_EMI_Experiment_V2.md) records how the characterization informs the next comparison. General parameter editing remains a future integration step.
 
 ## How to read the results
 
-Historical evidence cards describe the saved checkpoints and include their source links. They are not checks performed when the page opens. A completed run means its selected workflow finished successfully. It does not establish hardware validity or demonstrate a combined mitigation benefit.
+Imported evidence cards and imported run entries are omitted from the app. The original project evidence remains saved. A completed run means its selected workflow finished successfully. It does not establish hardware validity or demonstrate a combined mitigation benefit.
 
-Receiver characterization is still the next research milestone. The original four-way evaluation remains blocked by its rejected receiver-domain acceptance. This workbench exposes no command to bypass that gate or launch the reserved evaluation. The EDMD study remains a separate estimation study and is not connected to motor control by this interface.
+Receiver characterization is conditional simulation evidence. A completed sweep can contain out-of-domain cases, unresolved cases, clean errors, or no suitable comparison candidate. Read its findings, interpretation limits, case table, and report before interpreting the declared comparison; retain failing cases and the reserved evaluation cells. A candidate under a behavioral assumption is not measured receiver validation. The historical PLAN-V1 rejection is unchanged. PLAN-V2 evaluation and source-return controls verify the accepted v2 setup before each launch. The EDMD study remains a separate estimation study and is not connected to motor control by this interface.
+
+## Receiver characterization workflow
+
+Select **Receiver v2 characterization**, then **Run experiment**. The adapter invokes `run_receiver_characterization` in a fresh `output/receiver_characterization` folder and retains the runner's findings in the workbench result. The run detail shows domain counts, persistent count errors, pulse-model sensitivity, interpretation limits, and the case table. A scrollable table keeps clean and disturbed cases visible together. Saved outputs include:
+
+- `report.md`: findings and interpretation.
+- `summary.json`: machine-readable findings and case records.
+- `cases.csv`: voltage extrema, domain violations, errors, timing, and convergence for the full sweep.
+- `characterization.png`: the saved characterization plot.
+- `details/`: per-case traces and event timing, grouped separately in the interface.
+
+The **Completed** badge describes execution success. The runner's `suitableForFourWay` field covers only the clean-case numerical prerequisite; every disturbed control case still requires its own domain and behavior checks. Neither changes the historical acceptance record. **Receiver model checks** remains the existing causal-receiver regression workflow.
 
 ## Stored runs
+
+### Four-way v2 development
+
+The development workflow invokes `run_fourway_v2_stage("development", ...)` in a fresh output folder. It runs 256 clean/disturbed records and reports 128 matched comparisons separately by receiver assumption and control arm. It requires the project's licensed MATLAB products, including Parallel Computing Toolbox; the runner uses up to eight workers and may take several minutes.
+
+The result table shows domain and numerical checks, clean and execution guards, paired motion error, current, encoder-count error, and task success. Full `metrics.csv`, `record_index.csv`, recovery and episode tables, execution identity, and individual traces remain available as artifacts. Failed records stay indexed; an incomplete campaign is a failed workflow. A completed campaign can still have failed research guards and does not establish mitigation benefit or physical validity. Reserved evaluation has a separate launcher and requires the accepted local source and evidence binding described below.
+
+### Accepted v2 evaluation and source-return controls
+
+Select **Four-way v2 evaluation** or **Source-return comparison**, then **Run experiment**. Signal Lab verifies the original accepted source, protocol, test, native-circuit, and development evidence before creating a run. MATLAB repeats its unchanged scientific acceptance check. Missing or changed evidence disables these two controls with an explanation; other workflows remain available.
+
+Those two workflows require a local binding to the original accepted scientific project and receipt. Public source checkouts and downloadable releases leave this binding unset, so both controls explain that the accepted setup is not configured. The other workflows remain available. Exact source and evidence paths are part of the pinned receipt; moving the app alone does not transfer that accepted setup. The accepted runner also requires the installed `py -3.12` launcher, MATLAB, and Parallel Computing Toolbox.
+
+If the original accepted source and full evidence archive are available on this computer, create `12_Workbench/local/accepted-science.json` in the source checkout, or `workspace/12_Workbench/local/accepted-science.json` in the extracted desktop app, then restart the app. Supply the absolute locations of the original accepted source and receipt:
+
+```json
+{
+  "scientific_project_root": "C:/Research/OriginalAcceptedProject",
+  "acceptance_path": "C:/Research/OriginalEvidence/implementation_acceptance.json"
+}
+```
+
+These are placeholders, not locations to which accepted files can simply be moved. The original paths recorded throughout the receipt and evidence must still resolve. This private configuration is excluded from Git and public app packages. It selects locations only: it cannot replace the pinned receipt, verifier, or scientific checks. Changing the scientific implementation or rebuilding its acceptance is a separate research acceptance process.
+
+Both workflows save fresh results in the app's own run folder. Evaluation displays all 768 matched comparisons and the 16 benefit screens separately. Source-return comparison displays all 128 comparisons. Successful execution does not imply a passing benefit screen. Full raw records remain on disk; summary files and `output/artifact_index.csv` provide a compact downloadable inventory.
+
+The completed research milestone is independent of readiness for a new run. The saved study passed its simulation guards but did not meet the declared combined-benefit criterion under any of the 16 assumptions. It does not establish hardware validity.
 
 New workbench records are stored in `12_Workbench/runs/<run-id>/`, including the launch record, log, result summary, and `output/` artifacts. Run folders and local server logs are excluded from source control. Existing test workflows may also use their normal temporary or compiled-cache folders.
 
@@ -68,4 +110,4 @@ The integration tests exercise workflow selection, isolated output, failures, jo
 - Run launch, disabled duplicate submission, saved history, plot loading, expandable logs, comparison selection, and narrow-window layout were checked in the browser. All 27 distinct published evidence/document/output links checked returned their files.
 - All 16 frozen experiment files retained their recorded hashes. Of the 569 pre-existing tracked files checked, only the root README changed, to add the workbench entry points.
 
-These checks verify the interface and its integration with existing workflows. Research acceptance, hardware validation, and the reserved four-way evaluation remain unchanged.
+These checks verify the interface and its integration with existing workflows. Those initial checks predate the added v2 controls. Scientific source, protocol, and acceptance records remain unchanged by this interface update.

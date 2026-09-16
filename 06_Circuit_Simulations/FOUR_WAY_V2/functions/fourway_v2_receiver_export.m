@@ -1,0 +1,16 @@
+function record=fourway_v2_receiver_export(sensor)
+record=sensor;record.events=join(sensor.event_blocks,8);record.decoder=join(sensor.decoder_blocks,8);
+record.intended=join(sensor.intended_blocks,3);record.boundaries=join(sensor.boundary_blocks,7);
+record.packets=join(sensor.packet_blocks,10);record.logic=join(sensor.logic_blocks,4);
+record=rmfield(record,{'event_blocks','decoder_blocks','intended_blocks','boundary_blocks','packet_blocks','logic_blocks'});
+record.config=rmfield(record.config,{'knots','volts','slopes'});
+record.domain=struct('failed',logical(sensor.state(14)),'stressFailed',logical(sensor.state(22)), ...
+    'numericalRejected',logical(sensor.state(37)),'firstViolation_s',sensor.state(24), ...
+    'timeOutside_s',sensor.state(25),'timeOutsidePin_s',sensor.state(72),'timeOutsideDifferential_s',sensor.state(28), ...
+    'minVpBound_V',sensor.state(29),'maxVpBound_V',sensor.state(30),'minVnBound_V',sensor.state(31), ...
+    'maxVnBound_V',sensor.state(32),'minVdBound_V',sensor.state(33),'maxVdBound_V',sensor.state(34), ...
+    'maxAbsDriverGroundBound_V',sensor.state(35),'clampCurrent_A',NaN);
+end
+function a=join(blocks,n)
+if isempty(blocks),a=zeros(0,n);else,a=vertcat(blocks{:});end
+end

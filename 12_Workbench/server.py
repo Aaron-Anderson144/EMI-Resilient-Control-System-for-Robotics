@@ -10,6 +10,7 @@ import ctypes
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
+import importlib.util
 import mimetypes
 import os
 from pathlib import Path
@@ -19,32 +20,41 @@ import shutil
 import subprocess
 import sys
 import threading
+import time
 from urllib.parse import quote, unquote, urlsplit
 import uuid
 import webbrowser
 
 
+_acceptance_spec = importlib.util.spec_from_file_location("emi_workbench_acceptance", Path(__file__).with_name("acceptance.py"))
+acceptance = importlib.util.module_from_spec(_acceptance_spec)
+_acceptance_spec.loader.exec_module(acceptance)
+
 MAX_JSON_BYTES = 2 * 1024 * 1024
 MAX_LOG_BYTES = 64 * 1024
 RUN_ID = re.compile(r"^\d{8}T\d{6}Z_[a-f0-9]{12}$")
 REVIEW = "00_Project_Management/Reviews/2026-09-12/Complete_Verification"
-MAIN_EVIDENCE = REVIEW + "/main_test_summary.json"
-RESEARCH_EVIDENCE = REVIEW + "/verification_summary.json"
-EDMD_EVIDENCE = "11_EDMD_Hybrid_Estimation/results/verification_summary.json"
 DOCUMENTS = [
     ("Project overview", "Research scope and repository guide", "README.md"),
     ("Research roadmap", "Current milestones and receiver priorities", "00_Project_Management/Roadmap.md"),
     ("Receiver revision brief", "Characterization work needed before the comparison", "00_Project_Management/Reviews/2026-09-12/Receiver_Revision_Brief.md"),
+    ("Receiver v2 contract", "Circuit, device limits, and conditional receiver assumptions", "04_EMI_Models/Receiver_V2_Contract.md"),
+    ("Next four-way experiment", "Characterization findings, comparison design, and remaining gates", "04_EMI_Models/Four_Way_EMI_Experiment_V2.md"),
+    ("Four-way v2 results", "Latest saved causal motor/control study and interpretation limits", "00_Project_Management/Verification/Four_Way_V2_2026-09-15/Results.md"),
+    ("Four-way v2 implementation", "Causal receiver, motor campaign, and verified acceptance workflow", "06_Circuit_Simulations/FOUR_WAY_V2/README.md"),
     ("Progress report", "Saved publication report, September 11", "09_Report/Publication_2026-09-11/EMI_Robotics_Progress_Report.pdf"),
     ("EDMD project", "Hybrid estimation scope and usage", "11_EDMD_Hybrid_Estimation/README.md"),
     ("EDMD verification", "Latest saved verification and its limitations", "11_EDMD_Hybrid_Estimation/docs/VERIFICATION_AND_VALIDATION.md"),
     ("EDMD findings", "September 13 forecasting and correction results", "11_EDMD_Hybrid_Estimation/docs/RESULTS_20260913.md"),
     ("Complete verification review", "Saved project-wide verification report", REVIEW + "/Verification_Report.md"),
 ]
-ALLOWED_PROJECT_FILES = {item[2] for item in DOCUMENTS} | {
-    MAIN_EVIDENCE, RESEARCH_EVIDENCE, EDMD_EVIDENCE,
-}
+ALLOWED_PROJECT_FILES = {item[2] for item in DOCUMENTS}
+GATED_WORKFLOWS = {"four_way_v2_evaluation", "four_way_v2_closure"}
 WORKFLOWS = {
+    "four_way_v2_evaluation": ("Four-way v2 evaluation", "Run 1,536 matched clean/disturbed records and inspect the frozen benefit screen separately for all 16 receiver assumptions. Requires a fresh verification of the accepted local scientific project and its evidence."),
+    "four_way_v2_closure": ("Source-return comparison", "Run 256 source-return diagnostic records and inspect 128 comparisons under all 16 receiver assumptions. Requires a fresh verification of the accepted local scientific project and its evidence."),
+    "four_way_v2_development": ("Four-way v2 development", "Run the two declared development fixtures across four control arms and all 16 receiver assumptions: 256 matched clean/disturbed records. Review each assumption separately. Conditional simulation only; reserved evaluation has its own acceptance-checked launcher."),
+    "receiver_characterization": ("Receiver v2 characterization", "Sweep matched clean and disturbed receiver fixtures, circuit capacitance, and behavioral assumptions. Save voltage limits, edge/count errors, timing, and convergence checks. These are conditional simulation results, not measured receiver validation."),
     "baseline": ("Baseline control simulation", "Run the existing PID motor baseline and save its response and metrics."),
     "receiver_tests": ("Receiver model checks", "Run the existing causal receiver and receiver-domain tests."),
     "project_tests": ("Main project tests", "Run the existing MATLAB project test suite; this can take several minutes."),
@@ -201,7 +211,7 @@ class WorkbenchError(Exception):
 
 
 class Workbench:
-    def __init__(self, project_root=None, matlab=None):
+    def __init__(self, project_root=None, matlab=None, *, acceptance_checker=None):
         self.root = Path(project_root or Path(__file__).resolve().parent.parent).resolve()
         if not self.root.is_dir():
             raise ValueError("Project root does not exist")
@@ -215,10 +225,15 @@ class Workbench:
         self.guard = threading.RLock()
         self.runs = {}
         self.processes = {}
-        self.evidence_cache = {}
+        self.acceptance_checker = acceptance_checker or acceptance.check_acceptance
+        self.acceptance_status = {"passed": False, "reason": "Checking the accepted local experiment setup…"}
+        self.acceptance_checking = False
+        self.acceptance_checked = 0
+        self.launch_preflight = False
         self.lock = ProjectLock(safe_path(self.home, "server.lock"))
         self.closed = False
         self._load_runs()
+        self._refresh_acceptance()
 
     def close(self):
         # MATLAB is deliberately not terminated when a browser/server is closed.
@@ -246,6 +261,10 @@ class Workbench:
                 continue
             if not run or run.get("id") != folder.name or run.get("workflow") not in WORKFLOWS:
                 continue
+            provenance = run.get("provenance")
+            if (isinstance(provenance, dict) and str(provenance.get("kind", "")).startswith("imported_")
+                    and run.get("status") != "running" and not run.get("needs_recovery")):
+                continue
             self.runs[run["id"]] = run
             if run.get("status") == "running":
                 if not run.get("pid"):
@@ -269,50 +288,35 @@ class Workbench:
             self._apply_result(run, verified_exit=None)
             self._save(run)
 
-    def _cached_evidence(self, relative):
+    def _check_acceptance(self):
         try:
-            path = safe_path(self.root, relative)
-            info = path.stat()
-            signature = (info.st_mtime_ns, info.st_size)
-        except (OSError, ValueError):
-            return None
-        previous = self.evidence_cache.get(relative)
-        if previous and previous[0] == signature:
-            return previous[1]
-        value = read_json(path)
-        self.evidence_cache[relative] = (signature, value)
-        return value
+            result = self.acceptance_checker()
+            if isinstance(result, dict) and type(result.get("passed")) is bool:
+                return result
+        except Exception:
+            pass
+        return {"passed": False, "reason": "The accepted experiment setup could not be verified. Reopen the app after checking the local project and evidence files."}
 
-    def evidence(self):
-        main = self._cached_evidence(MAIN_EVIDENCE) or {}
-        edmd = self._cached_evidence(EDMD_EVIDENCE) or {}
-        review = self._cached_evidence(RESEARCH_EVIDENCE) or {}
-        def counts(passed, total):
-            if all(type(n) is int and n >= 0 for n in (passed, total)) and passed <= total:
-                return f"{passed} / {total}"
-            return "Unknown"
-        screen = edmd.get("matlabVerification", {})
-        screen = screen.get("edmdBenefitScreen", {}) if isinstance(screen, dict) else {}
-        passes = screen.get("passed") if isinstance(screen, dict) else None
-        benefit = counts(sum(passes), len(passes)) if isinstance(passes, list) and passes and all(type(p) is bool for p in passes) else "Unknown"
-        acceptance = review.get("research_acceptance_passed")
-        items = [
-            ("main_tests", "Main project tests", counts(main.get("passed"), main.get("tests")), "Passed / total in the saved September 12 review; this is not a new run.", MAIN_EVIDENCE),
-            ("edmd_tests", "EDMD verification tests", counts(edmd.get("passed"), edmd.get("automatedTests")), "Passed / total in the saved EDMD verification summary; forecasting verification has a separate research scope.", EDMD_EVIDENCE),
-            ("edmd_benefit", "EDMD benefit regimes", benefit, "Regimes meeting the saved forecasting benefit screen. Code verification does not establish a control benefit.", EDMD_EVIDENCE),
-            ("research_acceptance", "Comparison acceptance", "Accepted" if acceptance is True else "Not accepted" if acceptance is False else "Unknown", "Saved September 12 review. Receiver/topology characterization remains the next research priority.", RESEARCH_EVIDENCE),
-        ]
-        evidence = []
-        for i, label, value, detail, source in items:
-            try:
-                exists = safe_path(self.root, source).is_file()
-            except ValueError:
-                exists = False
-            evidence.append(dict(id=i, label=label, value=value, detail=detail, source=source,
-                                 url=artifact_url(source) if exists else None))
-        return evidence
+    def _refresh_acceptance(self):
+        # Status polling never performs an expensive evidence scan on its thread.
+        # A launch always verifies again, regardless of this display-only cache.
+        if (self.closed or self.acceptance_checking or self.launch_preflight or self.processes
+                or any(run.get("status") == "running" for run in self.runs.values())
+                or time.monotonic() - self.acceptance_checked < 300):
+            return
+        self.acceptance_checking = True
+        def check():
+            result = self._check_acceptance()
+            with self.guard:
+                if not self.closed:
+                    self.acceptance_status = result
+                    self.acceptance_checked = time.monotonic()
+                self.acceptance_checking = False
+        threading.Thread(target=check, daemon=True).start()
 
     def _blocking_reason(self):
+        if self.launch_preflight:
+            return "Checking the accepted experiment setup before launch…"
         if any(run.get("needs_recovery") for run in self.runs.values()):
             return "A previous launch needs local recovery before another MATLAB run can start."
         if self.processes or any(run.get("status") == "running" for run in self.runs.values()):
@@ -328,6 +332,13 @@ class Workbench:
         result = {key: run.get(key) for key in (
             "id", "workflow", "title", "status", "started_at", "finished_at", "summary")}
         result["metrics"] = run.get("metrics", {})
+        if include_log and run.get("workflow") == "receiver_characterization":
+            result["characterization"] = run.get("characterization", {})
+        if include_log and run.get("workflow") == "four_way_v2_development":
+            result["development"] = run.get("development", {})
+        for workflow, key in (("four_way_v2_evaluation", "evaluation"), ("four_way_v2_closure", "closure")):
+            if include_log and run.get("workflow") == workflow:
+                result[key] = run.get(key, {})
         result["artifacts"] = self._artifacts(run)
         if include_log:
             result["log"] = self._read_log(run["id"])
@@ -337,8 +348,14 @@ class Workbench:
         with self.guard:
             self._refresh_recovered()
             reason = self._blocking_reason()
-            workflows = [dict(id=key, title=value[0], description=value[1], enabled=not reason, reason=reason)
-                         for key, value in WORKFLOWS.items()]
+            self._refresh_acceptance()
+            workflows = []
+            for key, value in WORKFLOWS.items():
+                disabled = reason
+                if not disabled and key in GATED_WORKFLOWS and not self.acceptance_status.get("passed"):
+                    disabled = self.acceptance_status.get("reason") or "The accepted local experiment setup is unavailable."
+                workflows.append(dict(id=key, title=value[0], description=value[1], enabled=not disabled,
+                                      reason=disabled, disabled_reason=disabled))
             runs = [self._public_run(run) for run in sorted(self.runs.values(), key=lambda run: run["id"], reverse=True)]
             documents = []
             for title, description, relative in DOCUMENTS:
@@ -351,10 +368,15 @@ class Workbench:
             return dict(
                 project=dict(name="EMI-Resilient Control System for Robotics", root=str(self.root)),
                 runtime=dict(matlab_available=bool(self.matlab), matlab_path=self.matlab),
-                research=dict(status="blocked", title="Receiver characterization comes next",
-                              detail="Research checkpoint from the September 12 review: receiver/topology characterization is pending and a combined mitigation benefit remains unproven. Saved evidence below is separate from new workbench runs.",
-                              next_step="Characterize the receiver/topology, obtain an accepted development result, then freeze a new comparison."),
-                evidence=self.evidence(), workflows=workflows, runs=runs, documents=documents, token=self.token)
+                launch_pending=self.launch_preflight,
+                research=dict(status="conditional", title="Four-way v2 study completed",
+                              detail="The completed reserved evaluation met the simulation guards under all 16 receiver assumptions. Electrical treatment removed small sampled-count glitches, but the declared combined-benefit criterion was not met. These are conditional simulations, not hardware validation.",
+                              next_step="Run a fresh evaluation or source-return sensitivity study below. Launch readiness is checked separately from the completed research result."),
+                acceptance=dict(passed=bool(self.acceptance_status.get("passed")),
+                                reason=self.acceptance_status.get("reason", ""),
+                                checking=self.acceptance_checking,
+                                checked_at=self.acceptance_status.get("checked_at")),
+                workflows=workflows, runs=runs, documents=documents, token=self.token)
 
     def get_run(self, run_id):
         with self.guard:
@@ -373,17 +395,39 @@ class Workbench:
             reason = self._blocking_reason()
             if reason:
                 raise WorkbenchError(reason, 409 if self.matlab else 503)
+            self.launch_preflight = True
+        binding = None
+        if workflow in GATED_WORKFLOWS:
+            binding = self._check_acceptance()
+        with self.guard:
+            self.launch_preflight = False
+            if self.closed:
+                raise WorkbenchError("Workbench server is closing", 503)
+            if binding is not None:
+                self.acceptance_status = binding
+                self.acceptance_checked = time.monotonic()
+                if not binding.get("passed"):
+                    raise WorkbenchError(binding.get("reason") or "The accepted experiment setup could not be verified.", 409)
+            self._refresh_recovered()
+            reason = self._blocking_reason()
+            if reason:
+                raise WorkbenchError(reason, 409)
             run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ_") + uuid.uuid4().hex[:12]
             folder = self._run_dir(run_id)
             folder.mkdir()
             # Only MATLAB may create output/: existing output guards require it absent.
+            arguments = [self.root, workflow, folder]
+            if binding is not None:
+                arguments = [binding["scientific_project_root"], workflow, folder, binding["acceptance_path"]]
             runner = ("addpath(" + matlab_quote(self.home / "matlab") + ");\n" +
-                      "emi_workbench_run(" + ", ".join(map(matlab_quote, [self.root, workflow, folder])) + ");\n")
+                      "emi_workbench_run(" + ", ".join(map(matlab_quote, arguments)) + ");\n")
             safe_path(folder, "runner.m").write_text(runner, encoding="utf-8")
             run = dict(id=run_id, workflow=workflow, title=WORKFLOWS[workflow][0],
                        status="running", started_at=utc_now(), finished_at=None,
                        summary="Starting MATLAB…", metrics={}, artifact_paths=[], pid=None,
                        pid_identity=None, server_pid=os.getpid())
+            if binding is not None:
+                run["acceptance"] = binding
             self._save(run)
             # Publish only after the pre-launch record is durable. A failed disk
             # write here must not leave a phantom active run in memory.
@@ -434,6 +478,16 @@ class Workbench:
         valid = result and result.get("workflow") == run["workflow"] and result.get("status") in ("passed", "failed")
         if valid:
             run["metrics"] = result.get("metrics") if isinstance(result.get("metrics"), dict) else {}
+            if run["workflow"] == "receiver_characterization":
+                characterization = result.get("characterization")
+                run["characterization"] = characterization if isinstance(characterization, dict) else {}
+            if run["workflow"] == "four_way_v2_development":
+                development = result.get("development")
+                run["development"] = development if isinstance(development, dict) else {}
+            for workflow, key in (("four_way_v2_evaluation", "evaluation"), ("four_way_v2_closure", "closure")):
+                if run["workflow"] == workflow:
+                    payload = result.get(key)
+                    run[key] = payload if isinstance(payload, dict) else {}
             paths = result.get("artifacts", [])
             # MATLAB jsonencode may emit a lone string for a scalar string array.
             run["artifact_paths"] = [paths] if isinstance(paths, str) else paths if isinstance(paths, list) else []

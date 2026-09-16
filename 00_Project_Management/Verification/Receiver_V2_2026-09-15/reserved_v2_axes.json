@@ -1,0 +1,7 @@
+{
+  "recorded_utc": "2026-09-15T21:55:02.852585+00:00",
+  "fixture_path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\04_EMI_Models\\four_way_emi_v2_fixtures.csv",
+  "sha256": "24c04cdc5fd3b63953c1cafe118e9a9a42a9bcf2fc356b775d7b50395fa2527c",
+  "selection": "Declared before new characterization outputs. Never selected to force baseline failure or mitigation benefit.",
+  "evaluation_run": false
+}

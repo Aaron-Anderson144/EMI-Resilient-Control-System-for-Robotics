@@ -1,0 +1,72 @@
+{
+  "studyRoot": "06_Circuit_Simulations/RECEIVER_V2",
+  "files": [
+    {
+      "path": "functions/receiver_v2_analyze.m",
+      "sha256": "ae03d681274c30007759c1d4c6dd7a5065716fc98401a89b8b9e2a70cce1ee06",
+      "bytes": 6772
+    },
+    {
+      "path": "functions/receiver_v2_behavior.m",
+      "sha256": "34efde91bb78d6e28dcee891c39f702cf9dbe6571187c583a08e95f7eb1b489a",
+      "bytes": 1370
+    },
+    {
+      "path": "functions/receiver_v2_decode.m",
+      "sha256": "32bad95d169efd3f0c494e5dea558997bdfba6e0ced72ddb73f6defa4482a37d",
+      "bytes": 1159
+    },
+    {
+      "path": "functions/receiver_v2_fixture.m",
+      "sha256": "8d7fb1f0ec0c830e9a27ece286bbad1e2f54622c9e08dd3aba8ecd7373f8502b",
+      "bytes": 935
+    },
+    {
+      "path": "functions/receiver_v2_logic.m",
+      "sha256": "199a465c9829991249b3908ca8cc1729e638289ea92cd6316db809bc94515fb9",
+      "bytes": 1807
+    },
+    {
+      "path": "functions/receiver_v2_native_source.m",
+      "sha256": "3040a307b31cee0f08d9089d2c2b508161eaa8ea6fdb2efd231efc6ae9a38dfd",
+      "bytes": 978
+    },
+    {
+      "path": "functions/receiver_v2_network.m",
+      "sha256": "93973aac4904c00de6eff0940d89991a0a376e33fd2b7f9802eb19b86ac6a1fc",
+      "bytes": 1054
+    },
+    {
+      "path": "functions/receiver_v2_parameters.m",
+      "sha256": "971ecf3ff34b30e5956b0205c19f4e4edf52f48cb8fe611660db3869168e65d3",
+      "bytes": 247
+    },
+    {
+      "path": "functions/receiver_v2_segments.m",
+      "sha256": "009a4e7567a1bc94e62a08452f03a77da50adffd9eafc69d0895e798deba41e8",
+      "bytes": 1237
+    },
+    {
+      "path": "functions/receiver_v2_signal.m",
+      "sha256": "f82a4ef5af0a8b7695b1131f9e752d9a1be73faf9624714a977c16a0000862da",
+      "bytes": 444
+    },
+    {
+      "path": "scripts/run_receiver_characterization.m",
+      "sha256": "0dbd29238cc46bb2f6ef3db3130e59bb39b53bb42e1acd4f70b2a6c15c6c29e6",
+      "bytes": 16715
+    },
+    {
+      "path": "tests/TestReceiverV2.m",
+      "sha256": "283a4f4aabf44abf8e7550e7c8c069257a42183e03c9ffa36c5a5035ac56fccf",
+      "bytes": 5820
+    },
+    {
+      "path": "receiver_characterization_config.json",
+      "sha256": "32f5918dfd22d7c67d14660b9906bec8edb1db2d42147a9f77e2718e25dcac93",
+      "bytes": 2976
+    }
+  ],
+  "nativeSourcePath": "06_Circuit_Simulations/SC01B_R2/results/verification/nominal/native_finest.csv",
+  "nativeSourceSha256": "1ecdd83ee4f4846b70e2d40ba04f4b3188e737c94f08300a5bbbfcc36acb9cd5"
+}

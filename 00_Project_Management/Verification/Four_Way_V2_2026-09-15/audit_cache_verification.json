@@ -1,0 +1,47 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "fresh_equals_cached",
+      "record": "V2EVAL01_V01_BASELINE_clean",
+      "task_sign": "1",
+      "variant": "V01",
+      "passed": true
+    },
+    {
+      "name": "fresh_equals_cached",
+      "record": "V2EVAL01_V16_COMBINED_exposed",
+      "task_sign": "1",
+      "variant": "V16",
+      "passed": true
+    },
+    {
+      "name": "fresh_equals_cached",
+      "record": "V2EVAL03_V01_BASELINE_exposed",
+      "task_sign": "-1",
+      "variant": "V01",
+      "passed": true
+    },
+    {
+      "name": "fresh_equals_cached",
+      "record": "V2EVAL03_V16_COMBINED_clean",
+      "task_sign": "-1",
+      "variant": "V16",
+      "passed": true
+    },
+    {
+      "name": "tampered_input_rejected",
+      "record": "V2EVAL01_V01_BASELINE_clean",
+      "passed": true
+    },
+    {
+      "name": "altered_fixture_rejected",
+      "record": "V2EVAL01_V01_BASELINE_clean",
+      "passed": true
+    }
+  ],
+  "auditor_sha256": "c3830c8c4f76855783bb0bc5e570f158c8de127935ca0f72930f5f67e3db0a98",
+  "wrapper_sha256": "8ae3d6ff296f839495ff309f10b1484853d9451b15b721fe9f406ff52757cc58",
+  "test_sha256": "895eb95fb81fe275bd648393b17d6574dd2be854ff5e59ced8afcbf3eb8b3d3b",
+  "physical_validation": false
+}

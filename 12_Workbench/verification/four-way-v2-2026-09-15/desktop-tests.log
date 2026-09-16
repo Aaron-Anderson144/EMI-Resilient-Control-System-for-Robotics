@@ -1,0 +1,15 @@
+✔ network boundary accepts only the owned loopback origin (2.6662ms)
+✔ secondary windows accept only valid research artifact URLs (0.4956ms)
+✔ local rendering resources are permitted without remote/file access (0.166ms)
+✔ Python launch environment cannot inherit another runtime configuration (0.7755ms)
+✔ close gate preserves queued or active experiments (0.1624ms)
+✔ distribution paths derive solely from relocated package paths (0.4103ms)
+✔ smoke requests preserve the workbench route and authentication contract (26.8903ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 107.0507

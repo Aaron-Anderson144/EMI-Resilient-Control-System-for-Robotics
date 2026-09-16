@@ -1,0 +1,31 @@
+{
+  "release": "1.5.0",
+  "scope": "Source and desktop integration publication; no new scientific campaign",
+  "python_tests": {
+    "passed": 68,
+    "failed": 0
+  },
+  "frontend_and_desktop_tests": {
+    "passed": 15,
+    "failed": 0
+  },
+  "matlab_adapter_tests": {
+    "passed": 21,
+    "failed": 0,
+    "source": "reserved-controls-2026-09-15/adapter_verification_summary.json"
+  },
+  "saved_data_parser_checks": {
+    "evaluation_pairs": 768,
+    "receiver_screens": 16,
+    "closure_comparisons": 128
+  },
+  "frozen_inputs_verified": {
+    "plan_v1": 16,
+    "plan_v2": 54
+  },
+  "public_acceptance_default": "Unconfigured; evaluation and closure disabled until original accepted setup verifies",
+  "local_configuration_published": false,
+  "imported_evidence_in_app": false,
+  "physical_validation": false,
+  "full_scientific_campaign_rerun": false
+}

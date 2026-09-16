@@ -1,0 +1,10 @@
+
+	Home License -- for personal use only.  Not for government,
+	academic, research, commercial, or other organizational use.
+
+{Unrecognized function or variable 'fourway_verify_freeze'.
+
+Error in fourway_v2_verify_freeze (line 13)
+v1=fourway_verify_freeze();assert(v1.passed);
+   ^^^^^^^^^^^^^^^^^^^^^^^
+} 

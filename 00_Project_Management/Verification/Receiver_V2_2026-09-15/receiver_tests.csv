@@ -1,0 +1,10 @@
+Name,Passed,Failed,Incomplete,Duration,Details
+TestReceiverV2/testIndependentNodalEquations,1,0,0,0.1803504,
+TestReceiverV2/testAffinePropagationAgainstAugmentedExponential,1,0,0,0.3274849,
+TestReceiverV2/testPulseHypothesesAndBoundary,1,0,0,0.1513668,
+TestReceiverV2/testGrayCoincidenceAndCount,1,0,0,0.0315683,
+TestReceiverV2/testCleanBothCapacitancesAndSourcePolarities,1,0,0,0.5526243,
+TestReceiverV2/testInitiallyHighAndReverseClean,1,0,0,0.1528832,
+TestReceiverV2/testIndependentMultipleRootsAndDomainOccupation,1,0,0,0.1009999,
+TestReceiverV2/testSignedPinPredicateAndDifferentialBoundary,1,0,0,0.0441396,
+TestReceiverV2/testGrazingDomainRemainsUnresolved,1,0,0,0.046697,

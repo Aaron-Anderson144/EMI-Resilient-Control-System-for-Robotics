@@ -1,0 +1,149 @@
+{
+  "design_id": "FOUR-WAY-EMI-PLAN-V2",
+  "status": "frozen_conditional_protocol_evaluation_locked",
+  "scope": "Conditional numerical comparison; receiver pulse response not physically identified",
+  "selection_rule": "Evaluation axes declared before current characterization results; not selected for baseline failure or combined benefit",
+  "fixture_file": "04_EMI_Models/four_way_emi_v2_fixtures.csv",
+  "source": {
+    "path": "06_Circuit_Simulations/SC01B_R2/results/verification/nominal/native_finest.csv",
+    "sha256": "1ecdd83ee4f4846b70e2d40ba04f4b3188e737c94f08300a5bbbfcc36acb9cd5",
+    "columns": [
+      "time_s",
+      "switch_V"
+    ],
+    "interpolation": "piecewise_linear_at_original_timestamps",
+    "synthetic_return_s": 1e-07,
+    "period_s": 5e-05,
+    "pulses_per_burst": 100,
+    "burst_anchor_s": [
+      0.25,
+      1.7
+    ],
+    "command_edge_anchor_s": 2.019e-06,
+    "native_source_fingerprint": "eba4730fdf73a0c5a146faa48615ea3aa559c72645de65e5fd5a27f7f5c8699d",
+    "source_identity_path": "06_Circuit_Simulations/SC01B_R2/results/verification/source_identity.json",
+    "parameters_path": "06_Circuit_Simulations/SC01B_R2/results/verification/nominal/parameters.json"
+  },
+  "task": {
+    "stop_time_s": 3,
+    "sample_time_s": 0.001,
+    "request_time_s": [
+      0,
+      0.1,
+      1.6
+    ],
+    "positive_request_deg": [
+      0,
+      30,
+      -15
+    ],
+    "load_Nm": 0,
+    "bus_V": 24,
+    "reset_s": 2,
+    "governor_velocity_rad_s": 10,
+    "governor_acceleration_rad_s2": 200,
+    "independent_reference": false
+  },
+  "victim": {
+    "driver_common_mode_V": 2.5,
+    "driver_open_circuit_differential_magnitude_V": 2,
+    "driver_transition_s": 1e-07,
+    "driver_Rp_Ohm": 47,
+    "driver_Rn_Ohm": 53,
+    "receiver_Rdiff_Ohm": 120,
+    "receiver_Cp_F": 5e-11,
+    "receiver_Cn_F": 7e-11,
+    "receiver_Rp_bias_Ohm": 10000.0,
+    "receiver_Rn_bias_Ohm": 20000.0,
+    "ground_R_Ohm": 0.025,
+    "ground_L_H": 2e-08,
+    "aggressor_return_current_A": 0,
+    "inductive_ep_V": 0,
+    "inductive_en_V": 0,
+    "initialization": "own_arm_DC_equilibrium_low_A"
+  },
+  "arms": [
+    {
+      "id": "BASELINE",
+      "Cdiff_pF": 100,
+      "protection_enabled": false
+    },
+    {
+      "id": "EM_ONLY",
+      "Cdiff_pF": 1000,
+      "protection_enabled": false
+    },
+    {
+      "id": "SW_ONLY",
+      "Cdiff_pF": 100,
+      "protection_enabled": true
+    },
+    {
+      "id": "COMBINED",
+      "Cdiff_pF": 1000,
+      "protection_enabled": true
+    }
+  ],
+  "metrics": {
+    "window_s": [
+      [
+        0.24,
+        0.4
+      ],
+      [
+        1.69,
+        1.85
+      ]
+    ],
+    "window_interval": "left_closed_right_open",
+    "task_rmse_deg": 0.5,
+    "task_peak_deg": 2,
+    "final_request_error_deg": 0.5,
+    "tail_s": 0.1,
+    "recovery_dwell_s": 0.05,
+    "recovery_limit_s": 0.5,
+    "baseline_rmse_floor_deg": 0.25,
+    "comparison_relative_allowance": 0.1,
+    "position_absolute_allowance_deg": 0.25,
+    "current_absolute_allowance_A": 0.05,
+    "required_rescued_failures": 1,
+    "normalized_aggregate_gate": "mean(combined_i/d_i)<=0.9*mean(baseline_i/d_i); d_i=max(baseline_i,0.25deg)",
+    "recovery_scope": "each_burst_separately",
+    "required_recovered_bursts": 2,
+    "normalized_combined_to_baseline_factor_max": 0.9
+  },
+  "evaluation_unopened": true,
+  "implementation_acceptance_required": true,
+  "original_plan_preserved": true,
+  "measurement_boundary": "Only decoded count position plus causal source index and receipt metadata enter the controller; truth, domain flags and exposure labels are offline only",
+  "source_closure_diagnostics": {
+    "Ccp_pF": [
+      40,
+      240
+    ],
+    "Ccn_pF": 7,
+    "task_sign": 1,
+    "phase_ns": 0,
+    "return_duration_s": [
+      1e-07,
+      4.5e-05
+    ],
+    "excluded_from_primary_evaluation": true
+  },
+  "unresolved_physics": [
+    "fast transient and overdrive response",
+    "input clamp and loading nonlinearity",
+    "physical cable/encoder transfer",
+    "physical validation"
+  ],
+  "receiver_config_file": "06_Circuit_Simulations/RECEIVER_V2/receiver_characterization_config.json",
+  "receiver_variant_count": 16,
+  "logical_records": {
+    "development": 256,
+    "evaluation": 1536,
+    "closure_diagnostic": 256,
+    "main": 1792,
+    "total": 2048
+  },
+  "freeze_scope": "Protocol only; independent causal implementation, native and development acceptance are still required"
+}

@@ -1,0 +1,10 @@
+Name,Passed,Failed,Incomplete,Duration,Details
+TestFourwayV2Receiver/testIndependentNodalEquationsAndModalStep,1,0,0,5.858006,
+TestFourwayV2Receiver/testIndependentWaveformAndAllSixteenHypotheses,1,0,0,5.5681147,
+TestFourwayV2Receiver/testWholeVsSplitPreservesPendingAndCircuitState,1,0,0,0.3644932,
+TestFourwayV2Receiver/testPendingOutputAtSampleAndJointAmbiguity,1,0,0,0.336404,
+TestFourwayV2Receiver/testInertialCancellationAcrossCalls,1,0,0,0.1700394,
+TestFourwayV2Receiver/testExactPendingEqualityTransportCollisionAndOvertaking,1,0,0,0.2059865,
+TestFourwayV2Receiver/testSignedDomainsStressAndContinuousThreeRoots,1,0,0,0.2469436,
+TestFourwayV2Receiver/testSubresolutionGrazingRejects,1,0,0,0.1635743,
+TestFourwayV2Receiver/testCleanInitialHighReverseAndZeroCoupling,1,0,0,1.5096205,

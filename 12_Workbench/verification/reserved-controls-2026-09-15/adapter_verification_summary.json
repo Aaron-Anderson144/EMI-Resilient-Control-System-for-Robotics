@@ -1,0 +1,103 @@
+{
+  "schema": "signal-lab-reserved-adapter-verification-v1",
+  "generated_utc": "2026-09-15T23:46:16.608883+00:00",
+  "passed": true,
+  "tests": {
+    "adapter_total": 21,
+    "prior_adapter": 12,
+    "new_reserved_boundaries": 9,
+    "failed": 0,
+    "incomplete": 0
+  },
+  "actual_data_checks": [
+    {
+      "study": "evaluation_001",
+      "rows_compared": 768,
+      "all_compact_fields_equal_saved_csv": true,
+      "summary_equal_saved_summary": true
+    },
+    {
+      "study": "closure_001",
+      "rows_compared": 128,
+      "all_compact_fields_equal_saved_csv": true,
+      "summary_equal_saved_summary": true
+    }
+  ],
+  "hypothesis_screens_compared": 16,
+  "saved_passing_hypotheses": 0,
+  "physical_validation": false,
+  "science_rerun": false,
+  "frozen_files_verified": [
+    16,
+    54
+  ],
+  "result_scope": "Execution completion, conditional guards, and per-hypothesis benefit are independent. Return sensitivity remains excluded from primary scoring.",
+  "artifact_scope": "Top-level links plus complete output/artifact_index.csv; all nested raw files retained on disk. Isolated dispatch test checks inventory and nested file preservation.",
+  "acceptance_boundary": "Missing file rejected before output creation; unchanged core acceptance rejection propagates; accepted-file identity retained and checked after execution.",
+  "sources": [
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\matlab\\emi_workbench_run.m",
+      "bytes": 21028,
+      "sha256": "e4b7a6448928d6e558b40979b84f6c8cae60dac49e2e11ec004914a04c0b1513"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\matlab\\emi_workbench_evaluation_result.m",
+      "bytes": 2654,
+      "sha256": "520fc88fef0d10f840e0269eea510b950e8b0426d56686eae84f2532bec2aae8"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\matlab\\emi_workbench_closure_result.m",
+      "bytes": 2615,
+      "sha256": "5e89384b02425424d8d880559b57fca8d6a6eaab098bfbc90564ed04d3d29d01"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\matlab\\TestEmiWorkbenchReserved.m",
+      "bytes": 12836,
+      "sha256": "eb6bd297e4c26a17f780ac0956196c8469bf093d3256c57b999284150f190eee"
+    }
+  ],
+  "consulted_saved_evidence": [
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\evaluation_001\\stage_summary.json",
+      "bytes": 60124,
+      "sha256": "2b80511245d18a88a30c6085948f3aa4ba4ab9981353f33bad7d996dffeeedf7"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\evaluation_001\\metrics.csv",
+      "bytes": 499455,
+      "sha256": "687a3197a2b6cc3939d397518e085d5a8645d5d607578ee05eb50ac51822479b"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\closure_001\\stage_summary.json",
+      "bytes": 44606,
+      "sha256": "1dd6c3f3c472bda8d695bd22dce2c01dd1a92dbb080fa78c2e539dc6c0ca91ef"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\closure_001\\closure_comparisons.csv",
+      "bytes": 5683,
+      "sha256": "b57c93763a6b86978245253904f76e339f42c7568cecb849f8f3826df47ced45"
+    }
+  ],
+  "verification_files": [
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\verification\\reserved-controls-2026-09-15\\adapter-tests-001.log",
+      "bytes": 350,
+      "sha256": "a11af381ef84e58f0e99397d7e0e9f29bed5bea1c0bebe3a37f95c530b70af18"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\verification\\reserved-controls-2026-09-15\\adapter-test-results-001.csv",
+      "bytes": 1823,
+      "sha256": "9f7ad98a910998f78057a5db8a50dd85af87e7dbdc6b0bb8fbe0d599771995d8"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\verification\\reserved-controls-2026-09-15\\evaluation-view.json",
+      "bytes": 392393,
+      "sha256": "89e01dbdea400af9c00b84f527f56e028d6a4eb95624dedaa76d1dc82d6489da"
+    },
+    {
+      "path": "C:\\Users\\adand\\OneDrive\\Desktop\\Projects\\EMI-Resilient Control System for Robotics\\12_Workbench\\verification\\reserved-controls-2026-09-15\\closure-view.json",
+      "bytes": 100031,
+      "sha256": "f041a9bbd097f53030073c9e24cd0083270144ffef6f2e6fcabea671906c3246"
+    }
+  ]
+}

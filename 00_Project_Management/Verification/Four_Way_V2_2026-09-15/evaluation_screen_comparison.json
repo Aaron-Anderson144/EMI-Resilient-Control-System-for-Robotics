@@ -1,0 +1,259 @@
+{
+  "all_passed": true,
+  "variants": [
+    {
+      "variant": "V01",
+      "checks": {
+        "fixtures": true,
+        "execution_clean_guards": true,
+        "baseline_normalized_mean": true,
+        "combined_normalized_mean": true,
+        "aggregate_gate": true,
+        "position_guards": true,
+        "current_guard": true,
+        "rescued_failures": true,
+        "benefit": true
+      },
+      "failed": []
+    },
+    {
+      "variant": "V02",
+      "checks": {
+        "fixtures": true,
+        "execution_clean_guards": true,
+        "baseline_normalized_mean": true,
+        "combined_normalized_mean": true,
+        "aggregate_gate": true,
+        "position_guards": true,
+        "current_guard": true,
+        "rescued_failures": true,
+        "benefit": true
+      },
+      "failed": []
+    },
+    {
+      "variant": "V03",
+      "checks": {
+        "fixtures": true,
+        "execution_clean_guards": true,
+        "baseline_normalized_mean": true,
+        "combined_normalized_mean": true,
+        "aggregate_gate": true,
+        "position_guards": true,
+        "current_guard": true,
+        "rescued_failures": true,
+        "benefit": true
+      },
+      "failed": []
+    },
+    {
+      "variant": "V04",
+      "checks": {
+        "fixtures": true,
+        "execution_clean_guards": true,
+        "baseline_normalized_mean": true,
+        "combined_normalized_mean": true,
+        "aggregate_gate": true,
+        "position_guards": true,
+        "current_guard": true,
+        "rescued_failures": true,
+        "benefit": true
+      },
+      "failed": []
+    },
+    {
+      "variant": "V05",
+      "checks": {
+        "fixtures": true,
+        "execution_clean_guards": true,
+        "baseline_normalized_mean": true,
+        "combined_normalized_mean": true,
+        "aggregate_gate": true,
+        "position_guards": true,
+        "current_guard": true,
+        "rescued_failures": true,
+        "benefit": true
+      },
+      "failed": []
+    },
+    {
+      "variant": "V06",
+      "checks": {
+        "fixtures": true,
+        "execution_clean_guards": true,
+        "baseline_normalized_mean": true,
+        "combined_normalized_mean": true,
+        "aggregate_gate": true,
+        "position_guards": true,
+        "current_guard": true,
+        "rescued_failures": true,
+        "benefit": true
+      },
+      "failed": []
+    },
+    {
+      "variant": "V07",
+      "checks": {
+        "fixtures": true,
+        "execution_clean_guards": true,
+        "baseline_normalized_mean": true,
+        "combined_normalized_mean": true,
+        "aggregate_gate": true,
+        "position_guards": true,
+        "current_guard": true,
+        "rescued_failures": true,
+        "benefit": true
+      },
+      "failed": []
+    },
+    {
+      "variant": "V08",
+      "checks": {
+        "fixtures": true,
+        "execution_clean_guards": true,
+        "baseline_normalized_mean": true,
+        "combined_normalized_mean": true,
+        "aggregate_gate": true,
+        "position_guards": true,
+        "current_guard": true,
+        "rescued_failures": true,
+        "benefit": true
+      },
+      "failed": []
+    },
+    {
+      "variant": "V09",
+      "checks": {
+        "fixtures": true,
+        "execution_clean_guards": true,
+        "baseline_normalized_mean": true,
+        "combined_normalized_mean": true,
+        "aggregate_gate": true,
+        "position_guards": true,
+        "current_guard": true,
+        "rescued_failures": true,
+        "benefit": true
+      },
+      "failed": []
+    },
+    {
+      "variant": "V10",
+      "checks": {
+        "fixtures": true,
+        "execution_clean_guards": true,
+        "baseline_normalized_mean": true,
+        "combined_normalized_mean": true,
+        "aggregate_gate": true,
+        "position_guards": true,
+        "current_guard": true,
+        "rescued_failures": true,
+        "benefit": true
+      },
+      "failed": []
+    },
+    {
+      "variant": "V11",
+      "checks": {
+        "fixtures": true,
+        "execution_clean_guards": true,
+        "baseline_normalized_mean": true,
+        "combined_normalized_mean": true,
+        "aggregate_gate": true,
+        "position_guards": true,
+        "current_guard": true,
+        "rescued_failures": true,
+        "benefit": true
+      },
+      "failed": []
+    },
+    {
+      "variant": "V12",
+      "checks": {
+        "fixtures": true,
+        "execution_clean_guards": true,
+        "baseline_normalized_mean": true,
+        "combined_normalized_mean": true,
+        "aggregate_gate": true,
+        "position_guards": true,
+        "current_guard": true,
+        "rescued_failures": true,
+        "benefit": true
+      },
+      "failed": []
+    },
+    {
+      "variant": "V13",
+      "checks": {
+        "fixtures": true,
+        "execution_clean_guards": true,
+        "baseline_normalized_mean": true,
+        "combined_normalized_mean": true,
+        "aggregate_gate": true,
+        "position_guards": true,
+        "current_guard": true,
+        "rescued_failures": true,
+        "benefit": true
+      },
+      "failed": []
+    },
+    {
+      "variant": "V14",
+      "checks": {
+        "fixtures": true,
+        "execution_clean_guards": true,
+        "baseline_normalized_mean": true,
+        "combined_normalized_mean": true,
+        "aggregate_gate": true,
+        "position_guards": true,
+        "current_guard": true,
+        "rescued_failures": true,
+        "benefit": true
+      },
+      "failed": []
+    },
+    {
+      "variant": "V15",
+      "checks": {
+        "fixtures": true,
+        "execution_clean_guards": true,
+        "baseline_normalized_mean": true,
+        "combined_normalized_mean": true,
+        "aggregate_gate": true,
+        "position_guards": true,
+        "current_guard": true,
+        "rescued_failures": true,
+        "benefit": true
+      },
+      "failed": []
+    },
+    {
+      "variant": "V16",
+      "checks": {
+        "fixtures": true,
+        "execution_clean_guards": true,
+        "baseline_normalized_mean": true,
+        "combined_normalized_mean": true,
+        "aggregate_gate": true,
+        "position_guards": true,
+        "current_guard": true,
+        "rescued_failures": true,
+        "benefit": true
+      },
+      "failed": []
+    }
+  ],
+  "passing_hypotheses": 0,
+  "probability_interpretation": false,
+  "inputs": [
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\review\\evaluation_audit_001.json",
+      "sha256": "602c5189ea94ea5e4c230a4cd6789b5c571dbc6d265037980b3c0ac2d68aa2bd"
+    },
+    {
+      "path": "C:\\Users\\adand\\Documents\\Codex\\2026-09-15\\wha-2\\work\\v2_integration\\evaluation_001\\stage_summary.json",
+      "sha256": "2b80511245d18a88a30c6085948f3aa4ba4ab9981353f33bad7d996dffeeedf7"
+    }
+  ],
+  "wrapper_sha256": "9f50971018cb33f8dc8ab58c5837bd298013dbdc225adda0d1f194f26c5b7c33",
+  "physical_validation": false
+}
