@@ -38,7 +38,7 @@ Use `--port 8766` for a different port, `--no-browser` to start without opening 
 - Follow a run's log, revisit saved runs, and open their artifacts.
 - Reach the roadmap, receiver revision brief, and research documentation.
 
-The workflows use declared experiment settings. Receiver characterization uses a reproducible sweep defined by the [receiver v2 contract](../04_EMI_Models/Receiver_V2_Contract.md). The [next four-way experiment plan](../04_EMI_Models/Four_Way_EMI_Experiment_V2.md) records how the characterization informs the next comparison. General parameter editing remains a future integration step.
+The workflows use declared experiment settings. Receiver characterization uses a reproducible sweep defined by the [receiver v2 contract](../04_EMI_Models/Receiver_V2_Contract.md). The [PLAN-V2 experiment plan](../04_EMI_Models/Four_Way_EMI_Experiment_V2.md) records how the characterization informed the completed comparison. General parameter editing remains a future integration step.
 
 ## How to read the results
 

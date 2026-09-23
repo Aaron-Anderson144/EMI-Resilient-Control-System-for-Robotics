@@ -27,7 +27,7 @@ See the [results and interpretation](00_Project_Management/Verification/Four_Way
 
 Signal Lab now includes **Receiver v2 characterization**. It runs a declared THVD1450DR model and loaded circuit across 40 electrical records / 640 behavioral cases, with continuous signed pin/differential-domain checks, threshold and timing sensitivity, transport/inertial pulse hypotheses, saved plots, detail records and source identities. The completed characterization has 640 numerically converged in-domain cases, no clean or final-count errors, and 80 cases with pulse-law-dependent edge behavior. This is a conditional electrical result, not hardware validation or a motor-control benefit.
 
-The [receiver/circuit contract](04_EMI_Models/Receiver_V2_Contract.md) and [PLAN-V2](04_EMI_Models/Four_Way_EMI_Experiment_V2.md) define the next four-way experiment. PLAN-V2 preserves all sixteen receiver variants and newly reserved development/evaluation combinations. Its protocol was finalized before the causal implementation, numerical/development acceptance and separately frozen evaluation reported above. The historical rejected PLAN-V1 remains unchanged. [Characterization evidence](00_Project_Management/Verification/Receiver_V2_2026-09-15/README.md).
+The [receiver/circuit contract](04_EMI_Models/Receiver_V2_Contract.md) and [PLAN-V2](04_EMI_Models/Four_Way_EMI_Experiment_V2.md) define the completed four-way experiment. PLAN-V2 preserves all sixteen receiver variants and the development/evaluation combinations reserved before execution. Its protocol was finalized before the causal implementation, numerical/development acceptance and separately frozen evaluation reported above. The historical rejected PLAN-V1 remains unchanged. [Characterization evidence](00_Project_Management/Verification/Receiver_V2_2026-09-15/README.md).
 
 ## Historical verification — 12 September 2026
 
@@ -71,9 +71,9 @@ The model assumes a 7 V operating boundary. That value has not been measured as 
 
 Read the [checkpoint](00_Project_Management/Causal_Receiver_Checkpoint.md), [compact verification evidence](00_Project_Management/Verification/Causal_Receiver_2026-09-11), and [requirement evidence status](02_Requirements/Research_Evidence_Status.md) for the supporting records and limits.
 
-## The comparison being developed
+## Historical PLAN-V1 comparison
 
-The first plan is frozen. It compares four combinations of electrical and software treatment, each with its own clean run:
+The first plan is frozen. It compared four combinations of electrical and software treatment, each with its own clean run:
 
 | Arm | Differential capacitance | Control policy |
 |---|---:|---|
